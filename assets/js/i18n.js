@@ -2,13 +2,32 @@
 window.I18N = {
   ar: {
     brand: "ناجح", tagline: "التوجيهي، بخطة تناسبك أنت",
+    hero_kicker: "ادرس أذكى. انجح بثقة.",
+    st1: "فروع للتوجيهي", st2: "مادة دراسية", st3: "لغتان: العربية والإنجليزية", st4: "دقائق يومياً تكفي للبدء",
+    fs_eyebrow: "للطلاب", fs_title: "دروس تشاهدها، وتجرّبها، وتفهمها.",
+    fs_text: "كل درس يبدأ بشرح متحرّك قصير مع ترجمة وتعليق صوتي، ثم نشاط تفاعلي تكتشف فيه الفكرة بنفسك، ثم تدريب بتغذية راجعة فورية.",
+    fs1: "شرح متحرّك بالعربية والإنجليزية", fs2: "رياضيات مكتوبة بوضوح كما في الكتاب", fs3: "مدرّب دراسي يعطيك تلميحات متدرّجة", fs_cta: "ابدأ درس المشتقة",
+    fr_eyebrow: "الكتاب، بشكل أذكى", fr_title: "اقرأ مع ملاحظات معلّم في الهامش",
+    fr_text: "صفحات منظّمة حسب المنهاج، مع ملاحظات بخط اليد تشرح الأخطاء الشائعة وما يركّز عليه الامتحان. ظلّل أي جملة وأضف ملاحظاتك الخاصة.", fr_cta: "افتح فصل المشتقة",
+    fp_eyebrow: "خطتك",
+    ft_eyebrow: "للمعلّمين", ft_title: "أدوات تجعل كل حصة أكثر فاعلية",
+    ft_text: "عند اشتراك المعلّم في ناجح يحصل على أدوات لطلابه: إسناد تدريبات، ومتابعة إتقان كل طالب، ومعرفة نقاط الضعف قبل بدء الحصة.", ft_cta: "سجّل اهتمامك كمعلّم", ft_class: "مجموعة الرياضيات · علمي", ft_assign: "إسناد تدريب",
+    video_done: "انتهى الشرح", read_chapter: "اقرأ الفصل",
+    rd_layers: "طبقات الملاحظات", rd_najih: "ملاحظات ناجح", rd_mine: "ملاحظاتي", rd_highlight: "تظليل", rd_note: "ملاحظة",
+    rd_note_ph: "اكتب ملاحظتك…", rd_save: "حفظ", rd_delete: "حذف", rd_hint: "حدّد أي نص لتظليله أو لإضافة ملاحظة. تُحفظ ملاحظاتك على هذا الجهاز.",
+    rd_prev: "الصفحة السابقة", rd_next: "الصفحة التالية", rd_page: "صفحة", rd_of: "من", rd_lesson: "ابدأ الدرس التفاعلي",
+    ex_official: "مصدر رسمي", ex_source: "الملفات منشورة على البوابة التعليمية الفلسطينية التابعة لوزارة التربية والتعليم العالي:",
+    ex_tech: "لا يوجد أرشيف منفصل للفرع التكنولوجي على البوابة الرسمية حالياً.", ex_paper_t: "أسئلة الفرع", ex_all_subjects: "جميع المواد",
+    ex_bundle: "كل السنوات في ملف واحد", ex_rar: "الملفات مضغوطة بصيغة RAR وقد يكون حجمها كبيراً. على الهاتف افتحها بتطبيق إدارة الملفات أو أي تطبيق يدعم RAR.",
+    ex_practice_t: "تدرّب قبل أن تحلّ الامتحان", ex_practice_d: "ابدأ بالدروس التفاعلية والتدريب الموجّه، ثم اختبر نفسك بامتحان كامل.", ex_practice_cta: "تصفّح المواد",
+
     nav_home: "الرئيسية", nav_learn: "المواد", nav_exams: "امتحانات سابقة", nav_tutors: "المعلّمون", nav_dashboard: "خطتي",
     start_free: "ابدأ مجاناً", my_plan: "خطتي", switch_lang: "English", skip: "تخطَّ إلى المحتوى",
 
     eyebrow: "التوجيهي الفلسطيني · جميع الفروع",
     hero_title: "التوجيهي، بخطة تناسبك أنت.",
     hero_sub: "دروس تفاعلية قصيرة، وتدريب يتكيّف مع مستواك، ومراجعة في الوقت المناسب — لكل فروع التوجيهي، بالعربية والإنجليزية.",
-    hero_cta: "ابدأ خطتك المجانية", hero_cta2: "تصفّح المواد",
+    hero_cta: "ابدأ خطتك المجانية", hero_cta2: "جرّب درساً",
     trust1: "متوافق مع المنهاج الفلسطيني", trust2: "مجاني خلال الفترة التجريبية", trust3: "يعمل على أي هاتف",
 
     demo_label: "جرّب الآن", demo_title: "اكتشف القاعدة بنفسك",
@@ -66,7 +85,7 @@ window.I18N = {
     practice_more: "تدرّب أكثر", back_plan: "العودة إلى خطتي", make_plan: "أنشئ خطتك",
     lesson: "درس", practise: "تدرّب",
 
-    ex_title: "أرشيف امتحانات التوجيهي", ex_sub: "امتحانات الوزارة السابقة مرتبة حسب الفرع والمادة والسنة. نضيف الملفات تباعاً.",
+    ex_title: "أرشيف امتحانات التوجيهي", ex_sub: "امتحانات الثانوية العامة الرسمية للأعوام ٢٠٢٢–٢٠٢٥ لكل فرع، مباشرة من مصدرها الرسمي.",
     f_branch: "الفرع", f_subject: "المادة", year: "السنة", session: "الدورة", paper: "ورقة الأسئلة", solution: "الحل النموذجي",
     s_first: "الأولى", ex_practice: "تدرّب على أسئلة هذه المادة",
 
@@ -88,13 +107,32 @@ window.I18N = {
   },
   en: {
     brand: "Najih", tagline: "Tawjihi, with a plan built around you",
+    hero_kicker: "Study smarter. Succeed with confidence.",
+    st1: "Tawjihi branches", st2: "subjects", st3: "languages: Arabic & English", st4: "minutes a day to get started",
+    fs_eyebrow: "For students", fs_title: "Lessons you watch, try and understand.",
+    fs_text: "Every lesson opens with a short animated explainer with captions and narration, then a hands-on activity where you discover the idea, then practice with instant feedback.",
+    fs1: "Animated explainers in Arabic and English", fs2: "Maths typeset clearly, like the textbook", fs3: "A study coach with step-by-step hints", fs_cta: "Start the derivatives lesson",
+    fr_eyebrow: "The textbook, smarter", fr_title: "Read with a teacher's notes in the margin",
+    fr_text: "Curriculum-aligned pages with handwritten margin notes on common mistakes and what exams focus on. Highlight any sentence and add your own notes.", fr_cta: "Open the derivatives chapter",
+    fp_eyebrow: "Your plan",
+    ft_eyebrow: "For tutors", ft_title: "Tools that make every session count",
+    ft_text: "When tutors subscribe to Najih they get tools for their students: assign practice, follow each student's mastery, and see weak spots before the session starts.", ft_cta: "Register interest as a tutor", ft_class: "Maths group · Scientific", ft_assign: "Assign practice",
+    video_done: "Explainer finished", read_chapter: "Read the chapter",
+    rd_layers: "Note layers", rd_najih: "Najih notes", rd_mine: "My notes", rd_highlight: "Highlight", rd_note: "Note",
+    rd_note_ph: "Write your note…", rd_save: "Save", rd_delete: "Delete", rd_hint: "Select any text to highlight it or add a note. Your notes are saved on this device.",
+    rd_prev: "Previous page", rd_next: "Next page", rd_page: "Page", rd_of: "of", rd_lesson: "Start the interactive lesson",
+    ex_official: "Official source", ex_source: "Files are published on the Palestinian Educational Portal of the Ministry of Education and Higher Education:",
+    ex_tech: "The official portal has no separate archive for the Technology branch at the moment.", ex_paper_t: "Papers ·", ex_all_subjects: "All subjects",
+    ex_bundle: "All years in one file", ex_rar: "Files are RAR archives and can be large. On a phone, open them with your file manager or any app that supports RAR.",
+    ex_practice_t: "Practise before you sit a full paper", ex_practice_d: "Start with the interactive lessons and guided practice, then test yourself with a full exam.", ex_practice_cta: "Browse subjects",
+
     nav_home: "Home", nav_learn: "Subjects", nav_exams: "Past papers", nav_tutors: "Tutors", nav_dashboard: "My plan",
     start_free: "Start free", my_plan: "My plan", switch_lang: "العربية", skip: "Skip to content",
 
     eyebrow: "Palestinian Tawjihi · Every branch",
     hero_title: "Tawjihi, with a plan built around you.",
     hero_sub: "Short interactive lessons, practice that adapts to your level, and review at exactly the right time — for every Tawjihi branch, in Arabic and English.",
-    hero_cta: "Start your free plan", hero_cta2: "Browse subjects",
+    hero_cta: "Start your free plan", hero_cta2: "Try a lesson",
     trust1: "Aligned to the Palestinian curriculum", trust2: "Free during beta", trust3: "Works on any phone",
 
     demo_label: "Try it now", demo_title: "Discover the rule yourself",
@@ -152,7 +190,7 @@ window.I18N = {
     practice_more: "Practise more", back_plan: "Back to my plan", make_plan: "Create your plan",
     lesson: "Lesson", practise: "Practise",
 
-    ex_title: "Tawjihi past-paper archive", ex_sub: "Previous ministry exams by branch, subject and year. Files are being added progressively.",
+    ex_title: "Tawjihi past-paper archive", ex_sub: "Official Tawjihi exam papers for 2022–2025 for every branch, straight from the official source.",
     f_branch: "Branch", f_subject: "Subject", year: "Year", session: "Session", paper: "Question paper", solution: "Model solution",
     s_first: "First", ex_practice: "Practise questions for this subject",
 

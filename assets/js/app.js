@@ -22,6 +22,15 @@
   const num = (n, o = {}) => Number(n).toLocaleString(loc(), { useGrouping: false, maximumFractionDigits: 2, ...o });
   const fmtDate = (t, o = { day: "numeric", month: "long", year: "numeric" }) => new Date(t).toLocaleDateString(loc(), o);
   const normDigits = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/[٫,]/g, ".").replace(/[−–]/g, "-");
+  const renderMath = (root) => {
+    if (!window.renderMathInElement || !root) return;
+    window.renderMathInElement(root, { delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }], ignoredClasses: ["katex", "no-math"], throwOnError: false });
+  };
+  let mathQueued = false;
+  new MutationObserver(() => {
+    if (mathQueued) return; mathQueued = true;
+    requestAnimationFrame(() => { mathQueued = false; renderMath(document.getElementById("app")); });
+  }).observe(document.getElementById("app"), { childList: true, subtree: true });
   const SUBJ = window.SUBJECTS, subjName = (s) => L(SUBJ[s].name);
   const branchOf = (id) => window.BRANCHES.find((b) => b.id === id);
 
@@ -84,6 +93,7 @@
   const bar = (v, c) => `<span class="meter" style="--c:${c || "var(--brand)"}"><span style="width:${Math.round((v ?? 0) * 100)}%"></span></span>`;
   const meta = (...parts) => `<span class="meta">${parts.filter(Boolean).map((p) => `<span>${p}</span>`).join("")}</span>`;
   const app = () => $("#app");
+  const bookFor = (s) => Object.keys(window.BOOKS || {}).find((k) => window.BOOKS[k].subject === s);
   const focusMode = (on) => document.body.classList.toggle("focus-mode", on);
   const waLink = (text) => `https://wa.me/${CFG.whatsappNumber}?text=${encodeURIComponent(text)}`;
   const fbLink = () => `https://m.me/${encodeURIComponent(CFG.facebookPage)}?ref=signup`;
@@ -164,7 +174,7 @@
     idle();
   }
 
-  function summary(P, { title, correct, total, xp, again }) {
+  function summary(P, { title, correct, total, xp, again, book }) {
     P.progress(Infinity); P.step("");
     const pct = total ? Math.round((correct / total) * 100) : 100, C = 2 * Math.PI * 52;
     P.body.innerHTML = `<div class="summary">
@@ -172,7 +182,7 @@
       <div class="ring-ic">${I("check")}</div>
       <h1>${title}</h1>
       <div class="sum-stats"><div><b>${num(pct)}%</b><span>${T("accuracy")}</span></div><div><b>+${num(xp)}</b><span>${T("earned")}</span></div></div>
-      <a class="btn secondary" href="${again}" data-same>${I("review")}${T("practice_more")}</a>
+      <div class="sum-links"><a class="btn secondary" href="${again}">${I("review")}${T("practice_more")}</a>${book ? `<a class="btn secondary" href="#/read/${book}">${I("book")}${T("read_chapter")}</a>` : ""}</div>
     </div>`;
     P.set({ label: S.profile ? T("back_plan") : T("make_plan"), onMain: () => go(S.profile ? "#/dashboard" : "#/start") });
     P.main.focus({ preventScroll: true });
@@ -245,24 +255,6 @@
   };
 
   // ───────────────────────── Views ─────────────────────────
-  function forgettingCurve() {
-    const W = 360, H = 170, px = (t) => 34 + (t / 20) * (W - 44), py = (r) => 26 + (1 - r) * (H - 56);
-    const decay = Array.from({ length: 81 }, (_, i) => { const t = i / 4; return `${i ? "L" : "M"}${px(t).toFixed(1)},${py(Math.exp(-t / 2.2)).toFixed(1)}`; }).join("");
-    const reviews = [0, 1.5, 4, 9, 20]; let d = "";
-    for (let k = 0; k < reviews.length - 1; k++) {
-      const t0 = reviews[k], t1 = reviews[k + 1], tau = 2.2 * Math.pow(2.4, k);
-      for (let t = t0; t <= t1 + 1e-9; t += 0.25) d += `${d ? "L" : "M"}${px(t).toFixed(1)},${py(Math.exp(-(t - t0) / tau)).toFixed(1)}`;
-      if (k < reviews.length - 2) d += `L${px(t1).toFixed(1)},${py(1).toFixed(1)}`;
-    }
-    const dots = reviews.slice(1, -1).map((t) => `<circle cx="${px(t)}" cy="${py(1)}" r="3.5" class="dot"/>`).join("");
-    return `<figure class="curve-fig"><svg dir="ltr" viewBox="0 0 ${W} ${H}" role="img" aria-label="${T("curve_no")} / ${T("curve_yes")}">
-      <line x1="34" x2="${W - 10}" y1="${H - 30}" y2="${H - 30}" class="axis"/><line x1="34" x2="34" y1="10" y2="${H - 30}" class="axis"/>
-      <path d="${decay}" class="c-no"/><path d="${d}" class="c-yes"/>${dots}
-      <text x="${W - 10}" y="${H - 12}" class="ax-l" text-anchor="end">${T("curve_x")}</text>
-      <text x="40" y="12" class="ax-l" text-anchor="start">${T("curve_y")}</text>
-    </svg><figcaption><span class="lgd"></span>${T("curve_yes")}<span class="lgd lgd-no"></span>${T("curve_no")}</figcaption></figure>`;
-  }
-
   function subjectRows(b) {
     return b.subjects.map((s) => {
       const nl = window.LESSONS.filter((l) => l.subject === s).length, nq = window.QUESTIONS.filter((q) => q.subject === s).length;
@@ -274,55 +266,68 @@
     home() {
       const sample = window.LESSONS[0];
       let br = S.profile?.branch || "scientific";
+      const pageEx = window.BOOKS.calc.pages[0];
       app().innerHTML = `
-      <section class="hero"><div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">${T("eyebrow")}</p>
+      <section class="hero2">
+        <div class="wrap hero2-in">
+          <p class="kicker">${T("hero_kicker")}</p>
           <h1 class="display">${T("hero_title")}</h1>
-          <p class="lead">${T("hero_sub")}</p>
-          <div class="actions"><a class="btn primary lg" href="#/start">${T("hero_cta")}${I("arrow", "flip")}</a><a class="btn secondary lg" href="#/learn">${T("hero_cta2")}</a></div>
-          <ul class="trust">${["trust1", "trust2", "trust3"].map((k, i) => `<li>${I(["shield", "check", "phone"][i])}${T(k)}</li>`).join("")}</ul>
+          <p class="lead center">${T("hero_sub")}</p>
+          <div class="actions center"><a class="btn primary lg" href="#/start">${T("hero_cta")}</a><a class="btn secondary lg" href="#/lesson/${sample.id}">${I("play")}${T("hero_cta2")}</a></div>
         </div>
-        <div class="demo card">
+        <div class="wrap"><div class="stage-frame"><div class="hero-video"></div></div></div>
+        <div class="wrap"><ul class="stats">${[["6", "st1"], ["12", "st2"], ["2", "st3"], ["10", "st4"]].map(([n, k]) => `<li><b>${num(n)}</b><span>${T(k)}</span></li>`).join("")}</ul></div>
+      </section>
+
+      <section class="wrap feature">
+        <div class="f-media"><div class="demo card">
           <div class="demo-head"><span class="pill">${T("demo_label")}</span><b>${T("demo_title")}</b></div>
-          <p class="small muted">${T("demo_inst")}</p>
-          <div class="w"></div>
+          <p class="small muted">${T("demo_inst")}</p><div class="w"></div>
           <p class="demo-q">${T("demo_q")}</p>
           <div class="seg" role="radiogroup">${[5, 10, 25].map((v) => `<button class="seg-b" role="radio" aria-checked="false" data-v="${v}">${num(v)}</button>`).join("")}</div>
-          <div class="demo-fb" aria-live="polite"></div>
-        </div>
-      </div></section>
+          <div class="demo-fb" aria-live="polite"></div></div></div>
+        <div class="f-copy"><p class="eyebrow">${T("fs_eyebrow")}</p><h2>${T("fs_title")}</h2><p class="muted">${T("fs_text")}</p>
+          <ul class="checks">${["fs1", "fs2", "fs3"].map((k) => `<li>${I("check")}${T(k)}</li>`).join("")}</ul>
+          <a class="text-link" href="#/lesson/${sample.id}">${T("fs_cta")}${I("arrow", "flip")}</a></div>
+      </section>
+
+      <section class="wrap feature rev">
+        <div class="f-media"><div class="book-peek" aria-hidden="true"><div class="rd-page mini">${pageEx[S.lang] || pageEx.en}</div></div></div>
+        <div class="f-copy"><p class="eyebrow">${T("fr_eyebrow")}</p><h2>${T("fr_title")}</h2><p class="muted">${T("fr_text")}</p>
+          <a class="text-link" href="#/read/calc">${T("fr_cta")}${I("arrow", "flip")}</a></div>
+      </section>
 
       <section class="band"><div class="wrap">
-        <div class="sec-head"><h2>${T("br_title")}</h2><p class="muted">${T("br_sub")}</p></div>
-        <div class="tabs" role="tablist">${window.BRANCHES.map((b) => `<button role="tab" class="tab" data-b="${b.id}" aria-selected="${b.id === br}">${esc(L(b.name).split(" (")[0])}</button>`).join("")}</div>
+        <div class="sec-head center"><p class="eyebrow">${T("nav_learn")}</p><h2>${T("br_title")}</h2><p class="muted">${T("br_sub")}</p></div>
+        <div class="tabs center" role="tablist">${window.BRANCHES.map((b) => `<button role="tab" class="tab" data-b="${b.id}" aria-selected="${b.id === br}">${esc(L(b.name).split(" (")[0])}</button>`).join("")}</div>
         <div class="br-panel card" role="tabpanel"></div>
       </div></section>
 
-      <section class="wrap section">
-        <div class="sec-head"><h2>${T("m_title")}</h2><p class="muted">${T("m_sub")}</p></div>
-        <div class="method">
-          <ol class="principles">${[1, 2, 3].map((n) => `<li><span class="p-n">${num(n)}</span><div><h3>${T(`m${n}_t`)}</h3><p>${T(`m${n}_d`)}</p></div></li>`).join("")}</ol>
-          <div class="card">${forgettingCurve()}</div>
-        </div>
-      </section>
-
-      <section class="band alt"><div class="wrap preview">
-        <div class="preview-copy"><h2>${T("p_title")}</h2><p class="muted">${T("p_sub")}</p>
-          <ul class="checks">${[1, 2, 3, 4].map((n) => `<li>${I("check")}${T("p" + n)}</li>`).join("")}</ul>
-          <a class="btn primary" href="#/start">${T("hero_cta")}</a></div>
-        <div class="frame" aria-hidden="true"><div class="frame-bar"><i></i><i></i><i></i><span>najih.net</span></div><div class="frame-body">
+      <section class="wrap feature">
+        <div class="f-media"><div class="frame" aria-hidden="true"><div class="frame-bar"><i></i><i></i><i></i><span>najih.net</span></div><div class="frame-body">
           <p class="eyebrow">${T("up_next")}</p>
           <div class="next-mini">${tile("math")}<div><b>${esc(L(sample.title))}</b>${meta(T("k_lesson"), `${num(sample.minutes)} ${T("min")}`)}</div><span class="btn primary sm">${T("continue")}</span></div>
           <div class="mini-grid">
             <div class="mini"><span class="muted small">${T("exam_on")}</span><b class="big">${num(203)}</b><span class="small muted">${T("days_to_exam")}</span></div>
             <div class="mini"><span class="muted small">${T("mastery")}</span>${["math", "physics", "english"].map((s, i) => `<div class="mrow"><span>${esc(subjName(s))}</span>${bar([0.62, 0.41, 0.78][i], SUBJ[s].color)}</div>`).join("")}</div>
-          </div>
-        </div></div>
-      </div></section>
+          </div></div></div></div>
+        <div class="f-copy"><p class="eyebrow">${T("fp_eyebrow")}</p><h2>${T("p_title")}</h2><p class="muted">${T("p_sub")}</p>
+          <ul class="checks">${[1, 2, 3, 4].map((n) => `<li>${I("check")}${T("p" + n)}</li>`).join("")}</ul>
+          <a class="btn primary" href="#/start">${T("hero_cta")}</a></div>
+      </section>
+
+      <section class="wrap feature rev">
+        <div class="f-media"><div class="card tutor-peek" aria-hidden="true">
+          <div class="tp-head"><b>${T("ft_class")}</b><span class="badge">${T("soon")}</span></div>
+          <table class="tbl"><tbody>${[["ليان", "Layan", 0.82, "math"], ["أحمد", "Ahmad", 0.46, "physics"], ["سارة", "Sara", 0.67, "chemistry"], ["يوسف", "Yousef", 0.38, "math"]].map(([ar, en, m, s]) => `
+            <tr><td><span class="avatar">${(S.lang === "ar" ? ar : en)[0]}</span>${S.lang === "ar" ? ar : en}</td><td class="w-meter">${bar(m, m < 0.5 ? "var(--clay)" : "var(--brand)")}</td><td>${tag(s)}</td></tr>`).join("")}</tbody></table>
+          <div class="tp-foot"><span class="btn primary sm">${I("pencil")}${T("ft_assign")}</span></div></div></div>
+        <div class="f-copy"><p class="eyebrow">${T("ft_eyebrow")}</p><h2>${T("ft_title")}</h2><p class="muted">${T("ft_text")}</p>
+          <a class="text-link" href="#/tutors">${T("ft_cta")}${I("arrow", "flip")}</a></div>
+      </section>
 
       <section class="wrap section">
-        <div class="sec-head"><h2>${T("s_title")}</h2></div>
+        <div class="sec-head center"><h2>${T("s_title")}</h2></div>
         <div class="grid3">${[["file", "s1", "#/exams"], ["users", "s2", "#/tutors"], ["message", "s3", "#/join"]].map(([ic, k, h]) => `
           <a class="card svc" href="${h}"><span class="svc-ic">${I(ic)}</span><h3>${T(k + "_t")}${k === "s2" ? ` <span class="badge">${T("soon")}</span>` : ""}</h3><p class="muted">${T(k + "_d")}</p><span class="more">${I("arrow", "flip")}</span></a>`).join("")}</div>
       </section>
@@ -332,7 +337,7 @@
         <div class="actions"><a class="btn light" target="_blank" rel="noopener" href="${waLink(T("j_title"))}">${I("message")}${T("via_wa")}</a><a class="btn ghost-light" target="_blank" rel="noopener" href="${fbLink()}">${T("via_fb")}</a><a class="btn ghost-light" href="#/join">${I("phone")}${T("via_phone")}</a></div>
       </div></section>`;
 
-      // demo
+      window.VideoPlayer($(".hero-video"), "secant-tangent", { lang: S.lang, autoplay: true, loop: true });
       WIDGETS.tangent($(".demo .w"));
       $$(".seg-b").forEach((b) => b.addEventListener("click", () => {
         const ok = +b.dataset.v === 10;
@@ -341,7 +346,7 @@
         $(".demo-fb").className = "demo-fb " + (ok ? "good" : "bad");
         $(".demo-fb").innerHTML = `${I(ok ? "check" : "bulb")}<span>${ok ? T("demo_ok") : T("demo_no")}${ok ? ` <a href="#/lesson/${sample.id}">${T("demo_more")}</a>` : ""}</span>`;
       }));
-      // branch tabs
+      $$(".book-peek .an").forEach((a) => a.classList.add("k-" + pageEx.notes[a.dataset.n].kind));
       const renderBranch = () => {
         const b = branchOf(br);
         $(".br-panel").innerHTML = `<div class="br-head"><h3>${esc(L(b.name))}</h3><a class="btn primary sm" href="#/branch/${b.id}">${T("br_start")}${I("arrow", "flip")}</a></div><ul class="subj-list">${subjectRows(b)}</ul>`;
@@ -353,6 +358,126 @@
         if (d && i > -1) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click(); }
       });
       renderBranch();
+    },
+
+    read(bookId, pageArg) {
+      const B = window.BOOKS[bookId]; if (!B) return go("#/learn");
+      const n = Math.min(B.pages.length, Math.max(1, parseInt(pageArg, 10) || 1)), page = B.pages[n - 1];
+      S.notes = S.notes || {}; S.layers = S.layers || { najih: true, mine: true };
+      const mine = (S.notes[bookId] = S.notes[bookId] || []);
+      const lesson = window.LESSONS.find((l) => l.book === bookId);
+      app().innerHTML = `<section class="reader">
+        <div class="wrap rd-top">
+          <div><a class="back-link" href="#/branch/${S.profile?.branch || "scientific"}">${I("arrow", "back-ic")}${esc(subjName(B.subject))}</a>
+            <h1 class="rd-title">${esc(L(B.title))}</h1></div>
+          <div class="toggle-group" role="group" aria-label="${T("rd_layers")}">
+            <button class="tgl" data-layer="najih" aria-pressed="${S.layers.najih}">${mark("tgl-mark")}${T("rd_najih")}</button>
+            <button class="tgl" data-layer="mine" aria-pressed="${S.layers.mine}">${I("highlighter")}${T("rd_mine")}</button>
+          </div>
+        </div>
+        <div class="wrap rd-spread">
+          <article class="rd-page" lang="${S.lang}">${page[S.lang] || page.en}<footer class="pg-no">${num(n)}</footer></article>
+          <aside class="rd-margin" aria-label="${T("rd_najih")}"></aside>
+        </div>
+        <p class="wrap rd-hint muted small">${I("highlighter")}${T("rd_hint")}</p>
+        <nav class="wrap rd-nav">
+          ${n > 1 ? `<a class="btn secondary" href="#/read/${bookId}/${n - 1}">${I("arrow", "back-ic")}${T("rd_prev")}</a>` : "<span></span>"}
+          <span class="muted small">${T("rd_page")} ${num(n)} ${T("rd_of")} ${num(B.pages.length)}</span>
+          ${n < B.pages.length ? `<a class="btn primary" href="#/read/${bookId}/${n + 1}">${T("rd_next")}${I("arrow", "flip")}</a>` : lesson ? `<a class="btn primary" href="#/lesson/${lesson.id}">${I("play")}${T("rd_lesson")}</a>` : "<span></span>"}
+        </nav>
+        <div class="sel-bar" hidden><button data-act="hl">${I("highlighter")}${T("rd_highlight")}</button><button data-act="note">${I("note")}${T("rd_note")}</button></div>
+        <div class="sheet" hidden role="dialog" aria-modal="false"></div>
+      </section>`;
+      const root = $(".reader"), pageEl = $(".rd-page"), margin = $(".rd-margin"), bar = $(".sel-bar"), sheet = $(".sheet");
+      const applyLayers = () => { root.classList.toggle("hide-najih", !S.layers.najih); root.classList.toggle("hide-mine", !S.layers.mine); };
+      $$(".tgl").forEach((b) => b.addEventListener("click", () => { const k = b.dataset.layer; S.layers[k] = !S.layers[k]; b.setAttribute("aria-pressed", S.layers[k]); save(); applyLayers(); layout(); }));
+      applyLayers();
+      renderMath(pageEl);
+      const anchors = $$(".an", pageEl);
+      anchors.forEach((a, i) => {
+        const nt = page.notes[a.dataset.n];
+        a.classList.add("k-" + nt.kind); a.dataset.i = num(i + 1); a.tabIndex = 0; a.setAttribute("role", "button");
+        a.setAttribute("aria-label", `${T("rd_najih")} ${i + 1}: ${L(nt)}`);
+      });
+      margin.innerHTML = anchors.map((a, i) => { const nt = page.notes[a.dataset.n]; return `<div class="mnote k-${nt.kind}" data-n="${a.dataset.n}"><span class="mn-i">${num(i + 1)}</span><p class="hand">${esc(L(nt))}</p></div>`; }).join("");
+      const noteEl = (id) => margin.querySelector(`.mnote[data-n="${id}"]`);
+      const link = (id, on) => { pageEl.querySelector(`.an[data-n="${id}"]`)?.classList.toggle("lit", on); noteEl(id)?.classList.toggle("lit", on); };
+      anchors.forEach((a) => {
+        a.addEventListener("mouseenter", () => link(a.dataset.n, true)); a.addEventListener("mouseleave", () => link(a.dataset.n, false));
+        const open = () => { if (getComputedStyle(margin).display === "none") openSheet({ najih: page.notes[a.dataset.n] }); else { const m = noteEl(a.dataset.n); m.classList.add("pulse"); setTimeout(() => m.classList.remove("pulse"), 700); } };
+        a.addEventListener("click", open); a.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open()));
+      });
+      $$(".mnote", margin).forEach((m) => { m.addEventListener("mouseenter", () => link(m.dataset.n, true)); m.addEventListener("mouseleave", () => link(m.dataset.n, false)); });
+      function layout() {
+        if (getComputedStyle(margin).display === "none") return;
+        const top0 = pageEl.getBoundingClientRect().top; let floor = 0;
+        $$(".mnote", margin).forEach((m) => {
+          const a = pageEl.querySelector(`.an[data-n="${m.dataset.n}"]`);
+          const y = Math.max(a.getBoundingClientRect().top - top0 - 4, floor);
+          m.style.top = y + "px"; floor = y + m.offsetHeight + 14;
+        });
+        margin.style.minHeight = floor + "px";
+      }
+      window.__layout = layout;
+      // ── personal highlights (stored as text quotes, re-applied on render)
+      const wrapQuote = (quote, uid) => {
+        const w = document.createTreeWalker(pageEl, NodeFilter.SHOW_TEXT, { acceptNode: (nd) => (nd.parentElement.closest(".katex, .u-hl, .pg-no") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT) });
+        let nd; while ((nd = w.nextNode())) {
+          const i = nd.data.indexOf(quote); if (i < 0) continue;
+          const r = document.createRange(); r.setStart(nd, i); r.setEnd(nd, i + quote.length);
+          const m = document.createElement("mark"); m.className = "u-hl"; m.dataset.uid = uid; r.surroundContents(m); return m;
+        }
+        return null;
+      };
+      const decorate = (m, item) => { m.classList.toggle("has-note", !!item.note); m.tabIndex = 0; m.title = item.note || ""; };
+      mine.filter((x) => x.page === n).forEach((x) => { const m = wrapQuote(x.quote, x.id); if (m) decorate(m, x); });
+      let pending = null;
+      const hideBar = () => { bar.hidden = true; pending = null; };
+      const onSelect = () => setTimeout(() => {
+        const sel = getSelection(); if (!sel.rangeCount || sel.isCollapsed) return hideBar();
+        const r = sel.getRangeAt(0), txt = r.toString().trim();
+        const ok = txt.length > 1 && txt.length < 400 && r.startContainer === r.endContainer && r.startContainer.nodeType === 3 && pageEl.contains(r.startContainer) && !r.startContainer.parentElement.closest(".katex, .u-hl");
+        if (!ok) return hideBar();
+        pending = r.cloneRange();
+        const rc = r.getBoundingClientRect();
+        bar.hidden = false;
+        bar.style.top = Math.max(8, rc.top - bar.offsetHeight - 10) + "px";
+        bar.style.left = Math.min(innerWidth - bar.offsetWidth - 8, Math.max(8, rc.left + rc.width / 2 - bar.offsetWidth / 2)) + "px";
+      }, 10);
+      pageEl.addEventListener("mouseup", onSelect); pageEl.addEventListener("touchend", onSelect);
+      document.addEventListener("selectionchange", () => { if (getSelection().isCollapsed && !bar.matches(":hover")) bar.hidden = true; });
+      bar.addEventListener("mousedown", (e) => e.preventDefault());
+      bar.addEventListener("click", (e) => {
+        const act = e.target.closest("button")?.dataset.act; if (!act || !pending) return;
+        const item = { id: "u" + Date.now().toString(36), page: n, quote: pending.toString(), note: "" };
+        const m = document.createElement("mark"); m.className = "u-hl"; m.dataset.uid = item.id;
+        try { pending.surroundContents(m); } catch (_) { return hideBar(); }
+        mine.push(item); save(); decorate(m, item); getSelection().removeAllRanges(); hideBar();
+        if (act === "note") openSheet({ item, mark: m });
+      });
+      pageEl.addEventListener("click", (e) => {
+        const m = e.target.closest(".u-hl"); if (!m || !getSelection().isCollapsed) return;
+        const item = mine.find((x) => x.id === m.dataset.uid); if (item) openSheet({ item, mark: m });
+      });
+      function openSheet({ najih, item, mark: m }) {
+        sheet.hidden = false;
+        if (najih) {
+          sheet.innerHTML = `<div class="sheet-h">${window.icon("note")}<b>${T("rd_najih")}</b><button class="icon-btn sh-x" aria-label="${T("exit")}">${I("x")}</button></div><p class="hand big-hand">${esc(L(najih))}</p>`;
+        } else {
+          sheet.innerHTML = `<div class="sheet-h">${I("highlighter")}<b>${T("rd_mine")}</b><button class="icon-btn sh-x" aria-label="${T("exit")}">${I("x")}</button></div>
+            <blockquote class="sh-quote">${esc(item.quote)}</blockquote>
+            <textarea class="field" rows="3" placeholder="${T("rd_note_ph")}">${esc(item.note)}</textarea>
+            <div class="sheet-a"><button class="btn quiet sm sh-del">${I("trash")}${T("rd_delete")}</button><button class="btn primary sm sh-save">${T("rd_save")}</button></div>`;
+          const ta = $("textarea", sheet); ta.focus();
+          $(".sh-save", sheet).onclick = () => { item.note = ta.value.trim().slice(0, 500); save(); decorate(m, item); closeSheet(); };
+          $(".sh-del", sheet).onclick = () => { mine.splice(mine.indexOf(item), 1); save(); m.replaceWith(...m.childNodes); pageEl.normalize(); closeSheet(); };
+        }
+        $(".sh-x", sheet).onclick = closeSheet;
+        sheet.onkeydown = (e) => e.key === "Escape" && closeSheet();
+      }
+      function closeSheet() { sheet.hidden = true; sheet.innerHTML = ""; }
+      requestAnimationFrame(layout);
+      document.fonts?.ready.then(() => window.__layout === layout && layout());
     },
 
     learn() { views.branch(S.profile?.branch || "scientific"); },
@@ -368,7 +493,7 @@
             <header>${tile(s, "lg")}<div><h3>${esc(subjName(s))}</h3>${meta(lessons.length ? `${num(lessons.length)} ${T("lessons_n")}` : "", nq ? `${num(nq)} ${T("questions_n")}` : "") }</div></header>
             ${m !== null ? `<div class="mrow">${bar(m, SUBJ[s].color)}<small>${num(Math.round(m * 100))}%</small></div>` : ""}
             ${lessons.length ? `<ul class="lessons">${lessons.map((l) => `<li><a href="#/lesson/${l.id}"><span class="l-ic ${S.done.includes(l.id) ? "done" : ""}">${I(S.done.includes(l.id) ? "check" : "play")}</span><span>${esc(L(l.title))}</span><small>${num(l.minutes)} ${T("min")}</small></a></li>`).join("")}</ul>` : `<p class="muted small soon-note">${I("lock")}${T("soon")}</p>`}
-            ${nq ? `<a class="btn secondary sm" href="#/practice/${s}">${I("pencil")}${T("practise")}</a>` : ""}
+            <div class="subj-actions">${nq ? `<a class="btn secondary sm" href="#/practice/${s}">${I("pencil")}${T("practise")}</a>` : ""}${bookFor(s) ? `<a class="btn quiet sm" href="#/read/${bookFor(s)}">${I("book")}${T("read_chapter")}</a>` : ""}</div>
           </article>`; }).join("")}</div></section>`;
     },
 
@@ -470,7 +595,7 @@
       const run = () => {
         if (i >= lesson.steps.length) {
           if (!S.done.includes(lesson.id)) { S.done.push(lesson.id); S.xp += 20; logActivity(); save(); }
-          return summary(P, { title: T("lesson_done"), correct, total, xp: S.xp - xp0, again: `#/practice/${lesson.subject}` });
+          return summary(P, { title: T("lesson_done"), correct, total, xp: S.xp - xp0, again: `#/practice/${lesson.subject}`, book: lesson.book });
         }
         const st = lesson.steps[i], next = () => { i++; run(); };
         P.progress(i); P.step(L(st.title));
@@ -488,6 +613,11 @@
           };
           const idle = () => P.set({ label: T("check"), disabled: !inp.value.trim(), onMain: chk });
           inp.addEventListener("input", idle); idle();
+        } else if (st.type === "video") {
+          P.body.innerHTML = `<div class="vwrap"></div>`;
+          window.VideoPlayer($(".vwrap", P.body), st.explainer, { lang: S.lang, autoplay: true,
+            onEnd: () => P.set({ state: "good", fb: { title: T("video_done") }, label: T("continue"), onMain: next }) });
+          P.set({ label: T("continue"), onMain: next });
         } else if (st.type === "concept") {
           P.body.innerHTML = `<div class="prose">${L(st.body)}</div>`;
           P.set({ label: T("continue"), onMain: next });
@@ -530,24 +660,25 @@
     },
 
     exams() {
-      const st = { branch: S.profile?.branch || "scientific", subject: "" };
+      const OE = window.OFFICIAL_EXAMS;
+      let br = OE.map[S.profile?.branch] || "scientific";
       const render = () => {
-        const b = branchOf(st.branch);
-        if (!b.subjects.includes(st.subject)) st.subject = b.subjects[0];
-        const rows = window.EXAMS.filter((e) => e.branch === st.branch && e.subject === st.subject);
-        const cell = (u) => (u ? `<a class="dl" href="${esc(u)}" target="_blank" rel="noopener">${I("download")}PDF</a>` : `<span class="badge muted">${T("soon")}</span>`);
+        const b = OE.branches.find((x) => x.id === br);
         app().innerHTML = `<section class="wrap section">
-          <p class="eyebrow">${T("nav_exams")}</p><h1>${T("ex_title")}</h1><p class="muted lead-sm">${T("ex_sub")}</p>
-          <div class="filters">
-            <label>${T("f_branch")}<select class="field" id="fb">${window.BRANCHES.map((x) => `<option value="${x.id}" ${x.id === st.branch ? "selected" : ""}>${esc(L(x.name))}</option>`).join("")}</select></label>
-            <label>${T("f_subject")}<select class="field" id="fs">${b.subjects.map((s) => `<option value="${s}" ${s === st.subject ? "selected" : ""}>${esc(subjName(s))}</option>`).join("")}</select></label>
+          <div class="sec-head left"><p class="eyebrow">${T("nav_exams")}</p><h1>${T("ex_title")}</h1><p class="lead-sm muted">${T("ex_sub")}</p></div>
+          <div class="source-note">${I("shield")}<div><b>${T("ex_official")}</b><p class="small muted">${T("ex_source")} <a href="${OE.source}" target="_blank" rel="noopener">elearn.edu.ps</a></p></div></div>
+          ${S.profile?.branch === "technology" ? `<p class="notice small">${T("ex_tech")}</p>` : ""}
+          <nav class="chips" aria-label="${T("f_branch")}">${OE.branches.map((x) => `<button class="chip" data-b="${x.id}" ${x.id === br ? 'aria-current="true"' : ""}>${esc(L(x.name))}</button>`).join("")}</nav>
+          <div class="papers">${["2025", "2024", "2023", "2022"].map((y) => `
+            <a class="paper card" href="${b.files[y]}" target="_blank" rel="noopener"><span class="paper-y">${num(y)}</span>
+              <div><b>${T("ex_paper_t")} ${esc(L(b.name))}</b>${meta(T("ex_all_subjects"), "RAR")}</div><span class="dl-ic">${I("download")}</span></a>`).join("")}
+            <a class="paper card all" href="${b.files.all}" target="_blank" rel="noopener"><span class="paper-y">${I("layers")}</span>
+              <div><b>${T("ex_bundle")}</b>${meta("2022–2025", T("ex_all_subjects"), "RAR")}</div><span class="dl-ic">${I("download")}</span></a>
           </div>
-          <div class="card flush"><table class="tbl"><thead><tr><th>${T("year")}</th><th>${T("session")}</th><th>${T("paper")}</th><th>${T("solution")}</th></tr></thead>
-            <tbody>${rows.map((e) => `<tr><td><b>${num(e.year)}</b></td><td>${T("s_first")}</td><td>${cell(e.paper)}</td><td>${cell(e.solution)}</td></tr>`).join("")}</tbody></table></div>
-          ${window.QUESTIONS.some((q) => q.subject === st.subject) ? `<a class="btn secondary" href="#/practice/${st.subject}">${I("pencil")}${T("ex_practice")}</a>` : ""}
+          <p class="small muted rar-help">${I("file")}${T("ex_rar")}</p>
+          <div class="ex-next card"><div><h3>${T("ex_practice_t")}</h3><p class="muted small">${T("ex_practice_d")}</p></div><a class="btn primary" href="#/learn">${T("ex_practice_cta")}</a></div>
         </section>`;
-        $("#fb").onchange = (e) => { st.branch = e.target.value; render(); };
-        $("#fs").onchange = (e) => { st.subject = e.target.value; render(); };
+        $$(".chip[data-b]").forEach((c) => (c.onclick = () => { br = c.dataset.b; render(); }));
       };
       render();
     },
@@ -607,15 +738,17 @@
   // ───────────────────────── Router & global handlers ─────────────────────────
   function go(h) { if (location.hash === h) route(); else location.hash = h; }
   function route() {
-    const [, name = "", arg] = (location.hash || "#/").split("/");
+    const [, name = "", arg, arg2] = (location.hash || "#/").split("/");
+    window.speechSynthesis?.cancel(); window.__layout = null;
     const view = views[name] ? name : "home";
     focusMode(false); applyLang();
     $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === (view === "branch" ? "learn" : view)));
-    views[view](decodeURIComponent(arg || ""));
+    views[view](decodeURIComponent(arg || ""), arg2);
     window.scrollTo(0, 0);
     $("#app").focus({ preventScroll: true });
   }
   window.addEventListener("hashchange", route);
+  window.addEventListener("resize", () => window.__layout?.());
   document.addEventListener("click", (e) => {
     if (e.target.closest("#lang-toggle")) { S.lang = S.lang === "ar" ? "en" : "ar"; save(); route(); return; }
     const a = e.target.closest('a[href^="#/"]');

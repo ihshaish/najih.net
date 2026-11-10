@@ -37,6 +37,10 @@ Edit `assets/js/config.js`:
 5. Recommended: verify the domain under GitHub **Settings → Pages → Verified domains** to prevent takeover.
 
 ## Content
+- `assets/js/explainers.js` — animated explainer "videos" rendered in SVG (seekable, chapters, captions, optional text-to-speech narration). Add new episodes as pure functions of time.
+- `assets/js/books.js` — annotated textbook pages (Najih-authored) with margin notes; students can highlight and add their own notes (stored on the device).
+- `assets/js/exams.js` — links to the official past papers (2022–2025, per branch) on the Ministry's portal https://elearn.edu.ps/exams12/ (linked, not rehosted).
+- Maths is LaTeX between `$…$` / `$$…$$`, rendered with KaTeX (LTR Latin notation).
 - `assets/js/data.js` — branches, subjects, questions, lessons, exam list. Every string is `{ar, en}`.
 - Branch→subject mapping is a starting point: verify it against the current MoE structure (moe.edu.ps).
 - Past exams: drop PDFs into `exams/` and set `paper` / `solution` URLs in the `EXAMS` list (check copyright/permission).
