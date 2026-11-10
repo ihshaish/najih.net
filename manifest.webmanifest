@@ -1,0 +1,11 @@
+{
+  "name": "Najih — ناجح",
+  "short_name": "Najih",
+  "start_url": "/#/dashboard",
+  "display": "standalone",
+  "background_color": "#f7f7fb",
+  "theme_color": "#4f46e5",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [{ "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
