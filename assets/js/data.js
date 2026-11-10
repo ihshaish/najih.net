@@ -4,18 +4,18 @@
 const t = (ar, en) => ({ ar, en });
 
 window.SUBJECTS = {
-  math:       { name: t("الرياضيات", "Mathematics"),        icon: "∑",  color: "#4f46e5" },
-  physics:    { name: t("الفيزياء", "Physics"),              icon: "⚡", color: "#0891b2" },
-  chemistry:  { name: t("الكيمياء", "Chemistry"),            icon: "⚗",  color: "#059669" },
-  biology:    { name: t("الأحياء", "Biology"),               icon: "🧬", color: "#16a34a" },
-  arabic:     { name: t("اللغة العربية", "Arabic"),          icon: "ض",  color: "#b45309" },
-  english:    { name: t("اللغة الإنجليزية", "English"),      icon: "Aa", color: "#dc2626" },
-  islamic:    { name: t("التربية الإسلامية", "Islamic Ed."), icon: "☪",  color: "#0d9488" },
-  history:    { name: t("التاريخ", "History"),               icon: "📜", color: "#a16207" },
-  geography:  { name: t("الجغرافيا", "Geography"),           icon: "🌍", color: "#2563eb" },
-  tech:       { name: t("التكنولوجيا", "Technology"),        icon: "💻", color: "#7c3aed" },
-  entre:      { name: t("ريادة الأعمال", "Entrepreneurship"), icon: "🚀", color: "#db2777" },
-  vocational: { name: t("المواد المهنية", "Vocational"),     icon: "🛠", color: "#64748b" },
+  math:       { name: t("الرياضيات", "Mathematics"),        icon: "sigma",    color: "#4F5BD5" },
+  physics:    { name: t("الفيزياء", "Physics"),              icon: "atom",     color: "#0E7C86" },
+  chemistry:  { name: t("الكيمياء", "Chemistry"),            icon: "flask",    color: "#2F855A" },
+  biology:    { name: t("الأحياء", "Biology"),               icon: "leaf",     color: "#5B8C3A" },
+  arabic:     { name: t("اللغة العربية", "Arabic"),          icon: "feather",  color: "#9C5B2E" },
+  english:    { name: t("اللغة الإنجليزية", "English"),      icon: "lang",     color: "#B4442F" },
+  islamic:    { name: t("التربية الإسلامية", "Islamic Education"), icon: "book", color: "#1F6F5C" },
+  history:    { name: t("التاريخ", "History"),               icon: "landmark", color: "#8A6D3B" },
+  geography:  { name: t("الجغرافيا", "Geography"),           icon: "globe",    color: "#2B6CB0" },
+  tech:       { name: t("التكنولوجيا", "Technology"),        icon: "monitor",  color: "#6B4FBB" },
+  entre:      { name: t("ريادة الأعمال", "Entrepreneurship"), icon: "trend",   color: "#B83280" },
+  vocational: { name: t("المواد المهنية", "Vocational"),     icon: "wrench",   color: "#5A6474" },
 };
 
 window.BRANCHES = [
@@ -171,7 +171,7 @@ window.LESSONS = [
       { type: "explore", widget: "tangent",
         title: t("استكشف أولاً", "Explore first"),
         body: t("حرّك المؤشر وراقب ميل المماس لمنحنى ص = س<sup>٢</sup>. هل تلاحظ علاقة بين قيمة س والميل؟", "Move the slider and watch the slope of the tangent to y = x<sup>2</sup>. Do you see a pattern between x and the slope?"),
-        predict: { q: t("توقّع: ما الميل عند س = ٥ ؟", "Predict: what is the slope at x = 5?"), answer: 10 } },
+        predict: { q: t("توقّع: ما الميل عند س = ٥ ؟", "Predict: what is the slope at x = 5?"), answer: 10, explain: t("الميل دائماً ضعف س، إذن عند س = ٥ يكون الميل ١٠.", "The slope is always twice x, so at x = 5 it is 10.") } },
       { type: "concept", title: t("القاعدة", "The rule"),
         body: t("<p>لاحظت أن الميل دائماً <b>ضعف</b> قيمة س. هذا ما نسمّيه <b>المشتقة</b>: قَ(س) = ٢س.</p><div class='rule'>إذا كان ق(س) = س<sup>ن</sup> فإن قَ(س) = ن س<sup>ن−١</sup></div><p>المشتقة تخبرك بسرعة تغيّر الاقتران عند كل نقطة.</p>",
                 "<p>You noticed the slope is always <b>twice</b> x. That's the <b>derivative</b>: f′(x) = 2x.</p><div class='rule'>If f(x) = x<sup>n</sup> then f′(x) = n x<sup>n−1</sup></div><p>The derivative tells you how fast a function is changing at every point.</p>") },
@@ -193,7 +193,7 @@ window.LESSONS = [
       { type: "explore", widget: "ohm",
         title: t("مختبر افتراضي", "Virtual lab"),
         body: t("غيّر فرق الجهد والمقاومة وراقب شدة التيار. ماذا يحدث للتيار عندما تضاعف الجهد؟ وعندما تضاعف المقاومة؟", "Change the voltage and resistance and watch the current. What happens when you double the voltage? When you double the resistance?"),
-        predict: { q: t("توقّع: جهد ١٢ فولت ومقاومة ٤ أوم. كم التيار (أمبير)؟", "Predict: 12 V across 4 Ω. What is the current (A)?"), answer: 3 } },
+        predict: { q: t("توقّع: جهد ١٢ فولت ومقاومة ٤ أوم. كم التيار (أمبير)؟", "Predict: 12 V across 4 Ω. What is the current (A)?"), answer: 3, explain: t("ت = جـ ÷ م = ١٢ ÷ ٤ = ٣ أمبير.", "I = V ÷ R = 12 ÷ 4 = 3 A.") } },
       { type: "concept", title: t("القانون", "The law"),
         body: t("<div class='rule'>ت = جـ ÷ م &nbsp;&nbsp;⇔&nbsp;&nbsp; جـ = ت × م</div><p>التيار يتناسب <b>طردياً</b> مع الجهد، و<b>عكسياً</b> مع المقاومة (عند ثبات درجة الحرارة).</p>",
                 "<div class='rule'>I = V ÷ R &nbsp;&nbsp;⇔&nbsp;&nbsp; V = I × R</div><p>Current is <b>directly</b> proportional to voltage and <b>inversely</b> proportional to resistance (at constant temperature).</p>") },

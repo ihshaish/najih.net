@@ -1,298 +1,411 @@
 (() => {
   "use strict";
-  const CFG = window.NAJIH_CONFIG;
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+  const CFG = window.NAJIH_CONFIG, I = window.icon;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const DAY = 864e5;
   const today = () => new Date(new Date().toDateString()).getTime();
+  const dkey = (t) => new Date(t).toDateString();
 
-  // ───────────── Store (localStorage, fails soft) ─────────────
-  const KEY = "najih:v1";
-  const defaults = () => ({ lang: "ar", profile: null, mastery: {}, xp: 0, streak: { count: 0, last: 0 }, done: [], signups: [] });
+  // ───────────────────────── Store (browser only, fails soft) ─────────────────────────
+  const KEY = "najih:v2";
+  const defaults = () => ({ lang: "ar", profile: null, mastery: {}, xp: 0, streak: { count: 0, last: 0 }, done: [], activity: {}, signups: [] });
   let S = defaults();
   try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY)) || {}); } catch (_) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (_) {} };
 
-  // ───────────── i18n ─────────────
-  const T = (k) => (window.I18N[S.lang] && window.I18N[S.lang][k]) ?? k;
-  const L = (obj) => (obj ? obj[S.lang] ?? obj.en : "");
-  const num = (n) => (S.lang === "ar" ? Number(n).toLocaleString("ar-EG") : String(n));
-  const normDigits = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/٫/g, ".");
-
-  function applyLang() {
-    document.documentElement.lang = S.lang;
-    document.documentElement.dir = S.lang === "ar" ? "rtl" : "ltr";
-    document.title = `${T("brand")} — ${T("tagline")}`;
-    $$("[data-t]").forEach((el) => (el.textContent = T(el.dataset.t)));
-  }
-
-  // ───────────── Learning model ─────────────
-  const mkey = (q) => `${q.subject}:${q.skill}`;
-  function record(q, correct) {
-    const k = mkey(q);
-    const m = S.mastery[k] || { m: 0.2, n: 0, iv: 0, next: 0 };
-    m.m = +(m.m + 0.35 * ((correct ? 1 : 0) - m.m)).toFixed(3);
-    m.n++;
-    m.iv = correct ? Math.min(30, Math.max(1, m.iv * 2)) : 1; // spaced review interval (days)
-    m.next = today() + m.iv * DAY;
-    S.mastery[k] = m;
-    S.xp += correct ? 10 : 2;
-    bumpStreak();
-    save();
-  }
-  function bumpStreak() {
-    const d = today();
-    if (S.streak.last === d) return;
-    S.streak.count = S.streak.last === d - DAY ? S.streak.count + 1 : 1;
-    S.streak.last = d;
-  }
-  function subjectMastery(subject) {
-    const vals = Object.entries(S.mastery).filter(([k]) => k.startsWith(subject + ":")).map(([, v]) => v.m);
-    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
-  }
+  // ───────────────────────── i18n ─────────────────────────
+  const T = (k) => window.I18N[S.lang]?.[k] ?? k;
+  const L = (o) => (o ? o[S.lang] ?? o.en : "");
+  const loc = () => (S.lang === "ar" ? "ar-PS" : "en-GB");
+  const num = (n, o = {}) => Number(n).toLocaleString(loc(), { useGrouping: false, maximumFractionDigits: 2, ...o });
+  const fmtDate = (t, o = { day: "numeric", month: "long", year: "numeric" }) => new Date(t).toLocaleDateString(loc(), o);
+  const normDigits = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/[٫,]/g, ".").replace(/[−–]/g, "-");
+  const SUBJ = window.SUBJECTS, subjName = (s) => L(SUBJ[s].name);
   const branchOf = (id) => window.BRANCHES.find((b) => b.id === id);
 
+  function applyLang() {
+    const h = document.documentElement;
+    h.lang = S.lang; h.dir = S.lang === "ar" ? "rtl" : "ltr";
+    document.title = `${T("brand")} — ${T("tagline")}`;
+    $$("[data-t]").forEach((el) => (el.textContent = T(el.dataset.t)));
+    const cta = $("#top-cta");
+    cta.href = S.profile ? "#/dashboard" : "#/start";
+    cta.textContent = S.profile ? T("my_plan") : T("start_free");
+  }
+
+  // ───────────────────────── Learning model ─────────────────────────
+  const mkey = (q) => `${q.subject}:${q.skill}`;
+  function logActivity() {
+    const d = today(), k = dkey(d);
+    S.activity[k] = (S.activity[k] || 0) + 1;
+    if (S.streak.last !== d) { S.streak.count = S.streak.last === d - DAY ? S.streak.count + 1 : 1; S.streak.last = d; }
+  }
+  function record(q, correct) {
+    const m = S.mastery[mkey(q)] || { m: 0.2, n: 0, iv: 0, next: 0 };
+    m.m = +(m.m + 0.35 * ((correct ? 1 : 0) - m.m)).toFixed(3);
+    m.n++;
+    m.iv = correct ? Math.min(30, Math.max(1, m.iv * 2)) : 1; // spaced-review interval in days
+    m.next = today() + m.iv * DAY;
+    S.mastery[mkey(q)] = m;
+    S.xp += correct ? 10 : 2;
+    logActivity(); save();
+  }
+  function subjectMastery(s) {
+    const v = Object.entries(S.mastery).filter(([k]) => k.startsWith(s + ":")).map(([, x]) => x.m);
+    return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
+  }
   function dailyPlan() {
     const p = S.profile; if (!p) return [];
     const subjects = branchOf(p.branch).subjects;
-    const order = [...p.weak.filter((s) => subjects.includes(s)), ...subjects.filter((s) => !p.weak.includes(s))]
-      .sort((a, b) => (subjectMastery(a) ?? 0.2) - (subjectMastery(b) ?? 0.2) + (p.weak.includes(b) - p.weak.includes(a)) * 0.5);
+    const score = (s) => (subjectMastery(s) ?? 0.2) - (p.weak.includes(s) ? 0.5 : 0);
+    const order = [...subjects].sort((a, b) => score(a) - score(b));
     const items = []; let mins = 0;
-    // 1) spaced-review items that are due
-    const due = Object.entries(S.mastery).filter(([k, v]) => v.next <= today() && subjects.includes(k.split(":")[0]));
-    for (const [k] of due.slice(0, 2)) { items.push({ kind: "review", subject: k.split(":")[0], minutes: 4 }); mins += 4; }
-    // 2) new lessons / practice in weakest subjects
+    for (const [k] of Object.entries(S.mastery).filter(([k, v]) => v.next <= today() && subjects.includes(k.split(":")[0])).slice(0, 2)) {
+      const s = k.split(":")[0];
+      if (!items.some((i) => i.subject === s)) { items.push({ kind: "review", subject: s, minutes: 4, href: `#/practice/${s}` }); mins += 4; }
+    }
     for (const s of order) {
       if (mins >= p.minutes) break;
       if (items.some((i) => i.subject === s)) continue;
       const lesson = window.LESSONS.find((l) => l.subject === s && !S.done.includes(l.id));
-      if (lesson) { items.push({ kind: "lesson", subject: s, lesson, minutes: lesson.minutes }); mins += lesson.minutes; }
-      else if (window.QUESTIONS.some((q) => q.subject === s)) { items.push({ kind: "practice", subject: s, minutes: 5 }); mins += 5; }
+      if (lesson) { items.push({ kind: "lesson", subject: s, lesson, minutes: lesson.minutes, href: `#/lesson/${lesson.id}` }); mins += lesson.minutes; }
+      else if (window.QUESTIONS.some((q) => q.subject === s) && (subjectMastery(s) ?? 0) < 0.85) { items.push({ kind: "practice", subject: s, minutes: 5, href: `#/practice/${s}` }); mins += 5; }
     }
     return items;
   }
+  const itemTitle = (it) => (it.kind === "lesson" ? L(it.lesson.title) : `${T("k_" + it.kind)} · ${subjName(it.subject)}`);
 
-  // ───────────── Question widget ─────────────
-  function renderQuestion(q, host, onDone) {
-    let attempts = 0, selected = null, finished = false;
-    host.innerHTML = `
-      <div class="q-card">
-        <div class="q-text">${L(q.q)}</div>
-        ${q.type === "mcq"
-          ? `<div class="choices">${q.choices.map((c, i) => `<button class="choice" data-i="${i}"><span class="ci">${"أبجد"[i] && S.lang === "ar" ? "أبجد"[i] : "ABCD"[i]}</span><span>${L(c)}</span></button>`).join("")}</div>`
-          : `<input class="num-input" inputmode="decimal" autocomplete="off" placeholder="${S.lang === "ar" ? "اكتب الإجابة" : "Your answer"}" dir="ltr">`}
-        <div class="q-feedback" aria-live="polite"></div>
-        <div class="q-actions">
-          <button class="btn ghost hint-btn">💡 ${T("hint")}</button>
-          <button class="btn primary check-btn">${T("check")}</button>
-        </div>
+  // ───────────────────────── UI atoms ─────────────────────────
+  const mark = (cls = "") => `<svg class="mark ${cls}" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><g fill="var(--on-brand)"><path d="M16 6l3 3-3 3-3-3zM16 20l3 3-3 3-3-3zM9 13l3 3-3 3-3-3zM23 13l3 3-3 3-3-3z"/><path d="M16 13.2l2.8 2.8-2.8 2.8-2.8-2.8z" opacity=".55"/></g></svg>`;
+  const tile = (s, size = "") => `<span class="s-tile ${size}" style="--c:${SUBJ[s].color}">${I(SUBJ[s].icon)}</span>`;
+  const tag = (s) => `<span class="s-tag" style="--c:${SUBJ[s].color}">${I(SUBJ[s].icon)}${esc(subjName(s))}</span>`;
+  const bar = (v, c) => `<span class="meter" style="--c:${c || "var(--brand)"}"><span style="width:${Math.round((v ?? 0) * 100)}%"></span></span>`;
+  const meta = (...parts) => `<span class="meta">${parts.filter(Boolean).map((p) => `<span>${p}</span>`).join("")}</span>`;
+  const app = () => $("#app");
+  const focusMode = (on) => document.body.classList.toggle("focus-mode", on);
+  const waLink = (text) => `https://wa.me/${CFG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+  const fbLink = () => `https://m.me/${encodeURIComponent(CFG.facebookPage)}?ref=signup`;
+
+  // ───────────────────────── Lesson player ─────────────────────────
+  function Player({ title, subject, segments, exit }) {
+    focusMode(true);
+    app().innerHTML = `
+      <div class="player">
+        <header class="player-top">
+          <a class="icon-btn" href="${exit}" aria-label="${T("exit")}" data-exit>${I("x")}</a>
+          <div class="segments" aria-hidden="true">${"<span><i></i></span>".repeat(segments)}</div>
+          ${tag(subject)}
+        </header>
+        <div class="player-main"><div class="player-inner">
+          <p class="eyebrow">${esc(title)}</p>
+          <h1 class="step-title"></h1>
+          <div class="step-body"></div>
+          <div class="coach" aria-live="polite"></div>
+        </div></div>
+        <footer class="player-bar" data-state="idle">
+          <div class="bar-inner">
+            <div class="bar-fb" aria-live="assertive"></div>
+            <div class="bar-actions">
+              <button class="btn quiet b-hint" hidden>${I("bulb")}<span>${T("hint")}</span></button>
+              <button class="btn primary b-main"></button>
+            </div>
+          </div>
+        </footer>
       </div>`;
-    const fb = $(".q-feedback", host), check = $(".check-btn", host), hintBtn = $(".hint-btn", host);
-    $$(".choice", host).forEach((b) => b.addEventListener("click", () => {
-      if (finished) return;
-      $$(".choice", host).forEach((x) => x.classList.remove("sel"));
-      b.classList.add("sel"); selected = +b.dataset.i;
+    const P = { body: $(".step-body"), titleEl: $(".step-title"), coach: $(".coach"), barEl: $(".player-bar"), main: $(".b-main"), hintBtn: $(".b-hint"), fb: $(".bar-fb"), exit };
+    P.progress = (i, part = 0) => $$(".segments span").forEach((s, k) => { $("i", s).style.width = (k < i ? 100 : k === i ? Math.max(6, part * 100) : 0) + "%"; });
+    P.step = (t) => { P.titleEl.innerHTML = t || ""; P.body.innerHTML = ""; P.coach.innerHTML = ""; window.scrollTo(0, 0); };
+    P.set = ({ state = "idle", fb = null, hint = null, label, disabled = false, onMain }) => {
+      P.barEl.dataset.state = state;
+      P.fb.innerHTML = fb ? `<span class="fb-ic">${I(state === "good" ? "check" : state === "bad" ? "x" : "bulb")}</span><div><b>${fb.title}</b>${fb.body ? `<p>${fb.body}</p>` : ""}</div>` : "";
+      P.hintBtn.hidden = !hint; P.hintBtn.onclick = hint;
+      P.main.textContent = label; P.main.disabled = disabled; P.main.onclick = onMain;
+    };
+    P.say = (html) => P.coach.insertAdjacentHTML("beforeend", `<div class="coach-msg">${mark("coach-av")}<div class="bubble">${html}</div></div>`);
+    return P;
+  }
+
+  function askQuestion(q, P, onDone) {
+    const mcq = q.type === "mcq";
+    P.body.innerHTML = `<div class="stem">${L(q.q)}</div>` + (mcq
+      ? `<div class="options" role="radiogroup">${q.choices.map((c, i) => `<button class="option" role="radio" aria-checked="false" data-i="${i}"><kbd>${num(i + 1)}</kbd><span class="o-t">${L(c)}</span><span class="o-m"></span></button>`).join("")}</div><p class="kbd-hint">${T("keys_hint")}</p>`
+      : `<input class="num-input" inputmode="decimal" autocomplete="off" dir="ltr" aria-label="${T("your_answer")}" placeholder="${T("your_answer")}">`);
+    let attempts = 0, sel = null, done = false, hinted = false;
+    const input = $(".num-input", P.body), opts = $$(".option", P.body);
+    const has = () => (mcq ? sel !== null : input.value.trim() !== "");
+    const hint = () => { if (hinted) return; hinted = true; P.say(L(q.hint)); idle(); };
+    const idle = () => P.set({ label: T("check"), disabled: !has(), hint: hinted ? null : hint, onMain: check });
+    opts.forEach((b) => b.addEventListener("click", () => {
+      if (done || b.disabled) return;
+      sel = +b.dataset.i;
+      opts.forEach((o) => o.setAttribute("aria-checked", String(o === b)));
+      idle();
     }));
-    const input = $(".num-input", host);
-    if (input) input.addEventListener("keydown", (e) => e.key === "Enter" && check.click());
-    hintBtn.addEventListener("click", () => { fb.className = "q-feedback hint"; fb.innerHTML = `💡 ${L(q.hint)}`; });
-    check.addEventListener("click", () => {
-      if (finished) return onDone(attempts === 1);
-      let ok;
-      if (q.type === "mcq") { if (selected === null) return; ok = selected === q.answer; }
-      else { const v = parseFloat(normDigits(input.value).trim()); if (isNaN(v)) return; ok = Math.abs(v - q.answer) <= (q.tol ?? 1e-6); }
+    if (input) { input.addEventListener("input", () => { input.classList.remove("is-wrong"); idle(); }); setTimeout(() => input.focus(), 30); }
+    function check() {
+      if (!has() || done) return;
+      const ok = mcq ? sel === q.answer : Math.abs(parseFloat(normDigits(input.value)) - q.answer) <= (q.tol ?? 1e-6);
       attempts++;
       if (ok || attempts >= 2) {
-        finished = true;
-        record(q, ok && attempts === 1);
-        if (q.type === "mcq") {
-          $$(".choice", host).forEach((b, i) => { b.disabled = true; if (i === q.answer) b.classList.add("right"); else if (i === selected) b.classList.add("bad"); });
-        } else { input.disabled = true; input.classList.add(ok ? "right" : "bad"); }
-        fb.className = "q-feedback " + (ok ? "good" : "bad");
-        fb.innerHTML = `${ok ? T("correct") : "📘"} <div class="explain">${L(q.explain)}</div>`;
-        hintBtn.remove();
-        check.textContent = T("continue");
-        if (ok) confettiBurst(check);
+        done = true; record(q, ok && attempts === 1);
+        if (mcq) opts.forEach((o, i) => { o.disabled = true; if (i === q.answer) o.classList.add("is-right"); else if (i === sel) o.classList.add("is-wrong"); });
+        else { input.disabled = true; input.classList.add(ok ? "is-right" : "is-wrong"); }
+        const ans = mcq ? L(q.choices[q.answer]) : num(q.answer);
+        P.set({ state: ok ? "good" : "bad", fb: { title: ok ? T("correct_t") : T("incorrect_t"), body: (ok ? "" : `${T("answer_was")} <b>${ans}</b> — `) + L(q.explain) }, label: T("continue"), onMain: () => onDone(ok && attempts === 1) });
+        P.main.focus({ preventScroll: true });
       } else {
-        fb.className = "q-feedback bad"; fb.textContent = T("wrong");
-        if (q.type === "mcq") $$(".choice", host)[selected].classList.add("bad");
-        else input.classList.add("bad");
-        setTimeout(() => { $$(".choice.bad", host).forEach((b) => b.classList.remove("bad")); input && input.classList.remove("bad"); }, 700);
+        if (mcq) { const o = opts[sel]; o.classList.add("is-wrong"); o.disabled = true; o.setAttribute("aria-checked", "false"); sel = null; }
+        else input.classList.add("is-wrong");
+        P.set({ state: "bad", fb: { title: T("incorrect_t"), body: T("try_again") }, label: T("check"), disabled: true, hint: hinted ? null : hint, onMain: check });
       }
-    });
-  }
-
-  function runQuiz(qs, host, onFinish) {
-    let i = 0, score = 0;
-    const next = () => {
-      if (i >= qs.length) return onFinish(score, qs.length);
-      host.innerHTML = `<div class="q-progress">${T("question")} ${num(i + 1)} / ${num(qs.length)}<div class="bar"><span style="width:${(i / qs.length) * 100}%"></span></div></div><div class="q-host"></div>`;
-      renderQuestion(qs[i], $(".q-host", host), (firstTry) => { score += firstTry ? 1 : 0; i++; next(); });
-    };
-    next();
-  }
-
-  function confettiBurst(anchor) {
-    const r = anchor.getBoundingClientRect();
-    for (let k = 0; k < 14; k++) {
-      const s = document.createElement("span");
-      s.className = "confetti";
-      s.style.left = r.left + r.width / 2 + "px"; s.style.top = r.top + "px";
-      s.style.setProperty("--dx", (Math.random() * 160 - 80) + "px");
-      s.style.setProperty("--dy", (-60 - Math.random() * 90) + "px");
-      s.style.background = ["#4f46e5", "#16a34a", "#f59e0b", "#ec4899", "#06b6d4"][k % 5];
-      document.body.appendChild(s); setTimeout(() => s.remove(), 900);
     }
+    idle();
   }
 
-  // ───────────── Interactive widgets ─────────────
+  function summary(P, { title, correct, total, xp, again }) {
+    P.progress(Infinity); P.step("");
+    const pct = total ? Math.round((correct / total) * 100) : 100, C = 2 * Math.PI * 52;
+    P.body.innerHTML = `<div class="summary">
+      <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fg" stroke-dasharray="${C}" stroke-dashoffset="${C}" style="--off:${C * (1 - pct / 100)}"/></svg>
+      <div class="ring-ic">${I("check")}</div>
+      <h1>${title}</h1>
+      <div class="sum-stats"><div><b>${num(pct)}%</b><span>${T("accuracy")}</span></div><div><b>+${num(xp)}</b><span>${T("earned")}</span></div></div>
+      <a class="btn secondary" href="${again}" data-same>${I("review")}${T("practice_more")}</a>
+    </div>`;
+    P.set({ label: S.profile ? T("back_plan") : T("make_plan"), onMain: () => go(S.profile ? "#/dashboard" : "#/start") });
+    P.main.focus({ preventScroll: true });
+  }
+
+  // ───────────────────────── Interactive widgets ─────────────────────────
   const WIDGETS = {
     tangent(host) {
-      const W = 320, H = 230, sx = (x) => ((x + 3.5) / 7) * W, sy = (y) => H - ((y + 1.5) / 11.5) * H;
-      const path = Array.from({ length: 71 }, (_, i) => { const x = -3.5 + i * 0.1; return `${i ? "L" : "M"}${sx(x).toFixed(1)},${sy(x * x).toFixed(1)}`; }).join("");
-      host.innerHTML = `
-        <div class="widget" dir="ltr">
-          <svg viewBox="0 0 ${W} ${H}" class="plot" role="img" aria-label="y = x squared with tangent line">
-            <line x1="0" x2="${W}" y1="${sy(0)}" y2="${sy(0)}" class="axis"/><line y1="0" y2="${H}" x1="${sx(0)}" x2="${sx(0)}" class="axis"/>
-            <path d="${path}" class="curve"/><line class="tan"/><circle r="6" class="pt"/>
-          </svg>
-          <input type="range" min="-3" max="3" step="0.5" value="1" class="slider" aria-label="x">
-          <div class="readout"><span>x = <b class="rx"></b></span><span>y = <b class="ry"></b></span><span class="slope">slope = <b class="rs"></b></span></div>
-        </div>`;
-      const sl = $(".slider", host), tan = $(".tan", host), pt = $(".pt", host);
+      const W = 320, H = 220, sx = (x) => ((x + 3.6) / 7.2) * W, sy = (y) => H - 14 - ((y + 0.5) / 10.5) * (H - 24);
+      const curve = Array.from({ length: 73 }, (_, i) => { const x = -3.6 + i * 0.1; return `${i ? "L" : "M"}${sx(x).toFixed(1)},${sy(x * x).toFixed(1)}`; }).join("");
+      const ticks = [-3, -2, -1, 1, 2, 3].map((x) => `<line x1="${sx(x)}" x2="${sx(x)}" y1="${sy(0) - 3}" y2="${sy(0) + 3}" class="tick"/><text x="${sx(x)}" y="${sy(0) + 15}" class="tick-l">${x}</text>`).join("");
+      const lab = S.lang === "ar" ? ["س", "ص", "الميل"] : ["x", "y", "slope"];
+      host.innerHTML = `<div class="widget" dir="ltr">
+        <svg viewBox="0 0 ${W} ${H}" class="plot" role="img" aria-label="y = x², tangent line">
+          <line x1="0" x2="${W}" y1="${sy(0)}" y2="${sy(0)}" class="axis"/><line y1="0" y2="${H}" x1="${sx(0)}" x2="${sx(0)}" class="axis"/>${ticks}
+          <path d="${curve}" class="curve"/><line class="tan"/>
+          <g class="handle" tabindex="0" role="slider" aria-label="${lab[0]}" aria-valuemin="-3" aria-valuemax="3"><circle r="16" class="halo"/><circle r="7" class="pt"/></g>
+        </svg>
+        <div class="readout"><div><span>${lab[0]}</span><b class="rx"></b></div><div><span>${lab[1]}</span><b class="ry"></b></div><div class="hl"><span>${lab[2]}</span><b class="rs"></b></div></div>
+      </div>`;
+      const svg = $("svg", host), handle = $(".handle", host), tan = $(".tan", host);
+      let a = 1;
       const draw = () => {
-        const a = +sl.value, m = 2 * a, y0 = a * a, x1 = a - 2, x2 = a + 2;
-        pt.setAttribute("cx", sx(a)); pt.setAttribute("cy", sy(y0));
+        const m = 2 * a, y0 = a * a, x1 = a - 1.6, x2 = a + 1.6;
+        handle.setAttribute("transform", `translate(${sx(a)},${sy(y0)})`);
+        handle.setAttribute("aria-valuenow", a);
         tan.setAttribute("x1", sx(x1)); tan.setAttribute("y1", sy(y0 + m * (x1 - a)));
         tan.setAttribute("x2", sx(x2)); tan.setAttribute("y2", sy(y0 + m * (x2 - a)));
-        $(".rx", host).textContent = a; $(".ry", host).textContent = y0; $(".rs", host).textContent = m;
+        $(".rx", host).textContent = num(a); $(".ry", host).textContent = num(y0); $(".rs", host).textContent = num(m);
       };
-      sl.addEventListener("input", draw); draw();
+      const setA = (v) => { a = Math.max(-3, Math.min(3, Math.round(v * 2) / 2)); draw(); };
+      const fromEvent = (e) => { const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const p = pt.matrixTransform(svg.getScreenCTM().inverse()); return (p.x / W) * 7.2 - 3.6; };
+      let drag = false;
+      svg.addEventListener("pointerdown", (e) => { drag = true; svg.setPointerCapture(e.pointerId); setA(fromEvent(e)); handle.focus({ preventScroll: true }); });
+      svg.addEventListener("pointermove", (e) => drag && setA(fromEvent(e)));
+      svg.addEventListener("pointerup", () => (drag = false));
+      handle.addEventListener("keydown", (e) => {
+        const d = { ArrowRight: 0.5, ArrowUp: 0.5, ArrowLeft: -0.5, ArrowDown: -0.5 }[e.key];
+        if (d) { e.preventDefault(); e.stopPropagation(); setA(a + d); }
+      });
+      draw();
     },
     ohm(host) {
-      host.innerHTML = `
-        <div class="widget" dir="ltr">
-          <div class="circuit"><div class="bulb"><span>💡</span></div><div class="meter"><span class="cur"></span><small>A</small></div></div>
-          <label class="sl-row">V <input type="range" min="0" max="24" step="1" value="6" class="v"> <b class="vv"></b> V</label>
-          <label class="sl-row">R <input type="range" min="1" max="20" step="1" value="3" class="r"> <b class="rv"></b> Ω</label>
-          <div class="bar big"><span class="ibar"></span></div>
-        </div>`;
-      const v = $(".v", host), r = $(".r", host);
+      const lab = S.lang === "ar" ? { V: "فرق الجهد", R: "المقاومة", I: "شدة التيار" } : { V: "Voltage", R: "Resistance", I: "Current" };
+      host.innerHTML = `<div class="widget" dir="ltr">
+        <div class="ohm">
+          <svg viewBox="0 0 320 200" class="circuit" aria-hidden="true">
+            <path d="M50 40H270V160H50Z" class="wire"/><path d="M50 40H270V160H50Z" class="flow"/>
+            <rect x="120" y="28" width="80" height="24" class="mask"/><path d="M120 40h8l6-10 10 20 10-20 10 20 10-20 10 20 6-10h10" class="comp"/>
+            <rect x="36" y="86" width="28" height="28" class="mask"/><path d="M34 94h32M42 106h16" class="comp batt"/>
+            <circle cx="270" cy="100" r="17" class="meter-c"/><text x="270" y="105" class="meter-t">A</text>
+            <text x="160" y="22" class="c-lab r-lab"></text><text x="18" y="104" class="c-lab v-lab"></text>
+          </svg>
+          <div class="ohm-read"><span>${lab.I}</span><b class="cur"></b><small>I = V ÷ R</small></div>
+        </div>
+        <label class="sl-row"><span>${lab.V}</span><input type="range" min="0" max="24" step="1" value="6" class="v"><b class="vv"></b></label>
+        <label class="sl-row"><span>${lab.R}</span><input type="range" min="1" max="12" step="1" value="3" class="r"><b class="rv"></b></label>
+      </div>`;
+      const v = $(".v", host), r = $(".r", host), flow = $(".flow", host);
       const draw = () => {
         const I = v.value / r.value;
-        $(".vv", host).textContent = v.value; $(".rv", host).textContent = r.value;
-        $(".cur", host).textContent = I.toFixed(2);
-        $(".ibar", host).style.width = Math.min(100, (I / 8) * 100) + "%";
-        $(".bulb", host).style.filter = `brightness(${0.4 + Math.min(1.2, I / 4)}) drop-shadow(0 0 ${Math.min(24, I * 4)}px #facc15)`;
+        $(".vv", host).textContent = `${v.value} V`; $(".rv", host).textContent = `${r.value} Ω`;
+        $(".v-lab", host).textContent = `${v.value}V`; $(".r-lab", host).textContent = `${r.value}Ω`;
+        $(".cur", host).textContent = `${I.toFixed(2)} A`;
+        flow.style.animationDuration = I > 0 ? `${Math.max(0.25, 4 / I)}s` : "0s";
+        flow.style.opacity = I > 0 ? Math.min(1, 0.35 + I / 6) : 0;
       };
       v.addEventListener("input", draw); r.addEventListener("input", draw); draw();
     },
   };
 
-  // ───────────── Views ─────────────
-  const app = () => $("#app");
-  const subjName = (s) => L(window.SUBJECTS[s].name);
-  const chip = (s) => `<span class="chip" style="--c:${window.SUBJECTS[s].color}"><i>${window.SUBJECTS[s].icon}</i>${esc(subjName(s))}</span>`;
+  // ───────────────────────── Views ─────────────────────────
+  function forgettingCurve() {
+    const W = 360, H = 170, px = (t) => 34 + (t / 20) * (W - 44), py = (r) => 26 + (1 - r) * (H - 56);
+    const decay = Array.from({ length: 81 }, (_, i) => { const t = i / 4; return `${i ? "L" : "M"}${px(t).toFixed(1)},${py(Math.exp(-t / 2.2)).toFixed(1)}`; }).join("");
+    const reviews = [0, 1.5, 4, 9, 20]; let d = "";
+    for (let k = 0; k < reviews.length - 1; k++) {
+      const t0 = reviews[k], t1 = reviews[k + 1], tau = 2.2 * Math.pow(2.4, k);
+      for (let t = t0; t <= t1 + 1e-9; t += 0.25) d += `${d ? "L" : "M"}${px(t).toFixed(1)},${py(Math.exp(-(t - t0) / tau)).toFixed(1)}`;
+      if (k < reviews.length - 2) d += `L${px(t1).toFixed(1)},${py(1).toFixed(1)}`;
+    }
+    const dots = reviews.slice(1, -1).map((t) => `<circle cx="${px(t)}" cy="${py(1)}" r="3.5" class="dot"/>`).join("");
+    return `<figure class="curve-fig"><svg dir="ltr" viewBox="0 0 ${W} ${H}" role="img" aria-label="${T("curve_no")} / ${T("curve_yes")}">
+      <line x1="34" x2="${W - 10}" y1="${H - 30}" y2="${H - 30}" class="axis"/><line x1="34" x2="34" y1="10" y2="${H - 30}" class="axis"/>
+      <path d="${decay}" class="c-no"/><path d="${d}" class="c-yes"/>${dots}
+      <text x="${W - 10}" y="${H - 12}" class="ax-l" text-anchor="end">${T("curve_x")}</text>
+      <text x="40" y="12" class="ax-l" text-anchor="start">${T("curve_y")}</text>
+    </svg><figcaption><span class="lgd"></span>${T("curve_yes")}<span class="lgd lgd-no"></span>${T("curve_no")}</figcaption></figure>`;
+  }
+
+  function subjectRows(b) {
+    return b.subjects.map((s) => {
+      const nl = window.LESSONS.filter((l) => l.subject === s).length, nq = window.QUESTIONS.filter((q) => q.subject === s).length;
+      return `<li>${tile(s)}<div><b>${esc(subjName(s))}</b>${nl || nq ? meta(nl ? `${num(nl)} ${T("lessons_n")}` : "", nq ? `${num(nq)} ${T("questions_n")}` : "") : meta(T("soon"))}</div></li>`;
+    }).join("");
+  }
 
   const views = {
     home() {
       const sample = window.LESSONS[0];
+      let br = S.profile?.branch || "scientific";
       app().innerHTML = `
-      <section class="hero">
-        <div class="hero-text">
-          <span class="pill">🇵🇸 ${T("mvp_note")} · ${T("tagline")}</span>
-          <h1>${T("hero_title")}</h1>
+      <section class="hero"><div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">${T("eyebrow")}</p>
+          <h1 class="display">${T("hero_title")}</h1>
           <p class="lead">${T("hero_sub")}</p>
-          <div class="cta-row">
-            <a class="btn primary lg" href="#/start">${T("hero_cta")}</a>
-            <a class="btn ghost lg" href="#/lesson/${sample.id}">${T("hero_cta2")} ▸</a>
-          </div>
-          <div class="stats">
-            <div><b>${num(6)}</b><span>${T("stat_branches")}</span></div>
-            <div><b>${num(20)}</b><span>${T("stat_minutes")}</span></div>
-            <div><b>⚡</b><span>${T("stat_feedback")}</span></div>
-          </div>
+          <div class="actions"><a class="btn primary lg" href="#/start">${T("hero_cta")}${I("arrow", "flip")}</a><a class="btn secondary lg" href="#/learn">${T("hero_cta2")}</a></div>
+          <ul class="trust">${["trust1", "trust2", "trust3"].map((k, i) => `<li>${I(["shield", "check", "phone"][i])}${T(k)}</li>`).join("")}</ul>
         </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="phone">
-            <div class="ph-top"><b>${T("today_plan")}</b><span class="streak-badge">🔥 ${num(7)}</span></div>
-            <div class="ph-item done">✓ ${esc(L(window.LESSONS[0].title))}</div>
-            <div class="ph-item">${chip("physics")} ${esc(L(window.LESSONS[1].title))}</div>
-            <div class="ph-item">${chip("english")} ${T("review")} – ⏱ ${num(4)} ${T("min")}</div>
-            <div class="ph-wa"><span>🟢 WhatsApp</span><p>${S.lang === "ar" ? "صباح الخير! مهمتك اليوم: ١٠ دقائق مشتقات + مراجعة إنجليزي 💪" : "Morning! Today: 10 min derivatives + an English review 💪"}</p></div>
-          </div>
+        <div class="demo card">
+          <div class="demo-head"><span class="pill">${T("demo_label")}</span><b>${T("demo_title")}</b></div>
+          <p class="small muted">${T("demo_inst")}</p>
+          <div class="w"></div>
+          <p class="demo-q">${T("demo_q")}</p>
+          <div class="seg" role="radiogroup">${[5, 10, 25].map((v) => `<button class="seg-b" role="radio" aria-checked="false" data-v="${v}">${num(v)}</button>`).join("")}</div>
+          <div class="demo-fb" aria-live="polite"></div>
+        </div>
+      </div></section>
+
+      <section class="band"><div class="wrap">
+        <div class="sec-head"><h2>${T("br_title")}</h2><p class="muted">${T("br_sub")}</p></div>
+        <div class="tabs" role="tablist">${window.BRANCHES.map((b) => `<button role="tab" class="tab" data-b="${b.id}" aria-selected="${b.id === br}">${esc(L(b.name).split(" (")[0])}</button>`).join("")}</div>
+        <div class="br-panel card" role="tabpanel"></div>
+      </div></section>
+
+      <section class="wrap section">
+        <div class="sec-head"><h2>${T("m_title")}</h2><p class="muted">${T("m_sub")}</p></div>
+        <div class="method">
+          <ol class="principles">${[1, 2, 3].map((n) => `<li><span class="p-n">${num(n)}</span><div><h3>${T(`m${n}_t`)}</h3><p>${T(`m${n}_d`)}</p></div></li>`).join("")}</ol>
+          <div class="card">${forgettingCurve()}</div>
         </div>
       </section>
 
-      <section class="section"><h2>${T("how_title")}</h2>
-        <div class="grid four">${[1, 2, 3, 4].map((n) => `<div class="card step"><span class="step-n">${num(n)}</span><h3>${T(`how${n}_t`)}</h3><p>${T(`how${n}_d`)}</p></div>`).join("")}</div>
+      <section class="band alt"><div class="wrap preview">
+        <div class="preview-copy"><h2>${T("p_title")}</h2><p class="muted">${T("p_sub")}</p>
+          <ul class="checks">${[1, 2, 3, 4].map((n) => `<li>${I("check")}${T("p" + n)}</li>`).join("")}</ul>
+          <a class="btn primary" href="#/start">${T("hero_cta")}</a></div>
+        <div class="frame" aria-hidden="true"><div class="frame-bar"><i></i><i></i><i></i><span>najih.net</span></div><div class="frame-body">
+          <p class="eyebrow">${T("up_next")}</p>
+          <div class="next-mini">${tile("math")}<div><b>${esc(L(sample.title))}</b>${meta(T("k_lesson"), `${num(sample.minutes)} ${T("min")}`)}</div><span class="btn primary sm">${T("continue")}</span></div>
+          <div class="mini-grid">
+            <div class="mini"><span class="muted small">${T("exam_on")}</span><b class="big">${num(203)}</b><span class="small muted">${T("days_to_exam")}</span></div>
+            <div class="mini"><span class="muted small">${T("mastery")}</span>${["math", "physics", "english"].map((s, i) => `<div class="mrow"><span>${esc(subjName(s))}</span>${bar([0.62, 0.41, 0.78][i], SUBJ[s].color)}</div>`).join("")}</div>
+          </div>
+        </div></div>
+      </div></section>
+
+      <section class="wrap section">
+        <div class="sec-head"><h2>${T("s_title")}</h2></div>
+        <div class="grid3">${[["file", "s1", "#/exams"], ["users", "s2", "#/tutors"], ["message", "s3", "#/join"]].map(([ic, k, h]) => `
+          <a class="card svc" href="${h}"><span class="svc-ic">${I(ic)}</span><h3>${T(k + "_t")}${k === "s2" ? ` <span class="badge">${T("soon")}</span>` : ""}</h3><p class="muted">${T(k + "_d")}</p><span class="more">${I("arrow", "flip")}</span></a>`).join("")}</div>
       </section>
 
-      <section class="section"><h2>${T("feat_title")}</h2>
-        <div class="grid three">${["🧪", "💡", "📈", "📝", "👩‍🏫", "🌐"].map((ic, i) => `<div class="card feat"><span class="ic">${ic}</span><h3>${T(`f${i + 1}_t`)}</h3><p>${T(`f${i + 1}_d`)}</p></div>`).join("")}</div>
-      </section>
+      <section class="wrap"><div class="cta">
+        <div><h2>${T("cta_title")}</h2><p>${T("cta_sub")}</p></div>
+        <div class="actions"><a class="btn light" target="_blank" rel="noopener" href="${waLink(T("j_title"))}">${I("message")}${T("via_wa")}</a><a class="btn ghost-light" target="_blank" rel="noopener" href="${fbLink()}">${T("via_fb")}</a><a class="btn ghost-light" href="#/join">${I("phone")}${T("via_phone")}</a></div>
+      </div></section>`;
 
-      <section class="section" id="branches"><h2>${T("branches_title")}</h2>
-        <div class="grid three">${window.BRANCHES.map((b) => `
-          <a class="card branch" href="#/branch/${b.id}"><h3>${esc(L(b.name))}</h3><div class="chips">${b.subjects.map(chip).join("")}</div><span class="go">${T("start_branch")} ▸</span></a>`).join("")}</div>
-      </section>
-
-      <section class="section cta-band"><h2>${T("cta_title")}</h2><p>${T("cta_sub")}</p>
-        <div class="cta-row center">${joinButtons()}<a class="btn light" href="#/join">📱 ${T("via_phone")}</a></div>
-      </section>`;
+      // demo
+      WIDGETS.tangent($(".demo .w"));
+      $$(".seg-b").forEach((b) => b.addEventListener("click", () => {
+        const ok = +b.dataset.v === 10;
+        $$(".seg-b").forEach((x) => { x.setAttribute("aria-checked", String(x === b)); x.classList.remove("is-right", "is-wrong"); });
+        b.classList.add(ok ? "is-right" : "is-wrong");
+        $(".demo-fb").className = "demo-fb " + (ok ? "good" : "bad");
+        $(".demo-fb").innerHTML = `${I(ok ? "check" : "bulb")}<span>${ok ? T("demo_ok") : T("demo_no")}${ok ? ` <a href="#/lesson/${sample.id}">${T("demo_more")}</a>` : ""}</span>`;
+      }));
+      // branch tabs
+      const renderBranch = () => {
+        const b = branchOf(br);
+        $(".br-panel").innerHTML = `<div class="br-head"><h3>${esc(L(b.name))}</h3><a class="btn primary sm" href="#/branch/${b.id}">${T("br_start")}${I("arrow", "flip")}</a></div><ul class="subj-list">${subjectRows(b)}</ul>`;
+      };
+      $$(".tab").forEach((t) => t.addEventListener("click", () => { br = t.dataset.b; $$(".tab").forEach((x) => x.setAttribute("aria-selected", String(x === t))); renderBranch(); }));
+      $(".tabs").addEventListener("keydown", (e) => {
+        const tabs = $$(".tab"), i = tabs.indexOf(document.activeElement), dir = document.documentElement.dir === "rtl" ? -1 : 1;
+        const d = { ArrowRight: dir, ArrowLeft: -dir }[e.key];
+        if (d && i > -1) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click(); }
+      });
+      renderBranch();
     },
+
+    learn() { views.branch(S.profile?.branch || "scientific"); },
 
     branch(id) {
-      const b = branchOf(id); if (!b) return go("#/");
-      app().innerHTML = `<section class="section"><a class="back" href="#/">◂ ${T("nav_home")}</a><h1>${esc(L(b.name))}</h1>
-        <div class="grid three">${b.subjects.map((s) => {
-          const lessons = window.LESSONS.filter((l) => l.subject === s);
-          const nq = window.QUESTIONS.filter((q) => q.subject === s).length;
-          const m = subjectMastery(s);
-          return `<div class="card subj" style="--c:${window.SUBJECTS[s].color}">
-            <div class="subj-h"><span class="subj-ic">${window.SUBJECTS[s].icon}</span><h3>${esc(subjName(s))}</h3></div>
-            ${m !== null ? `<div class="bar"><span style="width:${m * 100}%"></span></div>` : ""}
-            <ul class="lesson-list">${lessons.map((l) => `<li><a href="#/lesson/${l.id}">${S.done.includes(l.id) ? "✅" : "▶"} ${esc(L(l.title))} <small>${num(l.minutes)} ${T("min")}</small></a></li>`).join("") || `<li class="muted">${T("coming")}…</li>`}</ul>
-            ${nq ? `<a class="btn ghost sm" href="#/practice/${s}">${T("practice")} (${num(nq)})</a>` : ""}
-          </div>`; }).join("")}</div></section>`;
-    },
-
-    learn() {
-      if (S.profile) return go(`#/branch/${S.profile.branch}`);
-      go("#/"); setTimeout(() => $("#branches")?.scrollIntoView({ behavior: "smooth" }), 50);
+      const b = branchOf(id); if (!b) return go("#/learn");
+      app().innerHTML = `<section class="wrap section">
+        <p class="eyebrow">${T("nav_learn")}</p><h1>${esc(L(b.name))}</h1>
+        <nav class="chips" aria-label="${T("f_branch")}">${window.BRANCHES.map((x) => `<a class="chip" href="#/branch/${x.id}" ${x.id === id ? 'aria-current="page"' : ""}>${esc(L(x.name).split(" (")[0])}</a>`).join("")}</nav>
+        <div class="grid3 subjects">${b.subjects.map((s) => {
+          const lessons = window.LESSONS.filter((l) => l.subject === s), nq = window.QUESTIONS.filter((q) => q.subject === s).length, m = subjectMastery(s);
+          return `<article class="card subj">
+            <header>${tile(s, "lg")}<div><h3>${esc(subjName(s))}</h3>${meta(lessons.length ? `${num(lessons.length)} ${T("lessons_n")}` : "", nq ? `${num(nq)} ${T("questions_n")}` : "") }</div></header>
+            ${m !== null ? `<div class="mrow">${bar(m, SUBJ[s].color)}<small>${num(Math.round(m * 100))}%</small></div>` : ""}
+            ${lessons.length ? `<ul class="lessons">${lessons.map((l) => `<li><a href="#/lesson/${l.id}"><span class="l-ic ${S.done.includes(l.id) ? "done" : ""}">${I(S.done.includes(l.id) ? "check" : "play")}</span><span>${esc(L(l.title))}</span><small>${num(l.minutes)} ${T("min")}</small></a></li>`).join("")}</ul>` : `<p class="muted small soon-note">${I("lock")}${T("soon")}</p>`}
+            ${nq ? `<a class="btn secondary sm" href="#/practice/${s}">${I("pencil")}${T("practise")}</a>` : ""}
+          </article>`; }).join("")}</div></section>`;
     },
 
     start() {
-      const p = S.profile ? { ...S.profile } : { name: "", branch: "", target: 90, weak: [], minutes: 20, examDate: CFG.defaultExamDate };
+      const p = S.profile ? { ...S.profile, weak: [...S.profile.weak] } : { name: "", branch: "", target: 85, weak: [], minutes: 20, examDate: CFG.defaultExamDate };
       let step = 0; const N = 5;
       const render = () => {
         const b = branchOf(p.branch);
-        const body = [
-          () => `<label class="q-label">${T("ob_name")}</label><input class="field" id="ob-name" value="${esc(p.name)}" placeholder="${T("ob_name_ph")}" maxlength="40">`,
-          () => `<label class="q-label">${T("ob_branch")}</label><div class="opt-grid">${window.BRANCHES.map((x) => `<button class="opt ${p.branch === x.id ? "sel" : ""}" data-v="${x.id}">${esc(L(x.name))}</button>`).join("")}</div>`,
-          () => `<label class="q-label">${T("ob_target")}</label><div class="target"><input type="range" min="60" max="99" value="${p.target}" id="ob-target"><b id="ob-tv">${num(p.target)}%</b></div>`,
-          () => `<label class="q-label">${T("ob_subjects")}</label><div class="opt-grid">${b.subjects.map((s) => `<button class="opt ${p.weak.includes(s) ? "sel" : ""}" data-v="${s}">${window.SUBJECTS[s].icon} ${esc(subjName(s))}</button>`).join("")}</div>`,
-          () => `<label class="q-label">${T("ob_minutes")}</label><div class="opt-grid">${[10, 20, 30, 45].map((m) => `<button class="opt ${p.minutes === m ? "sel" : ""}" data-v="${m}">${num(m)} ${T("min")}</button>`).join("")}</div>
-                 <label class="q-label sm">${T("ob_exam")}</label><input type="date" class="field" id="ob-exam" value="${p.examDate}">`,
+        const q = [
+          () => `<label class="q-label" for="ob-name">${T("ob_name")}</label><input class="field lg" id="ob-name" value="${esc(p.name)}" placeholder="${T("ob_name_ph")}" maxlength="40" autocomplete="given-name">`,
+          () => `<p class="q-label">${T("ob_branch")}</p><div class="opts" role="radiogroup">${window.BRANCHES.map((x) => `<button class="opt" role="radio" aria-checked="${p.branch === x.id}" data-v="${x.id}"><span>${esc(L(x.name))}</span><span class="o-m"></span></button>`).join("")}</div>`,
+          () => `<label class="q-label" for="ob-target">${T("ob_target")}</label><p class="muted small">${T("ob_target_hint")}</p><div class="target"><b id="ob-tv">${num(p.target)}%</b><input type="range" min="60" max="99" value="${p.target}" id="ob-target" dir="ltr"></div>`,
+          () => `<p class="q-label">${T("ob_subjects")}</p><p class="muted small">${T("ob_subjects_hint")}</p><div class="opts" role="group">${b.subjects.map((s) => `<button class="opt" aria-pressed="${p.weak.includes(s)}" data-v="${s}">${tile(s, "sm")}<span>${esc(subjName(s))}</span><span class="o-m box"></span></button>`).join("")}</div>`,
+          () => `<p class="q-label">${T("ob_minutes")}</p><div class="opts row" role="radiogroup">${[10, 20, 30, 45].map((m) => `<button class="opt center" role="radio" aria-checked="${p.minutes === m}" data-v="${m}"><b>${num(m)}</b><span class="small muted">${T("minutes")}</span></button>`).join("")}</div>
+                 <label class="q-label sm" for="ob-exam">${T("ob_exam")}</label><input type="date" class="field" id="ob-exam" value="${p.examDate}">`,
         ][step]();
-        app().innerHTML = `<section class="section narrow"><div class="card onboard">
-          <div class="q-progress">${T("ob_step")} ${num(step + 1)} ${T("ob_of")} ${num(N)}<div class="bar"><span style="width:${((step + 1) / N) * 100}%"></span></div></div>
-          <h2>${T("ob_title")}</h2>${body}
-          <div class="q-actions">${step ? `<button class="btn ghost" id="ob-back">${T("back")}</button>` : "<span></span>"}<button class="btn primary" id="ob-next">${step === N - 1 ? T("finish") : T("next")}</button></div>
-        </div></section>`;
+        app().innerHTML = `<section class="wrap section ob">
+          <aside class="ob-aside"><h1>${T("ob_title")}</h1><p class="muted">${T("ob_sub")}</p>
+            <ol class="stepper">${[1, 2, 3, 4, 5].map((n, i) => `<li class="${i < step ? "done" : i === step ? "cur" : ""}"><span>${i < step ? I("check") : num(n)}</span>${T("ob_s" + n)}</li>`).join("")}</ol>
+            <div class="ob-progress">${bar((step + 1) / N)}</div>
+          </aside>
+          <div class="card ob-card">${q}
+            <div class="ob-actions">${step ? `<button class="btn quiet" id="ob-back">${I("arrow", "flip back-ic")}${T("back")}</button>` : "<span></span>"}<button class="btn primary" id="ob-next">${step === N - 1 ? T("finish") : T("next")}${I("arrow", "flip")}</button></div>
+          </div></section>`;
         const nextBtn = $("#ob-next");
-        const valid = () => [p.name.trim(), p.branch, true, true, p.minutes][step];
+        const valid = () => [p.name.trim(), p.branch, 1, 1, p.minutes][step];
         const refresh = () => (nextBtn.disabled = !valid());
-        $("#ob-name")?.addEventListener("input", (e) => { p.name = e.target.value; refresh(); });
-        $("#ob-name")?.focus();
+        const name = $("#ob-name");
+        if (name) { name.addEventListener("input", () => { p.name = name.value; refresh(); }); name.addEventListener("keydown", (e) => e.key === "Enter" && nextBtn.click()); name.focus(); }
         $("#ob-target")?.addEventListener("input", (e) => { p.target = +e.target.value; $("#ob-tv").textContent = num(p.target) + "%"; });
         $("#ob-exam")?.addEventListener("change", (e) => (p.examDate = e.target.value || CFG.defaultExamDate));
         $$(".opt").forEach((o) => o.addEventListener("click", () => {
           const v = o.dataset.v;
-          if (step === 1) { if (p.branch !== v) p.weak = []; p.branch = v; $$(".opt").forEach((x) => x.classList.toggle("sel", x === o)); }
-          if (step === 3) { p.weak = p.weak.includes(v) ? p.weak.filter((x) => x !== v) : [...p.weak, v]; o.classList.toggle("sel"); }
-          if (step === 4) { p.minutes = +v; $$(".opt").forEach((x) => x.classList.toggle("sel", x === o)); }
+          if (step === 1) { if (p.branch !== v) p.weak = []; p.branch = v; }
+          if (step === 3) { p.weak = p.weak.includes(v) ? p.weak.filter((x) => x !== v) : [...p.weak, v]; o.setAttribute("aria-pressed", String(p.weak.includes(v))); }
+          if (step === 4) p.minutes = +v;
+          if (step !== 3) $$(".opt").forEach((x) => x.setAttribute("aria-checked", String(x === o)));
           refresh();
         }));
         $("#ob-back")?.addEventListener("click", () => { step--; render(); });
@@ -308,99 +421,112 @@
 
     dashboard() {
       const p = S.profile;
-      if (!p) { app().innerHTML = `<section class="section narrow center"><div class="card"><h2>${T("no_plan")}</h2><a class="btn primary lg" href="#/start">${T("make_plan")}</a></div></section>`; return; }
-      const b = branchOf(p.branch);
-      const days = Math.max(0, Math.ceil((new Date(p.examDate).getTime() - today()) / DAY));
-      const plan = dailyPlan();
+      if (!p) {
+        app().innerHTML = `<section class="wrap section narrow"><div class="card empty">${mark("lg")}<h1>${T("no_plan_t")}</h1><p class="muted">${T("no_plan_d")}</p><a class="btn primary lg" href="#/start">${T("make_plan")}${I("arrow", "flip")}</a></div></section>`;
+        return;
+      }
+      const b = branchOf(p.branch), exam = new Date(p.examDate).getTime();
+      const days = Math.max(0, Math.ceil((exam - today()) / DAY));
+      const plan = dailyPlan(), next = plan[0];
       const streak = S.streak.last >= today() - DAY ? S.streak.count : 0;
-      app().innerHTML = `
-      <section class="section">
-        <div class="dash-head">
-          <div><h1>${T("hello")} ${esc(p.name)} 👋</h1><p class="muted">${esc(L(b.name))} · 🎯 ${num(p.target)}%</p></div>
-          <div class="kpis">
-            <div class="kpi"><b>${num(days)}</b><span>${T("days_left")}</span></div>
-            <div class="kpi"><b>🔥 ${num(streak)}</b><span>${T("streak")}</span></div>
-            <div class="kpi"><b>⭐ ${num(S.xp)}</b><span>${T("xp")}</span></div>
-          </div>
-        </div>
+      const week = Array.from({ length: 7 }, (_, i) => today() - (6 - i) * DAY);
+      app().innerHTML = `<section class="wrap section dash">
+        <header class="dash-h">
+          <div><p class="eyebrow">${fmtDate(today(), { weekday: "long", day: "numeric", month: "long" })}</p>
+          <h1>${new Date().getHours() < 12 ? T("greet_m") : T("greet_e")}${S.lang === "ar" ? "،" : ","} ${esc(p.name)}</h1>
+          <p class="muted">${meta(esc(L(b.name)), `${I("target")} ${num(p.target)}%`, `${num(p.minutes)} ${T("min")}`)}</p></div>
+          <a class="btn secondary sm" href="#/start">${I("pencil")}${T("edit_plan")}</a>
+        </header>
         <div class="dash-grid">
-          <div class="card">
-            <h2>${T("today_plan")}</h2>
-            <ol class="plan">${plan.map((it) => {
-              const href = it.kind === "lesson" ? `#/lesson/${it.lesson.id}` : `#/practice/${it.subject}`;
-              const label = it.kind === "lesson" ? `${T("lesson")}: ${esc(L(it.lesson.title))}` : `${T(it.kind)}: ${esc(subjName(it.subject))}`;
-              return `<li><span class="kind k-${it.kind}">${it.kind === "lesson" ? "▶" : it.kind === "review" ? "↻" : "✎"}</span><div><b>${label}</b><small>${chip(it.subject)} ⏱ ${num(it.minutes)} ${T("min")}</small></div><a class="btn primary sm" href="${href}">${T("start")}</a></li>`;
-            }).join("") || `<li class="muted">${T("done")} 🎉</li>`}</ol>
+          <div class="col">
+            ${next ? `<a class="card next" href="${next.href}" style="--c:${SUBJ[next.subject].color}">
+              <p class="eyebrow">${T("up_next")}</p>
+              <div class="next-row">${tile(next.subject, "lg")}<div><h2>${esc(itemTitle(next))}</h2>${meta(T("k_" + next.kind), esc(subjName(next.subject)), `${num(next.minutes)} ${T("min")}`)}</div></div>
+              <span class="btn primary">${I("play")}${T(next.kind === "lesson" ? "start" : "continue")}</span></a>` : ""}
+            <div class="card"><h2 class="h-sm">${T("plan_today")}</h2>
+              ${plan.length ? `<ol class="plan">${plan.map((it, i) => `<li><a href="${it.href}"><span class="p-i">${num(i + 1)}</span><div><b>${esc(itemTitle(it))}</b>${meta(T("k_" + it.kind), esc(subjName(it.subject)), `${num(it.minutes)} ${T("min")}`)}</div>${I("chevron", "flip chev")}</a></li>`).join("")}</ol>`
+                : `<p class="done-msg">${I("check")}${T("plan_done")}</p>`}
+            </div>
+            <div class="card"><h2 class="h-sm">${T("mastery")}</h2>
+              <ul class="mastery">${b.subjects.map((s) => { const m = subjectMastery(s); return `<li>${tile(s, "sm")}<span>${esc(subjName(s))}</span>${bar(m, SUBJ[s].color)}<small>${m === null ? T("not_started") : num(Math.round(m * 100)) + "%"}</small></li>`; }).join("")}</ul></div>
           </div>
-          <div class="card">
-            <h2>${T("mastery")}</h2>
-            <ul class="mastery">${b.subjects.map((s) => { const m = subjectMastery(s); return `<li><span>${window.SUBJECTS[s].icon} ${esc(subjName(s))}</span><div class="bar" style="--c:${window.SUBJECTS[s].color}"><span style="width:${(m ?? 0) * 100}%"></span></div><small>${m === null ? "—" : num(Math.round(m * 100)) + "%"}</small></li>`; }).join("")}</ul>
-          </div>
-          <div class="card wa-card">
-            <h2>🟢 ${T("notify_title")}</h2><p>${T("notify_desc")}</p>
-            <a class="btn wa" target="_blank" rel="noopener" href="${waLink(`${S.lang === "ar" ? "مرحباً، بدي أفعّل تذكيرات ناجح اليومية." : "Hi, I'd like to enable Najih daily reminders."} (${p.name} · ${L(b.name)})`)}">${T("notify_btn")}</a>
-          </div>
-        </div>
-        <div class="row-end"><a class="btn ghost sm" href="#/start">${T("edit_plan")}</a> <button class="btn ghost sm" id="reset">${T("reset")}</button></div>
-      </section>`;
-      $("#reset").addEventListener("click", () => { if (confirm(T("reset") + "?")) { const lang = S.lang; S = defaults(); S.lang = lang; save(); go("#/"); } });
+          <aside class="col">
+            <div class="card stat"><span class="st-ic">${I("calendar")}</span><b class="big">${num(days)}</b><span>${T("days_to_exam")}</span><small class="muted">${T("exam_on")}: ${fmtDate(exam)}</small></div>
+            <div class="card stat"><span class="st-ic warm">${I("flame")}</span><b class="big">${num(streak)}</b><span>${T("streak")}</span>
+              <div class="week" aria-label="${T("this_week")}">${week.map((d) => `<span class="${S.activity[dkey(d)] ? "on" : ""} ${d === today() ? "today" : ""}"><i></i><small>${fmtDate(d, { weekday: "narrow" })}</small></span>`).join("")}</div>
+              <small class="muted">${num(S.xp)} ${T("xp")}</small></div>
+            <div class="card rem"><h2 class="h-sm">${I("message")}${T("rem_title")}</h2><p class="muted small">${T("rem_desc")}</p>
+              <a class="btn secondary sm" target="_blank" rel="noopener" href="${waLink(`${T("rem_title")} — ${p.name} · ${L(b.name)}`)}">${T("rem_btn")}</a></div>
+            <button class="btn quiet sm reset" id="reset">${T("reset")}</button>
+          </aside>
+        </div></section>`;
+      $("#reset").addEventListener("click", () => { if (confirm(T("confirm_reset"))) { const lang = S.lang; S = defaults(); S.lang = lang; save(); go("#/"); } });
     },
 
     lesson(id) {
-      const lesson = window.LESSONS.find((l) => l.id === id); if (!lesson) return go("#/");
-      let i = 0;
-      const render = () => {
-        const st = lesson.steps[i];
-        app().innerHTML = `<section class="section narrow lesson">
-          <div class="lesson-top"><a class="back" href="${S.profile ? "#/dashboard" : "#/"}">✕</a>
-            <div class="bar"><span style="width:${(i / lesson.steps.length) * 100}%"></span></div>${chip(lesson.subject)}</div>
-          <h1 class="lesson-title">${esc(L(lesson.title))}</h1>
-          <div class="card step-card"><h2>${L(st.title)}</h2><div class="step-body"></div></div>
-        </section>`;
-        const body = $(".step-body");
-        const nextBtn = (enabled = true) => { const b = document.createElement("button"); b.className = "btn primary block"; b.textContent = T("continue"); b.disabled = !enabled; b.onclick = () => { i++; i < lesson.steps.length ? render() : finish(); }; body.appendChild(b); return b; };
+      const lesson = window.LESSONS.find((l) => l.id === id); if (!lesson) return go("#/learn");
+      const xp0 = S.xp; let correct = 0, total = 0, i = 0;
+      const P = Player({ title: L(lesson.title), subject: lesson.subject, segments: lesson.steps.length, exit: S.profile ? "#/dashboard" : "#/learn" });
+      const run = () => {
+        if (i >= lesson.steps.length) {
+          if (!S.done.includes(lesson.id)) { S.done.push(lesson.id); S.xp += 20; logActivity(); save(); }
+          return summary(P, { title: T("lesson_done"), correct, total, xp: S.xp - xp0, again: `#/practice/${lesson.subject}` });
+        }
+        const st = lesson.steps[i], next = () => { i++; run(); };
+        P.progress(i); P.step(L(st.title));
         if (st.type === "explore") {
-          body.innerHTML = `<p>${L(st.body)}</p><div class="w"></div>
-            <div class="predict"><label>${L(st.predict.q)}</label><div class="row"><input class="num-input" inputmode="decimal" dir="ltr"><button class="btn ghost pcheck">${T("check")}</button></div><div class="q-feedback"></div></div>`;
-          WIDGETS[st.widget]($(".w", body));
-          const nb = nextBtn(false);
-          $(".pcheck", body).onclick = () => {
-            const v = parseFloat(normDigits($(".predict input", body).value));
-            if (isNaN(v)) return;
-            const ok = Math.abs(v - st.predict.answer) < 1e-6, fb = $(".predict .q-feedback", body);
-            fb.className = "q-feedback " + (ok ? "good" : "hint");
-            fb.innerHTML = ok ? T("correct") : `🤔 ${S.lang === "ar" ? "قريب! استخدم الأداة لتتأكد، ثم تابع." : "Close! Use the tool to check, then continue."}`;
-            nb.disabled = false; if (ok) { S.xp += 5; save(); confettiBurst(nb); }
+          P.body.innerHTML = `<div class="prose"><p>${L(st.body)}</p></div><div class="w"></div>
+            <div class="predict"><label for="pr"><span class="pill">${T("predict")}</span> ${L(st.predict.q)}</label><input id="pr" class="num-input" inputmode="decimal" autocomplete="off" dir="ltr"></div>`;
+          WIDGETS[st.widget]($(".w", P.body));
+          const inp = $("#pr");
+          const chk = () => {
+            const ok = Math.abs(parseFloat(normDigits(inp.value)) - st.predict.answer) < 1e-6;
+            inp.disabled = true; inp.classList.add(ok ? "is-right" : "is-close");
+            if (ok) { S.xp += 5; logActivity(); save(); }
+            P.set({ state: ok ? "good" : "hint", fb: { title: ok ? T("correct_t") : T("close_t"), body: L(st.predict.explain) }, label: T("continue"), onMain: next });
+            P.main.focus({ preventScroll: true });
           };
-        } else if (st.type === "concept") { body.innerHTML = L(st.body); nextBtn(); }
-        else if (st.type === "worked") {
-          body.innerHTML = `<p class="problem">${L(st.problem)}</p><ol class="reveal"></ol><button class="btn ghost rv">${T("reveal_step")} ▾</button>`;
-          let k = 0; const nb = nextBtn(false);
-          $(".rv", body).onclick = (e) => { $(".reveal", body).insertAdjacentHTML("beforeend", `<li>${L(st.reveal[k++])}</li>`); if (k >= st.reveal.length) { e.target.remove(); nb.disabled = false; } };
+          const idle = () => P.set({ label: T("check"), disabled: !inp.value.trim(), onMain: chk });
+          inp.addEventListener("input", idle); idle();
+        } else if (st.type === "concept") {
+          P.body.innerHTML = `<div class="prose">${L(st.body)}</div>`;
+          P.set({ label: T("continue"), onMain: next });
+        } else if (st.type === "worked") {
+          P.body.innerHTML = `<div class="problem">${L(st.problem)}</div><ol class="worked"></ol>`;
+          let k = 0;
+          const reveal = () => {
+            $(".worked", P.body).insertAdjacentHTML("beforeend", `<li>${L(st.reveal[k++])}</li>`);
+            P.progress(i, k / st.reveal.length);
+            P.set(k < st.reveal.length ? { label: T("next_step"), onMain: reveal } : { label: T("continue"), onMain: next });
+          };
+          P.set({ label: T("next_step"), onMain: reveal });
         } else if (st.type === "quiz") {
           const qs = st.questions.map((qid) => window.QUESTIONS.find((q) => q.id === qid));
-          runQuiz(qs, body, (score, total) => { body.innerHTML = `<div class="result"><b>${num(score)} / ${num(total)}</b><span>${T("score")}</span></div>`; nextBtn(); });
+          let j = 0;
+          const ask = () => {
+            if (j >= qs.length) return next();
+            P.progress(i, j / qs.length); P.step(`${L(st.title)} <span class="count">${num(j + 1)} / ${num(qs.length)}</span>`);
+            askQuestion(qs[j], P, (ft) => { total++; correct += ft ? 1 : 0; j++; ask(); });
+          };
+          ask();
         }
       };
-      const finish = () => {
-        if (!S.done.includes(lesson.id)) { S.done.push(lesson.id); S.xp += 20; bumpStreak(); save(); }
-        app().innerHTML = `<section class="section narrow center"><div class="card done-card"><div class="big-emoji">🎉</div><h2>${T("lesson_done")}</h2><p>+${num(20)} ${T("xp")}</p>
-          <div class="cta-row center"><a class="btn ghost" href="#/practice/${lesson.subject}">${T("practice_more")}</a><a class="btn primary" href="${S.profile ? "#/dashboard" : "#/start"}">${S.profile ? T("back_dashboard") : T("make_plan")}</a></div></div></section>`;
-      };
-      render();
+      run();
     },
 
     practice(subject) {
-      if (!window.SUBJECTS[subject]) return go("#/");
+      if (!SUBJ[subject]) return go("#/learn");
       const pool = window.QUESTIONS.filter((q) => q.subject === subject)
         .map((q) => ({ q, w: (S.mastery[mkey(q)]?.m ?? 0.2) + Math.random() * 0.3 }))
         .sort((a, b) => a.w - b.w).slice(0, 5).map((x) => x.q);
-      app().innerHTML = `<section class="section narrow lesson"><div class="lesson-top"><a class="back" href="${S.profile ? "#/dashboard" : "#/"}">✕</a><span></span>${chip(subject)}</div>
-        <h1 class="lesson-title">${T("practice")}: ${esc(subjName(subject))}</h1><div class="card step-card"><div class="step-body"></div></div></section>`;
-      runQuiz(pool, $(".step-body"), (score, total) => {
-        $(".step-body").innerHTML = `<div class="result"><b>${num(score)} / ${num(total)}</b><span>${T("score")}</span></div>
-          <div class="cta-row center"><a class="btn ghost" href="#/practice/${subject}" onclick="setTimeout(()=>dispatchEvent(new HashChangeEvent('hashchange')),0)">${T("practice_more")}</a><a class="btn primary" href="${S.profile ? "#/dashboard" : "#/start"}">${S.profile ? T("back_dashboard") : T("make_plan")}</a></div>`;
-      });
+      const xp0 = S.xp; let j = 0, correct = 0;
+      const P = Player({ title: `${T("practise")} · ${subjName(subject)}`, subject, segments: pool.length, exit: S.profile ? "#/dashboard" : "#/learn" });
+      const ask = () => {
+        if (j >= pool.length) return summary(P, { title: T("practice_done"), correct, total: pool.length, xp: S.xp - xp0, again: `#/practice/${subject}` });
+        P.progress(j); P.step(`${T("question")} <span class="count">${num(j + 1)} / ${num(pool.length)}</span>`);
+        askQuestion(pool[j], P, (ft) => { correct += ft ? 1 : 0; j++; ask(); });
+      };
+      ask();
     },
 
     exams() {
@@ -409,15 +535,17 @@
         const b = branchOf(st.branch);
         if (!b.subjects.includes(st.subject)) st.subject = b.subjects[0];
         const rows = window.EXAMS.filter((e) => e.branch === st.branch && e.subject === st.subject);
-        app().innerHTML = `<section class="section"><h1>${T("exams_title")}</h1><p class="muted">${T("exams_sub")}</p>
-          <div class="filters"><label>${T("filter_branch")}<select id="fb">${window.BRANCHES.map((x) => `<option value="${x.id}" ${x.id === st.branch ? "selected" : ""}>${esc(L(x.name))}</option>`).join("")}</select></label>
-          <label>${T("filter_subject")}<select id="fs">${b.subjects.map((s) => `<option value="${s}" ${s === st.subject ? "selected" : ""}>${esc(subjName(s))}</option>`).join("")}</select></label></div>
-          <div class="card"><table class="tbl"><thead><tr><th>${T("year")}</th><th>${T("session")}</th><th>${T("paper")}</th><th>${T("solution")}</th></tr></thead><tbody>
-          ${rows.map((e) => `<tr><td>${num(e.year)}</td><td>${num(e.session)}</td>
-            <td>${e.paper ? `<a href="${esc(e.paper)}" target="_blank" rel="noopener">PDF</a>` : `<span class="soon">${T("coming")}</span>`}</td>
-            <td>${e.solution ? `<a href="${esc(e.solution)}" target="_blank" rel="noopener">PDF</a>` : `<span class="soon">${T("coming")}</span>`}</td></tr>`).join("")}
-          </tbody></table></div>
-          <p class="center"><a class="btn primary" href="#/practice/${st.subject}">${T("practice")}: ${esc(subjName(st.subject))}</a></p></section>`;
+        const cell = (u) => (u ? `<a class="dl" href="${esc(u)}" target="_blank" rel="noopener">${I("download")}PDF</a>` : `<span class="badge muted">${T("soon")}</span>`);
+        app().innerHTML = `<section class="wrap section">
+          <p class="eyebrow">${T("nav_exams")}</p><h1>${T("ex_title")}</h1><p class="muted lead-sm">${T("ex_sub")}</p>
+          <div class="filters">
+            <label>${T("f_branch")}<select class="field" id="fb">${window.BRANCHES.map((x) => `<option value="${x.id}" ${x.id === st.branch ? "selected" : ""}>${esc(L(x.name))}</option>`).join("")}</select></label>
+            <label>${T("f_subject")}<select class="field" id="fs">${b.subjects.map((s) => `<option value="${s}" ${s === st.subject ? "selected" : ""}>${esc(subjName(s))}</option>`).join("")}</select></label>
+          </div>
+          <div class="card flush"><table class="tbl"><thead><tr><th>${T("year")}</th><th>${T("session")}</th><th>${T("paper")}</th><th>${T("solution")}</th></tr></thead>
+            <tbody>${rows.map((e) => `<tr><td><b>${num(e.year)}</b></td><td>${T("s_first")}</td><td>${cell(e.paper)}</td><td>${cell(e.solution)}</td></tr>`).join("")}</tbody></table></div>
+          ${window.QUESTIONS.some((q) => q.subject === st.subject) ? `<a class="btn secondary" href="#/practice/${st.subject}">${I("pencil")}${T("ex_practice")}</a>` : ""}
+        </section>`;
         $("#fb").onchange = (e) => { st.branch = e.target.value; render(); };
         $("#fs").onchange = (e) => { st.subject = e.target.value; render(); };
       };
@@ -425,62 +553,83 @@
     },
 
     tutors() {
-      const ar = S.lang === "ar";
-      app().innerHTML = `<section class="section narrow center"><div class="card"><div class="big-emoji">👩‍🏫</div><h1>${T("tutors_title")}</h1><p>${T("tutors_sub")}</p>
-        <div class="cta-row center">
-          <a class="btn primary" target="_blank" rel="noopener" href="${waLink(ar ? "مرحباً، بدي أحجز معلّم خصوصي عبر ناجح لما يفتح الحجز." : "Hi, please notify me when Najih tutor booking opens.")}">${T("tutor_interest")}</a>
-          <a class="btn ghost" target="_blank" rel="noopener" href="${waLink(ar ? "مرحباً، أنا معلّم/ة وبدي أنضم لناجح." : "Hi, I'm a tutor and I'd like to join Najih.")}">${T("tutor_apply")}</a>
-        </div></div></section>`;
+      app().innerHTML = `<section class="wrap section">
+        <div class="sec-head left"><p class="eyebrow">${T("nav_tutors")} <span class="badge">${T("soon")}</span></p><h1>${T("tu_title")}</h1><p class="lead-sm muted">${T("tu_sub")}</p></div>
+        <div class="grid3">${[["shield", 1], ["users", 2], ["target", 3]].map(([ic, n]) => `<div class="card svc"><span class="svc-ic">${I(ic)}</span><h3>${T(`tu${n}_t`)}</h3><p class="muted">${T(`tu${n}_d`)}</p></div>`).join("")}</div>
+        <div class="actions">
+          <a class="btn primary" target="_blank" rel="noopener" href="${waLink(`${T("tu_interest")} — ${T("brand")}`)}">${T("tu_interest")}</a>
+          <a class="btn secondary" target="_blank" rel="noopener" href="${waLink(`${T("tu_apply")} — ${T("brand")}`)}">${T("tu_apply")}</a>
+        </div></section>`;
     },
 
     join() {
-      const ar = S.lang === "ar";
-      app().innerHTML = `<section class="section narrow"><div class="card"><h1>${T("join_title")}</h1><p class="muted">${T("join_sub")}</p>
-        <div class="cta-row">${joinButtons()}</div><hr>
-        <h3>📱 ${T("via_phone")}</h3>
-        <form id="jf" class="form" novalidate>
-          <label>${T("name")}<input class="field" name="name" required maxlength="40" value="${esc(S.profile?.name || "")}"></label>
-          <label>${T("phone")}<input class="field" name="phone" required inputmode="tel" dir="ltr" placeholder="${T("phone_ph")}"></label>
-          <label>${T("branch")}<select class="field" name="branch">${window.BRANCHES.map((b) => `<option value="${b.id}" ${S.profile?.branch === b.id ? "selected" : ""}>${esc(L(b.name))}</option>`).join("")}</select></label>
-          <label class="check"><input type="checkbox" name="consent" required checked> <span>${T("consent")}</span></label>
-          <div class="q-feedback" aria-live="polite"></div>
-          <button class="btn primary block" type="submit">${T("submit")}</button>
-        </form></div></section>`;
-      $("#jf").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const f = new FormData(e.target), fb = $("#jf .q-feedback");
-        const phone = normDigits(f.get("phone")).replace(/[\s\-()]/g, "");
-        if (!/^(\+?97[02]|0097[02]|0)?5\d{8}$/.test(phone) || !f.get("consent")) { fb.className = "q-feedback bad"; fb.textContent = T("invalid_phone"); return; }
-        const entry = { name: String(f.get("name")).trim().slice(0, 40), phone, branch: f.get("branch"), lang: S.lang, source: "web", at: new Date().toISOString() };
-        S.signups.push(entry); save();
-        let sent = false;
-        if (CFG.signupEndpoint) { try { sent = (await fetch(CFG.signupEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(entry) })).ok; } catch (_) {} }
-        fb.className = "q-feedback good"; fb.textContent = T("thanks");
-        if (!sent) window.open(waLink(`${ar ? "اشتراك جديد في ناجح" : "New Najih signup"}: ${entry.name} · ${entry.phone} · ${L(branchOf(entry.branch).name)}`), "_blank", "noopener");
-      });
+      let tab = "phone";
+      app().innerHTML = `<section class="wrap section join">
+        <div><p class="eyebrow">${T("beta")}</p><h1>${T("j_title")}</h1><p class="lead-sm muted">${T("j_sub")}</p>
+          <ul class="checks">${[1, 2, 3].map((n) => `<li>${I("check")}${T("j" + n)}</li>`).join("")}</ul></div>
+        <div class="card">
+          <div class="tabs small" role="tablist">${[["phone", "phone"], ["wa", "message"], ["fb", "message"]].map(([k, ic]) => `<button class="tab" role="tab" data-k="${k}" aria-selected="${k === tab}">${I(ic)}${T(k === "phone" ? "via_phone" : k === "wa" ? "via_wa" : "via_fb")}</button>`).join("")}</div>
+          <div class="join-panel"></div>
+        </div></section>`;
+      const panel = $(".join-panel");
+      const render = () => {
+        if (tab === "wa") panel.innerHTML = `<p class="muted">${T("wa_desc")}</p><a class="btn primary block" target="_blank" rel="noopener" href="${waLink(`${T("j_title")} — ${S.profile?.name || ""}`)}">${I("message")}${T("open_wa")}</a>`;
+        else if (tab === "fb") panel.innerHTML = `<p class="muted">${T("fb_desc")}</p><a class="btn primary block" target="_blank" rel="noopener" href="${fbLink()}">${I("message")}${T("open_fb")}</a>`;
+        else {
+          panel.innerHTML = `<form id="jf" class="form" novalidate>
+            <label>${T("name")}<input class="field" name="name" maxlength="40" autocomplete="given-name" value="${esc(S.profile?.name || "")}"></label>
+            <label>${T("phone")}<div class="phone-field" dir="ltr"><select name="cc" aria-label="Country code"><option value="970">+970</option><option value="972">+972</option></select><input name="phone" inputmode="tel" autocomplete="tel-national" placeholder="${T("phone_ph")}"></div></label>
+            <label>${T("branch")}<select class="field" name="branch">${window.BRANCHES.map((b) => `<option value="${b.id}" ${S.profile?.branch === b.id ? "selected" : ""}>${esc(L(b.name))}</option>`).join("")}</select></label>
+            <label class="check"><input type="checkbox" name="consent" checked><span>${T("consent")}</span></label>
+            <p class="form-err" role="alert"></p>
+            <button class="btn primary block" type="submit">${T("submit")}</button></form>`;
+          $("#jf").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const f = new FormData(e.target), err = $(".form-err", panel);
+            const name = String(f.get("name")).trim().slice(0, 40);
+            const local = normDigits(f.get("phone")).replace(/\D/g, "").replace(/^0/, "");
+            if (!name) return (err.textContent = T("invalid_name"));
+            if (!/^5\d{8}$/.test(local) || !f.get("consent")) return (err.textContent = T("invalid_phone"));
+            const entry = { name, phone: `+${f.get("cc")}${local}`, branch: f.get("branch"), lang: S.lang, source: "web", at: new Date().toISOString() };
+            S.signups.push(entry); save();
+            let sent = false;
+            if (CFG.signupEndpoint) { try { sent = (await fetch(CFG.signupEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(entry) })).ok; } catch (_) {} }
+            panel.innerHTML = `<div class="success">${I("check")}<h3>${T("thanks_t")}</h3><p class="muted">${T("thanks_d")}</p>
+              ${sent ? "" : `<a class="btn primary" target="_blank" rel="noopener" href="${waLink(`${T("j_title")}: ${entry.name} · ${entry.phone} · ${L(branchOf(entry.branch).name)}`)}">${I("message")}${T("open_wa")}</a>`}</div>`;
+          });
+        }
+      };
+      $$(".tab").forEach((t) => t.addEventListener("click", () => { tab = t.dataset.k; $$(".tab").forEach((x) => x.setAttribute("aria-selected", String(x === t))); render(); }));
+      render();
     },
   };
 
-  function waLink(text) { return `https://wa.me/${CFG.whatsappNumber}?text=${encodeURIComponent(text)}`; }
-  function joinButtons() {
-    const msg = S.lang === "ar" ? "مرحباً ناجح! بدي أشترك وأستقبل الدروس والتذكيرات." : "Hi Najih! I'd like to subscribe to lessons and reminders.";
-    return `<a class="btn wa" target="_blank" rel="noopener" href="${waLink(msg)}">🟢 ${T("via_whatsapp")}</a>
-            <a class="btn fb" target="_blank" rel="noopener" href="https://m.me/${encodeURIComponent(CFG.facebookPage)}?ref=signup">💬 ${T("via_facebook")}</a>`;
-  }
-
-  // ───────────── Router ─────────────
+  // ───────────────────────── Router & global handlers ─────────────────────────
   function go(h) { if (location.hash === h) route(); else location.hash = h; }
   function route() {
     const [, name = "", arg] = (location.hash || "#/").split("/");
-    const view = views[name || "home"] || views.home;
-    applyLang();
-    $$(".nav a, .tabbar a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#/${name}`));
-    view(decodeURIComponent(arg || ""));
+    const view = views[name] ? name : "home";
+    focusMode(false); applyLang();
+    $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === (view === "branch" ? "learn" : view)));
+    views[view](decodeURIComponent(arg || ""));
     window.scrollTo(0, 0);
+    $("#app").focus({ preventScroll: true });
   }
   window.addEventListener("hashchange", route);
   document.addEventListener("click", (e) => {
-    if (e.target.closest("#lang-toggle")) { S.lang = S.lang === "ar" ? "en" : "ar"; save(); route(); }
+    if (e.target.closest("#lang-toggle")) { S.lang = S.lang === "ar" ? "en" : "ar"; save(); route(); return; }
+    const a = e.target.closest('a[href^="#/"]');
+    if (a && a.getAttribute("href") === location.hash) { e.preventDefault(); route(); }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!document.body.classList.contains("focus-mode") || e.altKey || e.ctrlKey || e.metaKey) return;
+    const tgt = e.target, typing = tgt.matches("input, select, textarea");
+    if (e.key === "Escape") { $("[data-exit]")?.click(); return; }
+    if (e.key === "Enter" && !tgt.matches("button, a, .handle")) {
+      const m = $(".b-main"); if (m && !m.disabled) { e.preventDefault(); m.click(); } return;
+    }
+    const n = "1234".indexOf(e.key) + 1 || "١٢٣٤".indexOf(e.key) + 1;
+    if (n && !typing) { const o = $$(".option")[n - 1]; if (o && !o.disabled) { o.click(); o.focus(); } }
   });
   $("#year").textContent = new Date().getFullYear();
   route();

@@ -2,11 +2,12 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ناجح — طريقك الذكي للنجاح في التوجيهي</title>
-  <meta name="description" content="ناجح: منصة تعليمية ذكية لطلبة التوجيهي في فلسطين — خطط دراسة شخصية، دروس تفاعلية، امتحانات سابقة وتذكيرات واتساب. Najih: personalised Tawjihi learning for Palestine.">
-  <meta name="theme-color" content="#4f46e5">
-  <meta property="og:title" content="ناجح | Najih — Tawjihi, personalised">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ناجح — التوجيهي، بخطة تناسبك أنت</title>
+  <meta name="description" content="ناجح: منصة تعليمية لطلبة التوجيهي في فلسطين — خطط دراسة شخصية، دروس تفاعلية، امتحانات سابقة وتذكيرات واتساب. Najih: personalised Tawjihi learning for Palestine.">
+  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E141B" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="ناجح · Najih — Tawjihi, with a plan built around you">
   <meta property="og:description" content="خطة دراسة شخصية لكل فروع التوجيهي الفلسطيني. Personalised study plans for every Palestinian Tawjihi branch.">
   <meta property="og:url" content="https://najih.net/">
   <meta property="og:type" content="website">
@@ -14,41 +15,53 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <a class="skip" href="#app" data-t="skip">تخطَّ إلى المحتوى</a>
   <header class="topbar">
-    <a class="logo" href="#/"><img src="assets/img/logo.svg" alt="" width="34" height="34"><span data-t="brand">ناجح</span></a>
-    <nav class="nav">
-      <a href="#/" data-t="nav_home">الرئيسية</a>
-      <a href="#/learn" data-t="nav_learn">تعلّم</a>
-      <a href="#/exams" data-t="nav_exams">امتحانات سابقة</a>
-      <a href="#/tutors" data-t="nav_tutors">المعلّمون</a>
-      <a href="#/dashboard" data-t="nav_dashboard">خطتي</a>
-    </nav>
-    <div class="top-actions">
-      <button id="lang-toggle" class="btn ghost sm" data-t="switch_lang">English</button>
-      <a href="#/join" class="btn primary sm" data-t="join">اشترك مجاناً</a>
+    <div class="wrap topbar-in">
+      <a class="logo" href="#/" aria-label="Najih">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><g fill="var(--on-brand)"><path d="M16 6l3 3-3 3-3-3zM16 20l3 3-3 3-3-3zM9 13l3 3-3 3-3-3zM23 13l3 3-3 3-3-3z"/><path d="M16 13.2l2.8 2.8-2.8 2.8-2.8-2.8z" opacity=".55"/></g></svg>
+        <span data-t="brand">ناجح</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#/learn" data-nav="learn" data-t="nav_learn"></a>
+        <a href="#/exams" data-nav="exams" data-t="nav_exams"></a>
+        <a href="#/tutors" data-nav="tutors" data-t="nav_tutors"></a>
+        <a href="#/dashboard" data-nav="dashboard" data-t="nav_dashboard"></a>
+      </nav>
+      <div class="top-actions">
+        <button id="lang-toggle" class="btn quiet sm" lang="en"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a14 14 0 0 0 0 19 14 14 0 0 0 0-19M2.5 12h19"/></svg><span data-t="switch_lang"></span></button>
+        <a id="top-cta" class="btn primary sm" href="#/start"></a>
+      </div>
     </div>
   </header>
 
   <main id="app" tabindex="-1"></main>
 
   <footer class="footer">
-    <p><span data-t="footer"></span> © <span id="year"></span> · najih.net</p>
+    <div class="wrap footer-in">
+      <div><a class="logo" href="#/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><g fill="var(--on-brand)"><path d="M16 6l3 3-3 3-3-3zM16 20l3 3-3 3-3-3zM9 13l3 3-3 3-3-3zM23 13l3 3-3 3-3-3z"/></g></svg><span data-t="brand"></span></a>
+        <p class="muted small" data-t="foot_about"></p></div>
+      <div><h4 data-t="foot_product"></h4><a href="#/learn" data-t="nav_learn"></a><a href="#/exams" data-t="nav_exams"></a><a href="#/tutors" data-t="nav_tutors"></a></div>
+      <div><h4 data-t="foot_contact"></h4><a href="#/join" data-t="via_wa"></a><a href="#/join" data-t="via_fb"></a></div>
+    </div>
+    <div class="wrap footer-base small muted">© <span id="year"></span> najih.net · <span data-t="beta"></span></div>
   </footer>
 
-  <nav class="tabbar" aria-label="mobile">
-    <a href="#/"><span>🏠</span><small data-t="nav_home"></small></a>
-    <a href="#/learn"><span>📚</span><small data-t="nav_learn"></small></a>
-    <a href="#/dashboard"><span>🎯</span><small data-t="nav_dashboard"></small></a>
-    <a href="#/exams"><span>📝</span><small data-t="nav_exams"></small></a>
-    <a href="#/tutors"><span>👩‍🏫</span><small data-t="nav_tutors"></small></a>
+  <nav class="tabbar" aria-label="Mobile">
+    <a href="#/" data-nav="home"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="nav_home"></span></a>
+    <a href="#/learn" data-nav="learn"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg><span data-t="nav_learn"></span></a>
+    <a href="#/dashboard" data-nav="dashboard"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><span data-t="nav_dashboard"></span></a>
+    <a href="#/exams" data-nav="exams"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6M16 13H8M16 17H8"/></svg><span data-t="nav_exams"></span></a>
+    <a href="#/tutors" data-nav="tutors"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-t="nav_tutors"></span></a>
   </nav>
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/icons.js"></script>
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
 </body>

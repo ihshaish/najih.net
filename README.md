@@ -41,10 +41,16 @@ Edit `assets/js/config.js`:
 - Branch→subject mapping is a starting point: verify it against the current MoE structure (moe.edu.ps).
 - Past exams: drop PDFs into `exams/` and set `paper` / `solution` URLs in the `EXAMS` list (check copyright/permission).
 
+## Design principles
+- Calm, editorial UI: warm paper background, deep ink, a single olive accent; a subtle tatreez (cross-stitch) motif is the only ornament.
+- Distraction-free lesson player with a persistent action bar for feedback (Check → Continue), segmented progress, and a study coach that gives graduated hints.
+- Keyboard support (1–4 to choose, Enter to check/continue, Esc to exit), visible focus states, ARIA roles, reduced-motion support, light/dark themes, RTL-first layout.
+- Line icons only (assets/js/icons.js); no emoji.
+
 ## Roadmap (after MVP)
 1. **Accounts & sync** — phone-number OTP login (WhatsApp/SMS), progress stored server-side (Supabase/Firebase).
-2. **WhatsApp Business Cloud API** (Meta) — opt-in, daily reminders from approved templates, weekly parent reports, quizzes in chat.
-3. **Content pipeline** — CMS for teachers, full curriculum coverage per branch, worked solutions to ministry exams, diagnostic tests.
-4. **Tutor marketplace** — profiles, availability, booking, video sessions, ratings; local payment options.
-5. **Analytics & AI** — item-level difficulty calibration, AI step-by-step tutor/explanations in Arabic, predicted average.
+2. **WhatsApp Business Cloud API** (Meta) — opt-in, daily reminders from approved templates, weekly progress, quizzes in chat.
+3. **AI study coach** — Arabic-first, Socratic step-by-step help grounded in the lesson (served via a small backend so API keys stay private).
+4. **Tutor marketplace + tutor tools** — tutors subscribe, get a profile and booking; their toolkit lets them assign practice to their students, see each student's mastery and weak skills, and track sessions.
+5. **Content pipeline** — CMS for authors, full curriculum coverage per branch, worked solutions to ministry exams, diagnostic tests.
 6. **Offline-first PWA** — low-bandwidth mode for Gaza and areas with poor connectivity.
