@@ -4,29 +4,41 @@
 const t = (ar, en) => ({ ar, en });
 
 window.SUBJECTS = {
-  math:       { name: t("الرياضيات", "Mathematics"),        icon: "sigma",    color: "#4F5BD5" },
-  physics:    { name: t("الفيزياء", "Physics"),              icon: "atom",     color: "#0E7C86" },
-  chemistry:  { name: t("الكيمياء", "Chemistry"),            icon: "flask",    color: "#2F855A" },
-  biology:    { name: t("الأحياء", "Biology"),               icon: "leaf",     color: "#5B8C3A" },
-  arabic:     { name: t("اللغة العربية", "Arabic"),          icon: "feather",  color: "#9C5B2E" },
-  english:    { name: t("اللغة الإنجليزية", "English"),      icon: "lang",     color: "#B4442F" },
-  islamic:    { name: t("التربية الإسلامية", "Islamic Education"), icon: "book", color: "#1F6F5C" },
-  history:    { name: t("التاريخ", "History"),               icon: "landmark", color: "#8A6D3B" },
-  geography:  { name: t("الجغرافيا", "Geography"),           icon: "globe",    color: "#2B6CB0" },
-  tech:       { name: t("التكنولوجيا", "Technology"),        icon: "monitor",  color: "#6B4FBB" },
-  entre:      { name: t("ريادة الأعمال", "Entrepreneurship"), icon: "trend",   color: "#B83280" },
-  vocational: { name: t("المواد المهنية", "Vocational"),     icon: "wrench",   color: "#5A6474" },
+  math:        { name: t("الرياضيات", "Mathematics"),        icon: "sigma",    color: "#4F5BD5" },
+  physics:     { name: t("الفيزياء", "Physics"),              icon: "atom",     color: "#0E7C86" },
+  chemistry:   { name: t("الكيمياء", "Chemistry"),            icon: "flask",    color: "#2F855A" },
+  biology:     { name: t("العلوم الحياتية", "Biology"),       icon: "leaf",     color: "#5B8C3A" },
+  arabic:      { name: t("اللغة العربية", "Arabic"),          icon: "feather",  color: "#9C5B2E" },
+  english:     { name: t("اللغة الإنجليزية", "English"),      icon: "lang",     color: "#B4442F" },
+  islamic:     { name: t("التربية الإسلامية", "Islamic Education"), icon: "book", color: "#1F6F5C" },
+  christian:   { name: t("التربية المسيحية", "Christian Education"), icon: "book", color: "#6E5A8A" },
+  history:     { name: t("الدراسات التاريخية", "History"),    icon: "landmark", color: "#8A6D3B" },
+  geography:   { name: t("الدراسات الجغرافية", "Geography"),  icon: "globe",    color: "#2B6CB0" },
+  sci_culture: { name: t("الثقافة العلمية", "Scientific Culture"), icon: "flask", color: "#3C7A6E" },
+  tech:        { name: t("التكنولوجيا", "Technology"),        icon: "monitor",  color: "#6B4FBB" },
+  quran:       { name: t("القرآن الكريم وعلومه", "Quran & its Sciences"), icon: "book", color: "#1F6F5C" },
+  hadith:      { name: t("الحديث الشريف وعلومه", "Hadith & its Sciences"), icon: "feather", color: "#2F6B4F" },
+  fiqh:        { name: t("الفقه الإسلامي وأصوله", "Islamic Jurisprudence"), icon: "shield", color: "#3E5F4A" },
+  dawah:       { name: t("أساليب الدعوة وفن الخطاب", "Da'wah & Speech"), icon: "message", color: "#56704F" },
+  mgmt:        { name: t("إدارة واقتصاد", "Management & Economics"), icon: "chart", color: "#B83280" },
+  accounting:  { name: t("المحاسبة", "Accounting"),           icon: "file",     color: "#8C3B6B" },
+  projects:    { name: t("المشاريع الصغيرة", "Small Projects"), icon: "trend",  color: "#A3476E" },
+  drawing:     { name: t("الرسم الصناعي", "Technical Drawing"), icon: "pencil", color: "#5A6474" },
 };
 
+// Branches as published by the Ministry for Grade 12 (elearn.edu.ps). Subjects come from curriculum.js.
 window.BRANCHES = [
-  { id: "scientific", name: t("العلمي", "Scientific"),     subjects: ["math", "physics", "chemistry", "biology", "arabic", "english", "islamic"] },
-  { id: "literary",   name: t("الأدبي", "Literary"),       subjects: ["arabic", "english", "islamic", "history", "geography"] },
-  { id: "technology", name: t("التكنولوجي", "Technology"), subjects: ["math", "physics", "tech", "arabic", "english", "islamic"] },
-  { id: "entre",      name: t("الريادة والأعمال", "Entrepreneurship & Business"), subjects: ["entre", "arabic", "english", "islamic"] },
-  { id: "sharia",     name: t("الشرعي", "Sharia"),         subjects: ["islamic", "arabic", "english", "history"] },
-  { id: "vocational", name: t("المهني (صناعي، زراعي، فندقي، اقتصاد منزلي)", "Vocational (Industrial, Agricultural, Hospitality, Home Economics)"),
-    subjects: ["vocational", "math", "arabic", "english", "islamic"] },
+  { id: "scientific",   name: t("العلمي", "Scientific") },
+  { id: "literary",     name: t("الأدبي", "Literary") },
+  { id: "sharia",       name: t("الشرعي", "Sharia") },
+  { id: "entre",        name: t("الريادة والأعمال", "Entrepreneurship & Business") },
+  { id: "industrial",   name: t("الصناعي", "Industrial") },
+  { id: "agricultural", name: t("الزراعي", "Agricultural") },
 ];
+for (const b of window.BRANCHES) {
+  const c = (window.CURRICULUM?.branches || []).find((x) => x.id === b.id);
+  b.subjects = c ? c.subjects.map((s) => s.sub) : [];
+}
 
 // Question types: "mcq" (choices + answer index) or "num" (numeric answer, optional tolerance).
 window.QUESTIONS = [
@@ -34,7 +46,7 @@ window.QUESTIONS = [
   { id: "m1", subject: "math", skill: "power_rule", type: "mcq",
     q: t("ما مشتقة الاقتران $f(x) = 3x^2$ ؟", "What is the derivative of $f(x) = 3x^2$?"),
     choices: [t("$6x$", "$6x$"), t("$3x$", "$3x$"), t("$6x^2$", "$6x^2$"), t("$2x$", "$2x$")], answer: 0,
-    hint: t("قاعدة القوة: $\\frac{d}{dx}x^n = n\\,x^{n-1}$. أنزل الأُس واضربه بالمعامل.", "Power rule: $\\frac{d}{dx}x^n = n\\,x^{n-1}$. Bring the exponent down and multiply."),
+    hint: t("قاعدة القوة: $\\dv{}{x}x^n = n\\,x^{n-1}$. أنزل الأُس واضربه بالمعامل.", "Power rule: $\\dv{}{x}x^n = n\\,x^{n-1}$. Bring the exponent down and multiply."),
     explain: t("$3 \\cdot 2\\,x^{2-1} = 6x$", "$3 \\cdot 2\\,x^{2-1} = 6x$") },
   { id: "m2", subject: "math", skill: "derivative_eval", type: "num", answer: 8,
     q: t("إذا كان $f(x) = x^3 - 4x + 1$، جد $f'(2)$.", "If $f(x) = x^3 - 4x + 1$, find $f'(2)$."),
@@ -44,12 +56,12 @@ window.QUESTIONS = [
     q: t("ما مشتقة الاقتران الثابت $f(x) = 5$ ؟", "What is the derivative of the constant function $f(x) = 5$?"),
     choices: [t("$5$", "$5$"), t("$0$", "$0$"), t("$1$", "$1$"), t("$5x$", "$5x$")], answer: 1,
     hint: t("هل يتغيّر الاقتران الثابت عندما تتغيّر $x$؟", "Does a constant change when $x$ changes?"),
-    explain: t("الاقتران الثابت لا يتغيّر، فميله صفر: $\\frac{d}{dx}(5) = 0$", "A constant never changes, so its slope is zero: $\\frac{d}{dx}(5) = 0$") },
+    explain: t("الاقتران الثابت لا يتغيّر، فميله صفر: $\\dv{}{x}(5) = 0$", "A constant never changes, so its slope is zero: $\\dv{}{x}(5) = 0$") },
   { id: "m4", subject: "math", skill: "integral_basic", type: "mcq",
-    q: t("$\\displaystyle\\int 2x\\,dx = \;?$", "$\\displaystyle\\int 2x\\,dx = \;?$"),
+    q: t("$\\displaystyle\\int 2x\\,\\dd{x} = \;?$", "$\\displaystyle\\int 2x\\,\\dd{x} = \;?$"),
     choices: [t("$x^2 + C$", "$x^2 + C$"), t("$2x^2 + C$", "$2x^2 + C$"), t("$2 + C$", "$2 + C$"), t("$x + C$", "$x + C$")], answer: 0,
     hint: t("التكامل عكس الاشتقاق: أي اقتران مشتقته $2x$؟", "Integration undoes differentiation: which function has derivative $2x$?"),
-    explain: t("$\\frac{d}{dx}(x^2) = 2x$، لذلك $\\int 2x\\,dx = x^2 + C$", "$\\frac{d}{dx}(x^2) = 2x$, so $\\int 2x\\,dx = x^2 + C$") },
+    explain: t("$\\dv{}{x}(x^2) = 2x$، لذلك $\\int 2x\\,\\dd{x} = x^2 + C$", "$\\dv{}{x}(x^2) = 2x$, so $\\int 2x\\,\\dd{x} = x^2 + C$") },
   { id: "m5", subject: "math", skill: "limits", type: "num", answer: 4,
     q: t("جد $\\displaystyle\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$", "Find $\\displaystyle\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$"),
     hint: t("حلّل البسط: $x^2 - 4 = (x - 2)(x + 2)$", "Factor the numerator: $x^2 - 4 = (x - 2)(x + 2)$"),
@@ -147,17 +159,17 @@ window.QUESTIONS = [
     hint: t("أكبر قيمة في بايت واحد هي $255 = 2^{?} - 1$", "The largest value in a byte is $255 = 2^{?} - 1$"), explain: t("٨ بت", "8 bits") },
 
   // ── Entrepreneurship
-  { id: "n1", subject: "entre", skill: "finance", type: "mcq",
+  { id: "n1", subject: "mgmt", skill: "finance", type: "mcq",
     q: t("نقطة التعادل هي النقطة التي:", "The break-even point is where:"),
     choices: [t("تتساوى فيها الإيرادات مع التكاليف", "Revenue equals total costs"), t("يكون الربح أعلى ما يمكن", "Profit is at its maximum"), t("تبدأ فيها الشركة", "The company starts"), t("تساوي فيها الأسعار الأجور", "Prices equal wages")], answer: 0,
     hint: t("لا ربح ولا خسارة.", "No profit, no loss."), explain: t("الربح = صفر عند نقطة التعادل.", "Profit = 0 at break-even.") },
-  { id: "n2", subject: "entre", skill: "strategy", type: "mcq",
+  { id: "n2", subject: "mgmt", skill: "strategy", type: "mcq",
     q: t("في تحليل SWOT، يرمز الحرف O إلى:", "In SWOT analysis, the O stands for:"),
     choices: [t("الأهداف", "Objectives"), t("الفرص", "Opportunities"), t("العمليات", "Operations"), t("المخرجات", "Outputs")], answer: 1,
     hint: t("O و T عوامل خارجية.", "O and T are external factors."), explain: t("نقاط القوة، الضعف، الفرص، التهديدات", "Strengths, Weaknesses, Opportunities, Threats") },
 
   // ── Vocational
-  { id: "v1", subject: "vocational", skill: "electric", type: "mcq",
+  { id: "v1", subject: "physics", skill: "electric", type: "mcq",
     q: t("ما وحدة قياس القدرة الكهربائية؟", "What is the unit of electrical power?"),
     choices: [t("الفولت", "Volt"), t("الأمبير", "Ampere"), t("الواط", "Watt"), t("الأوم", "Ohm")], answer: 2,
     hint: t("القدرة = فرق الجهد × التيار", "Power = voltage × current"), explain: t("الواط = فولت × أمبير", "Watt = volt × ampere") },
@@ -175,14 +187,14 @@ window.LESSONS = [
         body: t("اسحب النقطة على منحنى $y = x^2$ وراقب ميل المماس. هل تلاحظ علاقة بين $x$ والميل؟", "Drag the point along $y = x^2$ and watch the slope of the tangent. Do you see a pattern between $x$ and the slope?"),
         predict: { q: t("توقّع: ما الميل عند $x = 5$ ؟", "Predict: what is the slope at $x = 5$?"), answer: 10, explain: t("الميل دائماً ضعف $x$، إذن عند $x = 5$ يكون الميل $10$.", "The slope is always twice $x$, so at $x = 5$ it is $10$.") } },
       { type: "concept", title: t("القاعدة", "The rule"),
-        body: t("<p>لاحظت أن الميل دائماً <b>ضعف</b> قيمة $x$. هذا ما نسمّيه <b>المشتقة</b>:</p>$$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$<p>ولاقترانات القوى قاعدة مختصرة:</p><div class='rule'>$$\\frac{d}{dx}\\,x^n = n\\,x^{n-1}$$</div>",
-                "<p>You noticed the slope is always <b>twice</b> $x$. That's the <b>derivative</b>:</p>$$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$<p>For powers of $x$ there is a shortcut:</p><div class='rule'>$$\\frac{d}{dx}\\,x^n = n\\,x^{n-1}$$</div>") },
+        body: t("<p>لاحظت أن الميل دائماً <b>ضعف</b> قيمة $x$. هذا ما نسمّيه <b>المشتقة</b>:</p>$$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$<p>ولاقترانات القوى قاعدة مختصرة:</p><div class='rule'>$$\\dv{}{x}\\,x^n = n\\,x^{n-1}$$</div>",
+                "<p>You noticed the slope is always <b>twice</b> $x$. That's the <b>derivative</b>:</p>$$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$<p>For powers of $x$ there is a shortcut:</p><div class='rule'>$$\\dv{}{x}\\,x^n = n\\,x^{n-1}$$</div>") },
       { type: "worked", title: t("مثال محلول", "Worked example"),
         problem: t("جد مشتقة $f(x) = 4x^3 - 2x + 7$", "Differentiate $f(x) = 4x^3 - 2x + 7$"),
         reveal: [
           t("اشتق كل حدّ على حدة.", "Differentiate term by term."),
-          t("$\\frac{d}{dx}(4x^3) = 4 \\cdot 3x^2 = 12x^2$", "$\\frac{d}{dx}(4x^3) = 4 \\cdot 3x^2 = 12x^2$"),
-          t("$\\frac{d}{dx}(-2x) = -2$ ، و $\\frac{d}{dx}(7) = 0$", "$\\frac{d}{dx}(-2x) = -2$, and $\\frac{d}{dx}(7) = 0$"),
+          t("$\\dv{}{x}(4x^3) = 4 \\cdot 3x^2 = 12x^2$", "$\\dv{}{x}(4x^3) = 4 \\cdot 3x^2 = 12x^2$"),
+          t("$\\dv{}{x}(-2x) = -2$ ، و $\\dv{}{x}(7) = 0$", "$\\dv{}{x}(-2x) = -2$, and $\\dv{}{x}(7) = 0$"),
           t("$$f'(x) = 12x^2 - 2$$", "$$f'(x) = 12x^2 - 2$$"),
         ] },
       { type: "quiz", title: t("تحقق من فهمك", "Check your understanding"), questions: ["m1", "m3", "m6", "m2"] },

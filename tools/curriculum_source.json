@@ -1,0 +1,6004 @@
+{
+ "generated": "2026-11-10",
+ "source": "https://elearn.edu.ps/landing3/c12/ (Grade 12 hub, links the six branch pages)",
+ "notes": [
+  "All URLs HEAD-checked with /usr/bin/curl: HTTP 200; bytes = Content-Length.",
+  "Equal byte sizes across branches indicate the same book re-hosted under a different path (verified by md5 for maths and physics s/in).",
+  "Page numbers are the printed page numbers from each book's TOC.",
+  "Each landing page labels every book 'تحميل الكتاب | سنوي' (annual); no semester split except Arabic (part 1 المطالعة والقواعد / part 2 الأدب والبلاغة) in literary and sharia branches."
+ ],
+ "branches": [
+  {
+   "slug": "c12s",
+   "name_ar": "الصف الثاني عشر – الفرع العلمي",
+   "name_en": "Scientific",
+   "page": "https://elearn.edu.ps/landing3/c12s/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/en12s.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h)."
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/ma12-s.pdf",
+     "bytes": 2411732,
+     "units": [
+      {
+       "title": "الوحدة 1: حساب التفاضل (Differentiation) – ص2",
+       "lessons": [
+        {
+         "title": "1-1 متوسط التغير (Rate of Change)",
+         "page": 4
+        },
+        {
+         "title": "1-2 قواعد الاشتقاق (Rules of Differentiation)",
+         "page": 9
+        },
+        {
+         "title": "1-3 مشتقات الاقترانات المثلثية (The Derivative of Trigonometric Functions)",
+         "page": 19
+        },
+        {
+         "title": "1-4 قاعدة لوبيتال، ومشتقة الاقتران الأسي واللوغاريتمي (L'Hôpital's Rule)",
+         "page": 22
+        },
+        {
+         "title": "1-5 تطبيقات هندسية وفيزيائية (Geometric and Physical Applications)",
+         "page": 30
+        },
+        {
+         "title": "1-6 قاعدة السلسلة (Chain Rule)",
+         "page": 37
+        },
+        {
+         "title": "1-7 الاشتقاق الضمني (Implicit Differentiation)",
+         "page": 42
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 2: تطبيقات التفاضل (Differentiation Applications) – ص52",
+       "lessons": [
+        {
+         "title": "2-1 نظريتا رول والقيمة المتوسطة (Rolle's Theorem)",
+         "page": 54
+        },
+        {
+         "title": "2-2 الاقترانات المتزايدة والمتناقصة (Increasing and Decreasing Functions)",
+         "page": 60
+        },
+        {
+         "title": "2-3 القيم القصوى (Extreme Values)",
+         "page": 65
+        },
+        {
+         "title": "2-4 التقعّر ونقط الانعطاف (Concavity and Points of Inflection)",
+         "page": 75
+        },
+        {
+         "title": "2-5 تطبيقات عملية على القيم القصوى (Applications of Extrema)",
+         "page": 83
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 3: المصفوفات والمحددات (Matrices and Determinants) – ص92",
+       "lessons": [
+        {
+         "title": "3-1 المصفوفة (Matrix)",
+         "page": 94
+        },
+        {
+         "title": "3-2 العمليات على المصفوفات (Operations on Matrices)",
+         "page": 99
+        },
+        {
+         "title": "3-3 المحدّدات (Determinants)",
+         "page": 108
+        },
+        {
+         "title": "3-4 النظير الضربي للمصفوفة المربعة (Inverse of a Square Matrix)",
+         "page": 114
+        },
+        {
+         "title": "3-5 حل أنظمة المعادلات الخطية باستخدام المصفوفات (Solving Systems of Linear Equations)",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 4: التكامل غير المحدود وتطبيقاته (Indefinite Integral and its Applications) – ص130",
+       "lessons": [
+        {
+         "title": "4-1 التكامل غير المحدود (Indefinite Integral)",
+         "page": 132
+        },
+        {
+         "title": "4-2 قواعد التكامل غير المحدود (Rules of Indefinite Integrals)",
+         "page": 137
+        },
+        {
+         "title": "4-3 تطبيقات التكامل غير المحدود (Applications of Indefinite Integrals)",
+         "page": 141
+        },
+        {
+         "title": "4-4 طرق التكامل (التعويض، الأجزاء، الكسور الجزئية) (Methods of Integration)",
+         "page": 146
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 5: التكامل المحدود وتطبيقاته (Definite Integration and its Applications) – ص162",
+       "lessons": [
+        {
+         "title": "5-1 التجزئة ومجموع ريمان (Partition and Riemann Sum)",
+         "page": 164
+        },
+        {
+         "title": "5-2 التكامل المحدود (The Definite Integral)",
+         "page": 171
+        },
+        {
+         "title": "5-3 العلاقة بين التفاضل والتكامل (Fundamental Theorem of Calculus)",
+         "page": 176
+        },
+        {
+         "title": "5-4 خصائص التكامل المحدود (Properties of Definite Integral)",
+         "page": 181
+        },
+        {
+         "title": "5-5 تطبيقات التكامل المحدود (المساحة، الحجم) (Applications of Definite Integral)",
+         "page": 189
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 6: الأعداد المركبة (Complex Numbers) – ص204",
+       "lessons": [
+        {
+         "title": "6-1 الأعداد المركبة (Complex Numbers)",
+         "page": 206
+        },
+        {
+         "title": "6-2 العمليات على الأعداد المركبة (Operations on Complex Numbers)",
+         "page": 210
+        },
+        {
+         "title": "6-3 قسمة الأعداد المركبة (Division of Complex Numbers)",
+         "page": 215
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text is unusable (custom font encoding)",
+     "toc_note": "Pink-highlighted items are excluded for the industrial branch (sidebar note); this file is identical to the industrial maths book"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language",
+     "part": "1",
+     "label_on_page": "المطالعة والقواعد",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/ar12-s1.pdf",
+     "bytes": 3833338,
+     "units": [
+      {
+       "title": "الوحدة الأولى (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "من سورة يوسف (عليه السلام)",
+         "page": 4
+        },
+        {
+         "title": "الممنوع من الصرف (1)",
+         "page": 8
+        },
+        {
+         "title": "البحر الوافر",
+         "page": 11
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "غروب الأندلس",
+         "page": 14
+        },
+        {
+         "title": "رسالة إلى صديق قديم",
+         "page": 19
+        },
+        {
+         "title": "الممنوع من الصرف (2)",
+         "page": 22
+        },
+        {
+         "title": "التعبير",
+         "page": 24
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "كم حياة ستعيش",
+         "page": 25
+        },
+        {
+         "title": "الإعلال",
+         "page": 30
+        },
+        {
+         "title": "البحر الطويل",
+         "page": 35
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "القدس بوصلة ومجد",
+         "page": 38
+        },
+        {
+         "title": "رام الله",
+         "page": 42
+        },
+        {
+         "title": "الإبدال",
+         "page": 45
+        },
+        {
+         "title": "التعبير",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "التواصل في العالم الافتراضي وآدابه",
+         "page": 48
+        },
+        {
+         "title": "اسم الفعل",
+         "page": 52
+        },
+        {
+         "title": "البحر البسيط",
+         "page": 55
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "المدينة الذكية",
+         "page": 58
+        },
+        {
+         "title": "أنا وليلى",
+         "page": 62
+        },
+        {
+         "title": "من المعاني النحوية لـ (الواو) و(الفاء)",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السابعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "أحاديث نبوية",
+         "page": 69
+        },
+        {
+         "title": "المدينة المحاصرة",
+         "page": 73
+        },
+        {
+         "title": "من المعاني النحوية لـ (ما) و(مَنْ)",
+         "page": 76
+        },
+        {
+         "title": "التعبير",
+         "page": 78
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثامنة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "مرافعات أمام ضمير غائب",
+         "page": 79
+        },
+        {
+         "title": "وصية لاجئ",
+         "page": 84
+        },
+        {
+         "title": "من المعاني النحوية لـ (لا) و(اللام)",
+         "page": 88
+        }
+       ]
+      },
+      {
+       "title": "الوحدة التاسعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "البومة في غرفة بعيدة",
+         "page": 91
+        },
+        {
+         "title": "الجمل التي لها محل من الإعراب",
+         "page": 96
+        },
+        {
+         "title": "البحر الخفيف",
+         "page": 99
+        },
+        {
+         "title": "التعبير",
+         "page": 100
+        }
+       ]
+      },
+      {
+       "title": "ملحق",
+       "lessons": [
+        {
+         "title": "أقيّم ذاتي",
+         "page": 101
+        },
+        {
+         "title": "المشروع",
+         "page": 102
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Despite the '1' in the filename and the landing-page label 'المطالعة والقواعد', the TOC covers both semesters (units 1-6 = الفصل الدراسي الأول, units 7-9 = الفصل الدراسي الثاني). Same file is linked for the literary and sharia branches; those branches also have a separate الأدب والبلاغة book (ar12-h2 / ar12-re2). The scientific page links no Arabic literature book.",
+     "notes": "ar12-s2.pdf returns 404; scientific page links only this Arabic book"
+    },
+    {
+     "subject_ar": "الفيزياء",
+     "subject_en": "Physics",
+     "part": null,
+     "label_on_page": "الفيزياء",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/py12-s.pdf",
+     "bytes": 4278167,
+     "units": [
+      {
+       "title": "الوحدة الأولى: الميكانيكا – ص2",
+       "lessons": [
+        {
+         "title": "الفصل الأول: الزخم (كمية التحرك) الخطي والدفع",
+         "page": 4
+        },
+        {
+         "title": "الفصل الثاني: التصادمات",
+         "page": 15
+        },
+        {
+         "title": "الفصل الثالث: الحركة الدورانية",
+         "page": 33
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الكهرباء المتحركة – ص55",
+       "lessons": [
+        {
+         "title": "الفصل الرابع: التيار الكهربائي والمقاومة",
+         "page": 57
+        },
+        {
+         "title": "الفصل الخامس: دارات التيار المستمر",
+         "page": 72
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الكهرومغناطيسية – ص94",
+       "lessons": [
+        {
+         "title": "الفصل السادس: المجال المغناطيسي",
+         "page": 96
+        },
+        {
+         "title": "الفصل السابع: القوة المغناطيسية",
+         "page": 110
+        },
+        {
+         "title": "الفصل الثامن: الحث الكهرومغناطيسي",
+         "page": 123
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الفيزياء الحديثة – ص144",
+       "lessons": [
+        {
+         "title": "الفصل التاسع: نظرية الكم",
+         "page": 146
+        },
+        {
+         "title": "الفصل العاشر: بنية النواة والإشعاع النووي",
+         "page": 166
+        }
+       ]
+      }
+     ],
+     "toc_source": "pdftotext/PyMuPDF text of TOC page (PDF p.5), clean; lessons here are the book's chapters (الفصل)",
+     "toc_note": "identical file is linked for the industrial branch"
+    },
+    {
+     "subject_ar": "الكيمياء",
+     "subject_en": "Chemistry",
+     "part": null,
+     "label_on_page": "الكيمياء",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/ch12s.pdf",
+     "bytes": 3570298,
+     "units": [
+      {
+       "title": "الوحدة الأولى: البناء الإلكتروني للذرة",
+       "lessons": [
+        {
+         "title": "1-1 الضوء مفتاح البناء الإلكتروني",
+         "page": 4
+        },
+        {
+         "title": "1-2 الطيف الذري",
+         "page": 6
+        },
+        {
+         "title": "1-3 نظرية بور لذرة الهيدروجين",
+         "page": 8
+        },
+        {
+         "title": "1-4 نظرية الميكانيك الكمّي (الموجي)",
+         "page": 13
+        },
+        {
+         "title": "1-5 قواعد التركيب الإلكتروني",
+         "page": 19
+        },
+        {
+         "title": "1-6 العدد الذري وإلكترونات التكافؤ",
+         "page": 23
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 25
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الصفات الدورية ونظرية رابطة التكافؤ",
+       "lessons": [
+        {
+         "title": "2-1 الجدول الدوري الحديث",
+         "page": 30
+        },
+        {
+         "title": "2-2 الخصائص الدورية للعناصر",
+         "page": 33
+        },
+        {
+         "title": "2-3 العناصر الانتقالية في الدورة الرابعة من الجدول الدوري",
+         "page": 39
+        },
+        {
+         "title": "2-4 نظرية رابطة التكافؤ",
+         "page": 42
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 54
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحموض والقواعد (الفرع العلمي)",
+       "lessons": [
+        {
+         "title": "3-1 الخواص العامة للحموض والقواعد",
+         "page": 59
+        },
+        {
+         "title": "3-2 تطور مفهومي الحمض والقاعدة",
+         "page": 60
+        },
+        {
+         "title": "3-3 التأين الذاتي للماء والرقم الهيدروجيني",
+         "page": 63
+        },
+        {
+         "title": "3-4 الاتزان في محاليل الحموض والقواعد الضعيفة",
+         "page": 68
+        },
+        {
+         "title": "3-5 الخواص الحمضية والقاعدية لمحاليل الأملاح",
+         "page": 73
+        },
+        {
+         "title": "3-6 الأيون المشترك والمحلول المنظم",
+         "page": 74
+        },
+        {
+         "title": "3-7 المعايرة بين الحموض والقواعد",
+         "page": 79
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 85
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الديناميكا الحرارية وسرعة التفاعلات الكيميائية",
+       "lessons": [
+        {
+         "title": "4-1 الديناميكا الحرارية (العمليات التلقائية وغير التلقائية، العشوائية، القانون الثاني، طاقة جبس الحرة)",
+         "page": 90
+        },
+        {
+         "title": "4-2 سرعة التفاعل الكيميائي وميكانيكيته (قانون سرعة التفاعل، أثر درجة الحرارة، نظرية الحالة الانتقالية، آلية التفاعل)",
+         "page": 101
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 114
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الكيمياء العضوية",
+       "lessons": [
+        {
+         "title": "5-1 المركبات العضوية",
+         "page": 119
+        },
+        {
+         "title": "5-2 هاليدات الألكيل",
+         "page": 120
+        },
+        {
+         "title": "5-3 الكحولات",
+         "page": 122
+        },
+        {
+         "title": "5-4 الألدهيدات والكيتونات",
+         "page": 127
+        },
+        {
+         "title": "5-5 الحموض الكربوكسيلية",
+         "page": 132
+        },
+        {
+         "title": "5-6 الإسترات",
+         "page": 134
+        },
+        {
+         "title": "5-7 الأمينات",
+         "page": 136
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 140
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الخلايا الكهروكيميائية (الفرع العلمي)",
+       "lessons": [
+        {
+         "title": "6-1 الخلايا الجلفانية",
+         "page": 145
+        },
+        {
+         "title": "6-2 تركيب الخلايا الجلفانية وعملها",
+         "page": 146
+        },
+        {
+         "title": "6-3 جهد القطب القياسي",
+         "page": 147
+        },
+        {
+         "title": "6-4 حساب جهد الخلايا الجلفانية",
+         "page": 150
+        },
+        {
+         "title": "6-5 تطبيقات عملية على الخلايا الجلفانية",
+         "page": 152
+        },
+        {
+         "title": "6-6 خلايا التحليل الكهربائي",
+         "page": 155
+        },
+        {
+         "title": "6-7 التحليل الكهربائي لمصاهير المواد الأيونية",
+         "page": 156
+        },
+        {
+         "title": "6-8 التحليل الكهربائي لمحاليل المواد الأيونية",
+         "page": 157
+        },
+        {
+         "title": "6-9 تطبيقات عملية على التحليل الكهربائي",
+         "page": 159
+        },
+        {
+         "title": "6-10 الحسابات الكمّية في عملية التحليل الكهربائي",
+         "page": 160
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 163
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Units 1,2,4,5 marked (الفرع العلمي والزراعي); units 3 and 6 marked (الفرع العلمي) only. Same file is linked as the agricultural chemistry book."
+    },
+    {
+     "subject_ar": "العلوم الحياتية",
+     "subject_en": "Biology (Life Sciences)",
+     "part": null,
+     "label_on_page": "العلوم الحياتية",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/sc12s.pdf",
+     "bytes": 8880659,
+     "units": [
+      {
+       "title": "الوحدة الأولى: عمليات حيوية في الخلية (Processes In The Cell)",
+       "lessons": [
+        {
+         "title": "1.1 أهمية الطاقة للخلية الحية",
+         "page": 5,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "2.1 البناء الضوئي",
+         "page": 6,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "3.1 التنفس الخلوي",
+         "page": 16,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "4.1 التكامل بين عمليتي البناء الضوئي والتنفس الخلوي",
+         "page": 22,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "1.2 الشيفرة الوراثية",
+         "page": 27,
+         "chapter": "الفصل الثاني: من الجين إلى البروتين (ص26)"
+        },
+        {
+         "title": "2.2 بناء البروتين",
+         "page": 28,
+         "chapter": "الفصل الثاني: من الجين إلى البروتين (ص26)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الوراثة (Genetics)",
+       "lessons": [
+        {
+         "title": "1.1 الوراثة المندلية",
+         "page": 43,
+         "chapter": "الفصل الأول: قانون مندل في الوراثة (ص42)"
+        },
+        {
+         "title": "1.2 أنماط التوارث غير المندلية",
+         "page": 53,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "2.2 السيادة غير التامة",
+         "page": 53,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "3.2 السيادة المشتركة",
+         "page": 54,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "4.2 الأليلات المتعددة (للعلمي فقط)",
+         "page": 55,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "5.2 الجينات القاتلة (للعلمي فقط)",
+         "page": 58,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "6.2 الصفات الوراثية (للعلمي فقط)",
+         "page": 59,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "7.2 أنظمة تحديد الجنس في الكائنات الحية",
+         "page": 61,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "8.2 الصفات المرتبطة بالجنس",
+         "page": 61,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "9.2 الصفات المتأثرة بالجنس",
+         "page": 63,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "10.2 الارتباط والعبور",
+         "page": 63,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "11.2 الخرائط الجينية",
+         "page": 66,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "12.2 الاختلالات الوراثية",
+         "page": 67,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "1.3 الهندسة الوراثية",
+         "page": 76,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "2.3 الوسائل والأدوات المستخدمة في الهندسة الوراثية",
+         "page": 76,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "3.3 تقنية DNA معاد التركيب",
+         "page": 77,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "4.3 الهجرة الكهربائية والبصمة الوراثية",
+         "page": 78,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "5.3 بصمة DNA",
+         "page": 79,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "6.3 تطبيقات في الهندسة الوراثية",
+         "page": 80,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "7.3 ضوابط استخدام الهندسة الوراثية وأخلاقياتها",
+         "page": 81,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: أجهزة جسم الإنسان (Human Body Systems) – للعلمي فقط",
+       "lessons": [
+        {
+         "title": "1.1 وظائف الجهاز الهيكلي",
+         "page": 91,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "2.1 أقسام الجهاز الهيكلي",
+         "page": 92,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "3.1 أشكال العظم",
+         "page": 97,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "4.1 تركيب نسيج العظم",
+         "page": 97,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "5.1 تكوين العظام ونموها",
+         "page": 100,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "6.1 الغضاريف",
+         "page": 101,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "7.1 المفاصل",
+         "page": 101,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "8.1 المشكلات الصحية التي تصيب الجهاز الهيكلي",
+         "page": 103,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "1.2 تركيب جهاز الدوران",
+         "page": 109,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "2.2 تخثر الدم والتئام الجروح",
+         "page": 116,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "3.2 أمراض تصيب جهاز الدوران",
+         "page": 117,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "1.3 الأنظمة المناعية في الجسم",
+         "page": 122,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "2.3 المناعة الإيجابية والمناعة السلبية",
+         "page": 128,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "3.3 تركيب الأجسام المضادة ووظائفها",
+         "page": 128,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "4.3 الاختلالات المناعية",
+         "page": 130,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "5.3 التبرع بالأعضاء (للاطلاع فقط)",
+         "page": 131,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الكائنات الدقيقة (Microorganisms)",
+       "lessons": [
+        {
+         "title": "1.1 لمحة تاريخية (للاطلاع فقط)",
+         "page": 141,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "2.1 أماكن تواجد البكتيريا",
+         "page": 141,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "3.1 تصنيف بدائية النوى",
+         "page": 142,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "4.1 أشكال البكتيريا",
+         "page": 144,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "5.1 تركيب الخلية البكتيرية",
+         "page": 146,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "6.1 طرق انتقال المادة الوراثية",
+         "page": 150,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "7.1 نمو البكتيريا وتكاثرها",
+         "page": 151,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "8.1 الظروف الملائمة لنمو البكتيريا",
+         "page": 152,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "9.1 ضبط نمو البكتيريا",
+         "page": 154,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "10.1 المضادات الحيوية",
+         "page": 155,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "11.1 أهمية البكتيريا",
+         "page": 156,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "1.2 لمحة تاريخية (للاطلاع فقط)",
+         "page": 161,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "2.2 تركيب الفيروسات",
+         "page": 161,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "3.2 أشكال الفيروسات",
+         "page": 162,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "4.2 تصنيف الفيروسات",
+         "page": 163,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "5.2 تكاثر الفيروسات",
+         "page": 163,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "6.2 أمراض الفيروسات",
+         "page": 165,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "7.2 الفيروسات والتقانة الحيوية",
+         "page": 167,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text partly readable but column order scrambled",
+     "toc_note": "Book structure is unit > chapter (الفصل) > section; each lesson carries a 'chapter' field. Items marked * are scientific-branch only (same file linked for agricultural branch)."
+    },
+    {
+     "subject_ar": "التربية الإسلامية",
+     "subject_en": "Islamic Education",
+     "part": null,
+     "label_on_page": "التربية الإسلامية",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/re12-s.pdf",
+     "bytes": 5037214,
+     "units": [
+      {
+       "title": "الوحدة الأولى: القرآن الكريم",
+       "lessons": [
+        {
+         "title": "الدرس الأول: منهج التعامل مع القرآن الكريم، والسنة النبوية الشريفة",
+         "page": 3
+        },
+        {
+         "title": "الدرس الثاني: قصة خلق آدم -عليه السلام- - سورة البقرة 30-37 (تفسير وحفظ)",
+         "page": 9
+        },
+        {
+         "title": "الدرس الثالث: منهج القرآن الكريم في التربية - سورة البقرة 151-157 (تفسير وحفظ)",
+         "page": 14
+        },
+        {
+         "title": "الدرس الرابع: التحاكم لشرع الله تعالى - سورة المائدة 48-50 (تفسير)",
+         "page": 19
+        },
+        {
+         "title": "الدرس الخامس: الاعتصام بالله تعالى - سورة آل عمران 100-105 (تفسير وحفظ)",
+         "page": 23
+        },
+        {
+         "title": "الدرس السادس: قصة موسى عليه السلام مع العبد الصالح (الخضر) - سورة الكهف 60-82 (تفسير)",
+         "page": 28
+        },
+        {
+         "title": "الدرس السابع: سنن الله تعالى في المجتمعات",
+         "page": 34
+        },
+        {
+         "title": "الدرس الثامن: سورة إبراهيم (1-12) (تلاوة وتجويد)",
+         "page": 39
+        },
+        {
+         "title": "الدرس التاسع: سورة إبراهيم (13-34) (تلاوة وتجويد)",
+         "page": 43
+        },
+        {
+         "title": "الدرس العاشر: سورة إبراهيم (35-52) (تلاوة وتجويد)",
+         "page": 48
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: العقيدة الإسلامية",
+       "lessons": [
+        {
+         "title": "الدرس الحادي عشر: منهج القرآن الكريم في ترسيخ حقائق الإيمان",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثاني عشر: أثر الإيمان في المجتمع البشري",
+         "page": 56
+        },
+        {
+         "title": "الدرس الثالث عشر: الشرك بالله تعالى ظاهر وخفي",
+         "page": 60
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحديث الشريف",
+       "lessons": [
+        {
+         "title": "الدرس الرابع عشر: جهود العلماء في الحفاظ على السنة النبوية الشريفة",
+         "page": 65
+        },
+        {
+         "title": "الدرس الخامس عشر: فضل التفقه في الدين",
+         "page": 69
+        },
+        {
+         "title": "الدرس السادس عشر: الأعمال التي لا ينقطع ثوابها",
+         "page": 73
+        },
+        {
+         "title": "الدرس السابع عشر: موقف الإسلام من البدع",
+         "page": 77
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السير والتراجم",
+       "lessons": [
+        {
+         "title": "الدرس الثامن عشر: مواقف من سيرة الرسول ﷺ",
+         "page": 82
+        },
+        {
+         "title": "الدرس التاسع عشر: من صحابة رسول الله ﷺ: عائشة أم المؤمنين رضي الله عنها",
+         "page": 85
+        },
+        {
+         "title": "الدرس العشرون: القائد الفاتح صلاح الدين الأيوبي رحمه الله",
+         "page": 88
+        },
+        {
+         "title": "الدرس الحادي والعشرون: من أعلام المسلمين: العز بن عبد السلام",
+         "page": 92
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الفقه الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس الثاني والعشرون: فقه الدعوة والجهاد",
+         "page": 96
+        },
+        {
+         "title": "الدرس الثالث والعشرون: الأيمان والنذور",
+         "page": 102
+        },
+        {
+         "title": "الدرس الرابع والعشرون: الربا",
+         "page": 106
+        },
+        {
+         "title": "الدرس الخامس والعشرون: قضايا معاصرة (1) (بيع المرابحة والتأمين)",
+         "page": 110
+        },
+        {
+         "title": "الدرس السادس والعشرون: قضايا معاصرة (2) (تنظيم النسل وتحديده)",
+         "page": 115
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الفكر الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس السابع والعشرون: الفرق والمذاهب في الإسلام",
+         "page": 120
+        },
+        {
+         "title": "الدرس الثامن والعشرون: الإسلام والمرأة",
+         "page": 125
+        },
+        {
+         "title": "الدرس التاسع والعشرون: العولمة",
+         "page": 129
+        },
+        {
+         "title": "الدرس الثلاثون: ترسيخ القيم الفاضلة في المجتمع",
+         "page": 133
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text has broken ligatures/word order",
+     "toc_note": "Same file is linked for literary, entrepreneurship, industrial and agricultural branches."
+    },
+    {
+     "subject_ar": "التكنولوجيا",
+     "subject_en": "Technology",
+     "part": null,
+     "label_on_page": "التكنولوجيا",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/it12s.pdf",
+     "bytes": 5906853,
+     "units": []
+    },
+    {
+     "subject_ar": "التربية المسيحية",
+     "subject_en": "Christian Education",
+     "part": null,
+     "label_on_page": "التربية المسيحية",
+     "url": "https://elearn.azureedge.net/Books/c12/12s/ch12si.pdf",
+     "bytes": 4258718,
+     "units": []
+    }
+   ]
+  },
+  {
+   "slug": "c12h",
+   "name_ar": "الصف الثاني عشر – الفرع الأدبي",
+   "name_en": "Literary / Humanities",
+   "page": "https://elearn.edu.ps/landing3/c12h/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearnps.blob.core.windows.net/public/Books/c12/12h/en12h.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h).",
+     "notes": "same bytes as en12s.pdf (65140665); hosted on elearnps.blob.core.windows.net"
+    },
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English – Reading Plus",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية | Reading Plus",
+     "url": "https://elearnps.blob.core.windows.net/public/Books/c12/12h/enr12h.pdf",
+     "bytes": 51148917,
+     "units": [],
+     "notes": "not parsed"
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/ma12h.pdf",
+     "bytes": 2147188,
+     "units": [
+      {
+       "title": "الوحدة 1: التفاضل والتكامل",
+       "lessons": [
+        {
+         "title": "1-1 متوسط التغير (Rate Of Change)",
+         "page": 4
+        },
+        {
+         "title": "1-2 المشتقة الأولى (First Derivative)",
+         "page": 10
+        },
+        {
+         "title": "1-3 قواعد الاشتقاق (Derivative Rules)",
+         "page": 14
+        },
+        {
+         "title": "1-4 القيم القصوى للاقتران (Extreme Values)",
+         "page": 20
+        },
+        {
+         "title": "1-5 التكامل غير المحدود (Indefinite Integral)",
+         "page": 25
+        },
+        {
+         "title": "1-6 التكامل المحدود (Definite Integral)",
+         "page": 31
+        },
+        {
+         "title": "1-7 تمارين عامة (Chapter Exercises)",
+         "page": 38
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 2: المصفوفات",
+       "lessons": [
+        {
+         "title": "2-1 المصفوفة (Matrix)",
+         "page": 43
+        },
+        {
+         "title": "2-2 العمليات على المصفوفات (Matrix Operations)",
+         "page": 49
+        },
+        {
+         "title": "2-3 ضرب المصفوفات (Matrix Multiplication)",
+         "page": 58
+        },
+        {
+         "title": "2-4 النظير الضربي للمصفوفة المربعة من الرتبة الثانية (Matrix Inverse)",
+         "page": 63
+        },
+        {
+         "title": "2-5 حل نظام من معادلتين خطيتين باستخدام قاعدة كريمر (Cramer's Rule)",
+         "page": 71
+        },
+        {
+         "title": "2-6 تمارين عامة (Chapter Exercises)",
+         "page": 75
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 3: المعادلات والمتسلسلات",
+       "lessons": [
+        {
+         "title": "3-1 المعادلات الأسية (Exponent Equations)",
+         "page": 79
+        },
+        {
+         "title": "3-2 المعادلات اللوغاريتمية (Logarithmic Equations)",
+         "page": 82
+        },
+        {
+         "title": "3-3 المتسلسلات (Series)",
+         "page": 85
+        },
+        {
+         "title": "3-4 المتسلسلة الحسابية (Arithmetic Series)",
+         "page": 89
+        },
+        {
+         "title": "3-5 المتسلسلة الهندسية (Geometric Series)",
+         "page": 95
+        },
+        {
+         "title": "3-6 تمارين عامة (Chapter Exercises)",
+         "page": 99
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 4: الإحصاء",
+       "lessons": [
+        {
+         "title": "4-1 العلامة المعيارية (Standard Score)",
+         "page": 103
+        },
+        {
+         "title": "4-2 التوزيع الطبيعي المعياري (Standard Normal Distribution)",
+         "page": 108
+        },
+        {
+         "title": "4-3 تمارين عامة (Chapter Exercises)",
+         "page": 114
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable. Unit names read from the coloured side tabs (no printed unit numbers/pages).",
+     "toc_note": "Same file is linked for the sharia branch maths."
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language",
+     "part": "1",
+     "label_on_page": "المطالعة و القواعد",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/ar12-h1.pdf",
+     "bytes": 3833338,
+     "units": [
+      {
+       "title": "الوحدة الأولى (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "من سورة يوسف (عليه السلام)",
+         "page": 4
+        },
+        {
+         "title": "الممنوع من الصرف (1)",
+         "page": 8
+        },
+        {
+         "title": "البحر الوافر",
+         "page": 11
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "غروب الأندلس",
+         "page": 14
+        },
+        {
+         "title": "رسالة إلى صديق قديم",
+         "page": 19
+        },
+        {
+         "title": "الممنوع من الصرف (2)",
+         "page": 22
+        },
+        {
+         "title": "التعبير",
+         "page": 24
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "كم حياة ستعيش",
+         "page": 25
+        },
+        {
+         "title": "الإعلال",
+         "page": 30
+        },
+        {
+         "title": "البحر الطويل",
+         "page": 35
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "القدس بوصلة ومجد",
+         "page": 38
+        },
+        {
+         "title": "رام الله",
+         "page": 42
+        },
+        {
+         "title": "الإبدال",
+         "page": 45
+        },
+        {
+         "title": "التعبير",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "التواصل في العالم الافتراضي وآدابه",
+         "page": 48
+        },
+        {
+         "title": "اسم الفعل",
+         "page": 52
+        },
+        {
+         "title": "البحر البسيط",
+         "page": 55
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "المدينة الذكية",
+         "page": 58
+        },
+        {
+         "title": "أنا وليلى",
+         "page": 62
+        },
+        {
+         "title": "من المعاني النحوية لـ (الواو) و(الفاء)",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السابعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "أحاديث نبوية",
+         "page": 69
+        },
+        {
+         "title": "المدينة المحاصرة",
+         "page": 73
+        },
+        {
+         "title": "من المعاني النحوية لـ (ما) و(مَنْ)",
+         "page": 76
+        },
+        {
+         "title": "التعبير",
+         "page": 78
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثامنة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "مرافعات أمام ضمير غائب",
+         "page": 79
+        },
+        {
+         "title": "وصية لاجئ",
+         "page": 84
+        },
+        {
+         "title": "من المعاني النحوية لـ (لا) و(اللام)",
+         "page": 88
+        }
+       ]
+      },
+      {
+       "title": "الوحدة التاسعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "البومة في غرفة بعيدة",
+         "page": 91
+        },
+        {
+         "title": "الجمل التي لها محل من الإعراب",
+         "page": 96
+        },
+        {
+         "title": "البحر الخفيف",
+         "page": 99
+        },
+        {
+         "title": "التعبير",
+         "page": 100
+        }
+       ]
+      },
+      {
+       "title": "ملحق",
+       "lessons": [
+        {
+         "title": "أقيّم ذاتي",
+         "page": 101
+        },
+        {
+         "title": "المشروع",
+         "page": 102
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Despite the '1' in the filename and the landing-page label 'المطالعة والقواعد', the TOC covers both semesters (units 1-6 = الفصل الدراسي الأول, units 7-9 = الفصل الدراسي الثاني). Same file is linked for the literary and sharia branches; those branches also have a separate الأدب والبلاغة book (ar12-h2 / ar12-re2). The scientific page links no Arabic literature book.",
+     "notes": "same bytes as 12s/ar12-s1.pdf; TOC copied from it"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language",
+     "part": "2",
+     "label_on_page": "الأدب و البلاغة",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/ar12-h2.pdf",
+     "bytes": 19430735,
+     "units": [],
+     "notes": "literature & rhetoric book; not parsed"
+    },
+    {
+     "subject_ar": "الدراسات الجغرافية",
+     "subject_en": "Geography",
+     "part": null,
+     "label_on_page": "الدراسات الجغرافية",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/ge12h.pdf",
+     "bytes": 6844489,
+     "units": [
+      {
+       "title": "الوحدة الأولى: الجغرافيا المناخية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: المناخ وعناصره: (الإشعاع الشمسي، والحرارة، والضغط الجوي، والرياح)",
+         "page": 4
+        },
+        {
+         "title": "الدرس الثاني: عناصر المناخ الرطبة والاضطرابات الجوية",
+         "page": 21
+        },
+        {
+         "title": "الدرس الثالث: الأقاليم الحارة في العالم",
+         "page": 33
+        },
+        {
+         "title": "الدرس الرابع: الأقاليم المعتدلة",
+         "page": 37
+        },
+        {
+         "title": "الدرس الخامس: الأقاليم الباردة",
+         "page": 42
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الموارد الطبيعية والبشرية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الموارد الطبيعية",
+         "page": 46
+        },
+        {
+         "title": "الدرس الثاني: الموارد المعدنية الطبيعية",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثالث: موارد الطاقة",
+         "page": 58
+        },
+        {
+         "title": "الدرس الرابع: الموارد النباتية الطبيعية",
+         "page": 64
+        },
+        {
+         "title": "الدرس الخامس: الموارد البشرية",
+         "page": 70
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: مخاطر تهدد الأرض",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الكوارث",
+         "page": 77
+        },
+        {
+         "title": "الدرس الثاني: كوارث جيولوجية (الزلازل والبراكين)",
+         "page": 80
+        },
+        {
+         "title": "الدرس الثالث: كوارث مناخية",
+         "page": 88
+        },
+        {
+         "title": "الدرس الرابع: التصحر",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السياحة",
+       "lessons": [
+        {
+         "title": "الدرس الأول: السياحة مفهومها وتطورها وآثارها",
+         "page": 104
+        },
+        {
+         "title": "الدرس الثاني: مقومات السياحة",
+         "page": 110
+        },
+        {
+         "title": "الدرس الثالث: أنواع السياحة",
+         "page": 115
+        },
+        {
+         "title": "الدرس الرابع: السياحة في الوطن العربي",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الجغرافيا السياسية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الجغرافيا السياسية",
+         "page": 126
+        },
+        {
+         "title": "الدرس الثاني: الحدود السياسية",
+         "page": 134
+        },
+        {
+         "title": "الدرس الثالث: المشكلات السياسية",
+         "page": 138
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable"
+    },
+    {
+     "subject_ar": "الدراسات التاريخية",
+     "subject_en": "History",
+     "part": null,
+     "label_on_page": "الدراسات التاريخية",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/dira12h.pdf",
+     "bytes": 6621372,
+     "units": [
+      {
+       "title": "الوحدة الأولى: فتوحات وحروب عابرة للقارات",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الحروب: دوافعها وأنواعها",
+         "page": 4
+        },
+        {
+         "title": "الدرس الثاني: الفتوحات الإسلامية",
+         "page": 10
+        },
+        {
+         "title": "الدرس الثالث: الحروب الفرنجية 1095 - 1291م",
+         "page": 18
+        },
+        {
+         "title": "الدرس الرابع: الحرب العالمية الأولى 1914 - 1918م",
+         "page": 25
+        },
+        {
+         "title": "الدرس الخامس: الحرب العالمية الثانية 1939 - 1945م",
+         "page": 33
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: ثورات شعبية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الثورة",
+         "page": 42
+        },
+        {
+         "title": "الدرس الثاني: الثورة الجزائرية (1954-1962م)",
+         "page": 47
+        },
+        {
+         "title": "الدرس الثالث: الانتفاضة الفلسطينية (1987 - 1993م)",
+         "page": 54
+        },
+        {
+         "title": "الدرس الرابع: الحراك العربي 2010م (الربيع العربي)",
+         "page": 62
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: إمبراطوريات عابرة للقوميات",
+       "lessons": [
+        {
+         "title": "الدرس الأول: النظام الإمبراطوري",
+         "page": 70
+        },
+        {
+         "title": "الدرس الثاني: الإمبراطورية البيزنطية",
+         "page": 75
+        },
+        {
+         "title": "الدرس الثالث: الإمبراطورية العثمانية",
+         "page": 81
+        },
+        {
+         "title": "الدرس الرابع: الإمبراطورية البريطانية",
+         "page": 89
+        },
+        {
+         "title": "الدرس الخامس: الهيمنة العالمية (الولايات المتحدة الأمريكية أنموذجاً)",
+         "page": 95
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: مشاريع قومية ووحدوية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: القومية والهوية الوطنية",
+         "page": 102
+        },
+        {
+         "title": "الدرس الثاني: الوحدة الألمانية سنة 1871م",
+         "page": 107
+        },
+        {
+         "title": "الدرس الثالث: مشاريع الوحدة العربية",
+         "page": 112
+        },
+        {
+         "title": "الدرس الرابع: الاتحاد السوفيتي (1922-1991م)",
+         "page": 119
+        },
+        {
+         "title": "الدرس الخامس: الاتحاد الأوروبي",
+         "page": 124
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Same file is linked for the sharia branch (الدراسات التاريخية)."
+    },
+    {
+     "subject_ar": "الثقافة العلمية",
+     "subject_en": "Scientific Culture",
+     "part": null,
+     "label_on_page": "الثقافة العلمية",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/sc12h.pdf",
+     "bytes": 3393945,
+     "units": []
+    },
+    {
+     "subject_ar": "التربية الإسلامية",
+     "subject_en": "Islamic Education",
+     "part": null,
+     "label_on_page": "التربية الإسلامية",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/re12-h.pdf",
+     "bytes": 5037214,
+     "units": [
+      {
+       "title": "الوحدة الأولى: القرآن الكريم",
+       "lessons": [
+        {
+         "title": "الدرس الأول: منهج التعامل مع القرآن الكريم، والسنة النبوية الشريفة",
+         "page": 3
+        },
+        {
+         "title": "الدرس الثاني: قصة خلق آدم -عليه السلام- - سورة البقرة 30-37 (تفسير وحفظ)",
+         "page": 9
+        },
+        {
+         "title": "الدرس الثالث: منهج القرآن الكريم في التربية - سورة البقرة 151-157 (تفسير وحفظ)",
+         "page": 14
+        },
+        {
+         "title": "الدرس الرابع: التحاكم لشرع الله تعالى - سورة المائدة 48-50 (تفسير)",
+         "page": 19
+        },
+        {
+         "title": "الدرس الخامس: الاعتصام بالله تعالى - سورة آل عمران 100-105 (تفسير وحفظ)",
+         "page": 23
+        },
+        {
+         "title": "الدرس السادس: قصة موسى عليه السلام مع العبد الصالح (الخضر) - سورة الكهف 60-82 (تفسير)",
+         "page": 28
+        },
+        {
+         "title": "الدرس السابع: سنن الله تعالى في المجتمعات",
+         "page": 34
+        },
+        {
+         "title": "الدرس الثامن: سورة إبراهيم (1-12) (تلاوة وتجويد)",
+         "page": 39
+        },
+        {
+         "title": "الدرس التاسع: سورة إبراهيم (13-34) (تلاوة وتجويد)",
+         "page": 43
+        },
+        {
+         "title": "الدرس العاشر: سورة إبراهيم (35-52) (تلاوة وتجويد)",
+         "page": 48
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: العقيدة الإسلامية",
+       "lessons": [
+        {
+         "title": "الدرس الحادي عشر: منهج القرآن الكريم في ترسيخ حقائق الإيمان",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثاني عشر: أثر الإيمان في المجتمع البشري",
+         "page": 56
+        },
+        {
+         "title": "الدرس الثالث عشر: الشرك بالله تعالى ظاهر وخفي",
+         "page": 60
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحديث الشريف",
+       "lessons": [
+        {
+         "title": "الدرس الرابع عشر: جهود العلماء في الحفاظ على السنة النبوية الشريفة",
+         "page": 65
+        },
+        {
+         "title": "الدرس الخامس عشر: فضل التفقه في الدين",
+         "page": 69
+        },
+        {
+         "title": "الدرس السادس عشر: الأعمال التي لا ينقطع ثوابها",
+         "page": 73
+        },
+        {
+         "title": "الدرس السابع عشر: موقف الإسلام من البدع",
+         "page": 77
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السير والتراجم",
+       "lessons": [
+        {
+         "title": "الدرس الثامن عشر: مواقف من سيرة الرسول ﷺ",
+         "page": 82
+        },
+        {
+         "title": "الدرس التاسع عشر: من صحابة رسول الله ﷺ: عائشة أم المؤمنين رضي الله عنها",
+         "page": 85
+        },
+        {
+         "title": "الدرس العشرون: القائد الفاتح صلاح الدين الأيوبي رحمه الله",
+         "page": 88
+        },
+        {
+         "title": "الدرس الحادي والعشرون: من أعلام المسلمين: العز بن عبد السلام",
+         "page": 92
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الفقه الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس الثاني والعشرون: فقه الدعوة والجهاد",
+         "page": 96
+        },
+        {
+         "title": "الدرس الثالث والعشرون: الأيمان والنذور",
+         "page": 102
+        },
+        {
+         "title": "الدرس الرابع والعشرون: الربا",
+         "page": 106
+        },
+        {
+         "title": "الدرس الخامس والعشرون: قضايا معاصرة (1) (بيع المرابحة والتأمين)",
+         "page": 110
+        },
+        {
+         "title": "الدرس السادس والعشرون: قضايا معاصرة (2) (تنظيم النسل وتحديده)",
+         "page": 115
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الفكر الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس السابع والعشرون: الفرق والمذاهب في الإسلام",
+         "page": 120
+        },
+        {
+         "title": "الدرس الثامن والعشرون: الإسلام والمرأة",
+         "page": 125
+        },
+        {
+         "title": "الدرس التاسع والعشرون: العولمة",
+         "page": 129
+        },
+        {
+         "title": "الدرس الثلاثون: ترسيخ القيم الفاضلة في المجتمع",
+         "page": 133
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text has broken ligatures/word order",
+     "toc_note": "Same file is linked for literary, entrepreneurship, industrial and agricultural branches.",
+     "notes": "same bytes as 12s/re12-s.pdf; TOC copied from it"
+    },
+    {
+     "subject_ar": "التكنولوجيا",
+     "subject_en": "Technology",
+     "part": null,
+     "label_on_page": "التكنولوجيا",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/it12h.pdf",
+     "bytes": 5169891,
+     "units": []
+    },
+    {
+     "subject_ar": "التربية المسيحية",
+     "subject_en": "Christian Education",
+     "part": null,
+     "label_on_page": "التربية المسيحية",
+     "url": "https://elearn.azureedge.net/Books/c12/12h/ch12h.pdf",
+     "bytes": 4258718,
+     "units": []
+    }
+   ]
+  },
+  {
+   "slug": "c12re",
+   "name_ar": "الصف الثاني عشر – الفرع الشرعي",
+   "name_en": "Sharia (Religious)",
+   "page": "https://elearn.edu.ps/landing3/c12re/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/en12re.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h).",
+     "notes": "same bytes as en12s.pdf"
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/ma12re.pdf",
+     "bytes": 2147188,
+     "units": [
+      {
+       "title": "الوحدة 1: التفاضل والتكامل",
+       "lessons": [
+        {
+         "title": "1-1 متوسط التغير (Rate Of Change)",
+         "page": 4
+        },
+        {
+         "title": "1-2 المشتقة الأولى (First Derivative)",
+         "page": 10
+        },
+        {
+         "title": "1-3 قواعد الاشتقاق (Derivative Rules)",
+         "page": 14
+        },
+        {
+         "title": "1-4 القيم القصوى للاقتران (Extreme Values)",
+         "page": 20
+        },
+        {
+         "title": "1-5 التكامل غير المحدود (Indefinite Integral)",
+         "page": 25
+        },
+        {
+         "title": "1-6 التكامل المحدود (Definite Integral)",
+         "page": 31
+        },
+        {
+         "title": "1-7 تمارين عامة (Chapter Exercises)",
+         "page": 38
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 2: المصفوفات",
+       "lessons": [
+        {
+         "title": "2-1 المصفوفة (Matrix)",
+         "page": 43
+        },
+        {
+         "title": "2-2 العمليات على المصفوفات (Matrix Operations)",
+         "page": 49
+        },
+        {
+         "title": "2-3 ضرب المصفوفات (Matrix Multiplication)",
+         "page": 58
+        },
+        {
+         "title": "2-4 النظير الضربي للمصفوفة المربعة من الرتبة الثانية (Matrix Inverse)",
+         "page": 63
+        },
+        {
+         "title": "2-5 حل نظام من معادلتين خطيتين باستخدام قاعدة كريمر (Cramer's Rule)",
+         "page": 71
+        },
+        {
+         "title": "2-6 تمارين عامة (Chapter Exercises)",
+         "page": 75
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 3: المعادلات والمتسلسلات",
+       "lessons": [
+        {
+         "title": "3-1 المعادلات الأسية (Exponent Equations)",
+         "page": 79
+        },
+        {
+         "title": "3-2 المعادلات اللوغاريتمية (Logarithmic Equations)",
+         "page": 82
+        },
+        {
+         "title": "3-3 المتسلسلات (Series)",
+         "page": 85
+        },
+        {
+         "title": "3-4 المتسلسلة الحسابية (Arithmetic Series)",
+         "page": 89
+        },
+        {
+         "title": "3-5 المتسلسلة الهندسية (Geometric Series)",
+         "page": 95
+        },
+        {
+         "title": "3-6 تمارين عامة (Chapter Exercises)",
+         "page": 99
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 4: الإحصاء",
+       "lessons": [
+        {
+         "title": "4-1 العلامة المعيارية (Standard Score)",
+         "page": 103
+        },
+        {
+         "title": "4-2 التوزيع الطبيعي المعياري (Standard Normal Distribution)",
+         "page": 108
+        },
+        {
+         "title": "4-3 تمارين عامة (Chapter Exercises)",
+         "page": 114
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable. Unit names read from the coloured side tabs (no printed unit numbers/pages).",
+     "toc_note": "Same file is linked for the sharia branch maths.",
+     "notes": "same bytes as 12h/ma12h.pdf; TOC copied from it"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language",
+     "part": "1",
+     "label_on_page": "المطالعة و القواعد",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/ar12-re1.pdf",
+     "bytes": 3833338,
+     "units": [
+      {
+       "title": "الوحدة الأولى (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "من سورة يوسف (عليه السلام)",
+         "page": 4
+        },
+        {
+         "title": "الممنوع من الصرف (1)",
+         "page": 8
+        },
+        {
+         "title": "البحر الوافر",
+         "page": 11
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "غروب الأندلس",
+         "page": 14
+        },
+        {
+         "title": "رسالة إلى صديق قديم",
+         "page": 19
+        },
+        {
+         "title": "الممنوع من الصرف (2)",
+         "page": 22
+        },
+        {
+         "title": "التعبير",
+         "page": 24
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "كم حياة ستعيش",
+         "page": 25
+        },
+        {
+         "title": "الإعلال",
+         "page": 30
+        },
+        {
+         "title": "البحر الطويل",
+         "page": 35
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "القدس بوصلة ومجد",
+         "page": 38
+        },
+        {
+         "title": "رام الله",
+         "page": 42
+        },
+        {
+         "title": "الإبدال",
+         "page": 45
+        },
+        {
+         "title": "التعبير",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "التواصل في العالم الافتراضي وآدابه",
+         "page": 48
+        },
+        {
+         "title": "اسم الفعل",
+         "page": 52
+        },
+        {
+         "title": "البحر البسيط",
+         "page": 55
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة (الفصل الأول)",
+       "lessons": [
+        {
+         "title": "المدينة الذكية",
+         "page": 58
+        },
+        {
+         "title": "أنا وليلى",
+         "page": 62
+        },
+        {
+         "title": "من المعاني النحوية لـ (الواو) و(الفاء)",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السابعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "أحاديث نبوية",
+         "page": 69
+        },
+        {
+         "title": "المدينة المحاصرة",
+         "page": 73
+        },
+        {
+         "title": "من المعاني النحوية لـ (ما) و(مَنْ)",
+         "page": 76
+        },
+        {
+         "title": "التعبير",
+         "page": 78
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثامنة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "مرافعات أمام ضمير غائب",
+         "page": 79
+        },
+        {
+         "title": "وصية لاجئ",
+         "page": 84
+        },
+        {
+         "title": "من المعاني النحوية لـ (لا) و(اللام)",
+         "page": 88
+        }
+       ]
+      },
+      {
+       "title": "الوحدة التاسعة (الفصل الثاني)",
+       "lessons": [
+        {
+         "title": "البومة في غرفة بعيدة",
+         "page": 91
+        },
+        {
+         "title": "الجمل التي لها محل من الإعراب",
+         "page": 96
+        },
+        {
+         "title": "البحر الخفيف",
+         "page": 99
+        },
+        {
+         "title": "التعبير",
+         "page": 100
+        }
+       ]
+      },
+      {
+       "title": "ملحق",
+       "lessons": [
+        {
+         "title": "أقيّم ذاتي",
+         "page": 101
+        },
+        {
+         "title": "المشروع",
+         "page": 102
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Despite the '1' in the filename and the landing-page label 'المطالعة والقواعد', the TOC covers both semesters (units 1-6 = الفصل الدراسي الأول, units 7-9 = الفصل الدراسي الثاني). Same file is linked for the literary and sharia branches; those branches also have a separate الأدب والبلاغة book (ar12-h2 / ar12-re2). The scientific page links no Arabic literature book.",
+     "notes": "same bytes as ar12-s1.pdf"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language",
+     "part": "2",
+     "label_on_page": "الأدب و البلاغة",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/ar12-re2.pdf",
+     "bytes": 19430735,
+     "units": [],
+     "notes": "same bytes as 12h/ar12-h2.pdf; not parsed"
+    },
+    {
+     "subject_ar": "الدراسات التاريخية",
+     "subject_en": "History",
+     "part": null,
+     "label_on_page": "الدراسات التاريخية",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/dira12re.pdf",
+     "bytes": 6621372,
+     "units": [
+      {
+       "title": "الوحدة الأولى: فتوحات وحروب عابرة للقارات",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الحروب: دوافعها وأنواعها",
+         "page": 4
+        },
+        {
+         "title": "الدرس الثاني: الفتوحات الإسلامية",
+         "page": 10
+        },
+        {
+         "title": "الدرس الثالث: الحروب الفرنجية 1095 - 1291م",
+         "page": 18
+        },
+        {
+         "title": "الدرس الرابع: الحرب العالمية الأولى 1914 - 1918م",
+         "page": 25
+        },
+        {
+         "title": "الدرس الخامس: الحرب العالمية الثانية 1939 - 1945م",
+         "page": 33
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: ثورات شعبية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: الثورة",
+         "page": 42
+        },
+        {
+         "title": "الدرس الثاني: الثورة الجزائرية (1954-1962م)",
+         "page": 47
+        },
+        {
+         "title": "الدرس الثالث: الانتفاضة الفلسطينية (1987 - 1993م)",
+         "page": 54
+        },
+        {
+         "title": "الدرس الرابع: الحراك العربي 2010م (الربيع العربي)",
+         "page": 62
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: إمبراطوريات عابرة للقوميات",
+       "lessons": [
+        {
+         "title": "الدرس الأول: النظام الإمبراطوري",
+         "page": 70
+        },
+        {
+         "title": "الدرس الثاني: الإمبراطورية البيزنطية",
+         "page": 75
+        },
+        {
+         "title": "الدرس الثالث: الإمبراطورية العثمانية",
+         "page": 81
+        },
+        {
+         "title": "الدرس الرابع: الإمبراطورية البريطانية",
+         "page": 89
+        },
+        {
+         "title": "الدرس الخامس: الهيمنة العالمية (الولايات المتحدة الأمريكية أنموذجاً)",
+         "page": 95
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: مشاريع قومية ووحدوية",
+       "lessons": [
+        {
+         "title": "الدرس الأول: القومية والهوية الوطنية",
+         "page": 102
+        },
+        {
+         "title": "الدرس الثاني: الوحدة الألمانية سنة 1871م",
+         "page": 107
+        },
+        {
+         "title": "الدرس الثالث: مشاريع الوحدة العربية",
+         "page": 112
+        },
+        {
+         "title": "الدرس الرابع: الاتحاد السوفيتي (1922-1991م)",
+         "page": 119
+        },
+        {
+         "title": "الدرس الخامس: الاتحاد الأوروبي",
+         "page": 124
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Same file is linked for the sharia branch (الدراسات التاريخية).",
+     "notes": "same bytes as 12h/dira12h.pdf"
+    },
+    {
+     "subject_ar": "القرآن الكريم وعلومه",
+     "subject_en": "Quran and its Sciences",
+     "part": null,
+     "label_on_page": "القرآن الكريم و علومه",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/12reoq.pdf",
+     "bytes": 5994810,
+     "units": []
+    },
+    {
+     "subject_ar": "الحديث الشريف وعلومه",
+     "subject_en": "Hadith and its Sciences",
+     "part": null,
+     "label_on_page": "الحديث الشريف وعلومه",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/12reoh.pdf",
+     "bytes": 3897344,
+     "units": []
+    },
+    {
+     "subject_ar": "الفقه الإسلامي وأصوله",
+     "subject_en": "Islamic Jurisprudence (Fiqh) and its Principles",
+     "part": null,
+     "label_on_page": "الفقه الإسلامي وأصوله",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/12reif.pdf",
+     "bytes": 1616169,
+     "units": []
+    },
+    {
+     "subject_ar": "أساليب الدعوة وفن الخطاب",
+     "subject_en": "Methods of Da'wah and the Art of Speech",
+     "part": null,
+     "label_on_page": "أساليب الدعوة وفن الخطاب",
+     "url": "https://elearnps.blob.core.windows.net/public/Books/c11/11re/11ream.pdf",
+     "bytes": 2519122,
+     "units": [],
+     "notes": "link points to a Grade-11 path (c11/11re); 12re/12ream.pdf returns 404"
+    },
+    {
+     "subject_ar": "التكنولوجيا",
+     "subject_en": "Technology",
+     "part": null,
+     "label_on_page": "التكنولوجيا",
+     "url": "https://elearn.azureedge.net/Books/c12/12re/it12re.pdf",
+     "bytes": 5169891,
+     "units": []
+    }
+   ]
+  },
+  {
+   "slug": "c12ri",
+   "name_ar": "الصف الثاني عشر – الفرع الريادي",
+   "name_en": "Entrepreneurship",
+   "page": "https://elearn.edu.ps/landing3/c12ri/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/en12ri.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h).",
+     "notes": "same bytes as en12s.pdf"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language (vocational)",
+     "part": null,
+     "label_on_page": "اللغة العربية | مهني",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/ar12-ri1.pdf",
+     "bytes": 2640135,
+     "units": [],
+     "notes": "vocational Arabic book; same bytes as aram12in/aram12agr; not parsed"
+    },
+    {
+     "subject_ar": "التربية الإسلامية",
+     "subject_en": "Islamic Education",
+     "part": null,
+     "label_on_page": "التربية الإسلامية",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/re12-ri.pdf",
+     "bytes": 5037214,
+     "units": [
+      {
+       "title": "الوحدة الأولى: القرآن الكريم",
+       "lessons": [
+        {
+         "title": "الدرس الأول: منهج التعامل مع القرآن الكريم، والسنة النبوية الشريفة",
+         "page": 3
+        },
+        {
+         "title": "الدرس الثاني: قصة خلق آدم -عليه السلام- - سورة البقرة 30-37 (تفسير وحفظ)",
+         "page": 9
+        },
+        {
+         "title": "الدرس الثالث: منهج القرآن الكريم في التربية - سورة البقرة 151-157 (تفسير وحفظ)",
+         "page": 14
+        },
+        {
+         "title": "الدرس الرابع: التحاكم لشرع الله تعالى - سورة المائدة 48-50 (تفسير)",
+         "page": 19
+        },
+        {
+         "title": "الدرس الخامس: الاعتصام بالله تعالى - سورة آل عمران 100-105 (تفسير وحفظ)",
+         "page": 23
+        },
+        {
+         "title": "الدرس السادس: قصة موسى عليه السلام مع العبد الصالح (الخضر) - سورة الكهف 60-82 (تفسير)",
+         "page": 28
+        },
+        {
+         "title": "الدرس السابع: سنن الله تعالى في المجتمعات",
+         "page": 34
+        },
+        {
+         "title": "الدرس الثامن: سورة إبراهيم (1-12) (تلاوة وتجويد)",
+         "page": 39
+        },
+        {
+         "title": "الدرس التاسع: سورة إبراهيم (13-34) (تلاوة وتجويد)",
+         "page": 43
+        },
+        {
+         "title": "الدرس العاشر: سورة إبراهيم (35-52) (تلاوة وتجويد)",
+         "page": 48
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: العقيدة الإسلامية",
+       "lessons": [
+        {
+         "title": "الدرس الحادي عشر: منهج القرآن الكريم في ترسيخ حقائق الإيمان",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثاني عشر: أثر الإيمان في المجتمع البشري",
+         "page": 56
+        },
+        {
+         "title": "الدرس الثالث عشر: الشرك بالله تعالى ظاهر وخفي",
+         "page": 60
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحديث الشريف",
+       "lessons": [
+        {
+         "title": "الدرس الرابع عشر: جهود العلماء في الحفاظ على السنة النبوية الشريفة",
+         "page": 65
+        },
+        {
+         "title": "الدرس الخامس عشر: فضل التفقه في الدين",
+         "page": 69
+        },
+        {
+         "title": "الدرس السادس عشر: الأعمال التي لا ينقطع ثوابها",
+         "page": 73
+        },
+        {
+         "title": "الدرس السابع عشر: موقف الإسلام من البدع",
+         "page": 77
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السير والتراجم",
+       "lessons": [
+        {
+         "title": "الدرس الثامن عشر: مواقف من سيرة الرسول ﷺ",
+         "page": 82
+        },
+        {
+         "title": "الدرس التاسع عشر: من صحابة رسول الله ﷺ: عائشة أم المؤمنين رضي الله عنها",
+         "page": 85
+        },
+        {
+         "title": "الدرس العشرون: القائد الفاتح صلاح الدين الأيوبي رحمه الله",
+         "page": 88
+        },
+        {
+         "title": "الدرس الحادي والعشرون: من أعلام المسلمين: العز بن عبد السلام",
+         "page": 92
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الفقه الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس الثاني والعشرون: فقه الدعوة والجهاد",
+         "page": 96
+        },
+        {
+         "title": "الدرس الثالث والعشرون: الأيمان والنذور",
+         "page": 102
+        },
+        {
+         "title": "الدرس الرابع والعشرون: الربا",
+         "page": 106
+        },
+        {
+         "title": "الدرس الخامس والعشرون: قضايا معاصرة (1) (بيع المرابحة والتأمين)",
+         "page": 110
+        },
+        {
+         "title": "الدرس السادس والعشرون: قضايا معاصرة (2) (تنظيم النسل وتحديده)",
+         "page": 115
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الفكر الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس السابع والعشرون: الفرق والمذاهب في الإسلام",
+         "page": 120
+        },
+        {
+         "title": "الدرس الثامن والعشرون: الإسلام والمرأة",
+         "page": 125
+        },
+        {
+         "title": "الدرس التاسع والعشرون: العولمة",
+         "page": 129
+        },
+        {
+         "title": "الدرس الثلاثون: ترسيخ القيم الفاضلة في المجتمع",
+         "page": 133
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text has broken ligatures/word order",
+     "toc_note": "Same file is linked for literary, entrepreneurship, industrial and agricultural branches.",
+     "notes": "same bytes as re12-s.pdf"
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/ma12ri.pdf",
+     "bytes": 1462687,
+     "units": [],
+     "notes": "same bytes as 12agr/ma12agr.pdf; not parsed"
+    },
+    {
+     "subject_ar": "إدارة واقتصاد",
+     "subject_en": "Management and Economics",
+     "part": null,
+     "label_on_page": "إدارة واقتصاد",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/ae12ri.pdf",
+     "bytes": 3650488,
+     "units": []
+    },
+    {
+     "subject_ar": "المحاسبة",
+     "subject_en": "Accounting",
+     "part": null,
+     "label_on_page": "المحاسبة",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/ac12ri.pdf",
+     "bytes": 3224651,
+     "units": []
+    },
+    {
+     "subject_ar": "المشاريع الصغيرة",
+     "subject_en": "Small Projects",
+     "part": null,
+     "label_on_page": "المشاريع الصغيرة",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/sp12ri.pdf",
+     "bytes": 3007150,
+     "units": []
+    },
+    {
+     "subject_ar": "التكنولوجيا",
+     "subject_en": "Technology",
+     "part": null,
+     "label_on_page": "التكنولوجيا",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/it12ri.pdf",
+     "bytes": 5169891,
+     "units": []
+    },
+    {
+     "subject_ar": "التربية المسيحية",
+     "subject_en": "Christian Education",
+     "part": null,
+     "label_on_page": "التربية المسيحية",
+     "url": "https://elearn.azureedge.net/Books/c12/12ri/ch12ri.pdf",
+     "bytes": 4258718,
+     "units": [],
+     "notes": "landing page wrongly links ac12ri.pdf (accounting) for Christian education; ch12ri.pdf was guessed and returns 200 with the same size as the other Christian-education books"
+    }
+   ]
+  },
+  {
+   "slug": "c12in",
+   "name_ar": "الصف الثاني عشر – الفرع الصناعي",
+   "name_en": "Industrial",
+   "page": "https://elearn.edu.ps/landing3/c12in/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/en12in.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h).",
+     "notes": "same bytes as en12s.pdf"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language (vocational)",
+     "part": null,
+     "label_on_page": "اللغة العربية | مهني",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/aram12in.pdf",
+     "bytes": 2640135,
+     "units": [],
+     "notes": "not parsed"
+    },
+    {
+     "subject_ar": "التربية الإسلامية",
+     "subject_en": "Islamic Education",
+     "part": null,
+     "label_on_page": "التربية الإسلامية",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/re12-in.pdf",
+     "bytes": 5037214,
+     "units": [
+      {
+       "title": "الوحدة الأولى: القرآن الكريم",
+       "lessons": [
+        {
+         "title": "الدرس الأول: منهج التعامل مع القرآن الكريم، والسنة النبوية الشريفة",
+         "page": 3
+        },
+        {
+         "title": "الدرس الثاني: قصة خلق آدم -عليه السلام- - سورة البقرة 30-37 (تفسير وحفظ)",
+         "page": 9
+        },
+        {
+         "title": "الدرس الثالث: منهج القرآن الكريم في التربية - سورة البقرة 151-157 (تفسير وحفظ)",
+         "page": 14
+        },
+        {
+         "title": "الدرس الرابع: التحاكم لشرع الله تعالى - سورة المائدة 48-50 (تفسير)",
+         "page": 19
+        },
+        {
+         "title": "الدرس الخامس: الاعتصام بالله تعالى - سورة آل عمران 100-105 (تفسير وحفظ)",
+         "page": 23
+        },
+        {
+         "title": "الدرس السادس: قصة موسى عليه السلام مع العبد الصالح (الخضر) - سورة الكهف 60-82 (تفسير)",
+         "page": 28
+        },
+        {
+         "title": "الدرس السابع: سنن الله تعالى في المجتمعات",
+         "page": 34
+        },
+        {
+         "title": "الدرس الثامن: سورة إبراهيم (1-12) (تلاوة وتجويد)",
+         "page": 39
+        },
+        {
+         "title": "الدرس التاسع: سورة إبراهيم (13-34) (تلاوة وتجويد)",
+         "page": 43
+        },
+        {
+         "title": "الدرس العاشر: سورة إبراهيم (35-52) (تلاوة وتجويد)",
+         "page": 48
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: العقيدة الإسلامية",
+       "lessons": [
+        {
+         "title": "الدرس الحادي عشر: منهج القرآن الكريم في ترسيخ حقائق الإيمان",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثاني عشر: أثر الإيمان في المجتمع البشري",
+         "page": 56
+        },
+        {
+         "title": "الدرس الثالث عشر: الشرك بالله تعالى ظاهر وخفي",
+         "page": 60
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحديث الشريف",
+       "lessons": [
+        {
+         "title": "الدرس الرابع عشر: جهود العلماء في الحفاظ على السنة النبوية الشريفة",
+         "page": 65
+        },
+        {
+         "title": "الدرس الخامس عشر: فضل التفقه في الدين",
+         "page": 69
+        },
+        {
+         "title": "الدرس السادس عشر: الأعمال التي لا ينقطع ثوابها",
+         "page": 73
+        },
+        {
+         "title": "الدرس السابع عشر: موقف الإسلام من البدع",
+         "page": 77
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السير والتراجم",
+       "lessons": [
+        {
+         "title": "الدرس الثامن عشر: مواقف من سيرة الرسول ﷺ",
+         "page": 82
+        },
+        {
+         "title": "الدرس التاسع عشر: من صحابة رسول الله ﷺ: عائشة أم المؤمنين رضي الله عنها",
+         "page": 85
+        },
+        {
+         "title": "الدرس العشرون: القائد الفاتح صلاح الدين الأيوبي رحمه الله",
+         "page": 88
+        },
+        {
+         "title": "الدرس الحادي والعشرون: من أعلام المسلمين: العز بن عبد السلام",
+         "page": 92
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الفقه الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس الثاني والعشرون: فقه الدعوة والجهاد",
+         "page": 96
+        },
+        {
+         "title": "الدرس الثالث والعشرون: الأيمان والنذور",
+         "page": 102
+        },
+        {
+         "title": "الدرس الرابع والعشرون: الربا",
+         "page": 106
+        },
+        {
+         "title": "الدرس الخامس والعشرون: قضايا معاصرة (1) (بيع المرابحة والتأمين)",
+         "page": 110
+        },
+        {
+         "title": "الدرس السادس والعشرون: قضايا معاصرة (2) (تنظيم النسل وتحديده)",
+         "page": 115
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الفكر الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس السابع والعشرون: الفرق والمذاهب في الإسلام",
+         "page": 120
+        },
+        {
+         "title": "الدرس الثامن والعشرون: الإسلام والمرأة",
+         "page": 125
+        },
+        {
+         "title": "الدرس التاسع والعشرون: العولمة",
+         "page": 129
+        },
+        {
+         "title": "الدرس الثلاثون: ترسيخ القيم الفاضلة في المجتمع",
+         "page": 133
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text has broken ligatures/word order",
+     "toc_note": "Same file is linked for literary, entrepreneurship, industrial and agricultural branches.",
+     "notes": "landing-page href has a trailing dot ('re12-in.pdf.'); URL without the dot returns 200, same bytes as re12-s.pdf"
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات | صناعي",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/ma12-in.pdf",
+     "bytes": 2411732,
+     "units": [
+      {
+       "title": "الوحدة 1: حساب التفاضل (Differentiation) – ص2",
+       "lessons": [
+        {
+         "title": "1-1 متوسط التغير (Rate of Change)",
+         "page": 4
+        },
+        {
+         "title": "1-2 قواعد الاشتقاق (Rules of Differentiation)",
+         "page": 9
+        },
+        {
+         "title": "1-3 مشتقات الاقترانات المثلثية (The Derivative of Trigonometric Functions)",
+         "page": 19
+        },
+        {
+         "title": "1-4 قاعدة لوبيتال، ومشتقة الاقتران الأسي واللوغاريتمي (L'Hôpital's Rule)",
+         "page": 22
+        },
+        {
+         "title": "1-5 تطبيقات هندسية وفيزيائية (Geometric and Physical Applications)",
+         "page": 30
+        },
+        {
+         "title": "1-6 قاعدة السلسلة (Chain Rule)",
+         "page": 37
+        },
+        {
+         "title": "1-7 الاشتقاق الضمني (Implicit Differentiation)",
+         "page": 42
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 2: تطبيقات التفاضل (Differentiation Applications) – ص52",
+       "lessons": [
+        {
+         "title": "2-1 نظريتا رول والقيمة المتوسطة (Rolle's Theorem)",
+         "page": 54
+        },
+        {
+         "title": "2-2 الاقترانات المتزايدة والمتناقصة (Increasing and Decreasing Functions)",
+         "page": 60
+        },
+        {
+         "title": "2-3 القيم القصوى (Extreme Values)",
+         "page": 65
+        },
+        {
+         "title": "2-4 التقعّر ونقط الانعطاف (Concavity and Points of Inflection)",
+         "page": 75
+        },
+        {
+         "title": "2-5 تطبيقات عملية على القيم القصوى (Applications of Extrema)",
+         "page": 83
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 3: المصفوفات والمحددات (Matrices and Determinants) – ص92",
+       "lessons": [
+        {
+         "title": "3-1 المصفوفة (Matrix)",
+         "page": 94
+        },
+        {
+         "title": "3-2 العمليات على المصفوفات (Operations on Matrices)",
+         "page": 99
+        },
+        {
+         "title": "3-3 المحدّدات (Determinants)",
+         "page": 108
+        },
+        {
+         "title": "3-4 النظير الضربي للمصفوفة المربعة (Inverse of a Square Matrix)",
+         "page": 114
+        },
+        {
+         "title": "3-5 حل أنظمة المعادلات الخطية باستخدام المصفوفات (Solving Systems of Linear Equations)",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 4: التكامل غير المحدود وتطبيقاته (Indefinite Integral and its Applications) – ص130",
+       "lessons": [
+        {
+         "title": "4-1 التكامل غير المحدود (Indefinite Integral)",
+         "page": 132
+        },
+        {
+         "title": "4-2 قواعد التكامل غير المحدود (Rules of Indefinite Integrals)",
+         "page": 137
+        },
+        {
+         "title": "4-3 تطبيقات التكامل غير المحدود (Applications of Indefinite Integrals)",
+         "page": 141
+        },
+        {
+         "title": "4-4 طرق التكامل (التعويض، الأجزاء، الكسور الجزئية) (Methods of Integration)",
+         "page": 146
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 5: التكامل المحدود وتطبيقاته (Definite Integration and its Applications) – ص162",
+       "lessons": [
+        {
+         "title": "5-1 التجزئة ومجموع ريمان (Partition and Riemann Sum)",
+         "page": 164
+        },
+        {
+         "title": "5-2 التكامل المحدود (The Definite Integral)",
+         "page": 171
+        },
+        {
+         "title": "5-3 العلاقة بين التفاضل والتكامل (Fundamental Theorem of Calculus)",
+         "page": 176
+        },
+        {
+         "title": "5-4 خصائص التكامل المحدود (Properties of Definite Integral)",
+         "page": 181
+        },
+        {
+         "title": "5-5 تطبيقات التكامل المحدود (المساحة، الحجم) (Applications of Definite Integral)",
+         "page": 189
+        }
+       ]
+      },
+      {
+       "title": "الوحدة 6: الأعداد المركبة (Complex Numbers) – ص204",
+       "lessons": [
+        {
+         "title": "6-1 الأعداد المركبة (Complex Numbers)",
+         "page": 206
+        },
+        {
+         "title": "6-2 العمليات على الأعداد المركبة (Operations on Complex Numbers)",
+         "page": 210
+        },
+        {
+         "title": "6-3 قسمة الأعداد المركبة (Division of Complex Numbers)",
+         "page": 215
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text is unusable (custom font encoding)",
+     "toc_note": "Pink-highlighted items are excluded for the industrial branch (sidebar note); this file is identical to the industrial maths book",
+     "notes": "md5-identical to 12s/ma12-s.pdf; pink-highlighted lessons are excluded for industrial"
+    },
+    {
+     "subject_ar": "الرسم الصناعي",
+     "subject_en": "Industrial (Technical) Drawing",
+     "part": null,
+     "label_on_page": "الرسم الصناعي",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/dr12in.pdf",
+     "bytes": 10163141,
+     "units": []
+    },
+    {
+     "subject_ar": "الفيزياء",
+     "subject_en": "Physics",
+     "part": null,
+     "label_on_page": "الفيزياء",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/py12-in.pdf",
+     "bytes": 4278167,
+     "units": [
+      {
+       "title": "الوحدة الأولى: الميكانيكا – ص2",
+       "lessons": [
+        {
+         "title": "الفصل الأول: الزخم (كمية التحرك) الخطي والدفع",
+         "page": 4
+        },
+        {
+         "title": "الفصل الثاني: التصادمات",
+         "page": 15
+        },
+        {
+         "title": "الفصل الثالث: الحركة الدورانية",
+         "page": 33
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الكهرباء المتحركة – ص55",
+       "lessons": [
+        {
+         "title": "الفصل الرابع: التيار الكهربائي والمقاومة",
+         "page": 57
+        },
+        {
+         "title": "الفصل الخامس: دارات التيار المستمر",
+         "page": 72
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الكهرومغناطيسية – ص94",
+       "lessons": [
+        {
+         "title": "الفصل السادس: المجال المغناطيسي",
+         "page": 96
+        },
+        {
+         "title": "الفصل السابع: القوة المغناطيسية",
+         "page": 110
+        },
+        {
+         "title": "الفصل الثامن: الحث الكهرومغناطيسي",
+         "page": 123
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الفيزياء الحديثة – ص144",
+       "lessons": [
+        {
+         "title": "الفصل التاسع: نظرية الكم",
+         "page": 146
+        },
+        {
+         "title": "الفصل العاشر: بنية النواة والإشعاع النووي",
+         "page": 166
+        }
+       ]
+      }
+     ],
+     "toc_source": "pdftotext/PyMuPDF text of TOC page (PDF p.5), clean; lessons here are the book's chapters (الفصل)",
+     "toc_note": "identical file is linked for the industrial branch",
+     "notes": "md5-identical to 12s/py12-s.pdf"
+    },
+    {
+     "subject_ar": "التكنولوجيا",
+     "subject_en": "Technology",
+     "part": null,
+     "label_on_page": "التكنولوجيا",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/it12in.pdf",
+     "bytes": 5906853,
+     "units": [],
+     "notes": "same bytes as it12s.pdf"
+    },
+    {
+     "subject_ar": "التربية المسيحية",
+     "subject_en": "Christian Education",
+     "part": null,
+     "label_on_page": "التربية المسيحية",
+     "url": "https://elearn.azureedge.net/Books/c12/12in/ch12in.pdf",
+     "bytes": 4258718,
+     "units": []
+    }
+   ]
+  },
+  {
+   "slug": "c12agr",
+   "name_ar": "الصف الثاني عشر – الفرع الزراعي",
+   "name_en": "Agricultural",
+   "page": "https://elearn.edu.ps/landing3/c12agr/",
+   "books": [
+    {
+     "subject_ar": "اللغة الإنجليزية",
+     "subject_en": "English",
+     "part": null,
+     "label_on_page": "اللغة الإنجليزية",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/en12agr.pdf",
+     "bytes": 65140665,
+     "units": [
+      {
+       "title": "Unit 1: A new start – p.4",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 5
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 6
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 8
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 9
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 11
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 13
+        }
+       ]
+      },
+      {
+       "title": "Unit 2: Under pressure – p.14",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 15
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 16
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 18
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 19
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 21
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 22
+        }
+       ]
+      },
+      {
+       "title": "Unit 3: A funny thing happened – p.24",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 25
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 26
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 28
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 29
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 31
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 32
+        }
+       ]
+      },
+      {
+       "title": "Unit 4: The shrinking world – p.38",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 39
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 40
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 42
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 43
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 45
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 47
+        }
+       ]
+      },
+      {
+       "title": "Unit 5: Making friends – p.48",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 49
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 50
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 52
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 53
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 55
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 56
+        }
+       ]
+      },
+      {
+       "title": "Unit 6: Revision (Units 1–5) – p.58",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 59
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 60
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 62
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 63
+        },
+        {
+         "title": "Period 5: Writing",
+         "page": 65
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 66
+        }
+       ]
+      },
+      {
+       "title": "Unit 7: The world of work – p.68",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 69
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 70
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 72
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 73
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 75
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 76
+        }
+       ]
+      },
+      {
+       "title": "Unit 8: In business – p.78",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 79
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 80
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 82
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 83
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 85
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 86
+        }
+       ]
+      },
+      {
+       "title": "Unit 9: Only a game? – p.88",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 89
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 90
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 92
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 93
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 95
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 96
+        }
+       ]
+      },
+      {
+       "title": "Unit 10: Who am I? – p.102",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 103
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 104
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 106
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 107
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 109
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 111
+        }
+       ]
+      },
+      {
+       "title": "Unit 11: Different places, different ways – p.112",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and comprehension",
+         "page": 113
+        },
+        {
+         "title": "Period 2: Reading and comprehension",
+         "page": 114
+        },
+        {
+         "title": "Period 3: Language and vocabulary study",
+         "page": 116
+        },
+        {
+         "title": "Period 4: Language and vocabulary study",
+         "page": 117
+        },
+        {
+         "title": "Period 5: Integrated skills",
+         "page": 119
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 120
+        }
+       ]
+      },
+      {
+       "title": "Unit 12: Revision (Units 7–11) – p.122",
+       "lessons": [
+        {
+         "title": "Period 1: Reading and vocabulary",
+         "page": 123
+        },
+        {
+         "title": "Period 2: Reading and vocabulary",
+         "page": 124
+        },
+        {
+         "title": "Period 3: Language",
+         "page": 126
+        },
+        {
+         "title": "Period 4: Language",
+         "page": 128
+        },
+        {
+         "title": "Period 5: Language",
+         "page": 129
+        },
+        {
+         "title": "Period 6: Writing",
+         "page": 131
+        }
+       ]
+      }
+     ],
+     "toc_source": "PyMuPDF text: unit titles from Contents (PDF p.2-3), periods from page headers 'Unit N Period N / skill'; clean. PDF page index equals printed page number for checked pages.",
+     "toc_note": "Annual book; Progress test 1 p.34, Progress test 2 p.98, Wordlist p.133, Grammar reference p.135, Writing samples p.139. Same file linked for all six branches (literary page also links a separate 'Reading Plus' book enr12h).",
+     "notes": "same bytes as en12s.pdf"
+    },
+    {
+     "subject_ar": "الرياضيات",
+     "subject_en": "Mathematics",
+     "part": null,
+     "label_on_page": "الرياضيات",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/ma12agr.pdf",
+     "bytes": 1462687,
+     "units": [],
+     "notes": "not parsed; same bytes as ma12ri.pdf"
+    },
+    {
+     "subject_ar": "اللغة العربية",
+     "subject_en": "Arabic Language (vocational)",
+     "part": null,
+     "label_on_page": "اللغة العربية | مهني",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/aram12agr.pdf",
+     "bytes": 2640135,
+     "units": [],
+     "notes": "not parsed"
+    },
+    {
+     "subject_ar": "الكيمياء",
+     "subject_en": "Chemistry",
+     "part": null,
+     "label_on_page": "الكيمياء",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/chem12agr.pdf",
+     "bytes": 3570298,
+     "units": [
+      {
+       "title": "الوحدة الأولى: البناء الإلكتروني للذرة",
+       "lessons": [
+        {
+         "title": "1-1 الضوء مفتاح البناء الإلكتروني",
+         "page": 4
+        },
+        {
+         "title": "1-2 الطيف الذري",
+         "page": 6
+        },
+        {
+         "title": "1-3 نظرية بور لذرة الهيدروجين",
+         "page": 8
+        },
+        {
+         "title": "1-4 نظرية الميكانيك الكمّي (الموجي)",
+         "page": 13
+        },
+        {
+         "title": "1-5 قواعد التركيب الإلكتروني",
+         "page": 19
+        },
+        {
+         "title": "1-6 العدد الذري وإلكترونات التكافؤ",
+         "page": 23
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 25
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الصفات الدورية ونظرية رابطة التكافؤ",
+       "lessons": [
+        {
+         "title": "2-1 الجدول الدوري الحديث",
+         "page": 30
+        },
+        {
+         "title": "2-2 الخصائص الدورية للعناصر",
+         "page": 33
+        },
+        {
+         "title": "2-3 العناصر الانتقالية في الدورة الرابعة من الجدول الدوري",
+         "page": 39
+        },
+        {
+         "title": "2-4 نظرية رابطة التكافؤ",
+         "page": 42
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 54
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحموض والقواعد (الفرع العلمي)",
+       "lessons": [
+        {
+         "title": "3-1 الخواص العامة للحموض والقواعد",
+         "page": 59
+        },
+        {
+         "title": "3-2 تطور مفهومي الحمض والقاعدة",
+         "page": 60
+        },
+        {
+         "title": "3-3 التأين الذاتي للماء والرقم الهيدروجيني",
+         "page": 63
+        },
+        {
+         "title": "3-4 الاتزان في محاليل الحموض والقواعد الضعيفة",
+         "page": 68
+        },
+        {
+         "title": "3-5 الخواص الحمضية والقاعدية لمحاليل الأملاح",
+         "page": 73
+        },
+        {
+         "title": "3-6 الأيون المشترك والمحلول المنظم",
+         "page": 74
+        },
+        {
+         "title": "3-7 المعايرة بين الحموض والقواعد",
+         "page": 79
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 85
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الديناميكا الحرارية وسرعة التفاعلات الكيميائية",
+       "lessons": [
+        {
+         "title": "4-1 الديناميكا الحرارية (العمليات التلقائية وغير التلقائية، العشوائية، القانون الثاني، طاقة جبس الحرة)",
+         "page": 90
+        },
+        {
+         "title": "4-2 سرعة التفاعل الكيميائي وميكانيكيته (قانون سرعة التفاعل، أثر درجة الحرارة، نظرية الحالة الانتقالية، آلية التفاعل)",
+         "page": 101
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 114
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الكيمياء العضوية",
+       "lessons": [
+        {
+         "title": "5-1 المركبات العضوية",
+         "page": 119
+        },
+        {
+         "title": "5-2 هاليدات الألكيل",
+         "page": 120
+        },
+        {
+         "title": "5-3 الكحولات",
+         "page": 122
+        },
+        {
+         "title": "5-4 الألدهيدات والكيتونات",
+         "page": 127
+        },
+        {
+         "title": "5-5 الحموض الكربوكسيلية",
+         "page": 132
+        },
+        {
+         "title": "5-6 الإسترات",
+         "page": 134
+        },
+        {
+         "title": "5-7 الأمينات",
+         "page": 136
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 140
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الخلايا الكهروكيميائية (الفرع العلمي)",
+       "lessons": [
+        {
+         "title": "6-1 الخلايا الجلفانية",
+         "page": 145
+        },
+        {
+         "title": "6-2 تركيب الخلايا الجلفانية وعملها",
+         "page": 146
+        },
+        {
+         "title": "6-3 جهد القطب القياسي",
+         "page": 147
+        },
+        {
+         "title": "6-4 حساب جهد الخلايا الجلفانية",
+         "page": 150
+        },
+        {
+         "title": "6-5 تطبيقات عملية على الخلايا الجلفانية",
+         "page": 152
+        },
+        {
+         "title": "6-6 خلايا التحليل الكهربائي",
+         "page": 155
+        },
+        {
+         "title": "6-7 التحليل الكهربائي لمصاهير المواد الأيونية",
+         "page": 156
+        },
+        {
+         "title": "6-8 التحليل الكهربائي لمحاليل المواد الأيونية",
+         "page": 157
+        },
+        {
+         "title": "6-9 تطبيقات عملية على التحليل الكهربائي",
+         "page": 159
+        },
+        {
+         "title": "6-10 الحسابات الكمّية في عملية التحليل الكهربائي",
+         "page": 160
+        },
+        {
+         "title": "أسئلة الوحدة",
+         "page": 163
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text unusable",
+     "toc_note": "Units 1,2,4,5 marked (الفرع العلمي والزراعي); units 3 and 6 marked (الفرع العلمي) only. Same file is linked as the agricultural chemistry book.",
+     "notes": "same bytes as ch12s.pdf; agricultural studies units 1,2,4,5 only"
+    },
+    {
+     "subject_ar": "العلوم الحياتية",
+     "subject_en": "Biology (Life Sciences)",
+     "part": null,
+     "label_on_page": "العلوم الحياتية",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/sc12agr.pdf",
+     "bytes": 8880659,
+     "units": [
+      {
+       "title": "الوحدة الأولى: عمليات حيوية في الخلية (Processes In The Cell)",
+       "lessons": [
+        {
+         "title": "1.1 أهمية الطاقة للخلية الحية",
+         "page": 5,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "2.1 البناء الضوئي",
+         "page": 6,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "3.1 التنفس الخلوي",
+         "page": 16,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "4.1 التكامل بين عمليتي البناء الضوئي والتنفس الخلوي",
+         "page": 22,
+         "chapter": "الفصل الأول: تدفق الطاقة (ص4)"
+        },
+        {
+         "title": "1.2 الشيفرة الوراثية",
+         "page": 27,
+         "chapter": "الفصل الثاني: من الجين إلى البروتين (ص26)"
+        },
+        {
+         "title": "2.2 بناء البروتين",
+         "page": 28,
+         "chapter": "الفصل الثاني: من الجين إلى البروتين (ص26)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: الوراثة (Genetics)",
+       "lessons": [
+        {
+         "title": "1.1 الوراثة المندلية",
+         "page": 43,
+         "chapter": "الفصل الأول: قانون مندل في الوراثة (ص42)"
+        },
+        {
+         "title": "1.2 أنماط التوارث غير المندلية",
+         "page": 53,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "2.2 السيادة غير التامة",
+         "page": 53,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "3.2 السيادة المشتركة",
+         "page": 54,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "4.2 الأليلات المتعددة (للعلمي فقط)",
+         "page": 55,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "5.2 الجينات القاتلة (للعلمي فقط)",
+         "page": 58,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "6.2 الصفات الوراثية (للعلمي فقط)",
+         "page": 59,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "7.2 أنظمة تحديد الجنس في الكائنات الحية",
+         "page": 61,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "8.2 الصفات المرتبطة بالجنس",
+         "page": 61,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "9.2 الصفات المتأثرة بالجنس",
+         "page": 63,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "10.2 الارتباط والعبور",
+         "page": 63,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "11.2 الخرائط الجينية",
+         "page": 66,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "12.2 الاختلالات الوراثية",
+         "page": 67,
+         "chapter": "الفصل الثاني: الصفات غير المندلية (ص52)"
+        },
+        {
+         "title": "1.3 الهندسة الوراثية",
+         "page": 76,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "2.3 الوسائل والأدوات المستخدمة في الهندسة الوراثية",
+         "page": 76,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "3.3 تقنية DNA معاد التركيب",
+         "page": 77,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "4.3 الهجرة الكهربائية والبصمة الوراثية",
+         "page": 78,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "5.3 بصمة DNA",
+         "page": 79,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "6.3 تطبيقات في الهندسة الوراثية",
+         "page": 80,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        },
+        {
+         "title": "7.3 ضوابط استخدام الهندسة الوراثية وأخلاقياتها",
+         "page": 81,
+         "chapter": "الفصل الثالث: تطبيقات في علم الوراثة (ص75)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: أجهزة جسم الإنسان (Human Body Systems) – للعلمي فقط",
+       "lessons": [
+        {
+         "title": "1.1 وظائف الجهاز الهيكلي",
+         "page": 91,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "2.1 أقسام الجهاز الهيكلي",
+         "page": 92,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "3.1 أشكال العظم",
+         "page": 97,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "4.1 تركيب نسيج العظم",
+         "page": 97,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "5.1 تكوين العظام ونموها",
+         "page": 100,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "6.1 الغضاريف",
+         "page": 101,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "7.1 المفاصل",
+         "page": 101,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "8.1 المشكلات الصحية التي تصيب الجهاز الهيكلي",
+         "page": 103,
+         "chapter": "الفصل الأول: الجهاز الهيكلي (ص90)"
+        },
+        {
+         "title": "1.2 تركيب جهاز الدوران",
+         "page": 109,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "2.2 تخثر الدم والتئام الجروح",
+         "page": 116,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "3.2 أمراض تصيب جهاز الدوران",
+         "page": 117,
+         "chapter": "الفصل الثاني: جهاز الدوران (ص108)"
+        },
+        {
+         "title": "1.3 الأنظمة المناعية في الجسم",
+         "page": 122,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "2.3 المناعة الإيجابية والمناعة السلبية",
+         "page": 128,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "3.3 تركيب الأجسام المضادة ووظائفها",
+         "page": 128,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "4.3 الاختلالات المناعية",
+         "page": 130,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        },
+        {
+         "title": "5.3 التبرع بالأعضاء (للاطلاع فقط)",
+         "page": 131,
+         "chapter": "الفصل الثالث: الجهاز المناعي (ص121)"
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: الكائنات الدقيقة (Microorganisms)",
+       "lessons": [
+        {
+         "title": "1.1 لمحة تاريخية (للاطلاع فقط)",
+         "page": 141,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "2.1 أماكن تواجد البكتيريا",
+         "page": 141,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "3.1 تصنيف بدائية النوى",
+         "page": 142,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "4.1 أشكال البكتيريا",
+         "page": 144,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "5.1 تركيب الخلية البكتيرية",
+         "page": 146,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "6.1 طرق انتقال المادة الوراثية",
+         "page": 150,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "7.1 نمو البكتيريا وتكاثرها",
+         "page": 151,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "8.1 الظروف الملائمة لنمو البكتيريا",
+         "page": 152,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "9.1 ضبط نمو البكتيريا",
+         "page": 154,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "10.1 المضادات الحيوية",
+         "page": 155,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "11.1 أهمية البكتيريا",
+         "page": 156,
+         "chapter": "الفصل الأول: البكتيريا (ص140)"
+        },
+        {
+         "title": "1.2 لمحة تاريخية (للاطلاع فقط)",
+         "page": 161,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "2.2 تركيب الفيروسات",
+         "page": 161,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "3.2 أشكال الفيروسات",
+         "page": 162,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "4.2 تصنيف الفيروسات",
+         "page": 163,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "5.2 تكاثر الفيروسات",
+         "page": 163,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "6.2 أمراض الفيروسات",
+         "page": 165,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        },
+        {
+         "title": "7.2 الفيروسات والتقانة الحيوية",
+         "page": 167,
+         "chapter": "الفصل الثاني: الفيروسات (ص160)"
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text partly readable but column order scrambled",
+     "toc_note": "Book structure is unit > chapter (الفصل) > section; each lesson carries a 'chapter' field. Items marked * are scientific-branch only (same file linked for agricultural branch).",
+     "notes": "same bytes as sc12s.pdf; starred items/unit 3 are scientific-only"
+    },
+    {
+     "subject_ar": "التربية الإسلامية",
+     "subject_en": "Islamic Education",
+     "part": null,
+     "label_on_page": "التربية الإسلامية",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/re12-agr.pdf",
+     "bytes": 5037214,
+     "units": [
+      {
+       "title": "الوحدة الأولى: القرآن الكريم",
+       "lessons": [
+        {
+         "title": "الدرس الأول: منهج التعامل مع القرآن الكريم، والسنة النبوية الشريفة",
+         "page": 3
+        },
+        {
+         "title": "الدرس الثاني: قصة خلق آدم -عليه السلام- - سورة البقرة 30-37 (تفسير وحفظ)",
+         "page": 9
+        },
+        {
+         "title": "الدرس الثالث: منهج القرآن الكريم في التربية - سورة البقرة 151-157 (تفسير وحفظ)",
+         "page": 14
+        },
+        {
+         "title": "الدرس الرابع: التحاكم لشرع الله تعالى - سورة المائدة 48-50 (تفسير)",
+         "page": 19
+        },
+        {
+         "title": "الدرس الخامس: الاعتصام بالله تعالى - سورة آل عمران 100-105 (تفسير وحفظ)",
+         "page": 23
+        },
+        {
+         "title": "الدرس السادس: قصة موسى عليه السلام مع العبد الصالح (الخضر) - سورة الكهف 60-82 (تفسير)",
+         "page": 28
+        },
+        {
+         "title": "الدرس السابع: سنن الله تعالى في المجتمعات",
+         "page": 34
+        },
+        {
+         "title": "الدرس الثامن: سورة إبراهيم (1-12) (تلاوة وتجويد)",
+         "page": 39
+        },
+        {
+         "title": "الدرس التاسع: سورة إبراهيم (13-34) (تلاوة وتجويد)",
+         "page": 43
+        },
+        {
+         "title": "الدرس العاشر: سورة إبراهيم (35-52) (تلاوة وتجويد)",
+         "page": 48
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثانية: العقيدة الإسلامية",
+       "lessons": [
+        {
+         "title": "الدرس الحادي عشر: منهج القرآن الكريم في ترسيخ حقائق الإيمان",
+         "page": 53
+        },
+        {
+         "title": "الدرس الثاني عشر: أثر الإيمان في المجتمع البشري",
+         "page": 56
+        },
+        {
+         "title": "الدرس الثالث عشر: الشرك بالله تعالى ظاهر وخفي",
+         "page": 60
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الثالثة: الحديث الشريف",
+       "lessons": [
+        {
+         "title": "الدرس الرابع عشر: جهود العلماء في الحفاظ على السنة النبوية الشريفة",
+         "page": 65
+        },
+        {
+         "title": "الدرس الخامس عشر: فضل التفقه في الدين",
+         "page": 69
+        },
+        {
+         "title": "الدرس السادس عشر: الأعمال التي لا ينقطع ثوابها",
+         "page": 73
+        },
+        {
+         "title": "الدرس السابع عشر: موقف الإسلام من البدع",
+         "page": 77
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الرابعة: السير والتراجم",
+       "lessons": [
+        {
+         "title": "الدرس الثامن عشر: مواقف من سيرة الرسول ﷺ",
+         "page": 82
+        },
+        {
+         "title": "الدرس التاسع عشر: من صحابة رسول الله ﷺ: عائشة أم المؤمنين رضي الله عنها",
+         "page": 85
+        },
+        {
+         "title": "الدرس العشرون: القائد الفاتح صلاح الدين الأيوبي رحمه الله",
+         "page": 88
+        },
+        {
+         "title": "الدرس الحادي والعشرون: من أعلام المسلمين: العز بن عبد السلام",
+         "page": 92
+        }
+       ]
+      },
+      {
+       "title": "الوحدة الخامسة: الفقه الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس الثاني والعشرون: فقه الدعوة والجهاد",
+         "page": 96
+        },
+        {
+         "title": "الدرس الثالث والعشرون: الأيمان والنذور",
+         "page": 102
+        },
+        {
+         "title": "الدرس الرابع والعشرون: الربا",
+         "page": 106
+        },
+        {
+         "title": "الدرس الخامس والعشرون: قضايا معاصرة (1) (بيع المرابحة والتأمين)",
+         "page": 110
+        },
+        {
+         "title": "الدرس السادس والعشرون: قضايا معاصرة (2) (تنظيم النسل وتحديده)",
+         "page": 115
+        }
+       ]
+      },
+      {
+       "title": "الوحدة السادسة: الفكر الإسلامي",
+       "lessons": [
+        {
+         "title": "الدرس السابع والعشرون: الفرق والمذاهب في الإسلام",
+         "page": 120
+        },
+        {
+         "title": "الدرس الثامن والعشرون: الإسلام والمرأة",
+         "page": 125
+        },
+        {
+         "title": "الدرس التاسع والعشرون: العولمة",
+         "page": 129
+        },
+        {
+         "title": "الدرس الثلاثون: ترسيخ القيم الفاضلة في المجتمع",
+         "page": 133
+        }
+       ]
+      }
+     ],
+     "toc_source": "visual reading of rendered TOC page (PDF p.5); embedded text has broken ligatures/word order",
+     "toc_note": "Same file is linked for literary, entrepreneurship, industrial and agricultural branches.",
+     "notes": "same bytes as re12-s.pdf"
+    },
+    {
+     "subject_ar": "التربية المسيحية",
+     "subject_en": "Christian Education",
+     "part": null,
+     "label_on_page": "التربية المسيحية",
+     "url": "https://elearn.azureedge.net/Books/c12/12agr/ch12agr.pdf",
+     "bytes": 4258718,
+     "units": []
+    }
+   ]
+  }
+ ]
+}

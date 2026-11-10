@@ -37,13 +37,12 @@ Edit `assets/js/config.js`:
 5. Recommended: verify the domain under GitHub **Settings → Pages → Verified domains** to prevent takeover.
 
 ## Content
-- `assets/js/explainers.js` — animated explainer "videos" rendered in SVG (seekable, chapters, captions, optional text-to-speech narration). Add new episodes as pure functions of time.
-- `assets/js/books.js` — annotated textbook pages (Najih-authored) with margin notes; students can highlight and add their own notes (stored on the device).
-- `assets/js/exams.js` — links to the official past papers (2022–2025, per branch) on the Ministry's portal https://elearn.edu.ps/exams12/ (linked, not rehosted).
-- Maths is LaTeX between `$…$` / `$$…$$`, rendered with KaTeX (LTR Latin notation).
-- `assets/js/data.js` — branches, subjects, questions, lessons, exam list. Every string is `{ar, en}`.
-- Branch→subject mapping is a starting point: verify it against the current MoE structure (moe.edu.ps).
-- Past exams: drop PDFs into `exams/` and set `paper` / `solution` URLs in the `EXAMS` list (check copyright/permission).
+- `assets/js/curriculum.js` — **generated** curriculum map (branch → subject → official textbook → units → lessons with printed page numbers), from the Ministry's Grade-12 textbooks on https://elearn.edu.ps. Rebuild: `python3 -I tools/build_curriculum.py` (source: `tools/curriculum_source.json`).
+- `exams/` + `assets/js/exams.js` — **generated** library of official Tawjihi papers (2022–2025, Scientific + Literary; 232 PDFs), extracted from the Ministry's archives and hosted with credit. Rebuild: `python3 -I tools/fetch_exams.py CACHE scientific,literary` then `python3 -I tools/build_exams.py CACHE scientific,literary`. Add branches by listing them in both commands.
+- `assets/js/solutions.js` — Najih worked solutions (unofficial), keyed by paper id. Only add items whose wording is certain.
+- `assets/js/armath.js` — maths renderer: one LaTeX source, rendered in Latin notation (English UI, physics, chemistry) or Palestinian Arabic notation (س، ص، ق(س)، نهـا، جا، لـو، ءس، digits ٠–٩, right-to-left layout) for maths in the Arabic UI. Use `\dv{y}{x}`, `\dd{x}`, `\E` for derivatives, differentials and Euler's e.
+- `assets/js/explainers.js` — animated explainers (SVG, seekable, chapters, captions, narration); plot / side panel / caption band never overlap.
+- `assets/js/books.js` — annotated textbook pages with margin notes; `assets/js/data.js` — lessons and practice questions.
 
 ## Design principles
 - Calm, editorial UI: warm paper background, deep ink, a single olive accent; a subtle tatreez (cross-stitch) motif is the only ornament.

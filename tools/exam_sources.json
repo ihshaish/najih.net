@@ -1,0 +1,109 @@
+{
+ "source": "https://elearn.edu.ps/exams12/",
+ "branches": {
+  "scientific": {
+   "name": {
+    "ar": "العلمي",
+    "en": "Scientific"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "literary": {
+   "name": {
+    "ar": "الأدبي",
+    "en": "Literary"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%AF%D8%A8%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "sharia": {
+   "name": {
+    "ar": "الشرعي",
+    "en": "Sharia"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "entre": {
+   "name": {
+    "ar": "الريادة والأعمال",
+    "en": "Entrepreneurship & Business"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AF%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "industrial": {
+   "name": {
+    "ar": "الصناعي",
+    "en": "Industrial"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "agricultural": {
+   "name": {
+    "ar": "الزراعي",
+    "en": "Agricultural"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "hotel": {
+   "name": {
+    "ar": "الفندقي",
+    "en": "Hospitality"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%81%D9%86%D8%AF%D9%82%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%81%D9%86%D8%AF%D9%82%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D9%81%D9%86%D8%AF%D9%82%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D9%81%D9%86%D8%AF%D9%82%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D8%A7%D9%84%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%81%D9%86%D8%AF%D9%82%D9%8A2022_2023_2024_2025.rar"
+   }
+  },
+  "homeec": {
+   "name": {
+    "ar": "الاقتصاد المنزلي",
+    "en": "Home Economics"
+   },
+   "files": {
+    "2022": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A_2022.rar",
+    "2023": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202023/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A5%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A_2023.rar",
+    "2024": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%20%202024/%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A_2024.rar",
+    "2025": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A7%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202025/%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A-2025.rar",
+    "all": "https://elearnps.blob.core.windows.net/public/ElearnPs/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%202022-2025/%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A2022_2023_2024_2025.rar"
+   }
+  }
+ }
+}

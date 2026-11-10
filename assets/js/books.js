@@ -13,7 +13,7 @@ $$\\frac{f(x+h) - f(x)}{h}$$
 <div class="def"><span class="an" data-n="n3"><b>تعريف.</b> مشتقة الاقتران $f$ عند $x$ هي
 $$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$
 بشرط أن تكون النهاية موجودة.</span></div>
-<p>نكتب المشتقة بعدة رموز: <span class="an" data-n="n4">$f'(x)$ ، $y'$ ، $\\dfrac{dy}{dx}$</span>.</p>
+<p>نكتب المشتقة بعدة رموز: <span class="an" data-n="n4">$f'(x)$ ، $y'$ ، $\\dv{y}{x}$</span>.</p>
 <h3>مثال ١</h3>
 <p>جد مشتقة $f(x) = x^2$ باستخدام التعريف.</p>
 <p><span class="an" data-n="n5">$f(x+h) = (x+h)^2 = x^2 + 2xh + h^2$</span></p>
@@ -25,45 +25,47 @@ $$\\frac{f(x+h) - f(x)}{h}$$
 <div class="def"><span class="an" data-n="n3"><b>Definition.</b> The derivative of $f$ at $x$ is
 $$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$
 provided the limit exists.</span></div>
-<p>We write the derivative in several ways: <span class="an" data-n="n4">$f'(x)$, $y'$, $\\dfrac{dy}{dx}$</span>.</p>
+<p>We write the derivative in several ways: <span class="an" data-n="n4">$f'(x)$, $y'$, $\\dv{y}{x}$</span>.</p>
 <h3>Example 1</h3>
 <p>Find the derivative of $f(x) = x^2$ using the definition.</p>
 <p><span class="an" data-n="n5">$f(x+h) = (x+h)^2 = x^2 + 2xh + h^2$</span></p>
 $$f'(x) = \\lim_{h\\to0}\\frac{2xh + h^2}{h} = \\lim_{h\\to0}(2x + h) = 2x$$`,
         notes: {
           n1: { kind: "highlight", ar: "متوسط = بين نقطتين. اللحظي = عند نقطة واحدة.", en: "Average = between two points. Instantaneous = at one point." },
-          n2: { kind: "underline", ar: "h تقترب من الصفر ولا تساويه، لذلك نحتاج النهاية.", en: "h gets close to 0 but never equals it — that's why we need a limit." },
+          n2: { kind: "underline", ar: "هـ تقترب من الصفر ولا تساويه، لذلك نحتاج النهاية.", en: "h gets close to 0 but never equals it — that's why we need a limit." },
           n3: { kind: "box", ar: "احفظ هذه الصيغة: تحتاجها كلما طُلب الحل «باستخدام التعريف».", en: "Know this by heart: you need it whenever a question says “using the definition”." },
           n4: { kind: "circle", ar: "ثلاثة رموز لشيء واحد!", en: "Three symbols, one idea!" },
-          n5: { kind: "highlight", ar: "خطأ شائع: نسيان الحدّ الأوسط 2xh.", en: "Common slip: forgetting the middle term 2xh." },
+          n5: { kind: "highlight", ar: "خطأ شائع: نسيان الحدّ الأوسط ٢س هـ.", en: "Common slip: forgetting the middle term 2xh." },
         },
       },
       {
         ar: `<h2>١-٢ قواعد الاشتقاق</h2>
 <p>حساب المشتقة من التعريف في كل مرة طويل، لذلك نستخدم القواعد التالية:</p>
 <table class="rules">
-<tr><td>الثابت</td><td><span class="an" data-n="r1">$\\dfrac{d}{dx}(c) = 0$</span></td></tr>
-<tr><td>القوة</td><td><span class="an" data-n="r2">$\\dfrac{d}{dx}(x^n) = n\\,x^{n-1}$</span></td></tr>
-<tr><td>الضرب في ثابت</td><td>$\\dfrac{d}{dx}\\big(c\\,f(x)\\big) = c\\,f'(x)$</td></tr>
-<tr><td>المجموع</td><td>$\\dfrac{d}{dx}\\big(f + g\\big) = f' + g'$</td></tr>
+<tr><td>الثابت</td><td><span class="an" data-n="r1">$\\dv{}{x}(c) = 0$</span></td></tr>
+<tr><td>القوة</td><td><span class="an" data-n="r2">$\\dv{}{x}(x^n) = n\\,x^{n-1}$</span></td></tr>
+<tr><td>الضرب في ثابت</td><td>$\\dv{}{x}\\big(c\\,f(x)\\big) = c\\,f'(x)$</td></tr>
+<tr><td>المجموع</td><td>$\\dv{}{x}\\big(f + g\\big) = f' + g'$</td></tr>
 </table>
 <h3>مثال ٢</h3>
-<p>جد $\\dfrac{dy}{dx}$ إذا كان $y = 5x^4 - 3x^2 + 8$.</p>
-$$\\frac{dy}{dx} = 20x^3 - 6x + \\underbrace{0}_{\\text{ثابت}}$$
+<p>جد $\\dv{y}{x}$ إذا كان $y = 5x^4 - 3x^2 + 8$.</p>
+$$\\dv{y}{x} = 20x^3 - 6x$$
+<p>(مشتقة الحد الثابت $8$ تساوي صفراً.)</p>
 <h3>مثال ٣</h3>
 <p>جد مشتقة <span class="an" data-n="r3">$f(x) = \\sqrt{x}$</span>.</p>
 $$f(x) = x^{1/2} \\;\\Rightarrow\\; f'(x) = \\tfrac{1}{2}x^{-1/2} = \\frac{1}{2\\sqrt{x}}$$`,
         en: `<h2>1.2 Rules of differentiation</h2>
 <p>Using the definition every time is slow, so we use these rules:</p>
 <table class="rules">
-<tr><td>Constant</td><td><span class="an" data-n="r1">$\\dfrac{d}{dx}(c) = 0$</span></td></tr>
-<tr><td>Power</td><td><span class="an" data-n="r2">$\\dfrac{d}{dx}(x^n) = n\\,x^{n-1}$</span></td></tr>
-<tr><td>Constant multiple</td><td>$\\dfrac{d}{dx}\\big(c\\,f(x)\\big) = c\\,f'(x)$</td></tr>
-<tr><td>Sum</td><td>$\\dfrac{d}{dx}\\big(f + g\\big) = f' + g'$</td></tr>
+<tr><td>Constant</td><td><span class="an" data-n="r1">$\\dv{}{x}(c) = 0$</span></td></tr>
+<tr><td>Power</td><td><span class="an" data-n="r2">$\\dv{}{x}(x^n) = n\\,x^{n-1}$</span></td></tr>
+<tr><td>Constant multiple</td><td>$\\dv{}{x}\\big(c\\,f(x)\\big) = c\\,f'(x)$</td></tr>
+<tr><td>Sum</td><td>$\\dv{}{x}\\big(f + g\\big) = f' + g'$</td></tr>
 </table>
 <h3>Example 2</h3>
-<p>Find $\\dfrac{dy}{dx}$ if $y = 5x^4 - 3x^2 + 8$.</p>
-$$\\frac{dy}{dx} = 20x^3 - 6x + \\underbrace{0}_{\\text{constant}}$$
+<p>Find $\\dv{y}{x}$ if $y = 5x^4 - 3x^2 + 8$.</p>
+$$\\dv{y}{x} = 20x^3 - 6x$$
+<p>(The constant $8$ differentiates to zero.)</p>
 <h3>Example 3</h3>
 <p>Differentiate <span class="an" data-n="r3">$f(x) = \\sqrt{x}$</span>.</p>
 $$f(x) = x^{1/2} \\;\\Rightarrow\\; f'(x) = \\tfrac{1}{2}x^{-1/2} = \\frac{1}{2\\sqrt{x}}$$`,
@@ -96,8 +98,8 @@ $$f(x) = x^{1/2} \\;\\Rightarrow\\; f'(x) = \\tfrac{1}{2}x^{-1/2} = \\frac{1}{2\
 </ol>`,
         notes: {
           t1: { kind: "box", ar: "صيغة النقطة والميل — سؤال متكرر جداً.", en: "Point–slope form — a very common question type." },
-          t2: { kind: "highlight", ar: "لا تنسَ إيجاد y₁ من الاقتران نفسه، لا من المشتقة.", en: "Find y₁ from the function itself — not from the derivative." },
-          t3: { kind: "circle", ar: "تحقق: عوّض x = 3 ← y = 9 ✓", en: "Check: x = 3 gives y = 9 ✓" },
+          t2: { kind: "highlight", ar: "لا تنسَ إيجاد ص١ من الاقتران نفسه، لا من المشتقة.", en: "Find y₁ from the function itself — not from the derivative." },
+          t3: { kind: "circle", ar: "تحقّق: عوّض س = ٣ ← ص = ٩ ✓", en: "Check: x = 3 gives y = 9 ✓" },
         },
       },
     ],

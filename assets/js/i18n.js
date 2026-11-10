@@ -2,6 +2,21 @@
 window.I18N = {
   ar: {
     brand: "ناجح", tagline: "التوجيهي، بخطة تناسبك أنت",
+    br_prefix: "الفرع", br_official: "المواد والوحدات مطابقة لكتب الصف الثاني عشر الرسمية المنشورة على", units_n: "وحدات", lessons_off: "درساً",
+    papers_n: "ورقة امتحان", interactive_n: "دروس تفاعلية", sub_book_short: "الكتاب الرسمي", sub_book: "الكتاب المدرسي الرسمي", part_1: "الجزء الأول", part_2: "الجزء الثاني",
+    sp_sub: "الوحدات والدروس كما في الكتاب المدرسي الرسمي، مع دروس ناجح التفاعلية وامتحانات السنوات السابقة.", sub_papers: "امتحانات سابقة",
+    sp_najih: "دروس ناجح التفاعلية", steps_n: "خطوات", sp_units: "وحدات الكتاب", najih_lesson: "درس تفاعلي", open_in_book: "افتح الصفحة في الكتاب الرسمي",
+    page_short: "ص", toc_missing: "فهرس هذا الكتاب لم يُضف بعد. يمكنك فتح الكتاب الرسمي من الزر أعلاه.",
+    toc_source: "مصدر الفهرس: كتب وزارة التربية والتعليم العالي للصف الثاني عشر (البوابة التعليمية الفلسطينية).",
+    f_year: "السنة", f_session: "الدورة", all: "الكل", ses_1: "الدورة الأولى", ses_2: "الدورة الثانية", ses_3: "الدورة الثالثة",
+    paper_1: "الورقة الأولى", paper_2: "الورقة الثانية", pages_n: "صفحات", var_wb: "الضفة الغربية", var_alt: "امتحان بديل", var_gz: "غزة",
+    has_solutions: "حلول ناجح", view: "عرض", download: "تنزيل", papers_found: "ورقة", no_results: "لا توجد أوراق تطابق هذه الفلاتر.",
+    ex_not_hosted: "أوراق هذا الفرع متاحة حالياً كأرشيف مضغوط من المصدر الرسمي. سنضيف عرضها هنا قريباً.", ex_full_archive: "الأرشيف الرسمي الكامل لهذا الفرع (RAR)",
+    pv_zoom_in: "تكبير", pv_zoom_out: "تصغير", pv_answers: "الإجابات", pv_loading: "جارٍ تحميل الورقة…", pv_najih_solutions: "حلول ناجح (غير رسمية)",
+    pv_reveal_all: "اكشف الكل", pv_hide_all: "أخفِ الكل", pv_reveal: "اعرض الإجابة", pv_hide: "أخفِ", pv_answer: "الإجابة:",
+    pv_no_sol: "لم نُضف حلولاً لهذه الورقة بعد. نعمل على إضافة حلول موثّقة للأوراق تباعاً، بدءاً بالرياضيات.",
+    pv_credit: "ورقة رسمية صادرة عن وزارة التربية والتعليم العالي — المركز الوطني للامتحانات. المصدر:", pv_fail: "إن لم تظهر الورقة، استخدم زر التنزيل.",
+
     hero_kicker: "ادرس أذكى. انجح بثقة.",
     st1: "فروع للتوجيهي", st2: "مادة دراسية", st3: "لغتان: العربية والإنجليزية", st4: "دقائق يومياً تكفي للبدء",
     fs_eyebrow: "للطلاب", fs_title: "دروس تشاهدها، وتجرّبها، وتفهمها.",
@@ -85,7 +100,7 @@ window.I18N = {
     practice_more: "تدرّب أكثر", back_plan: "العودة إلى خطتي", make_plan: "أنشئ خطتك",
     lesson: "درس", practise: "تدرّب",
 
-    ex_title: "أرشيف امتحانات التوجيهي", ex_sub: "امتحانات الثانوية العامة الرسمية للأعوام ٢٠٢٢–٢٠٢٥ لكل فرع، مباشرة من مصدرها الرسمي.",
+    ex_title: "أرشيف امتحانات التوجيهي", ex_sub: "امتحانات الثانوية العامة الرسمية ٢٠٢٢–٢٠٢٥: اعرض كل ورقة هنا أو نزّلها، وصفِّ حسب المادة والسنة والدورة، مع حلول ناجح.",
     f_branch: "الفرع", f_subject: "المادة", year: "السنة", session: "الدورة", paper: "ورقة الأسئلة", solution: "الحل النموذجي",
     s_first: "الأولى", ex_practice: "تدرّب على أسئلة هذه المادة",
 
@@ -107,6 +122,21 @@ window.I18N = {
   },
   en: {
     brand: "Najih", tagline: "Tawjihi, with a plan built around you",
+    br_prefix: "Branch:", br_official: "Subjects and units match the official Grade-12 textbooks published on", units_n: "units", lessons_off: "lessons",
+    papers_n: "past papers", interactive_n: "interactive lessons", sub_book_short: "Official book", sub_book: "Official textbook", part_1: "Part 1", part_2: "Part 2",
+    sp_sub: "Units and lessons as in the official textbook, with Najih's interactive lessons and past exam papers.", sub_papers: "Past papers",
+    sp_najih: "Najih interactive lessons", steps_n: "steps", sp_units: "Textbook units", najih_lesson: "Interactive lesson", open_in_book: "Open this page in the official book",
+    page_short: "p.", toc_missing: "This book's contents haven't been added yet. You can open the official book with the button above.",
+    toc_source: "Contents source: Ministry of Education and Higher Education Grade-12 textbooks (Palestinian Educational Portal).",
+    f_year: "Year", f_session: "Session", all: "All", ses_1: "First session", ses_2: "Second session", ses_3: "Third session",
+    paper_1: "Paper 1", paper_2: "Paper 2", pages_n: "pages", var_wb: "West Bank", var_alt: "Alternative paper", var_gz: "Gaza",
+    has_solutions: "Najih solutions", view: "View", download: "Download", papers_found: "papers", no_results: "No papers match these filters.",
+    ex_not_hosted: "Papers for this branch are currently available as an archive from the official source. We'll add them here soon.", ex_full_archive: "Full official archive for this branch (RAR)",
+    pv_zoom_in: "Zoom in", pv_zoom_out: "Zoom out", pv_answers: "Answers", pv_loading: "Loading the paper…", pv_najih_solutions: "Najih solutions (unofficial)",
+    pv_reveal_all: "Reveal all", pv_hide_all: "Hide all", pv_reveal: "Show answer", pv_hide: "Hide", pv_answer: "Answer:",
+    pv_no_sol: "We haven't added solutions for this paper yet. Verified solutions are being added paper by paper, starting with Mathematics.",
+    pv_credit: "Official paper issued by the Ministry of Education and Higher Education — National Centre for Examinations. Source:", pv_fail: "If the paper doesn't appear, use the download button.",
+
     hero_kicker: "Study smarter. Succeed with confidence.",
     st1: "Tawjihi branches", st2: "subjects", st3: "languages: Arabic & English", st4: "minutes a day to get started",
     fs_eyebrow: "For students", fs_title: "Lessons you watch, try and understand.",
@@ -190,7 +220,7 @@ window.I18N = {
     practice_more: "Practise more", back_plan: "Back to my plan", make_plan: "Create your plan",
     lesson: "Lesson", practise: "Practise",
 
-    ex_title: "Tawjihi past-paper archive", ex_sub: "Official Tawjihi exam papers for 2022–2025 for every branch, straight from the official source.",
+    ex_title: "Tawjihi past-paper archive", ex_sub: "Official Tawjihi papers 2022–2025: view each paper here or download it, filter by subject, year and session, with Najih solutions.",
     f_branch: "Branch", f_subject: "Subject", year: "Year", session: "Session", paper: "Question paper", solution: "Model solution",
     s_first: "First", ex_practice: "Practise questions for this subject",
 

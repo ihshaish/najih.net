@@ -14,6 +14,7 @@
   let S = defaults();
   try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY)) || {}); } catch (_) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (_) {} };
+  if (S.profile) { const mig = { technology: "scientific", vocational: "industrial" }; if (mig[S.profile.branch]) S.profile.branch = mig[S.profile.branch]; }
 
   // ───────────────────────── i18n ─────────────────────────
   const T = (k) => window.I18N[S.lang]?.[k] ?? k;
@@ -22,10 +23,9 @@
   const num = (n, o = {}) => Number(n).toLocaleString(loc(), { useGrouping: false, maximumFractionDigits: 2, ...o });
   const fmtDate = (t, o = { day: "numeric", month: "long", year: "numeric" }) => new Date(t).toLocaleDateString(loc(), o);
   const normDigits = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/[٫,]/g, ".").replace(/[−–]/g, "-");
-  const renderMath = (root) => {
-    if (!window.renderMathInElement || !root) return;
-    window.renderMathInElement(root, { delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }], ignoredClasses: ["katex", "no-math"], throwOnError: false });
-  };
+  const renderMath = (root) => window.NajihMath?.renderIn(root);
+  // Arabic maths notation (س، ص، ق(س)…) for maths content in the Arabic interface; Latin notation elsewhere.
+  const mathAttr = (subject) => (S.lang === "ar" && subject === "math" ? 'data-math="ar"' : "");
   let mathQueued = false;
   new MutationObserver(() => {
     if (mathQueued) return; mathQueued = true;
@@ -102,7 +102,7 @@
   function Player({ title, subject, segments, exit }) {
     focusMode(true);
     app().innerHTML = `
-      <div class="player">
+      <div class="player" ${mathAttr(subject)}>
         <header class="player-top">
           <a class="icon-btn" href="${exit}" aria-label="${T("exit")}" data-exit>${I("x")}</a>
           <div class="segments" aria-hidden="true">${"<span><i></i></span>".repeat(segments)}</div>
@@ -193,7 +193,7 @@
     tangent(host) {
       const W = 320, H = 220, sx = (x) => ((x + 3.6) / 7.2) * W, sy = (y) => H - 14 - ((y + 0.5) / 10.5) * (H - 24);
       const curve = Array.from({ length: 73 }, (_, i) => { const x = -3.6 + i * 0.1; return `${i ? "L" : "M"}${sx(x).toFixed(1)},${sy(x * x).toFixed(1)}`; }).join("");
-      const ticks = [-3, -2, -1, 1, 2, 3].map((x) => `<line x1="${sx(x)}" x2="${sx(x)}" y1="${sy(0) - 3}" y2="${sy(0) + 3}" class="tick"/><text x="${sx(x)}" y="${sy(0) + 15}" class="tick-l">${x}</text>`).join("");
+      const ticks = [-3, -2, -1, 1, 2, 3].map((x) => `<line x1="${sx(x)}" x2="${sx(x)}" y1="${sy(0) - 3}" y2="${sy(0) + 3}" class="tick"/><text x="${sx(x)}" y="${sy(0) + 15}" class="tick-l">${num(x)}</text>`).join("");
       const lab = S.lang === "ar" ? ["س", "ص", "الميل"] : ["x", "y", "slope"];
       host.innerHTML = `<div class="widget" dir="ltr">
         <svg viewBox="0 0 ${W} ${H}" class="plot" role="img" aria-label="y = x², tangent line">
@@ -255,10 +255,24 @@
   };
 
   // ───────────────────────── Views ─────────────────────────
+  let pdfjsPromise = null;
+  const loadPdfJs = () => (pdfjsPromise ||= new Promise((res, rej) => {
+    if (window.pdfjsLib) return res(window.pdfjsLib);
+    const sc = document.createElement("script");
+    sc.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    sc.onload = () => { window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"; res(window.pdfjsLib); };
+    sc.onerror = rej; document.head.appendChild(sc);
+  }));
+  const curOf = (bid) => (window.CURRICULUM?.branches || []).find((x) => x.id === bid);
+  const curSubject = (bid, sid) => curOf(bid)?.subjects.find((x) => x.sub === sid);
+  const unitCount = (cs) => (cs ? cs.books.reduce((n, k) => n + k.units.length, 0) : 0);
+  const lessonCount = (cs) => (cs ? cs.books.reduce((n, k) => n + k.units.reduce((m, u) => m + u.lessons.length, 0), 0) : 0);
+  const papersFor = (bid, sid) => (window.EXAMS?.papers || []).filter((x) => x.b === bid && (!sid || x.sub === sid));
+  const tl = (o) => (S.lang === "en" ? o.en || o.ar : o.ar.replace(/[0-9]/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]));
   function subjectRows(b) {
     return b.subjects.map((s) => {
-      const nl = window.LESSONS.filter((l) => l.subject === s).length, nq = window.QUESTIONS.filter((q) => q.subject === s).length;
-      return `<li>${tile(s)}<div><b>${esc(subjName(s))}</b>${nl || nq ? meta(nl ? `${num(nl)} ${T("lessons_n")}` : "", nq ? `${num(nq)} ${T("questions_n")}` : "") : meta(T("soon"))}</div></li>`;
+      const cs = curSubject(b.id, s), nu = unitCount(cs), np = papersFor(b.id, s).length;
+      return `<li><a href="#/subject/${b.id}/${s}">${tile(s)}<div><b>${esc(subjName(s))}</b>${meta(nu ? `${num(nu)} ${T("units_n")}` : "", np ? `${num(np)} ${T("papers_n")}` : "")}</div></a></li>`;
     }).join("");
   }
 
@@ -280,7 +294,7 @@
       </section>
 
       <section class="wrap feature">
-        <div class="f-media"><div class="demo card">
+        <div class="f-media"><div class="demo card" ${mathAttr("math")}>
           <div class="demo-head"><span class="pill">${T("demo_label")}</span><b>${T("demo_title")}</b></div>
           <p class="small muted">${T("demo_inst")}</p><div class="w"></div>
           <p class="demo-q">${T("demo_q")}</p>
@@ -292,7 +306,7 @@
       </section>
 
       <section class="wrap feature rev">
-        <div class="f-media"><div class="book-peek" aria-hidden="true"><div class="rd-page mini">${pageEx[S.lang] || pageEx.en}</div></div></div>
+        <div class="f-media"><div class="book-peek" aria-hidden="true" ${mathAttr("math")}><div class="rd-page mini">${pageEx[S.lang] || pageEx.en}</div></div></div>
         <div class="f-copy"><p class="eyebrow">${T("fr_eyebrow")}</p><h2>${T("fr_title")}</h2><p class="muted">${T("fr_text")}</p>
           <a class="text-link" href="#/read/calc">${T("fr_cta")}${I("arrow", "flip")}</a></div>
       </section>
@@ -376,7 +390,7 @@
           </div>
         </div>
         <div class="wrap rd-spread">
-          <article class="rd-page" lang="${S.lang}">${page[S.lang] || page.en}<footer class="pg-no">${num(n)}</footer></article>
+          <article class="rd-page" lang="${S.lang}" ${mathAttr(B.subject)}>${page[S.lang] || page.en}<footer class="pg-no">${num(n)}</footer></article>
           <aside class="rd-margin" aria-label="${T("rd_najih")}"></aside>
         </div>
         <p class="wrap rd-hint muted small">${I("highlighter")}${T("rd_hint")}</p>
@@ -480,21 +494,52 @@
       document.fonts?.ready.then(() => window.__layout === layout && layout());
     },
 
-    learn() { views.branch(S.profile?.branch || "scientific"); },
+    learn() { views.branch(branchOf(S.profile?.branch) ? S.profile.branch : "scientific"); },
 
     branch(id) {
       const b = branchOf(id); if (!b) return go("#/learn");
+      const cur = curOf(id);
       app().innerHTML = `<section class="wrap section">
-        <p class="eyebrow">${T("nav_learn")}</p><h1>${esc(L(b.name))}</h1>
-        <nav class="chips" aria-label="${T("f_branch")}">${window.BRANCHES.map((x) => `<a class="chip" href="#/branch/${x.id}" ${x.id === id ? 'aria-current="page"' : ""}>${esc(L(x.name).split(" (")[0])}</a>`).join("")}</nav>
+        <p class="eyebrow">${T("nav_learn")}</p><h1>${T("br_prefix")} ${esc(L(b.name))}</h1>
+        <p class="muted lead-sm">${T("br_official")} ${cur ? `<a href="${cur.page}" target="_blank" rel="noopener">elearn.edu.ps</a>` : ""}</p>
+        <nav class="chips" aria-label="${T("f_branch")}">${window.BRANCHES.map((x) => `<a class="chip" href="#/branch/${x.id}" ${x.id === id ? 'aria-current="page"' : ""}>${esc(L(x.name))}</a>`).join("")}</nav>
         <div class="grid3 subjects">${b.subjects.map((s) => {
-          const lessons = window.LESSONS.filter((l) => l.subject === s), nq = window.QUESTIONS.filter((q) => q.subject === s).length, m = subjectMastery(s);
-          return `<article class="card subj">
-            <header>${tile(s, "lg")}<div><h3>${esc(subjName(s))}</h3>${meta(lessons.length ? `${num(lessons.length)} ${T("lessons_n")}` : "", nq ? `${num(nq)} ${T("questions_n")}` : "") }</div></header>
+          const cs = curSubject(id, s), nu = unitCount(cs), nl = lessonCount(cs), np = papersFor(id, s).length;
+          const nj = window.LESSONS.filter((l) => l.subject === s).length, m = subjectMastery(s);
+          return `<a class="card subj-card" href="#/subject/${id}/${s}" style="--c:${SUBJ[s].color}">
+            <header>${tile(s, "lg")}<div><h3>${esc(subjName(s))}</h3>${meta(nu ? `${num(nu)} ${T("units_n")}` : "", nl ? `${num(nl)} ${T("lessons_off")}` : "")}</div></header>
             ${m !== null ? `<div class="mrow">${bar(m, SUBJ[s].color)}<small>${num(Math.round(m * 100))}%</small></div>` : ""}
-            ${lessons.length ? `<ul class="lessons">${lessons.map((l) => `<li><a href="#/lesson/${l.id}"><span class="l-ic ${S.done.includes(l.id) ? "done" : ""}">${I(S.done.includes(l.id) ? "check" : "play")}</span><span>${esc(L(l.title))}</span><small>${num(l.minutes)} ${T("min")}</small></a></li>`).join("")}</ul>` : `<p class="muted small soon-note">${I("lock")}${T("soon")}</p>`}
-            <div class="subj-actions">${nq ? `<a class="btn secondary sm" href="#/practice/${s}">${I("pencil")}${T("practise")}</a>` : ""}${bookFor(s) ? `<a class="btn quiet sm" href="#/read/${bookFor(s)}">${I("book")}${T("read_chapter")}</a>` : ""}</div>
-          </article>`; }).join("")}</div></section>`;
+            <div class="tags">${nj ? `<span class="tagx good">${I("play")}${num(nj)} ${T("interactive_n")}</span>` : ""}${np ? `<span class="tagx">${I("file")}${num(np)} ${T("papers_n")}</span>` : ""}<span class="tagx">${I("book")}${T("sub_book_short")}</span></div>
+          </a>`; }).join("")}</div></section>`;
+    },
+
+    subject(bid, sid) {
+      const b = branchOf(bid), cs = curSubject(bid, sid);
+      if (!b || !SUBJ[sid]) return go("#/learn");
+      const nq = window.QUESTIONS.filter((q) => q.subject === sid).length, np = papersFor(bid, sid).length;
+      const najih = window.LESSONS.filter((l) => l.subject === sid);
+      const books = cs ? cs.books : [];
+      const bookBtn = (k) => `<a class="btn secondary sm" href="${k.url}" target="_blank" rel="noopener">${I("book")}${T("sub_book")}${k.part ? ` · ${T("part_" + k.part)}` : ""} <small class="muted">${num(k.mb)} MB</small></a>`;
+      app().innerHTML = `<section class="wrap section subject-page">
+        <a class="back-link" href="#/branch/${bid}">${I("arrow", "back-ic")}${T("br_prefix")} ${esc(L(b.name))}</a>
+        <header class="sp-head">${tile(sid, "xl")}<div><h1>${esc(subjName(sid))}</h1><p class="muted">${T("sp_sub")}</p></div></header>
+        <div class="sp-actions">${books.map(bookBtn).join("")}
+          ${np ? `<a class="btn secondary sm" href="#/exams/${bid}/${sid}">${I("file")}${T("sub_papers")} <small class="muted">${num(np)}</small></a>` : ""}
+          ${nq ? `<a class="btn secondary sm" href="#/practice/${sid}">${I("pencil")}${T("practise")} <small class="muted">${num(nq)}</small></a>` : ""}
+          ${bookFor(sid) ? `<a class="btn secondary sm" href="#/read/${bookFor(sid)}">${I("highlighter")}${T("read_chapter")}</a>` : ""}</div>
+        ${najih.length ? `<h2 class="h-sec">${T("sp_najih")}</h2><div class="nj-strip">${najih.map((l) => `<a class="card nj" href="#/lesson/${l.id}"><span class="l-ic ${S.done.includes(l.id) ? "done" : ""}">${I(S.done.includes(l.id) ? "check" : "play")}</span><div><b>${esc(L(l.title))}</b>${meta(`${num(l.minutes)} ${T("min")}`, `${num(l.steps.length)} ${T("steps_n")}`)}</div></a>`).join("")}</div>` : ""}
+        <h2 class="h-sec">${T("sp_units")}</h2>
+        ${books.some((k) => k.units.length) ? books.map((k) => `${books.length > 1 ? `<h3 class="part-h">${T("part_" + (k.part || "1"))}</h3>` : ""}
+          <div class="units">${k.units.map((u, ui) => `<details class="unit" ${ui === 0 ? "open" : ""}>
+            <summary><span class="u-n">${num(ui + 1)}</span><span class="u-t">${esc(tl(u.t))}${S.lang === "ar" && u.t.en ? `<small>${esc(u.t.en)}</small>` : ""}</span><span class="u-c">${num(u.lessons.length)} ${T("lessons_off")}</span>${I("chevron", "u-chev")}</summary>
+            <ol class="u-lessons">${u.lessons.map((l) => {
+              const href = l.pg && k.off != null ? `${k.url}#page=${l.pg + k.off}` : k.url;
+              return `<li><span class="ul-t">${esc(tl(l.t))}${S.lang === "ar" && l.t.en ? `<small>${esc(l.t.en)}</small>` : ""}</span>
+                ${l.najih ? l.najih.map((id) => `<a class="tagx good" href="#/lesson/${id}">${I("play")}${T("najih_lesson")}</a>`).join("") : ""}
+                ${l.pg ? `<a class="ul-pg" href="${href}" target="_blank" rel="noopener" title="${T("open_in_book")}">${T("page_short")} ${num(l.pg)}${I("arrow", "flip")}</a>` : ""}</li>`; }).join("")}</ol>
+          </details>`).join("")}</div>`).join("") : `<p class="notice small">${T("toc_missing")}</p>`}
+        <p class="small muted src">${I("shield")}${T("toc_source")}</p>
+      </section>`;
     },
 
     start() {
@@ -645,7 +690,7 @@
     },
 
     practice(subject) {
-      if (!SUBJ[subject]) return go("#/learn");
+      if (!SUBJ[subject] || !window.QUESTIONS.some((q) => q.subject === subject)) return go("#/learn");
       const pool = window.QUESTIONS.filter((q) => q.subject === subject)
         .map((q) => ({ q, w: (S.mastery[mkey(q)]?.m ?? 0.2) + Math.random() * 0.3 }))
         .sort((a, b) => a.w - b.w).slice(0, 5).map((x) => x.q);
@@ -659,28 +704,112 @@
       ask();
     },
 
-    exams() {
-      const OE = window.OFFICIAL_EXAMS;
-      let br = OE.map[S.profile?.branch] || "scientific";
+    exams(bArg, sArg) {
+      const E = window.EXAMS, f = (S.exf = S.exf || { y: "all", s: "all" });
+      const hosted = [...new Set(E.papers.map((p) => p.b))];
+      let br = bArg || (hosted.includes(S.profile?.branch) ? S.profile.branch : "scientific");
+      let sub = sArg || "all";
+      const SES = { 1: "ses_1", 2: "ses_2", 3: "ses_3" };
       const render = () => {
-        const b = OE.branches.find((x) => x.id === br);
-        app().innerHTML = `<section class="wrap section">
+        const all = E.papers.filter((p) => p.b === br);
+        const subs = [...new Set(all.map((p) => p.sub))];
+        if (sub !== "all" && !subs.includes(sub)) sub = "all";
+        const list = all.filter((p) => (sub === "all" || p.sub === sub) && (f.y === "all" || p.y === +f.y) && (f.s === "all" || p.s === +f.s));
+        const years = [...new Set(list.map((p) => p.y))].sort((a, b) => b - a);
+        const seg = (key, opts) => `<div class="segc" role="group">${opts.map(([v, lab]) => `<button data-k="${key}" data-v="${v}" aria-pressed="${String(f[key]) === String(v)}">${lab}</button>`).join("")}</div>`;
+        const title = (p) => `${esc(subjName(p.sub))}${p.p ? ` — ${T("paper_" + p.p)}` : ""}`;
+        const row = (p) => `<li class="prow">${tile(p.sub)}
+          <div class="pr-main"><a href="#/paper/${p.id}"><b>${title(p)}</b></a>
+            ${meta(T(SES[p.s]), p.pages ? `${num(p.pages)} ${T("pages_n")}` : "", `${num(p.kb)} KB`)}
+            <div class="tags">${p.v ? `<span class="tagx warn">${T("var_" + p.v)}</span>` : ""}${window.SOLUTIONS?.[p.id] ? `<span class="tagx good">${I("check")}${T("has_solutions")}</span>` : ""}</div></div>
+          <div class="pr-act"><a class="btn primary sm" href="#/paper/${p.id}">${I("file")}${T("view")}</a><a class="btn quiet sm" href="${p.file}" download>${I("download")}<span class="sr-sm">${T("download")}</span></a></div></li>`;
+        app().innerHTML = `<section class="wrap section exams-page">
           <div class="sec-head left"><p class="eyebrow">${T("nav_exams")}</p><h1>${T("ex_title")}</h1><p class="lead-sm muted">${T("ex_sub")}</p></div>
-          <div class="source-note">${I("shield")}<div><b>${T("ex_official")}</b><p class="small muted">${T("ex_source")} <a href="${OE.source}" target="_blank" rel="noopener">elearn.edu.ps</a></p></div></div>
-          ${S.profile?.branch === "technology" ? `<p class="notice small">${T("ex_tech")}</p>` : ""}
-          <nav class="chips" aria-label="${T("f_branch")}">${OE.branches.map((x) => `<button class="chip" data-b="${x.id}" ${x.id === br ? 'aria-current="true"' : ""}>${esc(L(x.name))}</button>`).join("")}</nav>
-          <div class="papers">${["2025", "2024", "2023", "2022"].map((y) => `
-            <a class="paper card" href="${b.files[y]}" target="_blank" rel="noopener"><span class="paper-y">${num(y)}</span>
-              <div><b>${T("ex_paper_t")} ${esc(L(b.name))}</b>${meta(T("ex_all_subjects"), "RAR")}</div><span class="dl-ic">${I("download")}</span></a>`).join("")}
-            <a class="paper card all" href="${b.files.all}" target="_blank" rel="noopener"><span class="paper-y">${I("layers")}</span>
-              <div><b>${T("ex_bundle")}</b>${meta("2022–2025", T("ex_all_subjects"), "RAR")}</div><span class="dl-ic">${I("download")}</span></a>
+          <div class="source-note">${I("shield")}<div><b>${T("ex_official")}</b><p class="small muted">${T("ex_source")} <a href="${E.source}" target="_blank" rel="noopener">elearn.edu.ps</a></p></div></div>
+          <div class="filters2">
+            <div class="frow"><span class="flab">${T("f_branch")}</span><nav class="chips">${Object.keys(E.branchNames).map((k) => `<button class="chip" data-b="${k}" ${k === br ? 'aria-current="true"' : ""}>${esc(L(E.branchNames[k]))}</button>`).join("")}</nav></div>
+            ${hosted.includes(br) ? `
+            <div class="frow"><span class="flab">${T("f_subject")}</span><nav class="chips">${[["all", T("all")], ...subs.map((x) => [x, subjName(x)])].map(([k, lab]) => `<button class="chip" data-sub="${k}" ${k === sub ? 'aria-current="true"' : ""}>${esc(lab)} <small>${num(k === "all" ? all.length : all.filter((p) => p.sub === k).length)}</small></button>`).join("")}</nav></div>
+            <div class="frow"><span class="flab">${T("f_year")}</span>${seg("y", [["all", T("all")], ...[2025, 2024, 2023, 2022].map((y) => [y, num(y)])])}</div>
+            <div class="frow"><span class="flab">${T("f_session")}</span>${seg("s", [["all", T("all")], [1, T("ses_1")], [2, T("ses_2")], [3, T("ses_3")]])}</div>` : ""}
           </div>
-          <p class="small muted rar-help">${I("file")}${T("ex_rar")}</p>
-          <div class="ex-next card"><div><h3>${T("ex_practice_t")}</h3><p class="muted small">${T("ex_practice_d")}</p></div><a class="btn primary" href="#/learn">${T("ex_practice_cta")}</a></div>
+          ${hosted.includes(br) ? `<p class="count muted small">${num(list.length)} ${T("papers_found")}</p>
+            ${years.map((y) => `<h2 class="year-h">${num(y)}</h2><ul class="plist">${list.filter((p) => p.y === y).map(row).join("")}</ul>`).join("") || `<p class="notice small">${T("no_results")}</p>`}`
+            : `<p class="notice small">${T("ex_not_hosted")}</p>`}
+          <details class="archive card" ${hosted.includes(br) ? "" : "open"}><summary>${I("layers")}${T("ex_full_archive")}</summary>
+            <div class="papers">${["2025", "2024", "2023", "2022", "all"].filter((y) => E.rars[br]?.[y]).map((y) => `<a class="paper card ${y === "all" ? "all" : ""}" href="${E.rars[br][y]}" target="_blank" rel="noopener"><span class="paper-y">${y === "all" ? I("layers") : num(y)}</span><div><b>${y === "all" ? T("ex_bundle") : `${T("ex_paper_t")} ${esc(L(E.branchNames[br]))}`}</b>${meta(T("ex_all_subjects"), "RAR")}</div><span class="dl-ic">${I("download")}</span></a>`).join("")}</div>
+            <p class="small muted rar-help">${I("file")}${T("ex_rar")}</p></details>
         </section>`;
-        $$(".chip[data-b]").forEach((c) => (c.onclick = () => { br = c.dataset.b; render(); }));
+        $$("[data-b]").forEach((c) => (c.onclick = () => { br = c.dataset.b; sub = "all"; render(); }));
+        $$("[data-sub]").forEach((c) => (c.onclick = () => { sub = c.dataset.sub; render(); }));
+        $$(".segc [data-k]").forEach((c) => (c.onclick = () => { f[c.dataset.k] = c.dataset.v === "all" ? "all" : +c.dataset.v; save(); render(); }));
       };
       render();
+    },
+
+    paper(id) {
+      const p = window.EXAMS.papers.find((x) => x.id === id); if (!p) return go("#/exams");
+      const sol = window.SOLUTIONS?.[id];
+      const SES = { 1: "ses_1", 2: "ses_2", 3: "ses_3" };
+      app().innerHTML = `<section class="paper-view">
+        <div class="wrap pv-head">
+          <a class="back-link" href="#/exams/${p.b}/${p.sub}">${I("arrow", "back-ic")}${T("nav_exams")}</a>
+          <div class="pv-title">${tile(p.sub, "lg")}<div><h1>${esc(subjName(p.sub))}${p.p ? ` — ${T("paper_" + p.p)}` : ""}</h1>
+            ${meta(esc(L(window.EXAMS.branchNames[p.b])), num(p.y), T(SES[p.s]), p.pages ? `${num(p.pages)} ${T("pages_n")}` : "", p.v ? T("var_" + p.v) : "")}</div></div>
+          <div class="pv-tools">
+            <div class="zoom" role="group"><button class="icon-btn z-out" aria-label="${T("pv_zoom_out")}">−</button><span class="z-val">100%</span><button class="icon-btn z-in" aria-label="${T("pv_zoom_in")}">+</button></div>
+            <a class="btn secondary sm" href="${p.file}" download>${I("download")}${T("download")}</a>
+            <button class="btn ${sol ? "primary" : "secondary"} sm pv-toggle" aria-pressed="${!!sol}">${I("check")}${T("pv_answers")}</button>
+          </div>
+        </div>
+        <div class="wrap pv-body ${sol ? "with-sol" : ""}">
+          <div class="pv-doc"><div class="pv-pages"><p class="muted small pv-loading">${T("pv_loading")}</p></div></div>
+          <aside class="pv-sol card" ${mathAttr(p.sub)}>
+            <div class="pvs-head"><b>${T("pv_najih_solutions")}</b>${sol ? `<button class="btn quiet sm pvs-all">${T("pv_reveal_all")}</button>` : ""}</div>
+            ${sol ? `<p class="small muted">${L(sol.note)}</p><ol class="sol-list">${sol.items.map((it, i) => `<li class="sol" data-i="${i}">
+                <div class="sol-q"><b>${L(it.q)}</b><button class="btn secondary sm sol-btn" aria-expanded="false">${T("pv_reveal")}</button></div>
+                <div class="sol-a" hidden><p class="sol-ans"><span>${T("pv_answer")}</span> ${L(it.ans)}</p><p class="sol-steps">${L(it.steps)}</p></div></li>`).join("")}</ol>`
+              : `<p class="muted small">${T("pv_no_sol")}</p>${window.QUESTIONS.some((q) => q.subject === p.sub) ? `<a class="btn secondary sm" href="#/practice/${p.sub}">${I("pencil")}${T("practise")}</a>` : ""}`}
+          </aside>
+        </div>
+        <p class="wrap small muted pv-credit">${I("shield")}${T("pv_credit")} <a href="${window.EXAMS.source}" target="_blank" rel="noopener">elearn.edu.ps</a> · ${esc(p.orig)}</p>
+      </section>`;
+      // answers panel
+      const body = $(".pv-body"), tog = $(".pv-toggle");
+      tog.onclick = () => { const on = !body.classList.contains("with-sol"); body.classList.toggle("with-sol", on); tog.setAttribute("aria-pressed", on); tog.classList.toggle("primary", on); tog.classList.toggle("secondary", !on); };
+      const reveal = (li, on) => { li.querySelector(".sol-a").hidden = !on; const b = li.querySelector(".sol-btn"); b.setAttribute("aria-expanded", on); b.textContent = on ? T("pv_hide") : T("pv_reveal"); };
+      $$(".sol").forEach((li) => (li.querySelector(".sol-btn").onclick = () => reveal(li, li.querySelector(".sol-a").hidden)));
+      $(".pvs-all")?.addEventListener("click", (e) => { const open = e.target.dataset.open !== "1"; $$(".sol").forEach((li) => reveal(li, open)); e.target.dataset.open = open ? "1" : "0"; e.target.textContent = open ? T("pv_hide_all") : T("pv_reveal_all"); });
+      // PDF rendering with PDF.js (lazy, per page)
+      const pagesEl = $(".pv-pages"); let zoom = 1, pdf = null;
+      const fallback = () => { pagesEl.innerHTML = `<iframe class="pv-frame" src="${p.file}" title="${esc(p.orig)}"></iframe><p class="small muted">${T("pv_fail")}</p>`; };
+      const draw = async () => {
+        if (!pdf || !pagesEl.isConnected) return;
+        pagesEl.innerHTML = "";
+        const width = Math.min(pagesEl.clientWidth || 800, 980) * zoom;
+        const io = new IntersectionObserver((ents) => ents.forEach(async (en) => {
+          if (!en.isIntersecting || en.target.dataset.done) return;
+          en.target.dataset.done = "1"; io.unobserve(en.target);
+          const page = await pdf.getPage(+en.target.dataset.n);
+          const vp1 = page.getViewport({ scale: 1 }), scale = width / vp1.width, dpr = Math.min(2, window.devicePixelRatio || 1);
+          const vp = page.getViewport({ scale: scale * dpr });
+          const c = document.createElement("canvas"); c.width = vp.width; c.height = vp.height; c.style.width = "100%";
+          en.target.innerHTML = ""; en.target.appendChild(c);
+          await page.render({ canvasContext: c.getContext("2d"), viewport: vp }).promise;
+        }), { rootMargin: "600px 0px" });
+        for (let n = 1; n <= pdf.numPages; n++) {
+          const page = await pdf.getPage(n), vp1 = page.getViewport({ scale: 1 });
+          const d = document.createElement("div"); d.className = "pv-page"; d.dataset.n = n;
+          d.style.width = width + "px"; d.style.aspectRatio = `${vp1.width} / ${vp1.height}`;
+          d.innerHTML = `<span class="pv-pn">${num(n)} / ${num(pdf.numPages)}</span>`;
+          pagesEl.appendChild(d); io.observe(d);
+        }
+      };
+      const setZoom = (z) => { zoom = Math.max(0.6, Math.min(2.2, z)); $(".z-val").textContent = Math.round(zoom * 100) + "%"; draw(); };
+      $(".z-in").onclick = () => setZoom(zoom + 0.2); $(".z-out").onclick = () => setZoom(zoom - 0.2);
+      loadPdfJs().then(async (lib) => {
+        try { pdf = await lib.getDocument(p.file).promise; draw(); } catch (_) { fallback(); }
+      }).catch(fallback);
     },
 
     tutors() {
@@ -742,7 +871,7 @@
     window.speechSynthesis?.cancel(); window.__layout = null;
     const view = views[name] ? name : "home";
     focusMode(false); applyLang();
-    $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === (view === "branch" ? "learn" : view)));
+    $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === ({ branch: "learn", subject: "learn", read: "learn", paper: "exams" }[view] || view)));
     views[view](decodeURIComponent(arg || ""), arg2);
     window.scrollTo(0, 0);
     $("#app").focus({ preventScroll: true });
