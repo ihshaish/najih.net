@@ -6,7 +6,11 @@ Usage:  python3 -I tools/build_exams.py CACHE_DIR scientific,literary
 (CACHE_DIR holds <branch>_<year>.rar files downloaded by tools/fetch_exams.py)
 
 Classification rules are deliberately explicit; anything unrecognised is reported and skipped.
-Session numbers come from the FOLDER name (filenames are sometimes wrong)."""
+Session numbers come from the FOLDER name (filenames are sometimes wrong).
+
+Page images: after copying, run tools/render_exam_pages.py to pre-render every page to WebP
+(it also injects page data into exams.js). If the images already exist when this script runs,
+their data ("pages", "img", "ratio") is written straight into exams.js here as well."""
 import json, os, re, shutil, subprocess, sys, tempfile, unicodedata
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -87,6 +91,11 @@ for b in branches:
                 papers.append({"id": pid, "b": b, "y": int(y), "s": ses, "sub": sub, "p": p, "v": v,
                                "file": rel, "kb": round(os.path.getsize(full) / 1024), "pages": pages_of(full), "orig": name})
         shutil.rmtree(tmp)
+
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+from render_exam_pages import inject_pages  # adds pages / img / ratio for rendered papers
+unrendered = inject_pages(papers)
+if unrendered: print(f"{len(unrendered)} papers have no page images yet; run tools/render_exam_pages.py")
 
 papers.sort(key=lambda x: (-x["y"], x["b"], x["sub"], x["s"], x["p"] or 0, x["v"] or ""))
 rars = {k: v["files"] for k, v in cfg["branches"].items()}

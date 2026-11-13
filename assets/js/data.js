@@ -58,7 +58,7 @@ window.QUESTIONS = [
     hint: t("هل يتغيّر الاقتران الثابت عندما تتغيّر $x$؟", "Does a constant change when $x$ changes?"),
     explain: t("الاقتران الثابت لا يتغيّر، فميله صفر: $\\dv{}{x}(5) = 0$", "A constant never changes, so its slope is zero: $\\dv{}{x}(5) = 0$") },
   { id: "m4", subject: "math", skill: "integral_basic", type: "mcq",
-    q: t("$\\displaystyle\\int 2x\\,\\dd{x} = \;?$", "$\\displaystyle\\int 2x\\,\\dd{x} = \;?$"),
+    q: t("$\\displaystyle\\int 2x\\,\\dd{x} = \\;?$", "$\\displaystyle\\int 2x\\,\\dd{x} = \\;?$"),
     choices: [t("$x^2 + C$", "$x^2 + C$"), t("$2x^2 + C$", "$2x^2 + C$"), t("$2 + C$", "$2 + C$"), t("$x + C$", "$x + C$")], answer: 0,
     hint: t("التكامل عكس الاشتقاق: أي اقتران مشتقته $2x$؟", "Integration undoes differentiation: which function has derivative $2x$?"),
     explain: t("$\\dv{}{x}(x^2) = 2x$، لذلك $\\int 2x\\,\\dd{x} = x^2 + C$", "$\\dv{}{x}(x^2) = 2x$, so $\\int 2x\\,\\dd{x} = x^2 + C$") },

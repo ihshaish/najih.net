@@ -107,7 +107,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/arabic-s1-p1.pdf",
 "kb": 334,
 "pages": 5,
-"orig": "اللغة العربية -ورقة1 - دورة 1.pdf"
+"orig": "اللغة العربية -ورقة1 - دورة 1.pdf",
+"img": "exams/2025/literary/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-arabic-s1-p2",
@@ -120,7 +122,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/arabic-s1-p2.pdf",
 "kb": 259,
 "pages": 3,
-"orig": "اللغة العربية - الادبي والشرعي - ورقة2 - دورة 1.pdf"
+"orig": "اللغة العربية - الادبي والشرعي - ورقة2 - دورة 1.pdf",
+"img": "exams/2025/literary/arabic-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-arabic-s2-p1",
@@ -133,7 +137,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/arabic-s2-p1.pdf",
 "kb": 323,
 "pages": 4,
-"orig": "اللغة العربية -ورقة1 - دورة 2.pdf"
+"orig": "اللغة العربية -ورقة1 - دورة 2.pdf",
+"img": "exams/2025/literary/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-arabic-s2-p2",
@@ -146,7 +152,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/arabic-s2-p2.pdf",
 "kb": 262,
 "pages": 3,
-"orig": "اللغة العربية - الادبي والشرعي - ورقة2 - دورة 2.pdf"
+"orig": "اللغة العربية - الادبي والشرعي - ورقة2 - دورة 2.pdf",
+"img": "exams/2025/literary/arabic-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-arabic-s3",
@@ -159,7 +167,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/arabic-s3.pdf",
 "kb": 731,
 "pages": 6,
-"orig": "اللغة العربية - الادبي والشرعي -الدورة الثالثة.pdf"
+"orig": "اللغة العربية - الادبي والشرعي -الدورة الثالثة.pdf",
+"img": "exams/2025/literary/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-christian-s1",
@@ -172,7 +182,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/christian-s1.pdf",
 "kb": 275,
 "pages": 4,
-"orig": "التربية المسيحية -دورة 1.pdf"
+"orig": "التربية المسيحية -دورة 1.pdf",
+"img": "exams/2025/literary/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-christian-s2",
@@ -185,7 +197,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/christian-s2.pdf",
 "kb": 274,
 "pages": 4,
-"orig": "التربية المسيحية -دورة 2.pdf"
+"orig": "التربية المسيحية -دورة 2.pdf",
+"img": "exams/2025/literary/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-christian-s3",
@@ -198,7 +212,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/christian-s3.pdf",
 "kb": 675,
 "pages": 3,
-"orig": "تربية مسيحية-الادبي-دورة 3.pdf"
+"orig": "تربية مسيحية-الادبي-دورة 3.pdf",
+"img": "exams/2025/literary/christian-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-english-s1-p1",
@@ -211,7 +227,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/english-s1-p1.pdf",
 "kb": 320,
 "pages": 5,
-"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الأولى.pdf"
+"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الأولى.pdf",
+"img": "exams/2025/literary/english-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-english-s1-p2",
@@ -224,7 +242,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/english-s1-p2.pdf",
 "kb": 369,
 "pages": 5,
-"orig": "اللغة الإنجليزية 2 - الأدبي - الدورة الأولى.pdf"
+"orig": "اللغة الإنجليزية 2 - الأدبي - الدورة الأولى.pdf",
+"img": "exams/2025/literary/english-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-english-s2-p1",
@@ -237,7 +257,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/english-s2-p1.pdf",
 "kb": 351,
 "pages": 6,
-"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الثانية.pdf"
+"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الثانية.pdf",
+"img": "exams/2025/literary/english-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-english-s2-p2",
@@ -250,7 +272,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/english-s2-p2.pdf",
 "kb": 378,
 "pages": 5,
-"orig": "اللغة الإنجليزية 2 - الأدبي - الدورة الثانية.pdf"
+"orig": "اللغة الإنجليزية 2 - الأدبي - الدورة الثانية.pdf",
+"img": "exams/2025/literary/english-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-english-s3-wb",
@@ -263,7 +287,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/english-s3-wb.pdf",
 "kb": 847,
 "pages": 6,
-"orig": "اللغة الانجليزية- ضفة - الادبي - الدورة الثالثة.pdf"
+"orig": "اللغة الانجليزية- ضفة - الادبي - الدورة الثالثة.pdf",
+"img": "exams/2025/literary/english-s3-wb",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-geography-s1",
@@ -276,7 +302,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/geography-s1.pdf",
 "kb": 381,
 "pages": 4,
-"orig": "جغرافيا- الادبي-دورة 1.pdf"
+"orig": "جغرافيا- الادبي-دورة 1.pdf",
+"img": "exams/2025/literary/geography-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-geography-s2",
@@ -289,7 +317,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/geography-s2.pdf",
 "kb": 372,
 "pages": 4,
-"orig": "جغرافيا- الادبي-دورة 2.pdf"
+"orig": "جغرافيا- الادبي-دورة 2.pdf",
+"img": "exams/2025/literary/geography-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-geography-s3",
@@ -302,7 +332,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/geography-s3.pdf",
 "kb": 768,
 "pages": 4,
-"orig": "جغرافيا- الادبي-دورة 3.pdf"
+"orig": "جغرافيا- الادبي-دورة 3.pdf",
+"img": "exams/2025/literary/geography-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-history-s1",
@@ -315,7 +347,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/history-s1.pdf",
 "kb": 624,
 "pages": 3,
-"orig": "التاريخ- دورة 1.pdf"
+"orig": "التاريخ- دورة 1.pdf",
+"img": "exams/2025/literary/history-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-history-s2",
@@ -328,7 +362,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/history-s2.pdf",
 "kb": 252,
 "pages": 3,
-"orig": "التاريخ- دورة 2.pdf"
+"orig": "التاريخ- دورة 2.pdf",
+"img": "exams/2025/literary/history-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-history-s3-wb",
@@ -341,7 +377,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/history-s3-wb.pdf",
 "kb": 625,
 "pages": 3,
-"orig": "تاريخ الضفة.pdf"
+"orig": "تاريخ الضفة.pdf",
+"img": "exams/2025/literary/history-s3-wb",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-islamic-s1",
@@ -354,7 +392,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/islamic-s1.pdf",
 "kb": 520,
 "pages": 3,
-"orig": "التربية الإسلامية - الدورة الأولى.pdf"
+"orig": "التربية الإسلامية - الدورة الأولى.pdf",
+"img": "exams/2025/literary/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-islamic-s2",
@@ -367,7 +407,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/islamic-s2.pdf",
 "kb": 457,
 "pages": 4,
-"orig": "التربية الإسلامية - الدورة الثانية.pdf"
+"orig": "التربية الإسلامية - الدورة الثانية.pdf",
+"img": "exams/2025/literary/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-islamic-s3",
@@ -380,7 +422,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/islamic-s3.pdf",
 "kb": 303,
 "pages": 3,
-"orig": "تربية اسلامية-الادبي-دورة 3.pdf"
+"orig": "تربية اسلامية-الادبي-دورة 3.pdf",
+"img": "exams/2025/literary/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-math-s1",
@@ -393,7 +437,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/math-s1.pdf",
 "kb": 350,
 "pages": 4,
-"orig": "الرياضيات - الأدبي والشرعي - الدورة الأولى.pdf"
+"orig": "الرياضيات - الأدبي والشرعي - الدورة الأولى.pdf",
+"img": "exams/2025/literary/math-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-math-s2",
@@ -406,7 +452,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/math-s2.pdf",
 "kb": 411,
 "pages": 4,
-"orig": "الرياضيات - الأدبي والشرعي - الدورة الأولى.pdf"
+"orig": "الرياضيات - الأدبي والشرعي - الدورة الأولى.pdf",
+"img": "exams/2025/literary/math-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-math-s3",
@@ -419,7 +467,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/math-s3.pdf",
 "kb": 988,
 "pages": 5,
-"orig": "الرياضيات - الأدبي والشرعي - الثالثة.pdf"
+"orig": "الرياضيات - الأدبي والشرعي - الثالثة.pdf",
+"img": "exams/2025/literary/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-sci_culture-s1",
@@ -432,7 +482,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/sci_culture-s1.pdf",
 "kb": 327,
 "pages": 4,
-"orig": "ثقافة علمية - دورة1.pdf"
+"orig": "ثقافة علمية - دورة1.pdf",
+"img": "exams/2025/literary/sci_culture-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-sci_culture-s2",
@@ -445,7 +497,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/sci_culture-s2.pdf",
 "kb": 301,
 "pages": 5,
-"orig": "ثقافة علمية - دورة2.pdf"
+"orig": "ثقافة علمية - دورة2.pdf",
+"img": "exams/2025/literary/sci_culture-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-sci_culture-s3",
@@ -458,7 +512,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/sci_culture-s3.pdf",
 "kb": 897,
 "pages": 4,
-"orig": "ثقافة علمية - دورة3.pdf"
+"orig": "ثقافة علمية - دورة3.pdf",
+"img": "exams/2025/literary/sci_culture-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-tech-s1",
@@ -471,7 +527,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/tech-s1.pdf",
 "kb": 389,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الأدبي - الدورة الأولى.pdf"
+"orig": "تكنولوجيا المعلومات - الأدبي - الدورة الأولى.pdf",
+"img": "exams/2025/literary/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-tech-s2",
@@ -484,7 +542,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/tech-s2.pdf",
 "kb": 468,
 "pages": 5,
-"orig": "تكنولوجيا المعلومات - الأدبي - الدورة الثانية.pdf"
+"orig": "تكنولوجيا المعلومات - الأدبي - الدورة الثانية.pdf",
+"img": "exams/2025/literary/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-literary-tech-s3",
@@ -497,7 +557,9 @@ window.EXAMS = {
 "file": "exams/2025/literary/tech-s3.pdf",
 "kb": 789,
 "pages": 4,
-"orig": "تكنوجيا المعلومات -الادبي-دورة 3.pdf"
+"orig": "تكنوجيا المعلومات -الادبي-دورة 3.pdf",
+"img": "exams/2025/literary/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-arabic-s1-p1",
@@ -510,7 +572,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/arabic-s1-p1.pdf",
 "kb": 334,
 "pages": 5,
-"orig": "اللغة العربية -ورقة1 - دورة 1.pdf"
+"orig": "اللغة العربية -ورقة1 - دورة 1.pdf",
+"img": "exams/2025/scientific/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-arabic-s2-p1",
@@ -523,7 +587,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/arabic-s2-p1.pdf",
 "kb": 323,
 "pages": 4,
-"orig": "اللغة العربية -ورقة1 - دورة 2.pdf"
+"orig": "اللغة العربية -ورقة1 - دورة 2.pdf",
+"img": "exams/2025/scientific/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-arabic-s3",
@@ -536,7 +602,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/arabic-s3.pdf",
 "kb": 701,
 "pages": 4,
-"orig": "اللغة العربية -العلمي والريادة والاعمال  -الدورة الثالثة.pdf"
+"orig": "اللغة العربية -العلمي والريادة والاعمال  -الدورة الثالثة.pdf",
+"img": "exams/2025/scientific/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-biology-s1",
@@ -549,7 +617,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/biology-s1.pdf",
 "kb": 520,
 "pages": 5,
-"orig": "علمي- العلوم الحياتية- دورة1.pdf"
+"orig": "علمي- العلوم الحياتية- دورة1.pdf",
+"img": "exams/2025/scientific/biology-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-biology-s2",
@@ -562,7 +632,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/biology-s2.pdf",
 "kb": 424,
 "pages": 5,
-"orig": "علمي- العلوم الحياتية- دورة2.pdf"
+"orig": "علمي- العلوم الحياتية- دورة2.pdf",
+"img": "exams/2025/scientific/biology-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-biology-s3",
@@ -575,7 +647,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/biology-s3.pdf",
 "kb": 844,
 "pages": 4,
-"orig": "علمي- العلوم الحياتية- دورة3.pdf"
+"orig": "علمي- العلوم الحياتية- دورة3.pdf",
+"img": "exams/2025/scientific/biology-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-chemistry-s1",
@@ -588,7 +662,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/chemistry-s1.pdf",
 "kb": 655,
 "pages": 5,
-"orig": "كيمياء علمي -دورة اولى.pdf"
+"orig": "كيمياء علمي -دورة اولى.pdf",
+"img": "exams/2025/scientific/chemistry-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-chemistry-s2",
@@ -601,7 +677,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/chemistry-s2.pdf",
 "kb": 625,
 "pages": 4,
-"orig": "كيمياء علمي -دورة ثانية.pdf"
+"orig": "كيمياء علمي -دورة ثانية.pdf",
+"img": "exams/2025/scientific/chemistry-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-chemistry-s3-alt",
@@ -614,7 +692,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/chemistry-s3-alt.pdf",
 "kb": 1505,
 "pages": 5,
-"orig": "كيمياء علمي -البديل.pdf"
+"orig": "كيمياء علمي -البديل.pdf",
+"img": "exams/2025/scientific/chemistry-s3-alt",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-christian-s1",
@@ -627,7 +707,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/christian-s1.pdf",
 "kb": 275,
 "pages": 4,
-"orig": "التربية المسيحية -دورة 1.pdf"
+"orig": "التربية المسيحية -دورة 1.pdf",
+"img": "exams/2025/scientific/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-christian-s2",
@@ -640,7 +722,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/christian-s2.pdf",
 "kb": 274,
 "pages": 4,
-"orig": "التربية المسيحية -دورة 2.pdf"
+"orig": "التربية المسيحية -دورة 2.pdf",
+"img": "exams/2025/scientific/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-christian-s3",
@@ -653,7 +737,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/christian-s3.pdf",
 "kb": 675,
 "pages": 3,
-"orig": "تربية مسيحية-الادبي-دورة 3.pdf"
+"orig": "تربية مسيحية-الادبي-دورة 3.pdf",
+"img": "exams/2025/scientific/christian-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-english-s1-p1",
@@ -666,7 +752,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/english-s1-p1.pdf",
 "kb": 320,
 "pages": 5,
-"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الأولى.pdf"
+"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الأولى.pdf",
+"img": "exams/2025/scientific/english-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-english-s2-p1",
@@ -679,7 +767,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/english-s2-p1.pdf",
 "kb": 351,
 "pages": 6,
-"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الثانية.pdf"
+"orig": "اللغة الإنجليزية 1 - الأدبي - الدورة الثانية.pdf",
+"img": "exams/2025/scientific/english-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-english-s3-wb",
@@ -692,7 +782,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/english-s3-wb.pdf",
 "kb": 744,
 "pages": 4,
-"orig": "اللغة الانجليزية-ضفة  - العلمي - الدورة الثالثة.pdf"
+"orig": "اللغة الانجليزية-ضفة  - العلمي - الدورة الثالثة.pdf",
+"img": "exams/2025/scientific/english-s3-wb",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-islamic-s1",
@@ -705,7 +797,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/islamic-s1.pdf",
 "kb": 520,
 "pages": 3,
-"orig": "التربية الإسلامية - الدورة الأولى.pdf"
+"orig": "التربية الإسلامية - الدورة الأولى.pdf",
+"img": "exams/2025/scientific/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-islamic-s2",
@@ -718,7 +812,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/islamic-s2.pdf",
 "kb": 457,
 "pages": 4,
-"orig": "التربية الإسلامية - الدورة الثانية.pdf"
+"orig": "التربية الإسلامية - الدورة الثانية.pdf",
+"img": "exams/2025/scientific/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-islamic-s3",
@@ -731,7 +827,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/islamic-s3.pdf",
 "kb": 303,
 "pages": 3,
-"orig": "تربية اسلامية-الادبي-دورة 3.pdf"
+"orig": "تربية اسلامية-الادبي-دورة 3.pdf",
+"img": "exams/2025/scientific/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-math-s1-p1",
@@ -744,7 +842,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/math-s1-p1.pdf",
 "kb": 407,
 "pages": 4,
-"orig": "الرياضيات - العلمي - الورقة 1 - الدورة 1.pdf"
+"orig": "الرياضيات - العلمي - الورقة 1 - الدورة 1.pdf",
+"img": "exams/2025/scientific/math-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-math-s1-p2",
@@ -757,7 +857,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/math-s1-p2.pdf",
 "kb": 367,
 "pages": 4,
-"orig": "الرياضيات - العلمي - الورقة 2 - الدورة 1.pdf"
+"orig": "الرياضيات - العلمي - الورقة 2 - الدورة 1.pdf",
+"img": "exams/2025/scientific/math-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-math-s2-p1",
@@ -770,7 +872,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/math-s2-p1.pdf",
 "kb": 430,
 "pages": 4,
-"orig": "الرياضيات - العلمي - الورقة 1 - الدورة 2.pdf"
+"orig": "الرياضيات - العلمي - الورقة 1 - الدورة 2.pdf",
+"img": "exams/2025/scientific/math-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-math-s2-p2",
@@ -783,7 +887,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/math-s2-p2.pdf",
 "kb": 400,
 "pages": 4,
-"orig": "الرياضيات - العلمي - الورقة 2 - الدورة 2.pdf"
+"orig": "الرياضيات - العلمي - الورقة 2 - الدورة 2.pdf",
+"img": "exams/2025/scientific/math-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-math-s3-wb",
@@ -796,7 +902,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/math-s3-wb.pdf",
 "kb": 800,
 "pages": 5,
-"orig": "الرياضيات - علمي - الثالثة-الضفة.pdf"
+"orig": "الرياضيات - علمي - الثالثة-الضفة.pdf",
+"img": "exams/2025/scientific/math-s3-wb",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-physics-s1",
@@ -809,7 +917,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/physics-s1.pdf",
 "kb": 780,
 "pages": 5,
-"orig": "فيزياء  علمي دورة أولى.pdf"
+"orig": "فيزياء  علمي دورة أولى.pdf",
+"img": "exams/2025/scientific/physics-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-physics-s2",
@@ -822,7 +932,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/physics-s2.pdf",
 "kb": 547,
 "pages": 5,
-"orig": "فيزياء  علمي دورة ثانية.pdf"
+"orig": "فيزياء  علمي دورة ثانية.pdf",
+"img": "exams/2025/scientific/physics-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-physics-s3",
@@ -835,7 +947,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/physics-s3.pdf",
 "kb": 1233,
 "pages": 4,
-"orig": "فيزياء  علمي دورة الاستكمالية.pdf"
+"orig": "فيزياء  علمي دورة الاستكمالية.pdf",
+"img": "exams/2025/scientific/physics-s3",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-tech-s1",
@@ -848,7 +962,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/tech-s1.pdf",
 "kb": 338,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - العلمي والصناعي- الدورة الأولى.pdf"
+"orig": "تكنولوجيا المعلومات - العلمي والصناعي- الدورة الأولى.pdf",
+"img": "exams/2025/scientific/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-tech-s2",
@@ -861,7 +977,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/tech-s2.pdf",
 "kb": 375,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - العلمي والصناعي - الدورة الثانية.pdf"
+"orig": "تكنولوجيا المعلومات - العلمي والصناعي - الدورة الثانية.pdf",
+"img": "exams/2025/scientific/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2025-scientific-tech-s3",
@@ -874,7 +992,9 @@ window.EXAMS = {
 "file": "exams/2025/scientific/tech-s3.pdf",
 "kb": 860,
 "pages": 4,
-"orig": "تكنوجيا المعلومات -العلمي-دورة 3.pdf"
+"orig": "تكنوجيا المعلومات -العلمي-دورة 3.pdf",
+"img": "exams/2025/scientific/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-arabic-s1-p1",
@@ -887,7 +1007,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/arabic-s1-p1.pdf",
 "kb": 347,
 "pages": 5,
-"orig": "اللغة العربية _ الورقة الأولى_ الأدبي والعلمي والشرعي والريادة والاعمال_ الدورة الأولى 24_06_2024.pdf"
+"orig": "اللغة العربية _ الورقة الأولى_ الأدبي والعلمي والشرعي والريادة والاعمال_ الدورة الأولى 24_06_2024.pdf",
+"img": "exams/2024/literary/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-arabic-s1-p2",
@@ -900,7 +1022,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/arabic-s1-p2.pdf",
 "kb": 283,
 "pages": 3,
-"orig": "اللغة العربية - الأدبي والشرعي-الورقة الثانية_ الدورة الأولى 25_06_2024.pdf"
+"orig": "اللغة العربية - الأدبي والشرعي-الورقة الثانية_ الدورة الأولى 25_06_2024.pdf",
+"img": "exams/2024/literary/arabic-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-arabic-s2-p1",
@@ -913,7 +1037,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/arabic-s2-p1.pdf",
 "kb": 377,
 "pages": 5,
-"orig": "اللغة العربية _الورقة الاولى للادبي_ وجلسة العلمي والريادة_ الدورة الثانية_20_08_ 2024.pdf"
+"orig": "اللغة العربية _الورقة الاولى للادبي_ وجلسة العلمي والريادة_ الدورة الثانية_20_08_ 2024.pdf",
+"img": "exams/2024/literary/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-arabic-s2-p2",
@@ -926,7 +1052,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/arabic-s2-p2.pdf",
 "kb": 275,
 "pages": 3,
-"orig": "اللغة العربية_الورقة الثانية_ الادبي_21_08_2024.pdf"
+"orig": "اللغة العربية_الورقة الثانية_ الادبي_21_08_2024.pdf",
+"img": "exams/2024/literary/arabic-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-arabic-s3",
@@ -939,7 +1067,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/arabic-s3.pdf",
 "kb": 369,
 "pages": 6,
-"orig": "اللغة العربية _الدورة الثالثة_2024.pdf"
+"orig": "اللغة العربية _الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-christian-s3",
@@ -952,7 +1082,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/christian-s3.pdf",
 "kb": 269,
 "pages": 3,
-"orig": "تربية مسيحية_الدورة الثالثة_2024.pdf"
+"orig": "تربية مسيحية_الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/christian-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-english-s1-p1",
@@ -965,7 +1097,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/english-s1-p1.pdf",
 "kb": 954,
 "pages": 6,
-"orig": "اللغة الانجليزية -ورقة اولى - الفرع الأدبي  والريادة والأعمال_الدورة الأولى 01-_07_2024.pdf"
+"orig": "اللغة الانجليزية -ورقة اولى - الفرع الأدبي  والريادة والأعمال_الدورة الأولى 01-_07_2024.pdf",
+"img": "exams/2024/literary/english-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-english-s1-p2",
@@ -978,7 +1112,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/english-s1-p2.pdf",
 "kb": 880,
 "pages": 5,
-"orig": "اللغة الانجليزية الفرع الأدبي- ورقة ثانية - الدورة الأولى 03_07_2024 .pdf"
+"orig": "اللغة الانجليزية الفرع الأدبي- ورقة ثانية - الدورة الأولى 03_07_2024 .pdf",
+"img": "exams/2024/literary/english-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-english-s2-p1",
@@ -991,7 +1127,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/english-s2-p1.pdf",
 "kb": 990,
 "pages": 6,
-"orig": "اللغة الانجليزية - الدورة الثانية- الفرع الأدبي _ورقة اولى_ جلسة فرع الريادة والأعمال14_08_2024_.pdf"
+"orig": "اللغة الانجليزية - الدورة الثانية- الفرع الأدبي _ورقة اولى_ جلسة فرع الريادة والأعمال14_08_2024_.pdf",
+"img": "exams/2024/literary/english-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-english-s2-p2",
@@ -1004,7 +1142,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/english-s2-p2.pdf",
 "kb": 870,
 "pages": 5,
-"orig": "اللغة الانجليزية الفرع الأدبي- ورقة ثانية - الدورة الثانية 15_08_2024.pdf"
+"orig": "اللغة الانجليزية الفرع الأدبي- ورقة ثانية - الدورة الثانية 15_08_2024.pdf",
+"img": "exams/2024/literary/english-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-english-s3",
@@ -1017,7 +1157,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/english-s3.pdf",
 "kb": 374,
 "pages": 7,
-"orig": "اللغة الانجليزية -الدورة الثالثة_2024.pdf"
+"orig": "اللغة الانجليزية -الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-geography-s1",
@@ -1030,7 +1172,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/geography-s1.pdf",
 "kb": 320,
 "pages": 4,
-"orig": "الجغرافيا_الأدبي_الدورة الأولى 06_07_2024.pdf"
+"orig": "الجغرافيا_الأدبي_الدورة الأولى 06_07_2024.pdf",
+"img": "exams/2024/literary/geography-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-geography-s2",
@@ -1043,7 +1187,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/geography-s2.pdf",
 "kb": 898,
 "pages": 4,
-"orig": "جغرافيا_ الدورة الثانية_13_08_ 2024.pdf"
+"orig": "جغرافيا_ الدورة الثانية_13_08_ 2024.pdf",
+"img": "exams/2024/literary/geography-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-geography-s3",
@@ -1056,7 +1202,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/geography-s3.pdf",
 "kb": 301,
 "pages": 3,
-"orig": "الجغرافيا - الدورة الثالثة - 2024.pdf"
+"orig": "الجغرافيا - الدورة الثالثة - 2024.pdf",
+"img": "exams/2024/literary/geography-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-history-s1",
@@ -1069,7 +1217,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/history-s1.pdf",
 "kb": 692,
 "pages": 2,
-"orig": "التاريخ_ الفرع الأدبي والشرعي - الدورة الأولى 29_06_2024.pdf"
+"orig": "التاريخ_ الفرع الأدبي والشرعي - الدورة الأولى 29_06_2024.pdf",
+"img": "exams/2024/literary/history-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-history-s2",
@@ -1082,7 +1232,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/history-s2.pdf",
 "kb": 625,
 "pages": 2,
-"orig": "الفرع الأدبي والشرعي - التاريخ- الدورة الثانية 19_08_2024.pdf"
+"orig": "الفرع الأدبي والشرعي - التاريخ- الدورة الثانية 19_08_2024.pdf",
+"img": "exams/2024/literary/history-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-history-s3",
@@ -1095,7 +1247,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/history-s3.pdf",
 "kb": 255,
 "pages": 2,
-"orig": "التاريخ _ الدورة الثالثة_ 2024.pdf"
+"orig": "التاريخ _ الدورة الثالثة_ 2024.pdf",
+"img": "exams/2024/literary/history-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-islamic-s1",
@@ -1108,7 +1262,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/islamic-s1.pdf",
 "kb": 706,
 "pages": 3,
-"orig": "التربية الأسلامية - الدورة الأولى 22_06_2024.pdf"
+"orig": "التربية الأسلامية - الدورة الأولى 22_06_2024.pdf",
+"img": "exams/2024/literary/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-islamic-s2",
@@ -1121,7 +1277,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/islamic-s2.pdf",
 "kb": 681,
 "pages": 3,
-"orig": "جميع الفروع عدا الشرعي- المبحث التربية الأسلامية - الدورة الثانية17_08_2024.pdf"
+"orig": "جميع الفروع عدا الشرعي- المبحث التربية الأسلامية - الدورة الثانية17_08_2024.pdf",
+"img": "exams/2024/literary/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-islamic-s3",
@@ -1134,7 +1292,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/islamic-s3.pdf",
 "kb": 900,
 "pages": 3,
-"orig": "التربية الأسلامية_ الدورة الثالثة_2024.pdf"
+"orig": "التربية الأسلامية_ الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-math-s1",
@@ -1147,7 +1307,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/math-s1.pdf",
 "kb": 757,
 "pages": 3,
-"orig": "الرياضيات - الفرع الأدبي والشرعي - الدورة الأولى 27_06_2024.pdf"
+"orig": "الرياضيات - الفرع الأدبي والشرعي - الدورة الأولى 27_06_2024.pdf",
+"img": "exams/2024/literary/math-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-math-s2",
@@ -1160,7 +1322,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/math-s2.pdf",
 "kb": 691,
 "pages": 3,
-"orig": "رياضيات الادبي_ الدورة الثانية_12_08_2024.pdf"
+"orig": "رياضيات الادبي_ الدورة الثانية_12_08_2024.pdf",
+"img": "exams/2024/literary/math-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-math-s3",
@@ -1173,7 +1337,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/math-s3.pdf",
 "kb": 634,
 "pages": 3,
-"orig": "الرياضيات_ الدورة الثالثة_2024.pdf"
+"orig": "الرياضيات_ الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-sci_culture-s1",
@@ -1186,7 +1352,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/sci_culture-s1.pdf",
 "kb": 702,
 "pages": 4,
-"orig": "الثقافة العلمية-الفرع الأدبي- الدورة الأولى 08_07_2024.pdf"
+"orig": "الثقافة العلمية-الفرع الأدبي- الدورة الأولى 08_07_2024.pdf",
+"img": "exams/2024/literary/sci_culture-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-sci_culture-s2",
@@ -1199,7 +1367,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/sci_culture-s2.pdf",
 "kb": 691,
 "pages": 4,
-"orig": "الثقافة العلمية-الفرع الأدبي- الدورة الثانية  22_08_2024.pdf"
+"orig": "الثقافة العلمية-الفرع الأدبي- الدورة الثانية  22_08_2024.pdf",
+"img": "exams/2024/literary/sci_culture-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-sci_culture-s3",
@@ -1212,7 +1382,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/sci_culture-s3.pdf",
 "kb": 236,
 "pages": 3,
-"orig": "الثقافة العلمية_ الدورة الثالثة_2024.pdf"
+"orig": "الثقافة العلمية_ الدورة الثالثة_2024.pdf",
+"img": "exams/2024/literary/sci_culture-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-tech-s1",
@@ -1225,7 +1397,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/tech-s1.pdf",
 "kb": 483,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات_جميع الفروع عدا العلمي والصناعي_الدورة الأولى 04_07_2024.pdf"
+"orig": "تكنولوجيا المعلومات_جميع الفروع عدا العلمي والصناعي_الدورة الأولى 04_07_2024.pdf",
+"img": "exams/2024/literary/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-tech-s2",
@@ -1238,7 +1412,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/tech-s2.pdf",
 "kb": 883,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الأدبي_الدورة الثانية_24_08 _2024.pdf"
+"orig": "تكنولوجيا المعلومات - الأدبي_الدورة الثانية_24_08 _2024.pdf",
+"img": "exams/2024/literary/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-literary-tech-s3",
@@ -1251,7 +1427,9 @@ window.EXAMS = {
 "file": "exams/2024/literary/tech-s3.pdf",
 "kb": 448,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات -الدورة الثالثة_2024 -.pdf"
+"orig": "تكنولوجيا المعلومات -الدورة الثالثة_2024 -.pdf",
+"img": "exams/2024/literary/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-arabic-s1-p1",
@@ -1264,7 +1442,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/arabic-s1-p1.pdf",
 "kb": 347,
 "pages": 5,
-"orig": "اللغة العربية _ الورقة الأولى_ الأدبي والعلمي والشرعي والريادة والاعمال_ الدورة الأولى 24_06_2024.pdf"
+"orig": "اللغة العربية _ الورقة الأولى_ الأدبي والعلمي والشرعي والريادة والاعمال_ الدورة الأولى 24_06_2024.pdf",
+"img": "exams/2024/scientific/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-arabic-s2-p1",
@@ -1277,7 +1457,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/arabic-s2-p1.pdf",
 "kb": 377,
 "pages": 5,
-"orig": "اللغة العربية _الورقة الاولى للادبي_ وجلسة العلمي والريادة_ الدورة الثانية_20_08_ 2024.pdf"
+"orig": "اللغة العربية _الورقة الاولى للادبي_ وجلسة العلمي والريادة_ الدورة الثانية_20_08_ 2024.pdf",
+"img": "exams/2024/scientific/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-arabic-s3",
@@ -1290,7 +1472,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/arabic-s3.pdf",
 "kb": 304,
 "pages": 4,
-"orig": "اللغة العربية -الدورة الثالثة_2024.pdf"
+"orig": "اللغة العربية -الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-biology-s1",
@@ -1303,7 +1487,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/biology-s1.pdf",
 "kb": 388,
 "pages": 4,
-"orig": "الأحياء -العلمي_ الدورة الأولى 03_07_2024.pdf"
+"orig": "الأحياء -العلمي_ الدورة الأولى 03_07_2024.pdf",
+"img": "exams/2024/scientific/biology-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-biology-s2",
@@ -1316,7 +1502,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/biology-s2.pdf",
 "kb": 377,
 "pages": 4,
-"orig": "الأحياء_العلمي_ الدورة الثانية_21_08_2024.pdf"
+"orig": "الأحياء_العلمي_ الدورة الثانية_21_08_2024.pdf",
+"img": "exams/2024/scientific/biology-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-biology-s3",
@@ -1329,7 +1517,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/biology-s3.pdf",
 "kb": 292,
 "pages": 4,
-"orig": "الأحياء_الدورة الثالثة_2024.pdf"
+"orig": "الأحياء_الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/biology-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-chemistry-s1",
@@ -1342,7 +1532,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/chemistry-s1.pdf",
 "kb": 530,
 "pages": 4,
-"orig": "الكيمياء -العلمي - الدورة الأولى 08_07_2024 .pdf"
+"orig": "الكيمياء -العلمي - الدورة الأولى 08_07_2024 .pdf",
+"img": "exams/2024/scientific/chemistry-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-chemistry-s2",
@@ -1355,7 +1547,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/chemistry-s2.pdf",
 "kb": 498,
 "pages": 4,
-"orig": "الكيمياء_الدورة الثانية_15_08_2024.pdf"
+"orig": "الكيمياء_الدورة الثانية_15_08_2024.pdf",
+"img": "exams/2024/scientific/chemistry-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-chemistry-s3",
@@ -1368,7 +1562,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/chemistry-s3.pdf",
 "kb": 491,
 "pages": 4,
-"orig": "الكيمياء - الدورة الثالثة_2024.pdf"
+"orig": "الكيمياء - الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/chemistry-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-english-s1",
@@ -1381,7 +1577,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/english-s1.pdf",
 "kb": 953,
 "pages": 6,
-"orig": "اللغة الانجليزية -العلمي_ الدورة الأولى 01_07_2024.pdf"
+"orig": "اللغة الانجليزية -العلمي_ الدورة الأولى 01_07_2024.pdf",
+"img": "exams/2024/scientific/english-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-english-s2",
@@ -1394,7 +1592,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/english-s2.pdf",
 "kb": 308,
 "pages": 6,
-"orig": "اللغة الإنجليزية_ الدورة الثانية_الفرع العلمي_14_08_2024.pdf"
+"orig": "اللغة الإنجليزية_ الدورة الثانية_الفرع العلمي_14_08_2024.pdf",
+"img": "exams/2024/scientific/english-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-english-s3",
@@ -1407,7 +1607,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/english-s3.pdf",
 "kb": 734,
 "pages": 5,
-"orig": "اللغة الانجليزية - الدورة الثالثة_2024.pdf"
+"orig": "اللغة الانجليزية - الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-islamic-s1",
@@ -1420,7 +1622,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/islamic-s1.pdf",
 "kb": 706,
 "pages": 3,
-"orig": "التربية الأسلامية - الدورة الأولى 22_06_2024.pdf"
+"orig": "التربية الأسلامية - الدورة الأولى 22_06_2024.pdf",
+"img": "exams/2024/scientific/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-islamic-s2",
@@ -1433,7 +1637,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/islamic-s2.pdf",
 "kb": 681,
 "pages": 3,
-"orig": "جميع الفروع عدا الشرعي- المبحث التربية الأسلامية - الدورة الثانية17_08_2024.pdf"
+"orig": "جميع الفروع عدا الشرعي- المبحث التربية الأسلامية - الدورة الثانية17_08_2024.pdf",
+"img": "exams/2024/scientific/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-islamic-s3",
@@ -1446,7 +1652,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/islamic-s3.pdf",
 "kb": 900,
 "pages": 3,
-"orig": "التربية الأسلامية_ الدورة الثالثة_2024.pdf"
+"orig": "التربية الأسلامية_ الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-math-s1-p1",
@@ -1459,7 +1667,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/math-s1-p1.pdf",
 "kb": 420,
 "pages": 3,
-"orig": "الرياضيات - العلمي - الورقة الأولى_ الدورة الاولى 27_06_2024.pdf"
+"orig": "الرياضيات - العلمي - الورقة الأولى_ الدورة الاولى 27_06_2024.pdf",
+"img": "exams/2024/scientific/math-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-math-s1-p2",
@@ -1472,7 +1682,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/math-s1-p2.pdf",
 "kb": 341,
 "pages": 3,
-"orig": "الرياضيات-العلمي-الورقة الثانية_29_06_2024 .pdf"
+"orig": "الرياضيات-العلمي-الورقة الثانية_29_06_2024 .pdf",
+"img": "exams/2024/scientific/math-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-math-s2-p1",
@@ -1485,7 +1697,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/math-s2-p1.pdf",
 "kb": 410,
 "pages": 3,
-"orig": "الرياضيات_العلمي_ الورقة الأولى_ الدورة الثانية12_08_2024.pdf"
+"orig": "الرياضيات_العلمي_ الورقة الأولى_ الدورة الثانية12_08_2024.pdf",
+"img": "exams/2024/scientific/math-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-math-s2-p2",
@@ -1498,7 +1712,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/math-s2-p2.pdf",
 "kb": 339,
 "pages": 3,
-"orig": "الرياضيات_الورقة الثانية_ الدورة الثانية_13_08_2024.pdf"
+"orig": "الرياضيات_الورقة الثانية_ الدورة الثانية_13_08_2024.pdf",
+"img": "exams/2024/scientific/math-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-math-s3",
@@ -1511,7 +1727,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/math-s3.pdf",
 "kb": 395,
 "pages": 4,
-"orig": "الرياضيات -الدورة الثالثة_2024.pdf"
+"orig": "الرياضيات -الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-physics-s1",
@@ -1524,7 +1742,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/physics-s1.pdf",
 "kb": 580,
 "pages": 5,
-"orig": "الفيزياء_العلمي_الدورة الأولى 06_07_2024.pdf"
+"orig": "الفيزياء_العلمي_الدورة الأولى 06_07_2024.pdf",
+"img": "exams/2024/scientific/physics-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-physics-s2",
@@ -1537,7 +1757,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/physics-s2.pdf",
 "kb": 642,
 "pages": 4,
-"orig": "الفيزياء_العلمي_الدورة الثانية19_08_2024.pdf"
+"orig": "الفيزياء_العلمي_الدورة الثانية19_08_2024.pdf",
+"img": "exams/2024/scientific/physics-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-physics-s3",
@@ -1550,7 +1772,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/physics-s3.pdf",
 "kb": 467,
 "pages": 4,
-"orig": "فيزياء  _الدورة الثالثة_2024.pdf"
+"orig": "فيزياء  _الدورة الثالثة_2024.pdf",
+"img": "exams/2024/scientific/physics-s3",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-tech-s1",
@@ -1563,7 +1787,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/tech-s1.pdf",
 "kb": 451,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات_ العلمي والصناعي_الدورة الأولى 04_07_2024.pdf"
+"orig": "تكنولوجيا المعلومات_ العلمي والصناعي_الدورة الأولى 04_07_2024.pdf",
+"img": "exams/2024/scientific/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-tech-s2",
@@ -1576,7 +1802,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/tech-s2.pdf",
 "kb": 525,
 "pages": 4,
-"orig": "التكنولوجيا_الفرع العلمي_الدورة الثانية_24_08_2024.pdf"
+"orig": "التكنولوجيا_الفرع العلمي_الدورة الثانية_24_08_2024.pdf",
+"img": "exams/2024/scientific/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2024-scientific-tech-s3",
@@ -1589,7 +1817,9 @@ window.EXAMS = {
 "file": "exams/2024/scientific/tech-s3.pdf",
 "kb": 456,
 "pages": 5,
-"orig": "تكنولوجيا المعلومات -الدورة الثالثة_2024 -.pdf"
+"orig": "تكنولوجيا المعلومات -الدورة الثالثة_2024 -.pdf",
+"img": "exams/2024/scientific/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-arabic-s1-p1",
@@ -1602,7 +1832,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/arabic-s1-p1.pdf",
 "kb": 337,
 "pages": 5,
-"orig": "اللغة العربية الورقة الأولى الدورة الأولى2023.pdf"
+"orig": "اللغة العربية الورقة الأولى الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-arabic-s1-p2",
@@ -1615,7 +1847,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/arabic-s1-p2.pdf",
 "kb": 277,
 "pages": 3,
-"orig": "اللغة العربية الورقة الثانية الدورة الأولى2023.pdf"
+"orig": "اللغة العربية الورقة الثانية الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/arabic-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-arabic-s2-p1",
@@ -1628,7 +1862,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/arabic-s2-p1.pdf",
 "kb": 335,
 "pages": 5,
-"orig": "لغة عربية ورقة اولى مطالعةدورة ثانية-.pdf"
+"orig": "لغة عربية ورقة اولى مطالعةدورة ثانية-.pdf",
+"img": "exams/2023/literary/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-arabic-s2-p2",
@@ -1641,7 +1877,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/arabic-s2-p2.pdf",
 "kb": 277,
 "pages": 3,
-"orig": "لغة عربية جلسة ثانية أدب دورة ثانية-.pdf"
+"orig": "لغة عربية جلسة ثانية أدب دورة ثانية-.pdf",
+"img": "exams/2023/literary/arabic-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-arabic-s3",
@@ -1654,7 +1892,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/arabic-s3.pdf",
 "kb": 579,
 "pages": 7,
-"orig": "اللغة العربية للفرع الادبي والشرعي  الدورة الثالثة.pdf"
+"orig": "اللغة العربية للفرع الادبي والشرعي  الدورة الثالثة.pdf",
+"img": "exams/2023/literary/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-christian-s1",
@@ -1667,7 +1907,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/christian-s1.pdf",
 "kb": 317,
 "pages": 4,
-"orig": "التربية المسيحة_جميع الفروغ عدا الشرعي_الدورة الأولى 2023.pdf"
+"orig": "التربية المسيحة_جميع الفروغ عدا الشرعي_الدورة الأولى 2023.pdf",
+"img": "exams/2023/literary/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-christian-s2",
@@ -1680,7 +1922,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/christian-s2.pdf",
 "kb": 353,
 "pages": 4,
-"orig": "التربية المسيحية دورة الثانية-.pdf"
+"orig": "التربية المسيحية دورة الثانية-.pdf",
+"img": "exams/2023/literary/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-christian-s3",
@@ -1693,7 +1937,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/christian-s3.pdf",
 "kb": 907,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الثالثة.pdf"
+"orig": "التربية المسيحية الدورة الثالثة.pdf",
+"img": "exams/2023/literary/christian-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-english-s1-p1",
@@ -1706,7 +1952,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/english-s1-p1.pdf",
 "kb": 368,
 "pages": 6,
-"orig": "اللغة الانجليزية الفرع الأدبي - الورقة الأولى - وجلسة الريادة والأعمال - الدورة الأولى 2023.pdf"
+"orig": "اللغة الانجليزية الفرع الأدبي - الورقة الأولى - وجلسة الريادة والأعمال - الدورة الأولى 2023.pdf",
+"img": "exams/2023/literary/english-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-english-s1-p2",
@@ -1719,7 +1967,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/english-s1-p2.pdf",
 "kb": 392,
 "pages": 5,
-"orig": "اللغة الانجليزية _الورقة الثانية _ الأدبي_ الدورة الأولى2023.pdf"
+"orig": "اللغة الانجليزية _الورقة الثانية _ الأدبي_ الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/english-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-english-s2-p1",
@@ -1732,7 +1982,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/english-s2-p1.pdf",
 "kb": 300,
 "pages": 5,
-"orig": "اللغة الانجليزية الفرع الأدبي - ورقة اولى - وجلسة الريادة والأعمال - الدورة الثانية.pdf"
+"orig": "اللغة الانجليزية الفرع الأدبي - ورقة اولى - وجلسة الريادة والأعمال - الدورة الثانية.pdf",
+"img": "exams/2023/literary/english-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-english-s2-p2",
@@ -1745,7 +1997,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/english-s2-p2.pdf",
 "kb": 379,
 "pages": 5,
-"orig": "انجليزي ادبي الورقة الثانية.pdf"
+"orig": "انجليزي ادبي الورقة الثانية.pdf",
+"img": "exams/2023/literary/english-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-english-s3",
@@ -1758,7 +2012,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/english-s3.pdf",
 "kb": 382,
 "pages": 7,
-"orig": "اللغة الانجليزية الفرع الأدبي - الدورة الثالثة.pdf"
+"orig": "اللغة الانجليزية الفرع الأدبي - الدورة الثالثة.pdf",
+"img": "exams/2023/literary/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-geography-s1",
@@ -1771,7 +2027,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/geography-s1.pdf",
 "kb": 891,
 "pages": 3,
-"orig": "الجغرافيا_الأدبي_الدورة الأولى 2023.pdf"
+"orig": "الجغرافيا_الأدبي_الدورة الأولى 2023.pdf",
+"img": "exams/2023/literary/geography-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-geography-s2",
@@ -1784,7 +2042,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/geography-s2.pdf",
 "kb": 271,
 "pages": 3,
-"orig": "جغرافيا دورة ثانية.pdf"
+"orig": "جغرافيا دورة ثانية.pdf",
+"img": "exams/2023/literary/geography-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-geography-s3",
@@ -1797,7 +2057,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/geography-s3.pdf",
 "kb": 638,
 "pages": 3,
-"orig": "جغرافيا-الدورة الثالثة.pdf"
+"orig": "جغرافيا-الدورة الثالثة.pdf",
+"img": "exams/2023/literary/geography-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-history-s1",
@@ -1810,7 +2072,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/history-s1.pdf",
 "kb": 833,
 "pages": 2,
-"orig": "التاريخ _الادبي والشرعي_الدورة الأولى2023.pdf"
+"orig": "التاريخ _الادبي والشرعي_الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/history-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-history-s2",
@@ -1823,7 +2087,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/history-s2.pdf",
 "kb": 833,
 "pages": 2,
-"orig": "الادبي والشرعي - امتحان التاريخ - الدورة الثانية.pdf"
+"orig": "الادبي والشرعي - امتحان التاريخ - الدورة الثانية.pdf",
+"img": "exams/2023/literary/history-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-history-s3",
@@ -1836,7 +2102,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/history-s3.pdf",
 "kb": 269,
 "pages": 2,
-"orig": "التاريخ -الدورة الثالثة .pdf"
+"orig": "التاريخ -الدورة الثالثة .pdf",
+"img": "exams/2023/literary/history-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-islamic-s1",
@@ -1849,7 +2117,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/islamic-s1.pdf",
 "kb": 534,
 "pages": 3,
-"orig": "التربية الاسلامية_ جميع الفروع عدا الشرعي_الدورة الأولى2023.pdf"
+"orig": "التربية الاسلامية_ جميع الفروع عدا الشرعي_الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-islamic-s2",
@@ -1862,7 +2132,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/islamic-s2.pdf",
 "kb": 505,
 "pages": 3,
-"orig": "التربية الاسلامية- الدورة الثانية.pdf"
+"orig": "التربية الاسلامية- الدورة الثانية.pdf",
+"img": "exams/2023/literary/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-islamic-s3",
@@ -1875,7 +2147,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/islamic-s3.pdf",
 "kb": 444,
 "pages": 3,
-"orig": "التربية الاسلامية-الدورة  الثالثة.pdf"
+"orig": "التربية الاسلامية-الدورة  الثالثة.pdf",
+"img": "exams/2023/literary/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-math-s1",
@@ -1888,7 +2162,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/math-s1.pdf",
 "kb": 1052,
 "pages": 3,
-"orig": "الرياضيات_الأدبي و الشرعي_الدورة الأولى2023.pdf"
+"orig": "الرياضيات_الأدبي و الشرعي_الدورة الأولى2023.pdf",
+"img": "exams/2023/literary/math-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-math-s2",
@@ -1901,7 +2177,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/math-s2.pdf",
 "kb": 947,
 "pages": 3,
-"orig": "رياضيات -ادبي دورة الثانية .pdf"
+"orig": "رياضيات -ادبي دورة الثانية .pdf",
+"img": "exams/2023/literary/math-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-math-s3",
@@ -1914,7 +2192,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/math-s3.pdf",
 "kb": 965,
 "pages": 4,
-"orig": "رياضيات -ادبي دورة الثالثة.pdf"
+"orig": "رياضيات -ادبي دورة الثالثة.pdf",
+"img": "exams/2023/literary/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-sci_culture-s1",
@@ -1927,7 +2207,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/sci_culture-s1.pdf",
 "kb": 324,
 "pages": 3,
-"orig": "ثقافة علمية _ الفرع الأدبي_الدورة الاولى2023.pdf"
+"orig": "ثقافة علمية _ الفرع الأدبي_الدورة الاولى2023.pdf",
+"img": "exams/2023/literary/sci_culture-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-sci_culture-s2",
@@ -1940,7 +2222,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/sci_culture-s2.pdf",
 "kb": 921,
 "pages": 3,
-"orig": "ثقافة علمية الثانية.pdf"
+"orig": "ثقافة علمية الثانية.pdf",
+"img": "exams/2023/literary/sci_culture-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-sci_culture-s3",
@@ -1953,7 +2237,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/sci_culture-s3.pdf",
 "kb": 925,
 "pages": 3,
-"orig": "ثقافة علمية- الدورة الثالثة.pdf"
+"orig": "ثقافة علمية- الدورة الثالثة.pdf",
+"img": "exams/2023/literary/sci_culture-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-tech-s1",
@@ -1966,7 +2252,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/tech-s1.pdf",
 "kb": 466,
 "pages": 5,
-"orig": "التكنولوجيا جميع الفروع عدا العلمي والصناعي_الدورة الاولى 2023.pdf"
+"orig": "التكنولوجيا جميع الفروع عدا العلمي والصناعي_الدورة الاولى 2023.pdf",
+"img": "exams/2023/literary/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-tech-s2",
@@ -1979,7 +2267,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/tech-s2.pdf",
 "kb": 383,
 "pages": 5,
-"orig": "تكنولوجيا الدورة الثانية  ادبي.pdf"
+"orig": "تكنولوجيا الدورة الثانية  ادبي.pdf",
+"img": "exams/2023/literary/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-literary-tech-s3",
@@ -1992,7 +2282,9 @@ window.EXAMS = {
 "file": "exams/2023/literary/tech-s3.pdf",
 "kb": 439,
 "pages": 6,
-"orig": "تكنولوجيا ادبي -الدورة الثالثة.pdf"
+"orig": "تكنولوجيا ادبي -الدورة الثالثة.pdf",
+"img": "exams/2023/literary/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-arabic-s1-p1",
@@ -2005,7 +2297,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/arabic-s1-p1.pdf",
 "kb": 337,
 "pages": 5,
-"orig": "اللغة العربية الورقة الأولى الدورة الأولى2023.pdf"
+"orig": "اللغة العربية الورقة الأولى الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-arabic-s2-p1",
@@ -2018,7 +2312,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/arabic-s2-p1.pdf",
 "kb": 335,
 "pages": 5,
-"orig": "لغة عربية ورقة اولى مطالعةدورة ثانية-.pdf"
+"orig": "لغة عربية ورقة اولى مطالعةدورة ثانية-.pdf",
+"img": "exams/2023/scientific/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-arabic-s3",
@@ -2031,7 +2327,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/arabic-s3.pdf",
 "kb": 922,
 "pages": 4,
-"orig": "اللغة العربية للفرع العلمي وريادة والاعمال الدورة الثالثة.pdf"
+"orig": "اللغة العربية للفرع العلمي وريادة والاعمال الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-biology-s1",
@@ -2044,7 +2342,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/biology-s1.pdf",
 "kb": 522,
 "pages": 6,
-"orig": "العلوم الحياتية_ العلمي_ الدورة الأولى2023.pdf"
+"orig": "العلوم الحياتية_ العلمي_ الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/biology-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-biology-s2",
@@ -2057,7 +2357,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/biology-s2.pdf",
 "kb": 514,
 "pages": 5,
-"orig": "الأحياء العلمي - الدورة الثانية_2023.pdf"
+"orig": "الأحياء العلمي - الدورة الثانية_2023.pdf",
+"img": "exams/2023/scientific/biology-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-biology-s3",
@@ -2070,7 +2372,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/biology-s3.pdf",
 "kb": 1067,
 "pages": 6,
-"orig": "الأحياء العلمي - الدورة الثالثة.pdf"
+"orig": "الأحياء العلمي - الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/biology-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-chemistry-s1",
@@ -2083,7 +2387,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/chemistry-s1.pdf",
 "kb": 515,
 "pages": 5,
-"orig": "الكيمياء_ الفرع العلمي_ الدورة الأولى2023.pdf"
+"orig": "الكيمياء_ الفرع العلمي_ الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/chemistry-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-chemistry-s2",
@@ -2096,7 +2402,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/chemistry-s2.pdf",
 "kb": 462,
 "pages": 5,
-"orig": "الكيمياء العلمي الدورة الثانية_2023.pdf"
+"orig": "الكيمياء العلمي الدورة الثانية_2023.pdf",
+"img": "exams/2023/scientific/chemistry-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-chemistry-s3",
@@ -2109,7 +2417,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/chemistry-s3.pdf",
 "kb": 1798,
 "pages": 5,
-"orig": "الكيمياء العلمي الدورة الثالثة.pdf"
+"orig": "الكيمياء العلمي الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/chemistry-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-christian-s1",
@@ -2122,7 +2432,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/christian-s1.pdf",
 "kb": 317,
 "pages": 4,
-"orig": "التربية المسيحة_جميع الفروغ عدا الشرعي_الدورة الأولى 2023.pdf"
+"orig": "التربية المسيحة_جميع الفروغ عدا الشرعي_الدورة الأولى 2023.pdf",
+"img": "exams/2023/scientific/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-christian-s2",
@@ -2135,7 +2447,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/christian-s2.pdf",
 "kb": 353,
 "pages": 4,
-"orig": "التربية المسيحية دورة الثانية_2023-.pdf"
+"orig": "التربية المسيحية دورة الثانية_2023-.pdf",
+"img": "exams/2023/scientific/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-christian-s3",
@@ -2148,7 +2462,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/christian-s3.pdf",
 "kb": 907,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الثالثة.pdf"
+"orig": "التربية المسيحية الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/christian-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-english-s1",
@@ -2161,7 +2477,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/english-s1.pdf",
 "kb": 372,
 "pages": 6,
-"orig": "اللغة الانجليزية_العلمي_الدورة الأولى 2023.pdf"
+"orig": "اللغة الانجليزية_العلمي_الدورة الأولى 2023.pdf",
+"img": "exams/2023/scientific/english-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-english-s2",
@@ -2174,7 +2492,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/english-s2.pdf",
 "kb": 346,
 "pages": 5,
-"orig": "اللغة الانجليزية الفرع العلمي - الدورة الثانية_2023.pdf"
+"orig": "اللغة الانجليزية الفرع العلمي - الدورة الثانية_2023.pdf",
+"img": "exams/2023/scientific/english-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-english-s3",
@@ -2187,7 +2507,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/english-s3.pdf",
 "kb": 318,
 "pages": 4,
-"orig": "اللغة الانجليزية الفرع العلمي - الدورة الاستكمالية.pdf"
+"orig": "اللغة الانجليزية الفرع العلمي - الدورة الاستكمالية.pdf",
+"img": "exams/2023/scientific/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-islamic-s1",
@@ -2200,7 +2522,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/islamic-s1.pdf",
 "kb": 534,
 "pages": 3,
-"orig": "التربية الاسلامية_ جميع الفروع عدا الشرعي_الدورة الأولى2023.pdf"
+"orig": "التربية الاسلامية_ جميع الفروع عدا الشرعي_الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-islamic-s2",
@@ -2213,7 +2537,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/islamic-s2.pdf",
 "kb": 505,
 "pages": 3,
-"orig": "التربية الاسلامية- الدورة الثانية_2023.pdf"
+"orig": "التربية الاسلامية- الدورة الثانية_2023.pdf",
+"img": "exams/2023/scientific/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-islamic-s3",
@@ -2226,7 +2552,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/islamic-s3.pdf",
 "kb": 444,
 "pages": 3,
-"orig": "التربية الاسلامية-الدورة  الاستكمالية.pdf"
+"orig": "التربية الاسلامية-الدورة  الاستكمالية.pdf",
+"img": "exams/2023/scientific/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-math-s1-p1",
@@ -2239,7 +2567,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/math-s1-p1.pdf",
 "kb": 641,
 "pages": 3,
-"orig": "الرياضيات_العلمي_الورقة الأولى_الدورة الأولى_2023.pdf"
+"orig": "الرياضيات_العلمي_الورقة الأولى_الدورة الأولى_2023.pdf",
+"img": "exams/2023/scientific/math-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-math-s1-p2",
@@ -2252,7 +2582,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/math-s1-p2.pdf",
 "kb": 1219,
 "pages": 3,
-"orig": "الرياضيات_ العلمي__الورقة الثانية_ الدورة الأولى 2023.pdf"
+"orig": "الرياضيات_ العلمي__الورقة الثانية_ الدورة الأولى 2023.pdf",
+"img": "exams/2023/scientific/math-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-math-s2-p1",
@@ -2265,7 +2597,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/math-s2-p1.pdf",
 "kb": 892,
 "pages": 3,
-"orig": "رياضيات_ الورقة الأولى_ العلمي_ الدورة الثانية - 2023.pdf"
+"orig": "رياضيات_ الورقة الأولى_ العلمي_ الدورة الثانية - 2023.pdf",
+"img": "exams/2023/scientific/math-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-math-s2-p2",
@@ -2278,7 +2612,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/math-s2-p2.pdf",
 "kb": 982,
 "pages": 3,
-"orig": "رياضيات الدورة الثانية الورقة الثانية علمي.pdf"
+"orig": "رياضيات الدورة الثانية الورقة الثانية علمي.pdf",
+"img": "exams/2023/scientific/math-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-math-s3",
@@ -2291,7 +2627,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/math-s3.pdf",
 "kb": 1016,
 "pages": 3,
-"orig": "الرياضيات علمي -الدورة الثالثة.pdf"
+"orig": "الرياضيات علمي -الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-physics-s1",
@@ -2304,7 +2642,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/physics-s1.pdf",
 "kb": 546,
 "pages": 5,
-"orig": "الفيزياء_العلمي_الدورة الأولى2023.pdf"
+"orig": "الفيزياء_العلمي_الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/physics-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-physics-s2",
@@ -2317,7 +2657,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/physics-s2.pdf",
 "kb": 622,
 "pages": 5,
-"orig": "فيزياء - علمي الدورة الثانية.pdf"
+"orig": "فيزياء - علمي الدورة الثانية.pdf",
+"img": "exams/2023/scientific/physics-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-physics-s3",
@@ -2330,7 +2672,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/physics-s3.pdf",
 "kb": 405,
 "pages": 4,
-"orig": "فيزياء علمي -دورة ثالثة.pdf"
+"orig": "فيزياء علمي -دورة ثالثة.pdf",
+"img": "exams/2023/scientific/physics-s3",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-tech-s1",
@@ -2343,7 +2687,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/tech-s1.pdf",
 "kb": 1078,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات_ العلمي والصناعي_الدورة الأولى2023.pdf"
+"orig": "تكنولوجيا المعلومات_ العلمي والصناعي_الدورة الأولى2023.pdf",
+"img": "exams/2023/scientific/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-tech-s2",
@@ -2356,7 +2702,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/tech-s2.pdf",
 "kb": 1170,
 "pages": 6,
-"orig": "تكنولوجيا المعلومات_ العلمي_ الدورة الثانية _2023.pdf"
+"orig": "تكنولوجيا المعلومات_ العلمي_ الدورة الثانية _2023.pdf",
+"img": "exams/2023/scientific/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2023-scientific-tech-s3",
@@ -2369,7 +2717,9 @@ window.EXAMS = {
 "file": "exams/2023/scientific/tech-s3.pdf",
 "kb": 467,
 "pages": 6,
-"orig": "تكنولوجيا -العلمي-الدورة الثالثة.pdf"
+"orig": "تكنولوجيا -العلمي-الدورة الثالثة.pdf",
+"img": "exams/2023/scientific/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-arabic-s1-p1",
@@ -2382,7 +2732,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/arabic-s1-p1.pdf",
 "kb": 935,
 "pages": 5,
-"orig": "اللغة العربية  الأدبي -الدورة الاولى - الورقة الأولى 2022.pdf"
+"orig": "اللغة العربية  الأدبي -الدورة الاولى - الورقة الأولى 2022.pdf",
+"img": "exams/2022/literary/arabic-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-arabic-s1-p2",
@@ -2395,7 +2747,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/arabic-s1-p2.pdf",
 "kb": 715,
 "pages": 3,
-"orig": "اللغة العربية  الأدبي -الدورة الاولى - الورقة الثانية  2022.pdf"
+"orig": "اللغة العربية  الأدبي -الدورة الاولى - الورقة الثانية  2022.pdf",
+"img": "exams/2022/literary/arabic-s1-p2",
+"ratio": 1.2946
 },
 {
 "id": "2022-literary-arabic-s2-p1",
@@ -2408,7 +2762,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/arabic-s2-p1.pdf",
 "kb": 851,
 "pages": 4,
-"orig": "اللغة العربية  الأدبي -  الدورة الثانية - الورقة الأولى.pdf"
+"orig": "اللغة العربية  الأدبي -  الدورة الثانية - الورقة الأولى.pdf",
+"img": "exams/2022/literary/arabic-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-arabic-s2-p2",
@@ -2421,7 +2777,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/arabic-s2-p2.pdf",
 "kb": 817,
 "pages": 2,
-"orig": "اللغة العربية  الأدبي - الدورة الثانية -الورقة الثانية ا 2022.pdf"
+"orig": "اللغة العربية  الأدبي - الدورة الثانية -الورقة الثانية ا 2022.pdf",
+"img": "exams/2022/literary/arabic-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-arabic-s3",
@@ -2434,7 +2792,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/arabic-s3.pdf",
 "kb": 336,
 "pages": 5,
-"orig": "اللغة العربية - الأدبي - الدورة الاستكمالية 2022.pdf"
+"orig": "اللغة العربية - الأدبي - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/literary/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-christian-s1",
@@ -2447,7 +2807,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/christian-s1.pdf",
 "kb": 1013,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الأولى.pdf"
+"orig": "التربية المسيحية الدورة الأولى.pdf",
+"img": "exams/2022/literary/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-christian-s2",
@@ -2460,7 +2822,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/christian-s2.pdf",
 "kb": 278,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الثانية.pdf"
+"orig": "التربية المسيحية الدورة الثانية.pdf",
+"img": "exams/2022/literary/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-christian-s3",
@@ -2473,7 +2837,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/christian-s3.pdf",
 "kb": 727,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الثالثة.pdf"
+"orig": "التربية المسيحية الدورة الثالثة.pdf",
+"img": "exams/2022/literary/christian-s3",
+"ratio": 1.2946
 },
 {
 "id": "2022-literary-english-s1-p1",
@@ -2486,7 +2852,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/english-s1-p1.pdf",
 "kb": 359,
 "pages": 5,
-"orig": "انجليزي أدبي ورقة اولى - الدورة ألاولى 2022.pdf"
+"orig": "انجليزي أدبي ورقة اولى - الدورة ألاولى 2022.pdf",
+"img": "exams/2022/literary/english-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-english-s1-p2",
@@ -2499,7 +2867,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/english-s1-p2.pdf",
 "kb": 307,
 "pages": 4,
-"orig": "انجليزي أدبي ورقة ثانية  - الدورة ألاولى 2022.pdf"
+"orig": "انجليزي أدبي ورقة ثانية  - الدورة ألاولى 2022.pdf",
+"img": "exams/2022/literary/english-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-english-s2-p1",
@@ -2512,7 +2882,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/english-s2-p1.pdf",
 "kb": 1117,
 "pages": 6,
-"orig": "انجليزي أدبي ورقة اولى- الدورة الثانية 2022.pdf"
+"orig": "انجليزي أدبي ورقة اولى- الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/english-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-english-s2-p2",
@@ -2525,7 +2897,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/english-s2-p2.pdf",
 "kb": 831,
 "pages": 5,
-"orig": "انجليزي ادبي ورقة ثانية - الدورة الثانية 2022.pdf"
+"orig": "انجليزي ادبي ورقة ثانية - الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/english-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-english-s3",
@@ -2538,7 +2912,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/english-s3.pdf",
 "kb": 329,
 "pages": 7,
-"orig": "انجليزي أدبي -الدورة الاستكمالية 2022.pdf"
+"orig": "انجليزي أدبي -الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/literary/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-history-s1",
@@ -2551,7 +2927,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/history-s1.pdf",
 "kb": 220,
 "pages": 3,
-"orig": "تاريخ الادبي الدورة الاولى 2022.pdf"
+"orig": "تاريخ الادبي الدورة الاولى 2022.pdf",
+"img": "exams/2022/literary/history-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-history-s2",
@@ -2564,7 +2942,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/history-s2.pdf",
 "kb": 203,
 "pages": 2,
-"orig": "التاريخ  الادبي- الدورة الثانية 2022.pdf"
+"orig": "التاريخ  الادبي- الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/history-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-history-s3",
@@ -2577,7 +2957,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/history-s3.pdf",
 "kb": 184,
 "pages": 1,
-"orig": "التاريخ  الادبي- الدورة الاستكمالية  2022.pdf"
+"orig": "التاريخ  الادبي- الدورة الاستكمالية  2022.pdf",
+"img": "exams/2022/literary/history-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-islamic-s1",
@@ -2590,7 +2972,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/islamic-s1.pdf",
 "kb": 338,
 "pages": 3,
-"orig": "تربية اسلامية دورة أولى 2022.pdf"
+"orig": "تربية اسلامية دورة أولى 2022.pdf",
+"img": "exams/2022/literary/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-islamic-s2",
@@ -2603,7 +2987,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/islamic-s2.pdf",
 "kb": 298,
 "pages": 2,
-"orig": "تربية اسلامية دورة ثانية.pdf"
+"orig": "تربية اسلامية دورة ثانية.pdf",
+"img": "exams/2022/literary/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-islamic-s3",
@@ -2616,7 +3002,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/islamic-s3.pdf",
 "kb": 317,
 "pages": 2,
-"orig": "تربية اسلامية الدورة الاستكمالية.pdf"
+"orig": "تربية اسلامية الدورة الاستكمالية.pdf",
+"img": "exams/2022/literary/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-math-s1",
@@ -2629,7 +3017,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/math-s1.pdf",
 "kb": 374,
 "pages": 3,
-"orig": "الرياضيات - الأدبي  - الدورة الأولى 2022.pdf"
+"orig": "الرياضيات - الأدبي  - الدورة الأولى 2022.pdf",
+"img": "exams/2022/literary/math-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-math-s2",
@@ -2642,7 +3032,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/math-s2.pdf",
 "kb": 285,
 "pages": 3,
-"orig": "الرياضيات - الأدبي - الدورة الثانية 2022.pdf"
+"orig": "الرياضيات - الأدبي - الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/math-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-math-s3",
@@ -2655,7 +3047,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/math-s3.pdf",
 "kb": 917,
 "pages": 2,
-"orig": "رياضيات - الأدبي - الاستكمالية 2022.pdf"
+"orig": "رياضيات - الأدبي - الاستكمالية 2022.pdf",
+"img": "exams/2022/literary/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-sci_culture-s1",
@@ -2668,7 +3062,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/sci_culture-s1.pdf",
 "kb": 842,
 "pages": 3,
-"orig": "الثقافة العلمية- الادبي  الدورة الاولى 2022.pdf"
+"orig": "الثقافة العلمية- الادبي  الدورة الاولى 2022.pdf",
+"img": "exams/2022/literary/sci_culture-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-sci_culture-s2",
@@ -2681,7 +3077,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/sci_culture-s2.pdf",
 "kb": 363,
 "pages": 3,
-"orig": "الثقافة العلمية- الادبي  الدورة الثانية 2022.pdf"
+"orig": "الثقافة العلمية- الادبي  الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/sci_culture-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-sci_culture-s3",
@@ -2694,7 +3092,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/sci_culture-s3.pdf",
 "kb": 207,
 "pages": 2,
-"orig": "ثقافة علمية -الدورة الاستكمالية الثالثة 2022.pdf"
+"orig": "ثقافة علمية -الدورة الاستكمالية الثالثة 2022.pdf",
+"img": "exams/2022/literary/sci_culture-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-tech-s1",
@@ -2707,7 +3107,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/tech-s1.pdf",
 "kb": 633,
 "pages": 5,
-"orig": "تكنولوجيا المعلومات- الادبي- الدورة الاولى 2022.pdf"
+"orig": "تكنولوجيا المعلومات- الادبي- الدورة الاولى 2022.pdf",
+"img": "exams/2022/literary/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-tech-s2",
@@ -2720,7 +3122,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/tech-s2.pdf",
 "kb": 541,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الادبي - الدورة الثانية 2022.pdf"
+"orig": "تكنولوجيا المعلومات - الادبي - الدورة الثانية 2022.pdf",
+"img": "exams/2022/literary/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-literary-tech-s3",
@@ -2733,7 +3137,9 @@ window.EXAMS = {
 "file": "exams/2022/literary/tech-s3.pdf",
 "kb": 463,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات- الادبي  الدورة الاستكمالية 2022.pdf"
+"orig": "تكنولوجيا المعلومات- الادبي  الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/literary/tech-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-arabic-s1",
@@ -2746,7 +3152,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/arabic-s1.pdf",
 "kb": 935,
 "pages": 5,
-"orig": "اللغة العربية الدورة الاولى 2022.pdf"
+"orig": "اللغة العربية الدورة الاولى 2022.pdf",
+"img": "exams/2022/scientific/arabic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-arabic-s2",
@@ -2759,7 +3167,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/arabic-s2.pdf",
 "kb": 851,
 "pages": 4,
-"orig": "اللغة العربية الدورة الثانية 2022.pdf"
+"orig": "اللغة العربية الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/arabic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-arabic-s3",
@@ -2772,7 +3182,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/arabic-s3.pdf",
 "kb": 336,
 "pages": 5,
-"orig": "اللغة العربية الدورة الاستكمالية 2022.pdf"
+"orig": "اللغة العربية الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/arabic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-biology-s1",
@@ -2785,7 +3197,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/biology-s1.pdf",
 "kb": 934,
 "pages": 5,
-"orig": "الأحياء - الدورة الأولى 2022.pdf"
+"orig": "الأحياء - الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/biology-s1",
+"ratio": 1.2946
 },
 {
 "id": "2022-scientific-biology-s2",
@@ -2798,7 +3212,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/biology-s2.pdf",
 "kb": 357,
 "pages": 4,
-"orig": "الأحياء - الدورة الثانية 2022.pdf"
+"orig": "الأحياء - الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/biology-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-biology-s3",
@@ -2811,7 +3227,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/biology-s3.pdf",
 "kb": 313,
 "pages": 4,
-"orig": "الأحياء - الدورة الاستكمالية 2022.pdf"
+"orig": "الأحياء - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/biology-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-chemistry-s1",
@@ -2824,7 +3242,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/chemistry-s1.pdf",
 "kb": 584,
 "pages": 5,
-"orig": "الكيمياء - الدورة الأولى 2022.pdf"
+"orig": "الكيمياء - الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/chemistry-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-chemistry-s2",
@@ -2837,7 +3257,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/chemistry-s2.pdf",
 "kb": 410,
 "pages": 3,
-"orig": "الكيمياء - الدورة الثانية 2022.pdf"
+"orig": "الكيمياء - الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/chemistry-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-chemistry-s3",
@@ -2850,7 +3272,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/chemistry-s3.pdf",
 "kb": 410,
 "pages": 3,
-"orig": "الكيمياء - الدورة الاستكمالية 2022.pdf"
+"orig": "الكيمياء - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/chemistry-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-christian-s1",
@@ -2863,7 +3287,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/christian-s1.pdf",
 "kb": 1013,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الأولى 2022.pdf"
+"orig": "التربية المسيحية الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/christian-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-christian-s2",
@@ -2876,7 +3302,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/christian-s2.pdf",
 "kb": 278,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الثانية 2022.pdf"
+"orig": "التربية المسيحية الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/christian-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-christian-s3",
@@ -2889,7 +3317,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/christian-s3.pdf",
 "kb": 727,
 "pages": 4,
-"orig": "التربية المسيحية الدورة الاستكمالية 2022.pdf"
+"orig": "التربية المسيحية الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/christian-s3",
+"ratio": 1.2946
 },
 {
 "id": "2022-scientific-english-s1",
@@ -2902,7 +3332,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/english-s1.pdf",
 "kb": 352,
 "pages": 5,
-"orig": "اللغة الإنجليزية الدورة الأولى 2022.pdf"
+"orig": "اللغة الإنجليزية الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/english-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-english-s2",
@@ -2915,7 +3347,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/english-s2.pdf",
 "kb": 1134,
 "pages": 6,
-"orig": "اللغة الإنجليزية الدورة الثانية 2022.pdf"
+"orig": "اللغة الإنجليزية الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/english-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-english-s3",
@@ -2928,7 +3362,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/english-s3.pdf",
 "kb": 252,
 "pages": 5,
-"orig": "اللغة الإنجليزية الدورة الاستكمالية 2022.pdf"
+"orig": "اللغة الإنجليزية الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/english-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-islamic-s1",
@@ -2941,7 +3377,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/islamic-s1.pdf",
 "kb": 338,
 "pages": 3,
-"orig": "التربية الإسلامية - الدورة الأولى 2022.pdf"
+"orig": "التربية الإسلامية - الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/islamic-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-islamic-s2",
@@ -2954,7 +3392,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/islamic-s2.pdf",
 "kb": 298,
 "pages": 2,
-"orig": "التربية الإسلامية - الدورة الثانية 2022.pdf"
+"orig": "التربية الإسلامية - الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/islamic-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-islamic-s3",
@@ -2967,7 +3407,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/islamic-s3.pdf",
 "kb": 317,
 "pages": 2,
-"orig": "التربية الإسلامية - الدورة الاستكمالية 2022.pdf"
+"orig": "التربية الإسلامية - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/islamic-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-math-s1-p1",
@@ -2980,7 +3422,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/math-s1-p1.pdf",
 "kb": 411,
 "pages": 3,
-"orig": "الرياضيات - الورقة الأولى الدورة الأولى 2022.pdf"
+"orig": "الرياضيات - الورقة الأولى الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/math-s1-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-math-s1-p2",
@@ -2993,7 +3437,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/math-s1-p2.pdf",
 "kb": 362,
 "pages": 3,
-"orig": "الرياضيات - الورقة الثانية الدورة الأولى 2022.pdf"
+"orig": "الرياضيات - الورقة الثانية الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/math-s1-p2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-math-s2-p1",
@@ -3006,7 +3452,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/math-s2-p1.pdf",
 "kb": 284,
 "pages": 2,
-"orig": "الرياضيات - الورقة الأولى الدورة الثانية 2022.pdf"
+"orig": "الرياضيات - الورقة الأولى الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/math-s2-p1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-math-s2-p2",
@@ -3019,7 +3467,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/math-s2-p2.pdf",
 "kb": 283,
 "pages": 2,
-"orig": "الرياضيات - الورقة الثانية الدورة الثانية 2022.pdf"
+"orig": "الرياضيات - الورقة الثانية الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/math-s2-p2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-math-s3",
@@ -3032,7 +3482,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/math-s3.pdf",
 "kb": 312,
 "pages": 2,
-"orig": "الرياضيات - الدورة الاستكمالية 2022.pdf"
+"orig": "الرياضيات - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/math-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-physics-s1",
@@ -3045,7 +3497,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/physics-s1.pdf",
 "kb": 496,
 "pages": 5,
-"orig": "الفيزياء - الدورة الأولى 2022.pdf"
+"orig": "الفيزياء - الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/physics-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-physics-s2",
@@ -3058,7 +3512,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/physics-s2.pdf",
 "kb": 464,
 "pages": 4,
-"orig": "الفيزياء - الدورة الثانية 2022.pdf"
+"orig": "الفيزياء - الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/physics-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-physics-s3",
@@ -3071,7 +3527,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/physics-s3.pdf",
 "kb": 414,
 "pages": 3,
-"orig": "الفيزياء - الدورة الاستكمالية 2022.pdf"
+"orig": "الفيزياء - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/physics-s3",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-tech-s1",
@@ -3084,7 +3542,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/tech-s1.pdf",
 "kb": 668,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الدورة الأولى 2022.pdf"
+"orig": "تكنولوجيا المعلومات - الدورة الأولى 2022.pdf",
+"img": "exams/2022/scientific/tech-s1",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-tech-s2",
@@ -3097,7 +3557,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/tech-s2.pdf",
 "kb": 1078,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الدورة الثانية 2022.pdf"
+"orig": "تكنولوجيا المعلومات - الدورة الثانية 2022.pdf",
+"img": "exams/2022/scientific/tech-s2",
+"ratio": 1.4146
 },
 {
 "id": "2022-scientific-tech-s3",
@@ -3110,7 +3572,9 @@ window.EXAMS = {
 "file": "exams/2022/scientific/tech-s3.pdf",
 "kb": 381,
 "pages": 4,
-"orig": "تكنولوجيا المعلومات - الدورة الاستكمالية 2022.pdf"
+"orig": "تكنولوجيا المعلومات - الدورة الاستكمالية 2022.pdf",
+"img": "exams/2022/scientific/tech-s3",
+"ratio": 1.4146
 }
 ]
 };

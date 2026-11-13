@@ -5,36 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>ناجح — التوجيهي، بخطة تناسبك أنت</title>
   <meta name="description" content="ناجح: منصة تعليمية لطلبة التوجيهي في فلسطين — خطط دراسة شخصية، دروس تفاعلية، امتحانات سابقة وتذكيرات واتساب. Najih: personalised Tawjihi learning for Palestine.">
-  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0E141B" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="ناجح · Najih — Tawjihi, with a plan built around you">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C1620" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="ناجح · Najih — معلّم ذكي يتعلّم كيف تتعلّم">
+  <meta property="og:image" content="https://najih.net/assets/img/icon-512.png">
   <meta property="og:description" content="خطة دراسة شخصية لكل فروع التوجيهي الفلسطيني. Personalised study plans for every Palestinian Tawjihi branch.">
   <meta property="og:url" content="https://najih.net/">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Aref+Ruqaa:wght@400;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
   <a class="skip" href="#app" data-t="skip">تخطَّ إلى المحتوى</a>
   <header class="topbar">
     <div class="wrap topbar-in">
-      <a class="logo" href="#/" aria-label="Najih">
-        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><g fill="var(--on-brand)"><path d="M16 6l3 3-3 3-3-3zM16 20l3 3-3 3-3-3zM9 13l3 3-3 3-3-3zM23 13l3 3-3 3-3-3z"/><path d="M16 13.2l2.8 2.8-2.8 2.8-2.8-2.8z" opacity=".55"/></g></svg>
-        <span data-t="brand">ناجح</span>
+      <a class="logo" href="#/" aria-label="ناجح · Najih">
+        <img class="logo-mark" src="assets/img/logo-mark.svg" width="36" height="36" alt="">
+        <span class="logo-word" data-t="brand">ناجح</span>
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav" aria-label="Main" data-t-aria="nav_main">
         <a href="#/learn" data-nav="learn" data-t="nav_learn"></a>
         <a href="#/exams" data-nav="exams" data-t="nav_exams"></a>
-        <a href="#/tutors" data-nav="tutors" data-t="nav_tutors"></a>
         <a href="#/dashboard" data-nav="dashboard" data-t="nav_dashboard"></a>
       </nav>
       <div class="top-actions">
-        <button id="lang-toggle" class="btn quiet sm" lang="en"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a14 14 0 0 0 0 19 14 14 0 0 0 0-19M2.5 12h19"/></svg><span data-t="switch_lang"></span></button>
+        <button id="lang-toggle" type="button" class="btn quiet sm lang-btn" data-t-aria="lang_aria"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a14 14 0 0 0 0 19 14 14 0 0 0 0-19M2.5 12h19"/></svg><span class="lang-txt" data-t="switch_lang"></span></button>
         <a id="top-cta" class="btn primary sm" href="#/start"></a>
       </div>
     </div>
@@ -44,33 +46,39 @@
 
   <footer class="footer">
     <div class="wrap footer-in">
-      <div><a class="logo" href="#/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><g fill="var(--on-brand)"><path d="M16 6l3 3-3 3-3-3zM16 20l3 3-3 3-3-3zM9 13l3 3-3 3-3-3zM23 13l3 3-3 3-3-3z"/></g></svg><span data-t="brand"></span></a>
-        <p class="muted small" data-t="foot_about"></p></div>
-      <div><h4 data-t="foot_product"></h4><a href="#/learn" data-t="nav_learn"></a><a href="#/exams" data-t="nav_exams"></a><a href="#/tutors" data-t="nav_tutors"></a></div>
-      <div><h4 data-t="foot_contact"></h4><a href="#/join" data-t="via_wa"></a><a href="#/join" data-t="via_fb"></a></div>
+      <div class="foot-brand">
+        <a class="logo" href="#/" aria-label="ناجح · Najih"><img class="logo-mark" src="assets/img/logo-mark-white.svg" width="34" height="34" alt=""><span class="logo-word" data-t="brand"></span></a>
+        <p data-t="foot_about"></p>
+      </div>
+      <nav class="foot-links" aria-label="Footer" data-t-aria="nav_footer">
+        <a href="#/join" data-t="foot_contact"></a>
+        <a href="#/tutors" data-t="nav_tutors"></a>
+      </nav>
     </div>
-    <div class="wrap footer-base small muted">© <span id="year"></span> najih.net · <span data-t="beta"></span></div>
+    <div class="wrap footer-base">
+      <p><span data-t="foot_credit"></span> <a href="https://www.elearn.edu.ps/" rel="noopener" target="_blank"><bdi>elearn.edu.ps</bdi></a></p>
+      <p>© <span id="year"></span> <bdi>najih.net</bdi></p>
+    </div>
   </footer>
 
-  <nav class="tabbar" aria-label="Mobile">
+  <nav class="tabbar" aria-label="Mobile" data-t-aria="nav_main">
     <a href="#/" data-nav="home"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="nav_home"></span></a>
-    <a href="#/learn" data-nav="learn"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg><span data-t="nav_learn"></span></a>
+    <a href="#/learn" data-nav="learn"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg><span data-t="nav_learn"></span></a>
+    <a href="#/exams" data-nav="exams"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6M16 13H8M16 17H8"/></svg><span data-t="nav_exams_s"></span></a>
     <a href="#/dashboard" data-nav="dashboard"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><span data-t="nav_dashboard"></span></a>
-    <a href="#/exams" data-nav="exams"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6M16 13H8M16 17H8"/></svg><span data-t="nav_exams"></span></a>
-    <a href="#/tutors" data-nav="tutors"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-t="nav_tutors"></span></a>
   </nav>
 
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="assets/js/armath.js"></script>
-  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/armath.js?v=5"></script>
+  <script defer src="assets/js/config.js?v=5"></script>
   <script defer src="assets/js/i18n.js"></script>
-  <script defer src="assets/js/icons.js"></script>
-  <script defer src="assets/js/curriculum.js"></script>
-  <script defer src="assets/js/data.js"></script>
-  <script defer src="assets/js/books.js"></script>
-  <script defer src="assets/js/exams.js"></script>
-  <script defer src="assets/js/solutions.js"></script>
-  <script defer src="assets/js/explainers.js"></script>
-  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/icons.js?v=5"></script>
+  <script defer src="assets/js/curriculum.js?v=5"></script>
+  <script defer src="assets/js/data.js?v=5"></script>
+  <script defer src="assets/js/books.js?v=5"></script>
+  <script defer src="assets/js/exams.js?v=5"></script>
+  <script defer src="assets/js/solutions.js?v=5"></script>
+  <script defer src="assets/js/explainers.js?v=5"></script>
+  <script defer src="assets/js/app.js?v=5"></script>
 </body>
 </html>

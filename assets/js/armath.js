@@ -37,12 +37,18 @@
         const m = /^\\([a-zA-Z]+|.)/.exec(tex.slice(i)); const name = m[0];
         if (name === "\\mathbb") { const g = group(tex, i + name.length); const k = g.text.replace(/[{}\s]/g, ""); out += BB[k] ? `\\text{${BB[k]}}` : name + g.text; i = g.end; continue; }
         if (VERBATIM.has(name)) { const g = group(tex, i + name.length); out += name + g.text; i = g.end; continue; }
+        if (name === "\\lim") { // stacked limit: under-script set clear of the descender of «نهـا», then a thin space before the operand
+          out += CMDS[name]; let j = i + name.length; while (tex[j] === " ") j++;
+          if (tex[j] === "_") { const g = group(tex, j + 1); if (g.text) { out += `_{\\vphantom{\\big(}${toArabic(g.text.slice(1, -1))}}\\,`; i = g.end; continue; } }
+          i = j; continue;
+        }
         if (CMDS[name]) { out += CMDS[name]; i += name.length; continue; }
         out += name; i += name.length; continue;
       }
       if (/[0-9]/.test(c)) { const m = /^[0-9]+(\.[0-9]+)?/.exec(tex.slice(i)); out += `{\\text{${arDigits(m[0])}}}`; i += m[0].length; continue; }
       if (/[a-zA-Z]/.test(c)) { out += LETTERS[c] ? `{\\text{${LETTERS[c]}}}` : c; i++; continue; }
       if (c === ",") { out += "{\\text{،}}"; i++; continue; }
+      if (c === "?") { out += "{\\text{؟}}"; i++; continue; }
       out += c; i++;
     }
     return out;

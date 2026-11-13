@@ -102,8 +102,12 @@
           const showH = t < 33;
           setHTML("v1l", $(".v1l"), showH ? (X.ar ? "هـ" : "h") : (X.ar ? "س" : "x"));
           setHTML("v2l", $(".v2l"), X.ar ? (showH && t < 27 ? "ميل القاطع" : "ميل المماس") : (showH && t < 27 ? "secant slope" : "tangent slope"));
-          setHTML("v1", $(".v1"), t < 9 ? "—" : X.num(showH ? h : a, 2));
-          setHTML("v2", $(".v2"), t < 9 ? "—" : X.num(showH ? (t < 27 ? mSec : 2) : 2 * a, 2));
+          // Value rows appear only once there is a value to show (no placeholder dashes).
+          $(".exp-vals").hidden = t < 9;
+          if (t >= 9) {
+            setHTML("v1", $(".v1"), X.num(showH ? h : a, 2));
+            setHTML("v2", $(".v2"), X.num(showH ? (t < 27 ? mSec : 2) : 2 * a, 2));
+          }
         };
       },
     },
@@ -130,12 +134,12 @@
       <div class="vp-cap" dir="${ar ? "rtl" : "ltr"}" aria-live="polite"></div>
       <div class="vp-ctrl" dir="ltr">
         <button class="vp-btn vp-play" aria-label="${T("تشغيل", "Play")}">${I("play")}</button>
-        <span class="vp-time">0:00</span>
+        <span class="vp-time">${mmss(0)}</span>
         <div class="vp-scrub"><div class="vp-chap">${X.chapters.map((c) => `<i style="left:${(c.t / X.duration) * 100}%" title="${L(c)}"></i>`).join("")}</div>
           <input type="range" min="0" max="${X.duration}" step="0.05" value="0" aria-label="${T("موضع التشغيل", "Seek")}"></div>
         <span class="vp-time vp-dur">${mmss(X.duration)}</span>
-        <button class="vp-btn vp-rate" aria-label="${T("السرعة", "Speed")}">1×</button>
-        <button class="vp-btn vp-cc" aria-pressed="true" aria-label="${T("الترجمة", "Captions")}">CC</button>
+        <button class="vp-btn vp-rate" aria-label="${T("السرعة", "Speed")}">${rateTxt(1)}</button>
+        <button class="vp-btn vp-cc" aria-pressed="true" aria-label="${T("النص المكتوب", "Captions")}">${I("captions")}</button>
         <button class="vp-btn vp-voice" aria-pressed="false" aria-label="${T("التعليق الصوتي", "Narration")}">${I("volume")}</button>
       </div>
       <div class="vp-chapters" dir="${ar ? "rtl" : "ltr"}">${X.chapters.map((c, i) => `<button data-t="${c.t}"><span>${ctx.num(i + 1)}</span>${L(c)}</button>`).join("")}</div>
@@ -148,7 +152,10 @@
     let t = 0, playing = false, rate = 1, raf = 0, prev = 0, cueIdx = -1, cc = true, voice = false;
     const synth = window.speechSynthesis;
     if (!synth) voiceBtn.disabled = true;
-    function mmss(s) { s = Math.max(0, Math.round(s)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }
+    // Arabic UI: Arabic-Indic digits for the timer and speed, like everywhere else.
+    function digits(x) { return ar ? String(x).replace(/\d/g, (c) => "٠١٢٣٤٥٦٧٨٩"[c]).replace(".", "٫") : String(x); }
+    function mmss(s) { s = Math.max(0, Math.round(s)); return digits(`${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`); }
+    function rateTxt(r) { return `${digits(r)}×`; }
     function speak(c) {
       if (!voice || !synth || !c) return;
       synth.cancel();
@@ -196,7 +203,7 @@
     playBtn.onclick = toggle; big.onclick = play;
     svg.addEventListener("click", toggle);
     range.addEventListener("input", () => { t = +range.value; cueIdx = -1; draw(); });
-    rateBtn.onclick = () => { rate = rate === 1 ? 1.5 : rate === 1.5 ? 0.75 : 1; rateBtn.textContent = `${rate}×`; };
+    rateBtn.onclick = () => { rate = rate === 1 ? 1.5 : rate === 1.5 ? 0.75 : 1; rateBtn.textContent = rateTxt(rate); };
     ccBtn.onclick = () => { cc = !cc; ccBtn.setAttribute("aria-pressed", cc); draw(); };
     voiceBtn.onclick = () => { voice = !voice; voiceBtn.setAttribute("aria-pressed", voice); if (voice && playing) speak(X.cues[cueIdx]); else synth?.cancel(); };
     chapBtns.forEach((b) => (b.onclick = () => { t = +b.dataset.t; cueIdx = -1; draw(); if (!playing) play(); }));
