@@ -1,6 +1,20 @@
 (() => {
   "use strict";
   const CFG = window.NAJIH_CONFIG, I = window.icon;
+  // Extra line icons for the course pathway (same 24×24 stroke style as icons.js).
+  Object.assign(window.ICONS, {
+    map: '<path d="M9 4 3 6.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/>',
+    flag: '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
+    pin: '<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
+    print: '<path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/>',
+    cards: '<rect x="3" y="6" width="14" height="15" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v13"/>',
+    alert: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5h.01"/>',
+    star: '<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/>',
+    radar: '<path d="M12 3 20.5 9.2 17.3 19.2H6.7L3.5 9.2z"/><path d="M12 8l4 3-1.5 4.5h-5L8 11z"/>',
+    list: '<path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>',
+    table: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M10 4v16"/>',
+    eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  });
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -281,7 +295,38 @@
   const papersFor = (bid, sid) => (window.EXAMS?.papers || []).filter((x) => x.b === bid && (!sid || x.sub === sid));
   const tl = (o) => (S.lang === "en" ? o.en || o.ar : o.ar.replace(/[0-9]/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]));
 
+  // Entry card for the Scientific-maths pathway (assets/js/course-ui.js). Quiet: one line, one link.
+  const courseEntry = (kind = "br") => `<a class="c-entry ${kind}" href="#/course/math-sci">
+      <span class="c-entry-ic">${I("map")}</span>
+      <span class="c-entry-t"><span class="eyebrow">${T("c_entry_eb")}</span><b>${T("c_entry_t")}</b><span class="small muted">${T("c_entry_d")}</span></span>
+      ${I("chevron", "i-dir c-entry-go")}</a>`;
+
+  // Course pathway: data + UI load lazily, only on #/course/… routes.
+  const loadScript = (src) => new Promise((res) => {
+    if (document.querySelector(`script[data-src="${src}"]`)) return res(true);
+    const el = Object.assign(document.createElement("script"), { src: src + "?v=8" });
+    el.dataset.src = src; el.onload = () => res(true); el.onerror = () => { el.remove(); res(false); };
+    document.head.append(el);
+  });
+  let courseReady = null;
+  const loadCourse = () => (courseReady = courseReady || (async () => {
+    await loadScript("assets/js/course-math-sci.js");
+    await loadScript("assets/js/course-math-sci-lessons.js"); // optional: the pathway still works (road, radar, blocks) without lessons
+    await loadScript("assets/js/course-ui.js");
+    return !!(window.COURSE_MATH_SCI && window.NajihCourse);
+  })());
+
   const views = {
+    course(...parts) {
+      const token = (route.token = (route.token || 0) + 1);
+      if (!(window.COURSE_MATH_SCI && window.NajihCourse)) app().innerHTML = `<section class="wrap section"><p class="muted c-loading" role="status">${T("c_loading")}</p></section>`;
+      loadCourse().then((ok) => {
+        if (token !== route.token) return; // the user navigated away meanwhile
+        if (!ok) { app().innerHTML = `<section class="wrap section narrow"><div class="card empty"><h1>${T("c_load_fail_t")}</h1><p class="muted">${T("c_load_fail_d")}</p><a class="btn primary" href="#/learn">${T("nav_learn")}</a></div></section>`; return; }
+        window.NajihCourse.render(parts);
+      });
+    },
+
     home() {
       const sample = window.LESSONS[0];
       // Deck-style section head: English eyebrow (tracked, uppercase), short headline with one accent phrase, one sentence.
@@ -309,6 +354,7 @@
         </div>
         <div class="h-hero-logo"><img src="assets/img/logo-full.svg" width="1326" height="657" alt="${T("brand")}" class="h-logo-light"><img src="assets/img/logo-full-white.svg" width="1326" height="657" alt="" class="h-logo-dark"></div>
       </div></section>
+      <div class="wrap h-entry">${courseEntry("home")}</div>
 
       <section class="wrap hm-sec" aria-labelledby="h-built"><div class="block-forest h-built">
         <div class="h-built-copy">
@@ -351,7 +397,7 @@
         ${head("What makes Najih different / 03", "h_pil", { id: "h-pil" })}
         <ol class="h-pillars">${[1, 2, 3, 4, 5, 6].map((n) => `<li><span class="num-badge h-gold">${seq(n)}</span><h3>${T("h_p" + n + "_t")}</h3><p>${T("h_p" + n + "_d")}</p></li>`).join("")}</ol>
         <p class="note-mint h-idea"><b>${T("h_idea_k")}</b> ${T("h_idea_d")}</p>
-        <a class="text-link" href="#/learn">${T("h_pil_cta")}${I("arrow", "flip")}</a>
+        <p class="h-links"><a class="text-link" href="#/learn">${T("h_pil_cta")}${I("arrow", "flip")}</a></p>
       </section>
 
       <section class="wrap hm-sec" aria-labelledby="h-road">
@@ -548,6 +594,7 @@
       app().innerHTML = `<section class="wrap section br-page">
         <div class="sec-head left"><p class="eyebrow" lang="en">Subjects</p><h1>${T("br_prefix")} ${esc(L(b.name))}</h1><p class="lede">${T("br_lede")}</p></div>
         <nav class="chips scroll-x br-chips" aria-label="${T("f_branch")}">${window.BRANCHES.map((x) => `<a class="chip" href="#/branch/${x.id}" ${x.id === id ? 'aria-current="page"' : ""}>${esc(L(x.name))}</a>`).join("")}</nav>
+        ${b.subjects.includes("math") && (id === "scientific") ? courseEntry("sp") : ""}
         <ul class="subj-grid">${b.subjects.map((s) => {
           const cs = curSubject(id, s), nu = unitCount(cs), m = subjectMastery(s);
           return `<li><a class="subj-card" href="#/subject/${id}/${s}">${tile(s, "lg")}
@@ -590,6 +637,7 @@
       app().innerHTML = `<section class="wrap section subject-page">
         <a class="back-link" href="#/branch/${bid}">${I("arrow", "back-ic")}${T("br_prefix")} ${esc(L(b.name))}</a>
         <header class="sp-head">${tile(sid, "xl")}<div><h1>${esc(subjName(sid))}</h1><p class="lede">${T("sp_lede")}</p></div></header>
+        ${bid === "scientific" && sid === "math" ? courseEntry("sp") : ""}
         <div class="sp-lead">${lead}</div>
         ${links.length ? `<nav class="sp-links" aria-label="${T("sp_res")}">${links.join("")}</nav>` : ""}
         <h2 class="sp-h">${T("sp_units")}</h2>
@@ -813,7 +861,7 @@
     },
 
     // Paper viewer: pre-rendered WebP pages (tools/render_exam_pages.py), not PDF.js, so Arabic reads exactly like the original.
-    paper(id) {
+    paper(id, pageArg) {
       const E = window.EXAMS, p = E.papers.find((x) => x.id === id); if (!p) return go("#/exams");
       const sol = window.SOLUTIONS?.[id], n = p.pages || 0, H = Math.round(1300 * (p.ratio || 1.4146));
       const solOpen = !!sol && window.matchMedia("(min-width: 1100px)").matches; // answers start open on desktop, set in the markup so nothing shifts after load
@@ -904,6 +952,15 @@
         requestAnimationFrame(() => { ticking = false; const { cur } = curPage(); if (cur) pgi.textContent = pageOf(+cur.dataset.n); });
       };
       if (n > 1) window.addEventListener("scroll", onScroll, { passive: true });
+      // Deep link #/paper/<id>/<page>: open at that page (pages have fixed width/height, so the offset is stable before images load).
+      const startPage = Math.min(n, Math.max(1, parseInt(pageArg, 10) || 1));
+      if (startPage > 1) requestAnimationFrame(() => requestAnimationFrame(() => {
+        const el = $("#pg-" + startPage); if (!el) return;
+        const top = ($(".topbar")?.offsetHeight || 0) + ($(".pv-bar")?.offsetHeight || 0) + 8;
+        window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - top);
+        el.classList.add("pv-target"); pgi.textContent = pageOf(startPage);
+        el.querySelector("img")?.setAttribute("loading", "eager");
+      }));
 
       if (!sol) return;
       // Solutions: side panel on wide screens, bottom sheet below 1100px.
@@ -986,13 +1043,15 @@
   // ───────────────────────── Router & global handlers ─────────────────────────
   function go(h) { if (location.hash === h) route(); else location.hash = h; }
   function route() {
-    const [, name = "", arg, arg2] = (location.hash || "#/").split("/");
+    const [, name = "", ...rest] = (location.hash || "#/").split("/");
+    const [arg, arg2] = rest;
     window.speechSynthesis?.cancel(); window.__layout = null;
     const view = views[name] ? name : "home";
     focusMode(false); applyLang();
     $("#top-cta").hidden = !!S.profile && view === "dashboard"; // the nav pill already says «خطتي» there
-    $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === ({ branch: "learn", subject: "learn", read: "learn", paper: "exams" }[view] || view)));
-    views[view](decodeURIComponent(arg || ""), arg2);
+    $$("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", a.dataset.nav === ({ branch: "learn", subject: "learn", read: "learn", paper: "exams", course: "learn" }[view] || view)));
+    if (view === "course") views.course(...rest.map((x) => decodeURIComponent(x || "")));
+    else { route.token = (route.token || 0) + 1; views[view](decodeURIComponent(arg || ""), arg2); }
     window.scrollTo(0, 0);
     $("#app").focus({ preventScroll: true });
   }
@@ -1006,7 +1065,8 @@
   document.addEventListener("keydown", (e) => {
     if (!document.body.classList.contains("focus-mode") || e.altKey || e.ctrlKey || e.metaKey) return;
     const tgt = e.target, typing = tgt.matches("input, select, textarea");
-    if (e.key === "Escape") { $("[data-exit]")?.click(); return; }
+    if (e.key === "Escape") { if (document.querySelector("[data-esc-open]")) return; $("[data-exit]")?.click(); return; }
+    if (tgt.matches("textarea, [contenteditable]")) return;
     // Enter checks/continues — also right after choosing an option with 1–4 (focus is then on the option button).
     if (e.key === "Enter" && !tgt.matches("button:not(.option), a, .handle")) {
       const m = $(".b-main"); if (m && !m.disabled) { e.preventDefault(); m.click(); } return;
@@ -1014,5 +1074,9 @@
     const n = "1234".indexOf(e.key) + 1 || "١٢٣٤".indexOf(e.key) + 1;
     if (n && !typing) { const o = $$(".option")[n - 1]; if (o && !o.disabled) { o.click(); o.focus(); } }
   });
+  // Shared helpers for lazily loaded modules (assets/js/course-ui.js). S is re-read on every call (reset replaces it).
+  window.Najih = {
+    S: () => S, save, T, L, num, pct, seq, esc, $, $$, I, go, app, mark, Player, focusMode, mathAttr, renderMath, fill, fmtDate, normDigits, logActivity, tag, bar, today, DAY,
+  };
   route();
 })();

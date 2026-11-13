@@ -46,7 +46,14 @@
         out += name; i += name.length; continue;
       }
       if (/[0-9]/.test(c)) { const m = /^[0-9]+(\.[0-9]+)?/.exec(tex.slice(i)); out += `{\\text{${arDigits(m[0])}}}`; i += m[0].length; continue; }
-      if (/[a-zA-Z]/.test(c)) { out += LETTERS[c] ? `{\\text{${LETTERS[c]}}}` : c; i++; continue; }
+      if (/[a-zA-Z]/.test(c)) {
+        if (!LETTERS[c]) { out += c; i++; continue; }
+        // Derivative marks as printed in the book and papers: قَ (first), قً (second); third and higher stay ق^(٣)
+        let p = 0; while (tex[i + 1 + p] === "'") p++;
+        const mark = p === 1 ? "َ" : p === 2 ? "ً" : "";
+        out += `{\\text{${LETTERS[c]}${mark}}}` + (mark ? "" : "'".repeat(p));
+        i += 1 + p; continue;
+      }
       if (c === ",") { out += "{\\text{،}}"; i++; continue; }
       if (c === "?") { out += "{\\text{؟}}"; i++; continue; }
       out += c; i++;

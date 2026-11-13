@@ -1,0 +1,1029 @@
+{
+ "id": "2024-scientific-math-s1-p1",
+ "year": 2024,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 1,
+ "session_ar": "الدورة الأولى",
+ "paper": 1,
+ "paper_ar": "الورقة الأولى",
+ "date": "2024-06-27",
+ "day_ar": "الخميس",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمس وأربعون دقيقة",
+ "total_marks": 100,
+ "num_questions": 6,
+ "pages": 3,
+ "img": "exams/2024/scientific/math-s1-p1",
+ "pdf": "exams/2024/scientific/math-s1-p1.pdf",
+ "units_covered": [
+  1,
+  2
+ ],
+ "choice_rules": {
+  "rule_ar": "عدد أسئلة الورقة (ستة) أسئلة، أجب عن (خمسة) منها فقط",
+  "rule_en": "Six questions; answer five only.",
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً.",
+    "rule_en": "Section 1: questions 1-3, all compulsory."
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عن سؤالين منها فقط.",
+    "rule_en": "Section 2: questions 4-6, answer any two."
+   }
+  ],
+  "marks_per_question": 20,
+  "mcq_rule_ar": "يتكون هذا السؤال من (١٠) فقرات من نوع اختيار من متعدد، من أربعة بدائل",
+  "mcq_rule_en": "Question 1 is 10 four-option multiple-choice items; per-item marks are not printed."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الأول",
+   "item_ids": [
+    "Q1-1",
+    "Q1-2",
+    "Q1-3",
+    "Q1-4",
+    "Q1-5",
+    "Q1-6",
+    "Q1-7",
+    "Q1-8",
+    "Q1-9",
+    "Q1-10"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثاني",
+   "item_ids": [
+    "Q2-a",
+    "Q2-b",
+    "Q2-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثالث",
+   "item_ids": [
+    "Q3-a",
+    "Q3-b",
+    "Q3-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الرابع",
+   "item_ids": [
+    "Q4-a",
+    "Q4-b",
+    "Q4-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الخامس",
+   "item_ids": [
+    "Q5-a",
+    "Q5-b",
+    "Q5-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال السادس",
+   "item_ids": [
+    "Q6-a",
+    "Q6-b",
+    "Q6-c"
+   ],
+   "item_marks_sum": 20
+  }
+ ],
+ "items": [
+  {
+   "id": "Q1-1",
+   "label": "Q1 1",
+   "label_ar": "السؤال الأول، الفقرة ١",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-2",
+    "2-3",
+    "2-4"
+   ],
+   "concepts": [
+    "deriv-piecewise",
+    "local-extrema",
+    "inflection"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "For $f(x)=x|x|$, choose the true statement.",
+    "ar": "للاقتران $f(x)=x|x|$ اختر العبارة الصحيحة."
+   },
+   "latex": "f(x)=x|x|",
+   "mcq_options": "four statements: f'(1) does not exist; f(0) local max; f(0) local min; (0, f(0)) is an inflection point"
+  },
+  {
+   "id": "Q1-2",
+   "label": "Q1 2",
+   "label_ar": "السؤال الأول، الفقرة ٢",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-2"
+   ],
+   "concepts": [
+    "deriv-as-limit",
+    "deriv-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=m(x)/x$ with $f(4)=10,\\ f'(4)=2$; evaluate $\\lim_{x\\to4}\\frac{3m(x)-3m(4)}{2x-8}$.",
+    "ar": "إذا كان $f(x)=m(x)/x$ و $f(4)=10,\\ f'(4)=2$ فجد قيمة النهاية."
+   },
+   "latex": "\\lim_{x\\to 4}\\frac{3m(x)-3m(4)}{2x-8}",
+   "mcq_options": "four numeric values (27, 9, 6, 18)",
+   "verified_answer": "27  (m=xf, m'(4)=f(4)+4f'(4)=18, limit = (3/2)·18)"
+  },
+  {
+   "id": "Q1-3",
+   "label": "Q1 3",
+   "label_ar": "السؤال الأول، الفقرة ٣",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f^2(x^3+1)=2x$, $f>0$; find $f'(9)$.",
+    "ar": "إذا كان $f^2(x^3+1)=2x$ و $f(x)>0$ فجد $f'(9)$."
+   },
+   "latex": "f^2(x^3+1)=2x",
+   "mcq_options": "four unit fractions (1/9, 1/6, 1/2, 1/24)",
+   "verified_answer": "1/24"
+  },
+  {
+   "id": "Q1-4",
+   "label": "Q1 4",
+   "label_ar": "السؤال الأول، الفقرة ٤",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-5"
+   ],
+   "concepts": [
+    "tangent-normal"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Curves $g(x)=ax^2+1$ and $h(x)=2x^2+bx$ share a tangent at $x=1$; find $a,b$.",
+    "ar": "للمنحنيين $g(x)=ax^2+1$ و $h(x)=2x^2+bx$ مماس مشترك عند $x=1$؛ جد $a,b$."
+   },
+   "latex": "g(x)=ax^2+1,\\ h(x)=2x^2+bx",
+   "mcq_options": "four ordered pairs from {2,3,4}",
+   "verified_answer": "a=3, b=2"
+  },
+  {
+   "id": "Q1-5",
+   "label": "Q1 5",
+   "label_ar": "السؤال الأول، الفقرة ٥",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "2-2",
+    "2-4"
+   ],
+   "concepts": [
+    "monotonic",
+    "concavity"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "From the graph of $L$ on $[a,w]$, on which interval is $L\\cdot L'\\cdot L''$ negative?",
+    "ar": "من الشكل، في أي فترة يكون $L\\cdot L'\\cdot L''$ سالباً؟"
+   },
+   "latex": "L(x)\\,L'(x)\\,L''(x)<0",
+   "mcq_options": "four open intervals between labelled points on the graph"
+  },
+  {
+   "id": "Q1-6",
+   "label": "Q1 6",
+   "label_ar": "السؤال الأول، الفقرة ٦",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "2-4"
+   ],
+   "concepts": [
+    "inflection"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Value of $b$ so that $f(x)=x^3+bx^2-7x-1$ has an inflection point at $x=-2$.",
+    "ar": "قيمة $b$ التي تجعل للاقتران نقطة انعطاف عند $x=-2$."
+   },
+   "latex": "f(x)=x^3+bx^2-7x-1",
+   "mcq_options": "four numeric values (-12, -6, 3, 6)",
+   "verified_answer": "6"
+  },
+  {
+   "id": "Q1-7",
+   "label": "Q1 7",
+   "label_ar": "السؤال الأول، الفقرة ٧",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-7",
+    "1-3"
+   ],
+   "concepts": [
+    "implicit-diff",
+    "trig-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $x=\\sin y$, find $(\\dv{y}{x})^2$.",
+    "ar": "إذا كان $x=\\sin y$ فجد $(\\dv{y}{x})^2$."
+   },
+   "latex": "x=\\sin y",
+   "mcq_options": "four rational expressions in x",
+   "verified_answer": "1/(1-x^2)"
+  },
+  {
+   "id": "Q1-8",
+   "label": "Q1 8",
+   "label_ar": "السؤال الأول، الفقرة ٨",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-4",
+    "1-2"
+   ],
+   "concepts": [
+    "exp-log-deriv",
+    "higher-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$f(x)=\\E^x+x^2-7$; values of $x$ with $f''(x)=f(x)$.",
+    "ar": "قيم $x$ التي تجعل $f''(x)=f(x)$."
+   },
+   "latex": "f(x)=\\E^{x}+x^2-7",
+   "mcq_options": "four values (0, 9, ±3, ±√5)",
+   "verified_answer": "x = ±3"
+  },
+  {
+   "id": "Q1-9",
+   "label": "Q1 9",
+   "label_ar": "السؤال الأول، الفقرة ٩",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "2-2"
+   ],
+   "concepts": [
+    "critical-points"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=(x+1)^3(2x-5)^4$ on the printed interval with endpoints 0 and 10; set of critical points.",
+    "ar": "مجموعة قيم $x$ التي يكون عندها للاقتران نقط حرجة."
+   },
+   "latex": "f(x)=(x+1)^3(2x-5)^4",
+   "mcq_options": "four sets drawn from {0.5, 2.5, -1, 10}",
+   "note": "Interior zeros of f' are 0.5 and 2.5; the correct option depends on whether 10 is a domain endpoint (bracket direction in the RTL print) and on the book's convention for endpoints. Answer not recorded."
+  },
+  {
+   "id": "Q1-10",
+   "label": "Q1 10",
+   "label_ar": "السؤال الأول، الفقرة ١٠",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-1",
+    "1-4"
+   ],
+   "concepts": [
+    "avg-rate",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Average rate of change of $k(x)=\\ln f(x)$ on $[1,5]$ given $f(5)=\\E f(1)$.",
+    "ar": "متوسط تغير $k(x)=\\ln f(x)$ في $[1,5]$ إذا كان $f(5)=\\E f(1)$."
+   },
+   "latex": "k(x)=\\ln f(x)",
+   "mcq_options": "four values (-e/4, e/4, 1/4, 1)",
+   "verified_answer": "1/4"
+  },
+  {
+   "id": "Q2-a",
+   "label": "Q2 a",
+   "label_ar": "السؤال الثاني أ",
+   "question": 2,
+   "page": 2,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-4"
+   ],
+   "concepts": [
+    "concavity",
+    "inflection"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=x^2+2\\ln x$ on $]0,4[$: concavity intervals and inflection points.",
+    "ar": "للاقتران $f(x)=x^2+2\\ln x$: فترات التقعر ونقاط الانعطاف."
+   },
+   "latex": "f(x)=x^2+2\\ln x",
+   "subparts": [
+    {
+     "label": "1",
+     "label_ar": "١",
+     "task_en": "concavity intervals",
+     "task_ar": "فترات التقعر للأعلى وللأسفل",
+     "marks": null
+    },
+    {
+     "label": "2",
+     "label_ar": "٢",
+     "task_en": "inflection points if any",
+     "task_ar": "نقاط الانعطاف إن وجدت",
+     "marks": null
+    }
+   ]
+  },
+  {
+   "id": "Q2-b",
+   "label": "Q2 b",
+   "label_ar": "السؤال الثاني ب",
+   "question": 2,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-2",
+    "1-3",
+    "1-4"
+   ],
+   "concepts": [
+    "deriv-rules",
+    "trig-deriv",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$y=\\frac{x\\E^{6x}}{\\sin x}$; find $\\dv{y}{x}$ at $x=\\frac{\\pi}{2}$.",
+    "ar": "جد $\\dv{y}{x}$ عندما $x=\\frac{\\pi}{2}$."
+   },
+   "latex": "y=\\frac{x\\,\\E^{6x}}{\\sin x}"
+  },
+  {
+   "id": "Q2-c",
+   "label": "Q2 c",
+   "label_ar": "السؤال الثاني ج",
+   "question": 2,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=x^3+4x-2$, $h(x)=\\sqrt{ax}$, $(f\\circ h)'(2)=18$; find $a$.",
+    "ar": "جد قيمة/قيم الثابت $a$."
+   },
+   "latex": "(f\\circ h)'(2)=18"
+  },
+  {
+   "id": "Q3-a",
+   "label": "Q3 a",
+   "label_ar": "السؤال الثالث أ",
+   "question": 3,
+   "page": 2,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-2",
+    "2-3"
+   ],
+   "concepts": [
+    "monotonic",
+    "local-extrema",
+    "absolute-extrema"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=3\\sin x\\cos x$ on $[0,\\pi]$: increase/decrease intervals; local and absolute extrema.",
+    "ar": "فترات التزايد والتناقص، والقيم القصوى المحلية والمطلقة."
+   },
+   "latex": "f(x)=3\\sin x\\cos x",
+   "subparts": [
+    {
+     "label": "1",
+     "label_ar": "١",
+     "task_en": "increase/decrease intervals",
+     "task_ar": "فترات التزايد والتناقص",
+     "marks": null
+    },
+    {
+     "label": "2",
+     "label_ar": "٢",
+     "task_en": "local and absolute extrema",
+     "task_ar": "القيم القصوى المحلية والمطلقة",
+     "marks": null
+    }
+   ]
+  },
+  {
+   "id": "Q3-b",
+   "label": "Q3 b",
+   "label_ar": "السؤال الثالث ب",
+   "question": 3,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-7",
+    "1-6"
+   ],
+   "concepts": [
+    "implicit-diff",
+    "chain-rule"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$y^2+2xy=12$, $z=3y-y^2+5$; find $\\dv{z}{x}$ at $y=2$.",
+    "ar": "جد $\\dv{z}{x}$ عندما $y=2$."
+   },
+   "latex": "y^2+2xy=12,\\ z=3y-y^2+5"
+  },
+  {
+   "id": "Q3-c",
+   "label": "Q3 c",
+   "label_ar": "السؤال الثالث ج",
+   "question": 3,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-1"
+   ],
+   "concepts": [
+    "rolle",
+    "deriv-piecewise"
+   ],
+   "skills": [
+    "prove",
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Piecewise $f$ ($5-x^2$ on $[-3,1]$, $6-2x$ on $]1,5]$): check Rolle's conditions on the printed interval, then find $c$.",
+    "ar": "ابحث في تحقق شروط نظرية رول ثم جد قيمة/قيم $c$."
+   },
+   "latex": "f(x)=\\begin{cases}5-x^2 & -3\\le x\\le 1\\\\ 6-2x & 1<x\\le 5\\end{cases}",
+   "note": "Interval glyphs read [3, 5]; the function's domain is [-3, 5], on which Rolle holds (f(-3)=f(5)=-4, c=0). Possible missing minus sign; check the PDF."
+  },
+  {
+   "id": "Q4-a",
+   "label": "Q4 a",
+   "label_ar": "السؤال الرابع أ",
+   "question": 4,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-5",
+    "1-3"
+   ],
+   "concepts": [
+    "tangent-normal",
+    "trig-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Equation of the normal to $f(x)=\\sin x+\\sin 2x$ at $x=\\frac{\\pi}{2}$.",
+    "ar": "معادلة العمودي على المماس عند $x=\\frac{\\pi}{2}$."
+   },
+   "latex": "f(x)=\\sin x+\\sin 2x"
+  },
+  {
+   "id": "Q4-b",
+   "label": "Q4 b",
+   "label_ar": "السؤال الرابع ب",
+   "question": 4,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-4"
+   ],
+   "concepts": [
+    "lhopital",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Polynomial $f$, $f(0)=0$, $f'(0)=7$; find $\\lim_{x\\to0}\\frac{\\E^{f(x)}-\\E^x}{2\\ln(x+1)-x}$.",
+    "ar": "جد النهاية باستخدام قاعدة لوبيتال."
+   },
+   "latex": "\\lim_{x\\to0}\\frac{\\E^{f(x)}-\\E^{x}}{2\\ln(x+1)-x}"
+  },
+  {
+   "id": "Q4-c",
+   "label": "Q4 c",
+   "label_ar": "السؤال الرابع ج",
+   "question": 4,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-4",
+    "1-2"
+   ],
+   "concepts": [
+    "inflection",
+    "higher-deriv",
+    "deriv-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f(x)=-\\frac12x^3+3x^2+g(x)$ has a horizontal inflection point at $(2,1)$; $L(x)=g^2(x)+x^2$; find $L''(2)$.",
+    "ar": "للاقتران نقطة انعطاف أفقي عند $(2,1)$؛ جد $L''(2)$."
+   },
+   "latex": "L(x)=g^2(x)+x^2"
+  },
+  {
+   "id": "Q5-a",
+   "label": "Q5 a",
+   "label_ar": "السؤال الخامس أ",
+   "question": 5,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-1"
+   ],
+   "concepts": [
+    "avg-rate"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Average rate of $f$ on $[1,3]$ is 4; find the average rate of $h(x)=x^2f(x)-2x$ given $h$ passes $(3,12)$.",
+    "ar": "جد متوسط التغير في $h(x)=x^2f(x)-2x$ في الفترة نفسها."
+   },
+   "latex": "h(x)=x^2f(x)-2x"
+  },
+  {
+   "id": "Q5-b",
+   "label": "Q5 b",
+   "label_ar": "السؤال الخامس ب",
+   "question": 5,
+   "page": 3,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-5"
+   ],
+   "concepts": [
+    "optimization"
+   ],
+   "skills": [
+    "model"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Open-top square-based tank; base 16 JD/m², sides 4 JD/m², total cost 48 JD; dimensions for maximum volume.",
+    "ar": "خزان قاعدته مربعة مفتوح من الأعلى بتكلفة ٤٨ ديناراً؛ أبعاده لأكبر سعة."
+   },
+   "latex": "V=x^2h"
+  },
+  {
+   "id": "Q5-c",
+   "label": "Q5 c",
+   "label_ar": "السؤال الخامس ج",
+   "question": 5,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "1-7"
+   ],
+   "concepts": [
+    "implicit-diff"
+   ],
+   "skills": [
+    "prove"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Given $y^2(x^2+1)=6$, prove $xy^5+6y^2\\dv{y}{x}=0$.",
+    "ar": "أثبت العلاقة باستخدام الاشتقاق الضمني."
+   },
+   "latex": "xy^5+6y^2\\dv{y}{x}=0"
+  },
+  {
+   "id": "Q6-a",
+   "label": "Q6 a",
+   "label_ar": "السؤال السادس أ",
+   "question": 6,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "2-1"
+   ],
+   "concepts": [
+    "mvt"
+   ],
+   "skills": [
+    "prove"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=x^3+3$ on $[1,b]$: prove by MVT there is $c\\in]1,b[$ with $3c^2=b^2+b+1$.",
+    "ar": "أثبت باستخدام نظرية القيمة المتوسطة."
+   },
+   "latex": "3c^2=b^2+b+1"
+  },
+  {
+   "id": "Q6-b",
+   "label": "Q6 b",
+   "label_ar": "السؤال السادس ب",
+   "question": 6,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "2-2",
+    "1-6"
+   ],
+   "concepts": [
+    "monotonic",
+    "chain-rule",
+    "deriv-rules"
+   ],
+   "skills": [
+    "interpret",
+    "prove"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "From the graph of $h$ on $[1,5]$: $f(x)=(5-h(x))^3$, $L(x)=(f\\times h')(x)$; prove $L$ is decreasing on $]3,5[$.",
+    "ar": "بالاعتماد على الشكل أثبت أن $L$ متناقص في $]3,5[$."
+   },
+   "latex": "f(x)=(5-h(x))^3,\\ L=f\\,h'"
+  },
+  {
+   "id": "Q6-c",
+   "label": "Q6 c",
+   "label_ar": "السؤال السادس ج",
+   "question": 6,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "1-5"
+   ],
+   "concepts": [
+    "motion-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$s(t)=t^2(at+b)+7$; at $t=6$ s acceleration is 18 m/s² and the body reverses direction; find $a,b$.",
+    "ar": "جد الثابتين $a,b$ علماً بأن التسارع ١٨ م/ث² والجسم يعكس اتجاهه عند $t=6$."
+   },
+   "latex": "s(t)=t^2(at+b)+7"
+  }
+ ],
+ "reconciliation": {
+  "per_question": [
+   {
+    "question": 1,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 2,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 3,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 4,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 5,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 6,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   }
+  ],
+  "printed_marks_all_questions": 120,
+  "max_score_under_choice_rules": 100,
+  "stated_total": 100,
+  "ok": true,
+  "discrepancies": []
+ },
+ "summary": {
+  "item_count": 25,
+  "mcq_count": 10,
+  "marks_by_lesson_printed": {
+   "1-1": 7.0,
+   "1-2": 9.17,
+   "1-3": 6.0,
+   "1-4": 11.0,
+   "1-5": 12.0,
+   "1-6": 14.0,
+   "1-7": 10.0,
+   "2-1": 13.0,
+   "2-2": 10.0,
+   "2-3": 4.67,
+   "2-4": 15.17,
+   "2-5": 8.0
+  },
+  "note_marks_by_lesson": "Marks of every printed item split equally across its lessons; sums to the printed marks of all six questions (not the 100/200 a candidate can score)."
+ },
+ "concepts_used": {
+  "avg-rate": {
+   "lesson": "1-1",
+   "ar": "متوسط التغير",
+   "en": "Average rate of change"
+  },
+  "deriv-as-limit": {
+   "lesson": "1-2",
+   "ar": "المشتقة كنهاية (تعريف المشتقة)",
+   "en": "Derivative as a limit"
+  },
+  "deriv-piecewise": {
+   "lesson": "1-2",
+   "ar": "اشتقاق الاقترانات المتشعبة والمطلقة وأكبر عدد صحيح",
+   "en": "Differentiability of piecewise, absolute-value and greatest-integer functions"
+  },
+  "deriv-rules": {
+   "lesson": "1-2",
+   "ar": "قواعد الاشتقاق (الضرب والقسمة)",
+   "en": "Differentiation rules (product, quotient)"
+  },
+  "higher-deriv": {
+   "lesson": "1-2",
+   "ar": "المشتقات العليا",
+   "en": "Higher-order derivatives"
+  },
+  "trig-deriv": {
+   "lesson": "1-3",
+   "ar": "مشتقات الاقترانات المثلثية",
+   "en": "Derivatives of trigonometric functions"
+  },
+  "exp-log-deriv": {
+   "lesson": "1-4",
+   "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+   "en": "Derivatives of exponential and logarithmic functions"
+  },
+  "lhopital": {
+   "lesson": "1-4",
+   "ar": "قاعدة لوبيتال",
+   "en": "L'Hôpital's rule"
+  },
+  "motion-deriv": {
+   "lesson": "1-5",
+   "ar": "الحركة المستقيمة: السرعة والتسارع",
+   "en": "Rectilinear motion: velocity and acceleration"
+  },
+  "tangent-normal": {
+   "lesson": "1-5",
+   "ar": "معادلة المماس والعمودي على المماس",
+   "en": "Tangent and normal lines"
+  },
+  "chain-rule": {
+   "lesson": "1-6",
+   "ar": "قاعدة السلسلة",
+   "en": "Chain rule"
+  },
+  "implicit-diff": {
+   "lesson": "1-7",
+   "ar": "الاشتقاق الضمني",
+   "en": "Implicit differentiation"
+  },
+  "mvt": {
+   "lesson": "2-1",
+   "ar": "نظرية القيمة المتوسطة",
+   "en": "Mean value theorem"
+  },
+  "rolle": {
+   "lesson": "2-1",
+   "ar": "نظرية رول",
+   "en": "Rolle's theorem"
+  },
+  "critical-points": {
+   "lesson": "2-2",
+   "ar": "النقط الحرجة",
+   "en": "Critical points"
+  },
+  "monotonic": {
+   "lesson": "2-2",
+   "ar": "فترات التزايد والتناقص",
+   "en": "Intervals of increase and decrease"
+  },
+  "absolute-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المطلقة",
+   "en": "Absolute extrema"
+  },
+  "local-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المحلية",
+   "en": "Local extrema"
+  },
+  "concavity": {
+   "lesson": "2-4",
+   "ar": "التقعر للأعلى وللأسفل",
+   "en": "Concavity"
+  },
+  "inflection": {
+   "lesson": "2-4",
+   "ar": "نقط الانعطاف",
+   "en": "Points of inflection"
+  },
+  "optimization": {
+   "lesson": "2-5",
+   "ar": "تطبيقات عملية على القيم القصوى",
+   "en": "Optimisation problems"
+  }
+ },
+ "notes": [
+  "Q1 per-item marks are not printed; 2 marks each inferred from 20/10.",
+  "Paper 1 covers units 1-2 only (differentiation and its applications)."
+ ]
+}

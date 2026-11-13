@@ -1,0 +1,1759 @@
+{
+ "unit": 2,
+ "title": {
+  "ar": "تطبيقات التفاضل",
+  "en": "Differentiation Applications"
+ },
+ "printed_pages": [
+  52,
+  91
+ ],
+ "pdf_pages": [
+  56,
+  95
+ ],
+ "source": "الرياضيات، الصف الثاني عشر، الفرع العلمي — read from page images ma150/p-056..p-095",
+ "branch_marking": "Lessons 2-1 (p54), 2-3 (p65), 2-4 (p75) and 2-5 (p83) carry a pink header ribbon 'للعلمي فقط' (Scientific branch only). Lesson 2-2 (p60) has no ribbon. Inside lessons: Rolle's theorem and the MVT carry asterisks that are only biographical footnotes (Rolle 1691; Lagrange 1736-1813); the concavity test's asterisk says open intervals will be dealt with; 2-2 Ex1 notes students are not asked to verify monotonicity algebraically from the definition.",
+ "notation_notes": [
+  "Same notation as unit 1 (دص/دس, قَ, قً, intervals with French brackets, raised minus).",
+  "Sign charts are drawn as a number line with two rows: 'إشارة قَ(س)' (signs + / −) and 'سلوك ق(س)' (arrows up/down, or ∪/∩ for concavity with قً), with labels 'صفر' and 'غير موجودة' above the critical x-values.",
+  "Book writes increasing/decreasing intervals as CLOSED intervals including critical points and endpoints (e.g. increasing on [−1, ∞[), but concavity intervals mostly as OPEN intervals (exception: 2-4 Ex6 uses closed brackets)."
+ ],
+ "opener": {
+  "page": 52,
+  "hook": {
+   "ar": "ما سبب انهيار بعض السدود؟",
+   "en": "Why do some dams collapse? (dam photo — motivates optimisation/applications)"
+  }
+ },
+ "objectives": [
+  {
+   "ar": "إيجاد فترات التزايد والتناقص والنقاط الحرجة لاقتران معلوم",
+   "en": "Find intervals of increase/decrease and critical points"
+  },
+  {
+   "ar": "التعرف إلى نظرية القيمة المتوسطة ونظرية رول وبعض التطبيقات عليها",
+   "en": "Know the Mean Value Theorem and Rolle's theorem and apply them"
+  },
+  {
+   "ar": "إيجاد القيم العظمى والصغرى لمنحنى اقتران معلوم",
+   "en": "Find maximum and minimum values of a function"
+  },
+  {
+   "ar": "إيجاد فترات التقعر للأعلى وللأسفل ونقاط الانعطاف",
+   "en": "Find intervals of concavity and inflection points"
+  },
+  {
+   "ar": "تحديد خصائص اقتران إذا علم منحنى إحدى مشتقاته",
+   "en": "Determine properties of a function from the graph of one of its derivatives"
+  },
+  {
+   "ar": "توظيف القيم القصوى المطلقة في حل مسائل حياتية",
+   "en": "Use absolute extrema to solve real-life problems"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "2-1",
+   "title": {
+    "ar": "نظريتا رول والقيمة المتوسطة",
+    "en": "Rolle's Theorem and the Mean Value Theorem"
+   },
+   "printed_pages": [
+    54,
+    59
+   ],
+   "pdf_pages": [
+    58,
+    63
+   ],
+   "branch_note": {
+    "tag": "للعلمي فقط",
+    "meaning": "Scientific branch only — pink ribbon on the lesson header",
+    "applies_to": "whole lesson"
+   },
+   "prerequisites": {
+    "lessons": [
+     "1-1",
+     "1-2",
+     "1-3",
+     "1-4",
+     "1-6"
+    ],
+    "concepts": [
+     "u1.differentiability",
+     "u1.diff_continuity",
+     "u1.secant_slope",
+     "u1.piecewise_derivative",
+     "u1.chain_rule"
+    ],
+    "grade11": [
+     "continuity on a closed interval; continuity of polynomial, rational, radical, trig, exp/log functions on their domains",
+     "greatest-integer and absolute-value functions written piecewise",
+     "solving trig equations on an interval"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u2.rolle",
+     "name": {
+      "ar": "نظرية رول",
+      "en": "Rolle's theorem"
+     }
+    },
+    {
+     "id": "u2.mvt",
+     "name": {
+      "ar": "نظرية القيمة المتوسطة",
+      "en": "Mean Value Theorem"
+     }
+    },
+    {
+     "id": "u2.theorem_conditions",
+     "name": {
+      "ar": "التحقق من شروط النظرية (الاتصال على [أ،ب]، الاشتقاق على ]أ،ب[)",
+      "en": "Checking hypotheses (continuity on [a,b], differentiability on ]a,b[)"
+     }
+    },
+    {
+     "id": "u2.find_c",
+     "name": {
+      "ar": "إيجاد قيمة/قيم جـ التي تعينها النظرية",
+      "en": "Finding the value(s) c given by the theorem"
+     }
+    },
+    {
+     "id": "u2.theorem_parameters",
+     "name": {
+      "ar": "إيجاد ثوابت تجعل الاقتران يحقق شروط النظرية",
+      "en": "Parameters that make a function satisfy the hypotheses"
+     }
+    },
+    {
+     "id": "u2.rolle_proofs",
+     "name": {
+      "ar": "براهين باستخدام رول والقيمة المتوسطة",
+      "en": "Proofs using Rolle / MVT (e.g. repeated Rolle, c² = ab)"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u2.thm.rolle",
+     "kind": "theorem",
+     "label": "نظرية رول",
+     "page": 54,
+     "concept": "u2.rolle",
+     "statement": {
+      "ar": "إذا كان ق(س) متصلاً في [أ، ب] وقابلاً للاشتقاق في ]أ، ب[ وكان ق(أ) = ق(ب) فإنه يوجد عدد حقيقي واحد على الأقل جـ ∈ ]أ، ب[ بحيث قَ(جـ) = ٠",
+      "en": "If f is continuous on [a,b], differentiable on ]a,b[ and f(a) = f(b), then there is at least one c ∈ ]a,b[ with f'(c) = 0 (horizontal tangent)."
+     },
+     "latex": "f\\in C[a,b],\\ f \\text{ differentiable on } ]a,b[,\\ f(a)=f(b)\\ \\Rightarrow\\ \\exists\\, c\\in\\,]a,b[\\,:\\ f'(c)=0",
+     "conditions": "three hypotheses; c must lie in the OPEN interval; hypotheses are sufficient, not necessary (Ex3)"
+    },
+    {
+     "id": "u2.thm.mvt",
+     "kind": "theorem",
+     "label": "نظرية القيمة المتوسطة",
+     "page": 57,
+     "concept": "u2.mvt",
+     "statement": {
+      "ar": "إذا كان ق(س) متصلاً في [أ، ب] وقابلاً للاشتقاق في ]أ، ب[ فإنه يوجد عدد حقيقي واحد على الأقل جـ ∈ ]أ، ب[ بحيث قَ(جـ) = (ق(ب) − ق(أ))/(ب − أ)",
+      "en": "If f is continuous on [a,b] and differentiable on ]a,b[, there is at least one c ∈ ]a,b[ with f'(c) = (f(b) − f(a))/(b − a): some tangent is parallel to the secant."
+     },
+     "latex": "\\exists\\, c\\in\\,]a,b[\\,:\\ f'(c)=\\frac{f(b)-f(a)}{b-a}",
+     "conditions": "continuity on [a,b], differentiability on ]a,b["
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 54,
+     "context": "Arches of the Great Omari Mosque in Gaza; AB a horizontal line joining column tops; point C at the top of an arch.",
+     "asks": "slope of AB, slope of the horizontal line through C, value of f'(c)",
+     "idea": "equal heights ⇒ horizontal tangent somewhere (Rolle)"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 57,
+     "context": "Graph of f on [a,b] with the secant through (a,f(a)), (b,f(b)) and a parallel tangent at c1.",
+     "asks": "is f continuous/differentiable? slope of secant? is the tangent slope at c1 equal to it (why)? other tangents with the same slope?",
+     "idea": "geometric meaning of MVT"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 54,
+     "type": "verify Rolle and find c",
+     "asked": "f = x^2 − x − 6 on [0,1]",
+     "method": "polynomial ⇒ continuous & differentiable; compare f(0), f(1); solve f'(c) = 0",
+     "key_steps": [
+      "f(0) = f(1) = −6",
+      "f'(c) = 2c − 1 = 0 ⇒ c = 1/2 ∈ ]0,1["
+     ],
+     "answer": "c = 1/2"
+    },
+    {
+     "label": "مثال 2",
+     "page": 55,
+     "type": "parameter from Rolle (trig)",
+     "asked": "f = cos 2x + 2 sin x satisfies Rolle on [a, π], a > 0: a",
+     "method": "f(a) = f(π) = 1",
+     "key_steps": [
+      "cos 2a + 2 sin a = 1 ⇒ −2sin^2 a + 2 sin a = 0",
+      "sin a = 0 ⇒ a = 0, π rejected; sin a = 1 ⇒ a = π/2"
+     ],
+     "answer": "a = π/2"
+    },
+    {
+     "label": "مثال 3",
+     "page": 55,
+     "type": "hypotheses fail but c exists",
+     "asked": "f = x − 2 (−4 ≤ x < −1), x^2 − 7 (−1 ≤ x ≤ 1) on [−4,1]",
+     "method": "check continuity at the joint, differentiability, equal end values; then search for c anyway",
+     "key_steps": [
+      "discontinuous at −1 (−3 vs −6) ⇒ not continuous on [−4,1]; f'(−1) DNE",
+      "f(−4) = f(1) = −6",
+      "f' = 1 ≠ 0 on ]−4,−1[; 2c = 0 ⇒ c = 0 ∈ ]−1,1[",
+      "no contradiction: conditions are sufficient not necessary"
+     ],
+     "answer": "c = 0 exists although hypotheses fail"
+    },
+    {
+     "label": "مثال 4",
+     "page": 56,
+     "type": "two parameters from Rolle with removable factor",
+     "asked": "f = (x^2 − 5x + 6)(x + a)/(x − 3) on [−1, b], c = 0: a, b",
+     "method": "continuity forces b < 3; simplify; f(b) = f(−1); f'(0) = 0",
+     "key_steps": [
+      "b < 3 (x = 3 excluded)",
+      "f = (x − 2)(x + a) = x^2 + ax − 2x − 2a, x ≠ 3",
+      "f'(0) = a − 2 = 0 ⇒ a = 2",
+      "f(b) = f(−1) ⇒ b^2 − 2b + ab = 3 − a ⇒ b = 1"
+     ],
+     "answer": "a = 2, b = 1"
+    },
+    {
+     "label": "مثال 5",
+     "page": 56,
+     "type": "proof by applying Rolle twice (to f then f')",
+     "asked": "f continuous on [a,c], f'' exists on ]a,c[, f(a) = f(b) = f(c), a < b < c: prove ∃ d ∈ ]a,c[ with f''(d) = 0",
+     "method": "Rolle on [a,b] and [b,c] gives c1 < c2 with f'(c1) = f'(c2) = 0; Rolle on f' over [c1,c2]",
+     "key_steps": [
+      "f'(c1) = 0, c1 ∈ ]a,b[; f'(c2) = 0, c2 ∈ ]b,c[",
+      "f' continuous & differentiable on [c1,c2] (f'' exists)",
+      "⇒ ∃ d ∈ ]c1,c2[ ⊆ ]a,c[ with f''(d) = 0"
+     ],
+     "answer": "proved"
+    },
+    {
+     "label": "مثال 6",
+     "page": 57,
+     "type": "verify MVT and find c",
+     "asked": "f = x^3 + 1 on [−2,1]",
+     "method": "polynomial; f'(c) = secant slope",
+     "key_steps": [
+      "(f(1) − f(−2))/3 = (2 − (−7))/3 = 3",
+      "3c^2 = 3 ⇒ c = ±1; only c = −1 ∈ ]−2,1["
+     ],
+     "answer": "c = −1"
+    },
+    {
+     "label": "مثال 7",
+     "page": 58,
+     "type": "parameters from MVT (piecewise)",
+     "asked": "f = ax + b (−3 ≤ x ≤ −1), −x^2 (−1 < x ≤ 5) satisfies MVT on [−3,5]: a, b",
+     "method": "continuity at −1 and equal one-sided derivatives",
+     "key_steps": [
+      "−a + b = −1",
+      "f'(−1)^- = a, f'(−1)^+ = 2 ⇒ a = 2, b = 1"
+     ],
+     "answer": "a = 2, b = 1"
+    },
+    {
+     "label": "مثال 8",
+     "page": 58,
+     "type": "MVT with greatest integer: no c",
+     "asked": "f = [2x + 1] on [0,1]",
+     "method": "rewrite: 1 on [0,1/2[, 2 on [1/2,1[, 3 at 1",
+     "key_steps": [
+      "not continuous, not differentiable on the interval",
+      "secant slope (3 − 1)/1 = 2 but f' = 0 wherever it exists ⇒ no c"
+     ],
+     "answer": "no c"
+    }
+   ],
+   "notes": [
+    "Footnotes: Michel Rolle, French mathematician (1691); MVT attributed to Lagrange (1736-1813)."
+   ],
+   "pitfalls": [
+    "c must be in the OPEN interval ]a,b[: reject roots at or outside the endpoints (Ex6 rejects c = 1).",
+    "Check all hypotheses explicitly (continuity at joints of piecewise functions, removable discontinuities, domain of radicals/ln) before concluding.",
+    "Failure of the hypotheses does not prove that no c exists (Ex3) — search directly.",
+    "For f = (…)/(x − 3) style functions, the interval must avoid the excluded point (b < 3 in Ex4).",
+    "When the MVT/Rolle is used in a proof, state the interval and each hypothesis."
+   ],
+   "exercises": {
+    "label": "تمارين 2-1",
+    "page": 59,
+    "items": [
+     {
+      "n": 1,
+      "type": "Rolle: verify and find c",
+      "task": "(a) √(4x − x^2) on [0,4]; (b) x^2 − 2x − 3 on [−1,3]; (c) ln(x + 1/x) on [1/2, 2]; (d) sin 2x + 2 sin x on [0, π/2]"
+     },
+     {
+      "n": 2,
+      "type": "MVT: verify and find c",
+      "task": "(a) x^3 − x − 1 on [−1,2]; (b) 4/(x + 2) on [−1,2]; (c) √x + 2x on [4,9]"
+     },
+     {
+      "n": 3,
+      "type": "parameters from MVT",
+      "task": "f = ax^2 + 2x (0 ≤ x ≤ 2), x^3 − bx + 12 (2 < x ≤ 3) satisfies MVT on [0,3]: a, b, then c"
+     },
+     {
+      "n": 4,
+      "type": "MVT proof",
+      "task": "f = 1/x on [a,b], x > 0: prove the MVT value c satisfies c^2 = ab"
+     },
+     {
+      "n": 5,
+      "type": "MVT proof with composition",
+      "task": "k = f∘g, f, g continuous on [a,b] and differentiable on ]a,b[, g(a) = b, g(b) = a: prove ∃ c with k(a) − k(b) = f'(c)(b − a)"
+     },
+     {
+      "n": 6,
+      "type": "Rolle proof (trig)",
+      "task": "f = x cos x on [0, π/2]: use Rolle to show the value c satisfies x = cot x"
+     }
+    ]
+   },
+   "exercise_types": [
+    "verify Rolle/MVT hypotheses and find c",
+    "decide which functions satisfy the theorem",
+    "parameters from the theorem's hypotheses or from a given c",
+    "proofs using Rolle/MVT"
+   ]
+  },
+  {
+   "id": "2-2",
+   "title": {
+    "ar": "الاقترانات المتزايدة والمتناقصة",
+    "en": "Increasing and Decreasing Functions"
+   },
+   "printed_pages": [
+    60,
+    64
+   ],
+   "pdf_pages": [
+    64,
+    68
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [
+     "1-2",
+     "1-3",
+     "1-4",
+     "1-6",
+     "2-1"
+    ],
+    "concepts": [
+     "u1.tangent_slope",
+     "u1.power_rule",
+     "u1.chain_rule",
+     "u1.piecewise_derivative"
+    ],
+    "grade11": [
+     "solving polynomial/rational/trig equations and sign of a product/quotient",
+     "absolute value written piecewise",
+     "√(x^2) = |x|"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u2.monotonic_def",
+     "name": {
+      "ar": "تعريف الاقتران المتزايد والمتناقص والثابت",
+      "en": "Definition of increasing, decreasing, constant"
+     }
+    },
+    {
+     "id": "u2.monotonic_from_graph",
+     "name": {
+      "ar": "تحديد فترات التزايد والتناقص من الرسم",
+      "en": "Reading monotonicity from a graph"
+     }
+    },
+    {
+     "id": "u2.first_derivative_monotonic",
+     "name": {
+      "ar": "اختبار المشتقة الأولى للتزايد والتناقص",
+      "en": "First-derivative test for monotonicity"
+     }
+    },
+    {
+     "id": "u2.sign_chart",
+     "name": {
+      "ar": "جدول/خط إشارة المشتقة وسلوك الاقتران",
+      "en": "Sign chart of the derivative and behaviour of f"
+     }
+    },
+    {
+     "id": "u2.monotonic_abstract",
+     "name": {
+      "ar": "التزايد والتناقص لاقترانات مجردة ومركبة",
+      "en": "Monotonicity of abstract/composite/product functions"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u2.def.monotonic",
+     "concept": "u2.monotonic_def",
+     "page": 60,
+     "name": {
+      "ar": "التزايد والتناقص والثبات",
+      "en": "Increasing, decreasing, constant"
+     },
+     "statement": {
+      "ar": "يكون منحنى ق المعرف في [أ، ب] ، س₁، س₂ ∈ [أ، ب]: متزايداً إذا كان س₁ < س₂ ⇐ ق(س₁) < ق(س₂)؛ متناقصاً إذا كان س₁ < س₂ ⇐ ق(س₁) > ق(س₂)؛ ثابتاً إذا كان س₁ < س₂ ⇐ ق(س₁) = ق(س₂).",
+      "en": "For f on [a,b] and x1, x2 in [a,b]: increasing if x1 < x2 ⇒ f(x1) < f(x2); decreasing if x1 < x2 ⇒ f(x1) > f(x2); constant if f(x1) = f(x2)."
+     },
+     "latex": "x_1<x_2\\Rightarrow f(x_1)<f(x_2)\\ \\text{(increasing)},\\quad f(x_1)>f(x_2)\\ \\text{(decreasing)}",
+     "conditions": "note: students are not asked to verify monotonicity algebraically from the definition"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u2.thm.first_derivative_monotonic",
+     "kind": "theorem",
+     "label": "نظرية",
+     "page": 61,
+     "concept": "u2.first_derivative_monotonic",
+     "statement": {
+      "ar": "إذا كان ق متصلاً في [أ، ب] وقابلاً للاشتقاق في ]أ، ب[: يكون متزايداً في [أ، ب] إذا كانت قَ(س) > ٠ ∀ س ∈ ]أ، ب[؛ متناقصاً إذا كانت قَ(س) < ٠؛ ثابتاً إذا كانت قَ(س) = ٠",
+      "en": "If f is continuous on [a,b] and differentiable on ]a,b[: f' > 0 on ]a,b[ ⇒ f increasing on [a,b]; f' < 0 ⇒ decreasing on [a,b]; f' = 0 ⇒ constant on [a,b]."
+     },
+     "latex": "f'(x)>0\\ \\forall x\\in\\,]a,b[\\ \\Rightarrow f \\nearrow \\text{ on } [a,b];\\quad f'(x)<0 \\Rightarrow f\\searrow;\\quad f'(x)=0\\Rightarrow f \\text{ constant}",
+     "conditions": "continuity on the closed interval lets the endpoints be included"
+    },
+    {
+     "id": "u2.method.sign_chart",
+     "kind": "method",
+     "page": 61,
+     "concept": "u2.sign_chart",
+     "statement": {
+      "ar": "نجد قيم س التي تجعل قَ(س) = ٠ أو غير موجودة، ونمثل إشارة قَ على خط الأعداد ونستنتج سلوك ق في كل فترة",
+      "en": "Find x where f' = 0 or does not exist, mark them on a number line, test the sign of f' on each sub-interval, and read off the behaviour (arrows)"
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 60,
+     "context": "Adventurer driving along a mountain-chain road from A to O; ascending between A and B.",
+     "asks": "identify a descending stretch; compare heights y1, y2 of points B(x1,y1), C(x2,y2)",
+     "idea": "intuitive increasing/decreasing"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 61,
+     "context": "Graphs of increasing f, decreasing h, constant k on [a,b] with tangents at c and d.",
+     "asks": "type of inclination angle of tangents, sign of tan, sign of f', h', k'; relation between monotonicity and sign of f'",
+     "idea": "discovers the first-derivative test"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 60,
+     "type": "monotonicity from a graph",
+     "asked": "intervals where the graph is increasing/decreasing/constant",
+     "method": "read the graph left to right",
+     "key_steps": [
+      "constant on [a,c]",
+      "decreasing on [c,d]",
+      "increasing on [d,b]"
+     ]
+    },
+    {
+     "label": "مثال 2",
+     "page": 61,
+     "type": "intervals from a factored f'",
+     "asked": "f' = (x^2 − 1)(x + 2), x ∈ R",
+     "method": "zeros of f'; sign chart",
+     "key_steps": [
+      "zeros −2, −1, 1",
+      "signs − + − +",
+      "decreasing ]−∞,−2], [−1,1]; increasing [−2,−1], [1,∞["
+     ]
+    },
+    {
+     "label": "مثال 3",
+     "page": 62,
+     "type": "intervals for a quartic",
+     "asked": "f = x^4 + 4x + 5",
+     "method": "f' = 4x^3 + 4 = 0 ⇒ x = −1",
+     "key_steps": [
+      "increasing [−1, ∞[",
+      "decreasing ]−∞, −1]"
+     ]
+    },
+    {
+     "label": "مثال 4",
+     "page": 62,
+     "type": "rational function with excluded point",
+     "asked": "f = (x − 1)/(x + 1), x ≠ −1",
+     "method": "f' = 2/(x + 1)^2 > 0",
+     "key_steps": [
+      "increasing on ]−∞,−1[ and on ]−1,∞[ (separately)",
+      "think: can we say increasing on R − {−1}? (no)"
+     ]
+    },
+    {
+     "label": "مثال 5",
+     "page": 62,
+     "type": "prove increasing (trig)",
+     "asked": "f = 2x + tan x on ]−π/2, π/2[",
+     "method": "f' = 2 + sec^2 x > 0",
+     "key_steps": [
+      "f continuous & differentiable on the interval (why)",
+      "f' ≠ 0 and positive ⇒ increasing"
+     ],
+     "answer": "increasing"
+    },
+    {
+     "label": "مثال 6",
+     "page": 63,
+     "type": "piecewise trig with a jump",
+     "asked": "f = sin x (0 ≤ x ≤ π/2), x + cos x (π/2 < x ≤ π) on [0, π]",
+     "method": "derivatives of pieces; f'(π/2) DNE (discontinuous)",
+     "key_steps": [
+      "f' = cos x > 0 on ]0, π/2[; 1 − sin x > 0 on ]π/2, π[",
+      "increasing on [0, π/2] and on ]π/2, π]"
+     ]
+    },
+    {
+     "label": "مثال 7",
+     "page": 63,
+     "type": "absolute value function",
+     "asked": "f = |x^2 − 4| on [−3, 2]",
+     "method": "rewrite piecewise; f' DNE at −3, −2, 2; f' = 0 at 0",
+     "key_steps": [
+      "f = x^2 − 4 on [−3,−2[, 4 − x^2 on [−2,2]",
+      "increasing [−2, 0]; decreasing [−3, −2] and [0, 2]"
+     ]
+    }
+   ],
+   "notes": [
+    "Students are not asked to verify increasing/decreasing algebraically from the definition (p60)."
+   ],
+   "pitfalls": [
+    "Do not join intervals across a point excluded from the domain or a discontinuity: 'increasing on ]−∞,−1[ and ]−1,∞[' is NOT 'increasing on R − {−1}' (think-and-discuss p62).",
+    "Include points where f' does not exist (corners of |…|, joints, endpoints) in the sign chart, not only zeros of f'.",
+    "Repeated (even-power) factors do not change the sign of f'.",
+    "Rewrite |…| and √(x^2 − 2x + 1) = |x − 1| as piecewise functions first."
+   ],
+   "exercises": {
+    "label": "تمارين 2-2",
+    "page": 64,
+    "items": [
+     {
+      "n": 1,
+      "type": "intervals of increase/decrease",
+      "task": "(a) 3x^2 − x^3 on [−2,5]; (b) x + sin^2 x on [0, π]; (c) √(x^2 − 2x + 1) on R"
+     },
+     {
+      "n": 2,
+      "type": "prove increasing (ln)",
+      "task": "f = 2x − ln(x + 1), x > −1: prove increasing on R+"
+     },
+     {
+      "n": 3,
+      "type": "piecewise",
+      "task": "f = x^3 (0 ≤ x < 1), x^2 − 2 (1 ≤ x ≤ 2) on [0,2]"
+     },
+     {
+      "n": 4,
+      "type": "abstract functions",
+      "task": "f, g differentiable on R, k = f^2 + g^2 + x^2, f' = g, g' = −f: intervals for k"
+     },
+     {
+      "n": 5,
+      "type": "composition with increasing polynomial",
+      "task": "f polynomial increasing on R, k(x) = f(x^2 − 4x): intervals for k"
+     },
+     {
+      "n": 6,
+      "type": "product sign argument",
+      "task": "f decreasing and in quadrant IV, g increasing and in quadrant I on [0,4]: prove f·g decreasing on [0,4]"
+     },
+     {
+      "n": 7,
+      "type": "monotonicity of f'",
+      "task": "f = sin x + cos x on [0, π/2]: intervals of increase/decrease of f'(x)"
+     }
+    ]
+   },
+   "exercise_types": [
+    "intervals via sign chart (polynomial, trig, radical/abs)",
+    "prove a function is increasing",
+    "piecewise monotonicity",
+    "abstract/composite functions (chain rule sign)",
+    "product of functions with known sign and monotonicity",
+    "monotonicity of f' (uses f'')"
+   ]
+  },
+  {
+   "id": "2-3",
+   "title": {
+    "ar": "القيم القصوى",
+    "en": "Extreme Values"
+   },
+   "printed_pages": [
+    65,
+    74
+   ],
+   "pdf_pages": [
+    69,
+    78
+   ],
+   "branch_note": {
+    "tag": "للعلمي فقط",
+    "meaning": "Scientific branch only — pink ribbon on the lesson header",
+    "applies_to": "whole lesson"
+   },
+   "prerequisites": {
+    "lessons": [
+     "2-2",
+     "1-2",
+     "1-4",
+     "1-7"
+    ],
+    "concepts": [
+     "u2.sign_chart",
+     "u2.first_derivative_monotonic",
+     "u1.rational_power_rule",
+     "u1.piecewise_derivative"
+    ],
+    "grade11": [
+     "domain of radical and log functions (solve 4 − x^2 ≥ 0)",
+     "one-sided limits at a discontinuity",
+     "systems of linear equations"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u2.local_extrema",
+     "name": {
+      "ar": "القيم العظمى والصغرى المحلية",
+      "en": "Local maxima and minima"
+     }
+    },
+    {
+     "id": "u2.absolute_extrema",
+     "name": {
+      "ar": "القيم العظمى والصغرى المطلقة",
+      "en": "Absolute maxima and minima"
+     }
+    },
+    {
+     "id": "u2.critical_point",
+     "name": {
+      "ar": "النقطة الحرجة",
+      "en": "Critical point"
+     }
+    },
+    {
+     "id": "u2.first_derivative_test",
+     "name": {
+      "ar": "اختبار المشتقة الأولى لتعيين القيم القصوى",
+      "en": "First-derivative test for extrema"
+     }
+    },
+    {
+     "id": "u2.endpoint_test",
+     "name": {
+      "ar": "اختبار أطراف الفترة",
+      "en": "Endpoint test"
+     }
+    },
+    {
+     "id": "u2.discontinuity_extrema",
+     "name": {
+      "ar": "القيم القصوى عند نقطة انفصال (المقارنة بالنهاية)",
+      "en": "Extrema at a discontinuity (compare with the limit)"
+     }
+    },
+    {
+     "id": "u2.extreme_value_theorem",
+     "name": {
+      "ar": "نظرية القيم القصوى المطلقة",
+      "en": "Extreme value theorem"
+     }
+    },
+    {
+     "id": "u2.closed_interval_method",
+     "name": {
+      "ar": "إيجاد أكبر وأصغر قيمة على فترة مغلقة",
+      "en": "Closed-interval method for absolute extrema"
+     }
+    },
+    {
+     "id": "u2.extrema_parameters",
+     "name": {
+      "ar": "إيجاد ثوابت من معطيات القيم القصوى",
+      "en": "Parameters from given extrema"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u2.def.extrema",
+     "concept": "u2.local_extrema",
+     "page": 65,
+     "name": {
+      "ar": "القيم الصغرى والعظمى المحلية والمطلقة",
+      "en": "Local and absolute extrema"
+     },
+     "statement": {
+      "ar": "ليكن ق معرفاً على المجال ع ، جـ ∈ ع: (١) ق(جـ) قيمة عظمى محلية إذا وجدت فترة مفتوحة ف تحوي جـ بحيث ق(جـ) ≥ ق(س) لجميع س ∈ (ف ∩ ع)؛ (٢) صغرى محلية إذا ق(جـ) ≤ ق(س) لجميع س ∈ (ف ∩ ع)؛ (٣) عظمى مطلقة إذا ق(جـ) ≥ ق(س) لجميع س ∈ ع؛ (٤) صغرى مطلقة إذا ق(جـ) ≤ ق(س) لجميع س ∈ ع. وتسمى جميعها قيماً قصوى.",
+      "en": "f defined on domain D, c ∈ D: f(c) is a local max if some open interval F ∋ c has f(c) ≥ f(x) for all x ∈ F ∩ D; local min with ≤; absolute max if f(c) ≥ f(x) for all x ∈ D; absolute min with ≤. All are called extreme values. Because of F ∩ D, endpoints of the domain can be local extrema."
+     },
+     "latex": "f(c)\\ge f(x)\\ \\ \\forall x\\in F\\cap D\\ \\ (\\text{local max}),\\qquad f(c)\\ge f(x)\\ \\ \\forall x\\in D\\ \\ (\\text{absolute max})"
+    },
+    {
+     "id": "u2.def.critical",
+     "concept": "u2.critical_point",
+     "page": 67,
+     "name": {
+      "ar": "النقطة الحرجة",
+      "en": "Critical point"
+     },
+     "statement": {
+      "ar": "تسمى النقطة (أ، ق(أ)) نقطة حرجة للاقتران ق إذا كانت أ ∈ مجال ق ، و قَ(أ) = ٠ أو قَ(أ) غير موجودة",
+      "en": "(a, f(a)) is a critical point of f if a is in the domain of f and f'(a) = 0 or f'(a) does not exist (so endpoints of a closed domain, corners and discontinuities are critical)."
+     },
+     "latex": "a\\in\\operatorname{Dom}(f)\\ \\wedge\\ \\big(f'(a)=0\\ \\vee\\ f'(a)\\text{ does not exist}\\big)"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u2.test.first_derivative",
+     "kind": "test",
+     "label": "اختبار المشتقة الأولى لتعيين القيم القصوى",
+     "page": 68,
+     "concept": "u2.first_derivative_test",
+     "statement": {
+      "ar": "إذا كان ق متصلاً في [أ، ب] و(جـ، ق(جـ)) نقطة حرجة، جـ ∈ ]أ، ب[: إذا كانت قَ > ٠ عندما أ < س < جـ و قَ < ٠ عندما جـ < س < ب فإن ق(جـ) عظمى محلية؛ وإذا كانت قَ < ٠ ثم قَ > ٠ فإن ق(جـ) صغرى محلية",
+      "en": "f continuous on [a,b], (c, f(c)) critical, c ∈ ]a,b[: f' changes + → − at c ⇒ local max; − → + ⇒ local min; no sign change ⇒ no extremum."
+     },
+     "latex": "f'>0 \\text{ on } ]a,c[,\\ f'<0 \\text{ on } ]c,b[\\ \\Rightarrow\\ f(c)\\ \\text{local max}"
+    },
+    {
+     "id": "u2.test.endpoints",
+     "kind": "test",
+     "label": "اختبار أطراف الفترة",
+     "page": 70,
+     "concept": "u2.endpoint_test",
+     "statement": {
+      "ar": "إذا كان ق متصلاً في [أ، ب] وقابلاً للاشتقاق في ]أ، ب[: ق(أ) صغرى محلية إذا قَ > ٠ عندما س > أ (بداية تزايد)؛ ق(أ) عظمى محلية إذا قَ < ٠ (بداية تناقص)؛ ق(ب) عظمى محلية إذا قَ > ٠ عندما س < ب (نهاية تزايد)؛ ق(ب) صغرى محلية إذا قَ < ٠ (نهاية تناقص)",
+      "en": "Endpoint test: f(a) local min if f' > 0 just after a (start of increase), local max if f' < 0 (start of decrease); f(b) local max if f' > 0 just before b (end of increase), local min if f' < 0 (end of decrease)."
+     }
+    },
+    {
+     "id": "u2.thm.evt",
+     "kind": "theorem",
+     "label": "نظرية القيم القصوى المطلقة",
+     "page": 72,
+     "concept": "u2.extreme_value_theorem",
+     "statement": {
+      "ar": "إذا كان ق متصلاً في [أ، ب] فإن ق يتخذ قيمه القصوى المطلقة في الفترة [أ، ب]",
+      "en": "A function continuous on a closed interval [a,b] attains its absolute maximum and minimum on [a,b]."
+     },
+     "conditions": "closed bounded interval and continuity"
+    },
+    {
+     "id": "u2.method.closed_interval",
+     "kind": "method",
+     "page": 73,
+     "concept": "u2.closed_interval_method",
+     "statement": {
+      "ar": "نجد النقط الحرجة داخل الفترة ونحسب قيم ق عندها وعند الطرفين؛ أكبرها العظمى المطلقة وأصغرها الصغرى المطلقة",
+      "en": "Evaluate f at the critical points inside the interval and at the endpoints; the largest value is the absolute max, the smallest the absolute min"
+     }
+    },
+    {
+     "id": "u2.rule.unique_extremum",
+     "kind": "learn_note",
+     "label": "أتعلم",
+     "page": 73,
+     "concept": "u2.absolute_extrema",
+     "statement": {
+      "ar": "إذا كان ق متصلاً على فترة في مجاله وكان له نقطة قيمة قصوى وحيدة فهي مطلقة في تلك الفترة",
+      "en": "If f is continuous on an interval in its domain and has a single extreme point there, that extremum is absolute on that interval"
+     }
+    },
+    {
+     "id": "u2.method.discontinuity",
+     "kind": "method",
+     "page": 72,
+     "concept": "u2.discontinuity_extrema",
+     "statement": {
+      "ar": "عند نقطة انفصال لا يمكن الحكم من إشارة المشتقة؛ نقارن ق(جـ) مع نهاية ق عند جـ من الجهة المعنية",
+      "en": "At a discontinuity the derivative sign cannot decide; compare f(c) with the one-sided limit (Ex11: f(1) = 1/2 < lim_{x→1^-} f = 1 ⇒ local min)"
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 65,
+     "context": "Graph of the number of confiscated Jerusalem ID cards 1993-2014; peak in 2008.",
+     "asks": "why was 2008 the largest?",
+     "idea": "maximum value on a graph"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 67,
+     "context": "Graph of h on [−2,2] with a local max at the endpoint −2 and a local min at 0 (corner at 1).",
+     "asks": "complete reasons; h'(2), h'(0), h'(−2)",
+     "idea": "extrema occur where h' = 0 or does not exist → critical points"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 66,
+     "type": "extrema from a graph incl. endpoints",
+     "asked": "graph on [−2,2]: local and absolute extrema and f' at each",
+     "method": "apply the definition with F ∩ domain",
+     "key_steps": [
+      "f(−2) local min (F = ]−3,−1[), f'(−2) DNE (endpoint)",
+      "f(−1) local and absolute max, f'(−1) = 0",
+      "f(2) local and absolute min, f'(2) DNE"
+     ]
+    },
+    {
+     "label": "مثال 2",
+     "page": 66,
+     "type": "constant function",
+     "asked": "f = 4 on [0,3[: local extrema",
+     "method": "definition",
+     "key_steps": [
+      "f' = 0 on ]0,3[",
+      "every point gives both a local min and a local max equal to 4"
+     ],
+     "answer": "4 (both)"
+    },
+    {
+     "label": "مثال 3",
+     "page": 67,
+     "type": "critical points of a piecewise function",
+     "asked": "f = x^2 − 3 (−1 < x ≤ 2), 3 − x (2 < x ≤ 3) on ]−1,3]",
+     "method": "continuity at 2; where f' = 0 or DNE; domain check",
+     "key_steps": [
+      "f'(2) DNE (corner), f'(3) DNE (endpoint)",
+      "f' = 0 at x = 0",
+      "x = −1 is not in the domain ⇒ not critical",
+      "critical points (0,−3), (2,1), (3,0)"
+     ]
+    },
+    {
+     "label": "مثال 4",
+     "page": 67,
+     "type": "critical points with greatest integer",
+     "asked": "f = x^3 (1 ≤ x ≤ 2), [x + 3] (2 < x ≤ 3) on [1,3]",
+     "method": "rewrite [x+3] = 5 on ]2,3[, 6 at 3",
+     "key_steps": [
+      "discontinuous at 2 and 3 ⇒ f'(2), f'(3) DNE; f'(1) DNE (endpoint)",
+      "f' = 0 on ]2,3[",
+      "every x ∈ [2,3] ∪ {1} gives a critical point"
+     ]
+    },
+    {
+     "label": "مثال 5",
+     "page": 68,
+     "type": "first-derivative test (cubic)",
+     "asked": "f = x^3 + x^2 − 5x − 5",
+     "method": "f' = (3x + 5)(x − 1); sign chart + − +",
+     "key_steps": [
+      "f(−5/3) = 40/27 local max",
+      "f(1) = −8 local min",
+      "think: absolute extrema? (none on R)"
+     ]
+    },
+    {
+     "label": "مثال 6",
+     "page": 69,
+     "type": "critical point where f' DNE (cube root)",
+     "asked": "f = (8 − x)∛x",
+     "method": "f' = (8 − 4x)/(3∛(x^2)), x ≠ 0",
+     "key_steps": [
+      "zero at 2, DNE at 0",
+      "signs + + − ⇒ local max f(2) = 6∛2",
+      "no extremum at 0 (no sign change)"
+     ],
+     "answer": "local max 6∛2"
+    },
+    {
+     "label": "مثال 7",
+     "page": 69,
+     "type": "rational function",
+     "asked": "f = (x^2 + 3)/(x − 1), x ≠ 1",
+     "method": "f' = (x^2 − 2x − 3)/(x − 1)^2",
+     "key_steps": [
+      "x = −1, 3",
+      "f(−1) = −2 local max; f(3) = 6 local min (a local max smaller than a local min)"
+     ]
+    },
+    {
+     "label": "مثال 8",
+     "page": 70,
+     "type": "cubic from given extrema",
+     "asked": "f = ax^3 + bx^2 + cx + d with local max 2 at x = −1 and local min −1 at x = 1",
+     "method": "four equations: f(−1) = 2, f(1) = −1, f'(−1) = 0, f'(1) = 0",
+     "key_steps": [
+      "−a + b − c + d = 2; a + b + c + d = −1",
+      "3a − 2b + c = 0; 3a + 2b + c = 0",
+      "a = 3/4, b = 0, c = −9/4, d = 1/2"
+     ]
+    },
+    {
+     "label": "مثال 9",
+     "page": 70,
+     "type": "critical set and extrema incl. constant piece",
+     "asked": "f = x^2 (−1 ≤ x ≤ 2), 4 (2 < x < 3)",
+     "method": "critical: f' = 0 or DNE; endpoint test",
+     "key_steps": [
+      "critical x: {0, −1} ∪ [2,3[",
+      "f(−1) local max (start of decrease)",
+      "f(0) local min; f(2) local max",
+      "every x ∈ ]2,3[: both local max and local min"
+     ]
+    },
+    {
+     "label": "مثال 10",
+     "page": 71,
+     "type": "ln function with an endpoint",
+     "asked": "f = x^2 − 2 ln x on ]0,5]",
+     "method": "f' = 2x − 2/x",
+     "key_steps": [
+      "x^2 = 1 ⇒ x = 1 (x > 0)",
+      "f(1) = 1 local min",
+      "f(5) = 25 − 2 ln 5 local max (end of increase)"
+     ]
+    },
+    {
+     "label": "مثال 11",
+     "page": 72,
+     "type": "extremum at a discontinuity",
+     "asked": "f = x^3 (−1 ≤ x < 1), 1/2 (x = 1) on [−1,1]",
+     "method": "endpoint test at −1; compare with limit at 1",
+     "key_steps": [
+      "f' = 3x^2 ≥ 0 ⇒ f(−1) = −1 local min",
+      "at 1: f discontinuous; f(1) = 1/2 < lim_{x→1^-} f = 1 ⇒ f(1) local min"
+     ]
+    },
+    {
+     "label": "مثال 12",
+     "page": 73,
+     "type": "absolute extrema on the natural domain",
+     "asked": "f = x√(4 − x^2): largest and smallest values",
+     "method": "domain [−2,2]; closed-interval method",
+     "key_steps": [
+      "f' = (4 − 2x^2)/√(4 − x^2) on ]−2,2[ ⇒ x = ±√2",
+      "f(−2) = 0, f(−√2) = −2, f(√2) = 2, f(2) = 0",
+      "absolute max 2, absolute min −2"
+     ]
+    }
+   ],
+   "notes": [
+    "Think & discuss: is every local extremum absolute or vice versa? Is a local max always larger than a local min? (Ex7 shows no)."
+   ],
+   "pitfalls": [
+    "Endpoints of a closed (or half-closed) domain are critical points and can be local extrema (book convention via F ∩ D); points outside the domain (open end) are not.",
+    "A critical point is not automatically an extremum: check the sign change (Ex6 at x = 0).",
+    "Points where f' does not exist (cusps, corners, discontinuities) must be tested too.",
+    "At a discontinuity use the comparison of f(c) with the limit, not the derivative sign (Ex11).",
+    "For absolute extrema on [a,b] evaluate f at endpoints as well as interior critical points.",
+    "A local max can be smaller than a local min (Ex7).",
+    "Constant pieces: every point is both a local max and a local min."
+   ],
+   "exercises": {
+    "label": "تمارين 2-3",
+    "page": 74,
+    "items": [
+     {
+      "n": 1,
+      "type": "critical points",
+      "task": "(a) (1/3)x^3 − x^2 + 1/3 on [−2,3]; (b) x^{2/3} on [−8,8]"
+     },
+     {
+      "n": 2,
+      "type": "local extrema",
+      "task": "(a) x^3 − 9x^2 + 24x; (b) √(4 − x^2); (c) (x^2 − 3)e^x; (d) (x^3 − 1)/(x − 1), x ≠ 1; (e) cos^2 x − sin^2 x on [0, π]; (f) e^{−(x−2)^2}"
+     },
+     {
+      "n": 3,
+      "type": "absolute max/min",
+      "task": "(a) x^3 (0 ≤ x ≤ 2), x^2 + 4 (2 < x ≤ 3) on [0,3]; (b) e^x − e x on [0,3]; (c) cos x − (1/3)cos^3 x on [π/2, 3π/2]"
+     },
+     {
+      "n": 4,
+      "type": "parameters from extrema",
+      "task": "f = ax^3 + bx^2 + 9x + 1 with local max at x = 1 and local min at x = 3: a, b"
+     },
+     {
+      "n": 5,
+      "type": "inequality via extrema",
+      "task": "prove 4x^3 − x^4 − 29 is always negative"
+     }
+    ]
+   },
+   "exercise_types": [
+    "critical points (incl. f' DNE, endpoints)",
+    "local extrema via first-derivative test",
+    "absolute extrema on closed intervals",
+    "parameters from extrema conditions",
+    "prove an inequality using the absolute max"
+   ]
+  },
+  {
+   "id": "2-4",
+   "title": {
+    "ar": "التقعّر ونقط الانعطاف",
+    "en": "Concavity and Points of Inflection"
+   },
+   "printed_pages": [
+    75,
+    82
+   ],
+   "pdf_pages": [
+    79,
+    86
+   ],
+   "branch_note": {
+    "tag": "للعلمي فقط",
+    "meaning": "Scientific branch only — pink ribbon on the lesson header",
+    "applies_to": "whole lesson"
+   },
+   "prerequisites": {
+    "lessons": [
+     "2-2",
+     "2-3",
+     "1-2",
+     "1-3",
+     "1-6"
+    ],
+    "concepts": [
+     "u1.higher_derivatives",
+     "u2.sign_chart",
+     "u2.first_derivative_test",
+     "u1.tangent_slope"
+    ],
+    "grade11": [
+     "inverse tangent for angles",
+     "solving equations"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u2.concavity_def",
+     "name": {
+      "ar": "تعريف التقعر للأعلى وللأسفل",
+      "en": "Definition of concave up / concave down"
+     }
+    },
+    {
+     "id": "u2.concavity_test",
+     "name": {
+      "ar": "اختبار التقعر باستخدام المشتقة الثانية",
+      "en": "Second-derivative concavity test"
+     }
+    },
+    {
+     "id": "u2.inflection_point",
+     "name": {
+      "ar": "نقطة الانعطاف",
+      "en": "Point of inflection"
+     }
+    },
+    {
+     "id": "u2.inflection_angle",
+     "name": {
+      "ar": "زاوية الانعطاف ونقطة الانعطاف الأفقي",
+      "en": "Angle of inflection and horizontal inflection point"
+     }
+    },
+    {
+     "id": "u2.second_derivative_test",
+     "name": {
+      "ar": "اختبار المشتقة الثانية لتعيين القيم القصوى",
+      "en": "Second-derivative test for extrema"
+     }
+    },
+    {
+     "id": "u2.graph_of_derivative",
+     "name": {
+      "ar": "استنتاج خصائص ق من منحنى قَ أو قً",
+      "en": "Reading properties of f from the graph of f' or f''"
+     }
+    },
+    {
+     "id": "u2.function_from_conditions",
+     "name": {
+      "ar": "إيجاد قاعدة اقتران من شروط التقعر والانعطاف",
+      "en": "Building a polynomial from inflection/extremum conditions"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u2.def.concavity",
+     "concept": "u2.concavity_def",
+     "page": 75,
+     "name": {
+      "ar": "التقعر",
+      "en": "Concavity"
+     },
+     "statement": {
+      "ar": "يقال لمنحنى ق إنه مقعر للأعلى في [أ، ب] إذا كان واقعاً فوق جميع مماساته في ]أ، ب[، ومقعر للأسفل إذا كان واقعاً تحت جميع مماساته في ]أ، ب[.",
+      "en": "The graph of f is concave up on [a,b] if it lies above all its tangents in ]a,b[, concave down if it lies below all its tangents."
+     }
+    },
+    {
+     "id": "u2.def.inflection",
+     "concept": "u2.inflection_point",
+     "page": 77,
+     "name": {
+      "ar": "نقطة الانعطاف وزاويته",
+      "en": "Inflection point and angle"
+     },
+     "statement": {
+      "ar": "(١) تسمى (جـ، ق(جـ)) نقطة انعطاف إذا كان ق متصلاً عند جـ ويغير اتجاه تقعره عند جـ. (٢) زاوية الانعطاف: زاوية ميل المماس عند نقطة الانعطاف. (٣) إذا كانت نقطة انعطاف وكان قَ(جـ) = ٠ فهي نقطة انعطاف أفقي.",
+      "en": "(1) (c, f(c)) is an inflection point if f is continuous at c and the concavity changes at c. (2) Angle of inflection = inclination angle of the tangent there (tan = f'(c)). (3) If also f'(c) = 0 it is a horizontal inflection point."
+     },
+     "latex": "\\tan\\alpha=f'(c);\\quad f'(c)=0 \\Rightarrow \\text{horizontal inflection}"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u2.test.concavity",
+     "kind": "test",
+     "label": "اختبار التقعر باستخدام المشتقة الثانية*",
+     "page": 75,
+     "concept": "u2.concavity_test",
+     "statement": {
+      "ar": "إذا كان ق متصلاً في ]أ، ب[ و قً معرفاً فيها: مقعر للأعلى إذا قً(س) > ٠ لجميع س ∈ ]أ، ب[؛ مقعر للأسفل إذا قً(س) < ٠؛ غير مقعر إذا قً(س) = ٠",
+      "en": "f continuous on ]a,b[ with f'' defined there: f'' > 0 ⇒ concave up on ]a,b[; f'' < 0 ⇒ concave down; f'' = 0 throughout ⇒ neither."
+     },
+     "latex": "f''(x)>0\\ \\forall x\\in\\,]a,b[\\ \\Rightarrow\\ \\text{concave up};\\quad f''(x)<0\\Rightarrow \\text{concave down}",
+     "conditions": "* footnote: open intervals will be used for concavity"
+    },
+    {
+     "id": "u2.note.poly_inflection",
+     "kind": "note",
+     "label": "ملاحظة",
+     "page": 79,
+     "concept": "u2.inflection_point",
+     "statement": {
+      "ar": "إذا كان ق كثير حدود و(س₁، ق(س₁)) نقطة انعطاف فإن قً(س₁) = ٠",
+      "en": "For a polynomial, at an inflection point f''(x1) = 0 (necessary condition used to find parameters)"
+     }
+    },
+    {
+     "id": "u2.test.second_derivative",
+     "kind": "theorem",
+     "label": "نظرية: اختبار المشتقة الثانية",
+     "page": 80,
+     "concept": "u2.second_derivative_test",
+     "statement": {
+      "ar": "إذا كان ق قابلاً للاشتقاق في فترة مفتوحة تحوي جـ و قَ(جـ) = ٠: ق(جـ) عظمى محلية إذا قً(جـ) < ٠؛ صغرى محلية إذا قً(جـ) > ٠؛ يفشل الاختبار إذا قً(جـ) = ٠ أو غير موجودة",
+      "en": "f differentiable on an open interval containing c with f'(c) = 0: f''(c) < 0 ⇒ local max; f''(c) > 0 ⇒ local min; the test fails if f''(c) = 0 or does not exist (then use the first-derivative test)."
+     },
+     "latex": "f'(c)=0:\\ f''(c)<0\\Rightarrow\\text{local max},\\ f''(c)>0\\Rightarrow\\text{local min}"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 75,
+     "context": "Roller-coaster in Palestinian amusement parks.",
+     "asks": "regions where riders feel fear vs safer regions — explain",
+     "idea": "intuition of bending (concavity)"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 75,
+     "context": "Graph of f with tangents at c, d (tangents above the curve) and at h, w (below the curve).",
+     "asks": "sign of tangent slopes at each point",
+     "idea": "tangents above curve ⇔ concave down; below ⇔ concave up"
+    },
+    {
+     "label": "نشاط 2 (مكرر الترقيم)",
+     "page": 80,
+     "context": "Cubic through (0,5) with a horizontal inflection point at (2,1).",
+     "asks": "set f = ax^3 + bx^2 + cx + d; d = 5; f(2) = 1, f'(2) = 0, f''(2) = 0; solve",
+     "idea": "build a polynomial from inflection conditions"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 76,
+     "type": "concavity of a polynomial",
+     "asked": "f = 3x^2 − x^3 on ]−2, 5[",
+     "method": "f'' = 6 − 6x, sign chart",
+     "key_steps": [
+      "f'' = 0 at x = 1",
+      "concave up ]−2,1[, concave down ]1,5["
+     ]
+    },
+    {
+     "label": "مثال 2",
+     "page": 76,
+     "type": "concavity with an excluded point",
+     "asked": "f = (x^2 + 1)/x, x ≠ 0",
+     "method": "f = x + 1/x, f'' = 2/x^3",
+     "key_steps": [
+      "concave down ]−∞,0[, concave up ]0,∞[ (why)"
+     ]
+    },
+    {
+     "label": "مثال 3",
+     "page": 76,
+     "type": "prove concave down (ln of trig)",
+     "asked": "f = ln cos x on ]0, π/3[",
+     "method": "f' = −tan x, f'' = −sec^2 x < 0",
+     "key_steps": [
+      "concave down on ]0, π/3["
+     ]
+    },
+    {
+     "label": "مثال 4",
+     "page": 77,
+     "type": "inflection point (trig); horizontal?",
+     "asked": "f = 3 sin x cos x on ]0, π[",
+     "method": "f' = 3cos 2x, f'' = −6 sin 2x",
+     "key_steps": [
+      "f'' = 0 ⇒ x = π/2; sign changes and f continuous",
+      "inflection (π/2, 0); horizontal? f'(π/2) = −3 ≠ 0 ⇒ no"
+     ]
+    },
+    {
+     "label": "مثال 5",
+     "page": 77,
+     "type": "no inflection point",
+     "asked": "f = √(9 − x^2) on ]−3,3[",
+     "method": "f'' = −9/√((9 − x^2)^3) < 0",
+     "key_steps": [
+      "always concave down ⇒ no inflection points"
+     ]
+    },
+    {
+     "label": "مثال 6",
+     "page": 78,
+     "type": "concavity, inflection points and angles",
+     "asked": "f = x^4 − 2x^3",
+     "method": "f'' = 12x^2 − 12x",
+     "key_steps": [
+      "zeros 0, 1; concave up ]−∞,0] and [1,∞[, down [0,1]",
+      "inflection (0,0), (1,−1)",
+      "tan α1 = f'(0) = 0 ⇒ α1 = 0 (horizontal); tan α2 = f'(1) = −2 ⇒ α2 = tan^{-1}(−2)"
+     ]
+    },
+    {
+     "label": "مثال 7",
+     "page": 78,
+     "type": "piecewise with a discontinuity",
+     "asked": "f = x^3 (0 < x ≤ 2), x^2 (2 < x < 4)",
+     "method": "f discontinuous at 2; f'' = 6x, 2",
+     "key_steps": [
+      "f'' = 0 at x = 0 rejected (not in domain)",
+      "concave up on ]0,2[ and ]2,4["
+     ]
+    },
+    {
+     "label": "مثال 8",
+     "page": 79,
+     "type": "read f's properties from the graph of f'",
+     "asked": "graph of f' (zeros −3, 0, 3; turning points at −1, 1): monotonicity, local extrema, concavity, inflection x",
+     "method": "sign of f' ⇒ monotonicity; increasing/decreasing f' ⇒ sign of f''",
+     "key_steps": [
+      "f increasing [−3,0], [3,∞[; decreasing ]−∞,−3], [0,3]",
+      "f(−3) local min, f(0) local max, f(3) local min",
+      "concave up ]−∞,−1[, ]1,∞[; down ]−1,1[",
+      "inflection at x = −1, 1"
+     ]
+    },
+    {
+     "label": "مثال 9",
+     "page": 80,
+     "type": "second-derivative test, failing case",
+     "asked": "f = 3x^4 − 8x^3 + 6x^2",
+     "method": "f' = 12x(x − 1)^2; f'' = 36x^2 − 48x + 12",
+     "key_steps": [
+      "f''(0) = 12 > 0 ⇒ f(0) = 0 local min",
+      "f''(1) = 0 ⇒ test fails; first-derivative test: no sign change ⇒ no extremum at 1"
+     ]
+    }
+   ],
+   "notes": [
+    "If f is a polynomial and (x1, f(x1)) is an inflection point then f''(x1) = 0 (ملاحظة p79)."
+   ],
+   "pitfalls": [
+    "f''(c) = 0 does not guarantee an inflection point: the concavity must change and f must be continuous at c.",
+    "Points outside the domain or discontinuities cannot be inflection points (Ex7).",
+    "Horizontal inflection requires f'(c) = 0 as well (Ex4 is not horizontal).",
+    "Second-derivative test fails when f''(c) = 0 — fall back to the first-derivative test (Ex9).",
+    "Reading graphs: on the graph of f', zeros give extrema of f and turning points of f' give inflection points of f; do not confuse which graph is shown (f, f' or f'')."
+   ],
+   "exercises": {
+    "label": "تمارين 2-4",
+    "page": 81,
+    "items": [
+     {
+      "n": 1,
+      "type": "concavity intervals",
+      "task": "(a) f'' = (x^2 − 3x − 4)(x + 2); (b) f' = sin x − x on ]−π/2, π/2[; (c) 4x^3 − x^4 + x on ]0,4[; (d) (x − 3)^{3/2}, x > 3; (e) sin(x/2) on ]0, π[; (f) e^x cos x on ]0, 2π[; (g) [x/3 − 1] (1 < x ≤ 3), x^3 (3 < x < 5)"
+     },
+     {
+      "n": 2,
+      "type": "inflection points",
+      "task": "(a) x^3 + x; (b) cos x on ]0, 2π[; (c) ∛(5 − x)"
+     },
+     {
+      "n": 3,
+      "type": "extrema: 2nd-derivative test else 1st",
+      "task": "(a) x^3 + 6x^2; (b) |x + 6|"
+     },
+     {
+      "n": 4,
+      "type": "parameter from inflection",
+      "task": "f = ax^2 + x^3 has an inflection point at x = −1: a"
+     },
+     {
+      "n": 5,
+      "type": "graph of f''",
+      "task": "graph of f'' (a line crossing at x = 3), f'(0) = f'(6) = 0: concavity and inflection, local extrema, monotonicity"
+     },
+     {
+      "n": 6,
+      "type": "cubic from conditions",
+      "task": "cubic through (1,5) with inflection at x = 2 where the tangent is 3x + y = 7: find f"
+     },
+     {
+      "n": 7,
+      "type": "horizontal inflection + chain",
+      "task": "f = x^4 − 4x^3 + k(x) polynomial with horizontal inflection point (1,2), w = k^2: w''(1)"
+     },
+     {
+      "n": 8,
+      "type": "sketch from sign information",
+      "task": "f continuous on [−3,2], f(0) = 0, f'(1) = 0, f'(−2) = 0, f'' > 0 for x > 0, f'' < 0 for x < 0: monotonicity, extrema and types, inflection x-values"
+     }
+    ]
+   },
+   "exercise_types": [
+    "concavity intervals from f, f' or f''",
+    "inflection points (and angles)",
+    "second-derivative test with fallback",
+    "parameters/polynomials from inflection & tangent conditions",
+    "properties of f from the graph of f' or f''",
+    "qualitative analysis from sign conditions"
+   ]
+  },
+  {
+   "id": "2-5",
+   "title": {
+    "ar": "تطبيقات عملية على القيم القصوى",
+    "en": "Applications of Extrema (Optimisation)"
+   },
+   "printed_pages": [
+    83,
+    87
+   ],
+   "pdf_pages": [
+    87,
+    91
+   ],
+   "branch_note": {
+    "tag": "للعلمي فقط",
+    "meaning": "Scientific branch only — pink ribbon on the lesson header",
+    "applies_to": "whole lesson"
+   },
+   "prerequisites": {
+    "lessons": [
+     "2-3",
+     "2-4",
+     "1-5",
+     "1-7"
+    ],
+    "concepts": [
+     "u2.absolute_extrema",
+     "u2.second_derivative_test",
+     "u2.first_derivative_test",
+     "u1.instant_velocity_accel"
+    ],
+    "grade11": [
+     "area/perimeter of rectangle, square, circle, triangle, trapezoid",
+     "volume and surface area of box, cylinder, cone, sphere",
+     "distance between two points",
+     "similar triangles",
+     "intersection of lines"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u2.optimization",
+     "name": {
+      "ar": "مسائل القيم القصوى التطبيقية (التحسين)",
+      "en": "Optimisation problems"
+     }
+    },
+    {
+     "id": "u2.objective_function",
+     "name": {
+      "ar": "بناء الاقتران المراد تعظيمه/تصغيره بمتغير واحد باستخدام القيد",
+      "en": "Objective function in one variable via the constraint"
+     }
+    },
+    {
+     "id": "u2.optimization_verify",
+     "name": {
+      "ar": "التحقق من نوع القيمة (المشتقة الثانية/الإشارة) وأنها مطلقة",
+      "en": "Verifying the optimum is an absolute max/min"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u2.method.optimization",
+     "kind": "method",
+     "page": 84,
+     "concept": "u2.optimization",
+     "statement": {
+      "ar": "نفرض المتغيرات، نكتب القيد ونعبر عن المقدار المطلوب باقتران في متغير واحد، نشتق ونضع المشتقة = صفر، نتحقق بالمشتقة الثانية أو بالإشارة، ووجود قيمة قصوى وحيدة يعني أنها مطلقة",
+      "en": "Name variables, write the constraint, express the target quantity as a function of one variable (with its domain), set the derivative to zero, confirm with the second derivative or a sign chart; a unique local extremum on the interval is absolute."
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 83,
+     "context": "Jaffa orange farmer gives each of three sons one third of a fence; they enclose a square, a rectangle, an isosceles triangle.",
+     "asks": "which shape would you choose for maximum area, and why?",
+     "idea": "fixed perimeter ⇒ the square maximises rectangle area"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 83,
+     "context": "Rectangular park (named after the late martyr Yasser Arafat, in front of the Muqata'a) between roads y = 20x (Al-Umma St.), y = 42 − x (Al-Karama St.) and y = 0 (Al-Shuhada St.); two vertices on the slanted roads, two on y = 0.",
+     "asks": "length x, width 20u; 20u = 42 − x − u ⇒ u = (42 − x)/21; area m(x) = (20/21)x(42 − x); maximise and confirm with m''",
+     "idea": "geometric constraint from two lines"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 84,
+     "type": "numbers: max product",
+     "asked": "two positive numbers with sum 60, product maximal",
+     "method": "m = x(60 − x)",
+     "key_steps": [
+      "m' = 60 − 2x = 0 ⇒ x = 30",
+      "m'' = −2 < 0 ⇒ max",
+      "numbers 30, 30"
+     ],
+     "answer": "30, 30"
+    },
+    {
+     "label": "مثال 2",
+     "page": 84,
+     "type": "box: minimum cost (surface area)",
+     "asked": "gift box with square base, volume 8 dm^3, minimum cardboard",
+     "method": "x^2 y = 8; T = 4xy + 2x^2 = 32/x + 2x^2",
+     "key_steps": [
+      "T' = −32/x^2 + 4x = 0 ⇒ x^3 = 8 ⇒ x = 2 dm",
+      "T'' = 64/x^3 + 4 ⇒ T''(2) = 12 > 0 (unique local min ⇒ absolute)",
+      "base 2 dm, height 2 dm"
+     ],
+     "answer": "2 × 2 × 2 dm"
+    },
+    {
+     "label": "مثال 3",
+     "page": 85,
+     "type": "shortest distance point–curve",
+     "asked": "shortest distance between K(2,0) and y^2 − x^2 = 8",
+     "method": "d = √((x − 2)^2 + y^2) = √(2x^2 − 4x + 12)",
+     "key_steps": [
+      "d' = (4x − 4)/(2√(2x^2 − 4x + 12)) = 0 ⇒ x = 1, y = ±3",
+      "sign − + ⇒ min; unique ⇒ absolute",
+      "d = √10"
+     ],
+     "answer": "√10"
+    },
+    {
+     "label": "مثال 4",
+     "page": 86,
+     "type": "wire cut into square and circle: minimum total area",
+     "asked": "56 cm wire: part x bent into a circle, the rest into a square; minimise total area",
+     "method": "r = x/(2π), side y = 14 − x/4; m = x^2/(4π) + (14 − x/4)^2",
+     "key_steps": [
+      "m' = x/(2π) + x/8 − 7 = 0 ⇒ x = 56π/(4 + π)",
+      "r = 28/(4 + π), y = 56/(4 + π)",
+      "m'' = 1/(2π) + 1/8 > 0 ⇒ unique local min ⇒ absolute min"
+     ]
+    },
+    {
+     "label": "مثال 5",
+     "page": 86,
+     "type": "rectangle: minimum perimeter for given area",
+     "asked": "rectangle with area 16 cm^2, minimum perimeter",
+     "method": "y = 16/x, P = 2x + 32/x",
+     "key_steps": [
+      "P' = 2 − 32/x^2 = 0 ⇒ x = 4",
+      "P'' = 64/x^3 ⇒ P''(4) = 1 > 0",
+      "minimum perimeter 16 cm (a square)"
+     ],
+     "answer": "16 cm"
+    }
+   ],
+   "notes": [],
+   "pitfalls": [
+    "Reduce to ONE variable using the constraint before differentiating.",
+    "State the practical domain (lengths positive, x within bounds) and reject roots outside it.",
+    "Confirm max vs min (second derivative or sign chart) and justify absoluteness (unique extremum, or compare endpoints).",
+    "Answer the question actually asked (dimensions vs the optimal value; e.g. 'min perimeter' = 16, not x = 4).",
+    "For distance problems, minimising d or d^2 is equivalent; keep track of both coordinates (y = ±3)."
+   ],
+   "exercises": {
+    "label": "تمارين 2-5",
+    "page": 87,
+    "items": [
+     {
+      "n": 1,
+      "type": "max area fixed perimeter",
+      "task": "80 m of fence: largest rectangular garden area"
+     },
+     {
+      "n": 2,
+      "type": "cylinder cost",
+      "task": "open-top cylindrical pen holder volume 192π cm^3; base material costs 3 times the side material per cm^2: dimensions of least cost"
+     },
+     {
+      "n": 3,
+      "type": "shortest distance to a road",
+      "task": "road y = √(2x − 1), hospital M(3,0): point W on the road minimising WM"
+     },
+     {
+      "n": 4,
+      "type": "motion + extrema",
+      "task": "s = a cos(πt/4) + b sin(πt/4); average velocity on [0,2] = 10 m/s and speed is minimal at t = 1 s: a, b"
+     },
+     {
+      "n": 5,
+      "type": "two ships",
+      "task": "at 12:00 ship B is 30 km north of ship A, B sails west at 10 km/h, A sails north at 20 km/h: when is their distance least?"
+     },
+     {
+      "n": 6,
+      "type": "cylinder in a cone",
+      "task": "largest volume of a right circular cylinder inside a right circular cone of height 12 cm and base diameter 4 cm"
+     },
+     {
+      "n": 7,
+      "type": "trapezoid area",
+      "task": "trapezoid with three equal sides of 6 cm: maximum area"
+     },
+     {
+      "n": 8,
+      "type": "triangle in rectangle",
+      "task": "rectangle ABCD, AB = 8, BC = 10; M on AB with AM = x, N on BC with NC = (3/2)x: x maximising the area of triangle MNC [as printed]"
+     }
+    ]
+   },
+   "exercise_types": [
+    "maximise area / minimise perimeter or cost",
+    "solids: box, cylinder, inscribed cylinder/cone",
+    "shortest distance point–curve",
+    "related motion (two ships, motion with parameters)",
+    "geometric figures (trapezoid, triangle in rectangle, track)"
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "label": "تمارين عامة (الوحدة الثانية)",
+  "printed_pages": [
+   88,
+   91
+  ],
+  "items": [
+   {
+    "n": "1.1",
+    "type": "mcq",
+    "task": "f = x^2 − x (0 ≤ x ≤ 1), x − 1 (1 < x ≤ 3): set of x giving critical points in [0,3]",
+    "answer_check": "{0, 1/2, 3} (f is differentiable at 1: both one-sided derivatives equal 1)"
+   },
+   {
+    "n": "1.2",
+    "type": "mcq",
+    "task": "f = √(4 − x^2) on [−2,2]: x of absolute max",
+    "answer_check": "0"
+   },
+   {
+    "n": "1.3",
+    "type": "mcq",
+    "task": "f' = (x^2 − 1)^3 (x − 2)^4: interval where f is decreasing",
+    "answer_check": "[−1, 1]"
+   },
+   {
+    "n": "1.4",
+    "type": "mcq",
+    "task": "f = x^3 − 3x on [−3,1]: absolute min",
+    "answer_check": "−18"
+   },
+   {
+    "n": "1.5",
+    "type": "mcq",
+    "task": "polynomial with f'' > 0 for x < 4, f'' < 0 for x > 4, f'(3) = 0: always true",
+    "answer_check": "f(3) is a local min"
+   },
+   {
+    "n": "1.6",
+    "type": "mcq",
+    "task": "set of all c from Rolle for f = 8 on [0,1]",
+    "answer_check": "]0, 1["
+   },
+   {
+    "n": "1.7",
+    "type": "mcq",
+    "task": "graph of f with points m, n, w, h: point where f' and f'' are both positive",
+    "answer_check": "h"
+   },
+   {
+    "n": "1.8",
+    "type": "mcq",
+    "task": "f continuous on [1,3], f'' > 0 on ]1,3[, exactly three critical points, f'(2) = 0",
+    "answer_check": "f(5/2) > f(2)"
+   },
+   {
+    "n": "1.9",
+    "type": "mcq",
+    "task": "f = x^3 + m x^2 − 9x has an inflection at x = −1: m",
+    "answer_check": "3"
+   },
+   {
+    "n": "1.10",
+    "type": "mcq",
+    "task": "MVT value c for x^2 + x − 6 on [−1,2]",
+    "answer_check": "1/2"
+   },
+   {
+    "n": "1.11",
+    "type": "mcq",
+    "task": "f = x|x|: correct statement",
+    "answer_check": "(0, f(0)) is an inflection point"
+   },
+   {
+    "n": "1.12",
+    "type": "mcq",
+    "task": "graph of f' (downward parabola, zeros 1, 3, vertex at 2): solution set of f'' > 0",
+    "answer_check": "]−∞, 2["
+   },
+   {
+    "n": "1.13",
+    "type": "mcq",
+    "task": "cubic on ]a,b[: maximum number of critical points",
+    "answer_check": "2"
+   },
+   {
+    "n": "1.14",
+    "type": "mcq",
+    "task": "f = ln sin x on ]π/4, π[: where increasing",
+    "answer_check": "]π/4, π/2]"
+   },
+   {
+    "n": 2,
+    "type": "prove increasing",
+    "task": "f = sin x + cos x on [0, π/4]"
+   },
+   {
+    "n": 3,
+    "type": "monotonicity & local extrema",
+    "task": "f = (x + 1)/(x^2 + 3)"
+   },
+   {
+    "n": 4,
+    "type": "Rolle parameter",
+    "task": "f = x^2 − 3x − a satisfies Rolle on [−1, a]: a"
+   },
+   {
+    "n": 5,
+    "type": "full analysis",
+    "task": "f = x^3 − 3x^2 − 9x + 5 on ]−2,6[: absolute extrema; concavity; inflection points and angles"
+   },
+   {
+    "n": 6,
+    "type": "graph of f'",
+    "task": "graph of f' (zeros −5, 0, 3; turning points −4, 2): concavity of f, x of inflection points"
+   },
+   {
+    "n": 7,
+    "type": "product monotonicity",
+    "task": "f polynomial on [2,6], in quadrant I and decreasing; g = 8 − x: show k = f·g decreasing on [2,6]"
+   },
+   {
+    "n": 8,
+    "type": "optimisation",
+    "task": "largest right circular cone inscribed in a sphere of radius 10 cm"
+   },
+   {
+    "n": 9,
+    "type": "prove increasing (abstract)",
+    "task": "f = cos x − g(x) + 3x on [0, π/2], g differentiable: prove f + g increasing"
+   },
+   {
+    "n": 10,
+    "type": "graphs of f and g",
+    "task": "graphs of f (increasing, concave up) and g (decreasing, positive) on [a,b]: show f'/g is increasing on ]a,b["
+   },
+   {
+    "n": 11,
+    "type": "cubic from conditions",
+    "task": "cubic with local min point (2, −1) and inflection point (0, 3)"
+   },
+   {
+    "n": 12,
+    "type": "optimisation",
+    "task": "400 m running track around a rectangle with semicircular ends: rectangle of maximum area"
+   },
+   {
+    "n": 13,
+    "type": "optimisation",
+    "task": "18 cm wire made into two equilateral triangles: side lengths minimising the total area"
+   },
+   {
+    "n": 14,
+    "type": "self-assessment",
+    "task": "table: Rolle & MVT problems; monotonicity; concavity; real-life applications"
+   }
+  ]
+ },
+ "unit_exercise_types": [
+  "MCQ across all lessons (14 items)",
+  "full curve analysis of a cubic",
+  "reading f' graphs",
+  "abstract-function monotonicity proofs",
+  "polynomial from extremum/inflection conditions",
+  "optimisation"
+ ]
+}

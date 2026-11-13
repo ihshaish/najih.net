@@ -1,0 +1,1195 @@
+{
+ "id": "2024-scientific-math-s3",
+ "year": 2024,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 3,
+ "session_ar": "الدورة الاستكمالية",
+ "paper": null,
+ "paper_ar": "ورقة واحدة (الورقة: --)",
+ "date": "2024-12-07",
+ "day_ar": "السبت",
+ "duration_min": 180,
+ "duration_ar": "ثلاث ساعات",
+ "total_marks": 200,
+ "num_questions": 6,
+ "pages": 4,
+ "img": "exams/2024/scientific/math-s3",
+ "pdf": "exams/2024/scientific/math-s3.pdf",
+ "units_covered": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "choice_rules": {
+  "rule_ar": "عدد أسئلة الورقة (ستة) أسئلة، أجب عن (خمسة) منها فقط",
+  "rule_en": "Six questions; answer five only.",
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً.",
+    "rule_en": "Section 1: questions 1-3, all compulsory."
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عن سؤالين منها فقط.",
+    "rule_en": "Section 2: questions 4-6, answer any two."
+   }
+  ],
+  "marks_per_question": 40,
+  "mcq_rule_ar": "يتكون هذا السؤال من (١٠) فقرات من نوع اختيار من متعدد، من أربعة بدائل",
+  "mcq_rule_en": "Question 1 is 10 four-option multiple-choice items (40 marks); per-item marks are not printed."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "marks": 40,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الأول",
+   "item_ids": [
+    "Q1-1",
+    "Q1-2",
+    "Q1-3",
+    "Q1-4",
+    "Q1-5",
+    "Q1-6",
+    "Q1-7",
+    "Q1-8",
+    "Q1-9",
+    "Q1-10"
+   ],
+   "item_marks_sum": 40
+  },
+  {
+   "q": 2,
+   "marks": 40,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثاني",
+   "item_ids": [
+    "Q2-a",
+    "Q2-b",
+    "Q2-c"
+   ],
+   "item_marks_sum": 40
+  },
+  {
+   "q": 3,
+   "marks": 40,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثالث",
+   "item_ids": [
+    "Q3-a",
+    "Q3-b-1",
+    "Q3-b-2",
+    "Q3-c"
+   ],
+   "item_marks_sum": 40
+  },
+  {
+   "q": 4,
+   "marks": 40,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الرابع",
+   "item_ids": [
+    "Q4-a",
+    "Q4-b",
+    "Q4-c-1",
+    "Q4-c-2"
+   ],
+   "item_marks_sum": 40
+  },
+  {
+   "q": 5,
+   "marks": 40,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الخامس",
+   "item_ids": [
+    "Q5-a-1",
+    "Q5-a-2",
+    "Q5-b",
+    "Q5-c"
+   ],
+   "item_marks_sum": 40
+  },
+  {
+   "q": 6,
+   "marks": 40,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال السادس",
+   "item_ids": [
+    "Q6-a",
+    "Q6-b",
+    "Q6-c-1",
+    "Q6-c-2"
+   ],
+   "item_marks_sum": 40
+  }
+ ],
+ "items": [
+  {
+   "id": "Q1-1",
+   "label": "Q1 1",
+   "label_ar": "السؤال الأول، الفقرة ١",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-2"
+   ],
+   "concepts": [
+    "deriv-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$f(x)=\\frac6{h(x)}$, $f(1)=3$, $f'(1)=6$; find $h'(1)$.",
+    "ar": "جد $h'(1)$."
+   },
+   "latex": "f(x)=\\frac{6}{h(x)}",
+   "mcq_options": "four numeric values (±4, ±8)",
+   "verified_answer": "-4"
+  },
+  {
+   "id": "Q1-2",
+   "label": "Q1 2",
+   "label_ar": "السؤال الأول، الفقرة ٢",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$f(2x+1)=6x^4-6x^2$; find $f'(3)$.",
+    "ar": "جد $f'(3)$."
+   },
+   "latex": "f(2x+1)=6x^4-6x^2",
+   "mcq_options": "four numeric values (6, 12, 24, 51)",
+   "verified_answer": "6"
+  },
+  {
+   "id": "Q1-3",
+   "label": "Q1 3",
+   "label_ar": "السؤال الأول، الفقرة ٣",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "2-4",
+    "2-2",
+    "1-4"
+   ],
+   "concepts": [
+    "concavity",
+    "monotonic",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=\\ln\\cos x$ on $]0,\\frac{\\pi}{3}[$; which statement is true?",
+    "ar": "أي العبارات صحيحة؟"
+   },
+   "latex": "f(x)=\\ln\\cos x",
+   "mcq_options": "statements: concave up / concave down / increasing / has an inflection point",
+   "verified_answer": "concave down on ]0, π/3["
+  },
+  {
+   "id": "Q1-4",
+   "label": "Q1 4",
+   "label_ar": "السؤال الأول، الفقرة ٤",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "1-5",
+    "1-3"
+   ],
+   "concepts": [
+    "motion-deriv",
+    "trig-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$s=3\\sin(2t+5)$; relation between acceleration $a$ and $s$.",
+    "ar": "العلاقة بين التسارع والمسافة."
+   },
+   "latex": "s=3\\sin(2t+5)",
+   "mcq_options": "four relations a = k·s (k = ±4, ±12)",
+   "verified_answer": "a = -4s"
+  },
+  {
+   "id": "Q1-5",
+   "label": "Q1 5",
+   "label_ar": "السؤال الأول، الفقرة ٥",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "2-1"
+   ],
+   "concepts": [
+    "mvt"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "MVT value $c$ for $f(x)=x^2+x-5$ on $[-1,2]$.",
+    "ar": "قيمة $c$ التي تعينها نظرية القيمة المتوسطة."
+   },
+   "latex": "f(x)=x^2+x-5",
+   "mcq_options": "four halves (5/2, 3/2, 1/2, -1/2)",
+   "verified_answer": "1/2"
+  },
+  {
+   "id": "Q1-6",
+   "label": "Q1 6",
+   "label_ar": "السؤال الأول، الفقرة ٦",
+   "question": 1,
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-add-scalar"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$A=\\begin{bmatrix}3&-1\\\\4&7\\end{bmatrix}$, $B=\\begin{bmatrix}2&-1\\\\4&6\\end{bmatrix}$; evaluate the printed linear combination of $A,B$.",
+    "ar": "ما قيمة المقدار المصفوفي؟"
+   },
+   "latex": "15A+3(A-2B)-12B",
+   "mcq_options": "±18I and two explicit 2×2 matrices",
+   "note": "As transcribed the expression equals 18(A−B)=18I, which matches two options (18I and diag(18,18)); transcription or options need checking. Answer not recorded."
+  },
+  {
+   "id": "Q1-7",
+   "label": "Q1 7",
+   "label_ar": "السؤال الأول، الفقرة ٧",
+   "question": 1,
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "4-1"
+   ],
+   "concepts": [
+    "antiderivative"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$M(x)=4x-5$ is an antiderivative of $h$ and $f(x)-2M(x)=xh(x)$; which is $f$?",
+    "ar": "أي الاقترانات يمثل $f$؟"
+   },
+   "latex": "f(x)-2M(x)=x\\,h(x)",
+   "mcq_options": "four linear functions (±8x±10, 12x±10)",
+   "verified_answer": "12x - 10"
+  },
+  {
+   "id": "Q1-8",
+   "label": "Q1 8",
+   "label_ar": "السؤال الأول، الفقرة ٨",
+   "question": 1,
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "4-2"
+   ],
+   "concepts": [
+    "indef-rules"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$\\int\\frac{\\E^{x+2}}{\\E^x}\\dd{x}$.",
+    "ar": "جد التكامل."
+   },
+   "latex": "\\int\\frac{\\E^{x+2}}{\\E^{x}}\\dd{x}",
+   "mcq_options": "four antiderivatives",
+   "verified_answer": "e²x + c"
+  },
+  {
+   "id": "Q1-9",
+   "label": "Q1 9",
+   "label_ar": "السؤال الأول، الفقرة ٩",
+   "question": 1,
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "3-3",
+    "3-4"
+   ],
+   "concepts": [
+    "determinant",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$A,B$ 2×2 non-singular, $|BA^{-1}|=2$, $|B|=6$; find $|A|$.",
+    "ar": "جد $|A|$."
+   },
+   "latex": "|B A^{-1}|=2",
+   "mcq_options": "±1/3, ±3",
+   "verified_answer": "3"
+  },
+  {
+   "id": "Q1-10",
+   "label": "Q1 10",
+   "label_ar": "السؤال الأول، الفقرة ١٠",
+   "question": 1,
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-4"
+   ],
+   "concepts": [
+    "def-integral-props"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$\\int_{-1}^9 3f=9$, $\\int_{-1}^3 f=2$; find $\\int_9^3 2f$.",
+    "ar": "جد قيمة التكامل."
+   },
+   "latex": "\\int_{9}^{3}2f(x)\\dd{x}",
+   "mcq_options": "±1, ±2",
+   "verified_answer": "-2"
+  },
+  {
+   "id": "Q2-a",
+   "label": "Q2 a",
+   "label_ar": "السؤال الثاني أ",
+   "question": 2,
+   "page": 2,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-1"
+   ],
+   "concepts": [
+    "avg-rate"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=xL(x)$, $f(4)=4f(1)-8$; average rate of change of $L$ on $[1,4]$.",
+    "ar": "أوجد متوسط التغير للاقتران $L$."
+   },
+   "latex": "f(x)=x\\,L(x)",
+   "verified_answer": "-2/3"
+  },
+  {
+   "id": "Q2-b",
+   "label": "Q2 b",
+   "label_ar": "السؤال الثاني ب",
+   "question": 2,
+   "page": 2,
+   "marks": 18,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-2",
+    "2-3"
+   ],
+   "concepts": [
+    "monotonic",
+    "local-extrema"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=4+x\\sqrt{12-x}$, $x\\le12$: increase/decrease intervals; local extrema.",
+    "ar": "فترات التزايد والتناقص والقيم القصوى المحلية."
+   },
+   "latex": "f(x)=4+x\\sqrt{12-x}",
+   "subparts": [
+    {
+     "label": "1",
+     "label_ar": "١",
+     "task_en": "increase/decrease intervals",
+     "task_ar": "فترات التزايد والتناقص",
+     "marks": null
+    },
+    {
+     "label": "2",
+     "label_ar": "٢",
+     "task_en": "local max/min",
+     "task_ar": "القيم العظمى والصغرى المحلية",
+     "marks": null
+    }
+   ]
+  },
+  {
+   "id": "Q2-c",
+   "label": "Q2 c",
+   "label_ar": "السؤال الثاني ج",
+   "question": 2,
+   "page": 2,
+   "marks": 14,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "3-1",
+    "3-4"
+   ],
+   "concepts": [
+    "matrix-def",
+    "matrix-equation",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$A=\\begin{bmatrix}2\\\\0\\end{bmatrix}$, $B$ 2×2 with $b_{ij}=i-j$ ($i>j$), $2$ ($i=j$), $i+j$ ($i<j$); find $C$ with $BC=A-C$.",
+    "ar": "جد المصفوفة $C$."
+   },
+   "latex": "BC=A-C"
+  },
+  {
+   "id": "Q3-a",
+   "label": "Q3 a",
+   "label_ar": "السؤال الثالث أ",
+   "question": 3,
+   "page": 3,
+   "marks": 17,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-4",
+    "1-4",
+    "1-3"
+   ],
+   "concepts": [
+    "concavity",
+    "exp-log-deriv",
+    "trig-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Concavity intervals of $f(x)=\\E^x\\sin x$ on $]\\pi,2\\pi[$.",
+    "ar": "عيّن فترات التقعر."
+   },
+   "latex": "f(x)=\\E^{x}\\sin x"
+  },
+  {
+   "id": "Q3-b-1",
+   "label": "Q3 b-1",
+   "label_ar": "السؤال الثالث ب-١",
+   "question": 3,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "5-4"
+   ],
+   "concepts": [
+    "integral-bounds",
+    "def-integral-props"
+   ],
+   "skills": [
+    "prove"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Without evaluating, prove $\\int_0^4(x^2+3)\\dd{x}\\le\\int_0^4(4x+3)\\dd{x}$.",
+    "ar": "دون حساب التكامل أثبت المتباينة."
+   },
+   "latex": "\\int_{0}^{4}(x^2+3)\\dd{x}\\le\\int_{0}^{4}(4x+3)\\dd{x}"
+  },
+  {
+   "id": "Q3-b-2",
+   "label": "Q3 b-2",
+   "label_ar": "السؤال الثالث ب-٢",
+   "question": 3,
+   "page": 3,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4"
+   ],
+   "concepts": [
+    "substitution"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\int(x+2)(x+3)^4\\dd{x}$.",
+    "ar": "جد التكامل."
+   },
+   "latex": "\\int(x+2)(x+3)^4\\dd{x}"
+  },
+  {
+   "id": "Q3-c",
+   "label": "Q3 c",
+   "label_ar": "السؤال الثالث ج",
+   "question": 3,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-2",
+    "3-3"
+   ],
+   "concepts": [
+    "matrix-add-scalar",
+    "determinant"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$A=\\begin{bmatrix}-4&2\\\\-5&2\\end{bmatrix}$, $B=\\begin{bmatrix}6&-3\\\\-1&2\\end{bmatrix}$; find $|2A-3B|$.",
+    "ar": "جد المحددة."
+   },
+   "latex": "|2A-3B|"
+  },
+  {
+   "id": "Q4-a",
+   "label": "Q4 a",
+   "label_ar": "السؤال الرابع أ",
+   "question": 4,
+   "page": 3,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "1-7",
+    "1-5"
+   ],
+   "concepts": [
+    "implicit-diff",
+    "tangent-normal"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Tangent to $x^2+y^2+1=4x-y$ at its first-quadrant intersection with $y=2x-1$.",
+    "ar": "جد معادلة المماس عند نقطة التقاطع في الربع الأول."
+   },
+   "latex": "x^2+y^2+1=4x-y"
+  },
+  {
+   "id": "Q4-b",
+   "label": "Q4 b",
+   "label_ar": "السؤال الرابع ب",
+   "question": 4,
+   "page": 3,
+   "marks": 12,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "3-5",
+    "3-3"
+   ],
+   "concepts": [
+    "cramer",
+    "determinant"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Cramer's rule: $3x+2y=5$, $y=4-2x$.",
+    "ar": "حلّ النظام بقاعدة كريمر."
+   },
+   "latex": "3x+2y=5,\\ y=4-2x"
+  },
+  {
+   "id": "Q4-c-1",
+   "label": "Q4 c-1",
+   "label_ar": "السؤال الرابع ج-١",
+   "question": 4,
+   "page": 3,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-1"
+   ],
+   "concepts": [
+    "riemann-sum"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=x^2-4x$, regular 4-partition of $[-2,6]$; compute $M(\\sigma_4,f)$ with right endpoints.",
+    "ar": "احسب مجموع ريمان."
+   },
+   "latex": "M(\\sigma_4,f),\\ x_r^*=x_r"
+  },
+  {
+   "id": "Q4-c-2",
+   "label": "Q4 c-2",
+   "label_ar": "السؤال الرابع ج-٢",
+   "question": 4,
+   "page": 3,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4"
+   ],
+   "concepts": [
+    "partial-fractions"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\int\\frac{3x-2}{x^2-x-2}\\dd{x}$.",
+    "ar": "جد التكامل."
+   },
+   "latex": "\\int\\frac{3x-2}{x^2-x-2}\\dd{x}"
+  },
+  {
+   "id": "Q5-a-1",
+   "label": "Q5 a-1",
+   "label_ar": "السؤال الخامس أ-١",
+   "question": 5,
+   "page": 3,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-4",
+    "1-2"
+   ],
+   "concepts": [
+    "lhopital",
+    "deriv-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\lim_{x\\to2}\\frac{xf(x)-8}{x^2-4}=12$; find $f(2)+f'(2)$.",
+    "ar": "جد $f(2)+f'(2)$."
+   },
+   "latex": "\\lim_{x\\to2}\\frac{x f(x)-8}{x^2-4}=12",
+   "verified_answer": "26"
+  },
+  {
+   "id": "Q5-a-2",
+   "label": "Q5 a-2",
+   "label_ar": "السؤال الخامس أ-٢",
+   "question": 5,
+   "page": 3,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "1-6",
+    "1-3"
+   ],
+   "concepts": [
+    "chain-rule",
+    "trig-deriv"
+   ],
+   "skills": [
+    "prove"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=x+\\frac1x$, $h(x)=\\sin x$; prove $(f\\circ h)'(x)=-\\cot^2x\\cos x$.",
+    "ar": "أثبت العلاقة."
+   },
+   "latex": "(f\\circ h)'(x)=-\\cot^2x\\cos x"
+  },
+  {
+   "id": "Q5-b",
+   "label": "Q5 b",
+   "label_ar": "السؤال الخامس ب",
+   "question": 5,
+   "page": 3,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-3"
+   ],
+   "concepts": [
+    "integral-function"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$T(x)=2x^2+a$ on $[1,3]$, $bx+c$ on $]3,5]$ is the integral function of continuous $f$; find $a,b,c$.",
+    "ar": "جد قيم الثوابت."
+   },
+   "latex": "T(x)=\\begin{cases}2x^2+a & 1\\le x\\le3\\\\ bx+c & 3<x\\le5\\end{cases}",
+   "verified_answer": "a = -2, b = 12, c = -20"
+  },
+  {
+   "id": "Q5-c",
+   "label": "Q5 c",
+   "label_ar": "السؤال الخامس ج",
+   "question": 5,
+   "page": 3,
+   "marks": 12,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4",
+    "5-3"
+   ],
+   "concepts": [
+    "by-parts",
+    "ftc"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f(0)=1$, $f(2)=-3$, $f'(2)=0$; evaluate $\\int_0^2\\big(xf(x)f''(x)+x(f'(x))^2\\big)\\dd{x}$ (as printed).",
+    "ar": "جد قيمة التكامل."
+   },
+   "latex": "\\int_{0}^{2}\\left(x f f''+x (f')^2\\right)\\dd{x}",
+   "note": "If the integrand is exactly as transcribed the value is -4 (by parts: [x f f']_0^2 - ∫ f f'); not recorded as verified."
+  },
+  {
+   "id": "Q6-a",
+   "label": "Q6 a",
+   "label_ar": "السؤال السادس أ",
+   "question": 6,
+   "page": 4,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-5"
+   ],
+   "concepts": [
+    "optimization"
+   ],
+   "skills": [
+    "model"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Shortest distance from the printed point $(2,0)$ to the curve $y^2-x^2=8$.",
+    "ar": "جد أقصر مسافة بين النقطة $(2,0)$ ومنحنى العلاقة $y^2-x^2=8$."
+   },
+   "latex": "(2,0),\\ y^2-x^2=8",
+   "verified_answer": "\\sqrt{10} (nearest points (1,\\pm 3))",
+   "note": "Printed أ(٢ ، ٠): first coordinate on the right in RTL, so x=2, y=0 (same layout as s1-p1 Q4-c (٢ ، ١) = (2,1)). d^2=(x-2)^2+x^2+8=2x^2-4x+12, minimum 10 at x=1."
+  },
+  {
+   "id": "Q6-b",
+   "label": "Q6 b",
+   "label_ar": "السؤال السادس ب",
+   "question": 6,
+   "page": 4,
+   "marks": 12,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-5"
+   ],
+   "concepts": [
+    "area"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Area between $f(x)=x^2+1$ and $y=2x$ above the x-axis on $[-1,1]$.",
+    "ar": "جد مساحة المنطقة المحصورة."
+   },
+   "latex": "f(x)=x^2+1,\\ y=2x"
+  },
+  {
+   "id": "Q6-c-1",
+   "label": "Q6 c-1",
+   "label_ar": "السؤال السادس ج-١",
+   "question": 6,
+   "page": 4,
+   "marks": 10,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-3",
+    "3-4"
+   ],
+   "concepts": [
+    "determinant",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Values of $x$ making $\\begin{bmatrix}3&1&x\\\\6&x&4\\\\5&3&-1\\end{bmatrix}$ singular.",
+    "ar": "جد قيم $x$ التي تجعل المصفوفة منفردة."
+   },
+   "latex": "|A|=0"
+  },
+  {
+   "id": "Q6-c-2",
+   "label": "Q6 c-2",
+   "label_ar": "السؤال السادس ج-٢",
+   "question": 6,
+   "page": 4,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-5",
+    "2-3"
+   ],
+   "concepts": [
+    "motion-deriv",
+    "absolute-extrema"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Thrown up: $s=at-5t^2$, maximum height 45 m; find $a>0$.",
+    "ar": "جد قيمة الثابت $a$."
+   },
+   "latex": "s=at-5t^2",
+   "verified_answer": "a = 30"
+  }
+ ],
+ "reconciliation": {
+  "per_question": [
+   {
+    "question": 1,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   },
+   {
+    "question": 2,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   },
+   {
+    "question": 3,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   },
+   {
+    "question": 4,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   },
+   {
+    "question": 5,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   },
+   {
+    "question": 6,
+    "stated": 40,
+    "items_sum": 40,
+    "ok": true
+   }
+  ],
+  "printed_marks_all_questions": 240,
+  "max_score_under_choice_rules": 200,
+  "stated_total": 200,
+  "ok": true,
+  "discrepancies": []
+ },
+ "summary": {
+  "item_count": 29,
+  "mcq_count": 10,
+  "marks_by_lesson_printed": {
+   "1-1": 8.0,
+   "1-2": 8.0,
+   "1-3": 12.67,
+   "1-4": 11.0,
+   "1-5": 11.0,
+   "1-6": 9.0,
+   "1-7": 5.0,
+   "2-1": 4.0,
+   "2-2": 10.33,
+   "2-3": 13.0,
+   "2-4": 7.0,
+   "2-5": 10.0,
+   "3-1": 7.0,
+   "3-2": 7.5,
+   "3-3": 16.5,
+   "3-4": 14.0,
+   "3-5": 6.0,
+   "4-1": 4.0,
+   "4-2": 4.0,
+   "4-4": 24.0,
+   "5-1": 10.0,
+   "5-3": 16.0,
+   "5-4": 10.0,
+   "5-5": 12.0
+  },
+  "note_marks_by_lesson": "Marks of every printed item split equally across its lessons; sums to the printed marks of all six questions (not the 100/200 a candidate can score)."
+ },
+ "concepts_used": {
+  "avg-rate": {
+   "lesson": "1-1",
+   "ar": "متوسط التغير",
+   "en": "Average rate of change"
+  },
+  "deriv-rules": {
+   "lesson": "1-2",
+   "ar": "قواعد الاشتقاق (الضرب والقسمة)",
+   "en": "Differentiation rules (product, quotient)"
+  },
+  "trig-deriv": {
+   "lesson": "1-3",
+   "ar": "مشتقات الاقترانات المثلثية",
+   "en": "Derivatives of trigonometric functions"
+  },
+  "exp-log-deriv": {
+   "lesson": "1-4",
+   "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+   "en": "Derivatives of exponential and logarithmic functions"
+  },
+  "lhopital": {
+   "lesson": "1-4",
+   "ar": "قاعدة لوبيتال",
+   "en": "L'Hôpital's rule"
+  },
+  "motion-deriv": {
+   "lesson": "1-5",
+   "ar": "الحركة المستقيمة: السرعة والتسارع",
+   "en": "Rectilinear motion: velocity and acceleration"
+  },
+  "tangent-normal": {
+   "lesson": "1-5",
+   "ar": "معادلة المماس والعمودي على المماس",
+   "en": "Tangent and normal lines"
+  },
+  "chain-rule": {
+   "lesson": "1-6",
+   "ar": "قاعدة السلسلة",
+   "en": "Chain rule"
+  },
+  "implicit-diff": {
+   "lesson": "1-7",
+   "ar": "الاشتقاق الضمني",
+   "en": "Implicit differentiation"
+  },
+  "mvt": {
+   "lesson": "2-1",
+   "ar": "نظرية القيمة المتوسطة",
+   "en": "Mean value theorem"
+  },
+  "monotonic": {
+   "lesson": "2-2",
+   "ar": "فترات التزايد والتناقص",
+   "en": "Intervals of increase and decrease"
+  },
+  "absolute-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المطلقة",
+   "en": "Absolute extrema"
+  },
+  "local-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المحلية",
+   "en": "Local extrema"
+  },
+  "concavity": {
+   "lesson": "2-4",
+   "ar": "التقعر للأعلى وللأسفل",
+   "en": "Concavity"
+  },
+  "optimization": {
+   "lesson": "2-5",
+   "ar": "تطبيقات عملية على القيم القصوى",
+   "en": "Optimisation problems"
+  },
+  "matrix-def": {
+   "lesson": "3-1",
+   "ar": "المصفوفة: الرتبة والمدخلات وتساوي المصفوفات",
+   "en": "Matrices: order, entries, equality"
+  },
+  "matrix-add-scalar": {
+   "lesson": "3-2",
+   "ar": "جمع المصفوفات وضربها في عدد حقيقي",
+   "en": "Matrix addition and scalar multiplication"
+  },
+  "determinant": {
+   "lesson": "3-3",
+   "ar": "المحددات وخصائصها",
+   "en": "Determinants and their properties"
+  },
+  "matrix-equation": {
+   "lesson": "3-4",
+   "ar": "حل المعادلات المصفوفية",
+   "en": "Solving matrix equations"
+  },
+  "matrix-inverse": {
+   "lesson": "3-4",
+   "ar": "النظير الضربي للمصفوفة",
+   "en": "Inverse of a matrix"
+  },
+  "cramer": {
+   "lesson": "3-5",
+   "ar": "قاعدة كريمر",
+   "en": "Cramer's rule"
+  },
+  "antiderivative": {
+   "lesson": "4-1",
+   "ar": "الاقتران الأصلي",
+   "en": "Antiderivative"
+  },
+  "indef-rules": {
+   "lesson": "4-2",
+   "ar": "قواعد التكامل غير المحدود",
+   "en": "Rules of indefinite integration"
+  },
+  "by-parts": {
+   "lesson": "4-4",
+   "ar": "التكامل بالأجزاء",
+   "en": "Integration by parts"
+  },
+  "partial-fractions": {
+   "lesson": "4-4",
+   "ar": "التكامل بالكسور الجزئية",
+   "en": "Integration by partial fractions"
+  },
+  "substitution": {
+   "lesson": "4-4",
+   "ar": "التكامل بالتعويض",
+   "en": "Integration by substitution"
+  },
+  "riemann-sum": {
+   "lesson": "5-1",
+   "ar": "التجزئة المنتظمة ومجموع ريمان",
+   "en": "Regular partitions and Riemann sums"
+  },
+  "ftc": {
+   "lesson": "5-3",
+   "ar": "النظرية الأساسية للتفاضل والتكامل",
+   "en": "Fundamental theorem of calculus"
+  },
+  "integral-function": {
+   "lesson": "5-3",
+   "ar": "الاقتران المكامل",
+   "en": "Integral function T(x)"
+  },
+  "def-integral-props": {
+   "lesson": "5-4",
+   "ar": "خصائص التكامل المحدود",
+   "en": "Properties of the definite integral"
+  },
+  "integral-bounds": {
+   "lesson": "5-4",
+   "ar": "تقدير التكامل المحدود (المتباينات)",
+   "en": "Bounding definite integrals"
+  },
+  "area": {
+   "lesson": "5-5",
+   "ar": "المساحة بالتكامل",
+   "en": "Area by integration"
+  }
+ },
+ "notes": [
+  "Q1 per-item marks are not printed; 4 marks each inferred from 40/10.",
+  "Single complementary-session paper covering units 1-5; no unit 6 (complex numbers) item.",
+  "Q2 b (18 marks) has two unmarked subparts."
+ ]
+}

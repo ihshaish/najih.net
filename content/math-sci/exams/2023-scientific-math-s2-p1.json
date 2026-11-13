@@ -1,0 +1,971 @@
+{
+ "id": "2023-scientific-math-s2-p1",
+ "year": 2023,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 2,
+ "session_ar": "الدورة الثانية",
+ "session_en": "Second session",
+ "paper": 1,
+ "paper_ar": "الورقة الأولى",
+ "paper_en": "Paper 1",
+ "date": "2023-08-12",
+ "day_ar": "السبت",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمس وأربعون دقيقة",
+ "total_marks": 100,
+ "pages": 3,
+ "img": "exams/2023/scientific/math-s2-p1",
+ "num_questions": 7,
+ "choice_rule": {
+  "ar": "عدد أسئلة الورقة (سبعة) أسئلة، أجب عن (خمسة) منها فقط، على أن يكون السؤال الأول إجبارياً",
+  "en": "Seven questions; answer five only, Question 1 compulsory.",
+  "answer_count": 5,
+  "compulsory": [
+   "Q1"
+  ]
+ },
+ "scope_units": [
+  1,
+  2
+ ],
+ "scope_note": "Paper 1 covers units 1 and 2 only.",
+ "marks_printed_sum": 140,
+ "marks_attainable_under_rule": 100,
+ "reconciled": true,
+ "discrepancies": [],
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "pages": [
+    1,
+    2
+   ],
+   "compulsory": true,
+   "format": "mcq",
+   "stem_ar": "يتكون هذا السؤال من (١٠) فقرات من نوع اختيار من متعدد، من أربعة بدائل",
+   "items": [
+    {
+     "id": "q1-1",
+     "label": "Q1 item 1",
+     "label_ar": "السؤال الأول فقرة ١",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "lhopital",
+       "ar": "قاعدة لوبيتال",
+       "en": "L'Hopital's rule"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and logarithmic functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "0/0 limit at x=e of (ln x^2 - 2)/ln(ln x) (L'Hopital).",
+     "latex": "\\lim_{x\\to\\E}\\frac{\\ln x^2-2}{\\ln(\\ln x)}",
+     "options_nature": "numbers e, 1/e, 2, 1",
+     "answer": "2",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-2",
+     "label": "Q1 item 2",
+     "label_ar": "السؤال الأول فقرة ٢",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "composition-deriv",
+       "ar": "مشتقة تركيب اقترانين",
+       "en": "derivative of a composite function"
+      },
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "(n o h)'(1) given n'(x)=x^3+7 and h=cbrt(x+7).",
+     "latex": "n'(x)=x^3+7,\\ h(x)=\\sqrt[3]{x+7},\\ (n\\circ h)'(1)",
+     "options_nature": "four fractions",
+     "answer": "\\tfrac54",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-3",
+     "label": "Q1 item 3",
+     "label_ar": "السؤال الأول فقرة ٣",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      },
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "dy/dx at z=2 where y=z^3+1 and z^2=x+3.",
+     "latex": "y=z^3+1,\\ z^2=x+3,\\ \\dv{y}{x}\\big|_{z=2}",
+     "options_nature": "four integers",
+     "answer": "3",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-4",
+     "label": "Q1 item 4",
+     "label_ar": "السؤال الأول فقرة ٤",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "2-3"
+     ],
+     "concepts": [
+      {
+       "id": "abs-extrema",
+       "ar": "القيم القصوى المطلقة",
+       "en": "absolute extrema"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Where sqrt(9-x^2) on [-3,3] has its absolute maximum.",
+     "latex": "f(x)=\\sqrt{9-x^2},\\ x\\in[-3,3]",
+     "options_nature": "four x-values -3, 0, 1, 3",
+     "answer": "0",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-5",
+     "label": "Q1 item 5",
+     "label_ar": "السؤال الأول فقرة ٥",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "product-quotient",
+       "ar": "قاعدتا الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "n=k/(x^2+1), n(2)=-1, n'(2)=3; find k'(2).",
+     "latex": "n(x)=\\frac{k(x)}{x^2+1},\\ n(2)=-1,\\ n'(2)=3,\\ k'(2)",
+     "options_nature": "four integers ±5, ±11",
+     "answer": "11",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-6",
+     "label": "Q1 item 6",
+     "label_ar": "السؤال الأول فقرة ٦",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-7",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "(y')^2 = ay + 2 with y''=3 and y'>0; find a.",
+     "latex": "(y')^2=ay+2,\\ y''=3,\\ y'>0",
+     "options_nature": "four numbers ±6, ±3/2",
+     "answer": "6",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-7",
+     "label": "Q1 item 7",
+     "label_ar": "السؤال الأول فقرة ٧",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Derivative of tan x / sec x.",
+     "latex": "y=\\frac{\\tan x}{\\sec x}",
+     "options_nature": "four ±sin x, ±cos x",
+     "answer": "\\cos x",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-8",
+     "label": "Q1 item 8",
+     "label_ar": "السؤال الأول فقرة ٨",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "special-func-deriv",
+       "ar": "اشتقاق أكبر عدد صحيح والقيمة المطلقة",
+       "en": "differentiating greatest-integer and absolute-value functions"
+      },
+      {
+       "id": "piecewise-diff",
+       "ar": "قابلية اشتقاق الاقتران المتشعب",
+       "en": "differentiability of piecewise functions"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Which function is differentiable on its whole domain (greatest-integer / absolute-value forms)?",
+     "latex": "[x-2],\\ |x-2|-|x|,\\ \\sqrt{x^2+2x+1},\\ [x+2]-[x]",
+     "options_nature": "four functions",
+     "answer": "f(x)=[x+2]-[x]",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-9",
+     "label": "Q1 item 9",
+     "label_ar": "السؤال الأول فقرة ٩",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "1-1"
+     ],
+     "concepts": [
+      {
+       "id": "avg-rate",
+       "ar": "متوسط التغير",
+       "en": "average rate of change"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Average rate of change of a piecewise function on [1,3] equals 5; find a.",
+     "latex": "f(x)=\\begin{cases}6-x,&x<2\\\\x^2+ax,&x\\ge2\\end{cases},\\ [1,3]",
+     "options_nature": "four numbers 13/2, 10, 2, 9/2",
+     "answer": "2",
+     "answer_verified": true,
+     "answer_note": "Conditions read left-to-right as printed (6-x for x<2, quadratic for x>=2); this reading gives option 2, the alternative reading gives no option."
+    },
+    {
+     "id": "q1-10",
+     "label": "Q1 item 10",
+     "label_ar": "السؤال الأول فقرة ١٠",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "2-1"
+     ],
+     "concepts": [
+      {
+       "id": "rolle",
+       "ar": "نظرية رول",
+       "en": "Rolle's theorem"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Set of c given by Rolle's theorem for the constant function 8 on [0,1].",
+     "latex": "f(x)=8,\\ [0,1]",
+     "options_nature": "four sets: {0}, ]0,1[, [0,1], empty",
+     "answer": "]0,1[",
+     "answer_verified": true
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q1",
+   "label_ar": "السؤال الأول",
+   "n_items": 10
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "items": [
+    {
+     "id": "q2a",
+     "label": "Q2 a",
+     "label_ar": "السؤال الثاني أ",
+     "page": 2,
+     "marks": 7,
+     "format": "short",
+     "lessons": [
+      "1-1"
+     ],
+     "concepts": [
+      {
+       "id": "avg-rate",
+       "ar": "متوسط التغير",
+       "en": "average rate of change"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Change of n on [1,3] is 6; find the average rate of change of h=5n+x^2-7 on [1,3].",
+     "latex": "\\Delta n=6\\ \\text{on}\\ [1,3],\\ h(x)=5n(x)+x^2-7"
+    },
+    {
+     "id": "q2b",
+     "label": "Q2 b",
+     "label_ar": "السؤال الثاني ب",
+     "page": 2,
+     "marks": 7,
+     "format": "long",
+     "lessons": [
+      "2-2"
+     ],
+     "concepts": [
+      {
+       "id": "monotonicity",
+       "ar": "التزايد والتناقص",
+       "en": "increasing and decreasing intervals"
+      },
+      {
+       "id": "special-func-deriv",
+       "ar": "اشتقاق أكبر عدد صحيح والقيمة المطلقة",
+       "en": "differentiating greatest-integer and absolute-value functions"
+      },
+      {
+       "id": "critical-points",
+       "ar": "النقط الحرجة",
+       "en": "critical points"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Intervals of increase/decrease of |4 - x^2| on R.",
+     "latex": "n(x)=|4-x^2|,\\ x\\in\\mathbb{R}"
+    },
+    {
+     "id": "q2c",
+     "label": "Q2 c",
+     "label_ar": "السؤال الثاني ج",
+     "page": 2,
+     "marks": 6,
+     "format": "short",
+     "lessons": [
+      "2-3",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "local-extrema",
+       "ar": "القيم القصوى المحلية",
+       "en": "local extrema"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and logarithmic functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Local extrema of 8 ln x - x^2 on ]0,4[ and their type.",
+     "latex": "n(x)=8\\ln x-x^2,\\ x\\in]0,4["
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q2",
+   "label_ar": "السؤال الثاني",
+   "n_items": 3
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "shared_marks": {
+    "q3b": 5
+   },
+   "items": [
+    {
+     "id": "q3a",
+     "label": "Q3 a",
+     "label_ar": "السؤال الثالث أ",
+     "page": 2,
+     "marks": 8,
+     "format": "proof",
+     "lessons": [
+      "2-1",
+      "1-2",
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "mvt",
+       "ar": "نظرية القيمة المتوسطة",
+       "en": "mean value theorem"
+      },
+      {
+       "id": "piecewise-diff",
+       "ar": "قابلية اشتقاق الاقتران المتشعب",
+       "en": "differentiability of piecewise functions"
+      },
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 3,
+     "paraphrase": "Prove a piecewise trig function satisfies the MVT conditions on [0, pi/2] (continuity and differentiability at pi/4).",
+     "latex": "n(x)=\\begin{cases}\\frac{2\\sin^2x}{\\pi},&x>\\frac{\\pi}{4}\\\\ \\frac{\\tan x}{\\pi},&x\\le\\frac{\\pi}{4}\\end{cases},\\ [0,\\tfrac{\\pi}{2}]"
+    },
+    {
+     "id": "q3b-1",
+     "label": "Q3 b-1",
+     "label_ar": "السؤال الثالث ب-١",
+     "page": 2,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة المستقيمة: السرعة والتسارع",
+       "en": "rectilinear motion: velocity and acceleration"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Velocity after 4 s for s(t)=2t^3-9t^2.",
+     "latex": "s(t)=2t^3-9t^2,\\ v(4)",
+     "shared_group": "q3b",
+     "marks_est": 2.5,
+     "marks_note": "Part b (5 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q3b-2",
+     "label": "Q3 b-2",
+     "label_ar": "السؤال الثالث ب-٢",
+     "page": 2,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة المستقيمة: السرعة والتسارع",
+       "en": "rectilinear motion: velocity and acceleration"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Acceleration when the body reverses direction (v=0).",
+     "latex": "v(t)=0\\Rightarrow a(t)",
+     "shared_group": "q3b",
+     "marks_est": 2.5
+    },
+    {
+     "id": "q3c",
+     "label": "Q3 c",
+     "label_ar": "السؤال الثالث ج",
+     "page": 2,
+     "marks": 7,
+     "format": "long",
+     "lessons": [
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "composition-deriv",
+       "ar": "مشتقة تركيب اقترانين",
+       "en": "derivative of a composite function"
+      },
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "قاعدتا الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "paraphrase": "n = a sin x, h = 3x/(x^2+1), (h o n)'(pi/6)=0; find a.",
+     "latex": "n(x)=a\\sin x,\\ h(x)=\\frac{3x}{x^2+1},\\ (h\\circ n)'(\\tfrac{\\pi}{6})=0"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q3",
+   "label_ar": "السؤال الثالث",
+   "n_items": 4
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "shared_marks": {
+    "q4b": 8
+   },
+   "items": [
+    {
+     "id": "q4a",
+     "label": "Q4 a",
+     "label_ar": "السؤال الرابع أ",
+     "page": 3,
+     "marks": 6,
+     "format": "short",
+     "lessons": [
+      "1-5",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "tangent-normal",
+       "ar": "معادلة المماس والعمودي",
+       "en": "tangent and normal lines"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "قاعدتا الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "paraphrase": "From n(x) l(x) = 2h(x) - 2x and given values at 2, find the tangent line of the curve at x=2.",
+     "latex": "l'(2)=-4,\\ l(2)=2,\\ h(2)=3,\\ h'(2)=4,\\ n(x)\\,l(x)=2h(x)-2x",
+     "note": "Paper names the curve f(x) in the question line but defines n(x); treated as the same function."
+    },
+    {
+     "id": "q4b-1",
+     "label": "Q4 b-1",
+     "label_ar": "السؤال الرابع ب-١",
+     "page": 3,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "2-4",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and logarithmic functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Concavity intervals of x e^x on ]-4,2[.",
+     "latex": "n(x)=x\\E^x,\\ x\\in[-4,2]",
+     "shared_group": "q4b",
+     "marks_est": 4,
+     "marks_note": "Part b (8 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q4b-2",
+     "label": "Q4 b-2",
+     "label_ar": "السؤال الرابع ب-٢",
+     "page": 3,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Inflection points, if any.",
+     "latex": "n''(x)=0",
+     "shared_group": "q4b",
+     "marks_est": 4
+    },
+    {
+     "id": "q4c",
+     "label": "Q4 c",
+     "label_ar": "السؤال الرابع ج",
+     "page": 3,
+     "marks": 6,
+     "format": "long",
+     "lessons": [
+      "2-5"
+     ],
+     "concepts": [
+      {
+       "id": "optimization",
+       "ar": "تطبيقات عملية على القيم القصوى",
+       "en": "optimisation problems"
+      }
+     ],
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Largest rectangle inscribed in a circle of radius 5 cm.",
+     "latex": "r=5,\\ A=xy,\\ x^2+y^2=100"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q4",
+   "label_ar": "السؤال الرابع",
+   "n_items": 4
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "items": [
+    {
+     "id": "q5a",
+     "label": "Q5 a",
+     "label_ar": "السؤال الخامس أ",
+     "page": 3,
+     "marks": 10,
+     "format": "proof",
+     "lessons": [
+      "2-3",
+      "2-2"
+     ],
+     "concepts": [
+      {
+       "id": "abs-extrema",
+       "ar": "القيم القصوى المطلقة",
+       "en": "absolute extrema"
+      },
+      {
+       "id": "monotonicity",
+       "ar": "التزايد والتناقص",
+       "en": "increasing and decreasing intervals"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "قاعدتا الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 3,
+     "paraphrase": "h decreasing polynomial on [-5,-1] with h(-5)<0 and x f(x)=h(x): prove f(-1) is the absolute max of f.",
+     "latex": "x\\,f(x)=h(x),\\ h\\downarrow\\ \\text{on}\\ [-5,-1],\\ h(-5)<0"
+    },
+    {
+     "id": "q5b",
+     "label": "Q5 b",
+     "label_ar": "السؤال الخامس ب",
+     "page": 3,
+     "marks": 10,
+     "format": "long",
+     "lessons": [
+      "2-2",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "graph-of-derivative",
+       "ar": "قراءة منحنى المشتقة",
+       "en": "reading the graph of a derivative"
+      },
+      {
+       "id": "diff-rules",
+       "ar": "قواعد الاشتقاق",
+       "en": "differentiation rules"
+      }
+     ],
+     "skills": [
+      "interpret",
+      "model"
+     ],
+     "difficulty": 3,
+     "paraphrase": "From the graph of f' (a parabola touching the x-axis at 2, through (0,-4)) find the cubic f through (0,5).",
+     "latex": "f'\\ \\text{graph: vertex}\\ (2,0),\\ f'(0)=-4,\\ f(0)=5",
+     "has_figure": true,
+     "note": "Solvable by matching coefficients of a general cubic; no integration needed."
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q5",
+   "label_ar": "السؤال الخامس",
+   "n_items": 2
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "items": [
+    {
+     "id": "q6a",
+     "label": "Q6 a",
+     "label_ar": "السؤال السادس أ",
+     "page": 3,
+     "marks": 10,
+     "format": "proof",
+     "lessons": [
+      "2-4",
+      "2-2"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      },
+      {
+       "id": "graph-of-derivative",
+       "ar": "قراءة منحنى المشتقة",
+       "en": "reading the graph of a derivative"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "قاعدتا الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "skills": [
+      "prove",
+      "interpret"
+     ],
+     "difficulty": 3,
+     "paraphrase": "From the graph of f on [1,4] (decreasing, concave down), prove k=2x f(x) is concave down on ]1,4[.",
+     "latex": "k(x)=2x\\,f(x),\\ k''=4f'+2xf''",
+     "has_figure": true
+    },
+    {
+     "id": "q6b",
+     "label": "Q6 b",
+     "label_ar": "السؤال السادس ب",
+     "page": 3,
+     "marks": 10,
+     "format": "proof",
+     "lessons": [
+      "1-7",
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      },
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 3,
+     "paraphrase": "If sqrt(x)=sin y, prove (y')^2 / y'' = -1/2 tan(2y).",
+     "latex": "\\sqrt{x}=\\sin y,\\ \\frac{(y')^2}{y''}=-\\tfrac12\\tan 2y"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q6",
+   "label_ar": "السؤال السادس",
+   "n_items": 2
+  },
+  {
+   "q": 7,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "items": [
+    {
+     "id": "q7a",
+     "label": "Q7 a",
+     "label_ar": "السؤال السابع أ",
+     "page": 3,
+     "marks": 10,
+     "format": "proof",
+     "lessons": [
+      "1-5",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة المستقيمة: السرعة والتسارع",
+       "en": "rectilinear motion: velocity and acceleration"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and logarithmic functions"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Motion e^{5t} s = 7e^{10t} - 7: show acceleration equals 25 s.",
+     "latex": "\\E^{5t}\\,s=7\\E^{10t}-7,\\ a=25s"
+    },
+    {
+     "id": "q7b",
+     "label": "Q7 b",
+     "label_ar": "السؤال السابع ب",
+     "page": 3,
+     "marks": 10,
+     "format": "long",
+     "lessons": [
+      "2-1"
+     ],
+     "concepts": [
+      {
+       "id": "rolle",
+       "ar": "نظرية رول",
+       "en": "Rolle's theorem"
+      },
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      }
+     ],
+     "skills": [
+      "interpret",
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Check Rolle's conditions for cbrt((2-x)^4) on [1,3] and find c.",
+     "latex": "n(x)=\\sqrt[3]{(2-x)^4},\\ [1,3]"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q7",
+   "label_ar": "السؤال السابع",
+   "n_items": 2
+  }
+ ],
+ "n_items": 27
+}

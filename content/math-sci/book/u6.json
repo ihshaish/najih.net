@@ -1,0 +1,1369 @@
+{
+ "unit": 6,
+ "title": {
+  "ar": "الأعداد المركبة",
+  "en": "Complex Numbers"
+ },
+ "printed_pages": [
+  204,
+  222
+ ],
+ "pdf_pages": [
+  208,
+  226
+ ],
+ "source": {
+  "book": "الرياضيات، الصف الثاني عشر، الفرع العلمي (وزارة التربية والتعليم، فلسطين)",
+  "pdf": "https://elearn.azureedge.net/Books/c12/12s/ma12-s.pdf",
+  "page_rule": "pdf_page = printed_page + 4"
+ },
+ "opener": {
+  "ar": "لوحة إعلانية مستطيلة محيطها ٨م ومساحتها ٨م²: لماذا رفض المكتب تصميمها؟ (المعادلة س² − ٤س + ٨ = ٠ ليس لها حلول حقيقية)",
+  "en": "A rectangular billboard with perimeter 8 m and area 8 m²: why did the office refuse? (x² − 4x + 8 = 0 has no real roots)"
+ },
+ "objectives": [
+  {
+   "ar": "التعرف إلى مجموعة الأعداد المركبة",
+   "en": "recognise the set of complex numbers"
+  },
+  {
+   "ar": "إيجاد ناتج الجمع والطرح والضرب على الأعداد المركبة",
+   "en": "add, subtract and multiply complex numbers"
+  },
+  {
+   "ar": "التعرف إلى خصائص العمليات على الأعداد المركبة",
+   "en": "know the properties of the operations"
+  },
+  {
+   "ar": "التعرف إلى مقياس العدد المركب ومرافقه وخصائصهما",
+   "en": "know the modulus, the conjugate and their properties"
+  },
+  {
+   "ar": "إيجاد ناتج قسمة عددين مركبين",
+   "en": "divide complex numbers"
+  },
+  {
+   "ar": "حل المعادلات التربيعية في مجموعة الأعداد المركبة",
+   "en": "solve quadratic equations in ℂ"
+  },
+  {
+   "ar": "تمثيل العدد المركب بيانياً (بنقطة ومتجه)",
+   "en": "represent a complex number graphically (point and vector)"
+  },
+  {
+   "ar": "كتابة العدد المركب بالصورة القطبية",
+   "en": "write a complex number in polar form"
+  },
+  {
+   "ar": "إيجاد الجذور التربيعية للأعداد المركبة",
+   "en": "find square roots of complex numbers"
+  }
+ ],
+ "notation": {
+  "conventions": "LaTeX follows assets/js/armath.js (z->ع, x->س, y->ص, r->ر, a->أ, b->ب, c->جـ, \\mathbb{C}->ك, \\mathbb{R}->ح, \\cos->جتا, \\sin->جا, \\tan->ظا).",
+  "book_symbols": [
+   {
+    "meaning": "imaginary unit",
+    "book": "ت",
+    "latex": "i",
+    "armath_gap": "i is not mapped; Arabic must show ت (suggest LETTERS i->ت or a \\iu macro)"
+   },
+   {
+    "meaning": "complex number",
+    "book": "ع",
+    "latex": "z"
+   },
+   {
+    "meaning": "set of complex numbers",
+    "book": "ك",
+    "latex": "\\mathbb{C}"
+   },
+   {
+    "meaning": "conjugate",
+    "book": "ع̄ (bar over ع)",
+    "latex": "\\overline{z}"
+   },
+   {
+    "meaning": "modulus",
+    "book": "|ع|",
+    "latex": "|z|"
+   },
+   {
+    "meaning": "principal argument (angle)",
+    "book": "هـ",
+    "latex": "\\theta",
+    "armath_gap": "\\theta stays Greek; the book writes هـ"
+   },
+   {
+    "meaning": "modulus in polar form",
+    "book": "ر",
+    "latex": "r"
+   },
+   {
+    "meaning": "subscripts",
+    "book": "ع١، ع٢",
+    "latex": "z_1, z_2"
+   }
+  ]
+ },
+ "branch_notes": [
+  {
+   "ar": "لا توجد في هذه الوحدة أي شارة «للعلمي فقط»؛ الوحدة كلها مشتركة بين الفرعين العلمي والصناعي.",
+   "en": "No «للعلمي فقط» badge appears anywhere in unit 6; the whole unit is common to the Scientific and Industrial branches."
+  }
+ ],
+ "lessons": [
+  {
+   "id": "6-1",
+   "title": {
+    "ar": "الأعداد المركبة",
+    "en": "Complex Numbers"
+   },
+   "printed_pages": [
+    206,
+    209
+   ],
+   "pdf_pages": [
+    210,
+    213
+   ],
+   "branch_marking": null,
+   "concepts": [
+    {
+     "id": "u6.imaginary_unit",
+     "name": {
+      "ar": "العدد التخيلي ت = √−١",
+      "en": "the imaginary unit i = √−1"
+     }
+    },
+    {
+     "id": "u6.complex_number",
+     "name": {
+      "ar": "العدد المركب ومجموعة الأعداد المركبة ك",
+      "en": "complex number and the set ℂ"
+     }
+    },
+    {
+     "id": "u6.real_imag_parts",
+     "name": {
+      "ar": "الجزء الحقيقي والجزء التخيلي",
+      "en": "real part and imaginary part"
+     }
+    },
+    {
+     "id": "u6.sqrt_negative",
+     "name": {
+      "ar": "الجذر التربيعي للعدد السالب",
+      "en": "square root of a negative number"
+     }
+    },
+    {
+     "id": "u6.powers_of_i",
+     "name": {
+      "ar": "قوى العدد ت",
+      "en": "powers of i"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u6.def.complex_number",
+     "concept": "u6.complex_number",
+     "page": 206,
+     "statement": {
+      "ar": "العدد المركب مقدار جبري على الصورة ع = س + ص ت حيث س، ص عددان حقيقيان و ت = √−١؛ يسمى س الجزء الحقيقي و ص الجزء التخيلي. ومجموعة الأعداد المركبة ك = {س + ص ت : س، ص ∈ ح}.",
+      "en": "A complex number is an expression z = x + yi with x, y real and i = √−1; x is the real part and y the imaginary part. The set of complex numbers is ℂ = {x + yi : x, y ∈ ℝ}."
+     },
+     "latex": "z = x + y\\,i,\\quad x, y \\in \\mathbb{R},\\quad i = \\sqrt{-1};\\qquad \\mathbb{C} = \\{x + y\\,i : x, y \\in \\mathbb{R}\\}"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u6.note.real_imag_zero",
+     "kind": "note",
+     "concept": "u6.real_imag_parts",
+     "page": 207,
+     "statement": {
+      "ar": "يكون ع = س + ص ت عدداً حقيقياً إذا كان ص = ٠، وتخيلياً (بحتاً) إذا كان س = ٠، وصفراً إذا كان س = ص = ٠.",
+      "en": "z = x + yi is real when y = 0, (pure) imaginary when x = 0, and zero when x = y = 0."
+     },
+     "latex": "y = 0 \\Rightarrow z \\in \\mathbb{R};\\quad x = 0 \\Rightarrow z = y\\,i;\\quad x = y = 0 \\Rightarrow z = 0"
+    },
+    {
+     "id": "u6.rule.sqrt_product_fails",
+     "kind": "warning",
+     "concept": "u6.sqrt_negative",
+     "page": 208,
+     "statement": {
+      "ar": "القاعدة √س × √ص = √(س ص) لا تصح دائماً؛ إذا كان العددان سالبين نكتب كلاً منهما بدلالة ت أولاً: √−٤ × √−٩ = ٢ت × ٣ت = −٦ وليس ٦.",
+      "en": "√x · √y = √(xy) is not always valid; when both are negative write each with i first: √−4 · √−9 = 2i · 3i = −6, not 6."
+     },
+     "latex": "\\sqrt{-4}\\times\\sqrt{-9} = 2i\\times 3i = 6i^{2} = -6 \\ne \\sqrt{36}"
+    },
+    {
+     "id": "u6.rule.powers_of_i",
+     "kind": "rule",
+     "concept": "u6.powers_of_i",
+     "page": 208,
+     "statement": {
+      "ar": "ت² = −١، ت³ = −ت، ت⁴ = ١؛ وبشكل عام إذا كان ن عدداً صحيحاً موجباً فإن تⁿ = تᵐ حيث م باقي قسمة ن على ٤ (٠ ≤ م < ٤).",
+      "en": "i² = −1, i³ = −i, i⁴ = 1; in general, for a positive integer n, iⁿ = iᵐ where m is the remainder of n ÷ 4 (0 ≤ m < 4)."
+     },
+     "latex": "i^{2} = -1,\\ i^{3} = -i,\\ i^{4} = 1;\\qquad i^{n} = i^{m},\\ m = n \\bmod 4",
+     "conditions": {
+      "ar": "للأسس السالبة يكتب الكتاب ت^(−٤ن+٢) = (ت⁴)^(−ن) × ت² أو يستعمل ١/تⁿ.",
+      "en": "For negative exponents the book uses i^{−4n+2} = (i⁴)^{−n} i², or 1/iⁿ."
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 206,
+     "ask": "A plot of area (x² − 5x + 8) m² with one side (x + 3) m cannot be a rectangle: how did Mahmoud know? (no exact division / no real factorisation)"
+    },
+    {
+     "label": "نشاط ٢",
+     "page": 206,
+     "ask": "Solve x³ + x = 0 in ℂ: x = 0 or x² = −1 → x = ±i."
+    },
+    {
+     "label": "نشاط ٣",
+     "page": 207,
+     "ask": "Table: real and imaginary parts of 1/2, 2i, (2 − 3i)/2, √−12, 3 + i⁷."
+    },
+    {
+     "label": "نشاط ٤",
+     "page": 208,
+     "ask": "Two students compute √−4 × √−9: one gets 6 (wrong), the other −6 (right). Which is correct and why?"
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 208,
+     "ask": "For x, y ∈ ℝ, is √x × √y ≠ √(xy) always? Why?"
+    }
+   ],
+   "history": {
+    "ar": "في القرن السادس عشر عرّف كاردانو العدد ت = √−١ لحل المعادلات التربيعية ذات المميز السالب.",
+    "en": "In the 16th century Cardano introduced i = √−1 to solve quadratics with negative discriminant."
+   },
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 207,
+     "type": "identify_parts",
+     "ask": "Real and imaginary parts of z = 4 − i and z = (i + √2)/2.",
+     "method": "Rewrite as x + yi.",
+     "key_steps": [
+      "4 − i: real 4, imaginary −1",
+      "(i + √2)/2: real √2/2, imaginary 1/2"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 208,
+     "type": "powers_of_i",
+     "ask": "i⁹⁹, 1/i²², i^{−4n+2}.",
+     "method": "Remainder mod 4; i⁴ = 1.",
+     "key_steps": [
+      "99 = 4·24 + 3 → i⁹⁹ = −i",
+      "1/i²² = 1/i² = −1",
+      "i^{−4n+2} = (i⁴)^{−n}·i² = −1"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 209,
+     "type": "powers_of_i_sum",
+     "ask": "1 + i + i² + i³.",
+     "method": "Direct simplification or factoring (1 + i)(1 + i²).",
+     "key_steps": [
+      "= 1 + i − 1 − i = 0"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٦-١",
+    "page": 209,
+    "items": [
+     {
+      "n": 1,
+      "type": "write_standard_form",
+      "ask": "Write as x + yi: (a) 2 + √−2, (b) √−32 + √−2, (c) √−8 × √−2.",
+      "book_answer": "(a) 2 + √2 i, (b) 5√2 i, (c) −4 + 0i"
+     },
+     {
+      "n": 2,
+      "type": "identify_parts",
+      "ask": "Real and imaginary parts: (a) (2/5)i − 3, (b) √−9, (c) 1 − √−1, (d) √(9 × −4), (e) −2i, (f) 1/3.",
+      "book_answer": "real: −3, 0, 1, 0, 0, 1/3; imaginary: 2/5, 3, −1, 6, −2, 0"
+     },
+     {
+      "n": 3,
+      "type": "powers_of_i_identity",
+      "ask": "Show (1 + i + i²)³(1 − i + i²)³ = 1.",
+      "book_answer": null
+     },
+     {
+      "n": 4,
+      "type": "powers_of_i",
+      "ask": "Simplest form: (a) i⁴³, (b) 1/i⁶⁵, (c) i²⁷ + 1/i²⁷.",
+      "book_answer": "(a) −i, (b) −i, (c) 0"
+     },
+     {
+      "n": 5,
+      "type": "powers_of_i_identity",
+      "ask": "Prove (1 + 2i² + i³ + 2i)/(i³ + i⁴) = −1.",
+      "book_answer": null
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [],
+    "concepts": [],
+    "grade11": [
+     {
+      "ar": "حل المعادلة التربيعية والمميز",
+      "en": "solving quadratics; the discriminant"
+     },
+     {
+      "ar": "خصائص الجذور التربيعية",
+      "en": "properties of square roots"
+     },
+     {
+      "ar": "قسمة كثيرات الحدود والتحليل",
+      "en": "polynomial division and factoring"
+     },
+     {
+      "ar": "قوانين الأسس",
+      "en": "laws of exponents"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 208,
+     "text": {
+      "ar": "لا تضرب جذرين لعددين سالبين تحت جذر واحد: √−٤ × √−٩ ≠ √٣٦؛ حوّل إلى ت أولاً.",
+      "en": "Never merge roots of two negatives: √−4 · √−9 ≠ √36; convert to i first."
+     }
+    },
+    {
+     "page": 207,
+     "text": {
+      "ar": "الجزء التخيلي هو المعامل ص (عدد حقيقي) وليس ص ت؛ للعدد ٤ − ت الجزء التخيلي −١.",
+      "en": "The imaginary part is the real coefficient y, not yi; for 4 − i it is −1."
+     }
+    },
+    {
+     "page": 207,
+     "text": {
+      "ar": "قبل تحديد الأجزاء اكتب العدد على الصورة س + ص ت (بسّط القوى والجذور والكسور).",
+      "en": "Rewrite in x + yi form (simplify powers, roots, fractions) before naming the parts."
+     }
+    }
+   ]
+  },
+  {
+   "id": "6-2",
+   "title": {
+    "ar": "العمليات على الأعداد المركبة",
+    "en": "Operations on Complex Numbers"
+   },
+   "printed_pages": [
+    210,
+    214
+   ],
+   "pdf_pages": [
+    214,
+    218
+   ],
+   "branch_marking": null,
+   "concepts": [
+    {
+     "id": "u6.equality",
+     "name": {
+      "ar": "تساوي عددين مركبين",
+      "en": "equality of complex numbers"
+     }
+    },
+    {
+     "id": "u6.add_sub",
+     "name": {
+      "ar": "جمع الأعداد المركبة وطرحها",
+      "en": "addition and subtraction"
+     }
+    },
+    {
+     "id": "u6.multiplication",
+     "name": {
+      "ar": "ضرب الأعداد المركبة",
+      "en": "multiplication"
+     }
+    },
+    {
+     "id": "u6.operation_properties",
+     "name": {
+      "ar": "خصائص عمليتي الجمع والضرب",
+      "en": "properties of addition and multiplication"
+     }
+    },
+    {
+     "id": "u6.multiplicative_inverse",
+     "name": {
+      "ar": "النظير الضربي للعدد المركب",
+      "en": "multiplicative inverse"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u6.def.equality",
+     "concept": "u6.equality",
+     "page": 210,
+     "statement": {
+      "ar": "يتساوى العددان المركبان ع١ = س١ + ص١ ت و ع٢ = س٢ + ص٢ ت إذا وفقط إذا تساوى الجزآن الحقيقيان وتساوى الجزآن التخيليان.",
+      "en": "z₁ = x₁ + y₁i and z₂ = x₂ + y₂i are equal if and only if x₁ = x₂ and y₁ = y₂."
+     },
+     "latex": "x_1 + y_1 i = x_2 + y_2 i \\iff x_1 = x_2,\\ y_1 = y_2"
+    },
+    {
+     "id": "u6.def.add_sub",
+     "concept": "u6.add_sub",
+     "page": 211,
+     "statement": {
+      "ar": "نجمع (نطرح) الجزأين الحقيقيين معاً والجزأين التخيليين معاً.",
+      "en": "Add (subtract) real parts together and imaginary parts together."
+     },
+     "latex": "z_1 \\pm z_2 = (x_1 \\pm x_2) + (y_1 \\pm y_2)\\,i"
+    },
+    {
+     "id": "u6.def.multiplication",
+     "concept": "u6.multiplication",
+     "page": 212,
+     "statement": {
+      "ar": "حاصل ضرب عددين مركبين يُحسب بالتوزيع مع ت² = −١.",
+      "en": "The product is found by distributing and using i² = −1."
+     },
+     "latex": "z_1 z_2 = (x_1x_2 - y_1y_2) + (x_1y_2 + x_2y_1)\\,i"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u6.result.scalar_mult",
+     "kind": "result",
+     "concept": "u6.multiplication",
+     "page": 212,
+     "statement": {
+      "ar": "إذا كان جـ عدداً حقيقياً فإن جـ(س + ص ت) = جـ س + جـ ص ت.",
+      "en": "For real c: c(x + yi) = cx + cy i."
+     },
+     "latex": "c(x + y\\,i) = cx + cy\\,i,\\ c \\in \\mathbb{R}"
+    },
+    {
+     "id": "u6.props.addition",
+     "kind": "property",
+     "concept": "u6.operation_properties",
+     "page": 211,
+     "statement": {
+      "ar": "الجمع في ك: مغلق، تجميعي، تبديلي، العنصر المحايد صفر، ولكل ع نظير جمعي −ع.",
+      "en": "Addition in ℂ is closed, associative, commutative, has identity 0, and every z has additive inverse −z."
+     },
+     "latex": "z + 0 = z,\\quad z + (-z) = 0"
+    },
+    {
+     "id": "u6.props.multiplication",
+     "kind": "property",
+     "concept": "u6.operation_properties",
+     "page": 213,
+     "statement": {
+      "ar": "الضرب في ك: مغلق، تجميعي، تبديلي، العنصر المحايد ١، ولكل ع ≠ ٠ نظير ضربي ١/ع = ع⁻¹.",
+      "en": "Multiplication in ℂ is closed, associative, commutative, has identity 1, and every z ≠ 0 has inverse 1/z = z⁻¹."
+     },
+     "latex": "z \\cdot 1 = z,\\quad z \\cdot z^{-1} = 1\\ (z \\ne 0)"
+    },
+    {
+     "id": "u6.note.inverse_formula",
+     "kind": "note",
+     "concept": "u6.multiplicative_inverse",
+     "page": 213,
+     "statement": {
+      "ar": "النظير الضربي للعدد س + ص ت (غير الصفري) هو س/(س² + ص²) + (−ص)/(س² + ص²) ت.",
+      "en": "The inverse of x + yi (non-zero) is x/(x² + y²) − y/(x² + y²) i."
+     },
+     "latex": "(x + y\\,i)^{-1} = \\frac{x}{x^{2}+y^{2}} + \\frac{-y}{x^{2}+y^{2}}\\,i"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 210,
+     "ask": "AC circuits: voltage V = R·I with current (2 + 2i) A and resistance (9 − 3i) Ω — complete the product."
+    },
+    {
+     "label": "نشاط ٢",
+     "page": 213,
+     "ask": "Find the inverse of 3 + 4i from the definition: (x + yi)(3 + 4i) = 1 → 3x − 4y = 1, 4x + 3y = 0."
+    }
+   ],
+   "think_discuss": [],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 210,
+     "type": "equality_solve_real_unknowns",
+     "ask": "2x + 3i = (y + x) + yi, x, y real: find x, y.",
+     "method": "Equate real and imaginary parts.",
+     "key_steps": [
+      "3 = y",
+      "2x = x + y → x = 3"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 211,
+     "type": "add_sub",
+     "ask": "(2 − 3i) + (3 − 4i).",
+     "method": "Combine parts.",
+     "key_steps": [
+      "5 − 7i"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 211,
+     "type": "add_sub",
+     "ask": "z₁ = 3 − i, z₂ = 1 + 2i, z₃ = −5i: z₁ − z₂ and (z₁ + z₂) − z₃.",
+     "method": "Combine parts.",
+     "key_steps": [
+      "2 − 3i",
+      "4 + 6i"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 212,
+     "type": "multiply",
+     "ask": "(3 + i)(2 − 5i) and i(i + 5)(3 − i⁵).",
+     "method": "Multiplication rule; reduce powers of i.",
+     "key_steps": [
+      "11 − 13i",
+      "(−1 + 5i)(3 − i) = 2 + 16i"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 212,
+     "type": "operations_and_equality",
+     "ask": "z₁ = 3 + 5i, z₂ = 6 − 5i: 5z₁; 3z₂ + 5z₁ − 2i; real m with 4 − i z₁ = m(i − 3).",
+     "method": "Scalar multiplication, addition, then equate parts.",
+     "key_steps": [
+      "15 + 25i",
+      "33 + 8i",
+      "4 − i(3 + 5i) = 9 − 3i = −3m + mi → m = −3"
+     ]
+    },
+    {
+     "label": "مثال ٦",
+     "page": 214,
+     "type": "multiplicative_inverse",
+     "ask": "Inverse of 1 + 2√2 i.",
+     "method": "Inverse formula.",
+     "key_steps": [
+      "x² + y² = 9",
+      "1/9 − (2√2/9) i"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٦-٢",
+    "page": 214,
+    "items": [
+     {
+      "n": 1,
+      "type": "multiply",
+      "ask": "Write as a + bi: (a) 4(2 + 4i) + 5(3 − 2i), (b) (3 + 4i)(3 − 5i), (c) (3 + 4i)³, (d) 4i(1 − 5i)², (e) (1 − i)⁶.",
+      "book_answer": "(a) 23 + 6i, (b) 29 − 3i, (c) −117 + 44i, (d) 40 − 96i, (e) 0 + 8i"
+     },
+     {
+      "n": 2,
+      "type": "solve_linear_complex_equation",
+      "ask": "x = a + bi: find x with x + 2xi = −5(x − 4i).",
+      "book_answer": "x = 1 + 3i"
+     },
+     {
+      "n": 3,
+      "type": "equality_solve_real_unknowns",
+      "ask": "x, y ∈ ℝ with x − y − 2 = y² i − x i.",
+      "book_answer": "(x, y) = (4, 2) or (1, −1)"
+     },
+     {
+      "n": 4,
+      "type": "verify_root",
+      "ask": "Show z = i satisfies z⁵ + z² = z − 1.",
+      "book_answer": null
+     },
+     {
+      "n": 5,
+      "type": "verify_root",
+      "ask": "Show z = −1 + i satisfies z² + 2z + 2 = 0.",
+      "book_answer": null
+     },
+     {
+      "n": 6,
+      "type": "equality_solve_real_unknowns",
+      "ask": "i/(i + 3) = (1 + 3i)/a, a ∈ ℝ: find a.",
+      "book_answer": "a = 10"
+     },
+     {
+      "n": 7,
+      "type": "multiplicative_inverse",
+      "ask": "z⁻¹ as a + bi: (a) 2 + √12 i, (b) i/(i − 3), (c) (1 + i)¹³.",
+      "book_answer": "(a) 1/8 − (√3/8) i, (b) 1 + 3i, (c) −1/128 + (1/128) i"
+     },
+     {
+      "n": 8,
+      "type": "complex_linear_system",
+      "ask": "Solve z₁ + 3z₂ = −√8 i, 2z₁ − 3z₂ = √50 i (z₁, z₂ ∈ ℂ).",
+      "book_answer": "z₁ = √2 i, z₂ = −√2 i"
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [
+     "6-1"
+    ],
+    "concepts": [
+     "u6.complex_number",
+     "u6.powers_of_i"
+    ],
+    "grade11": [
+     {
+      "ar": "فك الأقواس ومفكوك (أ + ب)ⁿ لأسس صغيرة",
+      "en": "expanding brackets and small binomial powers"
+     },
+     {
+      "ar": "حل نظام معادلتين خطيتين",
+      "en": "solving a 2×2 linear system"
+     },
+     {
+      "ar": "حل المعادلات التربيعية",
+      "en": "solving quadratics"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 212,
+     "text": {
+      "ar": "عند الضرب لا تنسَ أن ت² = −١ فيتحول حد تخيلي إلى حد حقيقي سالب.",
+      "en": "When multiplying remember i² = −1, so an i² term becomes a negative real term."
+     }
+    },
+    {
+     "page": 210,
+     "text": {
+      "ar": "مقارنة الأجزاء لا تصح إلا بعد كتابة الطرفين على الصورة س + ص ت ومع كون المجاهيل حقيقية.",
+      "en": "Equating parts is valid only after both sides are in x + yi form and the unknowns are real."
+     }
+    },
+    {
+     "page": 214,
+     "text": {
+      "ar": "إذا كان المجهول عدداً مركباً (تمرين ٢) فإما أن نعوّض س = أ + ب ت ونقارن، أو نعزله جبرياً ثم نقسم.",
+      "en": "If the unknown itself is complex (exercise 2), either substitute a + bi and equate, or isolate it algebraically and divide."
+     }
+    }
+   ]
+  },
+  {
+   "id": "6-3",
+   "title": {
+    "ar": "قسمة الأعداد المركبة",
+    "en": "Division of Complex Numbers"
+   },
+   "printed_pages": [
+    215,
+    220
+   ],
+   "pdf_pages": [
+    219,
+    224
+   ],
+   "branch_marking": null,
+   "sections": [
+    {
+     "title": {
+      "ar": "المقياس والمرافق والقسمة",
+      "en": "modulus, conjugate and division"
+     },
+     "printed_pages": [
+      215,
+      217
+     ]
+    },
+    {
+     "title": {
+      "ar": "التمثيل البياني والتمثيل القطبي للأعداد المركبة",
+      "en": "Cartesian and polar representation"
+     },
+     "printed_pages": [
+      218,
+      219
+     ]
+    }
+   ],
+   "concepts": [
+    {
+     "id": "u6.modulus",
+     "name": {
+      "ar": "مقياس العدد المركب",
+      "en": "modulus of a complex number"
+     }
+    },
+    {
+     "id": "u6.conjugate",
+     "name": {
+      "ar": "مرافق العدد المركب",
+      "en": "conjugate"
+     }
+    },
+    {
+     "id": "u6.modulus_conjugate_props",
+     "name": {
+      "ar": "خصائص المقياس والمرافق",
+      "en": "properties of modulus and conjugate"
+     }
+    },
+    {
+     "id": "u6.division",
+     "name": {
+      "ar": "قسمة عددين مركبين",
+      "en": "division of complex numbers"
+     }
+    },
+    {
+     "id": "u6.argand_plane",
+     "name": {
+      "ar": "التمثيل البياني في المستوى المركب (مستوى أرجاند)",
+      "en": "graphical representation in the complex (Argand) plane"
+     }
+    },
+    {
+     "id": "u6.polar_form",
+     "name": {
+      "ar": "الصورة القطبية والسعة الأساسية",
+      "en": "polar form and principal argument"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u6.def.modulus",
+     "concept": "u6.modulus",
+     "page": 215,
+     "statement": {
+      "ar": "مقياس العدد ع = س + ص ت هو |ع| = √(س² + ص²).",
+      "en": "The modulus of z = x + yi is |z| = √(x² + y²)."
+     },
+     "latex": "|z| = \\sqrt{x^{2} + y^{2}}"
+    },
+    {
+     "id": "u6.def.conjugate",
+     "concept": "u6.conjugate",
+     "page": 215,
+     "statement": {
+      "ar": "مرافق العدد ع = س + ص ت هو ع̄ = س − ص ت.",
+      "en": "The conjugate of z = x + yi is z̄ = x − yi."
+     },
+     "latex": "\\overline{z} = x - y\\,i"
+    },
+    {
+     "id": "u6.def.division",
+     "concept": "u6.division",
+     "page": 217,
+     "statement": {
+      "ar": "لقسمة ع١ على ع٢ ≠ ٠ نضرب البسط والمقام في مرافق المقام، فيصبح المقام عدداً حقيقياً |ع٢|². (تشبه إنطاق المقام في الجذور.)",
+      "en": "To divide z₁ by z₂ ≠ 0 multiply numerator and denominator by the conjugate of the denominator, making the denominator the real number |z₂|² (analogous to rationalising a surd denominator)."
+     },
+     "latex": "\\frac{z_1}{z_2} = \\frac{z_1\\,\\overline{z_2}}{z_2\\,\\overline{z_2}} = \\frac{z_1\\,\\overline{z_2}}{|z_2|^{2}},\\quad z_2 \\ne 0"
+    },
+    {
+     "id": "u6.def.argand",
+     "concept": "u6.argand_plane",
+     "page": 218,
+     "statement": {
+      "ar": "يُمثَّل العدد ع = س + ص ت بالنقطة (س، ص) أو بالمتجه القياسي من (٠، ٠) إليها؛ ويسمى المستوى الإحداثي المستوى المركب (مستوى أرجاند): المحور الأفقي للأجزاء الحقيقية والرأسي للأجزاء التخيلية.",
+      "en": "z = x + yi is represented by the point (x, y), or by the position vector from (0,0) to it; the plane is the complex (Argand) plane, horizontal axis real parts, vertical axis imaginary parts."
+     },
+     "latex": "x + y\\,i \\longleftrightarrow (x, y)"
+    },
+    {
+     "id": "u6.def.polar_form",
+     "concept": "u6.polar_form",
+     "page": 219,
+     "statement": {
+      "ar": "الصورة القطبية للعدد ع = س + ص ت ≠ ٠ هي ع = ر(جتاهـ + ت جاهـ) حيث ر = |ع| = √(س² + ص²)، وظاهـ = ص/س، و هـ (السعة الأساسية) هي الزاوية التي يصنعها المتجه مع الاتجاه الموجب لمحور السينات، ٠ ≤ هـ < ٢π. ومنها س = ر جتاهـ، ص = ر جاهـ.",
+      "en": "The polar form of z = x + yi ≠ 0 is z = r(cos θ + i sin θ) with r = |z| = √(x² + y²), tan θ = y/x, and θ (the principal argument) the angle of the vector with the positive x-axis, 0 ≤ θ < 2π. Hence x = r cos θ, y = r sin θ."
+     },
+     "latex": "z = r(\\cos\\theta + i\\sin\\theta),\\quad r = |z| = \\sqrt{x^{2}+y^{2}},\\quad \\tan\\theta = \\frac{y}{x},\\quad 0 \\le \\theta < 2\\pi",
+     "conditions": {
+      "ar": "ع ≠ ٠. يحدد الكتاب الربع باستعمال جاهـ = ص/ر و جتاهـ = س/ر معاً.",
+      "en": "z ≠ 0. The book fixes the quadrant using both sin θ = y/r and cos θ = x/r."
+     }
+    }
+   ],
+   "rules": [
+    {
+     "id": "u6.prop.conj_conj",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "مرافق المرافق هو العدد نفسه.",
+      "en": "The conjugate of the conjugate is z."
+     },
+     "latex": "\\overline{\\overline{z}} = z"
+    },
+    {
+     "id": "u6.prop.z_zbar",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "حاصل ضرب العدد في مرافقه يساوي مربع مقياسه (عدد حقيقي غير سالب).",
+      "en": "z times its conjugate equals |z|² (a non-negative real)."
+     },
+     "latex": "z\\,\\overline{z} = \\overline{z}\\,z = |z|^{2}"
+    },
+    {
+     "id": "u6.prop.mod_conj",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "للعدد ومرافقه المقياس نفسه.",
+      "en": "z and z̄ have the same modulus."
+     },
+     "latex": "|z| = |\\overline{z}|"
+    },
+    {
+     "id": "u6.prop.mod_scalar",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "مقياس جـ ع يساوي |جـ| × |ع| لكل عدد حقيقي جـ.",
+      "en": "|cz| = |c||z| for real c."
+     },
+     "latex": "|c\\,z| = |c|\\,|z|,\\ c \\in \\mathbb{R}"
+    },
+    {
+     "id": "u6.prop.sum_diff_conj",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "إذا كان ع = أ + ب ت فإن ع + ع̄ = ٢أ و ع − ع̄ = ٢ب ت.",
+      "en": "If z = a + bi then z + z̄ = 2a and z − z̄ = 2bi."
+     },
+     "latex": "z + \\overline{z} = 2a,\\quad z - \\overline{z} = 2b\\,i"
+    },
+    {
+     "id": "u6.prop.mod_product",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "مقياس حاصل الضرب يساوي حاصل ضرب المقياسين.",
+      "en": "The modulus of a product is the product of the moduli."
+     },
+     "latex": "|z_1 z_2| = |z_1|\\,|z_2|"
+    },
+    {
+     "id": "u6.prop.mod_quotient",
+     "kind": "property",
+     "concept": "u6.modulus_conjugate_props",
+     "page": 216,
+     "statement": {
+      "ar": "مقياس ناتج القسمة يساوي ناتج قسمة المقياسين، بشرط ع٢ ≠ ٠.",
+      "en": "The modulus of a quotient is the quotient of the moduli, z₂ ≠ 0."
+     },
+     "latex": "\\left|\\frac{z_1}{z_2}\\right| = \\frac{|z_1|}{|z_2|},\\ z_2 \\ne 0"
+    },
+    {
+     "id": "u6.note.inverse_via_conj",
+     "kind": "note",
+     "concept": "u6.division",
+     "page": 217,
+     "statement": {
+      "ar": "إذا كان ع ≠ ٠ فإن ع⁻¹ = ١/ع = ع̄/(ع ع̄) = ع̄/|ع|².",
+      "en": "For z ≠ 0: z⁻¹ = 1/z = z̄/(z z̄) = z̄/|z|²."
+     },
+     "latex": "z^{-1} = \\frac{1}{z} = \\frac{\\overline{z}}{|z|^{2}}"
+    },
+    {
+     "id": "u6.note.conj_reflection",
+     "kind": "note",
+     "concept": "u6.conjugate",
+     "page": 219,
+     "statement": {
+      "ar": "المرافق ع̄ هو انعكاس ع في محور السينات (الحقيقي) في المستوى المركب.",
+      "en": "In the complex plane z̄ is the reflection of z in the real axis (activity 6)."
+     },
+     "latex": ""
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 215,
+     "ask": "A painting with sides (28 + 14√5) cm and 14/(√5 − 2) cm: is it a square? (rationalise)"
+    },
+    {
+     "label": "نشاط ٢",
+     "page": 215,
+     "ask": "Rationalise 1/(1 − √2) by multiplying by the conjugate 1 + √2."
+    },
+    {
+     "label": "نشاط ٣",
+     "page": 216,
+     "ask": "z₁ = 2 + i, z₂ = 1 − 3i: |z₁|, |z₂|, |z₁z₂|, |−2z₁|, −2|z₁| — what do you notice?"
+    },
+    {
+     "label": "نشاط ٤",
+     "page": 216,
+     "ask": "Conjugates of 1 + i, 1 − i, 5, −3, i, 2i + √2 i."
+    },
+    {
+     "label": "نشاط ٥",
+     "page": 217,
+     "ask": "Table of z, z̄, |z|, z⁻¹ for 2 + i, √3 − i, 2i."
+    },
+    {
+     "label": "نشاط ٦",
+     "page": 219,
+     "ask": "z = 4 − 3i: find z̄ and plot both — what do you notice? (reflection in the real axis)"
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 218,
+     "ask": "What do the horizontal and vertical axes of the complex plane represent?"
+    }
+   ],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 215,
+     "type": "modulus_conjugate",
+     "ask": "z = 3 + 4i: z̄, |z|, |z̄|.",
+     "method": "Definitions.",
+     "key_steps": [
+      "z̄ = 3 − 4i",
+      "|z| = 5",
+      "|z̄| = 5 (equal)"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 217,
+     "type": "divide",
+     "ask": "(2 − 3i)/(3 + 4i) as x + yi, (1) by the conjugate, (2) by the inverse.",
+     "method": "Multiply by conjugate of the denominator; or multiply by (3 + 4i)⁻¹ = 3/25 − (4/25)i.",
+     "key_steps": [
+      "(2 − 3i)(3 − 4i)/(9 + 16)",
+      "= −6/25 − (17/25) i (same both ways)"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 218,
+     "type": "plot_argand",
+     "ask": "Plot −2i, 2 + 3i, 4, √(−1/4).",
+     "method": "Point (x, y) / position vector.",
+     "key_steps": [
+      "(0, −2)",
+      "(2, 3)",
+      "(4, 0)",
+      "(0, 1/2)"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 219,
+     "type": "to_polar",
+     "ask": "Write z = 1 + √3 i in polar form.",
+     "method": "r = |z|, then cos θ = x/r and sin θ = y/r.",
+     "key_steps": [
+      "r = 2",
+      "cos θ = 1/2, sin θ = √3/2 → θ = π/3",
+      "z = 2(cos π/3 + i sin π/3)"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 219,
+     "type": "from_polar",
+     "ask": "z = √2(cos π/4 + i sin π/4) to a + bi.",
+     "method": "Evaluate cos and sin, distribute.",
+     "key_steps": [
+      "√2(1/√2 + i/√2) = 1 + i"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٦-٣",
+    "page": 220,
+    "items": [
+     {
+      "n": 1,
+      "type": "modulus",
+      "ask": "|1 + √−4|.",
+      "book_answer": "√5"
+     },
+     {
+      "n": 2,
+      "type": "modulus_properties",
+      "ask": "z₁ = 1 + i, z₂ = 1 − i: (a) |−3z₁|, (b) |½ z₁ z̄₁|, (c) |z₂/z₁|, (d) |2z₁z₂|.",
+      "book_answer": "(a) √18, (b) 1, (c) 1, (d) 4"
+     },
+     {
+      "n": 3,
+      "type": "inverse_and_modulus",
+      "ask": "z = 3/5 − (4/5)i: (a) z⁻¹, (b) (3z)⁻¹, (c) |z⁻¹|, (d) |z̄/5|.",
+      "book_answer": "(a) 3/5 + (4/5)i, (b) 3/15 + (4/15)i, (c) 1, (d) 1/5"
+     },
+     {
+      "n": 4,
+      "type": "divide",
+      "ask": "a + bi: (a) (−1 + √2 i)/(2 + i), (b) (3 + 4i)/(3 − 5i) + (2 + 3i)/(2 − 3i).",
+      "book_answer": "(a) (−2 + √2)/5 + ((1 + 2√2)/5) i, (b) −313/442 + (759/442) i"
+     },
+     {
+      "n": 5,
+      "type": "proof",
+      "ask": "Prove |z − 1| = |z̄ − 1| for z ∈ ℂ.",
+      "book_answer": null
+     },
+     {
+      "n": 6,
+      "type": "plot_argand",
+      "ask": "Plot (a) i³⁵, (b) 2 + √−2, (c) √−4 + √−9, (d) 1/i⁵².",
+      "book_answer": "(a) (0, −1), (b) (2, √2), (c) (0, 5), (d) (1, 0)"
+     },
+     {
+      "n": 7,
+      "type": "proof",
+      "ask": "If z² = (z̄)², prove z is real or pure imaginary.",
+      "book_answer": null
+     },
+     {
+      "n": 8,
+      "type": "to_polar",
+      "ask": "Polar form: (a) −1 + i, (b) −1/2, (c) (−1 + √3 i)/2.",
+      "book_answer": "(a) √2(cos 3π/4 + i sin 3π/4), (b) ½(cos π + i sin π), (c) 1(cos 2π/3 + i sin 2π/3)"
+     },
+     {
+      "n": 9,
+      "type": "from_polar",
+      "ask": "a + bi: (a) 7(cos 3π/4 + i sin 3π/4), (b) 3(cos π/6 + i sin π/6), (c) 2(cos π/4 − i sin π/4), (d) |z| = 3, θ = π/3.",
+      "book_answer": "(a) −7/√2 + (7/√2) i, (b) 3√3/2 + (3/2) i, (c) √2 − √2 i, (d) 3/2 + (3√3/2) i"
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [
+     "6-2"
+    ],
+    "concepts": [
+     "u6.multiplication",
+     "u6.multiplicative_inverse"
+    ],
+    "grade11": [
+     {
+      "ar": "إنطاق المقام (مرافق المقدار الجذري)",
+      "en": "rationalising denominators with surd conjugates"
+     },
+     {
+      "ar": "المستوى الديكارتي والمتجهات القياسية",
+      "en": "Cartesian plane and position vectors"
+     },
+     {
+      "ar": "النسب المثلثية للزوايا الخاصة وإشاراتها في الأرباع",
+      "en": "trig ratios of special angles and their signs by quadrant"
+     },
+     {
+      "ar": "نظرية فيثاغورس",
+      "en": "Pythagoras' theorem"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 217,
+     "text": {
+      "ar": "عند القسمة يُضرب البسط والمقام في مرافق المقام وليس البسط.",
+      "en": "Multiply by the conjugate of the denominator, not of the numerator."
+     }
+    },
+    {
+     "page": 219,
+     "text": {
+      "ar": "لا تكفي ظاهـ = ص/س لتحديد هـ؛ استعمل إشارتي جتاهـ وجاهـ معاً لتحديد الربع (مثل −١ + ت تقع في الربع الثاني فـ هـ = ٣π/٤).",
+      "en": "tan θ = y/x alone does not fix θ; use the signs of cos θ and sin θ to find the quadrant (−1 + i is in quadrant II, θ = 3π/4)."
+     }
+    },
+    {
+     "page": 220,
+     "text": {
+      "ar": "الصورة ٢(جتا π/٤ − ت جا π/٤) ليست قطبية قياسية بسبب إشارة السالب؛ حوّلها إلى أ + ب ت أولاً.",
+      "en": "2(cos π/4 − i sin π/4) is not in standard polar form because of the minus sign; convert to a + bi first."
+     }
+    },
+    {
+     "page": 216,
+     "text": {
+      "ar": "−٢|ع١| ليست |−٢ع١|؛ المقياس دائماً غير سالب: |جـ ع| = |جـ| |ع|.",
+      "en": "−2|z₁| is not |−2z₁|; a modulus is never negative: |cz| = |c||z|."
+     }
+    }
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "label": "تمارين عامة",
+  "printed_pages": [
+   221,
+   222
+  ],
+  "pdf_pages": [
+   225,
+   226
+  ],
+  "items": [
+   {
+    "n": "1.1",
+    "format": "mcq",
+    "lessons": [
+     "6-1"
+    ],
+    "ask": "i⁵⁷ = ?",
+    "book_answer": "جـ (i)"
+   },
+   {
+    "n": "1.2",
+    "format": "mcq",
+    "lessons": [
+     "6-2"
+    ],
+    "ask": "(√2 − i) − i(1 − √2 i) = ?",
+    "book_answer": "جـ (−2i)"
+   },
+   {
+    "n": "1.3",
+    "format": "mcq",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "(4 + i)/(2 − 3i) = ?",
+    "book_answer": "د ((5 + 14i)/13)"
+   },
+   {
+    "n": "1.4",
+    "format": "mcq",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "(1 + 2i)/(3 − 4i) + (2 − i)/(5i) = ?",
+    "book_answer": "أ (−2/5)"
+   },
+   {
+    "n": "1.5",
+    "format": "mcq",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "conj(z̄ + i) = ?",
+    "book_answer": "ب (z − i)"
+   },
+   {
+    "n": "1.6",
+    "format": "mcq",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "Polar form of 2 + 2i.",
+    "book_answer": "ب (2√2(cos π/4 + i sin π/4))"
+   },
+   {
+    "n": "1.7",
+    "format": "mcq",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "Argument of (2 + 2i)².",
+    "book_answer": "د (π/2)"
+   },
+   {
+    "n": 2,
+    "format": "short",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "z₁ = 1 + 2i, z₂ = 2 − i: |z₁|, |z₂|, |z₁ + z₂|, |z₁| + |z₂| — what do you notice?",
+    "book_answer": "√5, √5, √10, √20"
+   },
+   {
+    "n": 3,
+    "format": "short",
+    "lessons": [
+     "6-2"
+    ],
+    "ask": "x, y ∈ ℝ with x² + x + (y − 1)i = −x² i.",
+    "book_answer": "(0, 1), (−1, 0)"
+   },
+   {
+    "n": 4,
+    "format": "long",
+    "lessons": [
+     "6-3"
+    ],
+    "ask": "L = 5(3 − i)/(3 + i), M = (11i − 2)/(1 + 2i): (a) show L, M are conjugates; (b) L + M, LM, then L² + M².",
+    "book_answer": "L + M = 8, LM = 25, L² + M² = 14"
+   },
+   {
+    "n": 5,
+    "format": "short",
+    "lessons": [
+     "6-1",
+     "6-3"
+    ],
+    "ask": "((√3 − i)/(1 + √3 i))⁷.",
+    "book_answer": "i"
+   },
+   {
+    "n": 6,
+    "format": "self_assessment",
+    "lessons": [],
+    "ask": "Self-assessment: operations on complex numbers; solving equations and finding roots of complex numbers; accuracy of solutions.",
+    "book_answer": null
+   }
+  ]
+ },
+ "self_assessment": [
+  {
+   "ar": "أجري عمليات حسابية على الأعداد المركبة",
+   "en": "perform arithmetic on complex numbers"
+  },
+  {
+   "ar": "أحل المعادلات وأجد الجذور للأعداد المركبة",
+   "en": "solve equations and find roots of complex numbers"
+  },
+  {
+   "ar": "أتحرى دقة ومعقولية الحل",
+   "en": "check accuracy and reasonableness"
+  }
+ ],
+ "coverage_gaps": [
+  {
+   "ar": "أهداف الوحدة (٦ و٩) وجدول التقويم الذاتي تذكر حل المعادلات التربيعية في ك وإيجاد الجذور التربيعية للأعداد المركبة، لكن لا يوجد في دروس هذه الطبعة أي شرح أو مثال لهما (الدرس ٦-٣ ينتهي بالصورة القطبية ص٢١٩). يظهر الموضوع ضمنياً فقط في نشاط ٢ ص٢٠٦ (س³ + س = ٠) وتمرين ٦-٢ رقم ٥ (التحقق من جذر).",
+   "en": "Unit objectives 6 and 9 and the self-assessment mention solving quadratic equations in ℂ and finding square roots of complex numbers, but no lesson in this edition teaches them (6-3 ends with polar form on p219). They appear only implicitly in activity 2 p206 (x³ + x = 0) and exercise 6-2 #5 (verify a root)."
+  },
+  {
+   "ar": "فهرس الكتاب يعطي ثلاثة دروس فقط؛ «التمثيل البياني والتمثيل القطبي» قسم داخل الدرس ٦-٣ وليس درساً مستقلاً.",
+   "en": "The TOC lists three lessons only; 'Cartesian and polar representation' is a section inside lesson 6-3, not a separate lesson."
+  }
+ ],
+ "dependency_edges": [
+  [
+   "u6.imaginary_unit",
+   "u6.complex_number"
+  ],
+  [
+   "u6.complex_number",
+   "u6.real_imag_parts"
+  ],
+  [
+   "u6.imaginary_unit",
+   "u6.sqrt_negative"
+  ],
+  [
+   "u6.imaginary_unit",
+   "u6.powers_of_i"
+  ],
+  [
+   "u6.real_imag_parts",
+   "u6.equality"
+  ],
+  [
+   "u6.real_imag_parts",
+   "u6.add_sub"
+  ],
+  [
+   "u6.powers_of_i",
+   "u6.multiplication"
+  ],
+  [
+   "u6.add_sub",
+   "u6.operation_properties"
+  ],
+  [
+   "u6.multiplication",
+   "u6.operation_properties"
+  ],
+  [
+   "u6.multiplication",
+   "u6.multiplicative_inverse"
+  ],
+  [
+   "u6.equality",
+   "u6.multiplicative_inverse"
+  ],
+  [
+   "u6.real_imag_parts",
+   "u6.modulus"
+  ],
+  [
+   "u6.real_imag_parts",
+   "u6.conjugate"
+  ],
+  [
+   "u6.modulus",
+   "u6.modulus_conjugate_props"
+  ],
+  [
+   "u6.conjugate",
+   "u6.modulus_conjugate_props"
+  ],
+  [
+   "u6.conjugate",
+   "u6.division"
+  ],
+  [
+   "u6.multiplicative_inverse",
+   "u6.division"
+  ],
+  [
+   "u6.modulus_conjugate_props",
+   "u6.division"
+  ],
+  [
+   "u6.real_imag_parts",
+   "u6.argand_plane"
+  ],
+  [
+   "u6.argand_plane",
+   "u6.polar_form"
+  ],
+  [
+   "u6.modulus",
+   "u6.polar_form"
+  ]
+ ],
+ "reader_notes": [
+  "The book's answer key for this unit is on printed pages 242-244 (pdf 246-248); book_answer fields are transcribed from it.",
+  "No external prerequisites from units 1-5: unit 6 is independent of calculus and can be studied at any time."
+ ]
+}

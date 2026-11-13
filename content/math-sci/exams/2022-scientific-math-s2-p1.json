@@ -1,0 +1,879 @@
+{
+ "id": "2022-scientific-math-s2-p1",
+ "year": 2022,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 2,
+ "session_ar": "الدورة الثانية",
+ "session_en": "Second session",
+ "paper": 1,
+ "paper_ar": "الورقة الأولى",
+ "paper_en": "Paper 1",
+ "date": "2022-08-13",
+ "day_ar": "السبت",
+ "duration_min": 150,
+ "duration_ar": "ساعتان ونصف",
+ "total_marks": 100,
+ "pages": 2,
+ "img": "exams/2022/scientific/math-s2-p1",
+ "num_questions": 7,
+ "choice_rule": {
+  "ar": "عدد أسئلة الورقة (سبعة) أسئلة، أجب عن (خمسة) منها فقط",
+  "en": "Answer five of the seven questions: all of Section 1 (Q1–Q3) and two of Section 2 (Q4–Q7).",
+  "answer_count": 5,
+  "compulsory": [
+   "Q1",
+   "Q2",
+   "Q3"
+  ],
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً"
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من أربعة أسئلة وعلى المشترك أن يجيب عن سؤالين فقط"
+   }
+  ]
+ },
+ "scope_units": [
+  1,
+  2
+ ],
+ "scope_note": "Paper 1 covers units 1–2 (differentiation and its applications).",
+ "marks_printed_sum": 140,
+ "marks_attainable_under_rule": 100,
+ "marks_attainable_by_headings": 100,
+ "reconciled": true,
+ "discrepancies": [],
+ "tagger_notes": [
+  "The paper uses two function letters: ق (rendered f) and a second hooked glyph, rendered here as u (ع in armath); read as a distinct function unless noted.",
+  "Matrix/determinant entries are transcribed reading each printed row right-to-left (Arabic layout).",
+  "MCQ answers are not recorded (answer=null) since none were verified in this pass; options_nature describes the distractors.",
+  "Sub-parts without printed marks carry marks=null with shared_group and an equal-split marks_est."
+ ],
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q1",
+   "label_ar": "السؤال الأول",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q1a",
+     "label": "Q1 a",
+     "label_ar": "السؤال الأول أ",
+     "marks": 6,
+     "page": 1,
+     "format": "short",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-4",
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "lhopital",
+       "ar": "قاعدة لوبيتال",
+       "en": "L'Hôpital's rule"
+      },
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "paraphrase": "lim_{x→0}(sec x−1)/x² using L'Hôpital.",
+     "latex": "\\lim_{x\\to0}\\frac{\\sec x-1}{x^2}"
+    },
+    {
+     "id": "q1b",
+     "label": "Q1 b",
+     "label_ar": "السؤال الأول ب",
+     "marks": 7,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-5",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "tangent-normal",
+       "ar": "معادلة المماس والعمودي",
+       "en": "tangent and normal lines"
+      }
+     ],
+     "paraphrase": "f=ax³+bx²−12x has a horizontal tangent at (−1,7); find a, b.",
+     "latex": "f(x)=ax^3+bx^2-12x,\\ (-1,7)"
+    },
+    {
+     "id": "q1c",
+     "label": "Q1 c",
+     "label_ar": "السؤال الأول ج",
+     "marks": 7,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-3",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "local-extrema",
+       "ar": "القيم القصوى المحلية",
+       "en": "local extrema"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and log functions"
+      }
+     ],
+     "paraphrase": "Local extrema of x − eˣ on [−1,1].",
+     "latex": "f(x)=x-\\E^x,\\ [-1,1]"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "shared_marks": {
+    "q2b": 6
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q2",
+   "label_ar": "السؤال الثاني",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q2a",
+     "label": "Q2 a",
+     "label_ar": "السؤال الثاني أ",
+     "marks": 6,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "1-7",
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      },
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      }
+     ],
+     "paraphrase": "y³+5 = f(4x−x²), f′(3)=2f(3)=−6; find dy/dx at x=1.",
+     "latex": "y^3+5=f(4x-x^2),\\ f'(3)=2f(3)=-6"
+    },
+    {
+     "id": "q2b-1",
+     "label": "Q2 b-1",
+     "label_ar": "السؤال الثاني ب-١",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة في خط مستقيم",
+       "en": "rectilinear motion (velocity, height)"
+      }
+     ],
+     "paraphrase": "Body thrown up, s=30t−5t². — Maximum height.",
+     "latex": "s(t)=30t-5t^2",
+     "shared_group": "q2b",
+     "marks_est": 3.0,
+     "marks_note": "Part b (6 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q2b-2",
+     "label": "Q2 b-2",
+     "label_ar": "السؤال الثاني ب-٢",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة في خط مستقيم",
+       "en": "rectilinear motion (velocity, height)"
+      }
+     ],
+     "paraphrase": "Body thrown up, s=30t−5t². — When is it 40 m above the ground?",
+     "latex": "s(t)=30t-5t^2",
+     "shared_group": "q2b",
+     "marks_est": 3.0
+    },
+    {
+     "id": "q2c",
+     "label": "Q2 c",
+     "label_ar": "السؤال الثاني ج",
+     "marks": 8,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-2",
+      "1-3",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "monotonicity",
+       "ar": "التزايد والتناقص",
+       "en": "increasing and decreasing intervals"
+      }
+     ],
+     "paraphrase": "Increase/decrease of eˣcos x on [0,π/2].",
+     "latex": "f(x)=\\E^x\\cos x,\\ [0,\\tfrac{\\pi}{2}]"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "shared_marks": {
+    "q3b": 9
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q3",
+   "label_ar": "السؤال الثالث",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q3a",
+     "label": "Q3 a",
+     "label_ar": "السؤال الثالث أ",
+     "marks": 5,
+     "page": 1,
+     "format": "short",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-2",
+      "1-4",
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "product-quotient",
+       "ar": "مشتقة الضرب والقسمة",
+       "en": "product and quotient rules"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and log functions"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      }
+     ],
+     "paraphrase": "f′(x)=ln M(x)/(2x), M(2)=e, M′(2)=3e/2; find f″(2).",
+     "latex": "f'(x)=\\frac{\\ln M(x)}{2x},\\ M(2)=\\E,\\ M'(2)=\\tfrac32\\E"
+    },
+    {
+     "id": "q3b-1",
+     "label": "Q3 b-1",
+     "label_ar": "السؤال الثالث ب-١",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "u=(x²−4)². — Concavity intervals.",
+     "latex": "u(x)=(x^2-4)^2",
+     "shared_group": "q3b",
+     "marks_est": 4.5,
+     "marks_note": "Part b (9 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q3b-2",
+     "label": "Q3 b-2",
+     "label_ar": "السؤال الثالث ب-٢",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "u=(x²−4)². — Inflection points.",
+     "latex": "u(x)=(x^2-4)^2",
+     "shared_group": "q3b",
+     "marks_est": 4.5
+    },
+    {
+     "id": "q3c",
+     "label": "Q3 c",
+     "label_ar": "السؤال الثالث ج",
+     "marks": 6,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "1-6",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "مشتقة الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "paraphrase": "k=u³(x)·h(x³), k(1)=27, h(1)=1, (u·h)′(1)=5; find k′(1).",
+     "latex": "k(x)=u^3(x)\\,g(x^3)"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "shared_marks": {
+    "q4a": 11
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q4",
+   "label_ar": "السؤال الرابع",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q4a-1",
+     "label": "Q4 a-1",
+     "label_ar": "السؤال الرابع أ-١",
+     "marks": null,
+     "page": 2,
+     "format": "proof",
+     "skills": [
+      "prove",
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-7",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and log functions"
+      }
+     ],
+     "paraphrase": "yⁿ = e^(mx), n,m ∈ ℕ, y>0; show y″=(m/n)²y.",
+     "latex": "y^n=\\E^{mx}\\Rightarrow y''=\\left(\\frac mn\\right)^2y",
+     "shared_group": "q4a",
+     "marks_est": 5.5,
+     "marks_note": "Part a (11 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q4a-2",
+     "label": "Q4 a-2",
+     "label_ar": "السؤال الرابع أ-٢",
+     "marks": null,
+     "page": 2,
+     "format": "short",
+     "skills": [
+      "prove",
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-6",
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "composition-deriv",
+       "ar": "مشتقة تركيب اقترانين",
+       "en": "derivative of a composition"
+      },
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "paraphrase": "f=a·sin(πx/6), h=x²+1, (f∘h)′(1)=π/3; find a.",
+     "latex": "f(x)=a\\sin\\frac{\\pi}{6}x,\\ g(x)=x^2+1",
+     "shared_group": "q4a",
+     "marks_est": 5.5
+    },
+    {
+     "id": "q4b",
+     "label": "Q4 b",
+     "label_ar": "السؤال الرابع ب",
+     "marks": 9,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply",
+      "interpret"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "2-1"
+     ],
+     "concepts": [
+      {
+       "id": "mvt",
+       "ar": "نظرية القيمة المتوسطة",
+       "en": "mean value theorem"
+      },
+      {
+       "id": "piecewise-diff",
+       "ar": "اشتقاق الاقتران المتشعب",
+       "en": "differentiability of piecewise functions"
+      }
+     ],
+     "paraphrase": "Piecewise u (|2x−6| on [1,2], x²−6x+10 on (2,4]): check MVT on [1,4], find c if it exists.",
+     "latex": "u(x)=\\begin{cases}|2x-6|&1\\le x\\le2\\\\x^2-6x+10&2<x\\le4\\end{cases}"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "shared_marks": {
+    "q5a": 11
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q5",
+   "label_ar": "السؤال الخامس",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q5a-1",
+     "label": "Q5 a-1",
+     "label_ar": "السؤال الخامس أ-١",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply",
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-3",
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "local-extrema",
+       "ar": "القيم القصوى المحلية",
+       "en": "local extrema"
+      },
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "x³+ax²+bx has local max at x=−1 and local min at x=2. — Find a, b.",
+     "latex": "f(x)=x^3+ax^2+bx",
+     "shared_group": "q5a",
+     "marks_est": 5.5,
+     "marks_note": "Part a (11 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q5a-2",
+     "label": "Q5 a-2",
+     "label_ar": "السؤال الخامس أ-٢",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply",
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "x³+ax²+bx has local max at x=−1 and local min at x=2. — Concavity intervals.",
+     "latex": "f(x)=x^3+ax^2+bx",
+     "shared_group": "q5a",
+     "marks_est": 5.5
+    },
+    {
+     "id": "q5b",
+     "label": "Q5 b",
+     "label_ar": "السؤال الخامس ب",
+     "marks": 9,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-7",
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "implicit-diff",
+       "ar": "الاشتقاق الضمني",
+       "en": "implicit differentiation"
+      },
+      {
+       "id": "tangent-normal",
+       "ar": "معادلة المماس والعمودي",
+       "en": "tangent and normal lines"
+      }
+     ],
+     "paraphrase": "Tangent to xy³=12 at (3/2, b).",
+     "latex": "xy^3=12,\\ (\\tfrac32,b)"
+    }
+   ]
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q6",
+   "label_ar": "السؤال السادس",
+   "n_items": 2,
+   "items": [
+    {
+     "id": "q6a",
+     "label": "Q6 a",
+     "label_ar": "السؤال السادس أ",
+     "marks": 11,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "2-5"
+     ],
+     "concepts": [
+      {
+       "id": "optimization",
+       "ar": "تطبيقات عملية على القيم القصوى",
+       "en": "optimisation problems"
+      }
+     ],
+     "paraphrase": "Rectangle ABCD, AB=4, BC=6, point O on BC minimising 3·AO + OC.",
+     "latex": "3\\,AO+OC\\ \\to\\ \\min"
+    },
+    {
+     "id": "q6b",
+     "label": "Q6 b",
+     "label_ar": "السؤال السادس ب",
+     "marks": 9,
+     "page": 2,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      }
+     ],
+     "paraphrase": "y=3cos x−4sin x; show (y″)²+(y′)²=25.",
+     "latex": "(y'')^2+(y')^2=25"
+    }
+   ]
+  },
+  {
+   "q": 7,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "shared_marks": {
+    "q7b": 12
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q7",
+   "label_ar": "السؤال السابع",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q7a",
+     "label": "Q7 a",
+     "label_ar": "السؤال السابع أ",
+     "marks": 8,
+     "page": 2,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-1"
+     ],
+     "concepts": [
+      {
+       "id": "avg-rate",
+       "ar": "متوسط التغير",
+       "en": "average rate of change"
+      }
+     ],
+     "paraphrase": "f=ax³+bx; prove the average rate from 1 to n is a(n²+n+1)+b.",
+     "latex": "\\frac{f(n)-f(1)}{n-1}=a(n^2+n+1)+b"
+    },
+    {
+     "id": "q7b-1",
+     "label": "Q7 b-1",
+     "label_ar": "السؤال السابع ب-١",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "2-2"
+     ],
+     "concepts": [
+      {
+       "id": "monotonicity",
+       "ar": "التزايد والتناقص",
+       "en": "increasing and decreasing intervals"
+      }
+     ],
+     "paraphrase": "Graph of polynomial f′ (parabola, vertex at origin) with its tangent at x=2 through (2,3) and (0,−1). — Intervals of increase/decrease of f.",
+     "latex": null,
+     "shared_group": "q7b",
+     "marks_est": 4.0,
+     "marks_note": "Part b (12 marks) has 3 unmarked sub-parts; marks_est splits it equally.",
+     "note": "Sub-part 3 prints the hooked glyph for the derivative function; read as f′."
+    },
+    {
+     "id": "q7b-2",
+     "label": "Q7 b-2",
+     "label_ar": "السؤال السابع ب-٢",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "2-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "Graph of polynomial f′ (parabola, vertex at origin) with its tangent at x=2 through (2,3) and (0,−1). — Concavity of f.",
+     "latex": null,
+     "shared_group": "q7b",
+     "marks_est": 4.0,
+     "note": "Sub-part 3 prints the hooked glyph for the derivative function; read as f′."
+    },
+    {
+     "id": "q7b-3",
+     "label": "Q7 b-3",
+     "label_ar": "السؤال السابع ب-٣",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "1-2",
+      "1-4",
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "graph-reading",
+       "ar": "قراءة منحنى الاقتران أو مشتقته",
+       "en": "reading the graph of a function or its derivative"
+      },
+      {
+       "id": "derivative-def",
+       "ar": "تعريف المشتقة بالنهاية",
+       "en": "derivative as a limit"
+      },
+      {
+       "id": "tangent-normal",
+       "ar": "معادلة المماس والعمودي",
+       "en": "tangent and normal lines"
+      }
+     ],
+     "paraphrase": "Graph of polynomial f′ (parabola, vertex at origin) with its tangent at x=2 through (2,3) and (0,−1). — lim_{x→1}(3−f′(2x))/(x−1).",
+     "latex": "\\lim_{x\\to1}\\frac{3-f'(2x)}{x-1}",
+     "shared_group": "q7b",
+     "marks_est": 4.0,
+     "note": "Sub-part 3 prints the hooked glyph for the derivative function; read as f′."
+    }
+   ]
+  }
+ ],
+ "n_items": 23
+}

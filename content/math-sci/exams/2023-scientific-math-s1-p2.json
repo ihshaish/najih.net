@@ -1,0 +1,1034 @@
+{
+ "id": "2023-scientific-math-s1-p2",
+ "year": 2023,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 1,
+ "session_ar": "الدورة الأولى",
+ "session_en": "First session",
+ "paper": 2,
+ "paper_ar": "الورقة الثانية",
+ "paper_en": "Paper 2",
+ "date": "2023-06-19",
+ "day_ar": "الاثنين",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمسة وأربعون دقيقة",
+ "total_marks": 100,
+ "pages": 3,
+ "img": "exams/2023/scientific/math-s1-p2",
+ "num_questions": 7,
+ "choice_rule": {
+  "ar": "عدد أسئلة الورقة (سبعة) أسئلة، أجب عن (خمسة) منها فقط، على أن يكون السؤال الأول إجبارياً.",
+  "en": "Seven questions; answer five only, Question 1 compulsory.",
+  "answer_count": 5,
+  "compulsory": [
+   "Q1"
+  ]
+ },
+ "scope_units": [
+  3,
+  4,
+  5
+ ],
+ "scope_note": "Paper 2 covers units 3 (matrices), 4 (indefinite integral) and 5 (definite integral); no complex numbers (unit 6) appear in this paper.",
+ "marks_printed_sum": 140,
+ "marks_attainable_under_rule": 100,
+ "reconciled": true,
+ "discrepancies": [],
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "pages": [
+    1,
+    2
+   ],
+   "compulsory": true,
+   "format": "mcq",
+   "stem_ar": "يتكون هذا السؤال من (١٠) فقرات من نوع اختيار من متعدد، من أربعة بدائل",
+   "items": [
+    {
+     "id": "q1-1",
+     "label": "Q1 item 1",
+     "label_ar": "السؤال الأول فقرة ١",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-ops",
+       "ar": "جمع المصفوفات وضربها",
+       "en": "matrix addition and multiplication"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "For a 2x2 matrix X, express X^2 - X as a multiple of X.",
+     "latex": "X=\\begin{bmatrix}1&1\\\\3&3\\end{bmatrix},\\ X^2-X=?",
+     "options_nature": "four scalar multiples of X or X^2",
+     "answer": "3X",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-2",
+     "label": "Q1 item 2",
+     "label_ar": "السؤال الأول فقرة ٢",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "4-2"
+     ],
+     "concepts": [
+      {
+       "id": "integral-rules",
+       "ar": "قواعد التكامل غير المحدود",
+       "en": "rules of indefinite integration"
+      },
+      {
+       "id": "trig-integral",
+       "ar": "تكامل الاقترانات المثلثية",
+       "en": "integrals of trigonometric functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Indefinite integral of a constant e^2 plus sec^2 x.",
+     "latex": "\\int\\left(\\E^2+\\frac{1}{\\cos^2x}\\right)\\dd{x}",
+     "options_nature": "four antiderivatives (e^2 x or e^3/3, ±tan, cot)",
+     "answer": "\\E^2x+\\tan x+c",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-3",
+     "label": "Q1 item 3",
+     "label_ar": "السؤال الأول فقرة ٣",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "3-3",
+      "3-4"
+     ],
+     "concepts": [
+      {
+       "id": "determinant",
+       "ar": "المحدّدة",
+       "en": "determinant"
+      },
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Values of x making a 3x3 matrix singular.",
+     "latex": "A=\\begin{bmatrix}x^2&x&1\\\\4&1&2\\\\0&0&1\\end{bmatrix}",
+     "options_nature": "four small sets of integers",
+     "answer": "\\{0,4\\}",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-4",
+     "label": "Q1 item 4",
+     "label_ar": "السؤال الأول فقرة ٤",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Regular partition sigma_20 = {a, -1, ..., 35, b}; find a.",
+     "latex": "\\sigma_{20}=\\{a,-1,\\dots,35,b\\}",
+     "options_nature": "four negative numbers",
+     "answer": "-3",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-5",
+     "label": "Q1 item 5",
+     "label_ar": "السؤال الأول فقرة ٥",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "3-5",
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "cramer",
+       "ar": "قاعدة كريمر",
+       "en": "Cramer's rule"
+      },
+      {
+       "id": "determinant-props",
+       "ar": "خصائص المحدّدات",
+       "en": "properties of determinants"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Cramer's rule with |A_x| = |2A| = -2|A_y| (2x2 system): find the solution set.",
+     "latex": "|A_x|=|2A|=-2|A_y|,\\ |A|\\ne0",
+     "options_nature": "four ordered pairs",
+     "answer": "\\{(4,-2)\\}",
+     "answer_verified": true,
+     "answer_note": "Reads the middle determinant as |2A| (a 2x2 scaling gives 4|A|); the scan shows it as |12|-like glyphs."
+    },
+    {
+     "id": "q1-6",
+     "label": "Q1 item 6",
+     "label_ar": "السؤال الأول فقرة ٦",
+     "page": 1,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "تطبيقات التكامل غير المحدود (منحنى من ميله، الحركة)",
+       "en": "applications of indefinite integrals (curve from slope, motion)"
+      },
+      {
+       "id": "motion",
+       "ar": "الحركة المستقيمة: السرعة والتسارع",
+       "en": "rectilinear motion: velocity and acceleration"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Velocity cos 2t, initial displacement 4 m; find s(t).",
+     "latex": "v(t)=\\cos 2t,\\ s(0)=4",
+     "options_nature": "four displacement rules (±4, factor 1 or 1/2)",
+     "answer": "s(t)=\\tfrac12\\sin 2t+4",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-7",
+     "label": "Q1 item 7",
+     "label_ar": "السؤال الأول فقرة ٧",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "by-parts",
+       "ar": "التكامل بالأجزاء",
+       "en": "integration by parts"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Identify f from an integration-by-parts identity.",
+     "latex": "\\int f(x)\\sin x\\dd{x}=-f(x)\\cos x+\\int 3x^2\\cos x\\dd{x}",
+     "options_nature": "four polynomials (±3x^2, ±x^3+c)",
+     "answer": "x^3+c",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-8",
+     "label": "Q1 item 8",
+     "label_ar": "السؤال الأول فقرة ٨",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "paraphrase": "If t(x)=integral from 2 to x of n(y) equals x^2+bx, find b.",
+     "latex": "t(x)=\\int_2^x n(y)\\dd{y}=x^2+bx",
+     "options_nature": "four integers ±2, ±3",
+     "answer": "-2",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-9",
+     "label": "Q1 item 9",
+     "label_ar": "السؤال الأول فقرة ٩",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "5-4",
+      "4-4",
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      },
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Equivalent form of the integral of x^m (1-x)^n on [0,1] (symmetry substitution).",
+     "latex": "\\int_0^1 x^m(1-x)^n\\dd{x}",
+     "options_nature": "other integrals with swapped exponents/limits and differences m-n",
+     "answer": "the same integral with the exponents swapped, over [0,1]",
+     "answer_verified": true
+    },
+    {
+     "id": "q1-10",
+     "label": "Q1 item 10",
+     "label_ar": "السؤال الأول فقرة ١٠",
+     "page": 2,
+     "marks": 2,
+     "format": "mcq",
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-piecewise",
+       "ar": "تكامل المتشعب والقيمة المطلقة",
+       "en": "integrating piecewise and absolute-value functions"
+      },
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Upper limit c of a greatest-integer integral equal to 7.",
+     "latex": "\\int_1^c\\left[\\tfrac13x+2\\right]\\dd{x}=7",
+     "options_nature": "four integers 3-6",
+     "answer": "4",
+     "answer_verified": true
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q1",
+   "label_ar": "السؤال الأول",
+   "n_items": 10
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "items": [
+    {
+     "id": "q2a",
+     "label": "Q2 a",
+     "label_ar": "السؤال الثاني أ",
+     "page": 2,
+     "marks": 8,
+     "format": "long",
+     "lessons": [
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "تطبيقات التكامل غير المحدود (منحنى من ميله، الحركة)",
+       "en": "applications of indefinite integrals (curve from slope, motion)"
+      }
+     ],
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Find f from f''(x)=3-4x and the tangent slope 3 at (0,2).",
+     "latex": "f''(x)=3-4x,\\ f'(0)=3,\\ f(0)=2"
+    },
+    {
+     "id": "q2b",
+     "label": "Q2 b",
+     "label_ar": "السؤال الثاني ب",
+     "page": 2,
+     "marks": 6,
+     "format": "short",
+     "lessons": [
+      "3-2",
+      "3-4"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-ops",
+       "ar": "جمع المصفوفات وضربها",
+       "en": "matrix addition and multiplication"
+      },
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Compute (2A - B)^{-1} for given 2x2 matrices.",
+     "latex": "A=\\begin{bmatrix}4&2\\\\-1&3\\end{bmatrix},\\ B=\\begin{bmatrix}3&-2\\\\-5&2\\end{bmatrix},\\ (2A-B)^{-1}"
+    },
+    {
+     "id": "q2c",
+     "label": "Q2 c",
+     "label_ar": "السؤال الثاني ج",
+     "page": 2,
+     "marks": 6,
+     "format": "short",
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "by-parts",
+       "ar": "التكامل بالأجزاء",
+       "en": "integration by parts"
+      },
+      {
+       "id": "exp-log-integral",
+       "ar": "تكامل الاقترانات الأسية والنسبية (اللوغاريتم)",
+       "en": "exponential and 1/x-type integrals"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Integrate ln sqrt(x).",
+     "latex": "\\int \\ln\\sqrt{x}\\dd{x}"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q2",
+   "label_ar": "السؤال الثاني",
+   "n_items": 3
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "shared_marks": {
+    "q3b": 7
+   },
+   "items": [
+    {
+     "id": "q3a",
+     "label": "Q3 a",
+     "label_ar": "السؤال الثالث أ",
+     "page": 2,
+     "marks": 7,
+     "format": "long",
+     "lessons": [
+      "5-2",
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "definite-integral",
+       "ar": "التكامل المحدود",
+       "en": "definite integral"
+      },
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Evaluate a definite integral of a linear function from the definition (limit of Riemann sums).",
+     "latex": "\\int_1^3(2-6x)\\dd{x}"
+    },
+    {
+     "id": "q3b-1",
+     "label": "Q3 b-1",
+     "label_ar": "السؤال الثالث ب-١",
+     "page": 2,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "5-3",
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      },
+      {
+       "id": "integral-piecewise",
+       "ar": "تكامل المتشعب والقيمة المطلقة",
+       "en": "integrating piecewise and absolute-value functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Find the antiderivative (integral function) t(x) of a piecewise function.",
+     "latex": "f(x)=\\begin{cases}2x,&1\\le x\\le2\\\\3x^2-2,&2<x\\le5\\end{cases}",
+     "shared_group": "q3b",
+     "marks_est": 3.5,
+     "marks_note": "Part b (7 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q3b-2",
+     "label": "Q3 b-2",
+     "label_ar": "السؤال الثالث ب-٢",
+     "page": 2,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-piecewise",
+       "ar": "تكامل المتشعب والقيمة المطلقة",
+       "en": "integrating piecewise and absolute-value functions"
+      },
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "paraphrase": "Evaluate the integral of the piecewise function from 1 to 3 (split at 2).",
+     "latex": "\\int_1^3 f(x)\\dd{x}",
+     "shared_group": "q3b",
+     "marks_est": 3.5,
+     "note": "The paper writes n(x) here although the function was named f(x); treated as the same function."
+    },
+    {
+     "id": "q3c",
+     "label": "Q3 c",
+     "label_ar": "السؤال الثالث ج",
+     "page": 2,
+     "marks": 6,
+     "format": "long",
+     "lessons": [
+      "4-4",
+      "5-3",
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "partial-fractions",
+       "ar": "التكامل بالكسور الجزئية",
+       "en": "integration by partial fractions"
+      },
+      {
+       "id": "definite-integral",
+       "ar": "التكامل المحدود",
+       "en": "definite integral"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Definite integral of a rational function by partial fractions.",
+     "latex": "\\int_2^3\\frac{4x^2}{x^2-1}\\dd{x}"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q3",
+   "label_ar": "السؤال الثالث",
+   "n_items": 4
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "shared_marks": {
+    "q4c": 8
+   },
+   "items": [
+    {
+     "id": "q4a",
+     "label": "Q4 a",
+     "label_ar": "السؤال الرابع أ",
+     "page": 3,
+     "marks": 6,
+     "format": "long",
+     "lessons": [
+      "3-5"
+     ],
+     "concepts": [
+      {
+       "id": "linear-system-inverse",
+       "ar": "حل نظام معادلات بالنظير الضربي",
+       "en": "solving a linear system with the inverse matrix"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Solve a 3x3 linear system by Gauss elimination.",
+     "latex": "x-y+5z=0,\\ 2x+y+z=0,\\ y-z=4",
+     "method": "Gauss elimination (طريقة جاوس)"
+    },
+    {
+     "id": "q4b",
+     "label": "Q4 b",
+     "label_ar": "السؤال الرابع ب",
+     "page": 3,
+     "marks": 6,
+     "format": "proof",
+     "lessons": [
+      "4-3",
+      "4-2"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "تطبيقات التكامل غير المحدود (منحنى من ميله، الحركة)",
+       "en": "applications of indefinite integrals (curve from slope, motion)"
+      },
+      {
+       "id": "trig-integral",
+       "ar": "تكامل الاقترانات المثلثية",
+       "en": "integrals of trigonometric functions"
+      },
+      {
+       "id": "exp-log-integral",
+       "ar": "تكامل الاقترانات الأسية والنسبية (اللوغاريتم)",
+       "en": "exponential and 1/x-type integrals"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Given f'=tan x + cot x and f(pi/4)=-1, prove e^{f(x)+1}=tan x.",
+     "latex": "f'(x)=\\tan x+\\cot x,\\ f(\\tfrac{\\pi}{4})=-1,\\ \\E^{f(x)+1}=\\tan x"
+    },
+    {
+     "id": "q4c-1",
+     "label": "Q4 c-1",
+     "label_ar": "السؤال الرابع ج-١",
+     "page": 3,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "With h=6-f and 2*int_1^3 f = int_1^3 h, find int_1^3 f.",
+     "latex": "h=6-f,\\ 2\\int_1^3f=\\int_1^3h,\\ \\int_1^2h=-15",
+     "shared_group": "q4c",
+     "marks_est": 4,
+     "marks_note": "Part c (8 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q4c-2",
+     "label": "Q4 c-2",
+     "label_ar": "السؤال الرابع ج-٢",
+     "page": 3,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "5-4",
+      "4-4",
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      },
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Evaluate the integral of h(x+2) from 0 to 1 (shift to [2,3]).",
+     "latex": "\\int_0^1 h(x+2)\\dd{x}",
+     "shared_group": "q4c",
+     "marks_est": 4,
+     "note": "Lower limit read as 0 from the scan."
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q4",
+   "label_ar": "السؤال الرابع",
+   "n_items": 4
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "shared_marks": {
+    "q5a": 10,
+    "q5b": 10
+   },
+   "items": [
+    {
+     "id": "q5a-1",
+     "label": "Q5 a-1",
+     "label_ar": "السؤال الخامس أ-١",
+     "page": 3,
+     "marks": null,
+     "format": "short",
+     "lessons": [
+      "3-5"
+     ],
+     "concepts": [
+      {
+       "id": "cramer",
+       "ar": "قاعدة كريمر",
+       "en": "Cramer's rule"
+      },
+      {
+       "id": "determinant",
+       "ar": "المحدّدة",
+       "en": "determinant"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Given A_y, A_x and |A|=2 from a Cramer solution, find x and y.",
+     "latex": "kx+ny=b,\\ lx+uy=c,\\ ku-nl=2",
+     "shared_group": "q5a",
+     "marks_est": 5,
+     "marks_note": "Part a (10 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q5a-2",
+     "label": "Q5 a-2",
+     "label_ar": "السؤال الخامس أ-٢",
+     "page": 3,
+     "marks": null,
+     "format": "long",
+     "lessons": [
+      "3-5"
+     ],
+     "concepts": [
+      {
+       "id": "cramer",
+       "ar": "قاعدة كريمر",
+       "en": "Cramer's rule"
+      },
+      {
+       "id": "matrix-basics",
+       "ar": "المصفوفة: الرتبة والعناصر والتساوي",
+       "en": "matrix order, entries and equality"
+      }
+     ],
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 3,
+     "paraphrase": "Reconstruct the system (all constants) from the Cramer matrices.",
+     "latex": "A_x=\\begin{bmatrix}2&-4\\\\0&3\\end{bmatrix}",
+     "shared_group": "q5a",
+     "marks_est": 5
+    },
+    {
+     "id": "q5b-1",
+     "label": "Q5 b-1",
+     "label_ar": "السؤال الخامس ب-١",
+     "page": 3,
+     "marks": null,
+     "format": "proof",
+     "lessons": [
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "تطبيقات التكامل غير المحدود (منحنى من ميله، الحركة)",
+       "en": "applications of indefinite integrals (curve from slope, motion)"
+      },
+      {
+       "id": "antiderivative",
+       "ar": "الاقتران الأصلي والتكامل غير المحدود",
+       "en": "antiderivative and indefinite integral"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "paraphrase": "f'=f-g, g'=g-f, f(0)=5, g(0)=1: prove f+g=6.",
+     "latex": "f'=f-g,\\ g'=g-f,\\ (f+g)(x)=6",
+     "shared_group": "q5b",
+     "marks_est": 5,
+     "marks_note": "Part b (10 marks) has two unmarked sub-parts."
+    },
+    {
+     "id": "q5b-2",
+     "label": "Q5 b-2",
+     "label_ar": "السؤال الخامس ب-٢",
+     "page": 3,
+     "marks": null,
+     "format": "long",
+     "lessons": [
+      "4-4",
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      },
+      {
+       "id": "exp-log-integral",
+       "ar": "تكامل الاقترانات الأسية والنسبية (اللوغاريتم)",
+       "en": "exponential and 1/x-type integrals"
+      }
+     ],
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 3,
+     "paraphrase": "Find f(x) (separable: f'=2f-6).",
+     "latex": "f'=2f-6,\\ f(0)=5",
+     "shared_group": "q5b",
+     "marks_est": 5
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q5",
+   "label_ar": "السؤال الخامس",
+   "n_items": 4
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "items": [
+    {
+     "id": "q6a",
+     "label": "Q6 a",
+     "label_ar": "السؤال السادس أ",
+     "page": 3,
+     "marks": 10,
+     "format": "long",
+     "lessons": [
+      "4-4",
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      },
+      {
+       "id": "definite-integral",
+       "ar": "التكامل المحدود",
+       "en": "definite integral"
+      },
+      {
+       "id": "trig-integral",
+       "ar": "تكامل الاقترانات المثلثية",
+       "en": "integrals of trigonometric functions"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "paraphrase": "Definite integral of x f'(m(x^2))/sin^2(x^2) by substitution, with f=e^x/(x^2+1), m=cot.",
+     "latex": "\\int_{\\sqrt{\\pi/4}}^{\\sqrt{\\pi/2}}\\frac{x\\,f'(m(x^2))}{\\sin^2x^2}\\dd{x},\\ f(x)=\\frac{\\E^x}{x^2+1},\\ m(x)=\\cot x"
+    },
+    {
+     "id": "q6b",
+     "label": "Q6 b",
+     "label_ar": "السؤال السادس ب",
+     "page": 3,
+     "marks": 10,
+     "format": "proof",
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "paraphrase": "Without evaluating, bound the integral between 4 and 20.",
+     "latex": "4\\le\\int_1^3\\frac{20}{x^2+1}\\dd{x}\\le20"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q6",
+   "label_ar": "السؤال السادس",
+   "n_items": 2
+  },
+  {
+   "q": 7,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "items": [
+    {
+     "id": "q7a",
+     "label": "Q7 a",
+     "label_ar": "السؤال السابع أ",
+     "page": 3,
+     "marks": 10,
+     "format": "long",
+     "lessons": [
+      "3-4",
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      },
+      {
+       "id": "matrix-ops",
+       "ar": "جمع المصفوفات وضربها",
+       "en": "matrix addition and multiplication"
+      },
+      {
+       "id": "matrix-equation",
+       "ar": "حل المعادلات المصفوفية",
+       "en": "solving matrix equations"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "paraphrase": "From (A-B)^{-1} and (A+B)^{-1}, recover A and B and find AB.",
+     "latex": "(A-B)^{-1}=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix},\\ (A+B)^{-1}=\\begin{bmatrix}2&3\\\\3&4\\end{bmatrix},\\ AB=?"
+    },
+    {
+     "id": "q7b",
+     "label": "Q7 b",
+     "label_ar": "السؤال السابع ب",
+     "page": 3,
+     "marks": 10,
+     "format": "long",
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      }
+     ],
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "paraphrase": "Integrate 1/(x^2 sqrt(x^2+1)), x>0.",
+     "latex": "\\int\\frac{1}{x^2\\sqrt{x^2+1}}\\dd{x},\\ x>0"
+    }
+   ],
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q7",
+   "label_ar": "السؤال السابع",
+   "n_items": 2
+  }
+ ],
+ "n_items": 29
+}

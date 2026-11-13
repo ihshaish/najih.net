@@ -1,0 +1,1057 @@
+{
+ "id": "2022-scientific-math-s1-p2",
+ "year": 2022,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 1,
+ "session_ar": "الدورة الأولى",
+ "session_en": "First session",
+ "paper": 2,
+ "paper_ar": "الورقة الثانية",
+ "paper_en": "Paper 2",
+ "date": "2022-06-20",
+ "day_ar": "الاثنين",
+ "duration_min": 150,
+ "duration_ar": "ساعتان ونصف",
+ "total_marks": 100,
+ "pages": 3,
+ "img": "exams/2022/scientific/math-s1-p2",
+ "num_questions": 7,
+ "choice_rule": {
+  "ar": "عدد أسئلة الورقة (سبعة) أسئلة، أجب عن (خمسة) منها فقط",
+  "en": "Answer five of the seven questions: all of Section 1 (Q1–Q3) and two of Section 2 (Q4–Q7).",
+  "answer_count": 5,
+  "compulsory": [
+   "Q1",
+   "Q2",
+   "Q3"
+  ],
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً"
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من أربعة أسئلة وعلى المشترك أن يجيب عن سؤالين فقط"
+   }
+  ]
+ },
+ "scope_units": [
+  3,
+  4,
+  5
+ ],
+ "scope_note": "Paper 2 covers units 3–5 (matrices, indefinite and definite integration); unit 6 (complex numbers) is not examined.",
+ "marks_printed_sum": 130,
+ "marks_attainable_under_rule": 100,
+ "marks_attainable_by_headings": 100,
+ "reconciled": true,
+ "discrepancies": [],
+ "tagger_notes": [
+  "The paper uses two function letters: ق (rendered f) and a second hooked glyph, rendered here as u (ع in armath); read as a distinct function unless noted.",
+  "Matrix/determinant entries are transcribed reading each printed row right-to-left (Arabic layout).",
+  "MCQ answers are not recorded (answer=null) since none were verified in this pass; options_nature describes the distractors.",
+  "Sub-parts without printed marks carry marks=null with shared_group and an equal-split marks_est."
+ ],
+ "questions": [
+  {
+   "q": 1,
+   "marks": 30,
+   "pages": [
+    1,
+    2
+   ],
+   "section": 1,
+   "compulsory": true,
+   "format": "mcq",
+   "stem_ar": "يتكون هذا السؤال من (١٥) فقرة من نوع اختيار من متعدد، من أربعة بدائل",
+   "items_marks_sum": 30,
+   "reconciled": true,
+   "label": "Q1",
+   "label_ar": "السؤال الأول",
+   "n_items": 15,
+   "items": [
+    {
+     "id": "q1-1",
+     "label": "Q1 item 1",
+     "label_ar": "السؤال الأول فقرة ١",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "3-1"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-basics",
+       "ar": "رتبة المصفوفة وعناصرها وتساويها",
+       "en": "matrix order, entries and equality"
+      }
+     ],
+     "paraphrase": "2×2 matrix C with c_ij = i^(−j).",
+     "latex": "c_{ij}=i^{-j}",
+     "options_nature": "four 2×2 matrices with fractional entries",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-2",
+     "label": "Q1 item 2",
+     "label_ar": "السؤال الأول فقرة ٢",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "3-4"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      }
+     ],
+     "paraphrase": "X, Y non-singular and 2X = Y⁻¹; find X·Y.",
+     "latex": "2X=Y^{-1},\\ XY=?",
+     "options_nature": "scalar multiples of the identity I₂ (2, 1/4, 4, 1/2)",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-3",
+     "label": "Q1 item 3",
+     "label_ar": "السؤال الأول فقرة ٣",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-5",
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "cramer",
+       "ar": "طريقة كريمر",
+       "en": "Cramer's rule"
+      },
+      {
+       "id": "determinant",
+       "ar": "حساب المحددات",
+       "en": "evaluating determinants"
+      }
+     ],
+     "paraphrase": "Cramer: A_x·A_y given, x·y=3; possible values of |A|.",
+     "latex": "A_xA_y=\\begin{bmatrix}13&50\\\\-2&11\\end{bmatrix},\\ xy=3",
+     "options_nature": "numeric value sets (±3, 1, 81, ±9)",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-4",
+     "label": "Q1 item 4",
+     "label_ar": "السؤال الأول فقرة ٤",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-ops",
+       "ar": "العمليات على المصفوفات",
+       "en": "matrix operations (product, equality, powers)"
+      }
+     ],
+     "paraphrase": "Find b with [[5,4],[1,2]]·[k,1]ᵀ = 6[k,b]ᵀ.",
+     "latex": "\\begin{bmatrix}5&4\\\\1&2\\end{bmatrix}\\begin{bmatrix}k\\\\1\\end{bmatrix}=6\\begin{bmatrix}k\\\\b\\end{bmatrix}",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-5",
+     "label": "Q1 item 5",
+     "label_ar": "السؤال الأول فقرة ٥",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-3",
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      },
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "paraphrase": "M antiderivative of continuous f, M(1)=5, ∫₁³(f+2x)dx=6; find M(3).",
+     "latex": "\\int_1^3(f(x)+2x)\\dd{x}=6",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-6",
+     "label": "Q1 item 6",
+     "label_ar": "السؤال الأول فقرة ٦",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "4-2",
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-rules",
+       "ar": "قواعد التكامل غير المحدود",
+       "en": "rules of indefinite integration"
+      },
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      }
+     ],
+     "paraphrase": "∫ 1/(e^(−x)+1) dx.",
+     "latex": "\\int\\frac{1}{\\E^{-x}+1}\\dd{x}",
+     "options_nature": "four antiderivatives (ln|e^x±1|, e^x+x, ln|e^(−x)+1|)",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-7",
+     "label": "Q1 item 7",
+     "label_ar": "السؤال الأول فقرة ٧",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "إيجاد الاقتران من ميل المماس",
+       "en": "finding a function from its derivative/slope"
+      }
+     ],
+     "paraphrase": "Slope of tangent is 3x² and value 5 at x=2; find value at x=3.",
+     "latex": "m=3x^2,\\ u(2)=5",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-8",
+     "label": "Q1 item 8",
+     "label_ar": "السؤال الأول فقرة ٨",
+     "marks": 2,
+     "page": 1,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "4-2"
+     ],
+     "concepts": [
+      {
+       "id": "integral-rules",
+       "ar": "قواعد التكامل غير المحدود",
+       "en": "rules of indefinite integration"
+      },
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "paraphrase": "∫ sin x sec²x dx.",
+     "latex": "\\int\\sin x\\sec^2x\\dd{x}",
+     "options_nature": "four trig antiderivatives (sec, tan, csc, sec³)",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-9",
+     "label": "Q1 item 9",
+     "label_ar": "السؤال الأول فقرة ٩",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-3",
+      "4-2"
+     ],
+     "concepts": [
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      },
+      {
+       "id": "integral-rules",
+       "ar": "قواعد التكامل غير المحدود",
+       "en": "rules of indefinite integration"
+      }
+     ],
+     "paraphrase": "∫ from π/4 to π/3 of (tan x/cot x + 1) dx.",
+     "latex": "\\int_{\\pi/4}^{\\pi/3}\\left(\\frac{\\tan x}{\\cot x}+1\\right)\\dd{x}",
+     "options_nature": "values involving √3",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-10",
+     "label": "Q1 item 10",
+     "label_ar": "السؤال الأول فقرة ١٠",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "paraphrase": "Rank of the element 10.8 in the regular partition σ₁₀₀ of [2,12].",
+     "latex": "\\sigma_{100},\\ [2,12]",
+     "options_nature": "ranks 87–90",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-11",
+     "label": "Q1 item 11",
+     "label_ar": "السؤال الأول فقرة ١١",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "paraphrase": "∫₀² (x²−25)/√(x²−10x+25) dx (absolute value simplification).",
+     "latex": "\\int_0^2\\frac{x^2-25}{\\sqrt{x^2-10x+25}}\\dd{x}",
+     "options_nature": "four numeric values (±7, ±12)",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-12",
+     "label": "Q1 item 12",
+     "label_ar": "السؤال الأول فقرة ١٢",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "paraphrase": "u(x) ≥ 7 on [2,5]; least value of ∫₂⁵(3u+4)dx.",
+     "latex": "u(x)\\ge7,\\ \\int_2^5(3u(x)+4)\\dd{x}",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-13",
+     "label": "Q1 item 13",
+     "label_ar": "السؤال الأول فقرة ١٣",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "5-2",
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "definite-integral",
+       "ar": "التكامل المحدود",
+       "en": "definite integral"
+      },
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "paraphrase": "∫₃^(−1) f = a and R(σₙ,f) = a + (4−8n²)/(2n²) on [−1,3]; find a.",
+     "latex": "\\int_3^{-1}f=a,\\ R(\\sigma_n,f)=a+\\frac{4-8n^2}{2n^2}",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-14",
+     "label": "Q1 item 14",
+     "label_ar": "السؤال الأول فقرة ١٤",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "interpret"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "5-5",
+      "5-2"
+     ],
+     "concepts": [
+      {
+       "id": "area",
+       "ar": "المساحة",
+       "en": "area under a curve and between curves"
+      },
+      {
+       "id": "graph-reading",
+       "ar": "قراءة منحنى الاقتران أو مشتقته",
+       "en": "reading the graph of a function or its derivative"
+      }
+     ],
+     "paraphrase": "Graph: ∫₀^c u = −2, area M₁ = 3; find area M₂.",
+     "latex": "\\int_0^c u=-2,\\ M_1=3",
+     "options_nature": "four numeric values",
+     "answer": null,
+     "answer_verified": false
+    },
+    {
+     "id": "q1-15",
+     "label": "Q1 item 15",
+     "label_ar": "السؤال الأول فقرة ١٥",
+     "marks": 2,
+     "page": 2,
+     "format": "mcq",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      },
+      {
+       "id": "integral-function",
+       "ar": "الاقتران المكامل",
+       "en": "integral (accumulation) function"
+      }
+     ],
+     "paraphrase": "∫_b^x f(y)dy = bx²+8; find f(b).",
+     "latex": "\\int_b^x f(y)\\dd{y}=bx^2+8",
+     "options_nature": "four numeric values (±2, ±8)",
+     "answer": null,
+     "answer_verified": false
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "pages": [
+    2
+   ],
+   "section": 1,
+   "compulsory": true,
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q2",
+   "label_ar": "السؤال الثاني",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q2a",
+     "label": "Q2 a",
+     "label_ar": "السؤال الثاني أ",
+     "marks": 5,
+     "page": 2,
+     "format": "short",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "paraphrase": "u=2x+b on [−1,7], regular σ₄, left-endpoint Riemann sum =16; find b.",
+     "latex": "R(\\sigma_4,u)=16,\\ x_r^*=x_{r-1}"
+    },
+    {
+     "id": "q2b",
+     "label": "Q2 b",
+     "label_ar": "السؤال الثاني ب",
+     "marks": 7,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "3-4",
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-equation",
+       "ar": "حل معادلة مصفوفية",
+       "en": "solving matrix equations"
+      },
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      }
+     ],
+     "paraphrase": "C=[[3,4],[2,3]]; find non-singular X with 2X + (X⁻¹C)⁻¹ = [[2,−7],[−11,30]].",
+     "latex": "2X+(X^{-1}C)^{-1}=\\begin{bmatrix}2&-7\\\\-11&30\\end{bmatrix}"
+    },
+    {
+     "id": "q2c",
+     "label": "Q2 c",
+     "label_ar": "السؤال الثاني ج",
+     "marks": 8,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      }
+     ],
+     "paraphrase": "∫(x+1)³(x²+2x+6)⁴dx.",
+     "latex": "\\int(x+1)^3(x^2+2x+6)^4\\dd{x}"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "pages": [
+    3
+   ],
+   "section": 1,
+   "compulsory": true,
+   "shared_marks": {
+    "q3a": 8
+   },
+   "items_marks_sum": 20,
+   "reconciled": true,
+   "label": "Q3",
+   "label_ar": "السؤال الثالث",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q3a-1",
+     "label": "Q3 a-1",
+     "label_ar": "السؤال الثالث أ-١",
+     "marks": null,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "apply",
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "5-3",
+      "4-1"
+     ],
+     "concepts": [
+      {
+       "id": "integral-function",
+       "ar": "الاقتران المكامل",
+       "en": "integral (accumulation) function"
+      },
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      }
+     ],
+     "paraphrase": "Piecewise T(x) (ax³−x on [1,3], 5x²+bx+c on (3,7]) is the integral function of continuous u on [1,7]. — Find a, b, c.",
+     "latex": "T(x)=\\begin{cases}ax^3-x&1\\le x\\le3\\\\5x^2+bx+c&3<x\\le7\\end{cases}",
+     "shared_group": "q3a",
+     "marks_est": 4.0,
+     "marks_note": "Part a (8 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q3a-2",
+     "label": "Q3 a-2",
+     "label_ar": "السؤال الثالث أ-٢",
+     "marks": null,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "apply",
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "5-3",
+      "4-1"
+     ],
+     "concepts": [
+      {
+       "id": "integral-function",
+       "ar": "الاقتران المكامل",
+       "en": "integral (accumulation) function"
+      },
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      }
+     ],
+     "paraphrase": "Piecewise T(x) (ax³−x on [1,3], 5x²+bx+c on (3,7]) is the integral function of continuous u on [1,7]. — ∫₁⁵ u(x)dx.",
+     "latex": "\\int_1^5u(x)\\dd{x}",
+     "shared_group": "q3a",
+     "marks_est": 4.0
+    },
+    {
+     "id": "q3b",
+     "label": "Q3 b",
+     "label_ar": "السؤال الثالث ب",
+     "marks": 7,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "4-4",
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "partial-fractions",
+       "ar": "التكامل بالكسور الجزئية",
+       "en": "integration by partial fractions"
+      },
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      }
+     ],
+     "paraphrase": "∫₃⁵ (3x−1)/(x²+x−6) dx.",
+     "latex": "\\int_3^5\\frac{3x-1}{x^2+x-6}\\dd{x}"
+    },
+    {
+     "id": "q3c",
+     "label": "Q3 c",
+     "label_ar": "السؤال الثالث ج",
+     "marks": 5,
+     "page": 3,
+     "format": "short",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "determinant",
+       "ar": "حساب المحددات",
+       "en": "evaluating determinants"
+      }
+     ],
+     "paraphrase": "A 3×3 determinant times a 2×2 determinant equals −34; find x.",
+     "latex": "\\begin{vmatrix}2&-1&-1\\\\x&0&2\\\\-3&1&4\\end{vmatrix}\\times\\begin{vmatrix}2&4\\\\x&9\\end{vmatrix}=-34"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "marks": 15,
+   "pages": [
+    3
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 15,
+   "reconciled": true,
+   "label": "Q4",
+   "label_ar": "السؤال الرابع",
+   "n_items": 2,
+   "items": [
+    {
+     "id": "q4a",
+     "label": "Q4 a",
+     "label_ar": "السؤال الرابع أ",
+     "marks": 8,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-5"
+     ],
+     "concepts": [
+      {
+       "id": "area",
+       "ar": "المساحة",
+       "en": "area under a curve and between curves"
+      }
+     ],
+     "paraphrase": "Area between u=3/x and h=x+2 on [1,e].",
+     "latex": "u(x)=\\frac3x,\\ g(x)=x+2,\\ [1,\\E]"
+    },
+    {
+     "id": "q4b",
+     "label": "Q4 b",
+     "label_ar": "السؤال الرابع ب",
+     "marks": 7,
+     "page": 3,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "4-3",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "antiderivative",
+       "ar": "الاقتران الأصلي",
+       "en": "antiderivative"
+      },
+      {
+       "id": "product-quotient",
+       "ar": "مشتقة الضرب والقسمة",
+       "en": "product and quotient rules"
+      }
+     ],
+     "paraphrase": "u = x u′ + eˣu², u≠0, u(−1)=−e; show u(a)=a/eᵃ (recognise derivative of x/u).",
+     "latex": "u=xu'+\\E^xu^2\\Rightarrow u(a)=\\frac{a}{\\E^a}"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "marks": 15,
+   "pages": [
+    3
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 15,
+   "reconciled": true,
+   "label": "Q5",
+   "label_ar": "السؤال الخامس",
+   "n_items": 2,
+   "items": [
+    {
+     "id": "q5a",
+     "label": "Q5 a",
+     "label_ar": "السؤال الخامس أ",
+     "marks": 7,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "4-3",
+      "4-4",
+      "5-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "إيجاد الاقتران من ميل المماس",
+       "en": "finding a function from its derivative/slope"
+      },
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      },
+      {
+       "id": "ftc",
+       "ar": "النظرية الأساسية في التفاضل والتكامل",
+       "en": "fundamental theorem of calculus"
+      }
+     ],
+     "paraphrase": "u′=1, u(1)=3/2; find ∫₁² u(x)(x²+x−5)³dx.",
+     "latex": "\\int_1^2u(x)(x^2+x-5)^3\\dd{x}"
+    },
+    {
+     "id": "q5b",
+     "label": "Q5 b",
+     "label_ar": "السؤال الخامس ب",
+     "marks": 8,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-5"
+     ],
+     "concepts": [
+      {
+       "id": "gauss",
+       "ar": "طريقة جاوس",
+       "en": "Gaussian elimination"
+      }
+     ],
+     "paraphrase": "Gauss elimination for a 3×3 system.",
+     "latex": "x-y+4z=9,\\ 2x+3y+2z=2,\\ x+3y-z=-4"
+    }
+   ]
+  },
+  {
+   "q": 6,
+   "marks": 15,
+   "pages": [
+    3
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 15,
+   "reconciled": true,
+   "label": "Q6",
+   "label_ar": "السؤال السادس",
+   "n_items": 2,
+   "items": [
+    {
+     "id": "q6a",
+     "label": "Q6 a",
+     "label_ar": "السؤال السادس أ",
+     "marks": 7,
+     "page": 3,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "paraphrase": "Without integrating, prove π/5 ≤ ∫₀^π 1/(3cos²x+2) dx ≤ π/2.",
+     "latex": "\\frac{\\pi}{5}\\le\\int_0^{\\pi}\\frac{1}{3\\cos^2x+2}\\dd{x}\\le\\frac{\\pi}{2}"
+    },
+    {
+     "id": "q6b",
+     "label": "Q6 b",
+     "label_ar": "السؤال السادس ب",
+     "marks": 8,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "by-parts",
+       "ar": "التكامل بالأجزاء",
+       "en": "integration by parts"
+      }
+     ],
+     "paraphrase": "∫(ln x / x)²dx.",
+     "latex": "\\int\\left(\\frac{\\ln x}{x}\\right)^2\\dd{x}"
+    }
+   ]
+  },
+  {
+   "q": 7,
+   "marks": 15,
+   "pages": [
+    3
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 15,
+   "reconciled": true,
+   "label": "Q7",
+   "label_ar": "السؤال السابع",
+   "n_items": 2,
+   "items": [
+    {
+     "id": "q7a",
+     "label": "Q7 a",
+     "label_ar": "السؤال السابع أ",
+     "marks": 8,
+     "page": 3,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "4-3"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "إيجاد الاقتران من ميل المماس",
+       "en": "finding a function from its derivative/slope"
+      },
+      {
+       "id": "motion",
+       "ar": "الحركة في خط مستقيم",
+       "en": "rectilinear motion (velocity, height)"
+      }
+     ],
+     "paraphrase": "Body starts at origin with speed 10 m/s, constant acceleration a, stops after 5 s; distance travelled.",
+     "latex": "v(0)=10,\\ a(t)=a,\\ v(5)=0"
+    },
+    {
+     "id": "q7b",
+     "label": "Q7 b",
+     "label_ar": "السؤال السابع ب",
+     "marks": 7,
+     "page": 3,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "determinant-props",
+       "ar": "خصائص المحددات",
+       "en": "properties of determinants"
+      }
+     ],
+     "paraphrase": "Using determinant properties show a 3×3 determinant (rows 2z,2z,2z / b,1,c / c+1,b+c,b+1) equals 0.",
+     "latex": "\\begin{vmatrix}2z&2z&2z\\\\b&1&c\\\\c+1&b+c&b+1\\end{vmatrix}=0"
+    }
+   ]
+  }
+ ],
+ "n_items": 30
+}

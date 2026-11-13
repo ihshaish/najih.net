@@ -1,0 +1,1294 @@
+{
+ "id": "2025-scientific-math-s2-p2",
+ "year": 2025,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 2,
+ "session_ar": "الدورة الثانية",
+ "session_en": "Session 2",
+ "paper": 2,
+ "paper_ar": "الورقة الثانية",
+ "date": "2025-08-14",
+ "day_ar": "الخميس",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمس وأربعون دقيقة",
+ "total_marks": 100,
+ "num_questions": 6,
+ "questions_to_answer": 5,
+ "pages": 4,
+ "img": "exams/2025/scientific/math-s2-p2",
+ "pdf": "exams/2025/scientific/math-s2-p2.pdf",
+ "mcq_rule_ar": "أ) يتكون هذا الفرع من (٣) فقرات من نوع اختيار من متعدد، من أربعة بدائل، انقل البديل الصحيح إلى دفتر الإجابة: (٦ علامات)",
+ "mcq_rule_en": "Part (a) of every question: 3 four-option MCQ items worth 6 marks together (2 each, inferred).",
+ "units_covered": [
+  3,
+  4,
+  5
+ ],
+ "scope_note": "Paper 2 covers units 3-5; no unit 6 item.",
+ "choice_rules": {
+  "rule_ar": "عدد أسئلة الورقة (ستة) أسئلة، أجب عن (خمسة) منها فقط",
+  "rule_en": "Six questions; answer five only.",
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "answer": 4,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (أربعة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً.",
+    "rule_en": "Section 1: questions 1-4, all compulsory."
+   },
+   {
+    "section": 2,
+    "questions": [
+     5,
+     6
+    ],
+    "answer": 1,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من (سؤالين)، وعلى المشترك أن يجيب عن سؤال واحد فقط.",
+    "rule_en": "Section 2: questions 5-6, answer one only."
+   }
+  ],
+  "marks_per_question": 20,
+  "mcq_rule_ar": "أ) يتكون هذا الفرع من (٣) فقرات من نوع اختيار من متعدد، من أربعة بدائل، انقل البديل الصحيح إلى دفتر الإجابة: (٦ علامات)",
+  "mcq_rule_en": "Part (a) of every question: 3 four-option MCQ items worth 6 marks together (2 each, inferred).",
+  "structure_en": "Every question has part (a) = 3 four-option MCQ items, then parts (b) and (c) (constructed response, some with numbered sub-parts)."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الأول",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q1-a-1",
+    "Q1-a-2",
+    "Q1-a-3",
+    "Q1-b-1",
+    "Q1-b-2",
+    "Q1-c"
+   ],
+   "item_marks_sum": 20.0
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثاني",
+   "parts": {
+    "a": 6,
+    "b": 6,
+    "c": 8
+   },
+   "item_ids": [
+    "Q2-a-1",
+    "Q2-a-2",
+    "Q2-a-3",
+    "Q2-b",
+    "Q2-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثالث",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q3-a-1",
+    "Q3-a-2",
+    "Q3-a-3",
+    "Q3-b",
+    "Q3-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الرابع",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q4-a-1",
+    "Q4-a-2",
+    "Q4-a-3",
+    "Q4-b",
+    "Q4-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الخامس",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q5-a-1",
+    "Q5-a-2",
+    "Q5-a-3",
+    "Q5-b",
+    "Q5-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال السادس",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q6-a-1",
+    "Q6-a-2",
+    "Q6-a-3",
+    "Q6-b",
+    "Q6-c"
+   ],
+   "item_marks_sum": 20
+  }
+ ],
+ "items": [
+  {
+   "id": "Q1-a-1",
+   "label": "Q1 a-1",
+   "label_ar": "السؤال الأول (أ) ١",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-3"
+   ],
+   "concepts": [
+    "determinant"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If a $2\\times2$ determinant in $x,y$ equals 4 (giving $x+y=\\pm2$), find a second determinant whose value is a multiple of $x+y$.",
+    "ar": "إذا كانت قيمة محددة تساوي 4 فما قيمة المحددة الثانية؟"
+   },
+   "latex": "\\begin{vmatrix}x&-2\\\\y&2\\end{vmatrix}=4",
+   "mcq_options": "four integers (-16, -8, 8, 16)",
+   "verified_answer": "16",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)",
+   "note": "Same value whichever column order is used for both determinants."
+  },
+  {
+   "id": "Q1-a-2",
+   "label": "Q1 a-2",
+   "label_ar": "السؤال الأول (أ) ٢",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "4-1"
+   ],
+   "concepts": [
+    "antiderivative",
+    "indef-rules"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$m,h$ are two different antiderivatives of $f$ and $L=m-h$; what does $\\int x\\,L(x)\\dd{x}$ represent?",
+    "ar": "إذا كان $m$ و $h$ اقترانين أصليين مختلفين للاقتران $f$ و $L(x)=m(x)-h(x)$ فماذا يمثل $\\int x\\,L(x)\\dd{x}$؟"
+   },
+   "latex": "L(x)=m(x)-h(x)",
+   "mcq_options": "four function types: linear, constant, quadratic, cubic",
+   "verified_answer": "a quadratic function",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q1-a-3",
+   "label": "Q1 a-3",
+   "label_ar": "السؤال الأول (أ) ٣",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-3"
+   ],
+   "concepts": [
+    "ftc"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Polynomial $f$ with $f'(x)=3x-2$; find $f(3)-f(-1)$.",
+    "ar": "إذا كان $f'(x)=3x-2$ فما قيمة $f(3)-f(-1)$؟"
+   },
+   "latex": "f(3)-f(-1)=\\int_{-1}^{3}(3x-2)\\dd{x}",
+   "mcq_options": "four integers (8, 4, 2, 0)",
+   "verified_answer": "4",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q1-b-1",
+   "label": "Q1 b-1",
+   "label_ar": "السؤال الأول (ب) ١",
+   "question": 1,
+   "part": "b",
+   "page": 1,
+   "marks": 3.5,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "3-1"
+   ],
+   "concepts": [
+    "matrix-def"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Given $2\\times3$ matrix $B$ and $C$ with $b_{ij}=c_{ji}$, find $C$ (the transpose).",
+    "ar": "إذا كانت $C$ مصفوفة بحيث $b_{ij}=c_{ji}$ فجد المصفوفة $C$."
+   },
+   "latex": "B=\\begin{bmatrix}-2&0&1\\\\6&-3&0\\end{bmatrix},\\ b_{ij}=c_{ji}"
+  },
+  {
+   "id": "Q1-b-2",
+   "label": "Q1 b-2",
+   "label_ar": "السؤال الأول (ب) ٢",
+   "question": 1,
+   "part": "b",
+   "page": 1,
+   "marks": 3.5,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-mult",
+    "matrix-add-scalar"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Same: find $A=B\\cdot C+\\begin{bmatrix}\\sqrt2&1\\\\0&-1\\end{bmatrix}$.",
+    "ar": "جد المصفوفة $A=B\\cdot C+\\begin{bmatrix}\\sqrt2&1\\\\0&-1\\end{bmatrix}$."
+   },
+   "latex": "A=B\\cdot C+\\begin{bmatrix}\\sqrt{2}&1\\\\0&-1\\end{bmatrix}"
+  },
+  {
+   "id": "Q1-c",
+   "label": "Q1 c",
+   "label_ar": "السؤال الأول (ج)",
+   "question": 1,
+   "part": "c",
+   "page": 1,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "4-2",
+    "4-4"
+   ],
+   "concepts": [
+    "indef-rules",
+    "substitution"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Evaluate $\\int\\frac{\\tan^2x+\\sec^2x}{\\sec x\\tan x}\\dd{x}$ (split into $\\sin x+\\csc x$).",
+    "ar": "ما قيمة $\\int\\frac{\\tan^2x+\\sec^2x}{\\sec x\\tan x}\\dd{x}$؟"
+   },
+   "latex": "\\int\\frac{\\tan^2x+\\sec^2x}{\\sec x\\tan x}\\dd{x}"
+  },
+  {
+   "id": "Q2-a-1",
+   "label": "Q2 a-1",
+   "label_ar": "السؤال الثاني (أ) ١",
+   "question": 2,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-4",
+    "3-3"
+   ],
+   "concepts": [
+    "matrix-inverse",
+    "determinant"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$C=\\begin{bmatrix}-2&3\\\\x&-5\\end{bmatrix}$ and $|C^{-1}|=-\\tfrac12$; find $x$.",
+    "ar": "إذا كانت $|C^{-1}|=-\\tfrac12$ فما قيمة $x$؟"
+   },
+   "latex": "C=\\begin{bmatrix}-2&3\\\\x&-5\\end{bmatrix},\\ |C^{-1}|=-\\tfrac{1}{2}",
+   "mcq_options": "four integers (-4, -2, 4, 2)",
+   "verified_answer": "4",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q2-a-2",
+   "label": "Q2 a-2",
+   "label_ar": "السؤال الثاني (أ) ٢",
+   "question": 2,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "4-1"
+   ],
+   "concepts": [
+    "integral-derivative-relation"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Evaluate $\\int\\dv{}{x}\\left(\\frac{\\sin x\\cos x}{\\sin2x}\\right)\\dd{x}$.",
+    "ar": "ما قيمة $\\int\\dv{}{x}\\left(\\frac{\\sin x\\cos x}{\\sin 2x}\\right)\\dd{x}$؟"
+   },
+   "latex": "\\int\\dv{}{x}\\left(\\frac{\\sin x\\cos x}{\\sin2x}\\right)\\dd{x}",
+   "mcq_options": "four expressions (1/2, sin x cos x, tan x, 0), printed without +c",
+   "verified_answer": "1/2 (the function itself simplifies to 1/2; options omit the constant)",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)",
+   "note": "Mathematically the result is 1/2 + c; the options are printed without \"+ c\"."
+  },
+  {
+   "id": "Q2-a-3",
+   "label": "Q2 a-3",
+   "label_ar": "السؤال الثاني (أ) ٣",
+   "question": 2,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-3"
+   ],
+   "concepts": [
+    "integral-function",
+    "ftc"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $T(x)=\\int_0^x f(y)\\dd{y}=\\E^x+\\E^{-x}+c$, $x\\ge0$, find $c$.",
+    "ar": "إذا كانت $T(x)=\\int_0^x f(y)\\dd{y}=\\E^x+\\E^{-x}+c$ فما قيمة $c$؟"
+   },
+   "latex": "\\int_0^x f(y)\\dd{y}=\\E^x+\\E^{-x}+c",
+   "mcq_options": "four values (-2e, -2, 2, 2e)",
+   "verified_answer": "-2",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q2-b",
+   "label": "Q2 b",
+   "label_ar": "السؤال الثاني (ب)",
+   "question": 2,
+   "part": "b",
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-3"
+   ],
+   "concepts": [
+    "determinant"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Find $x$ such that $|A|=|B|$ for a $3\\times3$ matrix $A$ with entries in $x$ and $B=\\begin{bmatrix}4&2\\\\2&2\\end{bmatrix}$.",
+    "ar": "ما قيمة/قيم $x$ التي تجعل $|A|=|B|$؟"
+   },
+   "latex": "A=\\begin{bmatrix}x&x&1\\\\2&0&x\\\\1&2&1\\end{bmatrix},\\ B=\\begin{bmatrix}4&2\\\\2&2\\end{bmatrix}",
+   "note": "Entries of A and B transcribed in the paper's right-to-left reading (right-most printed column = column 1), re-checked against the scan."
+  },
+  {
+   "id": "Q2-c",
+   "label": "Q2 c",
+   "label_ar": "السؤال الثاني (ج)",
+   "question": 2,
+   "part": "c",
+   "page": 2,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-3",
+    "4-2"
+   ],
+   "concepts": [
+    "ftc",
+    "indef-rules"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Evaluate $\\int_{2-\\E}^{1}\\frac{x^2-1}{x-2}\\dd{x}$ (long division, then a logarithm).",
+    "ar": "ما قيمة $\\int_{2-\\E}^{1}\\frac{x^2-1}{x-2}\\dd{x}$؟"
+   },
+   "latex": "\\int_{2-\\E}^{1}\\frac{x^2-1}{x-2}\\dd{x}"
+  },
+  {
+   "id": "Q3-a-1",
+   "label": "Q3 a-1",
+   "label_ar": "السؤال الثالث (أ) ١",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-mult"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "A is the product of a $1\\times3$ row, a $3\\times3$ matrix and a $3\\times1$ column; find $a_{11}$.",
+    "ar": "إذا كانت $A$ حاصل ضرب ثلاث مصفوفات فما قيمة $a_{11}$؟"
+   },
+   "latex": "A=\\begin{bmatrix}2&1&3\\end{bmatrix}\\begin{bmatrix}-1&0&-1\\\\-1&1&0\\\\0&1&1\\end{bmatrix}\\begin{bmatrix}1\\\\0\\\\-1\\end{bmatrix}",
+   "mcq_options": "four integers (0, -1, -3, -4)",
+   "verified_answer": "-4",
+   "answer_source": "tagger-computed (worked by hand under the right-to-left matrix reading, checked against the four options)",
+   "note": "Row·M = [-3, 4, 1]; times the column [1, 0, -1] gives -3 - 1 = -4 (listed). Reading the printed entries left to right instead gives 3, which is not an option."
+  },
+  {
+   "id": "Q3-a-2",
+   "label": "Q3 a-2",
+   "label_ar": "السؤال الثالث (أ) ٢",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-1"
+   ],
+   "concepts": [
+    "riemann-sum"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f(x)=2x$ on $[1,b]$ with $m(\\sigma_n,f)=35+\\frac{25}{n}$; find $b$.",
+    "ar": "إذا كان $f(x)=2x$ على $[1,b]$ و $m(\\sigma_n,f)=35+\\frac{25}{n}$ فما قيمة $b$؟"
+   },
+   "latex": "m(\\sigma_n,f)=35+\\frac{25}{n}",
+   "mcq_options": "four values (-6, 6, ±6, 18)",
+   "verified_answer": "6 (right-endpoint sum: (b-1)^2 = 25 and 2(b-1)+25 = 35)",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q3-a-3",
+   "label": "Q3 a-3",
+   "label_ar": "السؤال الثالث (أ) ٣",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-4"
+   ],
+   "concepts": [
+    "def-integral-props"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Evaluate $\\int_1^2\\left(8-|x^2-9|\\right)\\dd{x}$.",
+    "ar": "ما قيمة $\\int_1^2\\left(8-|x^2-9|\\right)\\dd{x}$؟"
+   },
+   "latex": "\\int_1^2\\left(8-\\left|x^2-9\\right|\\right)\\dd{x}",
+   "mcq_options": "four values (-4/3, 7/3, 4/3, 0)",
+   "verified_answer": "4/3",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q3-b",
+   "label": "Q3 b",
+   "label_ar": "السؤال الثالث (ب)",
+   "question": 3,
+   "part": "b",
+   "page": 2,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-3",
+    "5-4"
+   ],
+   "concepts": [
+    "integral-function",
+    "def-integral-props"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Find the integral function of piecewise $f$: $3x^2-\\E^2$ on $[1,\\E[$, $\\frac{\\E^2}{x}$ on $[\\E,3]$.",
+    "ar": "جد الاقتران المكامل للاقتران المتشعب $f$."
+   },
+   "latex": "f(x)=\\begin{cases}3x^2-\\E^2,&1\\le x<\\E\\\\\\frac{\\E^2}{x},&\\E\\le x\\le3\\end{cases}"
+  },
+  {
+   "id": "Q3-c",
+   "label": "Q3 c",
+   "label_ar": "السؤال الثالث (ج)",
+   "question": 3,
+   "part": "c",
+   "page": 2,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-3",
+    "5-3"
+   ],
+   "concepts": [
+    "motion-integral",
+    "ftc"
+   ],
+   "skills": [
+    "model",
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Particle velocity $v(t)=2at+\\ln(t+1)$ (minutes); it covers 8 m in the first minute and $22+6\\ln2$ m in the first 3 minutes; find $a$.",
+    "ar": "جسيم سرعته $v(t)=2at+\\ln(t+1)$ قطع 8 أمتار خلال دقيقة واحدة و $(22+6\\ln2)$ متراً خلال أول 3 دقائق؛ جد $a$."
+   },
+   "latex": "v(t)=2at+\\ln(t+1)",
+   "note": "Taking both distances as displacements gives inconsistent values of a (9-2ln2 vs (25-2ln2)/9); the item may intend distance s(t) with a specific reading. Flagged for review before writing a solution."
+  },
+  {
+   "id": "Q4-a-1",
+   "label": "Q4 a-1",
+   "label_ar": "السؤال الرابع (أ) ١",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-equation"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$2X+3Y=P$ and $3X+2Y=Q$ for given $2\\times2$ $P,Q$; find $Y=\\tfrac15(3P-2Q)$.",
+    "ar": "إذا كانت $2X+3Y=P$ و $3X+2Y=Q$ فما هي المصفوفة $Y$؟"
+   },
+   "latex": "2X+3Y=\\begin{bmatrix}2&3\\\\4&0\\end{bmatrix},\\ 3X+2Y=\\begin{bmatrix}-2&2\\\\1&-5\\end{bmatrix}",
+   "mcq_options": "four 2x2 matrices including 5Y as a distractor",
+   "verified_answer": "Y = (3P - 2Q)/5 = [[2,1],[2,2]] (with P=[[2,3],[4,0]], Q=[[-2,2],[1,-5]] in the right-to-left reading; printed left to right as [1,2 / 2,2], lower-right option)",
+   "answer_source": "tagger-computed (worked by hand under the right-to-left matrix reading, checked against the four options)"
+  },
+  {
+   "id": "Q4-a-2",
+   "label": "Q4 a-2",
+   "label_ar": "السؤال الرابع (أ) ٢",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-4"
+   ],
+   "concepts": [
+    "def-integral-props"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Sign of $L=\\int_1^2\\E^{-x}(x^2-6x+9)\\dd{x}$.",
+    "ar": "إذا كان $L=\\int_1^2\\E^{-x}(x^2-6x+9)\\dd{x}$ فأي العبارات صحيحة؟"
+   },
+   "latex": "L=\\int_1^2\\E^{-x}(x-3)^2\\dd{x}",
+   "mcq_options": "four statements: L positive, L = 0, L negative, sign cannot be determined",
+   "verified_answer": "L is a positive real number",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q4-a-3",
+   "label": "Q4 a-3",
+   "label_ar": "السؤال الرابع (أ) ٣",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "4-3",
+    "4-4"
+   ],
+   "concepts": [
+    "curve-from-slope",
+    "substitution"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Slope of $f$ is $\\frac{1}{\\sqrt{x}(\\sqrt{x}-\\E)}$ for $x>\\E^2$ and the graph passes through $(4\\E^2,1)$; find $f$.",
+    "ar": "إذا كان ميل المماس لمنحنى $f$ يساوي $\\frac{1}{\\sqrt{x}(\\sqrt{x}-\\E)}$ ومنحناه يمر بالنقطة $(4\\E^2,1)$ فما قاعدة $f$؟"
+   },
+   "latex": "f'(x)=\\frac{1}{\\sqrt{x}\\left(\\sqrt{x}-\\E\\right)}",
+   "mcq_options": "four functions built from ln(sqrt x - e) and constants",
+   "verified_answer": "2\\ln(\\sqrt{x}-\\E)-1",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q4-b",
+   "label": "Q4 b",
+   "label_ar": "السؤال الرابع (ب)",
+   "question": 4,
+   "part": "b",
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-5",
+    "3-4"
+   ],
+   "concepts": [
+    "inverse-method",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Solve $x-2y-3=-2,\\ \\tfrac13y=x$ using the inverse matrix.",
+    "ar": "حل نظام المعادلات باستخدام طريقة النظير الضربي."
+   },
+   "latex": "x-2y-3=-2,\\ \\tfrac{1}{3}y=x"
+  },
+  {
+   "id": "Q4-c",
+   "label": "Q4 c",
+   "label_ar": "السؤال الرابع (ج)",
+   "question": 4,
+   "part": "c",
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "5-1"
+   ],
+   "concepts": [
+    "riemann-sum"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=\\frac{ax}{x+2}$ on $[-1,8]$, $\\sigma_5=\\{-1,0,2,3,6,8\\}$, $m(\\sigma_5,f)=5.6$ with $x_r^*=x_{r-1}$; find $a$.",
+    "ar": "إذا كان $m(\\sigma_5,f)=5.6$ معتبراً $x_r^*=x_{r-1}$ فاحسب قيمة $a$."
+   },
+   "latex": "f(x)=\\frac{ax}{x+2},\\ \\sigma_5=\\{-1,0,2,3,6,8\\}"
+  },
+  {
+   "id": "Q5-a-1",
+   "label": "Q5 a-1",
+   "label_ar": "السؤال الخامس (أ) ١",
+   "question": 5,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-5",
+    "5-4"
+   ],
+   "concepts": [
+    "area",
+    "def-integral-props",
+    "graph-reading"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Graph: regions $M_1$ (below axis on $[-1,0]$) and $M_2$ (above on $[0,3]$), $M_1+M_2=8$, $\\int_0^{-1}f=1$; find $\\int_{-1}^{3}f$.",
+    "ar": "يمثل الشكل منحنى $f$؛ إذا علمت أن $M_1+M_2=8$ و $\\int_0^{-1}f(x)\\dd{x}=1$ فما قيمة $\\int_{-1}^{3}f(x)\\dd{x}$؟"
+   },
+   "latex": "M_1+M_2=8,\\ \\int_0^{-1}f=1",
+   "mcq_options": "four integers (-8, 8, 6, 4)",
+   "verified_answer": "6",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q5-a-2",
+   "label": "Q5 a-2",
+   "label_ar": "السؤال الخامس (أ) ٢",
+   "question": 5,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-mult",
+    "matrix-add-scalar"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "A square matrix with $A^2=I$; simplify $(A^3-I)^2-(A+I)^2$.",
+    "ar": "إذا كانت $A^2=I$ فما قيمة $(A^3-I)^2-(A+I)^2$؟"
+   },
+   "latex": "(A^3-I)^2-(A+I)^2",
+   "mcq_options": "four expressions (A+I, A-I, 4A, -4A)",
+   "verified_answer": "-4A",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q5-a-3",
+   "label": "Q5 a-3",
+   "label_ar": "السؤال الخامس (أ) ٣",
+   "question": 5,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "4-4"
+   ],
+   "concepts": [
+    "by-parts"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $\\int x\\sec x\\tan x\\dd{x}=f(x)-\\int\\sec x\\dd{x}$, find $f(x)$.",
+    "ar": "إذا كان $\\int x\\sec x\\tan x\\dd{x}=f(x)-\\int\\sec x\\dd{x}$ فما قاعدة $f$؟"
+   },
+   "latex": "\\int x\\sec x\\tan x\\dd{x}=f(x)-\\int\\sec x\\dd{x}",
+   "mcq_options": "four products of x, sec x, tan x",
+   "verified_answer": "x\\sec x",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q5-b",
+   "label": "Q5 b",
+   "label_ar": "السؤال الخامس (ب)",
+   "question": 5,
+   "part": "b",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-5",
+    "3-3"
+   ],
+   "concepts": [
+    "cramer",
+    "determinant"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Cramer's rule for two equations: $A\\cdot A_x=\\begin{bmatrix}3&30\\\\2&19\\end{bmatrix}$, $A_x\\cdot A_y=\\begin{bmatrix}13&1\\\\6&0\\end{bmatrix}$; find $x,y$ (use $|PQ|=|P||Q|$).",
+    "ar": "عند حل نظام بطريقة كريمر كانت $A\\cdot A_x$ و $A_x\\cdot A_y$ معلومتين؛ جد قيم $x$ و $y$."
+   },
+   "latex": "A\\cdot A_x=\\begin{bmatrix}3&30\\\\2&19\\end{bmatrix},\\ A_x\\cdot A_y=\\begin{bmatrix}13&1\\\\6&0\\end{bmatrix}"
+  },
+  {
+   "id": "Q5-c",
+   "label": "Q5 c",
+   "label_ar": "السؤال الخامس (ج)",
+   "question": 5,
+   "part": "c",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-1",
+    "4-2"
+   ],
+   "concepts": [
+    "integral-derivative-relation",
+    "exp-log-deriv",
+    "indef-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$\\int f'(x)\\dd{x}=\\E^{\\E^{2x}}+c$; find $\\int\\left(8x+\\ln\\frac{f'(x)}{2}\\right)\\dd{x}$.",
+    "ar": "إذا كان $\\int f'(x)\\dd{x}=\\E^{\\E^{2x}}+c$ فجد $\\int\\left(8x+\\ln\\frac{f'(x)}{2}\\right)\\dd{x}$."
+   },
+   "latex": "\\int\\left(8x+\\ln\\frac{f'(x)}{2}\\right)\\dd{x}"
+  },
+  {
+   "id": "Q6-a-1",
+   "label": "Q6 a-1",
+   "label_ar": "السؤال السادس (أ) ١",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "4-2"
+   ],
+   "concepts": [
+    "indef-rules"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Evaluate $\\int\\frac{1+\\sin x}{\\cos^2x}\\dd{x}$.",
+    "ar": "ما قيمة $\\int\\frac{1+\\sin x}{\\cos^2x}\\dd{x}$؟"
+   },
+   "latex": "\\int\\frac{1+\\sin x}{\\cos^2x}\\dd{x}",
+   "mcq_options": "four antiderivatives built from tan, sec, csc",
+   "verified_answer": "\\tan x+\\sec x+c",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q6-a-2",
+   "label": "Q6 a-2",
+   "label_ar": "السؤال السادس (أ) ٢",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "5-1"
+   ],
+   "concepts": [
+    "riemann-sum"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Regular partition $\\sigma_n$ of $[-2,6]$; the ratio of the third to the fourth element is $1:3$; find $n$.",
+    "ar": "لتكن $\\sigma_n$ تجزئة منتظمة للفترة $[-2,6]$ والنسبة بين العنصر الثالث والرابع $1:3$؛ فما قيمة $n$؟"
+   },
+   "latex": "x_2:x_3=1:3",
+   "mcq_options": "four integers (12, 24, 6, 18)",
+   "verified_answer": "6 (third element x_2, fourth x_3)",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q6-a-3",
+   "label": "Q6 a-3",
+   "label_ar": "السؤال السادس (أ) ٣",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-equation"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "If $2M+X-I_2=3X$ for a given $M$, which matrix is $X=M-\\tfrac12I$?",
+    "ar": "إذا كانت $2M+X-I_2=3X$ فأي من المصفوفات الآتية تمثل $X$؟"
+   },
+   "latex": "2\\begin{bmatrix}1&-5\\\\5&2\\end{bmatrix}+X-I_2=3X",
+   "mcq_options": "four 2x2 matrices",
+   "verified_answer": "X = M - I/2 = [[1/2,-5],[5,3/2]]",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q6-b",
+   "label": "Q6 b",
+   "label_ar": "السؤال السادس (ب)",
+   "question": 6,
+   "part": "b",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4",
+    "5-3"
+   ],
+   "concepts": [
+    "by-parts",
+    "ftc",
+    "higher-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f(1)=4$, $f(0)=\\frac{f'(1)}{2}=1$, $f'(0)=5$ and $f''+f=0$; find $\\int_0^1\\E^x f''(x)\\dd{x}$ (parts twice).",
+    "ar": "إذا كان $f''(x)+f(x)=0$ فجد $\\int_0^1\\E^x f''(x)\\dd{x}$."
+   },
+   "latex": "\\int_0^1\\E^x f''(x)\\dd{x}"
+  },
+  {
+   "id": "Q6-c",
+   "label": "Q6 c",
+   "label_ar": "السؤال السادس (ج)",
+   "question": 6,
+   "part": "c",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "5-5",
+    "1-5"
+   ],
+   "concepts": [
+    "area",
+    "tangent-normal"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Area bounded by $f(x)=x^2+3$, the $y$-axis and the tangent to $f$ at $(1,4)$.",
+    "ar": "جد مساحة المنطقة المحصورة بين منحنى $f(x)=x^2+3$ ومحور الصادات والمماس عند $(1,4)$."
+   },
+   "latex": "f(x)=x^2+3,\\ (1,4)"
+  }
+ ],
+ "reconciliation": {
+  "per_question": [
+   {
+    "question": 1,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20.0,
+    "ok": true
+   },
+   {
+    "question": 2,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 3,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 4,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 5,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 6,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   }
+  ],
+  "printed_marks_all_questions": 120.0,
+  "max_score_under_choice_rules": 100,
+  "stated_total": 100,
+  "ok": true,
+  "discrepancies": [
+   {
+    "item": "Q3-c",
+    "issue": "Two distance conditions look inconsistent if read as displacement; needs a careful reading before a solution is published."
+   }
+  ]
+ },
+ "summary": {
+  "item_count": 31,
+  "mcq_count": 18,
+  "formats": {
+   "mcq": 18,
+   "short": 8,
+   "long": 5,
+   "proof": 0
+  },
+  "marks_by_lesson_printed": {
+   "1-5": 3.5,
+   "3-1": 3.5,
+   "3-2": 11.5,
+   "3-3": 12.5,
+   "3-4": 4.5,
+   "3-5": 7.0,
+   "4-1": 7.5,
+   "4-2": 13.0,
+   "4-3": 4.5,
+   "4-4": 10.0,
+   "5-1": 11.0,
+   "5-3": 18.5,
+   "5-4": 8.5,
+   "5-5": 4.5
+  },
+  "note_marks_by_lesson": "Marks of every printed item split equally across its lessons; sums to the printed marks of all six questions (not the score a candidate can reach under the choice rule)."
+ },
+ "concepts_used": {
+  "antiderivative": {
+   "lesson": "4-1",
+   "ar": "الاقتران الأصلي",
+   "en": "Antiderivative"
+  },
+  "area": {
+   "lesson": "5-5",
+   "ar": "المساحة بالتكامل",
+   "en": "Area by integration"
+  },
+  "by-parts": {
+   "lesson": "4-4",
+   "ar": "التكامل بالأجزاء",
+   "en": "Integration by parts"
+  },
+  "cramer": {
+   "lesson": "3-5",
+   "ar": "قاعدة كريمر",
+   "en": "Cramer's rule"
+  },
+  "curve-from-slope": {
+   "lesson": "4-3",
+   "ar": "إيجاد قاعدة الاقتران من ميل المماس",
+   "en": "Finding a function from its slope"
+  },
+  "def-integral-props": {
+   "lesson": "5-4",
+   "ar": "خصائص التكامل المحدود",
+   "en": "Properties of the definite integral"
+  },
+  "determinant": {
+   "lesson": "3-3",
+   "ar": "المحددات وخصائصها",
+   "en": "Determinants and their properties"
+  },
+  "exp-log-deriv": {
+   "lesson": "1-4",
+   "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+   "en": "Derivatives of exponential and logarithmic functions"
+  },
+  "ftc": {
+   "lesson": "5-3",
+   "ar": "النظرية الأساسية للتفاضل والتكامل",
+   "en": "Fundamental theorem of calculus"
+  },
+  "graph-reading": {
+   "lesson": null,
+   "ar": "قراءة منحنى الاقتران أو مشتقاته",
+   "en": "Reading a graph of f, f' or f''"
+  },
+  "higher-deriv": {
+   "lesson": "1-2",
+   "ar": "المشتقات العليا",
+   "en": "Higher-order derivatives"
+  },
+  "indef-rules": {
+   "lesson": "4-2",
+   "ar": "قواعد التكامل غير المحدود",
+   "en": "Rules of indefinite integration"
+  },
+  "integral-derivative-relation": {
+   "lesson": "4-1",
+   "ar": "العلاقة بين التكامل غير المحدود والتفاضل",
+   "en": "Integration and differentiation as inverse operations"
+  },
+  "integral-function": {
+   "lesson": "5-3",
+   "ar": "الاقتران المكامل",
+   "en": "Integral function T(x)"
+  },
+  "inverse-method": {
+   "lesson": "3-5",
+   "ar": "حل نظام معادلات بطريقة النظير الضربي",
+   "en": "Solving a system with the inverse matrix"
+  },
+  "matrix-add-scalar": {
+   "lesson": "3-2",
+   "ar": "جمع المصفوفات وضربها في عدد حقيقي",
+   "en": "Matrix addition and scalar multiplication"
+  },
+  "matrix-def": {
+   "lesson": "3-1",
+   "ar": "المصفوفة: الرتبة والمدخلات وتساوي المصفوفات",
+   "en": "Matrices: order, entries, equality"
+  },
+  "matrix-equation": {
+   "lesson": "3-2",
+   "ar": "حل المعادلات المصفوفية",
+   "en": "Solving matrix equations"
+  },
+  "matrix-inverse": {
+   "lesson": "3-4",
+   "ar": "النظير الضربي للمصفوفة",
+   "en": "Inverse of a matrix"
+  },
+  "matrix-mult": {
+   "lesson": "3-2",
+   "ar": "ضرب المصفوفات",
+   "en": "Matrix multiplication"
+  },
+  "motion-integral": {
+   "lesson": "4-3",
+   "ar": "الحركة: من التسارع والسرعة إلى المسافة",
+   "en": "Motion: from acceleration/velocity to position"
+  },
+  "riemann-sum": {
+   "lesson": "5-1",
+   "ar": "التجزئة المنتظمة ومجموع ريمان",
+   "en": "Regular partitions and Riemann sums"
+  },
+  "substitution": {
+   "lesson": "4-4",
+   "ar": "التكامل بالتعويض",
+   "en": "Integration by substitution"
+  },
+  "tangent-normal": {
+   "lesson": "1-5",
+   "ar": "معادلة المماس والعمودي على المماس",
+   "en": "Tangent and normal lines"
+  }
+ },
+ "notes": [
+  "Matrices and determinants in \"latex\" follow the paper's right-to-left (Arabic) reading: the right-most printed column is column 1 and rows read from right to left, so a matrix printed left to right as [3, -2 / -5, x] is transcribed [[-2,3],[x,-5]]. This reading is confirmed wherever an answer depends on it: 2025 s2-p2 Q2-a-1 gives the listed x=4 only under it (left to right gives x=8/3, not an option); likewise s2-p2 Q3-a-1 (-4) and s3 Q4-a-1 (A^-1). Anyone re-checking a transcription against the scan must mirror each row.",
+  "Part (a) MCQ items carry no printed per-item marks; each is inferred as part-marks / 3. Numbered sub-parts of (b)/(c) carry no printed marks; they are inferred as an equal split of the printed part marks (marks_basis says so).",
+  "A lone dot used as an integral limit is the Arabic-Indic digit zero (٠).",
+  "No item tests unit 6 (complex numbers) in any 2025 paper."
+ ]
+}

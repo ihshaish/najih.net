@@ -1,0 +1,2070 @@
+{
+ "unit": 3,
+ "title": {
+  "ar": "المصفوفات والمحددات",
+  "en": "Matrices and Determinants"
+ },
+ "semester": 1,
+ "printed_pages": [
+  92,
+  128
+ ],
+ "pdf_pages": [
+  96,
+  132
+ ],
+ "source": "الرياضيات، الصف الثاني عشر، الفرع العلمي — elearn.edu.ps (ma12-s.pdf); captured from page images.",
+ "opener": {
+  "page": 92,
+  "summary": "Table of student numbers by directorate with colour labels; asks how to reorganise data by colour -> motivation for matrices."
+ },
+ "objectives": [
+  {
+   "ar": "التعرف إلى المصفوفة وبعض المصفوفات الخاصة",
+   "en": "Know matrices and special types"
+  },
+  {
+   "ar": "إيجاد رتبة المصفوفة وعدد مدخلاتها",
+   "en": "Find the order and number of entries"
+  },
+  {
+   "ar": "شروط تساوي مصفوفتين وحل المعادلات الناتجة",
+   "en": "Equality conditions and solving the resulting equations"
+  },
+  {
+   "ar": "إجراء العمليات على المصفوفات",
+   "en": "Perform matrix operations"
+  },
+  {
+   "ar": "مفهوم المحددات وخصائصها",
+   "en": "Concept and properties of determinants"
+  },
+  {
+   "ar": "حساب محدد المصفوفات المربعة من الرتب الأولى والثانية والثالثة وتمييز المنفردة",
+   "en": "Evaluate determinants of order 1-3 and identify singular matrices"
+  },
+  {
+   "ar": "إيجاد النظير الضربي للمصفوفة المربعة غير المنفردة من الرتبة الثانية",
+   "en": "Find the inverse of a nonsingular 2x2 matrix"
+  },
+  {
+   "ar": "توظيف المصفوفات في حل أنظمة معادلات خطية",
+   "en": "Use matrices to solve linear systems"
+  }
+ ],
+ "notation_notes": [
+  "Entry subscripts follow the book's right-to-left reading: the printed subscript '٢١' on أ means row 1, column 2 (the right-hand digit is the row). Verified on p95 (Ex.1: a12 = -2, b21 = 1), p97 (Activity 2: k12 = 1 only fits i>j -> i-j), p105 (Ex.8: entry from row 1 of A and column 2 of C is labelled ل٢١). In LaTeX we write two-digit subscripts with a space, a_{1 2} = row 1 column 2, so armath lays the digits out right-to-left exactly as printed.",
+  "General indices: the book uses ي (row) and هـ (column). LaTeX source uses a_{i j}; armath currently has no mapping for i/j (see uncertainties).",
+  "Identity matrix is printed م (with order subscript, e.g. م٢) and the zero matrix و. LaTeX source uses I_{2} and O; armath has no mapping for I or O yet.",
+  "Matrix letters: أ، ب، جـ، د for A, B, C, D; variable matrices س، ص، ع (X, Y, Z); the variables column matrix in 3-5 is ك (K); A_x, A_y are printed أ_س، أ_ص.",
+  "Determinant is printed with vertical bars |أ|; LaTeX uses \\begin{vmatrix} or \\lvert A\\rvert.",
+  "Matrices are typeset right-to-left: the first column is the right-most printed column. All matrices below are given in standard (Latin) row order."
+ ],
+ "lessons": [
+  {
+   "id": "3-1",
+   "title": {
+    "ar": "المصفوفة",
+    "en": "Matrix"
+   },
+   "printed_pages": [
+    94,
+    98
+   ],
+   "pdf_pages": [
+    98,
+    102
+   ],
+   "branch_notes": [],
+   "concepts": [
+    {
+     "id": "u3.matrix",
+     "name": {
+      "ar": "المصفوفة",
+      "en": "matrix"
+     }
+    },
+    {
+     "id": "u3.matrix_entry",
+     "name": {
+      "ar": "مدخلات المصفوفة",
+      "en": "matrix entry"
+     }
+    },
+    {
+     "id": "u3.matrix_order",
+     "name": {
+      "ar": "رتبة المصفوفة",
+      "en": "order (size) of a matrix"
+     }
+    },
+    {
+     "id": "u3.square_matrix",
+     "name": {
+      "ar": "المصفوفة المربعة",
+      "en": "square matrix"
+     }
+    },
+    {
+     "id": "u3.identity_matrix",
+     "name": {
+      "ar": "مصفوفة الوحدة (المحايدة)",
+      "en": "identity matrix"
+     }
+    },
+    {
+     "id": "u3.zero_matrix",
+     "name": {
+      "ar": "المصفوفة الصفرية",
+      "en": "zero matrix"
+     }
+    },
+    {
+     "id": "u3.row_matrix",
+     "name": {
+      "ar": "مصفوفة الصف",
+      "en": "row matrix"
+     }
+    },
+    {
+     "id": "u3.column_matrix",
+     "name": {
+      "ar": "مصفوفة العمود",
+      "en": "column matrix"
+     }
+    },
+    {
+     "id": "u3.diagonal_matrix",
+     "name": {
+      "ar": "المصفوفة القطرية",
+      "en": "diagonal matrix"
+     }
+    },
+    {
+     "id": "u3.main_diagonal",
+     "name": {
+      "ar": "القطر الرئيسي",
+      "en": "main diagonal"
+     }
+    },
+    {
+     "id": "u3.upper_triangular",
+     "name": {
+      "ar": "المصفوفة المثلثية العلوية",
+      "en": "upper triangular matrix"
+     }
+    },
+    {
+     "id": "u3.matrix_equality",
+     "name": {
+      "ar": "تساوي مصفوفتين",
+      "en": "equality of two matrices"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u3.def.matrix",
+     "concept": "u3.matrix",
+     "page": 94,
+     "statement": {
+      "ar": "المصفوفة ترتيب مستطيل لأعداد في صفوف وأعمدة بين قوسين [ ]، ويرمز لها بحرف مثل أ، ب، والأعداد داخلها تسمى مدخلات.",
+      "en": "A matrix is a rectangular arrangement of numbers in rows and columns, written between square brackets and named by a capital letter; its numbers are called entries."
+     },
+     "latex": null,
+     "conditions": null
+    },
+    {
+     "id": "u3.def.order",
+     "concept": "u3.matrix_order",
+     "page": 94,
+     "statement": {
+      "ar": "رتبة المصفوفة م×ن حيث م عدد الصفوف و ن عدد الأعمدة (تقرأ م في ن)، وعدد مدخلاتها = م × ن.",
+      "en": "The order of a matrix is m x n (m rows, n columns, read 'm by n'); the number of entries is m times n."
+     },
+     "latex": "A_{m\\times n},\\quad \\#\\text{entries}=m\\times n",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.entry",
+     "concept": "u3.matrix_entry",
+     "page": 95,
+     "statement": {
+      "ar": "المدخلة الواقعة في تقاطع الصف ي مع العمود هـ تكتب أ_يهـ.",
+      "en": "The entry in row i and column j is written a_ij; the general m x n matrix is [a_ij]."
+     },
+     "latex": "A_{m\\times n}=\\begin{bmatrix} a_{1 1} & a_{1 2} & \\cdots & a_{1 n}\\\\ \\vdots & & & \\vdots\\\\ a_{m 1} & a_{m 2} & \\cdots & a_{m n}\\end{bmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.square",
+     "concept": "u3.square_matrix",
+     "page": 95,
+     "statement": {
+      "ar": "المصفوفة المربعة: عدد صفوفها = عدد أعمدتها = ن، وتسمى مصفوفة مربعة من الرتبة ن.",
+      "en": "Square matrix: number of rows = number of columns = n; called a square matrix of order n."
+     },
+     "latex": null,
+     "conditions": null
+    },
+    {
+     "id": "u3.def.identity",
+     "concept": "u3.identity_matrix",
+     "page": 95,
+     "statement": {
+      "ar": "مصفوفة الوحدة م مصفوفة مربعة مدخلاتها ١ على القطر الرئيسي و٠ في غيره.",
+      "en": "Identity matrix I (printed م): a square matrix with 1 on the main diagonal and 0 elsewhere, e.g. I_2, I_3."
+     },
+     "latex": "I_{i j}=\\begin{cases}1, & i=j\\\\ 0, & i\\ne j\\end{cases},\\qquad I_{2}=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.zero",
+     "concept": "u3.zero_matrix",
+     "page": 95,
+     "statement": {
+      "ar": "المصفوفة الصفرية و: جميع مدخلاتها أصفار (من أي رتبة).",
+      "en": "Zero matrix O (printed و): all entries are zero (any order, e.g. O_{2x3})."
+     },
+     "latex": "O_{2\\times 3}=\\begin{bmatrix}0&0&0\\\\0&0&0\\end{bmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.row",
+     "concept": "u3.row_matrix",
+     "page": 96,
+     "statement": {
+      "ar": "مصفوفة الصف: مكوّنة من صف واحد.",
+      "en": "Row matrix: a single row."
+     },
+     "latex": "\\begin{bmatrix}2&-1&4\\end{bmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.column",
+     "concept": "u3.column_matrix",
+     "page": 96,
+     "statement": {
+      "ar": "مصفوفة العمود: مكوّنة من عمود واحد.",
+      "en": "Column matrix: a single column."
+     },
+     "latex": "\\begin{bmatrix}8\\\\2\\\\9\\end{bmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.def.diagonal",
+     "concept": "u3.diagonal_matrix",
+     "page": 96,
+     "statement": {
+      "ar": "المصفوفة القطرية: مصفوفة مربعة جميع مدخلاتها خارج القطر الرئيسي أصفار؛ والقطر الرئيسي هو المدخلات س_يهـ حيث ي = هـ.",
+      "en": "Diagonal matrix: a square matrix whose entries off the main diagonal are all 0. The main diagonal is the entries x_ii."
+     },
+     "latex": "x_{i j}=0\\ \\ \\forall\\, i\\ne j",
+     "conditions": "square only"
+    },
+    {
+     "id": "u3.def.upper_triangular",
+     "concept": "u3.upper_triangular",
+     "page": 96,
+     "statement": {
+      "ar": "المصفوفة المثلثية العلوية: مصفوفة مربعة مدخلاتها تحت القطر الرئيسي أصفار.",
+      "en": "Upper triangular matrix: a square matrix whose entries below the main diagonal are all 0."
+     },
+     "latex": "\\begin{bmatrix}x_{1 1}&x_{1 2}&x_{1 3}\\\\0&x_{2 2}&x_{2 3}\\\\0&0&x_{3 3}\\end{bmatrix}",
+     "conditions": "square only"
+    },
+    {
+     "id": "u3.def.equality",
+     "concept": "u3.matrix_equality",
+     "page": 97,
+     "statement": {
+      "ar": "تتساوى المصفوفتان أ، ب إذا كان لهما نفس الرتبة وكانت مدخلاتهما المتناظرة متساوية.",
+      "en": "A = B if and only if they have the same order and all corresponding entries are equal."
+     },
+     "latex": "A=B \\iff a_{i j}=b_{i j}\\ \\text{for all } i, j",
+     "conditions": "same order required"
+    }
+   ],
+   "rules": [],
+   "activities": [
+    {
+     "id": "3-1.act1",
+     "page": 94,
+     "asks": "Distances between Palestinian cities (Jerusalem, Jenin, Nablus, Rafah) drawn as a tree; is this a good representation? Represent it another way.",
+     "method": "Motivates organising data in rows/columns -> matrix."
+    },
+    {
+     "id": "3-1.act2",
+     "page": 97,
+     "asks": "Build a 3x3 matrix K from a piecewise rule (k_ij = i+j if i<j, i-j if i>j, i/(i+j) if i=j); read k12, k21, the sum of column 3, and the main diagonal.",
+     "method": "Generate entries from an index rule; uses the row/column subscript convention and sigma notation."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "3-1.ex1",
+     "page": 95,
+     "type": "order_and_entry_reading",
+     "asks": "Order of a 3x2 and a 2x3 matrix; read a12 and b21.",
+     "method": "Count rows then columns; locate entry by row then column.",
+     "key_steps": [
+      "A has 3 rows, 2 columns -> 3x2",
+      "B is 2x3",
+      "a12 = -2, b21 = 1"
+     ]
+    },
+    {
+     "id": "3-1.ex2",
+     "page": 96,
+     "type": "classify_special_matrix",
+     "asks": "Type of a column matrix; is [[0,1],[1,0]] an identity matrix? Sum of column 2 of A.",
+     "method": "Compare with the definitions of special matrices.",
+     "key_steps": [
+      "C is a column matrix",
+      "B is not identity (1s are off the main diagonal)",
+      "sum of column 2 = 2"
+     ]
+    },
+    {
+     "id": "3-1.ex3",
+     "page": 97,
+     "type": "equality_solve_unknowns",
+     "asks": "Is A = B? Find x, y, z making A = C where C contains x, y^2, sqrt z.",
+     "method": "Same order and equate corresponding entries; solve each equation.",
+     "key_steps": [
+      "A != B because a11 != b11",
+      "x = 2",
+      "y^2 = 4 -> y = ±2",
+      "sqrt z = 5 -> z = 25"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٣-١",
+     "page": 98,
+     "items": [
+      {
+       "n": 1,
+       "type": "model_data_as_matrix",
+       "asks": "Dairy factory with 3 branches x 2 package sizes: build the matrix with rows = package types, give its order, interpret the sum of column 2."
+      },
+      {
+       "n": 2,
+       "type": "order_and_entry_reading",
+       "asks": "4x3 matrix containing x (rows [2,5,-4], [6,2,x], [1,-x,7], [3,20,7]): order, a13 + a21, x such that (a32)^3 = 27. Printed subscripts أ٣١ + أ١٢ and (أ٢٣)³, read with the right-to-left convention (expected: 4x3; -4 + 6 = 2; -x = 3 so x = -3)."
+      },
+      {
+       "n": 3,
+       "type": "equality_solve_unknowns",
+       "asks": "Two 2x2 matrices equal with entries x^2+1 = 10 and x-1 = 2: find x (must satisfy both)."
+      },
+      {
+       "n": 4,
+       "type": "build_from_rule",
+       "asks": "Build the 2x2 matrix with a_ij = 2^(i-j)."
+      },
+      {
+       "n": 5,
+       "type": "build_from_rule",
+       "asks": "Given A (2x3), find B (3x2) with b_ji = a_ij (transpose, not named)."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [],
+    "concepts": [],
+    "grade11": [
+     "reading tables of data",
+     "solving simple linear, quadratic and radical equations",
+     "sigma notation"
+    ]
+   },
+   "exclusions": [],
+   "pitfalls": [
+    {
+     "en": "Order is rows x columns, not columns x rows.",
+     "ar": "الرتبة: عدد الصفوف × عدد الأعمدة وليس العكس.",
+     "source": "p94-95"
+    },
+    {
+     "en": "Equality needs the same order first; a single unequal entry breaks equality.",
+     "ar": "شرط التساوي: نفس الرتبة أولاً، ثم تساوي كل المدخلات المتناظرة.",
+     "source": "Ex.3 p97"
+    },
+    {
+     "en": "From y^2 = 4 keep both values y = ±2; but when an unknown appears in two entries (Ex.3-1 Q3) only the common value is valid.",
+     "ar": "من ص² = ٤ تكون ص = ±٢؛ وإذا ظهر المجهول في مدخلتين فالحل هو القيمة المشتركة فقط.",
+     "source": "Ex.3 p97, Q3 p98"
+    },
+    {
+     "en": "A matrix with 1s on the anti-diagonal is not the identity.",
+     "ar": "المصفوفة التي فيها ١ على القطر الآخر ليست مصفوفة وحدة.",
+     "source": "Ex.2 p96"
+    }
+   ]
+  },
+  {
+   "id": "3-2",
+   "title": {
+    "ar": "العمليات على المصفوفات",
+    "en": "Operations on Matrices"
+   },
+   "printed_pages": [
+    99,
+    107
+   ],
+   "pdf_pages": [
+    103,
+    111
+   ],
+   "branch_notes": [],
+   "concepts": [
+    {
+     "id": "u3.matrix_addition",
+     "name": {
+      "ar": "جمع المصفوفات",
+      "en": "matrix addition"
+     }
+    },
+    {
+     "id": "u3.scalar_multiplication",
+     "name": {
+      "ar": "ضرب المصفوفة بعدد حقيقي",
+      "en": "scalar multiplication"
+     }
+    },
+    {
+     "id": "u3.matrix_subtraction",
+     "name": {
+      "ar": "طرح المصفوفات",
+      "en": "matrix subtraction"
+     }
+    },
+    {
+     "id": "u3.additive_inverse",
+     "name": {
+      "ar": "النظير الجمعي للمصفوفة",
+      "en": "additive inverse of a matrix"
+     }
+    },
+    {
+     "id": "u3.addition_properties",
+     "name": {
+      "ar": "خصائص جمع المصفوفات والضرب بعدد",
+      "en": "properties of addition and scalar multiplication"
+     }
+    },
+    {
+     "id": "u3.matrix_equation_linear",
+     "name": {
+      "ar": "المعادلة المصفوفية",
+      "en": "solving matrix equations (addition/scalar)"
+     }
+    },
+    {
+     "id": "u3.matrix_multiplication",
+     "name": {
+      "ar": "ضرب المصفوفات",
+      "en": "matrix multiplication"
+     }
+    },
+    {
+     "id": "u3.multiplication_conformability",
+     "name": {
+      "ar": "شرط إمكانية الضرب ورتبة الناتج",
+      "en": "condition for a defined product and its order"
+     }
+    },
+    {
+     "id": "u3.multiplication_properties",
+     "name": {
+      "ar": "خصائص ضرب المصفوفات",
+      "en": "properties of matrix multiplication"
+     }
+    },
+    {
+     "id": "u3.matrix_powers",
+     "name": {
+      "ar": "قوى المصفوفة المربعة",
+      "en": "powers of a square matrix (A^2, A^3)"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u3.def.addition",
+     "concept": "u3.matrix_addition",
+     "page": 99,
+     "statement": {
+      "ar": "إذا كانت أ، ب من الرتبة م×ن فإن جـ = أ + ب من الرتبة م×ن ومدخلاتها ناتجة من جمع المدخلات المتناظرة.",
+      "en": "If A, B are both m x n then C = A + B is m x n with c_ij = a_ij + b_ij."
+     },
+     "latex": "C=A+B,\\quad c_{i j}=a_{i j}+b_{i j}",
+     "conditions": "same order; otherwise the sum is undefined"
+    },
+    {
+     "id": "u3.def.scalar",
+     "concept": "u3.scalar_multiplication",
+     "page": 100,
+     "statement": {
+      "ar": "إذا كانت أ من الرتبة م×ن و ك عدد حقيقي فإن ك أ مصفوفة من الرتبة نفسها مدخلاتها ك أ_يهـ.",
+      "en": "For a real k and m x n matrix A, kA is m x n with entries k a_ij."
+     },
+     "latex": "kA=C,\\quad c_{i j}=k\\,a_{i j}",
+     "conditions": "k real"
+    },
+    {
+     "id": "u3.def.subtraction",
+     "concept": "u3.matrix_subtraction",
+     "page": 101,
+     "statement": {
+      "ar": "أ − ب = أ + (−ب) لمصفوفتين من نفس الرتبة؛ أي طرح المدخلات المتناظرة.",
+      "en": "A - B = A + (-B) for matrices of the same order, i.e. subtract corresponding entries."
+     },
+     "latex": "A-B=A+(-B)",
+     "conditions": "same order"
+    },
+    {
+     "id": "u3.def.multiplication",
+     "concept": "u3.matrix_multiplication",
+     "page": 103,
+     "statement": {
+      "ar": "إذا كانت أ من الرتبة م×ن و ب من الرتبة ن×ل فإن أ.ب = جـ من الرتبة م×ل، والمدخلة جـ_يهـ = مجموع حواصل ضرب مدخلات الصف ي من أ بمدخلات العمود هـ من ب.",
+      "en": "If A is m x n and B is n x l, then AB = C is m x l and c_ij = a_i1 b_1j + a_i2 b_2j + ... + a_in b_nj (row i of A times column j of B)."
+     },
+     "latex": "c_{i j}=a_{i 1}b_{1 j}+a_{i 2}b_{2 j}+\\cdots+a_{i n}b_{n j}",
+     "conditions": "columns of A = rows of B; result has rows of A and columns of B"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u3.rule.addition_properties",
+     "kind": "properties",
+     "concept": "u3.addition_properties",
+     "page": 101,
+     "statement": {
+      "ar": "لمصفوفات أ، ب، جـ، و من نفس الرتبة و ك عدد حقيقي: الجمع تبديلي وتجميعي، والمصفوفة الصفرية محايدة، ولكل مصفوفة نظير جمعي، والضرب بعدد يتوزع على الجمع.",
+      "en": "For A, B, C, O of the same order and real k: commutative, associative, O is the additive identity, every A has additive inverse -A, and k distributes over addition."
+     },
+     "latex": "A+B=B+A;\\ (A+B)+C=A+(B+C);\\ A+O=O+A=A;\\ A+(-A)=(-A)+A=O;\\ k(A+B)=kA+kB",
+     "conditions": "same order"
+    },
+    {
+     "id": "u3.rule.solve_additive_equation",
+     "kind": "method",
+     "concept": "u3.matrix_equation_linear",
+     "page": 102,
+     "statement": {
+      "ar": "لحل س + أ = ب نضيف النظير الجمعي لـ أ إلى الطرفين فنحصل على س = ب − أ.",
+      "en": "To solve X + A = B add -A to both sides: X = B - A (works like ordinary equations using the properties)."
+     },
+     "latex": "X+A=B\\ \\Rightarrow\\ X=B-A",
+     "conditions": "same order"
+    },
+    {
+     "id": "u3.rule.product_defined",
+     "kind": "rule",
+     "concept": "u3.multiplication_conformability",
+     "page": 103,
+     "statement": {
+      "ar": "يكون أ.ب معرفاً إذا كان عدد أعمدة أ = عدد صفوف ب، ورتبة الناتج (صفوف أ)×(أعمدة ب).",
+      "en": "AB is defined iff (columns of A) = (rows of B); then order(AB) = (rows of A) x (columns of B)."
+     },
+     "latex": "A_{m\\times n}\\,B_{n\\times l}=C_{m\\times l}",
+     "conditions": null
+    },
+    {
+     "id": "u3.rule.multiplication_properties",
+     "kind": "properties",
+     "concept": "u3.multiplication_properties",
+     "page": 106,
+     "statement": {
+      "ar": "إذا كانت العمليات معرفة و م المصفوفة المحايدة و ك عدد حقيقي: الضرب تجميعي، ويتوزع على الجمع من اليمين ومن اليسار، و أ.م = م.أ = أ، و ك(أ.ب) = (ك أ).ب = أ.(ك ب).",
+      "en": "When defined (I the identity, k real): (AB)C = A(BC); A(B+C) = AB + AC; (A+B)C = AC + BC; AI = IA = A; k(AB) = (kA)B = A(kB)."
+     },
+     "latex": "(AB)C=A(BC);\\ A(B+C)=AB+AC;\\ (A+B)C=AC+BC;\\ AI=IA=A;\\ k(AB)=(kA)B=A(kB)",
+     "conditions": "all products/sums defined"
+    },
+    {
+     "id": "u3.rule.not_commutative",
+     "kind": "property",
+     "concept": "u3.multiplication_properties",
+     "page": 105,
+     "statement": {
+      "ar": "ضرب المصفوفات ليس تبديلياً بشكل عام: قد يكون أ.ب ≠ ب.أ (وقد يكون أحدهما غير معرف).",
+      "en": "Matrix multiplication is not commutative in general: AB may differ from BA, or one of them may be undefined."
+     },
+     "latex": "AB\\ne BA \\text{ in general}",
+     "conditions": null
+    },
+    {
+     "id": "u3.rule.no_cancellation",
+     "kind": "property",
+     "concept": "u3.multiplication_properties",
+     "page": 106,
+     "statement": {
+      "ar": "قانون الاختصار لا يتحقق بشكل عام: أ.ب = أ.جـ لا يعني ب = جـ.",
+      "en": "Cancellation fails in general: AB = AC does not imply B = C (it does when A is nonsingular, see 3-4 Ex. Q7)."
+     },
+     "latex": "AB=AC\\not\\Rightarrow B=C",
+     "conditions": null
+    }
+   ],
+   "activities": [
+    {
+     "id": "3-2.act1",
+     "page": 99,
+     "asks": "Sports-kit sales of two branches (Nablus, Bethlehem) over two months by colour: write each as a 2x3 matrix, check same order, build the total matrix.",
+     "method": "Motivates entry-wise addition."
+    },
+    {
+     "id": "3-2.act2",
+     "page": 103,
+     "asks": "League results matrix (win/draw/loss x three teams) and points row [3 1 0]: points of one team, then of all teams, and rank them.",
+     "method": "Row x column dot product motivates matrix multiplication."
+    },
+    {
+     "id": "3-2.act3",
+     "page": 105,
+     "asks": "For two 2x2 matrices compute AB and BA; what do you conclude?",
+     "method": "Shows non-commutativity."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "3-2.ex1",
+     "page": 100,
+     "type": "add_matrices_check_defined",
+     "asks": "X+Y, Y+X, Y+Z (Z of a different order).",
+     "method": "Add corresponding entries; check orders first.",
+     "key_steps": [
+      "X+Y = Y+X (commutativity observed)",
+      "Y+Z undefined: different orders"
+     ]
+    },
+    {
+     "id": "3-2.ex2",
+     "page": 100,
+     "type": "scalar_multiple",
+     "asks": "2A, -A, A + (-A).",
+     "method": "Multiply every entry; -A = (-1)A.",
+     "key_steps": [
+      "A + (-A) = O"
+     ]
+    },
+    {
+     "id": "3-2.ex3",
+     "page": 101,
+     "type": "linear_combination",
+     "asks": "3A + 2B for 2x2 matrices.",
+     "method": "Scalar multiply each, then add."
+    },
+    {
+     "id": "3-2.ex4",
+     "page": 101,
+     "type": "subtract_matrices",
+     "asks": "B - A two ways.",
+     "method": "B + (-A) or subtract entries directly."
+    },
+    {
+     "id": "3-2.ex5",
+     "page": 102,
+     "type": "solve_matrix_equation_additive",
+     "asks": "Solve X + M = N (2x2).",
+     "method": "Add the additive inverse of M to both sides, use associativity and X + O = X.",
+     "key_steps": [
+      "X = N + (-M)"
+     ]
+    },
+    {
+     "id": "3-2.ex6",
+     "page": 103,
+     "type": "product_defined_check",
+     "asks": "Which of AC, AB, BC are defined (A 2x3, B 3x2, C 2x2)?",
+     "method": "Compare inner dimensions.",
+     "key_steps": [
+      "AC undefined",
+      "AB defined (3 = 3)",
+      "BC defined"
+     ]
+    },
+    {
+     "id": "3-2.ex7",
+     "page": 104,
+     "type": "applied_matrix_product",
+     "asks": "Three tailors, three garments: daily wage of each from a price row matrix and a production matrix.",
+     "method": "Row [5 6 3] times 3x3 production matrix.",
+     "key_steps": [
+      "wages = [52 42 46] dinars"
+     ]
+    },
+    {
+     "id": "3-2.ex8",
+     "page": 105,
+     "type": "compute_product",
+     "asks": "A (2x2) times C (2x3); is CA defined?",
+     "method": "Row-by-column; check orders.",
+     "key_steps": [
+      "AC is 2x3",
+      "entry from row 1 of A and column 2 of C = 42",
+      "CA undefined"
+     ]
+    },
+    {
+     "id": "3-2.ex9",
+     "page": 105,
+     "type": "orders_for_defined_products",
+     "asks": "A is 2xn, B is 5xk; find n, k making AB and BA both defined.",
+     "method": "Inner dimensions must match both ways.",
+     "key_steps": [
+      "n = 5",
+      "k = 2"
+     ]
+    },
+    {
+     "id": "3-2.ex10",
+     "page": 106,
+     "type": "triple_product",
+     "asks": "Row(1x3) . Matrix(3x2) . Column(2x1); order of the result.",
+     "method": "Multiply left to right (associativity).",
+     "key_steps": [
+      "[11 13] . [3;1] = [46]",
+      "order 1x1"
+     ]
+    },
+    {
+     "id": "3-2.ex11",
+     "page": 106,
+     "type": "cancellation_counterexample",
+     "asks": "Compute AB and AC for given 2x2 A, B, C.",
+     "method": "Direct multiplication.",
+     "key_steps": [
+      "AB = AC although B != C"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تدريبات (ص١٠٢)",
+     "page": 102,
+     "items": [
+      {
+       "n": 1,
+       "type": "linear_combination",
+       "asks": "a) B + 2A, 3A - 2B; b) show C + D = 9 I_2."
+      },
+      {
+       "n": 2,
+       "type": "solve_matrix_equation_additive",
+       "asks": "Solve 2M - 3X = X + I_2."
+      },
+      {
+       "n": 3,
+       "type": "solve_matrix_equation_additive",
+       "asks": "Find A with 2A + C = O."
+      },
+      {
+       "n": 4,
+       "type": "equality_solve_unknowns",
+       "asks": "Find real x, y with x(col) + y(col) = given column (linear combination)."
+      },
+      {
+       "n": 5,
+       "type": "system_of_matrix_equations",
+       "asks": "X + 2Y = P and 3X - Y = Q: find matrices X, Y."
+      }
+     ]
+    },
+    {
+     "set": "تمارين ٣-٢",
+     "page": 107,
+     "items": [
+      {
+       "n": 1,
+       "type": "orders_for_defined_products",
+       "asks": "Order of B given AB = C with A 2x5, C 2x4; and A 3x3, C 3x5."
+      },
+      {
+       "n": 2,
+       "type": "compute_product",
+       "asks": "AB, CB, A^2 for given matrices."
+      },
+      {
+       "n": 3,
+       "type": "product_equation_unknowns",
+       "asks": "Find x, y from a 2x3 by 3x2 product equal to a given 2x2."
+      },
+      {
+       "n": 4,
+       "type": "triple_product",
+       "asks": "Show X = 5Y for X a triple product and Y a row."
+      },
+      {
+       "n": 5,
+       "type": "identity_failure_proof",
+       "asks": "Show A^2 - B^2 != (A - B)(A + B)."
+      },
+      {
+       "n": 6,
+       "type": "product_equation_unknowns",
+       "asks": "Can x be found so that A^2 = B?"
+      },
+      {
+       "n": 7,
+       "type": "matrix_equation_and_powers",
+       "asks": "a) find D with A + D = B.D; b) show C^3 = C for C = [[1,0],[sqrt3,-1]]."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "3-1"
+    ],
+    "concepts": [
+     "u3.matrix_order",
+     "u3.matrix_equality",
+     "u3.identity_matrix",
+     "u3.zero_matrix"
+    ],
+    "grade11": [
+     "real-number properties (commutative, associative, distributive)",
+     "solving linear systems in two unknowns"
+    ]
+   },
+   "exclusions": [],
+   "pitfalls": [
+    {
+     "en": "Adding/subtracting matrices of different orders is undefined.",
+     "ar": "لا يمكن جمع أو طرح مصفوفتين مختلفتين في الرتبة.",
+     "source": "Ex.1 p100"
+    },
+    {
+     "en": "Check that columns of the left factor equal rows of the right factor before multiplying; AB defined does not mean BA defined.",
+     "ar": "تحقق من أن عدد أعمدة الأولى = عدد صفوف الثانية؛ كون أ.ب معرفاً لا يعني أن ب.أ معرف.",
+     "source": "Ex.6, Ex.8 p103-105"
+    },
+    {
+     "en": "AB != BA in general; so (A+B)^2 != A^2 + 2AB + B^2 and A^2 - B^2 != (A-B)(A+B).",
+     "ar": "أ.ب ≠ ب.أ عموماً؛ لذلك لا تنطبق متطابقات الأعداد مثل أ² − ب² = (أ − ب)(أ + ب).",
+     "source": "Act.3 p105, Q5 p107"
+    },
+    {
+     "en": "Cannot cancel: AB = AC does not give B = C.",
+     "ar": "لا يجوز الاختصار: أ.ب = أ.جـ لا يعني ب = جـ.",
+     "source": "Ex.11 p106"
+    },
+    {
+     "en": "Matrix multiplication is not entry-by-entry multiplication.",
+     "ar": "ضرب المصفوفات ليس ضرب المدخلات المتناظرة.",
+     "source": "def p103"
+    }
+   ]
+  },
+  {
+   "id": "3-3",
+   "title": {
+    "ar": "المحدّدات",
+    "en": "Determinants"
+   },
+   "printed_pages": [
+    108,
+    113
+   ],
+   "pdf_pages": [
+    112,
+    117
+   ],
+   "branch_notes": [
+    "Determinants are studied only for square matrices of order 1, 2 and 3 (p108)."
+   ],
+   "concepts": [
+    {
+     "id": "u3.determinant",
+     "name": {
+      "ar": "المحدّدة (محدد المصفوفة)",
+      "en": "determinant of a square matrix"
+     }
+    },
+    {
+     "id": "u3.det_2x2",
+     "name": {
+      "ar": "محدد المصفوفة من الرتبة الثانية",
+      "en": "2x2 determinant"
+     }
+    },
+    {
+     "id": "u3.det_3x3",
+     "name": {
+      "ar": "محدد المصفوفة من الرتبة الثالثة",
+      "en": "3x3 determinant"
+     }
+    },
+    {
+     "id": "u3.cofactor_expansion",
+     "name": {
+      "ar": "فك المحدد بدلالة صف أو عمود",
+      "en": "expansion along any row or column (sign (-1)^(i+j))"
+     }
+    },
+    {
+     "id": "u3.det_properties",
+     "name": {
+      "ar": "خصائص المحددات",
+      "en": "properties of determinants"
+     }
+    },
+    {
+     "id": "u3.det_scalar_rule",
+     "name": {
+      "ar": "محدد ك أ",
+      "en": "determinant of kA"
+     }
+    },
+    {
+     "id": "u3.det_product_rule",
+     "name": {
+      "ar": "محدد حاصل الضرب",
+      "en": "determinant of a product"
+     }
+    },
+    {
+     "id": "u3.det_equation",
+     "name": {
+      "ar": "معادلات المحددات",
+      "en": "solving equations involving determinants"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u3.def.determinant",
+     "concept": "u3.determinant",
+     "page": 108,
+     "statement": {
+      "ar": "المحدد اقتران يربط كل مصفوفة مربعة بعدد حقيقي يرمز له |أ|: للرتبة الأولى |أ| = أ١١، وللثانية أ١١أ٢٢ − أ٢١أ١٢، وللثالثة بالفك على الصف الأول.",
+      "en": "The determinant maps each square matrix to a real number |A|. Order 1: |A| = a11. Order 2: a11 a22 - a21 a12. Order 3: expand along row 1 with alternating signs."
+     },
+     "latex": "\\begin{vmatrix}a_{1 1}&a_{1 2}\\\\a_{2 1}&a_{2 2}\\end{vmatrix}=a_{1 1}a_{2 2}-a_{2 1}a_{1 2},\\qquad \\lvert A\\rvert=a_{1 1}\\begin{vmatrix}a_{2 2}&a_{2 3}\\\\a_{3 2}&a_{3 3}\\end{vmatrix}-a_{1 2}\\begin{vmatrix}a_{2 1}&a_{2 3}\\\\a_{3 1}&a_{3 3}\\end{vmatrix}+a_{1 3}\\begin{vmatrix}a_{2 1}&a_{2 2}\\\\a_{3 1}&a_{3 2}\\end{vmatrix}",
+     "conditions": "square matrices of order 1, 2, 3 only (in this book)"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u3.thm.expansion_any_row",
+     "kind": "theorem",
+     "concept": "u3.cofactor_expansion",
+     "page": 109,
+     "statement": {
+      "ar": "يمكن إيجاد محدد مصفوفة من الرتبة الثالثة بالفك على أي صف أو أي عمود: كل مدخلة تضرب في المحدد الناتج من شطب صفها وعمودها، بإشارة (−١)^(ي+هـ).",
+      "en": "A 3x3 determinant can be expanded along any row or column: each entry times the 2x2 determinant left after deleting its row and column, with sign (-1)^(i+j)."
+     },
+     "latex": "\\lvert A\\rvert=\\sum_{j=1}^{3}(-1)^{i+j}a_{i j}\\,\\lvert M_{i j}\\rvert",
+     "conditions": "choose the row/column with most zeros"
+    },
+    {
+     "id": "u3.prop.swap",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 110,
+     "statement": {
+      "ar": "تبديل صف مكان صف (أو عمود مكان عمود) يضرب قيمة المحدد في −١.",
+      "en": "Swapping two rows (or two columns) multiplies the determinant by -1."
+     },
+     "latex": "\\begin{vmatrix}4&3\\\\5&1\\end{vmatrix}=(-1)\\begin{vmatrix}3&4\\\\1&5\\end{vmatrix}",
+     "conditions": null
+    },
+    {
+     "id": "u3.prop.common_factor",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 110,
+     "statement": {
+      "ar": "يمكن إخراج عامل مشترك من أي صف أو أي عمود.",
+      "en": "A common factor of one row (or column) can be taken outside the determinant."
+     },
+     "latex": "\\begin{vmatrix}1&2&-3\\\\2&7&9\\\\3&6&15\\end{vmatrix}=3\\begin{vmatrix}1&2&-3\\\\2&7&9\\\\1&2&5\\end{vmatrix}",
+     "conditions": "factor from ONE row/column at a time"
+    },
+    {
+     "id": "u3.prop.row_addition",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 110,
+     "statement": {
+      "ar": "إضافة مضاعفات صف (أو عمود) إلى صف (أو عمود) آخر لا تغير قيمة المحدد.",
+      "en": "Adding a multiple of one row (column) to another row (column) does not change the determinant."
+     },
+     "latex": null,
+     "conditions": null
+    },
+    {
+     "id": "u3.prop.equal_rows",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 111,
+     "statement": {
+      "ar": "إذا تساوت المدخلات المتناظرة في صفين أو عمودين فإن المحدد = صفر.",
+      "en": "If two rows (or two columns) are identical, the determinant is 0."
+     },
+     "latex": null,
+     "conditions": null
+    },
+    {
+     "id": "u3.prop.triangular",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 111,
+     "statement": {
+      "ar": "محدد المصفوفة المثلثية العلوية = حاصل ضرب مدخلات القطر الرئيسي.",
+      "en": "The determinant of an upper triangular matrix equals the product of its main-diagonal entries."
+     },
+     "latex": "\\lvert A\\rvert=a_{1 1}\\,a_{2 2}\\,a_{3 3}",
+     "conditions": "upper triangular"
+    },
+    {
+     "id": "u3.prop.zero_row",
+     "kind": "property",
+     "concept": "u3.det_properties",
+     "page": 111,
+     "statement": {
+      "ar": "(فكر وناقش) إذا احتوت المصفوفة على صف أو عمود كل مدخلاته أصفار فمحددها صفر.",
+      "en": "(Think and discuss) A row or column of zeros gives determinant 0."
+     },
+     "latex": null,
+     "conditions": null
+    },
+    {
+     "id": "u3.rule.det_kA",
+     "kind": "rule",
+     "concept": "u3.det_scalar_rule",
+     "page": 111,
+     "label": "قاعدة (١)",
+     "statement": {
+      "ar": "إذا كانت أ مربعة من الرتبة ن و ك عدد حقيقي فإن |ك أ| = كⁿ |أ|.",
+      "en": "For a square matrix of order n and real k: |kA| = k^n |A|."
+     },
+     "latex": "\\lvert kA\\rvert=k^{n}\\lvert A\\rvert",
+     "conditions": "A of order n"
+    },
+    {
+     "id": "u3.rule.det_AB",
+     "kind": "rule",
+     "concept": "u3.det_product_rule",
+     "page": 112,
+     "label": "قاعدة (٢)",
+     "statement": {
+      "ar": "إذا كانت أ، ب مربعتين من الرتبة ن فإن |أ.ب| = |أ| × |ب|.",
+      "en": "For square A, B of the same order: |AB| = |A| |B|."
+     },
+     "latex": "\\lvert AB\\rvert=\\lvert A\\rvert\\,\\lvert B\\rvert",
+     "conditions": "both square, same order (Act.3: fails to apply when A, B are not square, e.g. 1x2 and 2x1)"
+    }
+   ],
+   "activities": [
+    {
+     "id": "3-3.act1",
+     "page": 108,
+     "asks": "Encode a number a as boxes x, y, l, z with a = xz - yl; non-uniqueness; write three 2x2 matrices encoding 0.",
+     "method": "Introduces the 2x2 determinant formula informally."
+    },
+    {
+     "id": "3-3.act2",
+     "page": 111,
+     "asks": "For a 2x2 A compute |A|, |2A| (= 4|A| = 2^2|A|), |-3A|, |kA|.",
+     "method": "Discover |kA| = k^n |A|."
+    },
+    {
+     "id": "3-3.act3",
+     "page": 112,
+     "asks": "X = [4 5] (1x2), Y = [2;3]: |XY| = 23; find YX and |YX|.",
+     "method": "Shows |XY| != |YX| when the factors are not square (|YX| = 0)."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "3-3.ex1",
+     "page": 109,
+     "type": "evaluate_det_2x2",
+     "asks": "|A|, |B|, |A+B| for 2x2 matrices.",
+     "method": "a11 a22 - a21 a12.",
+     "key_steps": [
+      "|A| = -13",
+      "|B| = -11",
+      "|A+B| = 3 != |A| + |B|"
+     ]
+    },
+    {
+     "id": "3-3.ex2",
+     "page": 109,
+     "type": "evaluate_det_3x3",
+     "asks": "3x3 determinant by the definition and by expansion along column 2.",
+     "method": "Cofactor expansion with sign pattern.",
+     "key_steps": [
+      "both give 13"
+     ]
+    },
+    {
+     "id": "3-3.ex3",
+     "page": 110,
+     "type": "det_equation_solve",
+     "asks": "Find x with a 3x3 determinant (row 3 = 0, 0, 5) equal to 20.",
+     "method": "Expand along the row with zeros.",
+     "key_steps": [
+      "5(x - 4) = 20",
+      "x = 8"
+     ]
+    },
+    {
+     "id": "3-3.ex4",
+     "page": 111,
+     "type": "find_order_from_det",
+     "asks": "|A| = 5, |2A| = 40: order of A.",
+     "method": "|2A| = 2^n |A|.",
+     "key_steps": [
+      "2^n = 8",
+      "n = 3"
+     ]
+    },
+    {
+     "id": "3-3.ex5",
+     "page": 112,
+     "type": "det_of_product",
+     "asks": "|AB| for 2x2 A, B.",
+     "method": "|A||B| (or multiply then evaluate).",
+     "key_steps": [
+      "|A| = -2, |B| = -10",
+      "|AB| = 20"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٣-٣",
+     "page": 113,
+     "items": [
+      {
+       "n": 1,
+       "type": "evaluate_det",
+       "asks": "a) 3x3 with two equal rows; b) 2x2; c) |5 I_3|."
+      },
+      {
+       "n": 2,
+       "type": "det_equation_solve",
+       "asks": "3x3 determinant containing x equals a 2x2 determinant containing x: solve."
+      },
+      {
+       "n": 3,
+       "type": "det_rules_numeric",
+       "asks": "A, B 2x2 with |3A| = 54, |AB| = -12: find |2A| + |5B|."
+      },
+      {
+       "n": 4,
+       "type": "det_rules_numeric",
+       "asks": "A = [[x,2],[2,x]], |A^3| = 125: find x."
+      },
+      {
+       "n": 5,
+       "type": "det_application_line",
+       "asks": "Equation of the line through two points as det[[x,y,1],[x1,y1,1],[x2,y2,1]] = 0; apply to two given points."
+      },
+      {
+       "n": 6,
+       "type": "name_det_property",
+       "asks": "Name the property used in each equality (row operation, proportional/equal rows -> 0, column swap)."
+      },
+      {
+       "n": 7,
+       "type": "prove_with_properties",
+       "asks": "a) det[[b+c,a,1],[a+b,c,1],[a+c,b,1]] = 0; b) triangular determinant = -200."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "3-1",
+     "3-2"
+    ],
+    "concepts": [
+     "u3.square_matrix",
+     "u3.upper_triangular",
+     "u3.scalar_multiplication",
+     "u3.matrix_multiplication"
+    ],
+    "grade11": [
+     "equation of a straight line through two points (for Q5)",
+     "solving polynomial equations"
+    ]
+   },
+   "exclusions": [
+    "Only orders 1, 2, 3 are studied (p108)."
+   ],
+   "pitfalls": [
+    {
+     "en": "|A + B| is not |A| + |B|.",
+     "ar": "|أ + ب| ≠ |أ| + |ب| عموماً.",
+     "source": "Ex.1 p109"
+    },
+    {
+     "en": "Sign pattern (-1)^(i+j) when expanding along a row/column other than row 1.",
+     "ar": "انتبه لإشارة (−١)^(ي+هـ) عند الفك على أي صف أو عمود.",
+     "source": "theorem p109"
+    },
+    {
+     "en": "|kA| = k^n |A|, not k|A| (a common factor comes out once per row).",
+     "ar": "|ك أ| = كⁿ|أ| وليس ك|أ|.",
+     "source": "rule 1 p111"
+    },
+    {
+     "en": "|AB| = |A||B| requires square matrices of the same order.",
+     "ar": "قاعدة |أ.ب| = |أ||ب| للمصفوفات المربعة من نفس الرتبة فقط.",
+     "source": "Act.3 p112"
+    },
+    {
+     "en": "Expand along the row/column with the most zeros to save work.",
+     "ar": "اختر الصف أو العمود الذي يحوي أكبر عدد من الأصفار.",
+     "source": "Ex.3 p110"
+    }
+   ]
+  },
+  {
+   "id": "3-4",
+   "title": {
+    "ar": "النظير الضربي للمصفوفة المربعة",
+    "en": "Inverse of a Square Matrix"
+   },
+   "printed_pages": [
+    114,
+    119
+   ],
+   "pdf_pages": [
+    118,
+    123
+   ],
+   "branch_notes": [
+    "Finding the inverse is limited to 2x2 matrices (p117). The proof of (AB)^-1 = B^-1 A^-1 is boxed 'البرهان للمعرفة فقط' (for knowledge only) (p116)."
+   ],
+   "concepts": [
+    {
+     "id": "u3.inverse_matrix",
+     "name": {
+      "ar": "النظير الضربي للمصفوفة",
+      "en": "multiplicative inverse of a matrix"
+     }
+    },
+    {
+     "id": "u3.nonsingular_matrix",
+     "name": {
+      "ar": "المصفوفة غير المنفردة",
+      "en": "nonsingular (invertible) matrix"
+     }
+    },
+    {
+     "id": "u3.singular_matrix",
+     "name": {
+      "ar": "المصفوفة المنفردة",
+      "en": "singular matrix"
+     }
+    },
+    {
+     "id": "u3.singular_iff_det_zero",
+     "name": {
+      "ar": "المنفردة إذا وفقط إذا كان المحدد صفراً",
+      "en": "singular iff determinant is zero"
+     }
+    },
+    {
+     "id": "u3.inverse_properties",
+     "name": {
+      "ar": "خصائص النظير الضربي",
+      "en": "properties of the inverse"
+     }
+    },
+    {
+     "id": "u3.inverse_2x2_formula",
+     "name": {
+      "ar": "قاعدة النظير الضربي للمصفوفة ٢×٢",
+      "en": "inverse formula for 2x2"
+     }
+    },
+    {
+     "id": "u3.det_of_inverse",
+     "name": {
+      "ar": "محدد النظير الضربي",
+      "en": "determinant of the inverse"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u3.def.nonsingular_inverse",
+     "concept": "u3.inverse_matrix",
+     "page": 114,
+     "statement": {
+      "ar": "تسمى المصفوفة المربعة أ غير منفردة إذا وجدت مصفوفة مربعة ب من نفس الرتبة بحيث أ.ب = ب.أ = م، وتسمى ب النظير الضربي لـ أ ويرمز له أ⁻¹.",
+      "en": "A square matrix A is nonsingular if there is a square B of the same order with AB = BA = I; B is the multiplicative inverse A^-1, and A A^-1 = A^-1 A = I."
+     },
+     "latex": "AA^{-1}=A^{-1}A=I",
+     "conditions": "square, same order, both products must give I"
+    },
+    {
+     "id": "u3.def.singular",
+     "concept": "u3.singular_matrix",
+     "page": 115,
+     "statement": {
+      "ar": "المصفوفة المنفردة هي المصفوفة المربعة التي لا يوجد لها نظير ضربي.",
+      "en": "A singular matrix is a square matrix with no multiplicative inverse."
+     },
+     "latex": null,
+     "conditions": null
+    }
+   ],
+   "rules": [
+    {
+     "id": "u3.thm.singular_iff_det0",
+     "kind": "theorem",
+     "concept": "u3.singular_iff_det_zero",
+     "page": 115,
+     "statement": {
+      "ar": "المصفوفة أ منفردة إذا وفقط إذا كان |أ| = ٠.",
+      "en": "A is singular if and only if |A| = 0."
+     },
+     "latex": "A \\text{ singular} \\iff \\lvert A\\rvert=0",
+     "conditions": "square A"
+    },
+    {
+     "id": "u3.prop.inverse",
+     "kind": "properties",
+     "concept": "u3.inverse_properties",
+     "page": 116,
+     "statement": {
+      "ar": "إذا كانت أ، ب مربعتين غير منفردتين من نفس الرتبة و ك ≠ ٠: (أ⁻¹)⁻¹ = أ، (ك أ)⁻¹ = (١/ك) أ⁻¹، (أ.ب)⁻¹ = ب⁻¹.أ⁻¹.",
+      "en": "For nonsingular A, B of the same order and real k != 0: (A^-1)^-1 = A; (kA)^-1 = (1/k) A^-1; (AB)^-1 = B^-1 A^-1 (order reverses)."
+     },
+     "latex": "(A^{-1})^{-1}=A;\\quad (kA)^{-1}=\\frac{1}{k}A^{-1};\\quad (AB)^{-1}=B^{-1}A^{-1}",
+     "conditions": "A, B nonsingular, k != 0",
+     "proof_note": "Proof of the third property shown, marked for knowledge only (للمعرفة فقط)."
+    },
+    {
+     "id": "u3.rule.inverse_2x2",
+     "kind": "generalisation",
+     "concept": "u3.inverse_2x2_formula",
+     "page": 117,
+     "label": "تعميم",
+     "statement": {
+      "ar": "إذا كانت أ = [أ١١ أ١٢ ؛ أ٢١ أ٢٢] غير منفردة فإن أ⁻¹ = (١/|أ|) × المصفوفة الناتجة من تبديل مدخلتي القطر الرئيسي وتغيير إشارة مدخلتي القطر الآخر.",
+      "en": "If A = [[a11, a12], [a21, a22]] is nonsingular, A^-1 = (1/|A|) [[a22, -a12], [-a21, a11]]: swap the main-diagonal entries, negate the other two, divide by |A|."
+     },
+     "latex": "A^{-1}=\\frac{1}{\\lvert A\\rvert}\\begin{bmatrix}a_{2 2}&-a_{1 2}\\\\-a_{2 1}&a_{1 1}\\end{bmatrix}",
+     "conditions": "|A| != 0; order 2 only"
+    },
+    {
+     "id": "u3.rule.det_inverse",
+     "kind": "rule",
+     "concept": "u3.det_of_inverse",
+     "page": 118,
+     "statement": {
+      "ar": "(نشاط ٣) |أ⁻¹| = ١/|أ| للمصفوفة غير المنفردة.",
+      "en": "(Activity 3) |A^-1| = 1/|A| for nonsingular A (follows from |A||A^-1| = |I| = 1)."
+     },
+     "latex": "\\lvert A^{-1}\\rvert=\\frac{1}{\\lvert A\\rvert}",
+     "conditions": "|A| != 0"
+    },
+    {
+     "id": "u3.rule.left_cancellation",
+     "kind": "property",
+     "concept": "u3.inverse_properties",
+     "page": 119,
+     "statement": {
+      "ar": "(تمرين ٧) إذا كانت أ غير منفردة و أ.ب = أ.جـ فإن ب = جـ.",
+      "en": "(Exercise Q7) If A is nonsingular and AB = AC then B = C (multiply on the left by A^-1)."
+     },
+     "latex": "AB=AC,\\ \\lvert A\\rvert\\ne0\\ \\Rightarrow\\ B=C",
+     "conditions": "A nonsingular"
+    }
+   ],
+   "activities": [
+    {
+     "id": "3-4.act1",
+     "page": 114,
+     "asks": "A = [[5,-4],[4,-2]], |A| = 6, B = (1/6)[[-2,4],[-4,5]]: compute AB and BA.",
+     "method": "Both give I_2 -> idea of inverse."
+    },
+    {
+     "id": "3-4.act2",
+     "page": 115,
+     "asks": "3x3 A and B: verify AB = I_3, compute BA.",
+     "method": "Inverse checked by multiplication (3x3 only verified, never computed)."
+    },
+    {
+     "id": "3-4.act3",
+     "page": 118,
+     "asks": "Relation between |A^-1| and |A| from examples; always true? Explain.",
+     "method": "Discover |A^-1| = 1/|A|."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "3-4.ex1",
+     "page": 114,
+     "type": "verify_inverse",
+     "asks": "Is B the inverse of A?",
+     "method": "Compute AB and BA; both must be I.",
+     "key_steps": [
+      "AB = I_2",
+      "BA = I_2",
+      "so B = A^-1"
+     ]
+    },
+    {
+     "id": "3-4.ex2",
+     "page": 115,
+     "type": "prove_no_inverse_by_definition",
+     "asks": "Does X = [[3,2],[0,0]] have an inverse?",
+     "method": "Assume Y = [[a,b],[c,d]]; XY has a zero row so it can never equal I.",
+     "key_steps": [
+      "no inverse"
+     ]
+    },
+    {
+     "id": "3-4.ex3",
+     "page": 116,
+     "type": "classify_singular",
+     "asks": "Which of a 2x2 and a 3x3 matrix are singular?",
+     "method": "Evaluate the determinant.",
+     "key_steps": [
+      "|A| = 32 -> nonsingular",
+      "|B| = 0 -> singular"
+     ]
+    },
+    {
+     "id": "3-4.ex4",
+     "page": 116,
+     "type": "parameter_for_singular",
+     "asks": "x making [[2,8],[3,x+1]] singular.",
+     "method": "Set |A| = 0.",
+     "key_steps": [
+      "2(x+1) - 24 = 0",
+      "x = 11"
+     ]
+    },
+    {
+     "id": "3-4.ex5",
+     "page": 117,
+     "type": "find_inverse_by_equations",
+     "asks": "Inverse of [[5,3],[6,4]] by assuming an unknown matrix.",
+     "method": "A A^-1 = I and A^-1 A = I give linear equations.",
+     "key_steps": [
+      "A^-1 = [[2,-3/2],[-3,5/2]]"
+     ]
+    },
+    {
+     "id": "3-4.ex6",
+     "page": 118,
+     "type": "find_inverse_2x2_formula",
+     "asks": "X = [[2,2],[3,-1]]: find X^-1 if possible.",
+     "method": "|X| = -8 != 0, apply the 2x2 formula.",
+     "key_steps": [
+      "X^-1 = (1/-8)[[-1,-2],[-3,2]] = [[1/8,1/4],[3/8,-1/4]]"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٣-٤",
+     "page": 119,
+     "items": [
+      {
+       "n": 1,
+       "type": "classify_singular",
+       "asks": "Which matrices have an inverse: 2x2 numeric, [[sin x, 3],[-1, 1]] (det = sin x + 3, never 0), [[3,3],[3,3]], a 3x3."
+      },
+      {
+       "n": 2,
+       "type": "parameter_for_singular",
+       "asks": "Values of k making [[k,k],[4,2k]] and [[k,4],[1,k]] singular."
+      },
+      {
+       "n": 3,
+       "type": "find_inverse_2x2_formula",
+       "asks": "A^-1 and (A^-1)^-1."
+      },
+      {
+       "n": 4,
+       "type": "det_inverse_parameter",
+       "asks": "A = [[x,5],[2,3]], |A^-1| = 1/5: find x."
+      },
+      {
+       "n": 5,
+       "type": "det_inverse_parameter",
+       "asks": "|A^-1| = |A|: find the value(s) of xy."
+      },
+      {
+       "n": 6,
+       "type": "matrix_equation_inverse",
+       "asks": "AC = B: find C^-1 (use C = A^-1 B or (A^-1 B)^-1 = B^-1 A)."
+      },
+      {
+       "n": 7,
+       "type": "proof",
+       "asks": "A nonsingular and AB = AC: prove B = C."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "3-2",
+     "3-3"
+    ],
+    "concepts": [
+     "u3.identity_matrix",
+     "u3.matrix_multiplication",
+     "u3.det_2x2",
+     "u3.det_3x3",
+     "u3.det_product_rule"
+    ],
+    "grade11": [
+     "reciprocal of a real number",
+     "sin x bounded between -1 and 1 (Ex.Q1)"
+    ]
+   },
+   "exclusions": [
+    "Computing inverses limited to order 2 (p117).",
+    "Proof of (AB)^-1 = B^-1 A^-1 is for knowledge only (p116)."
+   ],
+   "pitfalls": [
+    {
+     "en": "An inverse must work on both sides: AB = I and BA = I.",
+     "ar": "يجب أن يكون أ.ب = ب.أ = م.",
+     "source": "def p114"
+    },
+    {
+     "en": "(AB)^-1 = B^-1 A^-1, the order reverses.",
+     "ar": "(أ.ب)⁻¹ = ب⁻¹.أ⁻¹ (الترتيب ينعكس).",
+     "source": "p116"
+    },
+    {
+     "en": "(kA)^-1 = (1/k) A^-1, not k A^-1.",
+     "ar": "(ك أ)⁻¹ = (١/ك) أ⁻¹.",
+     "source": "p116"
+    },
+    {
+     "en": "Check |A| != 0 before applying the formula; divide by |A| including its sign.",
+     "ar": "تحقق من |أ| ≠ ٠ قبل استخدام القاعدة، وانتبه لإشارة المحدد.",
+     "source": "Ex.6 p118"
+    },
+    {
+     "en": "Swap the MAIN diagonal and negate the OTHER diagonal (not the reverse).",
+     "ar": "نبدل مدخلتي القطر الرئيسي ونغير إشارة مدخلتي القطر الآخر.",
+     "source": "p117"
+    }
+   ]
+  },
+  {
+   "id": "3-5",
+   "title": {
+    "ar": "حل أنظمة المعادلات الخطية باستخدام المصفوفات",
+    "en": "Solving Systems of Linear Equations"
+   },
+   "printed_pages": [
+    120,
+    125
+   ],
+   "pdf_pages": [
+    124,
+    129
+   ],
+   "branch_notes": [
+    "The lesson header carries the badge 'للعلمي فقط' (Scientific branch only) (p120).",
+    "Footnote p120 (asterisk on methods 1 and 2): systems of two linear equations only are solved by the inverse-matrix and Cramer methods.", "Observation (not footnote text): the lesson's Gauss examples and exercises cover both 2- and 3-unknown systems (worked examples p124, exercises p125)."
+   ],
+   "concepts": [
+    {
+     "id": "u3.system_matrix_form",
+     "name": {
+      "ar": "الصورة المصفوفية للنظام أ.ك = جـ",
+      "en": "matrix form AK = C (coefficient, variable, constant matrices)"
+     }
+    },
+    {
+     "id": "u3.inverse_method",
+     "name": {
+      "ar": "طريقة النظير الضربي",
+      "en": "inverse-matrix method"
+     }
+    },
+    {
+     "id": "u3.cramer_rule",
+     "name": {
+      "ar": "طريقة كريمر",
+      "en": "Cramer's rule"
+     }
+    },
+    {
+     "id": "u3.gauss_elimination",
+     "name": {
+      "ar": "طريقة جاوس",
+      "en": "Gauss elimination"
+     }
+    },
+    {
+     "id": "u3.augmented_matrix",
+     "name": {
+      "ar": "المصفوفة الممتدة",
+      "en": "augmented matrix"
+     }
+    },
+    {
+     "id": "u3.elementary_row_operations",
+     "name": {
+      "ar": "العمليات على الصفوف",
+      "en": "elementary row operations"
+     }
+    },
+    {
+     "id": "u3.back_substitution",
+     "name": {
+      "ar": "التعويض العكسي",
+      "en": "back substitution"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u3.def.matrix_form",
+     "concept": "u3.system_matrix_form",
+     "page": 121,
+     "statement": {
+      "ar": "يمثل نظام المعادلات الخطية بمعادلة مصفوفية أ.ك = جـ حيث أ مصفوفة المعاملات، ك مصفوفة المتغيرات، جـ مصفوفة الثوابت.",
+      "en": "A linear system is written AK = C: A coefficient matrix, K column of variables, C column of constants."
+     },
+     "latex": "\\begin{bmatrix}2&3\\\\-3&5\\end{bmatrix}\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\begin{bmatrix}10\\\\4\\end{bmatrix}",
+     "conditions": "number of equations = number of unknowns, unique solution"
+    },
+    {
+     "id": "u3.def.augmented",
+     "concept": "u3.augmented_matrix",
+     "page": 123,
+     "statement": {
+      "ar": "المصفوفة الممتدة تضم المعاملات وعمود الثوابت مفصولاً بخط.",
+      "en": "The augmented matrix [A | C] contains the coefficients and the constants column separated by a bar."
+     },
+     "latex": "\\left[\\begin{array}{ccc|c}a_{1 1}&a_{1 2}&a_{1 3}&c_{1}\\\\a_{2 1}&a_{2 2}&a_{2 3}&c_{2}\\\\a_{3 1}&a_{3 2}&a_{3 3}&c_{3}\\end{array}\\right]",
+     "conditions": null
+    }
+   ],
+   "rules": [
+    {
+     "id": "u3.rule.inverse_method",
+     "kind": "method",
+     "concept": "u3.inverse_method",
+     "page": 121,
+     "statement": {
+      "ar": "من أ.ك = جـ يكون ك = أ⁻¹.جـ بشرط أن تكون أ غير منفردة.",
+      "en": "From AK = C, K = A^-1 C provided A is nonsingular (multiply on the LEFT by A^-1)."
+     },
+     "latex": "AK=C\\ \\Rightarrow\\ K=A^{-1}C",
+     "conditions": "|A| != 0; two equations only (footnote)"
+    },
+    {
+     "id": "u3.rule.cramer",
+     "kind": "method",
+     "concept": "u3.cramer_rule",
+     "page": 122,
+     "statement": {
+      "ar": "س = |أ_س| / |أ| ، ص = |أ_ص| / |أ| حيث أ_س ناتجة من استبدال عمود معاملات س بعمود الثوابت، و أ_ص باستبدال عمود معاملات ص.",
+      "en": "x = |A_x| / |A|, y = |A_y| / |A|, where A_x (A_y) is A with the x-column (y-column) replaced by the constants column."
+     },
+     "latex": "x=\\frac{\\lvert A_{x}\\rvert}{\\lvert A\\rvert},\\qquad y=\\frac{\\lvert A_{y}\\rvert}{\\lvert A\\rvert}",
+     "conditions": "|A| != 0; two equations only (footnote)"
+    },
+    {
+     "id": "u3.rule.row_operations",
+     "kind": "method",
+     "concept": "u3.elementary_row_operations",
+     "page": 123,
+     "statement": {
+      "ar": "العمليات المسموحة على صفوف المصفوفة الممتدة: تبديل صف مكان صف، ضرب صف بعدد لا يساوي صفراً، ضرب صف بعدد لا يساوي صفراً وإضافته إلى صف آخر.",
+      "en": "Allowed operations on the augmented matrix: swap two rows; multiply a row by a nonzero number; add a nonzero multiple of a row to another row."
+     },
+     "latex": "R_{2}\\to R_{2}+kR_{1}",
+     "conditions": null
+    },
+    {
+     "id": "u3.rule.gauss",
+     "kind": "method",
+     "concept": "u3.gauss_elimination",
+     "page": 123,
+     "statement": {
+      "ar": "نحوّل المصفوفة الممتدة بالعمليات على الصفوف إلى مصفوفة مثلثية علوية، فنجد ع أولاً ثم ص ثم س بالتعويض العكسي. إذا كانت أ١١ = ٠ نبدل الصف الأول بصف مدخلته الأولى ≠ ٠.",
+      "en": "Reduce the augmented matrix to upper triangular form with row operations, find the last variable (z) first, then back-substitute for y and x. If a11 = 0, swap row 1 with a row whose first entry is nonzero."
+     },
+     "latex": null,
+     "conditions": null
+    }
+   ],
+   "activities": [
+    {
+     "id": "3-5.act1",
+     "page": 120,
+     "asks": "Wheat/barley bag prices: 3x + 5y = 140, 5x - 4y = 36; write A, K, C and AK = C.",
+     "method": "Modelling a word problem as a matrix equation."
+    },
+    {
+     "id": "3-5.act2",
+     "page": 122,
+     "asks": "3x - by = 3, bx - 3y = b with b > 3: sign of |A|, A^-1, y.",
+     "method": "Inverse method with a parameter (|A| = b^2 - 9 > 0)."
+    },
+    {
+     "id": "3-5.act3",
+     "page": 123,
+     "asks": "Given A_x and A_y of a 2x2 system, recover the coefficient matrix, x and y.",
+     "method": "Reverse Cramer: columns of A_x/A_y reveal A and C."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "3-5.ex1",
+     "page": 121,
+     "type": "solve_system_inverse",
+     "asks": "2x + y = -1, 4x + y = 1 by the inverse method.",
+     "method": "|A| = -2, A^-1 by formula, K = A^-1 C.",
+     "key_steps": [
+      "x = 1",
+      "y = -3"
+     ]
+    },
+    {
+     "id": "3-5.ex2",
+     "page": 122,
+     "type": "solve_system_cramer",
+     "asks": "3x + 5y = 1, 2x + 3y = 0 by Cramer.",
+     "method": "|A| = -1, |A_x| = 3, |A_y| = -2.",
+     "key_steps": [
+      "x = -3",
+      "y = 2"
+     ]
+    },
+    {
+     "id": "3-5.ex3",
+     "page": 124,
+     "type": "solve_system_gauss_2x2",
+     "asks": "3x + 7y = 10, 2x - 5y = -3 by Gauss.",
+     "method": "R2 + (-2/3) R1, then back substitution.",
+     "key_steps": [
+      "(-29/3) y = -29/3 -> y = 1",
+      "x = 1"
+     ]
+    },
+    {
+     "id": "3-5.ex4",
+     "page": 124,
+     "type": "solve_system_gauss_3x3",
+     "asks": "x + y - z = 9, y + 3z = 3, -x - 2z = 2 by Gauss.",
+     "method": "R3 + R1, R3 - R2 to upper triangular; back substitute.",
+     "key_steps": [
+      "-6z = 8 -> z = -4/3",
+      "y = 7",
+      "x = 2/3"
+     ]
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 121,
+     "asks": "What happens if the two equations are written in the other order? (same solution)"
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٣-٥",
+     "page": 125,
+     "items": [
+      {
+       "n": 1,
+       "type": "solve_system_inverse",
+       "asks": "Two 2x2 systems by the inverse method."
+      },
+      {
+       "n": 2,
+       "type": "solve_system_cramer",
+       "asks": "Two 2x2 systems by Cramer."
+      },
+      {
+       "n": 3,
+       "type": "cramer_reverse",
+       "asks": "Given A and A_x, find x and y."
+      },
+      {
+       "n": 4,
+       "type": "solve_system_gauss",
+       "asks": "a) 2x2 system; b) 3x3 system (x - y + z = 6, x + 2y + z = 3, 2x + y - z = 0) by Gauss."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "3-2",
+     "3-3",
+     "3-4"
+    ],
+    "concepts": [
+     "u3.matrix_multiplication",
+     "u3.matrix_equality",
+     "u3.det_2x2",
+     "u3.inverse_2x2_formula",
+     "u3.upper_triangular"
+    ],
+    "grade11": [
+     "solving linear systems by elimination and substitution (explicitly recalled p120)",
+     "forming equations from word problems"
+    ]
+   },
+   "exclusions": [
+    "Whole lesson: Scientific branch only (للعلمي فقط).",
+    "Inverse and Cramer methods: systems of two equations only."
+   ],
+   "pitfalls": [
+    {
+     "en": "K = A^-1 C, not C A^-1 (C is a column; order matters).",
+     "ar": "ك = أ⁻¹.جـ وليس جـ.أ⁻¹.",
+     "source": "p121"
+    },
+    {
+     "en": "Write each equation with variables in the same order before forming A; reordering equations is fine.",
+     "ar": "رتب المتغيرات بالترتيب نفسه في كل معادلة قبل كتابة مصفوفة المعاملات.",
+     "source": "think & discuss p121; Q10 p128 (5y + x = 3)"
+    },
+    {
+     "en": "In Cramer, A_x replaces the x-coefficient column (not the row) by the constants.",
+     "ar": "في كريمر يستبدل عمود معاملات س (وليس صفها) بعمود الثوابت.",
+     "source": "p122"
+    },
+    {
+     "en": "Methods need |A| != 0.",
+     "ar": "تتطلب الطريقتان |أ| ≠ ٠.",
+     "source": "p121-122"
+    }
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "set": "تمارين عامة (الوحدة الثالثة)",
+  "printed_pages": [
+   126,
+   128
+  ],
+  "pdf_pages": [
+   130,
+   132
+  ],
+  "items": [
+   {
+    "n": 1,
+    "type": "mcq",
+    "count": 10,
+    "parts": [
+     {
+      "n": 1,
+      "lessons": [
+       "3-1"
+      ],
+      "asks": "a21 - a13 for the 3x3 matrix with rows [4,-1,5], [6,-3,9], [2,7,-1] (printed أ١٢ - أ٣١, read with the right-to-left convention): 6 - 5 = 1, option ج. Trap: the literal reading a12 - a31 = -3 is option د."
+     },
+     {
+      "n": 2,
+      "lessons": [
+       "3-1"
+      ],
+      "asks": "Equality with x^2 + x = 6 and x = 2: set of x values."
+     },
+     {
+      "n": 3,
+      "lessons": [
+       "3-2"
+      ],
+      "asks": "Value of 22A - 5(A + 2B) + 27B (= 17(A + B))."
+     },
+     {
+      "n": 4,
+      "lessons": [
+       "3-3",
+       "3-4"
+      ],
+      "asks": "Always-true statement for nonsingular A, B (|2A| = 4|A|? |A+B| = |A|+|B|? AB = BA? |BA^-1| = |B|/|A|)."
+     },
+     {
+      "n": 5,
+      "lessons": [
+       "3-4"
+      ],
+      "asks": "XY = YX = I: which statement is always true (X^-1 = Y)."
+     },
+     {
+      "n": 6,
+      "lessons": [
+       "3-2"
+      ],
+      "asks": "X [1;2] = [1;2]: what can X be."
+     },
+     {
+      "n": 7,
+      "lessons": [
+       "3-4"
+      ],
+      "asks": "A^-1 + A for A = [[2,3],[3,5]] (= 7 I_2)."
+     },
+     {
+      "n": 8,
+      "lessons": [
+       "3-3"
+      ],
+      "asks": "|AB| = 18, |A| + |B| = 11, |A| <= |B|: find |A|."
+     },
+     {
+      "n": 9,
+      "lessons": [
+       "3-2"
+      ],
+      "asks": "A^2 - A for A = [[2,2],[3,-1]] (multiple of I_2)."
+     },
+     {
+      "n": 10,
+      "lessons": [
+       "3-5"
+      ],
+      "asks": "Cramer with |A_x| = 2|A| = -(1/2)|A_y|: x, y."
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "type": "det_equation_solve",
+    "lessons": [
+     "3-3"
+    ],
+    "asks": "det[[x,1],[y,2]] = det[[-1,y],[-4,x]] = 7: find x, y."
+   },
+   {
+    "n": 3,
+    "type": "inverse_and_det_rules",
+    "lessons": [
+     "3-3",
+     "3-4"
+    ],
+    "asks": "A = [[-3,5],[-2,4]]: |A| A^-1, |3A|, (-2A)^-1."
+   },
+   {
+    "n": 4,
+    "type": "det_equation_solve",
+    "lessons": [
+     "3-3"
+    ],
+    "asks": "3x3 determinant containing x equals -9: find x."
+   },
+   {
+    "n": 5,
+    "type": "solve_matrix_equation_inverse",
+    "lessons": [
+     "3-4",
+     "3-5"
+    ],
+    "asks": "a) [[1,2],[3,4]][x;y] = [3;1] by the inverse; b) [x y][[3,0],[0,-2]][[1,-1,3],[2,0,4]] = [4 -3 11]."
+   },
+   {
+    "n": 6,
+    "type": "inverse_unknown_entries",
+    "lessons": [
+     "3-4"
+    ],
+    "asks": "A with x and its given inverse containing y: find x, y."
+   },
+   {
+    "n": 7,
+    "type": "proof",
+    "lessons": [
+     "3-4"
+    ],
+    "asks": "A, B nonzero square with AB = O: prove at least one has no inverse."
+   },
+   {
+    "n": 8,
+    "type": "cramer_parameters",
+    "lessons": [
+     "3-5"
+    ],
+    "asks": "nx - y = 5, kx + y = 3 with |A_y| = det[[6,5],[2,3]]: find n, k, then x, y."
+   },
+   {
+    "n": 9,
+    "type": "inverse_powers",
+    "lessons": [
+     "3-4"
+    ],
+    "asks": "Given A^-1 = [[1,2],[1,3]], find (A^2)^-1 and (A^-1)^2; what do you notice?"
+   },
+   {
+    "n": 10,
+    "type": "solve_system_cramer",
+    "lessons": [
+     "3-5"
+    ],
+    "asks": "3x + 2y = -4, 5y + x = 3 by Cramer (reorder variables)."
+   },
+   {
+    "n": 11,
+    "type": "solve_system_gauss_3x3",
+    "lessons": [
+     "3-5"
+    ],
+    "asks": "x - y + 4z = 9, 2x + 3y + 2z = 2, 3y + x - z = -4 by Gauss."
+   },
+   {
+    "n": 12,
+    "type": "det_properties_equation",
+    "lessons": [
+     "3-3"
+    ],
+    "asks": "Upper triangular det [[x,2,11],[0,-4,9],[0,0,x/2]] = -50 using properties: x = ±5."
+   },
+   {
+    "n": 13,
+    "type": "self_assessment",
+    "lessons": [],
+    "asks": "Describe the most interesting concepts of the unit."
+   }
+  ]
+ },
+ "dependency_edges": [
+  [
+   "3-1",
+   "3-2"
+  ],
+  [
+   "3-2",
+   "3-3"
+  ],
+  [
+   "3-3",
+   "3-4"
+  ],
+  [
+   "3-2",
+   "3-4"
+  ],
+  [
+   "3-4",
+   "3-5"
+  ],
+  [
+   "3-3",
+   "3-5"
+  ]
+ ]
+}

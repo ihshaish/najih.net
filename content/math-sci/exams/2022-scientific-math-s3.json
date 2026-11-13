@@ -1,0 +1,866 @@
+{
+ "id": "2022-scientific-math-s3",
+ "year": 2022,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 3,
+ "session_ar": "الدورة الاستكمالية",
+ "session_en": "Supplementary session",
+ "paper": null,
+ "paper_ar": "ورقة واحدة (الورقة: ---)",
+ "paper_en": "Single paper",
+ "date": "2022-12-03",
+ "day_ar": "السبت",
+ "duration_min": 180,
+ "duration_ar": "ثلاث ساعات",
+ "total_marks": 200,
+ "pages": 2,
+ "img": "exams/2022/scientific/math-s3",
+ "num_questions": 7,
+ "choice_rule": {
+  "ar": "عدد أسئلة الورقة (سبعة) أسئلة، أجب عن (خمسة) منها فقط",
+  "en": "Answer five of the seven questions: all of Section 1 (Q1–Q3) and two of Section 2 (Q4–Q7).",
+  "answer_count": 5,
+  "compulsory": [
+   "Q1",
+   "Q2",
+   "Q3"
+  ],
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً"
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من أربعة أسئلة وعلى المشترك أن يجيب عن سؤالين فقط"
+   }
+  ]
+ },
+ "scope_units": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "scope_note": "Single supplementary paper covering units 1–5; unit 6 (complex numbers) is not examined.",
+ "marks_printed_sum": 280,
+ "marks_attainable_under_rule": 200,
+ "marks_attainable_by_headings": 200,
+ "reconciled": true,
+ "discrepancies": [],
+ "tagger_notes": [
+  "The paper uses two function letters: ق (rendered f) and a second hooked glyph, rendered here as u (ع in armath); read as a distinct function unless noted.",
+  "Matrix/determinant entries are transcribed reading each printed row right-to-left (Arabic layout).",
+  "MCQ answers are not recorded (answer=null) since none were verified in this pass; options_nature describes the distractors.",
+  "Sub-parts without printed marks carry marks=null with shared_group and an equal-split marks_est."
+ ],
+ "questions": [
+  {
+   "q": 1,
+   "marks": 40,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "shared_marks": {
+    "q1a": 14
+   },
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q1",
+   "label_ar": "السؤال الأول",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q1a-1",
+     "label": "Q1 a-1",
+     "label_ar": "السؤال الأول أ-١",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة في خط مستقيم",
+       "en": "rectilinear motion (velocity, height)"
+      }
+     ],
+     "paraphrase": "Particle thrown up, s=30t−5t². — Maximum height.",
+     "latex": "s(t)=30t-5t^2",
+     "shared_group": "q1a",
+     "marks_est": 7.0,
+     "marks_note": "Part a (14 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q1a-2",
+     "label": "Q1 a-2",
+     "label_ar": "السؤال الأول أ-٢",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-5"
+     ],
+     "concepts": [
+      {
+       "id": "motion",
+       "ar": "الحركة في خط مستقيم",
+       "en": "rectilinear motion (velocity, height)"
+      }
+     ],
+     "paraphrase": "Particle thrown up, s=30t−5t². — Speed at height 25 m.",
+     "latex": "s(t)=30t-5t^2",
+     "shared_group": "q1a",
+     "marks_est": 7.0
+    },
+    {
+     "id": "q1b",
+     "label": "Q1 b",
+     "label_ar": "السؤال الأول ب",
+     "marks": 12,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "determinant",
+       "ar": "حساب المحددات",
+       "en": "evaluating determinants"
+      }
+     ],
+     "paraphrase": "Values of x making a 3×3 determinant equal −11.",
+     "latex": "\\begin{vmatrix}3&x&2\\\\x&3&x\\\\4&x&5\\end{vmatrix}=-11"
+    },
+    {
+     "id": "q1c",
+     "label": "Q1 c",
+     "label_ar": "السؤال الأول ج",
+     "marks": 14,
+     "page": 1,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-1"
+     ],
+     "concepts": [
+      {
+       "id": "avg-rate",
+       "ar": "متوسط التغير",
+       "en": "average rate of change"
+      }
+     ],
+     "paraphrase": "Average rate of f on [1,5] is b; h=(x−3)⁴f(x); prove average rate of h on [1,5] is 16b.",
+     "latex": "g(x)=(x-3)^4f(x)"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "marks": 40,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "shared_marks": {
+    "q2c": 15
+   },
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q2",
+   "label_ar": "السؤال الثاني",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q2a",
+     "label": "Q2 a",
+     "label_ar": "السؤال الثاني أ",
+     "marks": 12,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "2-1"
+     ],
+     "concepts": [
+      {
+       "id": "mvt",
+       "ar": "نظرية القيمة المتوسطة",
+       "en": "mean value theorem"
+      }
+     ],
+     "paraphrase": "Show x³+1 satisfies MVT on [−2,1] and find c.",
+     "latex": "f(x)=x^3+1,\\ [-2,1]"
+    },
+    {
+     "id": "q2b",
+     "label": "Q2 b",
+     "label_ar": "السؤال الثاني ب",
+     "marks": 13,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "1-2",
+      "1-6"
+     ],
+     "concepts": [
+      {
+       "id": "product-quotient",
+       "ar": "مشتقة الضرب والقسمة",
+       "en": "product and quotient rules"
+      },
+      {
+       "id": "chain-rule",
+       "ar": "قاعدة السلسلة",
+       "en": "chain rule"
+      }
+     ],
+     "paraphrase": "5k(x)+3k(1/x)=x+2, y=8x·k(x); find dy/dx at x=1.",
+     "latex": "5k(x)+3k\\!\\left(\\tfrac1x\\right)=x+2,\\ y=8xk(x)"
+    },
+    {
+     "id": "q2c-1",
+     "label": "Q2 c-1",
+     "label_ar": "السؤال الثاني ج-١",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "2-2"
+     ],
+     "concepts": [
+      {
+       "id": "monotonicity",
+       "ar": "التزايد والتناقص",
+       "en": "increasing and decreasing intervals"
+      }
+     ],
+     "paraphrase": "f=x(x−3)²+2 on [0,4]. — Intervals of increase/decrease.",
+     "latex": "f(x)=x(x-3)^2+2",
+     "shared_group": "q2c",
+     "marks_est": 7.5,
+     "marks_note": "Part c (15 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q2c-2",
+     "label": "Q2 c-2",
+     "label_ar": "السؤال الثاني ج-٢",
+     "marks": null,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "2-3"
+     ],
+     "concepts": [
+      {
+       "id": "local-extrema",
+       "ar": "القيم القصوى المحلية",
+       "en": "local extrema"
+      }
+     ],
+     "paraphrase": "f=x(x−3)²+2 on [0,4]. — Local extrema.",
+     "latex": "f(x)=x(x-3)^2+2",
+     "shared_group": "q2c",
+     "marks_est": 7.5
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "marks": 40,
+   "pages": [
+    1
+   ],
+   "section": 1,
+   "compulsory": true,
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q3",
+   "label_ar": "السؤال الثالث",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q3a",
+     "label": "Q3 a",
+     "label_ar": "السؤال الثالث أ",
+     "marks": 14,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-2",
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "definite-integral",
+       "ar": "التكامل المحدود",
+       "en": "definite integral"
+      },
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "paraphrase": "Use the definition (limit of Riemann sums) to evaluate ∫₋₁²(4−3x)dx.",
+     "latex": "\\int_{-1}^2(4-3x)\\dd{x}"
+    },
+    {
+     "id": "q3b",
+     "label": "Q3 b",
+     "label_ar": "السؤال الثالث ب",
+     "marks": 14,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-4",
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-equation",
+       "ar": "حل معادلة مصفوفية",
+       "en": "solving matrix equations"
+      },
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      }
+     ],
+     "paraphrase": "A=[[−1,2],[3,4]], B=[[0,2],[1,2]], ((A+X)B)⁻¹=[[1,0],[2,−1]]; find X.",
+     "latex": "((A+X)B)^{-1}=\\begin{bmatrix}1&0\\\\2&-1\\end{bmatrix}"
+    },
+    {
+     "id": "q3c",
+     "label": "Q3 c",
+     "label_ar": "السؤال الثالث ج",
+     "marks": 12,
+     "page": 1,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      },
+      {
+       "id": "by-parts",
+       "ar": "التكامل بالأجزاء",
+       "en": "integration by parts"
+      }
+     ],
+     "paraphrase": "∫3x⁵/sec(x³)dx.",
+     "latex": "\\int\\frac{3x^5}{\\sec x^3}\\dd{x}"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "marks": 40,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q4",
+   "label_ar": "السؤال الرابع",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q4a",
+     "label": "Q4 a",
+     "label_ar": "السؤال الرابع أ",
+     "marks": 16,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-3",
+      "4-1"
+     ],
+     "concepts": [
+      {
+       "id": "integral-function",
+       "ar": "الاقتران المكامل",
+       "en": "integral (accumulation) function"
+      }
+     ],
+     "paraphrase": "Integral function of piecewise f (6x+4 on [−2,1], 3x²+7 on (1,3]) on [−2,3].",
+     "latex": "f(x)=\\begin{cases}6x+4&-2\\le x\\le1\\\\3x^2+7&1<x\\le3\\end{cases}"
+    },
+    {
+     "id": "q4b",
+     "label": "Q4 b",
+     "label_ar": "السؤال الرابع ب",
+     "marks": 10,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "4-3",
+      "4-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-applications",
+       "ar": "إيجاد الاقتران من ميل المماس",
+       "en": "finding a function from its derivative/slope"
+      },
+      {
+       "id": "substitution",
+       "ar": "التكامل بالتعويض",
+       "en": "integration by substitution"
+      },
+      {
+       "id": "tangent-normal",
+       "ar": "معادلة المماس والعمودي",
+       "en": "tangent and normal lines"
+      }
+     ],
+     "paraphrase": "Slope of the normal is (1/18)(4x²−4x+1)⁵, x≠1/2, u(1)=2; find u.",
+     "latex": "m_\\perp=\\frac{1}{18}(4x^2-4x+1)^5"
+    },
+    {
+     "id": "q4c",
+     "label": "Q4 c",
+     "label_ar": "السؤال الرابع ج",
+     "marks": 14,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "3-5",
+      "3-3"
+     ],
+     "concepts": [
+      {
+       "id": "cramer",
+       "ar": "طريقة كريمر",
+       "en": "Cramer's rule"
+      }
+     ],
+     "paraphrase": "Cramer for 3x=2y+6, 2y+x=10.",
+     "latex": "3x=2y+6,\\ 2y+x=10"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "marks": 40,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q5",
+   "label_ar": "السؤال الخامس",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q5a",
+     "label": "Q5 a",
+     "label_ar": "السؤال الخامس أ",
+     "marks": 14,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-4",
+      "1-4"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      },
+      {
+       "id": "exp-log-deriv",
+       "ar": "مشتقة الأسي واللوغاريتمي",
+       "en": "derivatives of exponential and log functions"
+      }
+     ],
+     "paraphrase": "f(x)=4·2ln(x+1)+a/x (operator between 4 and 2 unclear in print), x>0; find a so that f has an inflection point at x=1.",
+     "latex": "f(x)=4\\ \\square\\ 2\\ln(x+1)+\\frac{a}{x}",
+     "note": "Print shows '٤ ٢لـو_هـ(س+١)' with no visible operator; f″ depends only on the ln coefficient, so the tag is unaffected."
+    },
+    {
+     "id": "q5b",
+     "label": "Q5 b",
+     "label_ar": "السؤال الخامس ب",
+     "marks": 14,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "model",
+      "compute"
+     ],
+     "difficulty": 1,
+     "lessons": [
+      "2-5"
+     ],
+     "concepts": [
+      {
+       "id": "optimization",
+       "ar": "تطبيقات عملية على القيم القصوى",
+       "en": "optimisation problems"
+      }
+     ],
+     "paraphrase": "Largest rectangular garden enclosed by 80 m of fence.",
+     "latex": "2x+2y=80"
+    },
+    {
+     "id": "q5c",
+     "label": "Q5 c",
+     "label_ar": "السؤال الخامس ج",
+     "marks": 12,
+     "page": 2,
+     "format": "proof",
+     "skills": [
+      "prove"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-3",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      },
+      {
+       "id": "higher-deriv",
+       "ar": "المشتقات العليا",
+       "en": "higher-order derivatives"
+      }
+     ],
+     "paraphrase": "y=x tan x; show y″=2sec²x(1+y).",
+     "latex": "y''=2\\sec^2x(1+y)"
+    }
+   ]
+  },
+  {
+   "q": 6,
+   "marks": 40,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "shared_marks": {
+    "q6a": 14
+   },
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q6",
+   "label_ar": "السؤال السادس",
+   "n_items": 4,
+   "items": [
+    {
+     "id": "q6a-1",
+     "label": "Q6 a-1",
+     "label_ar": "السؤال السادس أ-١",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-4",
+      "3-3",
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      },
+      {
+       "id": "determinant",
+       "ar": "حساب المحددات",
+       "en": "evaluating determinants"
+      },
+      {
+       "id": "matrix-ops",
+       "ar": "العمليات على المصفوفات",
+       "en": "matrix operations (product, equality, powers)"
+      }
+     ],
+     "paraphrase": "A=[[−2,2],[5,1]], B=[[−1,2],[−4,3]]. — 120(A·B)⁻¹.",
+     "latex": "120(AB)^{-1}",
+     "shared_group": "q6a",
+     "marks_est": 7.0,
+     "marks_note": "Part a (14 marks) has 2 unmarked sub-parts; marks_est splits it equally."
+    },
+    {
+     "id": "q6a-2",
+     "label": "Q6 a-2",
+     "label_ar": "السؤال السادس أ-٢",
+     "marks": null,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "3-4",
+      "3-3",
+      "3-2"
+     ],
+     "concepts": [
+      {
+       "id": "matrix-inverse",
+       "ar": "النظير الضربي للمصفوفة",
+       "en": "inverse of a matrix"
+      },
+      {
+       "id": "determinant",
+       "ar": "حساب المحددات",
+       "en": "evaluating determinants"
+      },
+      {
+       "id": "matrix-ops",
+       "ar": "العمليات على المصفوفات",
+       "en": "matrix operations (product, equality, powers)"
+      }
+     ],
+     "paraphrase": "A=[[−2,2],[5,1]], B=[[−1,2],[−4,3]]. — |2A−3B|.",
+     "latex": "|2A-3B|",
+     "shared_group": "q6a",
+     "marks_est": 7.0
+    },
+    {
+     "id": "q6b",
+     "label": "Q6 b",
+     "label_ar": "السؤال السادس ب",
+     "marks": 12,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-4"
+     ],
+     "concepts": [
+      {
+       "id": "integral-props",
+       "ar": "خصائص التكامل المحدود",
+       "en": "properties of definite integrals"
+      }
+     ],
+     "paraphrase": "∫₂⁴(2f+3)dx=14, ∫₆⁴(2−f)dx=8; find ∫₃⁷f(x−1)dx.",
+     "latex": "\\int_3^7f(x-1)\\dd{x}"
+    },
+    {
+     "id": "q6c",
+     "label": "Q6 c",
+     "label_ar": "السؤال السادس ج",
+     "marks": 14,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "trig-deriv",
+       "ar": "مشتقات الاقترانات المثلثية",
+       "en": "derivatives of trigonometric functions"
+      }
+     ],
+     "paraphrase": "f=6cot x−6csc x; find a with f′(x)=a/(1+cos x).",
+     "latex": "f(x)=6\\cot x-6\\csc x,\\ f'(x)=\\frac{a}{1+\\cos x}"
+    }
+   ]
+  },
+  {
+   "q": 7,
+   "marks": 40,
+   "pages": [
+    2
+   ],
+   "section": 2,
+   "compulsory": false,
+   "items_marks_sum": 40,
+   "reconciled": true,
+   "label": "Q7",
+   "label_ar": "السؤال السابع",
+   "n_items": 3,
+   "items": [
+    {
+     "id": "q7a",
+     "label": "Q7 a",
+     "label_ar": "السؤال السابع أ",
+     "marks": 14,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 3,
+     "lessons": [
+      "1-4",
+      "1-2"
+     ],
+     "concepts": [
+      {
+       "id": "lhopital",
+       "ar": "قاعدة لوبيتال",
+       "en": "L'Hôpital's rule"
+      }
+     ],
+     "paraphrase": "lim_{x→2}(f(x)−3)/(x−2)=1/6 and lim_{x→2}(f²(x)−9)/(x²−5x+6)=c−3, f polynomial; find c.",
+     "latex": "\\lim_{x\\to2}\\frac{f^2(x)-9}{x^2-5x+6}=c-3"
+    },
+    {
+     "id": "q7b",
+     "label": "Q7 b",
+     "label_ar": "السؤال السابع ب",
+     "marks": 10,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "apply"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "5-1"
+     ],
+     "concepts": [
+      {
+       "id": "riemann-sum",
+       "ar": "التجزئة ومجموع ريمان",
+       "en": "partitions and Riemann sums"
+      }
+     ],
+     "paraphrase": "u=bx, regular σ₃ of [1,7], left-endpoint R=54; find b.",
+     "latex": "R(\\sigma_3,u)=54,\\ x_r^*=x_{r-1}"
+    },
+    {
+     "id": "q7c",
+     "label": "Q7 c",
+     "label_ar": "السؤال السابع ج",
+     "marks": 16,
+     "page": 2,
+     "format": "long",
+     "skills": [
+      "compute"
+     ],
+     "difficulty": 2,
+     "lessons": [
+      "2-4",
+      "1-3"
+     ],
+     "concepts": [
+      {
+       "id": "concavity-inflection",
+       "ar": "التقعر ونقط الانعطاف",
+       "en": "concavity and inflection points"
+      }
+     ],
+     "paraphrase": "Concavity of −sin x + (1/4)sin 2x on ]0,π/2[.",
+     "latex": "u(x)=-\\sin x+\\tfrac14\\sin2x"
+    }
+   ]
+  }
+ ],
+ "n_items": 24,
+ "paper_note": "Single combined paper (الورقة: ---) covering the whole book; every question is worth 40."
+}

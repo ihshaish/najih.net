@@ -1,0 +1,1350 @@
+{
+ "id": "2025-scientific-math-s1-p1",
+ "year": 2025,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 1,
+ "session_ar": "الدورة الأولى",
+ "session_en": "Session 1",
+ "paper": 1,
+ "paper_ar": "الورقة الأولى",
+ "date": "2025-07-03",
+ "day_ar": "الخميس",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمس وأربعون دقيقة",
+ "total_marks": 100,
+ "num_questions": 6,
+ "questions_to_answer": 5,
+ "pages": 4,
+ "img": "exams/2025/scientific/math-s1-p1",
+ "pdf": "exams/2025/scientific/math-s1-p1.pdf",
+ "mcq_rule_ar": "أ) يتكون هذا الفرع من (٣) فقرات من نوع اختيار من متعدد، من أربعة بدائل، انقل البديل الصحيح إلى دفتر الإجابة: (٦ علامات)",
+ "mcq_rule_en": "Part (a) of every question: 3 four-option MCQ items worth 6 marks together (2 each, inferred).",
+ "units_covered": [
+  1,
+  2
+ ],
+ "scope_note": "Paper 1 covers units 1-2 (differentiation and its applications).",
+ "choice_rules": {
+  "rule_ar": "عدد أسئلة الورقة (ستة) أسئلة، أجب عن (خمسة) منها فقط",
+  "rule_en": "Six questions; answer five only.",
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "answer": 4,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (أربعة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً.",
+    "rule_en": "Section 1: questions 1-4, all compulsory."
+   },
+   {
+    "section": 2,
+    "questions": [
+     5,
+     6
+    ],
+    "answer": 1,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من (سؤالين)، وعلى المشترك أن يجيب عن سؤال واحد فقط.",
+    "rule_en": "Section 2: questions 5-6, answer one only."
+   }
+  ],
+  "marks_per_question": 20,
+  "mcq_rule_ar": "أ) يتكون هذا الفرع من (٣) فقرات من نوع اختيار من متعدد، من أربعة بدائل، انقل البديل الصحيح إلى دفتر الإجابة: (٦ علامات)",
+  "mcq_rule_en": "Part (a) of every question: 3 four-option MCQ items worth 6 marks together (2 each, inferred).",
+  "structure_en": "Every question has part (a) = 3 four-option MCQ items, then parts (b) and (c) (constructed response, some with numbered sub-parts)."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الأول",
+   "parts": {
+    "a": 6,
+    "b": 8,
+    "c": 6
+   },
+   "item_ids": [
+    "Q1-a-1",
+    "Q1-a-2",
+    "Q1-a-3",
+    "Q1-b-1",
+    "Q1-b-2",
+    "Q1-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثاني",
+   "parts": {
+    "a": 6,
+    "b": 8,
+    "c": 6
+   },
+   "item_ids": [
+    "Q2-a-1",
+    "Q2-a-2",
+    "Q2-a-3",
+    "Q2-b-1",
+    "Q2-b-2",
+    "Q2-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثالث",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q3-a-1",
+    "Q3-a-2",
+    "Q3-a-3",
+    "Q3-b-1",
+    "Q3-b-2",
+    "Q3-c"
+   ],
+   "item_marks_sum": 20.0
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الرابع",
+   "parts": {
+    "a": 6,
+    "b": 6,
+    "c": 8
+   },
+   "item_ids": [
+    "Q4-a-1",
+    "Q4-a-2",
+    "Q4-a-3",
+    "Q4-b",
+    "Q4-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الخامس",
+   "parts": {
+    "a": 6,
+    "b": 6,
+    "c": 8
+   },
+   "item_ids": [
+    "Q5-a-1",
+    "Q5-a-2",
+    "Q5-a-3",
+    "Q5-b",
+    "Q5-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال السادس",
+   "parts": {
+    "a": 6,
+    "b": 7,
+    "c": 7
+   },
+   "item_ids": [
+    "Q6-a-1",
+    "Q6-a-2",
+    "Q6-a-3",
+    "Q6-b",
+    "Q6-c"
+   ],
+   "item_marks_sum": 20
+  }
+ ],
+ "items": [
+  {
+   "id": "Q1-a-1",
+   "label": "Q1 a-1",
+   "label_ar": "السؤال الأول (أ) ١",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-2"
+   ],
+   "concepts": [
+    "higher-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "If $f(x)=x^n$ ($n\\in\\mathbb{Z}^+$) and $f^{(3)}(x)=a\\,x$, find the constant $a$.",
+    "ar": "إذا كان $f(x)=x^n$ و $f^{(3)}(x)=a\\,x$ فجد قيمة الثابت $a$."
+   },
+   "latex": "f^{(3)}(x)=a\\,x",
+   "mcq_options": "four integers (21, 24, 45, 92)",
+   "verified_answer": "24",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q1-a-2",
+   "label": "Q1 a-2",
+   "label_ar": "السؤال الأول (أ) ٢",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-2"
+   ],
+   "concepts": [
+    "critical-points",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Set of $x$-values of the critical points of $f(x)=x^2-2\\ln x$ on $]0,5]$.",
+    "ar": "مجموعة قيم $x$ للنقط الحرجة للاقتران $f(x)=x^2-2\\ln x$ على $]0,5]$."
+   },
+   "latex": "f(x)=x^2-2\\ln x,\\ x\\in]0,5]",
+   "mcq_options": "four finite sets drawn from {-1, 0, 1, 5}",
+   "verified_answer": "{1, 5}",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q1-a-3",
+   "label": "Q1 a-3",
+   "label_ar": "السؤال الأول (أ) ٣",
+   "question": 1,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-4"
+   ],
+   "concepts": [
+    "inflection"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "Value of $m$ making $x=-1$ an inflection point of $f(x)=x^3-mx^2-9x$.",
+    "ar": "قيمة الثابت $m$ التي تجعل لمنحنى $f(x)=x^3-mx^2-9x$ نقطة انعطاف عند $x=-1$."
+   },
+   "latex": "f(x)=x^3-mx^2-9x",
+   "mcq_options": "four integers (6, -3, 3, -4)",
+   "verified_answer": "-3",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q1-b-1",
+   "label": "Q1 b-1",
+   "label_ar": "السؤال الأول (ب) ١",
+   "question": 1,
+   "part": "b",
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "2-2",
+    "1-2"
+   ],
+   "concepts": [
+    "monotonic",
+    "deriv-piecewise"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Piecewise $f$: $x^2-x$ on $[0,1]$, $x-1$ on $]1,3]$; find the intervals of increase and decrease on $[0,3]$.",
+    "ar": "للاقتران المتشعب $f$ جد فترات التزايد والتناقص في $[0,3]$."
+   },
+   "latex": "f(x)=\\begin{cases}x^2-x,&0\\le x\\le1\\\\x-1,&1<x\\le3\\end{cases}"
+  },
+  {
+   "id": "Q1-b-2",
+   "label": "Q1 b-2",
+   "label_ar": "السؤال الأول (ب) ٢",
+   "question": 1,
+   "part": "b",
+   "page": 1,
+   "marks": 4,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "2-3"
+   ],
+   "concepts": [
+    "local-extrema",
+    "absolute-extrema"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Same $f$: find the local and absolute extreme values on $[0,3]$.",
+    "ar": "للاقتران نفسه جد القيم القصوى المحلية والمطلقة في $[0,3]$."
+   },
+   "latex": ""
+  },
+  {
+   "id": "Q1-c",
+   "label": "Q1 c",
+   "label_ar": "السؤال الأول (ج)",
+   "question": 1,
+   "part": "c",
+   "page": 1,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-1"
+   ],
+   "concepts": [
+    "avg-rate"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=\\sqrt{2x+1}$; the average rate of change as $x$ goes from 0 to $b$ is $\\tfrac12$ ($b>0$); find $b$.",
+    "ar": "إذا كان متوسط تغير $f(x)=\\sqrt{2x+1}$ من $0$ إلى $b$ يساوي $\\tfrac12$ فاحسب $b$."
+   },
+   "latex": "\\frac{f(b)-f(0)}{b}=\\frac12"
+  },
+  {
+   "id": "Q2-a-1",
+   "label": "Q2 a-1",
+   "label_ar": "السؤال الثاني (أ) ١",
+   "question": 2,
+   "part": "a",
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-7",
+    "1-3"
+   ],
+   "concepts": [
+    "implicit-diff",
+    "trig-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $x=\\sec y$, $y\\in]0,\\tfrac{\\pi}{2}[$, find $y'$ in terms of $x$.",
+    "ar": "إذا كانت $x=\\sec y$، $y\\in]0,\\tfrac{\\pi}{2}[$ فجد $y'$."
+   },
+   "latex": "x=\\sec y",
+   "mcq_options": "four expressions of the form ±1/(c·x·sqrt(±(x^2-1)))",
+   "verified_answer": "\\frac{1}{x\\sqrt{x^2-1}}",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q2-a-2",
+   "label": "Q2 a-2",
+   "label_ar": "السؤال الثاني (أ) ٢",
+   "question": 2,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-3",
+    "1-4"
+   ],
+   "concepts": [
+    "absolute-extrema",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Smallest value of $f(x)=\\E^x-\\E x$ on $[0,3]$.",
+    "ar": "ما أصغر قيمة للاقتران $f(x)=\\E^x-\\E x$ على $[0,3]$؟"
+   },
+   "latex": "f(x)=\\E^x-\\E x,\\ [0,3]",
+   "mcq_options": "four values (0, 1, -1, -e)",
+   "verified_answer": "0",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q2-a-3",
+   "label": "Q2 a-3",
+   "label_ar": "السؤال الثاني (أ) ٣",
+   "question": 2,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$y=(2+\\tfrac{2}{x})^4$; find $\\dv{y}{x}$ at $x=2$.",
+    "ar": "إذا كانت $y=(2+\\tfrac{2}{x})^4$ فجد $\\dv{y}{x}$ عند $x=2$."
+   },
+   "latex": "y=\\left(2+\\frac{2}{x}\\right)^4",
+   "mcq_options": "four integers (54, -108, 162, -54)",
+   "verified_answer": "-54",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q2-b-1",
+   "label": "Q2 b-1",
+   "label_ar": "السؤال الثاني (ب) ١",
+   "question": 2,
+   "part": "b",
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "2-4"
+   ],
+   "concepts": [
+    "concavity"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$f(x)=\\sqrt[3]{x}$: intervals of concavity up and down.",
+    "ar": "للاقتران $f(x)=\\sqrt[3]{x}$ جد فترات التقعر للأعلى وللأسفل."
+   },
+   "latex": "f(x)=\\sqrt[3]{x}"
+  },
+  {
+   "id": "Q2-b-2",
+   "label": "Q2 b-2",
+   "label_ar": "السؤال الثاني (ب) ٢",
+   "question": 2,
+   "part": "b",
+   "page": 2,
+   "marks": 4,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "2-4"
+   ],
+   "concepts": [
+    "inflection"
+   ],
+   "skills": [
+    "compute",
+    "interpret"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Same $f$: inflection points and inflection angles (if any) — vertical tangent at the origin.",
+    "ar": "للاقتران نفسه جد نقط الانعطاف وزوايا الانعطاف (إن وجدت)."
+   },
+   "latex": ""
+  },
+  {
+   "id": "Q2-c",
+   "label": "Q2 c",
+   "label_ar": "السؤال الثاني (ج)",
+   "question": 2,
+   "part": "c",
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "1-3",
+    "1-2"
+   ],
+   "concepts": [
+    "trig-deriv",
+    "deriv-rules"
+   ],
+   "skills": [
+    "prove"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $y=\\frac{x}{\\csc x+\\cot x}$, prove $y'=\\frac{1+x\\csc x}{\\csc x+\\cot x}$.",
+    "ar": "إذا كانت $y=\\frac{x}{\\csc x+\\cot x}$ فأثبت أن $y'=\\frac{1+x\\csc x}{\\csc x+\\cot x}$."
+   },
+   "latex": "y=\\frac{x}{\\csc x+\\cot x}"
+  },
+  {
+   "id": "Q3-a-1",
+   "label": "Q3 a-1",
+   "label_ar": "السؤال الثالث (أ) ١",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-2",
+    "2-3"
+   ],
+   "concepts": [
+    "monotonic",
+    "local-extrema"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Given $f'(x)=\\frac{-x}{\\sqrt{9-x^2}}$ on $]-3,3[$, choose the true statement.",
+    "ar": "إذا كانت $f'(x)=\\frac{-x}{\\sqrt{9-x^2}}$ فاختر العبارة الصحيحة."
+   },
+   "latex": "f'(x)=\\frac{-x}{\\sqrt{9-x^2}}",
+   "mcq_options": "four statements: f(0) local max; f(0) absolute min on ]-3,3[; f increasing on ]-3,3[; f decreasing on ]-3,0[",
+   "verified_answer": "f(0) is a local maximum",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q3-a-2",
+   "label": "Q3 a-2",
+   "label_ar": "السؤال الثالث (أ) ٢",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $f(x^3)=\\frac1x$, find $f'(8)$.",
+    "ar": "إذا كان $f(x^3)=\\frac1x$ فجد $f'(8)$."
+   },
+   "latex": "f(x^3)=\\frac{1}{x}",
+   "mcq_options": "four fractions (-1/64, 1/64, -1/48, -1/32)",
+   "verified_answer": "-1/48",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q3-a-3",
+   "label": "Q3 a-3",
+   "label_ar": "السؤال الثالث (أ) ٣",
+   "question": 3,
+   "part": "a",
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-3",
+    "1-3"
+   ],
+   "concepts": [
+    "local-extrema",
+    "trig-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Where does $f(x)=\\cos x+\\sin^2x$, $x\\in\\left]0,\\tfrac{\\pi}{3}\\right]$, have a local extreme value?",
+    "ar": "عند أي قيمة لـ $x$ يكون للاقتران $f(x)=\\cos x+\\sin^2 x$ قيمة قصوى محلية؟"
+   },
+   "latex": "f(x)=\\cos x+\\sin^2x,\\ x\\in\\left]0,\\tfrac{\\pi}{3}\\right]",
+   "mcq_options": "four multiples of pi (pi/2, pi/3, pi/4, pi/6)",
+   "verified_answer": "pi/3",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger",
+   "note": "Interval re-read from the scan at 300 dpi: printed ]0, pi/3], open at 0 and closed at pi/3. The bracket beside pi/3 encloses it (same orientation as the closed [0,3] in Q2-a-2 on the same page); the bracket beside 0 faces away from it (same orientation as both brackets of the open ]0, pi/4[ in s2-p1 Q4-a-3). f'(x)=sin x(2cos x-1) > 0 on ]0, pi/3[, so f increases up to the included endpoint and f(pi/3)=5/4 is a local (and absolute) maximum by the book's endpoint test (lesson 2-3 allows endpoints of the domain to be local extrema). x=0 is excluded from the domain, so it is not a critical number here."
+  },
+  {
+   "id": "Q3-b-1",
+   "label": "Q3 b-1",
+   "label_ar": "السؤال الثالث (ب) ١",
+   "question": 3,
+   "part": "b",
+   "page": 2,
+   "marks": 3.5,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "long",
+   "lessons": [
+    "1-5",
+    "2-3"
+   ],
+   "concepts": [
+    "motion-deriv",
+    "local-extrema"
+   ],
+   "skills": [
+    "model",
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "A body thrown up from the top of a tower: height above the tower $s(t)=30t-5t^2$; the greatest height above the ground is 180 m. Find the time to reach the ground.",
+    "ar": "قذف جسم رأسياً من قمة برج وارتفاعه عن البرج $s(t)=30t-5t^2$، وأقصى ارتفاع عن الأرض 180 م؛ جد زمن وصوله الأرض."
+   },
+   "latex": "s(t)=30t-5t^2"
+  },
+  {
+   "id": "Q3-b-2",
+   "label": "Q3 b-2",
+   "label_ar": "السؤال الثالث (ب) ٢",
+   "question": 3,
+   "part": "b",
+   "page": 2,
+   "marks": 3.5,
+   "marks_basis": "inferred: equal split of the printed part marks (sub-part marks not printed)",
+   "format": "short",
+   "lessons": [
+    "1-5"
+   ],
+   "concepts": [
+    "motion-deriv"
+   ],
+   "skills": [
+    "apply",
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Same motion: total distance travelled in the first 4 seconds (direction changes at $t=3$).",
+    "ar": "للحركة نفسها جد المسافة الكلية المقطوعة خلال الثواني الأربع الأولى."
+   },
+   "latex": ""
+  },
+  {
+   "id": "Q3-c",
+   "label": "Q3 c",
+   "label_ar": "السؤال الثالث (ج)",
+   "question": 3,
+   "part": "c",
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "1-7",
+    "1-6"
+   ],
+   "concepts": [
+    "implicit-diff",
+    "chain-rule"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Given $y^2-3xy+3x^2=21$ and $z=5y-y^2+8$ with $x>2$, find $\\dv{z}{x}$ when $y=6$.",
+    "ar": "إذا كانت $y^2-3xy+3x^2=21$ و $z=5y-y^2+8$ و $x>2$ فجد $\\dv{z}{x}$ عندما $y=6$."
+   },
+   "latex": "y^2-3xy+3x^2=21,\\ z=5y-y^2+8"
+  },
+  {
+   "id": "Q4-a-1",
+   "label": "Q4 a-1",
+   "label_ar": "السؤال الرابع (أ) ١",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-2",
+    "1-6"
+   ],
+   "concepts": [
+    "deriv-as-limit",
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Evaluate $\\lim_{x\\to2}\\frac{f(x^2)-x f(2)}{x^3-8}$ given $f(2)=-2,\\ f(4)=-4,\\ f'(4)=-1$.",
+    "ar": "جد قيمة النهاية علماً بأن $f(2)=-2$ و $f(4)=-4$ و $f'(4)=-1$."
+   },
+   "latex": "\\lim_{x\\to2}\\frac{f(x^2)-x\\,f(2)}{x^3-8}",
+   "mcq_options": "four fractions (-5/12, 1/12, -1/6, -1/3)",
+   "verified_answer": "-1/6",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q4-a-2",
+   "label": "Q4 a-2",
+   "label_ar": "السؤال الرابع (أ) ٢",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-2",
+    "2-4",
+    "1-4"
+   ],
+   "concepts": [
+    "monotonic",
+    "concavity",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "For $f(x)=\\E^x$, $x\\in\\mathbb{R}$, choose the true statement (increasing/decreasing, concavity, sign).",
+    "ar": "للاقتران $f(x)=\\E^x$ اختر العبارة الصحيحة."
+   },
+   "latex": "f(x)=\\E^x",
+   "mcq_options": "four statements about monotonicity, concavity and sign of e^x",
+   "verified_answer": "f is increasing and concave up on its domain",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q4-a-3",
+   "label": "Q4 a-3",
+   "label_ar": "السؤال الرابع (أ) ٣",
+   "question": 4,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-5",
+    "1-1"
+   ],
+   "concepts": [
+    "tangent-normal",
+    "avg-rate",
+    "graph-reading"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Graph: secant $AB$ to $f$ through $A(1,5)$ and $B(4,f(4))$ makes a $45^\\circ$ angle with the $x$-axis (falling); find $f(4)$.",
+    "ar": "يمثل الشكل منحنى $f$ والقاطع $AB$ حيث $A(1,5)$ و $B(4,f(4))$؛ جد $f(4)$."
+   },
+   "latex": "A(1,5),\\ B(4,f(4))",
+   "mcq_options": "four integers (1, 2, 3, 8)",
+   "verified_answer": "2",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q4-b",
+   "label": "Q4 b",
+   "label_ar": "السؤال الرابع (ب)",
+   "question": 4,
+   "part": "b",
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-5"
+   ],
+   "concepts": [
+    "tangent-normal",
+    "deriv-rules"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "The line through $(0,3)$ is tangent to $f(x)=\\frac{b}{x+1}$ at $x=1$; find $b$.",
+    "ar": "إذا كان المستقيم المار بالنقطة $(0,3)$ يمس منحنى $f(x)=\\frac{b}{x+1}$ عند $x=1$ فما قيمة $b$؟"
+   },
+   "latex": "f(x)=\\frac{b}{x+1}"
+  },
+  {
+   "id": "Q4-c",
+   "label": "Q4 c",
+   "label_ar": "السؤال الرابع (ج)",
+   "question": 4,
+   "part": "c",
+   "page": 3,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "2-5"
+   ],
+   "concepts": [
+    "optimization"
+   ],
+   "skills": [
+    "model",
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "An 18 cm wire is cut into two pieces, each bent into a triangle; find the side lengths that minimise the total area.",
+    "ar": "سلك طوله 18 سم قسم إلى جزأين ثني كل منهما على شكل مثلث؛ جد طول ضلع كل مثلث لتكون مجموع مساحتيهما أقل ما يمكن."
+   },
+   "latex": "\\ell_1+\\ell_2=18",
+   "note": "Printed text says \"مثلث متساوي الساقين\" (isosceles) but asks for \"طول ضلع\" (the side length), which only determines a unique answer for an equilateral triangle; almost certainly a typo for متساوي الأضلاع."
+  },
+  {
+   "id": "Q5-a-1",
+   "label": "Q5 a-1",
+   "label_ar": "السؤال الخامس (أ) ١",
+   "question": 5,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-6",
+    "1-2"
+   ],
+   "concepts": [
+    "chain-rule",
+    "higher-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$y=f(x)$ with $\\dv{y}{x}=a\\sqrt{y}$ ($a>0$) and $\\dv{^2y}{x^2}=32$; find $a$.",
+    "ar": "إذا كان $\\dv{y}{x}=a\\sqrt{y}$ و $\\dv{^2y}{x^2}=32$ فجد $a$."
+   },
+   "latex": "\\dv{y}{x}=a\\sqrt{y},\\ \\dv{^2y}{x^2}=32",
+   "mcq_options": "four integers (3, 4, 8, 16)",
+   "verified_answer": "8",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q5-a-2",
+   "label": "Q5 a-2",
+   "label_ar": "السؤال الخامس (أ) ٢",
+   "question": 5,
+   "part": "a",
+   "page": 3,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-4",
+    "1-6"
+   ],
+   "concepts": [
+    "exp-log-deriv",
+    "chain-rule"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$y=\\ln\\left(\\frac{x^2-\\E^2}{x+1}\\right)^2$; find $\\dv{y}{x}$ at $x=0$.",
+    "ar": "إذا كان $y=\\ln\\left(\\frac{x^2-\\E^2}{x+1}\\right)^2$ فجد $\\dv{y}{x}$ عندما $x=0$."
+   },
+   "latex": "y=\\ln\\left(\\frac{x^2-\\E^2}{x+1}\\right)^2",
+   "mcq_options": "four integers (3, 1, 2, -2)",
+   "verified_answer": "-2",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q5-a-3",
+   "label": "Q5 a-3",
+   "label_ar": "السؤال الخامس (أ) ٣",
+   "question": 5,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "2-3",
+    "2-4"
+   ],
+   "concepts": [
+    "absolute-extrema",
+    "concavity",
+    "critical-points"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f$ continuous on $[1,4]$, $f''<0$ on $]1,4[$, exactly three critical points in $[1,4]$ and $f'(2)=0$; choose the true comparison.",
+    "ar": "إذا كان $f$ متصلاً على $[1,4]$ و $f''(x)<0$ وله ثلاث نقاط حرجة فقط و $f'(2)=0$ فاختر العبارة الصحيحة."
+   },
+   "latex": "f''(x)<0,\\ f'(2)=0",
+   "mcq_options": "four order relations among f(1), f(2), f(4)",
+   "verified_answer": "f(2) > f(4)",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q5-b",
+   "label": "Q5 b",
+   "label_ar": "السؤال الخامس (ب)",
+   "question": 5,
+   "part": "b",
+   "page": 4,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "2-4",
+    "1-6",
+    "1-2"
+   ],
+   "concepts": [
+    "inflection",
+    "chain-rule",
+    "higher-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "Polynomial $f$ has a horizontal inflection point at $(1,2)$ and $h(x)=(x-f(x))^3$; find $h''(1)$.",
+    "ar": "إذا كان لكثير الحدود $f$ نقطة انعطاف أفقي عند $(1,2)$ و $h(x)=(x-f(x))^3$ فما قيمة $h''(1)$؟"
+   },
+   "latex": "h(x)=\\left(x-f(x)\\right)^3"
+  },
+  {
+   "id": "Q5-c",
+   "label": "Q5 c",
+   "label_ar": "السؤال الخامس (ج)",
+   "question": 5,
+   "part": "c",
+   "page": 4,
+   "marks": 8,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "1-2",
+    "1-4"
+   ],
+   "concepts": [
+    "deriv-as-limit",
+    "deriv-rules",
+    "lhopital"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "If $\\lim_{x\\to1}\\frac{2-x f(x)}{\\frac{x}{2}-\\frac12}=4$ and $k(x)\\,f(x)=x^2$, find $k'(1)$.",
+    "ar": "إذا كانت النهاية تساوي 4 وكان $k(x)\\times f(x)=x^2$ فجد $k'(1)$."
+   },
+   "latex": "\\lim_{x\\to1}\\frac{2-x f(x)}{\\frac{x}{2}-\\frac{1}{2}}=4,\\ k(x)f(x)=x^2"
+  },
+  {
+   "id": "Q6-a-1",
+   "label": "Q6 a-1",
+   "label_ar": "السؤال السادس (أ) ١",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-6",
+    "1-4"
+   ],
+   "concepts": [
+    "chain-rule",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$L(x)=\\E^{f(x-\\sqrt{x})}$ where $f$ is linear through the origin and perpendicular to $y=x$; find $L'(1)$.",
+    "ar": "إذا كان $L(x)=\\E^{f(x-\\sqrt{x})}$ و $f$ اقتران خطي يمر بنقطة الأصل وعمودي على $y=x$ فما قيمة $L'(1)$؟"
+   },
+   "latex": "L(x)=\\E^{f(x-\\sqrt{x})}",
+   "mcq_options": "four values (1/2, e/2, -1/2, -e)",
+   "verified_answer": "-1/2",
+   "answer_source": "tagger-computed (worked by hand, checked against the four options)"
+  },
+  {
+   "id": "Q6-a-2",
+   "label": "Q6 a-2",
+   "label_ar": "السؤال السادس (أ) ٢",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-6"
+   ],
+   "concepts": [
+    "chain-rule"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$(f\\circ h)'(3)=15$, $f(x)=x^2-9$, $h'(3)=5$; find $h(3)$.",
+    "ar": "إذا علمت أن $(f\\circ h)'(3)=15$ و $f(x)=x^2-9$ و $h'(3)=5$ فما قيمة $h(3)$؟"
+   },
+   "latex": "(f\\circ h)'(3)=15",
+   "mcq_options": "four numbers (0, 1.5, 2, 3)",
+   "verified_answer": "1.5",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q6-a-3",
+   "label": "Q6 a-3",
+   "label_ar": "السؤال السادس (أ) ٣",
+   "question": 6,
+   "part": "a",
+   "page": 4,
+   "marks": 2,
+   "marks_basis": "inferred: part (a) is 6 marks for 3 MCQ items",
+   "format": "mcq",
+   "lessons": [
+    "1-5",
+    "1-1"
+   ],
+   "concepts": [
+    "motion-deriv",
+    "avg-rate"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$s(t)=t^2+3t$; the velocity at $t=5$ equals the average velocity on $[0,a]$; find $a$.",
+    "ar": "يتحرك جسم حسب $s(t)=t^2+3t$ وسرعته عند $t=5$ تساوي سرعته المتوسطة في $[0,a]$؛ جد $a$."
+   },
+   "latex": "s(t)=t^2+3t",
+   "mcq_options": "four answers (0, -10, {0,10}, 10)",
+   "verified_answer": "10",
+   "answer_source": "assets/js/solutions.js (existing verified Najih solution), re-checked by the tagger"
+  },
+  {
+   "id": "Q6-b",
+   "label": "Q6 b",
+   "label_ar": "السؤال السادس (ب)",
+   "question": 6,
+   "part": "b",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "proof",
+   "lessons": [
+    "2-2",
+    "1-2",
+    "2-4"
+   ],
+   "concepts": [
+    "monotonic",
+    "deriv-rules",
+    "graph-reading"
+   ],
+   "skills": [
+    "interpret",
+    "prove"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "From the graphs of $f$ (positive, increasing) and $k$ (increasing, concave down) show $L(x)=\\frac{k'(x)}{f(x)}$ is decreasing on $\\mathbb{R}^+$.",
+    "ar": "يمثل الشكل منحنيي $f$ و $k$؛ بيّن أن $L(x)=\\frac{k'(x)}{f(x)}$ متناقص على $\\mathbb{R}^+$."
+   },
+   "latex": "L(x)=\\frac{k'(x)}{f(x)}"
+  },
+  {
+   "id": "Q6-c",
+   "label": "Q6 c",
+   "label_ar": "السؤال السادس (ج)",
+   "question": 6,
+   "part": "c",
+   "page": 4,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "1-2",
+    "1-3",
+    "1-6"
+   ],
+   "concepts": [
+    "deriv-rules",
+    "trig-deriv",
+    "chain-rule"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$f(x)=(1+\\cos\\pi x)(2-\\cos\\pi x)\\left(\\sin\\frac{\\pi}{4x}\\right)^3$; find $f'(\\tfrac12)$.",
+    "ar": "إذا كان $f(x)=(1+\\cos\\pi x)(2-\\cos\\pi x)\\left(\\sin\\frac{\\pi}{4x}\\right)^3$ فجد $f'(\\tfrac12)$."
+   },
+   "latex": "f(x)=(1+\\cos\\pi x)(2-\\cos\\pi x)\\left(\\sin\\frac{\\pi}{4x}\\right)^3",
+   "note": "The argument of the sine is printed as pi over \"4x\" (read as pi/(4x)); with that reading the third factor contributes nothing at x=1/2 and f'(1/2)=-pi."
+  }
+ ],
+ "reconciliation": {
+  "per_question": [
+   {
+    "question": 1,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 2,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 3,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20.0,
+    "ok": true
+   },
+   {
+    "question": 4,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 5,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 6,
+    "stated": 20,
+    "parts_stated_sum": 20,
+    "items_sum": 20,
+    "ok": true
+   }
+  ],
+  "printed_marks_all_questions": 120.0,
+  "max_score_under_choice_rules": 100,
+  "stated_total": 100,
+  "ok": true,
+  "discrepancies": [
+   {
+    "item": "Q4-c",
+    "issue": "Printed \"isosceles\" (متساوي الساقين) but asks for the side length; equilateral intended."
+   }
+  ]
+ },
+ "summary": {
+  "item_count": 33,
+  "mcq_count": 18,
+  "formats": {
+   "mcq": 18,
+   "short": 9,
+   "long": 4,
+   "proof": 2
+  },
+  "marks_by_lesson_printed": {
+   "1-1": 8.0,
+   "1-2": 19.66,
+   "1-3": 7.33,
+   "1-4": 7.67,
+   "1-5": 13.25,
+   "1-6": 17.83,
+   "1-7": 4.5,
+   "2-2": 8.0,
+   "2-3": 9.75,
+   "2-4": 16.0,
+   "2-5": 8.0
+  },
+  "note_marks_by_lesson": "Marks of every printed item split equally across its lessons; sums to the printed marks of all six questions (not the score a candidate can reach under the choice rule)."
+ },
+ "concepts_used": {
+  "absolute-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المطلقة",
+   "en": "Absolute extrema"
+  },
+  "avg-rate": {
+   "lesson": "1-1",
+   "ar": "متوسط التغير",
+   "en": "Average rate of change"
+  },
+  "chain-rule": {
+   "lesson": "1-6",
+   "ar": "قاعدة السلسلة",
+   "en": "Chain rule"
+  },
+  "concavity": {
+   "lesson": "2-4",
+   "ar": "التقعر للأعلى وللأسفل",
+   "en": "Concavity"
+  },
+  "critical-points": {
+   "lesson": "2-2",
+   "ar": "النقط الحرجة",
+   "en": "Critical points"
+  },
+  "deriv-as-limit": {
+   "lesson": "1-2",
+   "ar": "المشتقة كنهاية (تعريف المشتقة)",
+   "en": "Derivative as a limit"
+  },
+  "deriv-piecewise": {
+   "lesson": "1-2",
+   "ar": "اشتقاق الاقترانات المتشعبة والمطلقة",
+   "en": "Differentiability of piecewise and absolute-value functions"
+  },
+  "deriv-rules": {
+   "lesson": "1-2",
+   "ar": "قواعد الاشتقاق (الضرب والقسمة)",
+   "en": "Differentiation rules (product, quotient)"
+  },
+  "exp-log-deriv": {
+   "lesson": "1-4",
+   "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+   "en": "Derivatives of exponential and logarithmic functions"
+  },
+  "graph-reading": {
+   "lesson": null,
+   "ar": "قراءة منحنى الاقتران أو مشتقاته",
+   "en": "Reading a graph of f, f' or f''"
+  },
+  "higher-deriv": {
+   "lesson": "1-2",
+   "ar": "المشتقات العليا",
+   "en": "Higher-order derivatives"
+  },
+  "implicit-diff": {
+   "lesson": "1-7",
+   "ar": "الاشتقاق الضمني",
+   "en": "Implicit differentiation"
+  },
+  "inflection": {
+   "lesson": "2-4",
+   "ar": "نقط الانعطاف وزوايا الانعطاف",
+   "en": "Points and angles of inflection"
+  },
+  "lhopital": {
+   "lesson": "1-4",
+   "ar": "قاعدة لوبيتال",
+   "en": "L'Hôpital's rule"
+  },
+  "local-extrema": {
+   "lesson": "2-3",
+   "ar": "القيم القصوى المحلية",
+   "en": "Local extrema"
+  },
+  "monotonic": {
+   "lesson": "2-2",
+   "ar": "فترات التزايد والتناقص",
+   "en": "Intervals of increase and decrease"
+  },
+  "motion-deriv": {
+   "lesson": "1-5",
+   "ar": "الحركة المستقيمة: السرعة والتسارع",
+   "en": "Rectilinear motion: velocity and acceleration"
+  },
+  "optimization": {
+   "lesson": "2-5",
+   "ar": "تطبيقات عملية على القيم القصوى",
+   "en": "Optimisation problems"
+  },
+  "tangent-normal": {
+   "lesson": "1-5",
+   "ar": "معادلة المماس والعمودي على المماس",
+   "en": "Tangent and normal lines"
+  },
+  "trig-deriv": {
+   "lesson": "1-3",
+   "ar": "مشتقات الاقترانات المثلثية",
+   "en": "Derivatives of trigonometric functions"
+  }
+ },
+ "notes": [
+  "Matrices and determinants in \"latex\" follow the paper's right-to-left (Arabic) reading: the right-most printed column is column 1 and rows read from right to left, so a matrix printed left to right as [3, -2 / -5, x] is transcribed [[-2,3],[x,-5]]. This reading is confirmed wherever an answer depends on it: 2025 s2-p2 Q2-a-1 gives the listed x=4 only under it (left to right gives x=8/3, not an option); likewise s2-p2 Q3-a-1 (-4) and s3 Q4-a-1 (A^-1). Anyone re-checking a transcription against the scan must mirror each row.",
+  "Part (a) MCQ items carry no printed per-item marks; each is inferred as part-marks / 3. Numbered sub-parts of (b)/(c) carry no printed marks; they are inferred as an equal split of the printed part marks (marks_basis says so).",
+  "A lone dot used as an integral limit is the Arabic-Indic digit zero (٠).",
+  "No item tests unit 6 (complex numbers) in any 2025 paper.",
+  "Section 1 now has four compulsory questions (Q1-Q4) and section 2 two questions (answer one), unlike 2024 (3 + choose 2 of 3)."
+ ]
+}

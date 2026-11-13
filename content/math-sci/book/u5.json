@@ -1,0 +1,2362 @@
+{
+ "unit": 5,
+ "title": {
+  "ar": "التكامل المحدود وتطبيقاته",
+  "en": "Definite Integration and its Applications"
+ },
+ "printed_pages": [
+  162,
+  203
+ ],
+ "pdf_pages": [
+  166,
+  207
+ ],
+ "source": {
+  "book": "الرياضيات، الصف الثاني عشر، الفرع العلمي (وزارة التربية والتعليم، فلسطين)",
+  "pdf": "https://elearn.azureedge.net/Books/c12/12s/ma12-s.pdf",
+  "page_rule": "pdf_page = printed_page + 4"
+ },
+ "opener": {
+  "ar": "قلعة برقوق في خان يونس: اقترح طريقة لحساب مساحة الزجاج اللازم لتغطية قوس القلعة.",
+  "en": "Barquq Castle, Khan Younis: propose a way to compute the glass area needed to cover the castle's arch."
+ },
+ "objectives": [
+  {
+   "ar": "التعرف إلى التجزئة وحساب مجموع ريمان",
+   "en": "recognise partitions and compute Riemann sums"
+  },
+  {
+   "ar": "إيجاد التكامل لاقتران خطي باستخدام التعريف",
+   "en": "find the integral of a linear function by the definition"
+  },
+  {
+   "ar": "التعرف إلى النظرية الأساسية في التفاضل والتكامل",
+   "en": "know the fundamental theorem of calculus"
+  },
+  {
+   "ar": "التعرف إلى خصائص التكامل المحدود",
+   "en": "know the properties of the definite integral"
+  },
+  {
+   "ar": "حساب التكامل المحدود",
+   "en": "evaluate definite integrals"
+  },
+  {
+   "ar": "إيجاد مساحة منطقة مستوية باستخدام التكامل المحدود",
+   "en": "find the area of a plane region"
+  },
+  {
+   "ar": "حساب حجم الجسم الدوراني الناتج من دوران منطقة حول محور السينات",
+   "en": "compute the volume of a solid of revolution about the x-axis"
+  }
+ ],
+ "notation": {
+  "conventions": "LaTeX follows assets/js/armath.js: x->س, y->ص, f->ق, g->هـ, k->ك, c->جـ, M->م, n->ن, r->ر, a->أ, b->ب, \\dd{x}->ءس, \\E->هـ, \\ln->لـو_هـ, \\mathbb{R}->ح.",
+  "book_symbols": [
+   {
+    "meaning": "partition of [a,b] into n subintervals",
+    "book": "σن",
+    "latex": "\\sigma_n"
+   },
+   {
+    "meaning": "Riemann sum",
+    "book": "م(σن ، ق)",
+    "latex": "M(\\sigma_n, f)"
+   },
+   {
+    "meaning": "chosen point in the r-th subinterval",
+    "book": "سر*",
+    "latex": "x_r^{*}"
+   },
+   {
+    "meaning": "length of r-th subinterval",
+    "book": "Δسر",
+    "latex": "\\Delta x_r"
+   },
+   {
+    "meaning": "antiderivative (original function)",
+    "book": "م(س)",
+    "latex": "M(x)"
+   },
+   {
+    "meaning": "integral function (الاقتران المكامل)",
+    "book": "ت(س)",
+    "latex": "T(x)",
+    "armath_gap": "T is not mapped; Arabic should show ت"
+   },
+   {
+    "meaning": "area",
+    "book": "م",
+    "latex": "A",
+    "armath_gap": "A maps to أ; the book writes م for area (M would render م)"
+   },
+   {
+    "meaning": "volume",
+    "book": "ح",
+    "latex": "V",
+    "armath_gap": "V is not mapped (v->ع); the book writes ح for volume, which clashes visually with ح = ℝ"
+   },
+   {
+    "meaning": "dummy variable inside T(x)",
+    "book": "ص",
+    "latex": "y"
+   }
+  ]
+ },
+ "branch_notes": [
+  {
+   "ar": "الكتاب مشترك بين الفرعين العلمي والصناعي (لجنة ورشات العمل: «كتاب الرياضيات للثاني عشر العلمي والصناعي»). الشارة «للعلمي فقط» تعني أن المحتوى مستثنى من الفرع الصناعي.",
+   "en": "The book is shared by the Scientific and Industrial branches (the workshop credits say 'maths book for Grade 12 scientific and industrial'). The pink badge «للعلمي فقط» marks content excluded for the Industrial branch."
+  },
+  {
+   "ar": "في هذه الوحدة تحمل الشارة: الدرس ٥-١ كاملاً (ص١٦٤)، الدرس ٥-٢ كاملاً (ص١٧١)، والجزء «ثانياً: الحجوم الدورانية» من الدرس ٥-٥ (ص١٩٥).",
+   "en": "Badged in this unit: all of lesson 5-1 (p164), all of lesson 5-2 (p171), and part 'Second: solids of revolution' of lesson 5-5 (p195). Lessons 5-3, 5-4 and the area part of 5-5 carry no badge (common to both branches)."
+  }
+ ],
+ "lessons": [
+  {
+   "id": "5-1",
+   "title": {
+    "ar": "التجزئة ومجموع ريمان",
+    "en": "Partition and Riemann Sum"
+   },
+   "printed_pages": [
+    164,
+    170
+   ],
+   "pdf_pages": [
+    168,
+    174
+   ],
+   "branch_marking": "scientific_only",
+   "concepts": [
+    {
+     "id": "u5.partition",
+     "name": {
+      "ar": "التجزئة النونية لفترة",
+      "en": "n-partition of an interval"
+     }
+    },
+    {
+     "id": "u5.subinterval",
+     "name": {
+      "ar": "الفترة الجزئية الرائية وطولها",
+      "en": "r-th subinterval and its length"
+     }
+    },
+    {
+     "id": "u5.regular_partition",
+     "name": {
+      "ar": "التجزئة المنتظمة",
+      "en": "regular partition"
+     }
+    },
+    {
+     "id": "u5.regular_partition_element",
+     "name": {
+      "ar": "قانون العنصر الرائي في التجزئة المنتظمة",
+      "en": "formula for the r-th element of a regular partition"
+     }
+    },
+    {
+     "id": "u5.riemann_sum",
+     "name": {
+      "ar": "مجموع ريمان",
+      "en": "Riemann sum"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u5.def.partition",
+     "concept": "u5.partition",
+     "page": 164,
+     "statement": {
+      "ar": "تجزئة نونية للفترة المغلقة [أ، ب] هي مجموعة نقاط مرتبة تصاعدياً تبدأ بـ أ وتنتهي بـ ب، تقسم الفترة إلى ن فترة جزئية؛ الفترة الجزئية الرائية [سر-١، سر] وطولها Δسر = سر − سر-١، ومجموع أطوال الفترات الجزئية يساوي طول الفترة.",
+      "en": "An n-partition of the closed interval [a,b] is a set of points in increasing order that starts at a and ends at b, splitting the interval into n subintervals; the r-th subinterval is [x_{r-1}, x_r] with length Δx_r = x_r − x_{r-1}, and the subinterval lengths add up to b − a."
+     },
+     "latex": "\\sigma_n = \\{a = x_0, x_1, x_2, \\ldots, x_n = b\\},\\quad x_0 < x_1 < \\cdots < x_n,\\quad \\Delta x_r = x_r - x_{r-1},\\quad \\sum_{r=1}^{n}(x_r - x_{r-1}) = b - a",
+     "conditions": {
+      "ar": "ثلاثة شروط: الفترة مغلقة، التجزئة تبدأ ببداية الفترة وتنتهي بنهايتها، العناصر مرتبة تصاعدياً.",
+      "en": "Three conditions: the interval is closed; the partition starts at a and ends at b; the elements are strictly increasing."
+     }
+    },
+    {
+     "id": "u5.def.regular_partition",
+     "concept": "u5.regular_partition",
+     "page": 166,
+     "statement": {
+      "ar": "تكون التجزئة منتظمة إذا تساوت أطوال جميع فتراتها الجزئية، ويكون طول الفترة الجزئية = طول الفترة الكلية ÷ عدد الفترات الجزئية.",
+      "en": "A partition is regular when all its subintervals have equal length; the common length is (total length) / (number of subintervals)."
+     },
+     "latex": "\\Delta x = \\frac{b-a}{n}"
+    },
+    {
+     "id": "u5.def.riemann_sum",
+     "concept": "u5.riemann_sum",
+     "page": 168,
+     "statement": {
+      "ar": "إذا كان ق معرفاً على [أ، ب] وσن تجزئة لها، فإن مجموع حواصل ضرب قيمة الاقتران عند نقطة مختارة سر* من كل فترة جزئية في طول تلك الفترة يسمى مجموع ريمان م(σن، ق). وفي التجزئة المنتظمة يُخرَج الطول المشترك عاملاً.",
+      "en": "If f is defined on [a,b] and σ_n is a partition, the sum of f(x_r*) times the subinterval length, with x_r* any point of the r-th subinterval, is the Riemann sum M(σ_n, f). For a regular partition the common length factors out."
+     },
+     "latex": "M(\\sigma_n, f) = \\sum_{r=1}^{n} f(x_r^{*})(x_r - x_{r-1}),\\quad x_r^{*} \\in [x_{r-1}, x_r]",
+     "latex_regular": "M(\\sigma_n, f) = \\frac{b-a}{n}\\sum_{r=1}^{n} f(x_r^{*})",
+     "conditions": {
+      "ar": "الاختيار الشائع في الكتاب: سر* = سر-١ (الطرف الأيسر) أو سر* = سر (الطرف الأيمن).",
+      "en": "Typical book choices: x_r* = x_{r-1} (left endpoint) or x_r* = x_r (right endpoint)."
+     }
+    }
+   ],
+   "rules": [
+    {
+     "id": "u5.rule.partition_counts",
+     "kind": "result",
+     "concept": "u5.partition",
+     "page": 165,
+     "statement": {
+      "ar": "التجزئة σن فيها ن+١ عنصراً و ن فترة جزئية.",
+      "en": "σ_n has n+1 elements and n subintervals."
+     },
+     "latex": "|\\sigma_n| = n+1"
+    },
+    {
+     "id": "u5.rule.regular_element",
+     "kind": "rule",
+     "concept": "u5.regular_partition_element",
+     "page": 167,
+     "statement": {
+      "ar": "في التجزئة المنتظمة: العنصر سر = أ + ر × (ب − أ)/ن حيث ر = ٠، ١، ...، ن، والفترة الجزئية الرائية [سر-١، سر]. العنصر الرائي ترتيبه ر لكنه سر-١ لأن الترقيم يبدأ من س٠.",
+      "en": "In a regular partition x_r = a + r(b−a)/n for r = 0,1,…,n; the r-th subinterval is [x_{r-1}, x_r]. The r-th element (in counting order) is x_{r-1}, because indexing starts at x_0."
+     },
+     "latex": "x_r = a + \\frac{b-a}{n}\\, r,\\quad r = 0, 1, \\ldots, n"
+    },
+    {
+     "id": "u5.rule.regular_unique",
+     "kind": "note",
+     "concept": "u5.regular_partition",
+     "page": 166,
+     "statement": {
+      "ar": "لكل فترة ولكل ن توجد تجزئة منتظمة واحدة فقط، بينما يوجد عدد لا نهائي من التجزئات غير المنتظمة.",
+      "en": "For a given interval and n there is exactly one regular partition, but infinitely many non-regular ones (raised as 'think and discuss')."
+     },
+     "latex": ""
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 164,
+     "ask": "Palm trees every 50 m along a 1 km street: how many trees? (motivates splitting an interval into equal parts)"
+    },
+    {
+     "label": "نشاط ٢",
+     "page": 166,
+     "ask": "Given σ_4 = {2,4,6,8,10} of [2,10]: list subintervals, compare their lengths, count subintervals and elements (leads to regular partition)."
+    },
+    {
+     "label": "نشاط ٣",
+     "page": 167,
+     "ask": "Number-line picture of a regular σ_n of [2,8] with step 6/n: fill in total length, number of elements, x_7, 7th element, 7th subinterval."
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 165,
+     "ask": "How many five-partitions of [2,7] can be formed? (infinitely many)"
+    },
+    {
+     "page": 166,
+     "ask": "Are there other regular five-partitions of [−2,13]? (no; unique)"
+    }
+   ],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 165,
+     "type": "check_partition",
+     "ask": "Which of four sets is a partition of [−1,3]?",
+     "method": "Test the three conditions: first element = a, last = b, all inside the interval, strictly increasing.",
+     "key_steps": [
+      "valid set",
+      "rejected: x_0 ≠ −1",
+      "rejected: 4 ∉ [−1,3]",
+      "rejected: not increasing"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 165,
+     "type": "write_partition",
+     "ask": "Write three five-partitions of [2,7].",
+     "method": "Choose any 4 increasing interior points.",
+     "key_steps": [
+      "one regular {2,3,4,5,6,7}, two non-regular"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 165,
+     "type": "subintervals_lengths",
+     "ask": "σ_3 = {−1,3,4,6}: list subintervals and lengths.",
+     "method": "Consecutive pairs; lengths by subtraction.",
+     "key_steps": [
+      "[−1,3],[3,4],[4,6]",
+      "lengths 4,1,2",
+      "sum 7 = 6 − (−1)",
+      "4 elements, 3 subintervals"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 166,
+     "type": "regular_partition_build",
+     "ask": "Regular five-partition of [−2,13].",
+     "method": "Δx = (b−a)/n, then add Δx repeatedly.",
+     "key_steps": [
+      "Δx = 15/5 = 3",
+      "{−2,1,4,7,10,13}"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 166,
+     "type": "find_endpoint",
+     "ask": "Regular σ_6 of [5,b] with Δx = 1/3: find b.",
+     "method": "(b−5)/6 = 1/3.",
+     "key_steps": [
+      "b = 7"
+     ]
+    },
+    {
+     "label": "مثال ٦",
+     "page": 167,
+     "type": "regular_element_formula",
+     "ask": "Regular σ_12 of [−1,19]: x_2, x_9, the 8th element, the 5th subinterval.",
+     "method": "x_r = a + r(b−a)/n.",
+     "key_steps": [
+      "Δx = 20/12 = 5/3",
+      "x_2 = 7/3, x_9 = 14",
+      "8th element = x_7 = 32/3",
+      "5th subinterval = [x_4, x_5] = [17/3, 22/3]"
+     ]
+    },
+    {
+     "label": "مثال ٧",
+     "page": 168,
+     "type": "riemann_sum_table",
+     "ask": "f(x) = x − 2, σ_3 = {3,4,5,6}, left endpoints: M(σ_3, f).",
+     "method": "Table: subinterval, length, x_r*, f(x_r*), product; add.",
+     "key_steps": [
+      "products 1,2,3",
+      "M = 6",
+      "equals total area of the rectangles under the line"
+     ]
+    },
+    {
+     "label": "مثال ٨",
+     "page": 168,
+     "type": "riemann_sum_regular",
+     "ask": "f(x) = x² − 2x, regular σ_4 of [−3,5], left endpoints.",
+     "method": "Δx = 2, factor it out.",
+     "key_steps": [
+      "σ_4 = {−3,−1,1,3,5}",
+      "x_r* = −3,−1,1,3",
+      "M = 2(15+3−1+3) = 40"
+     ]
+    },
+    {
+     "label": "مثال ٩",
+     "page": 169,
+     "type": "riemann_sum_nonregular",
+     "ask": "f(x) = ln x, σ_3 = {1, e, e², e³}, right endpoints.",
+     "method": "Sum (length × value) term by term (lengths differ).",
+     "key_steps": [
+      "M = (e−1)(1) + (e²−e)(2) + (e³−e²)(3) = 3e³ − e² − e − 1"
+     ]
+    },
+    {
+     "label": "مثال ١٠",
+     "page": 169,
+     "type": "riemann_sum_unknown_parameter",
+     "ask": "f(x) = ax on [−1,1], regular σ_4, left endpoints, M = 2: find a.",
+     "method": "Express M in terms of a and solve.",
+     "key_steps": [
+      "Δx = 1/2",
+      "M = ½(−a − a/2 + 0 + a/2) = −a/2 = 2",
+      "a = −4"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٥-١",
+    "page": 170,
+    "items": [
+     {
+      "n": 1,
+      "type": "regular_element_formula",
+      "ask": "Regular σ_6 of [−1,2]: (a) 3rd element, (b) 4th subinterval.",
+      "book_answer": "(a) 0, (b) [1/2, 1]"
+     },
+     {
+      "n": 2,
+      "type": "find_endpoint",
+      "ask": "5th element of regular σ_10 of [c,7] is 4: find c.",
+      "book_answer": "c = 2"
+     },
+     {
+      "n": 3,
+      "type": "riemann_sum_regular",
+      "ask": "f(x) = 6 − x² on [1,5], regular σ_4, right endpoints.",
+      "book_answer": "−30"
+     },
+     {
+      "n": 4,
+      "type": "riemann_sum_regular",
+      "ask": "f(x) = 2 + e^x on [−1,2], regular σ_3, left endpoints.",
+      "book_answer": "7 + e + 1/e"
+     },
+     {
+      "n": 5,
+      "type": "riemann_sum_unknown_parameter",
+      "ask": "f(x) = ax/(x+2) on [−1,8], σ_5 = {−1,0,2,3,6,8}, left endpoints, M = 5.6: find a.",
+      "book_answer": "a = 2"
+     },
+     {
+      "n": 6,
+      "type": "two_partitions_system",
+      "ask": "Regular σ_8 of [a,b] has 3rd element 2; regular σ_12 of [a,b] has 5th element 4: find a, b.",
+      "book_answer": "a = −4, b = 20"
+     },
+     {
+      "n": 7,
+      "type": "riemann_sum_nonregular",
+      "ask": "f(x) = sin x on [0, π/2], σ_4 = {0, π/6, π/4, π/3, π/2}, left endpoints.",
+      "book_answer": "(π/24)(1 + √2 + 2√3)"
+     },
+     {
+      "n": 8,
+      "type": "proof",
+      "ask": "f bounded on [0,1], regular σ_n; L = M with right endpoints, K = M with left endpoints: prove L − K = (1/n)(f(1) − f(0)).",
+      "book_answer": "telescoping sum"
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [],
+    "concepts": [],
+    "grade11": [
+     {
+      "ar": "رمز المجموع Σ وخصائصه",
+      "en": "sigma notation and its rules"
+     },
+     {
+      "ar": "الفترات وترتيب الأعداد الحقيقية",
+      "en": "intervals and ordering of real numbers"
+     },
+     {
+      "ar": "حساب قيم الاقترانات (كثيرات حدود، أسية، لوغاريتمية، مثلثية)",
+      "en": "evaluating polynomial, exponential, logarithmic and trigonometric functions"
+     },
+     {
+      "ar": "مساحة المستطيل",
+      "en": "area of a rectangle"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 167,
+     "text": {
+      "ar": "العنصر الثامن هو س٧ وليس س٨، لأن الترقيم يبدأ من س٠؛ والفترة الجزئية الخامسة هي [س٤، س٥].",
+      "en": "The 8th element is x_7, not x_8 (indexing starts at x_0); the 5th subinterval is [x_4, x_5]."
+     }
+    },
+    {
+     "page": 165,
+     "text": {
+      "ar": "مجموعة لا تبدأ بـ أ أو لا تنتهي بـ ب، أو فيها عنصر خارج الفترة، أو غير مرتبة تصاعدياً ليست تجزئة.",
+      "en": "A set that misses a or b, contains a point outside [a,b], or is not increasing is not a partition."
+     }
+    },
+    {
+     "page": 169,
+     "text": {
+      "ar": "في التجزئة غير المنتظمة لا يجوز إخراج طول الفترة عاملاً مشتركاً؛ يُضرب كل حد في طول فترته.",
+      "en": "For a non-regular partition the length cannot be factored out; multiply each term by its own subinterval length."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5-2",
+   "title": {
+    "ar": "التكامل المحدود",
+    "en": "The Definite Integral"
+   },
+   "printed_pages": [
+    171,
+    175
+   ],
+   "pdf_pages": [
+    175,
+    179
+   ],
+   "branch_marking": "scientific_only",
+   "concepts": [
+    {
+     "id": "u5.riemann_sum_general_n",
+     "name": {
+      "ar": "مجموع ريمان لتجزئة منتظمة عامة ن",
+      "en": "Riemann sum for a general regular n-partition"
+     }
+    },
+    {
+     "id": "u5.definite_integral_def",
+     "name": {
+      "ar": "تعريف التكامل المحدود كنهاية لمجموع ريمان",
+      "en": "definite integral as the limit of Riemann sums"
+     }
+    },
+    {
+     "id": "u5.integrability",
+     "name": {
+      "ar": "قابلية الاقتران للتكامل",
+      "en": "integrability of a function on [a,b]"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u5.def.definite_integral",
+     "concept": "u5.definite_integral_def",
+     "page": 172,
+     "statement": {
+      "ar": "إذا كان ق معرفاً ومحدوداً على [أ، ب]، وكانت نهاية م(σن، ق) عندما ن ← ∞ تساوي ل لجميع اختيارات سر*، فإن ق قابل للتكامل على [أ، ب] و∫ من أ إلى ب ق(س) ءس = ل، ويسمى أ و ب حدّي التكامل.",
+      "en": "If f is defined and bounded on [a,b] and lim_{n→∞} M(σ_n, f) = L for every choice of the points x_r*, then f is integrable on [a,b] and ∫_a^b f(x) dx = L; a and b are the limits of integration."
+     },
+     "latex": "\\int_{a}^{b} f(x)\\,\\dd{x} = \\lim_{n\\to\\infty} M(\\sigma_n, f) = \\lim_{n\\to\\infty} \\frac{b-a}{n}\\sum_{r=1}^{n} f(x_r^{*})",
+     "conditions": {
+      "ar": "محدود: يوجد عددان م، ن بحيث م ≤ ق(س) ≤ ن لكل س في المجال. الكتاب يقتصر في حساب م(σن، ق) لـ ن عامة على كثيرات الحدود من الدرجة الأولى فأقل.",
+      "en": "Bounded: there are numbers m, N with m ≤ f(x) ≤ N on the domain. The book restricts general-n Riemann sums (and integration by definition) to polynomials of degree ≤ 1."
+     }
+    }
+   ],
+   "rules": [
+    {
+     "id": "u5.rule.sigma_rules",
+     "kind": "reminder",
+     "concept": "u5.riemann_sum_general_n",
+     "page": 171,
+     "statement": {
+      "ar": "تذكير بقواعد المجموع: جمع/طرح المجاميع، إخراج الثابت، مجموع الثابت = ن × الثابت، ومجموع الأعداد من ١ إلى ن = ن(ن+١)/٢.",
+      "en": "Reminder of sigma rules: sum of a sum, constant factor out, sum of a constant = n × constant, and 1 + 2 + … + n = n(n+1)/2."
+     },
+     "latex": "\\sum_{r=1}^{n}(k_r \\pm u_r) = \\sum_{r=1}^{n} k_r \\pm \\sum_{r=1}^{n} u_r,\\quad \\sum_{r=1}^{n} a\\,k_r = a\\sum_{r=1}^{n} k_r,\\quad \\sum_{r=1}^{n} a = na,\\quad \\sum_{r=1}^{n} r = \\frac{n(n+1)}{2}"
+    },
+    {
+     "id": "u5.rule.limits_rational_infinity",
+     "kind": "reminder",
+     "concept": "u5.definite_integral_def",
+     "page": 173,
+     "statement": {
+      "ar": "تذكير: نهاية الاقتران النسبي عند ±∞ تساوي نسبة المعاملين الرئيسيين إذا تساوت الدرجتان، وصفراً إذا كانت درجة البسط أقل، و±∞ إذا كانت أكبر.",
+      "en": "Reminder: the limit of a rational function at ±∞ is the ratio of leading coefficients when degrees are equal, 0 when the numerator's degree is smaller, ±∞ when it is larger."
+     },
+     "latex": ""
+    },
+    {
+     "id": "u5.thm.continuous_integrable",
+     "kind": "theorem",
+     "concept": "u5.integrability",
+     "page": 174,
+     "statement": {
+      "ar": "نظرية (١): كل اقتران متصل على [أ، ب] قابل للتكامل عليها.",
+      "en": "Theorem 1: every function continuous on [a,b] is integrable on [a,b]."
+     },
+     "latex": ""
+    },
+    {
+     "id": "u5.thm.finite_points",
+     "kind": "theorem",
+     "concept": "u5.integrability",
+     "page": 174,
+     "statement": {
+      "ar": "نظرية (٢): إذا كان ق قابلاً للتكامل على [أ، ب] وكان هـ(س) = ق(س) لجميع قيم س في الفترة ما عدا عند عدد منتهٍ من النقاط، فإن هـ قابل للتكامل على [أ، ب] وتكاملاهما متساويان.",
+      "en": "Theorem 2: if f is integrable on [a,b] and g(x) = f(x) for all x in [a,b] except at finitely many points, then g is integrable on [a,b] and has the same integral."
+     },
+     "latex": "\\int_{a}^{b} g(x)\\,\\dd{x} = \\int_{a}^{b} f(x)\\,\\dd{x}"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 171,
+     "ask": "Irregular plot of land near Tell Asur: how can its area be computed when it cannot be split into regular shapes? (motivates the limit of rectangle sums)"
+    }
+   ],
+   "think_discuss": [],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 171,
+     "type": "riemann_sum_general_n",
+     "ask": "f(x) = 2x + 3 on [2,6], regular σ_n, right endpoints: M(σ_n, f).",
+     "method": "x_r = a + r(b−a)/n, substitute, split with sigma rules.",
+     "key_steps": [
+      "x_r = 2 + 4r/n",
+      "M = (4/n)Σ(7 + 8r/n)",
+      "= (4/n)(7n) + (32/n²)·n(n+1)/2",
+      "M = 44 + 16/n"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 172,
+     "type": "riemann_sum_find_endpoint",
+     "ask": "f(x) = 5x − 2 on [1,b], regular σ_5, right endpoints, M = 36: find b.",
+     "method": "Write M in terms of b, solve the quadratic, reject the root outside the interval.",
+     "key_steps": [
+      "M = ((b−1)/5)(3·5 + (b−1)·15)",
+      "b² − b − 12 = 0",
+      "b = 4 (b = −3 rejected since b > 1)"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 173,
+     "type": "integral_by_definition",
+     "ask": "∫_0^3 (5 − 4x) dx by the definition, right endpoints.",
+     "method": "Regular σ_n, M(σ_n,f) by sigma rules, then n → ∞.",
+     "key_steps": [
+      "x_r = 3r/n",
+      "M = (3/n)(5n − (12/n)·n(n+1)/2)",
+      "= −3 − 18/n",
+      "limit = −3"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 174,
+     "type": "integral_from_given_riemann_sum",
+     "ask": "∫_{−1}^{4} f dx = 9 and M(σ_n,f) = (n+1)(2an+1)/n²: find a.",
+     "method": "Integral = lim M; limit of a rational function in n.",
+     "key_steps": [
+      "lim = 2a",
+      "2a = 9 → a = 9/2"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 174,
+     "type": "integrability_continuous",
+     "ask": "Is x² + 5 integrable on [−2,4]?",
+     "method": "Polynomial ⇒ continuous ⇒ integrable (theorem 1).",
+     "key_steps": [
+      "yes"
+     ]
+    },
+    {
+     "label": "مثال ٦",
+     "page": 175,
+     "type": "integrability_step_function",
+     "ask": "Is ⟦x/2⟧ integrable on [4,6]?",
+     "method": "Rewrite piecewise; compare with a continuous g that differs at finitely many points (theorem 2).",
+     "key_steps": [
+      "f = 2 on [4,6), 3 at x = 6",
+      "g(x) = 2 continuous",
+      "f = g except x = 6 ⇒ integrable"
+     ]
+    },
+    {
+     "label": "مثال ٧",
+     "page": 175,
+     "type": "integrability_removable_point",
+     "ask": "Show (x² − 1)/(x + 1) is integrable on [−2,2].",
+     "method": "g(x) = x − 1 equals f except at x = −1 (theorem 2).",
+     "key_steps": [
+      "integrable"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٥-٢",
+    "page": 175,
+    "items": [
+     {
+      "n": 1,
+      "type": "riemann_sum_general_n",
+      "ask": "f(x) = 2 − 5x, regular σ_n of [−1,3], right endpoints: M(σ_n, f).",
+      "book_answer": "−12 − 40/n"
+     },
+     {
+      "n": 2,
+      "type": "proof",
+      "ask": "f(x) = a·g(x) + b on [0,1]: prove M(σ_n, f) = a·M(σ_n, g) + b for all choices of x_r*.",
+      "book_answer": null
+     },
+     {
+      "n": 3,
+      "type": "riemann_sum_find_endpoint",
+      "ask": "f(x) = 2x on [1,b], M(σ_n, f) = 35 + 25/n: find b.",
+      "book_answer": "b = 6"
+     },
+     {
+      "n": 4,
+      "type": "integral_by_definition",
+      "ask": "By definition: (a) ∫_{−1}^{4} ½ dx, (b) ∫_1^2 (4 − 6x) dx.",
+      "book_answer": "(a) 5/2, (b) −5"
+     },
+     {
+      "n": 5,
+      "type": "integrability_removable_point",
+      "ask": "Show (cos³x − 1)/(cos x − 1) is integrable on [−π/2, π/2].",
+      "book_answer": null
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [
+     "5-1"
+    ],
+    "concepts": [
+     "u5.regular_partition_element",
+     "u5.riemann_sum"
+    ],
+    "grade11": [
+     {
+      "ar": "النهايات عند اللانهاية للاقترانات النسبية",
+      "en": "limits at infinity of rational functions"
+     },
+     {
+      "ar": "الاتصال",
+      "en": "continuity"
+     },
+     {
+      "ar": "اقتران أكبر عدد صحيح والاقترانات متعددة القاعدة",
+      "en": "greatest-integer and piecewise functions"
+     },
+     {
+      "ar": "حل المعادلة التربيعية",
+      "en": "solving quadratic equations"
+     },
+     {
+      "ar": "تحليل الفرق بين مكعبين",
+      "en": "factoring a difference of cubes"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 172,
+     "text": {
+      "ar": "عند إيجاد طرف مجهول للفترة تُرفض القيمة التي تجعل الفترة غير صحيحة (مثل ب = −٣ في الفترة [١، ب]).",
+      "en": "When solving for an unknown endpoint, reject roots that make the interval invalid (b = −3 for [1,b])."
+     }
+    },
+    {
+     "page": 175,
+     "text": {
+      "ar": "الاقتران غير المعرّف عند نقطة (كسر يمكن اختصاره) يبقى قابلاً للتكامل إذا ساوى اقتراناً متصلاً في كل النقاط عدا عدد منتهٍ منها.",
+      "en": "A function undefined at a point (cancellable fraction) is still integrable if it equals a continuous function except at finitely many points."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5-3",
+   "title": {
+    "ar": "العلاقة بين التفاضل والتكامل",
+    "en": "Fundamental Theorem of Calculus"
+   },
+   "printed_pages": [
+    176,
+    180
+   ],
+   "pdf_pages": [
+    180,
+    184
+   ],
+   "branch_marking": null,
+   "concepts": [
+    {
+     "id": "u5.ftc_evaluation",
+     "name": {
+      "ar": "النظرية الأساسية للتفاضل والتكامل (حساب التكامل بالاقتران الأصلي)",
+      "en": "fundamental theorem of calculus: evaluation by an antiderivative"
+     }
+    },
+    {
+     "id": "u5.integral_function",
+     "name": {
+      "ar": "الاقتران المكامل ت(س)",
+      "en": "the integral function T(x)"
+     }
+    },
+    {
+     "id": "u5.ftc_derivative",
+     "name": {
+      "ar": "مشتقة الاقتران المكامل",
+      "en": "derivative of the integral function"
+     }
+    },
+    {
+     "id": "u5.definite_substitution",
+     "name": {
+      "ar": "التكامل المحدود بالتعويض والأجزاء",
+      "en": "definite integrals by substitution and by parts"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u5.def.integral_via_antiderivative",
+     "concept": "u5.ftc_evaluation",
+     "page": 176,
+     "statement": {
+      "ar": "إذا كان م أحد الاقترانات الأصلية للاقتران المتصل ق على [أ، ب] فإن م(ب) − م(أ) هو التكامل المحدود لـ ق على [أ، ب].",
+      "en": "If M is an antiderivative of the continuous function f on [a,b], then M(b) − M(a) is the definite integral of f on [a,b]."
+     },
+     "latex": "\\int_{a}^{b} f(x)\\,\\dd{x} = M(b) - M(a)"
+    },
+    {
+     "id": "u5.def.integral_function",
+     "concept": "u5.integral_function",
+     "page": 176,
+     "statement": {
+      "ar": "إذا كان ق قابلاً للتكامل على [أ، ب] فإن ت(س) = ∫ من أ إلى س ق(ص) ءص لكل س في [أ، ب] يسمى الاقتران المكامل لـ ق.",
+      "en": "If f is integrable on [a,b], then T(x) = ∫_a^x f(y) dy for x in [a,b] is called the integral function of f."
+     },
+     "latex": "T(x) = \\int_{a}^{x} f(y)\\,\\dd{y},\\quad x \\in [a,b]"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u5.thm.ftc1",
+     "kind": "theorem",
+     "concept": "u5.ftc_evaluation",
+     "page": 176,
+     "statement": {
+      "ar": "النظرية الأساسية (١): إذا كان ق متصلاً على [أ، ب] وكان م اقتراناً أصلياً له، فإن ∫ من أ إلى ب ق(س) ءس = م(س)|من أ إلى ب = م(ب) − م(أ).",
+      "en": "FTC (1): if f is continuous on [a,b] and M is an antiderivative of f, then ∫_a^b f(x) dx = [M(x)]_a^b = M(b) − M(a)."
+     },
+     "latex": "\\int_{a}^{b} f(x)\\,\\dd{x} = M(x)\\Big|_{a}^{b} = M(b) - M(a)",
+     "conditions": {
+      "ar": "ق متصل على [أ، ب].",
+      "en": "f continuous on [a,b]."
+     }
+    },
+    {
+     "id": "u5.thm.ftc2",
+     "kind": "theorem",
+     "concept": "u5.ftc_derivative",
+     "page": 176,
+     "statement": {
+      "ar": "النظرية الأساسية (٢-ب): إذا كان ق متصلاً على [أ، ب] فإن مشتقة الاقتران المكامل تساوي ق: تَ(س) = ق(س) لكل س في [أ، ب].",
+      "en": "FTC (2b): if f is continuous on [a,b], the integral function satisfies T'(x) = f(x) for all x in [a,b]."
+     },
+     "latex": "\\dv{}{x}\\int_{a}^{x} f(y)\\,\\dd{y} = f(x)",
+     "conditions": {
+      "ar": "ق متصل.",
+      "en": "f continuous."
+     }
+    },
+    {
+     "id": "u5.thm.integral_function_props",
+     "kind": "theorem",
+     "concept": "u5.integral_function",
+     "page": 179,
+     "statement": {
+      "ar": "إذا كان ت الاقتران المكامل لـ ق على [أ، ب] فإن: ت متصل دائماً على [أ، ب]، و ت(أ) = ٠.",
+      "en": "If T is the integral function of f on [a,b], then T is always continuous on [a,b] and T(a) = 0."
+     },
+     "latex": "T(a) = 0",
+     "use": "Used to find unknown constants in a piecewise T(x): T(a) = 0 and continuity at the joining point."
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 176,
+     "ask": "Line f(x) = 2 − x with the axes forms a triangle: compare its area with M(2) − M(0) for M(x) = 2x − x²/2 + c."
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 178,
+     "ask": "How can T(1) be found without finding T(x)? (T(1) = ∫_{−2}^{1} f)"
+    }
+   ],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 177,
+     "type": "evaluate_definite_ftc",
+     "ask": "Evaluate ∫_{−2}^{3}(4x³ − 1) dx, ∫_4^9 3√x dx, ∫_1^2 e^x dx.",
+     "method": "Find an antiderivative, substitute limits, subtract.",
+     "key_steps": [
+      "(x⁴ − x)|_{−2}^{3} = 60",
+      "2x^{3/2}|_4^9 = 38 (book leaves to student)",
+      "e² − e"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 177,
+     "type": "evaluate_from_antiderivative_values",
+     "ask": "M antiderivative of f, M(−3) = 4, M(7) = 12: ∫_{−3}^{7} f.",
+     "method": "M(7) − M(−3).",
+     "key_steps": [
+      "8"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 178,
+     "type": "integral_function_find",
+     "ask": "f(x) = 4x³ on [−2,4]: T(x), T(−2), T(1).",
+     "method": "T(x) = ∫_{−2}^{x} 4y³ dy.",
+     "key_steps": [
+      "T(x) = x⁴ − 16",
+      "T(−2) = 0",
+      "T(1) = −15"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 178,
+     "type": "integral_function_trig",
+     "ask": "f(x) = x² + sin 2x on [0, π/2]: T(x), T(0), ∫_0^{π/4} f.",
+     "method": "Integrate from 0 to x; the integral up to π/4 equals T(π/4).",
+     "key_steps": [
+      "T(x) = x³/3 − (cos 2x)/2 + 1/2",
+      "T(0) = 0",
+      "∫_0^{π/4} f = π³/192 + 1/2"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 179,
+     "type": "definite_substitution",
+     "ask": "∫_0^{π/3} sec⁵x tan x dx.",
+     "method": "Substitute y = sec x, find an antiderivative in x, then apply limits.",
+     "key_steps": [
+      "dy = sec x tan x dx",
+      "∫ y⁴ dy = y⁵/5",
+      "sec⁵x/5 |_0^{π/3} = (32 − 1)/5 = 31/5"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٥-٣",
+    "page": 180,
+    "items": [
+     {
+      "n": 1,
+      "type": "evaluate_definite_mixed_methods",
+      "ask": "(a) ∫_0^4 (3+√x)² dx, (b) ∫_1^2 x(x²−3)³ dx, (c) ∫_1^e ln x dx, (d) ∫_0^2 120x²(x−1)³ dx.",
+      "book_answer": "(a) 76, (b) −15/8, (c) 1, (d) 96"
+     },
+     {
+      "n": 2,
+      "type": "integral_function_find",
+      "ask": "f(x) = x/(x+1), x ∈ [0,4]: find T(x).",
+      "book_answer": "T(x) = x − ln(x+1)"
+     },
+     {
+      "n": 3,
+      "type": "integral_function_piecewise_constants",
+      "ask": "T(x) = {2x² + a, −2 ≤ x ≤ 3; bx + 1, 3 < x ≤ 5} is the integral function of f on [−2,5]: find a, b.",
+      "book_answer": "a = −8, b = 3"
+     },
+     {
+      "n": 4,
+      "type": "ftc_derivative_find_constant",
+      "ask": "f continuous, ∫_{1/2}^{x} f(y) dy = x + sin πx + c (x ≥ 1/2): find c, then f(2).",
+      "book_answer": "c = −3/2, f(2) = 1 + π"
+     },
+     {
+      "n": 5,
+      "type": "ftc_derivative_find_constant",
+      "ask": "T(x) = ∫_1^x (a + e^y) dy and T'(2) = −1: find a.",
+      "book_answer": "a = −e² − 1"
+     },
+     {
+      "n": 6,
+      "type": "definite_substitution",
+      "ask": "∫_0^1 (x² − 2x)(x − 1)⁵ dx.",
+      "book_answer": "1/24"
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [
+     "5-2",
+     "4-1",
+     "4-2",
+     "4-4",
+     "1-3",
+     "1-4"
+    ],
+    "concepts": [
+     "u5.definite_integral_def",
+     "u4 antiderivative / indefinite integral (lesson 4-1)",
+     "u4 integration rules (lesson 4-2)",
+     "u4 substitution, by parts (lesson 4-4)"
+    ],
+    "grade11": [
+     {
+      "ar": "قيم الاقترانات المثلثية للزوايا الخاصة",
+      "en": "trig values of special angles"
+     },
+     {
+      "ar": "قوانين الأسس والجذور",
+      "en": "laws of exponents and radicals"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 178,
+     "text": {
+      "ar": "في الاقتران المكامل يُستعمل متغير صوري (ص) داخل التكامل لأن س هو الحد العلوي.",
+      "en": "Inside T(x) the integration variable is a dummy (y) because x is the upper limit."
+     }
+    },
+    {
+     "page": 179,
+     "text": {
+      "ar": "بعد التعويض إما أن تُعاد الإجابة إلى المتغير الأصلي قبل التعويض بالحدود، أو تُغيَّر الحدود؛ الكتاب يعيد إلى س ثم يعوّض.",
+      "en": "After substitution either return to x before applying the limits or change the limits; the book returns to x and then substitutes."
+     }
+    },
+    {
+     "page": 180,
+     "text": {
+      "ar": "الاقتران المكامل متعدد القاعدة يجب أن يحقق ت(أ) = ٠ والاتصال عند نقطة الانتقال؛ هذان شرطان لإيجاد الثوابت.",
+      "en": "A piecewise integral function must satisfy T(a) = 0 and continuity at the joining point; these give the unknown constants."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5-4",
+   "title": {
+    "ar": "خصائص التكامل المحدود",
+    "en": "Properties of Definite Integral"
+   },
+   "printed_pages": [
+    181,
+    188
+   ],
+   "pdf_pages": [
+    185,
+    192
+   ],
+   "branch_marking": null,
+   "concepts": [
+    {
+     "id": "u5.basic_properties",
+     "name": {
+      "ar": "الخصائص الأساسية للتكامل المحدود",
+      "en": "basic properties of the definite integral"
+     }
+    },
+    {
+     "id": "u5.positivity",
+     "name": {
+      "ar": "إشارة التكامل للاقتران غير السالب",
+      "en": "sign of the integral of a non-negative function"
+     }
+    },
+    {
+     "id": "u5.comparison",
+     "name": {
+      "ar": "خاصية المقارنة",
+      "en": "comparison property"
+     }
+    },
+    {
+     "id": "u5.additivity",
+     "name": {
+      "ar": "خاصية الإضافة (تجزئة فترة التكامل)",
+      "en": "additivity over intervals"
+     }
+    },
+    {
+     "id": "u5.piecewise_integral",
+     "name": {
+      "ar": "تكامل الاقتران متعدد القاعدة والقيمة المطلقة",
+      "en": "integrating piecewise and absolute-value functions"
+     }
+    },
+    {
+     "id": "u5.integral_function_piecewise",
+     "name": {
+      "ar": "الاقتران المكامل لاقتران متعدد القاعدة",
+      "en": "integral function of a piecewise function"
+     }
+    },
+    {
+     "id": "u5.definite_techniques",
+     "name": {
+      "ar": "تقنيات التكامل المحدود (ترتيب البسط، الأجزاء، الكسور الجزئية)",
+      "en": "techniques for definite integrals (rewriting, parts, partial fractions)"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u5.prop.reverse_limits",
+     "kind": "property",
+     "concept": "u5.basic_properties",
+     "page": 181,
+     "statement": {
+      "ar": "تبديل حدّي التكامل يغير إشارته.",
+      "en": "Swapping the limits changes the sign."
+     },
+     "latex": "\\int_{a}^{b} f(x)\\,\\dd{x} = -\\int_{b}^{a} f(x)\\,\\dd{x}",
+     "conditions": {
+      "ar": "ق، هـ قابلان للتكامل على [أ، ب] (لكل الخصائص).",
+      "en": "f, g integrable on [a,b] (for all properties)."
+     }
+    },
+    {
+     "id": "u5.prop.equal_limits",
+     "kind": "property",
+     "concept": "u5.basic_properties",
+     "page": 181,
+     "statement": {
+      "ar": "التكامل على فترة طولها صفر يساوي صفراً.",
+      "en": "The integral over a zero-length interval is 0."
+     },
+     "latex": "\\int_{a}^{a} f(x)\\,\\dd{x} = 0"
+    },
+    {
+     "id": "u5.prop.constant",
+     "kind": "property",
+     "concept": "u5.basic_properties",
+     "page": 181,
+     "statement": {
+      "ar": "تكامل الثابت ك يساوي ك مضروباً في طول الفترة.",
+      "en": "The integral of a constant k is k times the interval length."
+     },
+     "latex": "\\int_{a}^{b} k\\,\\dd{x} = k(b-a),\\ k \\in \\mathbb{R}"
+    },
+    {
+     "id": "u5.prop.constant_multiple",
+     "kind": "property",
+     "concept": "u5.basic_properties",
+     "page": 181,
+     "statement": {
+      "ar": "يمكن إخراج الثابت من التكامل.",
+      "en": "A constant factor can be taken out."
+     },
+     "latex": "\\int_{a}^{b} k f(x)\\,\\dd{x} = k\\int_{a}^{b} f(x)\\,\\dd{x}"
+    },
+    {
+     "id": "u5.prop.sum",
+     "kind": "property",
+     "concept": "u5.basic_properties",
+     "page": 181,
+     "statement": {
+      "ar": "تكامل مجموع (أو فرق) اقترانين يساوي مجموع (أو فرق) تكامليهما، ويعمم على أكثر من اقترانين.",
+      "en": "The integral of a sum/difference is the sum/difference of the integrals (extends to more functions)."
+     },
+     "latex": "\\int_{a}^{b}\\big(f(x) \\pm g(x)\\big)\\dd{x} = \\int_{a}^{b} f(x)\\,\\dd{x} \\pm \\int_{a}^{b} g(x)\\,\\dd{x}"
+    },
+    {
+     "id": "u5.thm.positivity",
+     "kind": "theorem",
+     "concept": "u5.positivity",
+     "page": 182,
+     "statement": {
+      "ar": "إذا كان ق قابلاً للتكامل على [أ، ب] وكان ق(س) ≥ ٠ لكل س في الفترة، فإن تكامله عليها ≥ ٠.",
+      "en": "If f is integrable on [a,b] and f(x) ≥ 0 there, then ∫_a^b f ≥ 0."
+     },
+     "latex": "f(x) \\ge 0\\ \\forall x \\in [a,b] \\Rightarrow \\int_{a}^{b} f(x)\\,\\dd{x} \\ge 0",
+     "conditions": {
+      "ar": "أ < ب.",
+      "en": "a < b (limits in increasing order)."
+     }
+    },
+    {
+     "id": "u5.prop.comparison",
+     "kind": "property",
+     "concept": "u5.comparison",
+     "page": 183,
+     "statement": {
+      "ar": "إذا كان ق(س)، هـ(س) اقترانين قابلين للتكامل في الفترة [أ، ب]، وكان ق(س) ≤ هـ(س) لكل س في [أ، ب]، فإن تكامل ق ≤ تكامل هـ على الفترة.",
+      "en": "If f and g are both integrable on [a,b] and f(x) ≤ g(x) for every x in [a,b], then ∫_a^b f ≤ ∫_a^b g."
+     },
+     "conditions": {
+      "ar": "الاقترانان ق(س)، هـ(س) قابلان للتكامل في الفترة [أ، ب]، والمتباينة ق(س) ≤ هـ(س) متحققة لكل س في الفترة.",
+      "en": "f and g are both integrable on [a,b], and f(x) ≤ g(x) holds for every x in the interval."
+     },
+     "latex": "f(x) \\le g(x)\\ \\forall x \\in [a,b] \\Rightarrow \\int_{a}^{b} f(x)\\,\\dd{x} \\le \\int_{a}^{b} g(x)\\,\\dd{x}",
+     "use": "Prove inequalities without integrating: study the sign of f − g; bound an integral using bounds of f (m(b−a) ≤ ∫ f ≤ N(b−a))."
+    },
+    {
+     "id": "u5.prop.additivity",
+     "kind": "property",
+     "concept": "u5.additivity",
+     "page": 184,
+     "statement": {
+      "ar": "إذا كان ق قابلاً للتكامل على فترة ف وكانت أ، ب، جـ أي ثلاثة أعداد فيها، فإن تكامل ق من أ إلى ب = تكامله من أ إلى جـ + تكامله من جـ إلى ب (جـ ليست بالضرورة بين أ و ب).",
+      "en": "If f is integrable on an interval F and a, b, c are any three numbers in F, then ∫_a^b f = ∫_a^c f + ∫_c^b f (c need not lie between a and b)."
+     },
+     "latex": "\\int_{a}^{b} f(x)\\,\\dd{x} = \\int_{a}^{c} f(x)\\,\\dd{x} + \\int_{c}^{b} f(x)\\,\\dd{x}"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط",
+     "page": 185,
+     "ask": "f = {3x² − 7, x > 2; 2x, x ≤ 2}: complete ∫_{−2}^{3} f = ∫_{−2}^{2} 2x dx + ∫_2^3 (3x² − 7) dx = 0 + …"
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 185,
+     "ask": "Evaluate ∫_1^2 1/(1+e^x) dx by substituting y = 1 + e^x."
+    }
+   ],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 181,
+     "type": "apply_basic_properties",
+     "ask": "∫_{−4}^{6} dx; ∫_{π/3}^{π/3} −3 sin x dx; ∫_1^2 (3x⁴ − 7x² + 5)/x² dx.",
+     "method": "Constant property; equal limits; split the fraction term by term.",
+     "key_steps": [
+      "10",
+      "0",
+      "∫(3x² − 7 + 5x^{−2}) = (x³ − 7x − 5/x)|_1^2 = 5/2 (book leaves to student)"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 182,
+     "type": "constant_property_unknown_limit",
+     "ask": "∫_{3a+1}^{2+5a} 4 dx = 36: find a.",
+     "method": "k(b − a).",
+     "key_steps": [
+      "4(2a + 1) = 36",
+      "a = 4"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 182,
+     "type": "reverse_limits",
+     "ask": "∫_3^6 f = 10: find ∫_3^3 f and ∫_6^3 f.",
+     "method": "Equal limits; reverse limits.",
+     "key_steps": [
+      "0",
+      "−10"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 182,
+     "type": "sign_without_integrating",
+     "ask": "Without integrating show ∫_0^5 3x/(x² + 4) dx ≥ 0.",
+     "method": "Integrand ≥ 0 on [0,5] (numerator ≥ 0, denominator > 0), positivity theorem.",
+     "key_steps": [
+      "3x ≥ 0",
+      "x² + 4 ≥ 4 > 0"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 183,
+     "type": "compare_without_integrating",
+     "ask": "Show ∫_1^2 (x² − 1) dx ≤ ∫_1^2 (2x + 2) dx without integrating.",
+     "method": "Sign of the difference on the interval (sign chart).",
+     "key_steps": [
+      "f − g = x² − 2x − 3 = (x−3)(x+1)",
+      "≤ 0 on [1,2]",
+      "comparison property"
+     ]
+    },
+    {
+     "label": "مثال ٦",
+     "page": 183,
+     "type": "bound_integral",
+     "ask": "f(x) ≤ 4 on [1,3]: greatest value of ∫_1^3 5f dx.",
+     "method": "Comparison with the constant 4, then constant multiple.",
+     "key_steps": [
+      "∫ f ≤ 8",
+      "∫ 5f ≤ 40"
+     ]
+    },
+    {
+     "label": "مثال ٧",
+     "page": 184,
+     "type": "combine_integrals",
+     "ask": "Write ∫_{−1}^{4} f + ∫_4^9 f as one integral.",
+     "method": "Additivity.",
+     "key_steps": [
+      "∫_{−1}^{9} f"
+     ]
+    },
+    {
+     "label": "مثال ٨",
+     "page": 184,
+     "type": "additivity_given_values",
+     "ask": "∫_2^6 f = 3, ∫_8^6 f = −5: find ∫_2^8 2f.",
+     "method": "Additivity + reverse limits + constant multiple.",
+     "key_steps": [
+      "∫_2^8 f = 3 − (−5) = 8",
+      "∫_2^8 2f = 16"
+     ]
+    },
+    {
+     "label": "مثال ٩",
+     "page": 184,
+     "type": "integral_function_piecewise",
+     "ask": "f = {3x², −1 ≤ x ≤ 2; 4x + 2, 2 < x ≤ 4}: find T(x).",
+     "method": "On the first piece integrate from −1; on the second add the full first piece plus ∫_2^x.",
+     "key_steps": [
+      "T = x³ + 1 on [−1,2]",
+      "T = 9 + ∫_2^x (4y+2)dy = 2x² + 2x − 3 on (2,4]",
+      "T continuous, T(−1) = 0"
+     ]
+    },
+    {
+     "label": "مثال ١٠",
+     "page": 185,
+     "type": "algebraic_rewrite_integrand",
+     "ask": "∫_1^2 1/(1+e^x) dx.",
+     "method": "Add and subtract e^x in the numerator: 1 − e^x/(1+e^x).",
+     "key_steps": [
+      "(x − ln|1 + e^x|)|_1^2",
+      "= 1 + ln((1+e)/(1+e²))"
+     ]
+    },
+    {
+     "label": "مثال ١١",
+     "page": 186,
+     "type": "definite_by_parts_abstract",
+     "ask": "∫_0^2 x f(x) dx = 8, f(2) = 5: find ∫_0^2 x² f'(x) dx.",
+     "method": "Parts with u = x², dv = f'(x)dx.",
+     "key_steps": [
+      "x² f(x)|_0^2 − 2∫_0^2 x f(x) dx",
+      "= 20 − 16 = 4"
+     ]
+    },
+    {
+     "label": "مثال ١٢",
+     "page": 186,
+     "type": "partial_fractions_unknown_limit",
+     "ask": "∫_2^a 4/(x² − 1) dx = 2 ln(3/2), a > 1: find a.",
+     "method": "Partial fractions 2/(x−1) − 2/(x+1), evaluate, solve the log equation.",
+     "key_steps": [
+      "2 ln|(a−1)/(a+1)| − 2 ln(1/3) = 2 ln(3/2)",
+      "3(a−1)/(a+1) = 3/2",
+      "a = 3"
+     ]
+    }
+   ],
+   "exercises": {
+    "label": "تمارين ٥-٤",
+    "page": 187,
+    "items": [
+     {
+      "n": 1,
+      "type": "evaluate_definite_mixed_methods",
+      "ask": "(a) ∫_0^π sin²x dx, (b) ∫_0^2 (1+e^x)² dx, (c) ∫_{−√3}^{√3} (x+1)(x²+4) dx, (d) ∫_{−2}^{1} (x³ − 27)/(x² + 3x + 9) dx.",
+      "book_answer": "(a) π/2, (b) e⁴/2 + 2e² − 1/2, (c) 10√3, (d) −21/2"
+     },
+     {
+      "n": 2,
+      "type": "compare_without_integrating",
+      "ask": "Without evaluating prove (a) ∫_1^2 (x²+2) dx ≥ ∫_1^2 (2x−1) dx, (b) ∫_2^3 (x²+2) dx ≥ 0.",
+      "book_answer": null
+     },
+     {
+      "n": 3,
+      "type": "combine_integrals",
+      "ask": "Write as one integral: (a) ∫_5^7 x³ + ∫_1^5 x³; (b) ∫_1^2 √(x+2) − ∫_4^2 √(x+2); (c) ∫_1^3 x² − ∫_3^1 4 + ∫_3^5 (x²+4); (d) ∫_2^5 (x−1) + ∫_7^5 (1−x²)/(1+x).",
+      "book_answer": "(a) ∫_1^7 x³, (b) ∫_1^4 √(x+2), (c) ∫_1^5 (x²+4), (d) ∫_2^7 (x−1)"
+     },
+     {
+      "n": 4,
+      "type": "properties_given_values",
+      "ask": "∫_1^5 f = 7: (a) ∫_1^5 (2f − 3x + 1) dx, (b) find a if ∫_1^5 2a f dx = 1.",
+      "book_answer": "(a) −18, (b) a = 1/14"
+     },
+     {
+      "n": 5,
+      "type": "properties_given_values_shift",
+      "ask": "∫_1^5 f = 8: (a) ∫_1^5 (3f − 2) dx, (b) ∫_3^7 (4f(x−2) − 2x) dx.",
+      "book_answer": "(a) 16, (b) −8"
+     },
+     {
+      "n": 6,
+      "type": "additivity_given_values",
+      "ask": "∫_2^7 3f = 9, ∫_2^4 5f = 10: find ∫_4^7 2f.",
+      "book_answer": "2"
+     },
+     {
+      "n": 7,
+      "type": "piecewise_integral_unknown",
+      "ask": "f = {ax + 1, 1 ≤ x ≤ 2; 3x², 2 < x ≤ 5}, ∫_1^3 f = 18: find a.",
+      "book_answer": "a = −4/3"
+     },
+     {
+      "n": 8,
+      "type": "nested_integral_unknown_limit",
+      "ask": "∫_1^b (4x − ∫_{−1}^{2} 3u² du) dx = 12: find b.",
+      "book_answer": "b = −1/2 or 5"
+     },
+     {
+      "n": 9,
+      "type": "integral_function_absolute",
+      "ask": "f(x) = |2 − x|, x ∈ [0,5]: find T(x).",
+      "book_answer": "T = 2x − x²/2 on [0,2]; x²/2 − 2x + 4 on [2,5]"
+     }
+    ]
+   },
+   "prerequisites": {
+    "lessons": [
+     "5-3",
+     "4-4"
+    ],
+    "concepts": [
+     "u5.ftc_evaluation",
+     "u5.integral_function",
+     "u4 partial fractions and by parts (lesson 4-4)"
+    ],
+    "grade11": [
+     {
+      "ar": "دراسة إشارة الاقتران (خط الأعداد)",
+      "en": "sign charts of functions"
+     },
+     {
+      "ar": "إعادة تعريف القيمة المطلقة كاقتران متعدد القاعدة",
+      "en": "rewriting absolute value piecewise"
+     },
+     {
+      "ar": "قوانين اللوغاريتمات",
+      "en": "logarithm laws"
+     },
+     {
+      "ar": "المتطابقة جا²س = ½(١ − جتا٢س)",
+      "en": "identity sin²x = ½(1 − cos 2x)"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 184,
+     "text": {
+      "ar": "في تكامل اقتران متعدد القاعدة يجب تجزئة فترة التكامل عند نقطة تغيّر القاعدة.",
+      "en": "For a piecewise function split the interval at the point where the rule changes."
+     }
+    },
+    {
+     "page": 184,
+     "text": {
+      "ar": "الاقتران المكامل على القطعة الثانية يضم قيمة التكامل الكاملة على القطعة الأولى (مثل ٩ في مثال ٩).",
+      "en": "On the second piece the integral function includes the full integral over the first piece (the 9 in example 9)."
+     }
+    },
+    {
+     "page": 182,
+     "text": {
+      "ar": "خاصية الإشارة تتطلب أن يكون الحد السفلي أصغر من العلوي؛ إذا انعكس الحدان تنعكس النتيجة.",
+      "en": "The sign property assumes lower limit < upper limit; reversed limits reverse the conclusion."
+     }
+    },
+    {
+     "page": 188,
+     "text": {
+      "ar": "التكامل الداخلي ذو الحدود العددية عدد ثابت (تمرين ٨)؛ يُحسب أولاً.",
+      "en": "An inner integral with numeric limits is just a constant (exercise 8); evaluate it first."
+     }
+    },
+    {
+     "page": 188,
+     "text": {
+      "ar": "عند وجود إزاحة مثل ق(س − ٢) تتغير حدود التكامل بالتعويض (تمرين ٥-ب).",
+      "en": "A shifted integrand like f(x − 2) needs a substitution that changes the limits (exercise 5b)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5-5",
+   "title": {
+    "ar": "تطبيقات التكامل المحدود (المساحة، الحجم)",
+    "en": "Applications of Definite Integral (Area, Volume)"
+   },
+   "printed_pages": [
+    189,
+    199
+   ],
+   "pdf_pages": [
+    193,
+    203
+   ],
+   "branch_marking": "partial: part 2 'solids of revolution' (p195-199) is scientific_only; part 1 'area' (p189-194) is common",
+   "concepts": [
+    {
+     "id": "u5.area_curve_axis",
+     "name": {
+      "ar": "مساحة المنطقة بين منحنى ومحور السينات",
+      "en": "area between a curve and the x-axis"
+     }
+    },
+    {
+     "id": "u5.area_two_curves",
+     "name": {
+      "ar": "مساحة المنطقة بين منحنيين أو أكثر",
+      "en": "area between two or more curves"
+     }
+    },
+    {
+     "id": "u5.volume_disc",
+     "name": {
+      "ar": "حجم الجسم الدوراني حول محور السينات",
+      "en": "volume of a solid of revolution about the x-axis (disc)"
+     },
+     "branch": "scientific_only"
+    },
+    {
+     "id": "u5.volume_washer",
+     "name": {
+      "ar": "حجم الجسم الناتج من دوران منطقة بين منحنيين",
+      "en": "volume from rotating the region between two curves (washer)"
+     },
+     "branch": "scientific_only"
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u5.thm.area_axis",
+     "kind": "theorem",
+     "concept": "u5.area_curve_axis",
+     "page": 189,
+     "statement": {
+      "ar": "نظرية (١): إذا كان ق قابلاً للتكامل على [أ، ب] فإن مساحة المنطقة المحصورة بين منحناه ومحور السينات في [أ، ب] هي تكامل |ق(س)| من أ إلى ب.",
+      "en": "Theorem 1: if f is integrable on [a,b], the area between its graph and the x-axis on [a,b] is ∫_a^b |f(x)| dx."
+     },
+     "latex": "A = \\int_{a}^{b} |f(x)|\\,\\dd{x}",
+     "method": "Find the zeros of f; split [a,b] at zeros inside it; on each piece the sign is constant, so take the absolute value of each piece's integral and add. If no bounds are given, the zeros themselves are the bounds."
+    },
+    {
+     "id": "u5.thm.area_two_curves",
+     "kind": "theorem",
+     "concept": "u5.area_two_curves",
+     "page": 191,
+     "statement": {
+      "ar": "نظرية (٢): مساحة المنطقة بين منحنيي ق و هـ القابلين للتكامل على [أ، ب] هي تكامل |ق(س) − هـ(س)| من أ إلى ب.",
+      "en": "Theorem 2: the area between the graphs of f and g (integrable on [a,b]) is ∫_a^b |f(x) − g(x)| dx."
+     },
+     "latex": "A = \\int_{a}^{b} |f(x) - g(x)|\\,\\dd{x}",
+     "method": "Solve f(x) = g(x) for the intersection points; split at each intersection; integrate the difference on each piece and take absolute values."
+    },
+    {
+     "id": "u5.thm.volume_disc",
+     "kind": "theorem",
+     "concept": "u5.volume_disc",
+     "page": 195,
+     "statement": {
+      "ar": "إذا كان ق: [أ، ب] ← ح وكان ق² قابلاً للتكامل على [أ، ب]، فإن حجم الجسم الناتج من دوران المنطقة المحصورة بين منحنى ق ومحور السينات والمستقيمين س = أ، س = ب دورة كاملة حول محور السينات هو π × تكامل ق² من أ إلى ب.",
+      "en": "If f: [a,b] → ℝ and f² is integrable on [a,b], the volume of the solid formed by rotating the region between f, the x-axis and x = a, x = b one full turn about the x-axis is V = π∫_a^b f²(x) dx."
+     },
+     "latex": "V = \\pi\\int_{a}^{b} f^{2}(x)\\,\\dd{x}",
+     "conditions": {
+      "ar": "الدوران حول محور السينات فقط. إشارة ق لا تهم لأنها مربعة.",
+      "en": "Rotation about the x-axis only (as in the book). The sign of f does not matter since it is squared."
+     }
+    },
+    {
+     "id": "u5.thm.volume_washer",
+     "kind": "theorem",
+     "concept": "u5.volume_washer",
+     "page": 197,
+     "statement": {
+      "ar": "إذا كان ق² و هـ² قابلين للتكامل على [أ، ب] وكان المنحنيان على جهة واحدة من محور السينات، فإن حجم الجسم الناتج من دوران المنطقة بينهما حول محور السينات هو π × تكامل |هـ² − ق²|.",
+      "en": "If f², g² are integrable on [a,b] and both graphs lie on the same side of the x-axis, the volume from rotating the region between them about the x-axis is V = π∫_a^b |g²(x) − f²(x)| dx."
+     },
+     "latex": "V = \\pi\\int_{a}^{b} \\left| g^{2}(x) - f^{2}(x) \\right| \\dd{x}",
+     "conditions": {
+      "ar": "المنحنيان على جهة واحدة من محور السينات.",
+      "en": "Both curves on the same side of the x-axis."
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط ١",
+     "page": 189,
+     "ask": "Painting the arch above the Ministry of Education entrance, modelled by f(x) = 6 − 3x²: how to find the area?"
+    },
+    {
+     "label": "نشاط ٢",
+     "page": 189,
+     "ask": "f(x) = x + 3 on [0,4]: area of the trapezoid vs ∫_0^4 (x+3) dx — they agree."
+    },
+    {
+     "label": "نشاط (حجوم)",
+     "page": 195,
+     "ask": "Spherical building: f(x) = √(r² − x²); compare the sphere's volume with π∫_{−r}^{r} f² dx."
+    }
+   ],
+   "think_discuss": [],
+   "examples": [
+    {
+     "label": "مثال ١",
+     "page": 190,
+     "type": "area_curve_axis_bounded",
+     "ask": "Area between f(x) = x + 1, the x-axis, x = 2, x = 3.",
+     "method": "Check zeros (x = −1 ∉ [2,3]), so f keeps one sign.",
+     "key_steps": [
+      "A = |x²/2 + x|_2^3 = 7/2"
+     ]
+    },
+    {
+     "label": "مثال ٢",
+     "page": 190,
+     "type": "area_curve_axis_unbounded",
+     "ask": "Area between f(x) = x² − 9 and the x-axis.",
+     "method": "Bounds are the zeros ±3; integrand negative, take absolute value.",
+     "key_steps": [
+      "|∫_{−3}^{3}(x² − 9)dx| = |−36| = 36"
+     ]
+    },
+    {
+     "label": "مثال ٣",
+     "page": 190,
+     "type": "area_curve_axis_trig",
+     "ask": "Area between sin x and the x-axis on [0, π].",
+     "method": "Zeros 0, π only.",
+     "key_steps": [
+      "|−cos x|_0^π = 2"
+     ]
+    },
+    {
+     "label": "مثال ٤",
+     "page": 191,
+     "type": "area_two_curves",
+     "ask": "Area between f(x) = 8 − x² and g(x) = x².",
+     "method": "Intersections from f = g.",
+     "key_steps": [
+      "8 − 2x² = 0 → x = ±2",
+      "|8x − 2x³/3|_{−2}^{2} = 64/3"
+     ]
+    },
+    {
+     "label": "مثال ٥",
+     "page": 191,
+     "type": "area_two_curves_absolute",
+     "ask": "Area between f(x) = |x| and g(x) = 2 − x².",
+     "method": "Rewrite |x| piecewise; intersect on each side (reject roots outside the piece); split at 0.",
+     "key_steps": [
+      "x ≤ 0: 2 − x² = −x → x = −1",
+      "x > 0: x = 1",
+      "A₁ = A₂ = 7/6",
+      "A = 7/3 (symmetry: A = 2A₁)"
+     ]
+    },
+    {
+     "label": "مثال ٦",
+     "page": 192,
+     "type": "area_horizontal_lines",
+     "ask": "Area between f(x) = ln x, the lines y = 1, y = 2 and the y-axis.",
+     "method": "Find x where ln x = 1, 2; split into a rectangle part and a part under y = 2 above ln x.",
+     "key_steps": [
+      "x = e, x = e²",
+      "A₁ = ∫_0^e (2 − 1)dx = e",
+      "A₂ = ∫_e^{e²}(2 − ln x)dx = e² − 2e (uses x ln x − x)",
+      "A = e² − e"
+     ]
+    },
+    {
+     "label": "مثال ٧",
+     "page": 193,
+     "type": "area_two_curves_multiple_intersections",
+     "ask": "Area between f(x) = x³ and g(x) = x.",
+     "method": "Intersections 0, ±1; the curves swap order at 0.",
+     "key_steps": [
+      "∫_{−1}^{0}(x³ − x) + ∫_0^1(x − x³) = 1/2"
+     ]
+    },
+    {
+     "label": "مثال ٨",
+     "page": 193,
+     "type": "area_find_parameter",
+     "ask": "Area between f(x) = x² and g(x) = c is 36: find c.",
+     "method": "Intersections ±√c; set area expression equal to 36.",
+     "key_steps": [
+      "∫_{−√c}^{√c}(c − x²)dx = 4c√c/3 = 36",
+      "c = 9"
+     ]
+    },
+    {
+     "label": "مثال ١ (حجوم)",
+     "page": 195,
+     "type": "volume_disc",
+     "ask": "Volume from rotating the region under f(x) = 2/x, x = 1 to 3, about the x-axis.",
+     "method": "V = π∫ f².",
+     "key_steps": [
+      "π∫_1^3 4x^{−2} dx = 4π(−1/x)|_1^3 = 8π/3"
+     ]
+    },
+    {
+     "label": "مثال ٢ (حجوم)",
+     "page": 196,
+     "type": "volume_disc_below_axis",
+     "ask": "Volume from rotating the region between f(x) = x² − 4 and the x-axis.",
+     "method": "Bounds from zeros ±2; squaring removes sign.",
+     "key_steps": [
+      "π∫_{−2}^{2}(x⁴ − 8x² + 16)dx = 512π/15"
+     ]
+    },
+    {
+     "label": "مثال ٣ (حجوم)",
+     "page": 196,
+     "type": "volume_disc_trig",
+     "ask": "Rotate the region between sin x and the x-axis on [π/2, 3π/2].",
+     "method": "sin²x = ½(1 − cos 2x).",
+     "key_steps": [
+      "(π/2)(x − ½ sin 2x)|_{π/2}^{3π/2} = π²/2"
+     ]
+    },
+    {
+     "label": "مثال ٤ (حجوم)",
+     "page": 196,
+     "type": "volume_formula_proof",
+     "ask": "Prove the cone volume (π/3)r²h by integration.",
+     "method": "Rotate the right triangle under y = (r/h)x on [0,h].",
+     "key_steps": [
+      "V = π∫_0^h (r²/h²)x² dx = πr²h/3"
+     ]
+    },
+    {
+     "label": "مثال ٥ (حجوم)",
+     "page": 197,
+     "type": "volume_washer",
+     "ask": "Rotate the region bounded by f(x) = e^x, k(x) = e and the y-axis about the x-axis.",
+     "method": "Intersection x = 1; washer formula.",
+     "key_steps": [
+      "π∫_0^1 |e² − e^{2x}| dx = π(e² + 1)/2"
+     ]
+    },
+    {
+     "label": "مثال ٦ (حجوم)",
+     "page": 198,
+     "type": "volume_washer_below_axis",
+     "ask": "Rotate the region between f(x) = x² − 4x and g(x) = −x about the x-axis.",
+     "method": "Intersections 0, 3 (both curves below the axis on [0,3]); washer formula.",
+     "key_steps": [
+      "π|∫_0^3 ((x²−4x)² − x²)dx| = π|∫_0^3(x⁴ − 8x³ + 15x²)dx| = 108π/5"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "label": "تمارين ٥-٥ أ",
+     "page": 194,
+     "items": [
+      {
+       "n": 1,
+       "type": "area_curve_axis_bounded",
+       "ask": "Area between cos x and both axes in the first quadrant.",
+       "book_answer": "1"
+      },
+      {
+       "n": 2,
+       "type": "area_two_curves",
+       "ask": "Area between f(x) = 3 − x², the line through (0,0) and (1,2), and the y-axis, in the first quadrant.",
+       "book_answer": "5/3"
+      },
+      {
+       "n": 3,
+       "type": "area_curve_axis_unbounded",
+       "ask": "Area between f(x) = (x² − 9)(x² − 1) and the x-axis in the third quadrant.",
+       "book_answer": "304/15"
+      },
+      {
+       "n": 4,
+       "type": "area_two_curves",
+       "ask": "Area between e^x, ln x, the lines y = 1, x = −1 and the x-axis.",
+       "book_answer": "e − 1/e"
+      },
+      {
+       "n": 5,
+       "type": "area_two_curves",
+       "ask": "Area between f(x) = √(2 − x) (x ≤ 2), k(x) = −x and the x-axis.",
+       "book_answer": "10/3"
+      },
+      {
+       "n": 6,
+       "type": "area_three_curves",
+       "ask": "Area between f(x) = x², g(x) = 4, k(x) = 2x.",
+       "book_answer": "28/3"
+      }
+     ]
+    },
+    {
+     "label": "تمارين ٥-٥ ب",
+     "page": 199,
+     "branch": "scientific_only",
+     "items": [
+      {
+       "n": 1,
+       "type": "volume_disc",
+       "ask": "Rotate the region under f(x) = 4, the axes and x = 5 (cylinder).",
+       "book_answer": "80π"
+      },
+      {
+       "n": 2,
+       "type": "volume_disc",
+       "ask": "f(x) = 4/√x, x-axis, x = 1, x = e².",
+       "book_answer": "32π"
+      },
+      {
+       "n": 3,
+       "type": "volume_disc",
+       "ask": "Trapezoid A(0,0), B(3,0), C(3,1), D(0,4) rotated about the x-axis.",
+       "book_answer": "21π"
+      },
+      {
+       "n": 4,
+       "type": "volume_washer",
+       "ask": "Region between f(x) = x² + 6 and g(x) = 5x.",
+       "book_answer": "62π/15"
+      },
+      {
+       "n": 5,
+       "type": "volume_disc",
+       "ask": "f(x) = ln x, the x-axis and x = e.",
+       "book_answer": "π(e − 2)"
+      },
+      {
+       "n": 6,
+       "type": "volume_formula_proof",
+       "ask": "Prove the cylinder volume πr²h by integration.",
+       "book_answer": null
+      },
+      {
+       "n": 7,
+       "type": "volume_disc_partial_fractions",
+       "ask": "f(x) = 4/√(x² − 1), x-axis, x = 2, x = 3.",
+       "book_answer": "8π ln(3/2)"
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "5-3",
+     "5-4",
+     "4-4"
+    ],
+    "concepts": [
+     "u5.ftc_evaluation",
+     "u5.additivity",
+     "u5.piecewise_integral",
+     "u4 by parts (∫ ln x dx), partial fractions"
+    ],
+    "grade11": [
+     {
+      "ar": "رسم منحنيات الاقترانات الأساسية (تربيعي، تكعيبي، أسي، لوغاريتمي، مثلثي، قيمة مطلقة)",
+      "en": "sketching basic graphs (quadratic, cubic, exponential, log, trig, absolute value)"
+     },
+     {
+      "ar": "حل المعادلات لإيجاد نقاط التقاطع",
+      "en": "solving equations for intersection points"
+     },
+     {
+      "ar": "معادلة المستقيم المار بنقطتين",
+      "en": "equation of a line through two points"
+     },
+     {
+      "ar": "مساحات وحجوم الأشكال الهندسية (مثلث، شبه منحرف، مخروط، أسطوانة، كرة)",
+      "en": "areas and volumes of standard shapes (triangle, trapezoid, cone, cylinder, sphere)"
+     }
+    ]
+   },
+   "pitfalls": [
+    {
+     "page": 190,
+     "text": {
+      "ar": "المساحة دائماً موجبة: إذا كان الاقتران سالباً على الفترة نأخذ القيمة المطلقة للتكامل؛ وإذا غيّر إشارته داخل الفترة يجب التجزئة عند الأصفار وإلا تُلغي الأجزاء بعضها.",
+      "en": "Area is always positive: take |∫| on pieces where f < 0, and split at zeros inside the interval, otherwise positive and negative parts cancel."
+     }
+    },
+    {
+     "page": 191,
+     "text": {
+      "ar": "عند تقاطع منحنيين يتبادلان الموقع (أعلى/أسفل) يجب التجزئة عند كل نقطة تقاطع.",
+      "en": "Where two curves cross, they swap top/bottom; split at every intersection."
+     }
+    },
+    {
+     "page": 191,
+     "text": {
+      "ar": "مع القيمة المطلقة يُعاد تعريف الاقتران قطعياً، وتُرفض جذور معادلة التقاطع التي لا تنتمي إلى مجال القطعة.",
+      "en": "With |x| rewrite piecewise and reject intersection roots that do not belong to the piece's domain."
+     }
+    },
+    {
+     "page": 192,
+     "text": {
+      "ar": "إذا كانت المنطقة محدودة بمستقيمات أفقية ومحور الصادات، تُقسَّم إلى أجزاء حسب س (جزء مستطيل وجزء تحت المستقيم وفوق المنحنى).",
+      "en": "Regions bounded by horizontal lines and the y-axis are split along x (a rectangle part and a part between the line and the curve)."
+     }
+    },
+    {
+     "page": 197,
+     "text": {
+      "ar": "في حجم الدوران بين منحنيين نطرح المربعات (هـ² − ق²) وليس مربع الفرق، ويشترط أن يكون المنحنيان على جهة واحدة من محور السينات.",
+      "en": "For the washer volume subtract the squares (g² − f²), not the square of the difference; both curves must be on the same side of the x-axis."
+     }
+    }
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "label": "تمارين عامة",
+  "printed_pages": [
+   200,
+   203
+  ],
+  "pdf_pages": [
+   204,
+   207
+  ],
+  "items": [
+   {
+    "n": "1.1",
+    "format": "mcq",
+    "lessons": [
+     "5-1"
+    ],
+    "ask": "σ_10 = {a, 1, …, 17, b} regular partition of [a,b]: a = ?",
+    "book_answer": "ب (−1)"
+   },
+   {
+    "n": "1.2",
+    "format": "mcq",
+    "lessons": [
+     "5-1",
+     "5-2"
+    ],
+    "ask": "f(x) = 5 on [1,2], regular σ_n: M(σ_n, f) = ?",
+    "book_answer": "أ (5)"
+   },
+   {
+    "n": "1.3",
+    "format": "mcq",
+    "lessons": [
+     "5-2"
+    ],
+    "ask": "f(x) = 2x + 1 on [1,2]: lim_{n→∞} M(σ_n, f) = ?",
+    "book_answer": "جـ (4)"
+   },
+   {
+    "n": "1.4",
+    "format": "mcq",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "∫_2^3 f = 6, ∫_2^7 (4 + f) = 30: ∫_3^7 2f = ?",
+    "book_answer": "أ (8)"
+   },
+   {
+    "n": "1.5",
+    "format": "mcq",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "∫ f dx = sec²x − tan²x + x² + c: ∫_{−1}^{2} f'(x) dx = ?",
+    "book_answer": "د (6)"
+   },
+   {
+    "n": "1.6",
+    "format": "mcq",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "∫_1^2 √(x² − 2x + 1) dx = ?",
+    "book_answer": "جـ (1/2)"
+   },
+   {
+    "n": "1.7",
+    "format": "mcq",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "∫_1^2 (x² + 2x + 1)/(x + 2) dx = a, ∫_1^2 (x+1)/(x+2) dx = b: a + b = ?",
+    "book_answer": "ب (5/2)"
+   },
+   {
+    "n": "1.8",
+    "format": "mcq",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "f(x) = ∫_1^x y/(y² + 1) dy + ∫_1^4 sin²x dx: f'(4) = ?",
+    "book_answer": "ب (4/17)"
+   },
+   {
+    "n": "1.9",
+    "format": "mcq",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "f polynomial, f'(x) = 3x − 2: f(3) − f(−1) = ?",
+    "book_answer": "جـ (4)"
+   },
+   {
+    "n": "1.10",
+    "format": "mcq",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "f(x) = x ln x: ∫_{1/2}^{e/2} f''(x) dx = ?",
+    "book_answer": "جـ (1)"
+   },
+   {
+    "n": 2,
+    "format": "short",
+    "lessons": [
+     "5-1"
+    ],
+    "ask": "Regular σ_12 of [a,b]: 7th element 12, 4th element 7: find a, b.",
+    "book_answer": "a = 2, b = 22"
+   },
+   {
+    "n": 3,
+    "format": "short",
+    "lessons": [
+     "5-1"
+    ],
+    "ask": "g(x) = 3f(x) + x on [2,10], M(σ_4, f) = 6 (regular, right endpoints): find M(σ_4, g).",
+    "book_answer": "74"
+   },
+   {
+    "n": 4,
+    "format": "long",
+    "lessons": [
+     "5-2"
+    ],
+    "ask": "By definition: ∫_1^5 3x dx.",
+    "book_answer": null
+   },
+   {
+    "n": 5,
+    "format": "proof",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "Prove 0 ≤ ∫_{−2}^{2} √(4 − x²) dx ≤ 8.",
+    "book_answer": null
+   },
+   {
+    "n": 6,
+    "format": "short",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "f continuous, ∫_0^x f(y) dy = x² − √x: find f(4), f'(4).",
+    "book_answer": "f(4) = 7¾, f'(4) = 65/32"
+   },
+   {
+    "n": 7,
+    "format": "long",
+    "lessons": [
+     "5-3",
+     "5-4"
+    ],
+    "ask": "T(x) = {2x² + 2cx, 2 ≤ x ≤ 3; ax − b, 3 < x ≤ 5} is the integral function of the continuous f on [2,5]: (a) a, b, c; (b) ∫_2^4 f.",
+    "book_answer": "(a) c = −2, a = 8, b = 18; (b) 14"
+   },
+   {
+    "n": 8,
+    "format": "long",
+    "lessons": [
+     "5-3",
+     "5-4",
+     "4-4"
+    ],
+    "ask": "(a) ∫_1^2 56(x−2)²(x−1)⁵, (b) ∫_e^{e²} ln x, (c) ∫_3^5 (x+5)/(x² − x), (d) ∫_0^2 √(x⁴ + x²), (e) ∫_1^2 1/(x²√(x²+1)).",
+    "book_answer": "(a) 1/3, (b) e², (c) 5 ln(3/5) + 6 ln 2, (d) (1/3)((√5)³ − 1), (e) (−√5 + 2√2)/2"
+   },
+   {
+    "n": 9,
+    "format": "proof",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "f ≤ g on [1,5]: prove ∫_7^3 f(x − 2) dx ≥ ∫_3^{−1} g(x + 2) dx.",
+    "book_answer": null
+   },
+   {
+    "n": 10,
+    "format": "long",
+    "lessons": [
+     "5-5"
+    ],
+    "ask": "Area between (a) f(x) = x + 2 and g = {4 − x², x ≤ 0; 4 − x, x > 0}; (b) f(x) = 2 sin x and g(x) = 1 on [0, π].",
+    "book_answer": "(a) 13/3, (b) 4√3 − π/3 − 4"
+   },
+   {
+    "n": 11,
+    "format": "short",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "∫_1^3 (sin²x + e^x) dx = a, ∫_1^3 cos²x dx = b: find a + b.",
+    "book_answer": "2 + e³ − e"
+   },
+   {
+    "n": 12,
+    "format": "long",
+    "lessons": [
+     "5-5",
+     "1-5"
+    ],
+    "ask": "Area between f(x) = x²/4, its tangent at (4,4) and the x-axis.",
+    "book_answer": "4/3"
+   },
+   {
+    "n": 13,
+    "format": "long",
+    "lessons": [
+     "5-5"
+    ],
+    "ask": "Area between f(x) = cos x, the line y = 3 − x and both axes.",
+    "book_answer": "7/2 (= triangle 9/2 minus ∫_0^{π/2} cos x)"
+   },
+   {
+    "n": 14,
+    "format": "long",
+    "lessons": [
+     "5-4",
+     "4-3"
+    ],
+    "ask": "Particle from O with v(t) = {5t², 0 ≤ t ≤ 2; 24 − 2t, 2 < t ≤ 12}: (a) distance from O at t = 5; (b) when it stops and the distance travelled.",
+    "book_answer": "(a) 193/3 m, (b) t = 12, 340/3"
+   },
+   {
+    "n": 15,
+    "format": "short",
+    "lessons": [
+     "5-3",
+     "4-4"
+    ],
+    "ask": "f' = f, f ≠ 0: (a) ∫ (f(x))ⁿ dx, (b) the rule of f.",
+    "book_answer": "(a) (1/n)(f(x))ⁿ + c, (b) f(x) = ±a e^x"
+   },
+   {
+    "n": 16,
+    "format": "long",
+    "lessons": [
+     "5-4"
+    ],
+    "ask": "∫_0^{π/2} sin 2x/(x+1) dx = a: find ∫_0^π cos x/(x+2)² dx in terms of a.",
+    "book_answer": "a − 1/2 + 1/(π+2)"
+   },
+   {
+    "n": 17,
+    "format": "short",
+    "lessons": [
+     "5-3"
+    ],
+    "ask": "k(3) = 3k(1) = 6: ∫_1^3 (x k'(x) − k(x))/x² dx.",
+    "book_answer": "0"
+   },
+   {
+    "n": 18,
+    "format": "long",
+    "lessons": [
+     "5-5"
+    ],
+    "ask": "Volume: region between xy = 4 + x², the x-axis, x = 1, x = 4, rotated about the x-axis.",
+    "book_answer": "57π",
+    "branch": "scientific_only"
+   },
+   {
+    "n": 19,
+    "format": "long",
+    "lessons": [
+     "5-5"
+    ],
+    "ask": "Volume: region between y = tan x and y = sec x, x = π/6, x = π/3, about the x-axis.",
+    "book_answer": "π²/6",
+    "branch": "scientific_only"
+   },
+   {
+    "n": 20,
+    "format": "long",
+    "lessons": [
+     "5-5"
+    ],
+    "ask": "Volume: region between x³ and x about the x-axis.",
+    "book_answer": "8π/21",
+    "branch": "scientific_only"
+   },
+   {
+    "n": 21,
+    "format": "short",
+    "lessons": [
+     "5-4",
+     "5-5"
+    ],
+    "ask": "From a graph with A₁ = 4 (on [−2,−1], above the axis) and A₂ = 12 (on [−1,1], below): ∫_{−1}^{2} x f(x² − 3) dx.",
+    "book_answer": "−4"
+   },
+   {
+    "n": 22,
+    "format": "self_assessment",
+    "lessons": [],
+    "ask": "Self-assessment table: partition & Riemann sum; FTC; properties of the definite integral.",
+    "book_answer": null
+   }
+  ]
+ },
+ "self_assessment": [
+  {
+   "ar": "أجد التجزئة ومجموع ريمان لاقترانات محددة",
+   "en": "find partitions and Riemann sums"
+  },
+  {
+   "ar": "أوظف العلاقة بين التفاضل والتكامل",
+   "en": "apply the FTC"
+  },
+  {
+   "ar": "أوظف خواص التكامل المحدود في حل المسائل",
+   "en": "apply the properties of the definite integral"
+  }
+ ],
+ "dependency_edges": [
+  [
+   "u5.partition",
+   "u5.regular_partition"
+  ],
+  [
+   "u5.regular_partition",
+   "u5.regular_partition_element"
+  ],
+  [
+   "u5.partition",
+   "u5.riemann_sum"
+  ],
+  [
+   "u5.regular_partition_element",
+   "u5.riemann_sum"
+  ],
+  [
+   "u5.riemann_sum",
+   "u5.riemann_sum_general_n"
+  ],
+  [
+   "u5.riemann_sum_general_n",
+   "u5.definite_integral_def"
+  ],
+  [
+   "u5.definite_integral_def",
+   "u5.integrability"
+  ],
+  [
+   "u5.definite_integral_def",
+   "u5.ftc_evaluation"
+  ],
+  [
+   "u4:antiderivative",
+   "u5.ftc_evaluation"
+  ],
+  [
+   "u5.ftc_evaluation",
+   "u5.integral_function"
+  ],
+  [
+   "u5.integral_function",
+   "u5.ftc_derivative"
+  ],
+  [
+   "u4:substitution_parts",
+   "u5.definite_substitution"
+  ],
+  [
+   "u5.ftc_evaluation",
+   "u5.definite_substitution"
+  ],
+  [
+   "u5.ftc_evaluation",
+   "u5.basic_properties"
+  ],
+  [
+   "u5.basic_properties",
+   "u5.positivity"
+  ],
+  [
+   "u5.positivity",
+   "u5.comparison"
+  ],
+  [
+   "u5.basic_properties",
+   "u5.additivity"
+  ],
+  [
+   "u5.additivity",
+   "u5.piecewise_integral"
+  ],
+  [
+   "u5.additivity",
+   "u5.integral_function_piecewise"
+  ],
+  [
+   "u5.integral_function",
+   "u5.integral_function_piecewise"
+  ],
+  [
+   "u4:partial_fractions",
+   "u5.definite_techniques"
+  ],
+  [
+   "u5.definite_substitution",
+   "u5.definite_techniques"
+  ],
+  [
+   "u5.ftc_evaluation",
+   "u5.area_curve_axis"
+  ],
+  [
+   "u5.additivity",
+   "u5.area_curve_axis"
+  ],
+  [
+   "u5.area_curve_axis",
+   "u5.area_two_curves"
+  ],
+  [
+   "u5.piecewise_integral",
+   "u5.area_two_curves"
+  ],
+  [
+   "u5.ftc_evaluation",
+   "u5.volume_disc"
+  ],
+  [
+   "u5.volume_disc",
+   "u5.volume_washer"
+  ],
+  [
+   "u5.area_two_curves",
+   "u5.volume_washer"
+  ]
+ ],
+ "reader_notes": [
+  "Lesson 5-5 has two separate exercise sets (5-5 أ area, 5-5 ب volume).",
+  "The book's answer key for this unit is on printed pages 239-241 (pdf 243-245); book_answer fields are transcribed from it.",
+  "In 5-3 example 1 part 2 and 5-4 example 1 part 3 the book leaves the last step to the student ('أكمل'); the final values recorded here (38 and 5/2) were computed by the reader, not printed."
+ ]
+}

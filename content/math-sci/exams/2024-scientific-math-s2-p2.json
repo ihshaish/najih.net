@@ -1,0 +1,1039 @@
+{
+ "id": "2024-scientific-math-s2-p2",
+ "year": 2024,
+ "branch": "scientific",
+ "subject": "math",
+ "session": 2,
+ "session_ar": "الدورة الثانية",
+ "paper": 2,
+ "paper_ar": "الورقة الثانية",
+ "date": "2024-08-13",
+ "day_ar": "الثلاثاء",
+ "duration_min": 165,
+ "duration_ar": "ساعتان وخمس وأربعون دقيقة",
+ "total_marks": 100,
+ "num_questions": 6,
+ "pages": 3,
+ "img": "exams/2024/scientific/math-s2-p2",
+ "pdf": "exams/2024/scientific/math-s2-p2.pdf",
+ "units_covered": [
+  3,
+  4,
+  5
+ ],
+ "choice_rules": {
+  "rule_ar": "عدد أسئلة الورقة (ستة) أسئلة، أجب عن (خمسة) منها فقط",
+  "rule_en": "Six questions; answer five only.",
+  "sections": [
+   {
+    "section": 1,
+    "questions": [
+     1,
+     2,
+     3
+    ],
+    "answer": 3,
+    "rule_ar": "القسم الأول: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عنها جميعاً.",
+    "rule_en": "Section 1: questions 1-3, all compulsory."
+   },
+   {
+    "section": 2,
+    "questions": [
+     4,
+     5,
+     6
+    ],
+    "answer": 2,
+    "rule_ar": "القسم الثاني: يتكون هذا القسم من (ثلاثة) أسئلة، وعلى المشترك أن يجيب عن سؤالين منها فقط.",
+    "rule_en": "Section 2: questions 4-6, answer any two."
+   }
+  ],
+  "marks_per_question": 20,
+  "mcq_rule_ar": "يتكون هذا السؤال من (١٠) فقرات من نوع اختيار من متعدد، من أربعة بدائل",
+  "mcq_rule_en": "Question 1 is 10 four-option multiple-choice items; per-item marks are not printed."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الأول",
+   "item_ids": [
+    "Q1-1",
+    "Q1-2",
+    "Q1-3",
+    "Q1-4",
+    "Q1-5",
+    "Q1-6",
+    "Q1-7",
+    "Q1-8",
+    "Q1-9",
+    "Q1-10"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 2,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثاني",
+   "item_ids": [
+    "Q2-a",
+    "Q2-b",
+    "Q2-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 3,
+   "marks": 20,
+   "section": 1,
+   "compulsory": true,
+   "label_ar": "السؤال الثالث",
+   "item_ids": [
+    "Q3-a",
+    "Q3-b",
+    "Q3-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 4,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الرابع",
+   "item_ids": [
+    "Q4-a",
+    "Q4-b",
+    "Q4-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 5,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال الخامس",
+   "item_ids": [
+    "Q5-a",
+    "Q5-b",
+    "Q5-c"
+   ],
+   "item_marks_sum": 20
+  },
+  {
+   "q": 6,
+   "marks": 20,
+   "section": 2,
+   "compulsory": false,
+   "label_ar": "السؤال السادس",
+   "item_ids": [
+    "Q6-a",
+    "Q6-b",
+    "Q6-c"
+   ],
+   "item_marks_sum": 20
+  }
+ ],
+ "items": [
+  {
+   "id": "Q1-1",
+   "label": "Q1 1",
+   "label_ar": "السؤال الأول، الفقرة ١",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-1",
+    "5-2"
+   ],
+   "concepts": [
+    "riemann-sum",
+    "def-integral-limit"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Riemann sum of $f$ on $[0,3]$ for a regular partition is given in terms of $n$; find $\\int_0^3 2f\\dd{x}$.",
+    "ar": "جد قيمة التكامل من مجموع ريمان."
+   },
+   "latex": "M(\\sigma_n,f)=-3-\\frac{18}{n}",
+   "mcq_options": "four numeric values (-6, -3, 3, 6)",
+   "note": "Leading sign of 3 printed as a small superscript minus; answer not recorded."
+  },
+  {
+   "id": "Q1-2",
+   "label": "Q1 2",
+   "label_ar": "السؤال الأول، الفقرة ٢",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "3-1"
+   ],
+   "concepts": [
+    "matrix-def"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "2×2 matrix with entries in $x$ satisfies $a_{ij}=a_{ji}$; find $x$.",
+    "ar": "جد قيمة $x$ التي تجعل $a_{ij}=a_{ji}$."
+   },
+   "latex": "a_{ij}=a_{ji}",
+   "mcq_options": "four numeric values (4, -3, 3, -4)"
+  },
+  {
+   "id": "Q1-3",
+   "label": "Q1 3",
+   "label_ar": "السؤال الأول، الفقرة ٣",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "4-2"
+   ],
+   "concepts": [
+    "indef-rules"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 1,
+   "paraphrase": {
+    "en": "$\\int\\sec x(\\sec x+\\tan x)\\dd{x}$.",
+    "ar": "ما قيمة التكامل؟"
+   },
+   "latex": "\\int\\sec x(\\sec x+\\tan x)\\dd{x}",
+   "mcq_options": "four antiderivatives in sec/tan",
+   "verified_answer": "tan x + sec x + c"
+  },
+  {
+   "id": "Q1-4",
+   "label": "Q1 4",
+   "label_ar": "السؤال الأول، الفقرة ٤",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-4",
+    "4-4"
+   ],
+   "concepts": [
+    "def-integral-props",
+    "substitution"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Given two definite integrals of $f$, find $\\int_4^{11}f(x-4)\\dd{x}$.",
+    "ar": "جد قيمة التكامل بالإزاحة."
+   },
+   "latex": "\\int_{4}^{11}f(x-4)\\dd{x}",
+   "mcq_options": "four numeric values (2, 5, 8, 30)",
+   "note": "Limits of the given integrals are partly unclear in the print; answer not recorded."
+  },
+  {
+   "id": "Q1-5",
+   "label": "Q1 5",
+   "label_ar": "السؤال الأول، الفقرة ٥",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-4"
+   ],
+   "concepts": [
+    "integral-bounds"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "From the graph of $f$ on $[0,5]$, the largest value of $\\int_1^5(7f(x)-2)\\dd{x}$.",
+    "ar": "أكبر قيمة للمقدار من الشكل."
+   },
+   "latex": "\\int_{1}^{5}(7f(x)-2)\\dd{x}",
+   "mcq_options": "four numeric values (84, 76, 28, 19)",
+   "verified_answer": "76 (max f on [1,5] is 3: (7·3-2)·4)"
+  },
+  {
+   "id": "Q1-6",
+   "label": "Q1 6",
+   "label_ar": "السؤال الأول، الفقرة ٦",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "3-3",
+    "3-4"
+   ],
+   "concepts": [
+    "determinant",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$A$ 2×2 non-singular, $|3A^2|=|6\\sqrt2A^{-1}|$; find $|A|$.",
+    "ar": "جد $|A|$."
+   },
+   "latex": "|3A^2|=|6\\sqrt{2}A^{-1}|",
+   "mcq_options": "four numeric values (2, 4, 2√2/3, 6)",
+   "verified_answer": "2"
+  },
+  {
+   "id": "Q1-7",
+   "label": "Q1 7",
+   "label_ar": "السؤال الأول، الفقرة ٧",
+   "question": 1,
+   "page": 1,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "4-4",
+    "1-4"
+   ],
+   "concepts": [
+    "substitution",
+    "exp-log-deriv"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\int\\E^{\\sin x+\\ln\\cos x}\\dd{x}$.",
+    "ar": "ما قيمة التكامل؟"
+   },
+   "latex": "\\int\\E^{\\sin x+\\ln\\cos x}\\dd{x}",
+   "mcq_options": "four antiderivatives",
+   "verified_answer": "e^{sin x} + c",
+   "prerequisite_lessons": [
+    "1-4"
+   ]
+  },
+  {
+   "id": "Q1-8",
+   "label": "Q1 8",
+   "label_ar": "السؤال الأول، الفقرة ٨",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-3"
+   ],
+   "concepts": [
+    "integral-function",
+    "ftc"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$T(x)=\\int_0^xf=ax^3-\\frac{\\cos2x}{2}+\\frac12$, $f(\\frac{\\pi}{4})=\\frac{\\pi^2}{16}+1$; find $a$.",
+    "ar": "جد قيمة الثابت $a$."
+   },
+   "latex": "T(x)=ax^3-\\frac{\\cos 2x}{2}+\\frac12",
+   "mcq_options": "four numeric values (1/3, π²/3, 0, 2)",
+   "verified_answer": "1/3"
+  },
+  {
+   "id": "Q1-9",
+   "label": "Q1 9",
+   "label_ar": "السؤال الأول، الفقرة ٩",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "3-5",
+    "3-3"
+   ],
+   "concepts": [
+    "cramer",
+    "determinant"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Cramer's rule for a 2×2 system; two printed matrix products involving $A$, $A_x$, $A_y$; find $y$.",
+    "ar": "قيمة $y$ بطريقة كريمر."
+   },
+   "latex": "y=\\frac{|A_y|}{|A|}",
+   "mcq_options": "four fractions (1/2, 24/20, 20/24, 2)",
+   "note": "Notation 'A·A_x' / 'A·A_y' is ambiguous in the print; answer not recorded."
+  },
+  {
+   "id": "Q1-10",
+   "label": "Q1 10",
+   "label_ar": "السؤال الأول، الفقرة ١٠",
+   "question": 1,
+   "page": 2,
+   "marks": 2,
+   "marks_basis": "inferred",
+   "format": "mcq",
+   "lessons": [
+    "5-5",
+    "5-4"
+   ],
+   "concepts": [
+    "area",
+    "def-integral-props"
+   ],
+   "skills": [
+    "interpret"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "If $\\int_{-1}^1x^n\\dd{x}=0$, which integral equals the area between $x^n$, the x-axis, $x=\\pm1$?",
+    "ar": "أي التكاملات يساوي المساحة؟"
+   },
+   "latex": "\\int_{-1}^{1}x^n\\dd{x}=0",
+   "mcq_options": "four integrals of x^n with factors 1/2, 1, 2",
+   "verified_answer": "2∫_0^1 x^n dx (n odd)"
+  },
+  {
+   "id": "Q2-a",
+   "label": "Q2 a",
+   "label_ar": "السؤال الثاني أ",
+   "question": 2,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "5-4",
+    "4-2"
+   ],
+   "concepts": [
+    "def-integral-props",
+    "indef-rules"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Combine $\\int_2^3\\frac{\\tan^2x+2x^2}{x-3}\\dd{x}-\\int_2^3\\frac{x^2+\\sec^2x+8}{x-3}\\dd{x}$.",
+    "ar": "ما قيمة الفرق بين التكاملين؟"
+   },
+   "latex": "\\int_{2}^{3}\\frac{\\tan^2x+2x^2}{x-3}\\dd{x}-\\int_{2}^{3}\\frac{x^2+\\sec^2x+8}{x-3}\\dd{x}"
+  },
+  {
+   "id": "Q2-b",
+   "label": "Q2 b",
+   "label_ar": "السؤال الثاني ب",
+   "question": 2,
+   "page": 2,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "3-2",
+    "3-3"
+   ],
+   "concepts": [
+    "matrix-mult",
+    "determinant"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$C=[-1\\ 0\\ 3]\\begin{bmatrix}6\\\\7\\\\-9\\end{bmatrix}$ and $|C|$ equals a 3×3 determinant in $x$; find $x$.",
+    "ar": "جد قيمة $x$."
+   },
+   "latex": "|C|=\\begin{vmatrix}1&x&3\\\\0&3&1\\\\5&2x&x\\end{vmatrix}"
+  },
+  {
+   "id": "Q2-c",
+   "label": "Q2 c",
+   "label_ar": "السؤال الثاني ج",
+   "question": 2,
+   "page": 2,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-2",
+    "5-1"
+   ],
+   "concepts": [
+    "def-integral-limit",
+    "riemann-sum"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Use the definition to evaluate $\\int_{-1}^3(2-5x)\\dd{x}$.",
+    "ar": "استخدم تعريف التكامل المحدود."
+   },
+   "latex": "\\int_{-1}^{3}(2-5x)\\dd{x}"
+  },
+  {
+   "id": "Q3-a",
+   "label": "Q3 a",
+   "label_ar": "السؤال الثالث أ",
+   "question": 3,
+   "page": 2,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "4-4"
+   ],
+   "concepts": [
+    "partial-fractions"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\int\\frac{1-2x}{x^2-7x+10}\\dd{x}$.",
+    "ar": "جد التكامل."
+   },
+   "latex": "\\int\\frac{1-2x}{x^2-7x+10}\\dd{x}"
+  },
+  {
+   "id": "Q3-b",
+   "label": "Q3 b",
+   "label_ar": "السؤال الثالث ب",
+   "question": 3,
+   "page": 2,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-1",
+    "4-4"
+   ],
+   "concepts": [
+    "antiderivative",
+    "substitution"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$M(x)=(\\ln x)^2$ is an antiderivative of $f$; find $\\int\\E^{2x}f(\\E^{2x})\\dd{x}$.",
+    "ar": "جد التكامل."
+   },
+   "latex": "\\int\\E^{2x}f(\\E^{2x})\\dd{x}"
+  },
+  {
+   "id": "Q3-c",
+   "label": "Q3 c",
+   "label_ar": "السؤال الثالث ج",
+   "question": 3,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-3"
+   ],
+   "concepts": [
+    "integral-function"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$T(x)=\\frac32x^2$ ($0\\le x<a$), $6x+b$ ($a\\le x\\le4$) is the integral function of continuous $f$; find $a,b$.",
+    "ar": "جد الثابتين $a,b$."
+   },
+   "latex": "T(x)=\\begin{cases}\\frac32x^2 & 0\\le x<a\\\\ 6x+b & a\\le x\\le4\\end{cases}",
+   "verified_answer": "a = 2, b = -6"
+  },
+  {
+   "id": "Q4-a",
+   "label": "Q4 a",
+   "label_ar": "السؤال الرابع أ",
+   "question": 4,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-3",
+    "1-5"
+   ],
+   "concepts": [
+    "curve-from-slope",
+    "tangent-normal"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Slope of the normal at $(x,y)$ is $-\\frac{\\sqrt x}{x+1}$, $x>0$; find $f$ through the printed point $(1,\\frac23)$.",
+    "ar": "جد قاعدة الاقتران."
+   },
+   "latex": "m_{\\perp}=-\\frac{\\sqrt{x}}{x+1}",
+   "prerequisite_lessons": [
+    "1-5"
+   ]
+  },
+  {
+   "id": "Q4-b",
+   "label": "Q4 b",
+   "label_ar": "السؤال الرابع ب",
+   "question": 4,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "short",
+   "lessons": [
+    "3-2"
+   ],
+   "concepts": [
+    "matrix-mult",
+    "matrix-add-scalar"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$A=\\begin{bmatrix}5&3\\\\x&-2\\end{bmatrix}$ satisfies the printed quadratic matrix relation $A^2-3A=7I_2$; find $x$.",
+    "ar": "جد قيمة $x$."
+   },
+   "latex": "A^2-3A=7I_2",
+   "note": "Relation transcribed as A² − 3A = 7I₂ from a slightly garbled print."
+  },
+  {
+   "id": "Q4-c",
+   "label": "Q4 c",
+   "label_ar": "السؤال الرابع ج",
+   "question": 4,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-1"
+   ],
+   "concepts": [
+    "riemann-sum"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\sigma_{21}$ of $[a,b]$ has 15th element 32; $\\sigma_{14}$ of the same interval has 8th element 25; find $a,b$.",
+    "ar": "جد الثابتين $a,b$."
+   },
+   "latex": "\\sigma_{21},\\ \\sigma_{14}",
+   "verified_answer": "a = 4, b = 46 (counting the first element as x0)"
+  },
+  {
+   "id": "Q5-a",
+   "label": "Q5 a",
+   "label_ar": "السؤال الخامس أ",
+   "question": 5,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "3-4"
+   ],
+   "concepts": [
+    "matrix-equation",
+    "matrix-inverse"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\begin{bmatrix}1&2\\\\-1&3\\end{bmatrix}X=\\begin{bmatrix}2&2\\\\-1&-2\\end{bmatrix}+X$; find $X$.",
+    "ar": "جد المصفوفة $X$."
+   },
+   "latex": "AX=B+X"
+  },
+  {
+   "id": "Q5-b",
+   "label": "Q5 b",
+   "label_ar": "السؤال الخامس ب",
+   "question": 5,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-3"
+   ],
+   "concepts": [
+    "motion-integral"
+   ],
+   "skills": [
+    "model"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Two runners from rest, $v_1(t)=t$, $v_2(t)=\\frac32t^2$ (as printed), 100 m race; finish times and winner.",
+    "ar": "جد زمن وصول كل منهما وأيهما يصل أولاً."
+   },
+   "latex": "v_1(t)=t,\\ v_2(t)=\\tfrac32t^2"
+  },
+  {
+   "id": "Q5-c",
+   "label": "Q5 c",
+   "label_ar": "السؤال الخامس ج",
+   "question": 5,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4",
+    "5-3"
+   ],
+   "concepts": [
+    "substitution",
+    "ftc"
+   ],
+   "skills": [
+    "apply"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "$\\int_0^{\\pi/2}\\sin2x(b+\\sin^2x)\\dd{x}=\\frac32$; find $b$.",
+    "ar": "جد قيمة الثابت $b$."
+   },
+   "latex": "\\int_{0}^{\\pi/2}\\sin 2x\\,(b+\\sin^2x)\\dd{x}=\\frac32"
+  },
+  {
+   "id": "Q6-a",
+   "label": "Q6 a",
+   "label_ar": "السؤال السادس أ",
+   "question": 6,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "5-5"
+   ],
+   "concepts": [
+    "area"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Area bounded by $f(x)=x^2+2$, $L(x)=6-3x$ and the positive axes.",
+    "ar": "احسب المساحة المحصورة."
+   },
+   "latex": "f(x)=x^2+2,\\ L(x)=6-3x"
+  },
+  {
+   "id": "Q6-b",
+   "label": "Q6 b",
+   "label_ar": "السؤال السادس ب",
+   "question": 6,
+   "page": 3,
+   "marks": 7,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "3-5"
+   ],
+   "concepts": [
+    "gauss"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 2,
+   "paraphrase": {
+    "en": "Gaussian elimination: $6x+y+z=7$, $3x-2y+2z=-3$, $x+y+z=2$.",
+    "ar": "استخدم طريقة جاوس لحل النظام."
+   },
+   "latex": "6x+y+z=7,\\ 3x-2y+2z=-3,\\ x+y+z=2"
+  },
+  {
+   "id": "Q6-c",
+   "label": "Q6 c",
+   "label_ar": "السؤال السادس ج",
+   "question": 6,
+   "page": 3,
+   "marks": 6,
+   "marks_basis": "stated",
+   "format": "long",
+   "lessons": [
+    "4-4"
+   ],
+   "concepts": [
+    "by-parts"
+   ],
+   "skills": [
+    "compute"
+   ],
+   "difficulty": 3,
+   "paraphrase": {
+    "en": "$\\int\\frac{\\ln(\\cos x)}{\\sin^2x}\\dd{x}$, $x\\in]0,\\frac{\\pi}{2}[$.",
+    "ar": "ما قيمة التكامل؟"
+   },
+   "latex": "\\int\\frac{\\ln(\\cos x)}{\\sin^2x}\\dd{x}"
+  }
+ ],
+ "reconciliation": {
+  "per_question": [
+   {
+    "question": 1,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 2,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 3,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 4,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 5,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   },
+   {
+    "question": 6,
+    "stated": 20,
+    "items_sum": 20,
+    "ok": true
+   }
+  ],
+  "printed_marks_all_questions": 120,
+  "max_score_under_choice_rules": 100,
+  "stated_total": 100,
+  "ok": true,
+  "discrepancies": []
+ },
+ "summary": {
+  "item_count": 25,
+  "mcq_count": 10,
+  "marks_by_lesson_printed": {
+   "1-4": 1.0,
+   "1-5": 3.5,
+   "3-1": 2.0,
+   "3-2": 9.5,
+   "3-3": 5.5,
+   "3-4": 8.0,
+   "3-5": 8.0,
+   "4-1": 3.5,
+   "4-2": 5.0,
+   "4-3": 9.5,
+   "4-4": 21.0,
+   "5-1": 11.5,
+   "5-2": 4.5,
+   "5-3": 12.5,
+   "5-4": 7.0,
+   "5-5": 8.0
+  },
+  "note_marks_by_lesson": "Marks of every printed item split equally across its lessons; sums to the printed marks of all six questions (not the 100/200 a candidate can score).",
+  "marks_by_lesson_primary": {
+   "3-1": 2.0,
+   "3-2": 9.5,
+   "3-3": 5.5,
+   "3-4": 8.0,
+   "3-5": 8.0,
+   "4-1": 3.5,
+   "4-2": 5.0,
+   "4-3": 13.0,
+   "4-4": 22.0,
+   "5-1": 11.5,
+   "5-2": 4.5,
+   "5-3": 12.5,
+   "5-4": 7.0,
+   "5-5": 8.0
+  },
+  "note_marks_by_lesson_primary": "Same as marks_by_lesson_printed but lessons listed in an item's prerequisite_lessons get no weight; the item's marks are split equally across its remaining (primary) lessons. Use this for radar weighting if prerequisite tags should not count."
+ },
+ "concepts_used": {
+  "exp-log-deriv": {
+   "lesson": "1-4",
+   "ar": "مشتقة الاقتران الأسي واللوغاريتمي",
+   "en": "Derivatives of exponential and logarithmic functions"
+  },
+  "tangent-normal": {
+   "lesson": "1-5",
+   "ar": "معادلة المماس والعمودي على المماس",
+   "en": "Tangent and normal lines"
+  },
+  "matrix-def": {
+   "lesson": "3-1",
+   "ar": "المصفوفة: الرتبة والمدخلات وتساوي المصفوفات",
+   "en": "Matrices: order, entries, equality"
+  },
+  "matrix-add-scalar": {
+   "lesson": "3-2",
+   "ar": "جمع المصفوفات وضربها في عدد حقيقي",
+   "en": "Matrix addition and scalar multiplication"
+  },
+  "matrix-mult": {
+   "lesson": "3-2",
+   "ar": "ضرب المصفوفات",
+   "en": "Matrix multiplication"
+  },
+  "determinant": {
+   "lesson": "3-3",
+   "ar": "المحددات وخصائصها",
+   "en": "Determinants and their properties"
+  },
+  "matrix-equation": {
+   "lesson": "3-4",
+   "ar": "حل المعادلات المصفوفية",
+   "en": "Solving matrix equations"
+  },
+  "matrix-inverse": {
+   "lesson": "3-4",
+   "ar": "النظير الضربي للمصفوفة",
+   "en": "Inverse of a matrix"
+  },
+  "cramer": {
+   "lesson": "3-5",
+   "ar": "قاعدة كريمر",
+   "en": "Cramer's rule"
+  },
+  "gauss": {
+   "lesson": "3-5",
+   "ar": "طريقة جاوس (الحذف)",
+   "en": "Gaussian elimination"
+  },
+  "antiderivative": {
+   "lesson": "4-1",
+   "ar": "الاقتران الأصلي",
+   "en": "Antiderivative"
+  },
+  "indef-rules": {
+   "lesson": "4-2",
+   "ar": "قواعد التكامل غير المحدود",
+   "en": "Rules of indefinite integration"
+  },
+  "curve-from-slope": {
+   "lesson": "4-3",
+   "ar": "إيجاد قاعدة الاقتران من ميل المماس",
+   "en": "Finding a function from its slope"
+  },
+  "motion-integral": {
+   "lesson": "4-3",
+   "ar": "الحركة: من التسارع والسرعة إلى المسافة",
+   "en": "Motion: from acceleration/velocity to position"
+  },
+  "by-parts": {
+   "lesson": "4-4",
+   "ar": "التكامل بالأجزاء",
+   "en": "Integration by parts"
+  },
+  "partial-fractions": {
+   "lesson": "4-4",
+   "ar": "التكامل بالكسور الجزئية",
+   "en": "Integration by partial fractions"
+  },
+  "substitution": {
+   "lesson": "4-4",
+   "ar": "التكامل بالتعويض",
+   "en": "Integration by substitution"
+  },
+  "riemann-sum": {
+   "lesson": "5-1",
+   "ar": "التجزئة المنتظمة ومجموع ريمان",
+   "en": "Regular partitions and Riemann sums"
+  },
+  "def-integral-limit": {
+   "lesson": "5-2",
+   "ar": "التكامل المحدود باستخدام التعريف",
+   "en": "Definite integral from the definition"
+  },
+  "ftc": {
+   "lesson": "5-3",
+   "ar": "النظرية الأساسية للتفاضل والتكامل",
+   "en": "Fundamental theorem of calculus"
+  },
+  "integral-function": {
+   "lesson": "5-3",
+   "ar": "الاقتران المكامل",
+   "en": "Integral function T(x)"
+  },
+  "def-integral-props": {
+   "lesson": "5-4",
+   "ar": "خصائص التكامل المحدود",
+   "en": "Properties of the definite integral"
+  },
+  "integral-bounds": {
+   "lesson": "5-4",
+   "ar": "تقدير التكامل المحدود (المتباينات)",
+   "en": "Bounding definite integrals"
+  },
+  "area": {
+   "lesson": "5-5",
+   "ar": "المساحة بالتكامل",
+   "en": "Area by integration"
+  }
+ },
+ "notes": [
+  "Q1 per-item marks are not printed; 2 marks each inferred from 20/10.",
+  "Paper 2 covers units 3-5; no complex-numbers (unit 6) item appears.",
+  "units_covered lists the units the paper examines (3-5). Items Q1-7, Q4-a also carry unit-1 lessons as prerequisite tags only (recorded in prerequisite_lessons); they stay in lessons and in marks_by_lesson_printed, and are excluded in summary.marks_by_lesson_primary."
+ ],
+ "units_prerequisite_tagged": [
+  1
+ ]
+}

@@ -1,0 +1,1744 @@
+{
+ "unit": 4,
+ "title": {
+  "ar": "التكامل غير المحدود وتطبيقاته",
+  "en": "Indefinite Integral and its Applications"
+ },
+ "semester": 2,
+ "printed_pages": [
+  130,
+  161
+ ],
+ "pdf_pages": [
+  134,
+  165
+ ],
+ "source": "الرياضيات، الصف الثاني عشر، الفرع العلمي — elearn.edu.ps (ma12-s.pdf); captured from page images. p129 is the 'second semester' divider.",
+ "opener": {
+  "page": 130,
+  "summary": "Stadium with curved roof: how do engineers design curved buildings?"
+ },
+ "objectives": [
+  {
+   "ar": "إيجاد الاقتران الأصلي لاقتران معطى وتحديد العلاقة بين التفاضل والتكامل",
+   "en": "Find antiderivatives; relate differentiation and integration"
+  },
+  {
+   "ar": "التعرف إلى قواعد التكامل غير المحدود واستخدامها",
+   "en": "Know and use the rules of indefinite integration"
+  },
+  {
+   "ar": "إيجاد التكامل غير المحدود لاقترانات كثيرة حدود ومثلثية وأسية ولوغاريتمية ونسبية",
+   "en": "Integrate polynomial, trig, exponential, logarithmic and rational functions"
+  },
+  {
+   "ar": "استخدام طرق التكامل: التعويض، الأجزاء، الكسور الجزئية",
+   "en": "Use substitution, parts and partial fractions"
+  },
+  {
+   "ar": "توظيف التكامل غير المحدود في تطبيقات هندسية وفيزيائية",
+   "en": "Apply indefinite integrals to geometric and physical problems"
+  }
+ ],
+ "notation_notes": [
+  "The book prints the differential with dal: ∫ق(س) دس and the derivative as دص/دن, د/دس (not ء). armath's \\dd and \\dv render ء; formulas below use \\dd{x} as the brief requires — see uncertainties.",
+  "Antiderivative is printed م(س) (LaTeX M(x)); a second antiderivative هـ(س) (LaTeX H(x) -> no mapping; we use g(x) which armath renders هـ).",
+  "Constant of integration is جـ (LaTeX c); several constants جـ١، جـ٢ (c_{1}, c_{2}).",
+  "Substitution variable is ع (LaTeX u) or ص (LaTeX y) in later examples; integration by parts uses ق and ع: ∫ق دع = ق×ع − ∫ع دق (LaTeX f, v).",
+  "Motion: distance ف(ن), velocity ع(ن), acceleration ت(ن), time ن (LaTeX s(t), v(t), a(t)); armath maps t->ن, s->ف, v->ع but has no mapping for a->ت in this sense (a->أ).",
+  "Natural log printed لـو_هـ (LaTeX \\ln); e printed هـ (LaTeX \\E)."
+ ],
+ "lessons": [
+  {
+   "id": "4-1",
+   "title": {
+    "ar": "التكامل غير المحدود",
+    "en": "Indefinite Integral"
+   },
+   "printed_pages": [
+    132,
+    136
+   ],
+   "pdf_pages": [
+    136,
+    140
+   ],
+   "branch_notes": [],
+   "concepts": [
+    {
+     "id": "u4.antiderivative",
+     "name": {
+      "ar": "الاقتران الأصلي (معكوس المشتقة)",
+      "en": "antiderivative"
+     }
+    },
+    {
+     "id": "u4.general_antiderivative",
+     "name": {
+      "ar": "الصورة العامة للاقتران الأصلي",
+      "en": "general antiderivative F(x) + c"
+     }
+    },
+    {
+     "id": "u4.antiderivatives_differ_by_constant",
+     "name": {
+      "ar": "الفرق بين اقترانين أصليين ثابت",
+      "en": "two antiderivatives differ by a constant"
+     }
+    },
+    {
+     "id": "u4.indefinite_integral",
+     "name": {
+      "ar": "التكامل غير المحدود",
+      "en": "indefinite integral"
+     }
+    },
+    {
+     "id": "u4.constant_of_integration",
+     "name": {
+      "ar": "ثابت التكامل",
+      "en": "constant of integration"
+     }
+    },
+    {
+     "id": "u4.derivative_of_integral",
+     "name": {
+      "ar": "مشتقة التكامل",
+      "en": "derivative of an indefinite integral"
+     }
+    },
+    {
+     "id": "u4.initial_condition",
+     "name": {
+      "ar": "إيجاد الثابت من شرط معطى",
+      "en": "finding c from a given value"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u4.def.antiderivative",
+     "concept": "u4.antiderivative",
+     "page": 133,
+     "statement": {
+      "ar": "إذا كان ق(س) متصلاً في [أ، ب] فإن م(س) يسمى اقتراناً أصلياً لـ ق(س) إذا كان مَ(س) = ق(س) لكل س ∈ ]أ، ب[.",
+      "en": "If f is continuous on [a, b], F is an antiderivative of f when F'(x) = f(x) for every x in ]a, b[."
+     },
+     "latex": "M'(x)=f(x)\\quad \\forall\\, x\\in\\,]a,b[",
+     "conditions": "f continuous on [a, b]"
+    },
+    {
+     "id": "u4.def.indefinite_integral",
+     "concept": "u4.indefinite_integral",
+     "page": 134,
+     "statement": {
+      "ar": "(١) مجموعة كل الاقترانات الأصلية لـ ق(س) تسمى التكامل غير المحدود ويرمز لها ∫ق(س) دس وتقرأ تكامل ق(س) دال س. (٢) إذا كان مَ(س) = ق(س) فإن ∫ق(س) دس = م(س) + جـ حيث جـ ثابت التكامل. (٣) إذا كان ق متصلاً فإن د/دس (∫ق(س) دس) = ق(س).",
+      "en": "(1) The set of all antiderivatives of f is the indefinite integral ∫f(x)dx. (2) If F' = f then ∫f(x)dx = F(x) + c, c the constant of integration. (3) If f is continuous, d/dx(∫f(x)dx) = f(x)."
+     },
+     "latex": "\\int f(x)\\,\\dd{x}=M(x)+c \\iff M'(x)=f(x);\\qquad \\dv{}{x}\\left(\\int f(x)\\,\\dd{x}\\right)=f(x)",
+     "conditions": "f continuous"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u4.rule.general_antiderivative",
+     "kind": "rule",
+     "concept": "u4.general_antiderivative",
+     "page": 133,
+     "statement": {
+      "ar": "إذا كان م(س) اقتراناً أصلياً لـ ق(س) فإن م(س) + جـ هي الصورة العامة لأي اقتران أصلي له، جـ ثابت.",
+      "en": "If F is an antiderivative of f, every antiderivative has the form F(x) + c, c constant."
+     },
+     "latex": "M(x)+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.difference_constant",
+     "kind": "note",
+     "label": "أتعلم",
+     "concept": "u4.antiderivatives_differ_by_constant",
+     "page": 133,
+     "statement": {
+      "ar": "الفرق بين أي اقترانين أصليين لاقتران معين يساوي اقتراناً ثابتاً دائماً.",
+      "en": "The difference of two antiderivatives of the same function is always a constant function (so its derivative is 0)."
+     },
+     "latex": "M(x)-g(x)=c\\ \\Rightarrow\\ (M-g)'(x)=0",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.parallel_curves",
+     "kind": "note",
+     "concept": "u4.general_antiderivative",
+     "page": 134,
+     "statement": {
+      "ar": "منحنيات الاقترانات الأصلية لاقتران واحد متوازية (إزاحات رأسية)؛ مثلاً أصليات ق(س) = ٣ مستقيمات متوازية ص = ٣س + جـ.",
+      "en": "The antiderivatives of one function form a family of vertically shifted (parallel) curves; e.g. for f(x) = 3 the lines 3x + c."
+     },
+     "latex": "M(x)=3x+c",
+     "conditions": null
+    }
+   ],
+   "activities": [
+    {
+     "id": "4-1.act1",
+     "page": 132,
+     "asks": "Water leaks from a tank at dy/dt = 3t m^3/h; how to find the amount y?",
+     "method": "Motivates reversing differentiation."
+    },
+    {
+     "id": "4-1.act2",
+     "page": 132,
+     "asks": "Table A: differentiate x, x+5, sin x, x^2+4, e^x. Table B: given f' (7, 2x, 3x^2, sec^2 x, 1/x) find f; name the operation; relation; is f unique?",
+     "method": "Integration as the reverse of differentiation; non-uniqueness."
+    },
+    {
+     "id": "4-1.act3",
+     "page": 133,
+     "asks": "Antiderivatives of 2x: x^2, x^2 - 2, x^2 + 5; how many, relation?",
+     "method": "Infinitely many, differ by constants."
+    },
+    {
+     "id": "4-1.act4",
+     "page": 135,
+     "asks": "Verify ∫x^3 dx = x^4/4 + c, ∫y^-2 dy = -1/y + c, ∫cos x dx = sin x + c.",
+     "method": "Check by differentiating the answer."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "4-1.ex1",
+     "page": 133,
+     "type": "verify_antiderivative",
+     "asks": "Is F = x^4/4 an antiderivative of f = x^3?",
+     "method": "Differentiate F; note f is continuous (polynomial).",
+     "key_steps": [
+      "F' = x^3 = f"
+     ]
+    },
+    {
+     "id": "4-1.ex2",
+     "page": 133,
+     "type": "difference_of_antiderivatives",
+     "asks": "F, H antiderivatives of continuous f, L = F - H: find L'(3).",
+     "method": "F - H = c so L' = 0.",
+     "key_steps": [
+      "L'(3) = 0"
+     ]
+    },
+    {
+     "id": "4-1.ex3",
+     "page": 134,
+     "type": "family_of_antiderivatives",
+     "asks": "Show antiderivatives of f = 3 are parallel lines.",
+     "method": "F = 3x + c; graph several values of c."
+    },
+    {
+     "id": "4-1.ex4",
+     "page": 134,
+     "type": "verify_antiderivative",
+     "asks": "Is F = (x^3 - 1)/x^2 an antiderivative of f = 1 + 2/x^3, x != 0?",
+     "method": "Simplify F = x - x^-2 then differentiate.",
+     "key_steps": [
+      "F' = 1 + 2x^-3 = f"
+     ]
+    },
+    {
+     "id": "4-1.ex5",
+     "page": 135,
+     "type": "derivative_of_integral",
+     "asks": "∫f dx = x^3 - 3x + 5 (f continuous): find f(2), f'(2).",
+     "method": "Differentiate both sides: f = 3x^2 - 3.",
+     "key_steps": [
+      "f(2) = 9",
+      "f' = 6x, f'(2) = 12"
+     ]
+    },
+    {
+     "id": "4-1.ex6",
+     "page": 135,
+     "type": "initial_value_find_c",
+     "asks": "f(x) = ∫e^x dx, f(0) = 3: find f(1).",
+     "method": "f = e^x + c; use f(0) to get c.",
+     "key_steps": [
+      "1 + c = 3 -> c = 2",
+      "f(1) = e + 2"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٤-١",
+     "page": 136,
+     "items": [
+      {
+       "n": 1,
+       "type": "verify_antiderivative",
+       "asks": "a) F = (1/3)(2 + x^2)^{3/2}, f = x sqrt(2 + x^2); b) F = sec^3 x, f = 3 sec^3 x tan x; c) F = ln(x^3 + e^{2x}), f = (3x^2 + 2e^{2x})/(x^3 + e^{2x})."
+      },
+      {
+       "n": 2,
+       "type": "difference_of_antiderivatives",
+       "asks": "F = x^2 - 4x + 6 and H antiderivatives of f, H(3) = 4: find H(1)."
+      },
+      {
+       "n": 3,
+       "type": "derivative_of_antiderivative_combo",
+       "asks": "F, H antiderivatives of continuous f, f(4) = 7, f'(4) = 10: find (3F - H)'(4)."
+      },
+      {
+       "n": 4,
+       "type": "antiderivative_parameter",
+       "asks": "F = 2 tan x - 2 sec x is an antiderivative of f = a/(1 + sin x), x in [0, pi/4]: find a."
+      },
+      {
+       "n": 5,
+       "type": "derivative_of_integral",
+       "asks": "∫f dx = a x^3 + c x, f(-1) = 4, f'(2) = 24: find a, c."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "1-2",
+     "1-3",
+     "1-4",
+     "1-6"
+    ],
+    "concepts": [
+     "u1 differentiation rules",
+     "derivatives of trig, exponential and log functions",
+     "chain rule"
+    ],
+    "grade11": [
+     "continuity of polynomial, trig, exponential functions",
+     "laws of exponents and radicals"
+    ]
+   },
+   "exclusions": [],
+   "pitfalls": [
+    {
+     "en": "Always add the constant c to an indefinite integral.",
+     "ar": "لا تنس ثابت التكامل جـ.",
+     "source": "def p134"
+    },
+    {
+     "en": "Two antiderivatives of the same function differ by a constant, so the derivative of their difference is 0.",
+     "ar": "الفرق بين اقترانين أصليين ثابت ومشتقته صفر.",
+     "source": "Ex.2 p133"
+    },
+    {
+     "en": "Simplify before differentiating/integrating (e.g. split (x^3 - 1)/x^2).",
+     "ar": "بسّط المقدار قبل الاشتقاق أو التكامل.",
+     "source": "Ex.4 p134"
+    },
+    {
+     "en": "d/dx(∫f dx) = f, but ∫f' dx = f + c.",
+     "ar": "د/دس(∫ق دس) = ق بينما ∫قَ دس = ق + جـ.",
+     "source": "think & discuss p139"
+    }
+   ]
+  },
+  {
+   "id": "4-2",
+   "title": {
+    "ar": "قواعد التكامل غير المحدود",
+    "en": "Rules of Indefinite Integrals"
+   },
+   "printed_pages": [
+    137,
+    140
+   ],
+   "pdf_pages": [
+    141,
+    144
+   ],
+   "branch_notes": [],
+   "concepts": [
+    {
+     "id": "u4.basic_integral_rules",
+     "name": {
+      "ar": "قواعد التكامل غير المحدود",
+      "en": "basic integration rules (table)"
+     }
+    },
+    {
+     "id": "u4.power_rule_integral",
+     "name": {
+      "ar": "تكامل القوى",
+      "en": "power rule for integrals"
+     }
+    },
+    {
+     "id": "u4.integral_reciprocal_ln",
+     "name": {
+      "ar": "تكامل ١/س",
+      "en": "integral of 1/x = ln|x|"
+     }
+    },
+    {
+     "id": "u4.integral_exponential",
+     "name": {
+      "ar": "تكامل هـ^س",
+      "en": "integral of e^x"
+     }
+    },
+    {
+     "id": "u4.integral_trig",
+     "name": {
+      "ar": "تكاملات الاقترانات المثلثية",
+      "en": "integrals of trig functions"
+     }
+    },
+    {
+     "id": "u4.linearity_integral",
+     "name": {
+      "ar": "خواص التكامل غير المحدود",
+      "en": "linearity: constant multiple and sum/difference"
+     }
+    },
+    {
+     "id": "u4.algebraic_simplification",
+     "name": {
+      "ar": "التبسيط قبل التكامل",
+      "en": "rewrite/expand/divide before integrating"
+     }
+    },
+    {
+     "id": "u4.trig_identity_rewrite",
+     "name": {
+      "ar": "استخدام المتطابقات المثلثية",
+      "en": "using trig identities (tan^2 = sec^2 - 1)"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u4.rule.const",
+     "kind": "rule",
+     "concept": "u4.basic_integral_rules",
+     "page": 138,
+     "n": 1,
+     "statement": {
+      "ar": "∫أ دس = أس + جـ ، أ ∈ ح",
+      "en": "∫a dx = ax + c, a real"
+     },
+     "latex": "\\int a\\,\\dd{x}=ax+c",
+     "conditions": "a real"
+    },
+    {
+     "id": "u4.rule.power",
+     "kind": "rule",
+     "concept": "u4.power_rule_integral",
+     "page": 138,
+     "n": 2,
+     "statement": {
+      "ar": "∫سⁿ دس = سⁿ⁺¹/(ن+١) + جـ ، ن ≠ −١",
+      "en": "∫x^n dx = x^(n+1)/(n+1) + c, n != -1"
+     },
+     "latex": "\\int x^{n}\\,\\dd{x}=\\frac{x^{n+1}}{n+1}+c",
+     "conditions": "n != -1 (n rational: roots written as powers)"
+    },
+    {
+     "id": "u4.rule.reciprocal",
+     "kind": "rule",
+     "concept": "u4.integral_reciprocal_ln",
+     "page": 138,
+     "n": 3,
+     "statement": {
+      "ar": "∫(١/س) دس = لـو_هـ|س| + جـ",
+      "en": "∫(1/x) dx = ln|x| + c"
+     },
+     "latex": "\\int \\frac{1}{x}\\,\\dd{x}=\\ln\\lvert x\\rvert+c",
+     "conditions": "x != 0 (absolute value)"
+    },
+    {
+     "id": "u4.rule.exp",
+     "kind": "rule",
+     "concept": "u4.integral_exponential",
+     "page": 138,
+     "n": 4,
+     "statement": {
+      "ar": "∫هـ^س دس = هـ^س + جـ",
+      "en": "∫e^x dx = e^x + c"
+     },
+     "latex": "\\int \\E^{x}\\,\\dd{x}=\\E^{x}+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.sin",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 5,
+     "statement": {
+      "ar": "∫جاس دس = −جتاس + جـ",
+      "en": "∫sin x dx = -cos x + c"
+     },
+     "latex": "\\int \\sin x\\,\\dd{x}=-\\cos x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.cos",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 6,
+     "statement": {
+      "ar": "∫جتاس دس = جاس + جـ",
+      "en": "∫cos x dx = sin x + c"
+     },
+     "latex": "\\int \\cos x\\,\\dd{x}=\\sin x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.sec2",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 7,
+     "statement": {
+      "ar": "∫قا²س دس = ظاس + جـ",
+      "en": "∫sec^2 x dx = tan x + c"
+     },
+     "latex": "\\int \\sec^{2}x\\,\\dd{x}=\\tan x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.csc2",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 8,
+     "statement": {
+      "ar": "∫قتا²س دس = −ظتاس + جـ",
+      "en": "∫csc^2 x dx = -cot x + c"
+     },
+     "latex": "\\int \\csc^{2}x\\,\\dd{x}=-\\cot x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.sectan",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 9,
+     "statement": {
+      "ar": "∫قاس ظاس دس = قاس + جـ",
+      "en": "∫sec x tan x dx = sec x + c"
+     },
+     "latex": "\\int \\sec x\\tan x\\,\\dd{x}=\\sec x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.csccot",
+     "kind": "rule",
+     "concept": "u4.integral_trig",
+     "page": 138,
+     "n": 10,
+     "statement": {
+      "ar": "∫قتاس ظتاس دس = −قتاس + جـ",
+      "en": "∫csc x cot x dx = -csc x + c"
+     },
+     "latex": "\\int \\csc x\\cot x\\,\\dd{x}=-\\csc x+c",
+     "conditions": null
+    },
+    {
+     "id": "u4.prop.linearity",
+     "kind": "properties",
+     "concept": "u4.linearity_integral",
+     "page": 138,
+     "statement": {
+      "ar": "إذا كان ق، هـ قابلين للتكامل: ∫أ ق(س) دس = أ∫ق(س) دس (أ ≠ ٠)، و ∫(ق ± هـ) دس = ∫ق دس ± ∫هـ دس، ويمكن تعميمها على أكثر من اقترانين.",
+      "en": "For integrable f, g: ∫a f(x)dx = a∫f(x)dx (a != 0); ∫(f ± g)dx = ∫f dx ± ∫g dx; extends to more than two functions."
+     },
+     "latex": "\\int a f(x)\\,\\dd{x}=a\\int f(x)\\,\\dd{x};\\qquad \\int (f(x)\\pm g(x))\\,\\dd{x}=\\int f(x)\\,\\dd{x}\\pm\\int g(x)\\,\\dd{x}",
+     "conditions": "a != 0; there is NO product or quotient rule for integrals"
+    }
+   ],
+   "activities": [
+    {
+     "id": "4-2.act1",
+     "page": 137,
+     "asks": "Two wells pump at 20t and 30t m^3/h: amounts 10t^2 and 15t^2; combined rate 50t gives 25t^2.",
+     "method": "Discovers the sum rule."
+    },
+    {
+     "id": "4-2.act2",
+     "page": 137,
+     "asks": "Table f -> f' -> ∫f' dx for 5, ax, x^3, x^n, ln x (x > 0); relation between columns.",
+     "method": "Derive the basic rules by reversing derivatives."
+    },
+    {
+     "id": "4-2.act3",
+     "page": 139,
+     "asks": "f'(x) = 5x^4 - 1, f(1) = 5: find c and f(2).",
+     "method": "Integrate then use the given value."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "4-2.ex1",
+     "page": 138,
+     "type": "integrate_using_table",
+     "asks": "∫(1/x + 3)dx; ∫sec x(sec x + tan x)dx; ∫(x^2 + e^x)dx; ∫(2 - tan^2 x)dx.",
+     "method": "Split with linearity; expand products; rewrite tan^2 x = sec^2 x - 1.",
+     "key_steps": [
+      "ln|x| + 3x + c",
+      "tan x + sec x + c",
+      "x^3/3 + e^x + c",
+      "∫(3 - sec^2 x)dx = 3x - tan x + c"
+     ]
+    },
+    {
+     "id": "4-2.ex2",
+     "page": 139,
+     "type": "simplify_then_integrate",
+     "asks": "∫(x^2 + 1)^2 / x^2 dx.",
+     "method": "Rewrite as (x + x^-1)^2 = x^2 + 2 + x^-2, then power rule.",
+     "key_steps": [
+      "x^3/3 + 2x - 1/x + c"
+     ]
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 139,
+     "asks": "Can Ex.2 be done another way? (expand the numerator and divide term by term)"
+    },
+    {
+     "page": 139,
+     "asks": "Difference between d/dx ∫f dx and ∫f' dx when f is continuous."
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٤-٢",
+     "page": 140,
+     "items": [
+      {
+       "n": 1,
+       "type": "integrate_using_table",
+       "asks": "a) ∫8 dx; b) ∫(7x^2 - 4x + 3/x^4)dx; c) ∫(3 + x)sqrt x dx; d) ∫(5x + sec x tan x)dx; e) ∫(x - 1)/(cbrt x - 1)dx (factor as difference of cubes); f) ∫(2x^3 + 5x^2 - 1)/x^2 dx; g) ∫dx/cos^2 x; h) ∫(5e^x + 2/x)dx."
+      },
+      {
+       "n": 2,
+       "type": "initial_value_find_c",
+       "asks": "f'(x) + e^x = cos x, f(0) = -1: find f."
+      },
+      {
+       "n": 3,
+       "type": "derivative_of_integral",
+       "asks": "∫f dx = sin x - cos x + 2: prove f(pi/2) - f'(pi/2) = 2."
+      },
+      {
+       "n": 4,
+       "type": "integral_identity_parameters",
+       "asks": "∫(f'(x) + x^2)dx = 2x^3 + c x^2 + 2, f'(1) = 4, f(2) = 6: find f(-1)."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "4-1",
+     "1-2",
+     "1-3",
+     "1-4"
+    ],
+    "concepts": [
+     "u4.antiderivative",
+     "u4.indefinite_integral"
+    ],
+    "grade11": [
+     "laws of exponents, roots as fractional powers",
+     "trig identities: sec^2 = 1 + tan^2, csc^2 = 1 + cot^2",
+     "polynomial division and factoring (difference of cubes)"
+    ]
+   },
+   "exclusions": [],
+   "pitfalls": [
+    {
+     "en": "Power rule does not apply for n = -1; use ln|x| (with absolute value).",
+     "ar": "قاعدة القوى لا تصلح عندما ن = −١؛ نستخدم لـو_هـ|س|.",
+     "source": "rules p138"
+    },
+    {
+     "en": "∫sin x dx = -cos x (sign), ∫csc^2 x dx = -cot x, ∫csc x cot x dx = -csc x.",
+     "ar": "انتبه للإشارات السالبة في تكامل جاس، قتا²س، قتاس ظتاس.",
+     "source": "rules p138"
+    },
+    {
+     "en": "No product rule: expand or rewrite first (∫x sqrt x dx != ∫x dx · ∫sqrt x dx).",
+     "ar": "لا توجد قاعدة لتكامل حاصل الضرب؛ وزّع أو بسّط أولاً.",
+     "source": "Ex.1(2) p138; think & discuss p146"
+    },
+    {
+     "en": "Rewrite tan^2 x as sec^2 x - 1 to integrate.",
+     "ar": "حوّل ظا²س إلى قا²س − ١.",
+     "source": "Ex.1(4) p139"
+    }
+   ]
+  },
+  {
+   "id": "4-3",
+   "title": {
+    "ar": "تطبيقات التكامل غير المحدود",
+    "en": "Applications of Indefinite Integrals"
+   },
+   "printed_pages": [
+    141,
+    145
+   ],
+   "pdf_pages": [
+    145,
+    149
+   ],
+   "branch_notes": [],
+   "concepts": [
+    {
+     "id": "u4.curve_from_slope",
+     "name": {
+      "ar": "إيجاد قاعدة الاقتران من ميل المماس",
+      "en": "curve equation from slope of tangent"
+     }
+    },
+    {
+     "id": "u4.curve_from_second_derivative",
+     "name": {
+      "ar": "إيجاد الاقتران من المشتقة الثانية",
+      "en": "function from the second derivative and conditions"
+     }
+    },
+    {
+     "id": "u4.tangent_line_condition",
+     "name": {
+      "ar": "شرط التماس",
+      "en": "using a tangent line: slope and point of tangency"
+     }
+    },
+    {
+     "id": "u4.motion_integration",
+     "name": {
+      "ar": "الحركة: من التسارع إلى السرعة إلى المسافة",
+      "en": "motion: a -> v -> s by integration"
+     }
+    },
+    {
+     "id": "u4.vertical_motion",
+     "name": {
+      "ar": "الحركة الرأسية (المقذوفات)",
+      "en": "vertical motion under gravity"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u4.rule.motion_chain",
+     "kind": "note",
+     "concept": "u4.motion_integration",
+     "page": 143,
+     "statement": {
+      "ar": "ف(ن) بالاشتقاق ← ع(ن) بالاشتقاق ← ت(ن)، والتكامل يعكس الاتجاه: ع(ن) = ∫ت(ن) دن ، ف(ن) = ∫ع(ن) دن.",
+      "en": "s(t) -> v(t) -> a(t) by differentiation; integration goes back: v = ∫a dt, s = ∫v dt (constants from initial conditions)."
+     },
+     "latex": "v(t)=\\int a(t)\\,\\dd{t},\\qquad s(t)=\\int v(t)\\,\\dd{t}",
+     "conditions": "use s(0), v(0) to find constants"
+    },
+    {
+     "id": "u4.rule.slope_condition",
+     "kind": "method",
+     "concept": "u4.curve_from_slope",
+     "page": 141,
+     "statement": {
+      "ar": "ميل المماس عند أي نقطة = صَ؛ نكامل الميل ونعين الثابت من نقطة على المنحنى. إذا مسّ مستقيمٌ المنحنى عند س = س٠ فإن ميله = قَ(س٠) والنقطة مشتركة.",
+      "en": "Slope of tangent = y'; integrate the slope and fix c from a point on the curve. If a line is tangent at x0, its slope gives f'(x0) and its point gives f(x0)."
+     },
+     "latex": "f(x)=\\int f'(x)\\,\\dd{x},\\quad f'(x_{0})=m_{\\text{tangent}}",
+     "conditions": null
+    }
+   ],
+   "activities": [
+    {
+     "id": "4-3.act1",
+     "page": 141,
+     "asks": "Road with tangent slope 2x + 1 through (0, 2): find the quadratic.",
+     "method": "Integrate slope, use point."
+    },
+    {
+     "id": "4-3.act2",
+     "page": 142,
+     "asks": "100 m race: Hamed's speed v1 = t, Hatem's v2 = t^2/2; distances, finishing times, who wins.",
+     "method": "s = ∫v dt with s(0) = 0; solve s(t) = 100 (Hamed t = sqrt 200)."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "4-3.ex1",
+     "page": 141,
+     "type": "curve_from_second_derivative_tangent",
+     "asks": "y = x + 2 is tangent to f at x = 0 and f''(x) = 6x: find f.",
+     "method": "Integrate twice; slope of tangent gives f'(0) = 1; point of tangency (0, 2) gives f(0) = 2.",
+     "key_steps": [
+      "f' = 3x^2 + c1, c1 = 1",
+      "f = x^3 + x + c2, c2 = 2",
+      "f = x^3 + x + 2"
+     ]
+    },
+    {
+     "id": "4-3.ex2",
+     "page": 142,
+     "type": "curve_from_second_derivative_two_points",
+     "asks": "f''(x) = 12x, curve through (1, 3) and (-1, 1).",
+     "method": "Integrate twice, two equations in c1, c2.",
+     "key_steps": [
+      "f = 2x^3 + c1 x + c2",
+      "c1 + c2 = 1, -c1 + c2 = 3",
+      "c1 = -1, c2 = 2",
+      "f = 2x^3 - x + 2"
+     ]
+    },
+    {
+     "id": "4-3.ex3",
+     "page": 143,
+     "type": "distance_from_velocity",
+     "asks": "v(t) = 3t^2 + 2t from the origin: distance after 2 s.",
+     "method": "s = ∫v dt, s(0) = 0.",
+     "key_steps": [
+      "s = t^3 + t^2",
+      "s(2) = 12 m"
+     ]
+    },
+    {
+     "id": "4-3.ex4",
+     "page": 144,
+     "type": "vertical_motion_max_height",
+     "asks": "Ball thrown up at 64 ft/s from an 80 ft tower, a = -32 ft/s^2: maximum height.",
+     "method": "v = ∫a dt with v(0) = 64; max height when v = 0; s = ∫v dt with s(0) = 80.",
+     "key_steps": [
+      "v = -32t + 64",
+      "v = 0 at t = 2",
+      "s = -16t^2 + 64t + 80",
+      "max height s(2) = 144 ft"
+     ]
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٤-٣",
+     "page": 145,
+     "items": [
+      {
+       "n": 1,
+       "type": "curve_from_slope_point",
+       "asks": "Slope x(3x - 2), f(2) = 5: find f."
+      },
+      {
+       "n": 2,
+       "type": "curve_from_derivative_tangent",
+       "asks": "f'(x) = ax - 3x^2, line x + y = 4 tangent at (1, f(1)): find f (slope -1 gives a, the line gives f(1))."
+      },
+      {
+       "n": 3,
+       "type": "curve_from_slope_point",
+       "asks": "Curve through the origin and (1, 2) with slope 2 sqrt(a x), a > 0 constant."
+      },
+      {
+       "n": 4,
+       "type": "curve_from_second_derivative",
+       "asks": "f''(x) = cos x, f'(pi) = 2, f(pi) = 1: find f."
+      },
+      {
+       "n": 5,
+       "type": "velocity_distance_from_acceleration",
+       "asks": "From O with initial speed 3 m/s and a = t m/s^2: speed after 5 s and distance covered."
+      },
+      {
+       "n": 6,
+       "type": "curve_from_slope_point",
+       "asks": "Slope sqrt x + 1/sqrt x, curve through (1, 2/3)."
+      },
+      {
+       "n": 7,
+       "type": "vertical_motion_time",
+       "asks": "Ball up from a 45 m tower, v = -10t + 40: time to reach the ground."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "4-2",
+     "1-5"
+    ],
+    "concepts": [
+     "u4.basic_integral_rules",
+     "u4.initial_condition",
+     "slope of tangent = derivative (1-5)",
+     "velocity/acceleration as derivatives (1-5)"
+    ],
+    "grade11": [
+     "equation and slope of a straight line",
+     "solving two linear equations",
+     "solving quadratic equations"
+    ]
+   },
+   "exclusions": [],
+   "pitfalls": [
+    {
+     "en": "Integrating f'' twice gives two different constants c1, c2; find each from its own condition.",
+     "ar": "التكامل مرتين يعطي ثابتين جـ١، جـ٢، لكل منهما شرط.",
+     "source": "Ex.1-2 p141-142"
+    },
+    {
+     "en": "A tangent line gives two facts: its slope = f'(x0) and the point lies on the curve.",
+     "ar": "المماس يعطي معلومتين: الميل = قَ(س٠) ونقطة التماس على المنحنى.",
+     "source": "Ex.1 p141"
+    },
+    {
+     "en": "Maximum height when v(t) = 0; height from the ground includes the initial height s(0).",
+     "ar": "أقصى ارتفاع عندما ع(ن) = ٠، ولا تنس الارتفاع الابتدائي.",
+     "source": "Ex.4 p144"
+    },
+    {
+     "en": "Use the correct initial condition for each stage: v(0) for velocity, s(0) for distance.",
+     "ar": "استخدم ع(٠) لثابت السرعة و ف(٠) لثابت المسافة.",
+     "source": "Ex.3-4 p143-144"
+    }
+   ]
+  },
+  {
+   "id": "4-4",
+   "title": {
+    "ar": "طرق التكامل (التعويض، الأجزاء، الكسور الجزئية)",
+    "en": "Methods of Integration (substitution, parts, partial fractions)"
+   },
+   "printed_pages": [
+    146,
+    159
+   ],
+   "pdf_pages": [
+    150,
+    163
+   ],
+   "branch_notes": [
+    "Part 2 'التكامل بالأجزاء' (p151) and Part 3 'التكامل بالكسور الجزئية' (p155) carry the badge 'للعلمي فقط' (Scientific branch only). Substitution (p146-150) has no badge.",
+    "Partial fractions are limited to rational functions whose denominator factors into at most three DISTINCT linear factors (p155)."
+   ],
+   "sections": [
+    {
+     "id": "4-4a",
+     "title": {
+      "ar": "التكامل بالتعويض",
+      "en": "Integration by Substitution"
+     },
+     "printed_pages": [
+      146,
+      150
+     ],
+     "branch": "all"
+    },
+    {
+     "id": "4-4b",
+     "title": {
+      "ar": "التكامل بالأجزاء",
+      "en": "Integration by Parts"
+     },
+     "printed_pages": [
+      151,
+      154
+     ],
+     "branch": "scientific_only"
+    },
+    {
+     "id": "4-4c",
+     "title": {
+      "ar": "التكامل بالكسور الجزئية",
+      "en": "Integration by Partial Fractions"
+     },
+     "printed_pages": [
+      155,
+      159
+     ],
+     "branch": "scientific_only"
+    }
+   ],
+   "concepts": [
+    {
+     "id": "u4.substitution",
+     "name": {
+      "ar": "التكامل بالتعويض",
+      "en": "integration by substitution"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.power_of_function_rule",
+     "name": {
+      "ar": "تكامل (ق(س))ⁿ⁻¹ قَ(س)",
+      "en": "integral of [f(x)]^(n-1) f'(x)"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.linear_inner_rule",
+     "name": {
+      "ar": "تكامل قَ(أس + ب)",
+      "en": "integral of f'(ax + b)"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.log_derivative_rule",
+     "name": {
+      "ar": "تكامل قَ(س)/ق(س)",
+      "en": "integral of f'(x)/f(x) = ln|f(x)|"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.trig_powers",
+     "name": {
+      "ar": "تكامل قوى الاقترانات المثلثية",
+      "en": "powers of sin/cos/tan via identities"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.back_substitution_leftover",
+     "name": {
+      "ar": "التعبير عن المتبقي بدلالة المتغير الجديد",
+      "en": "expressing leftover x in terms of u"
+     },
+     "section": "4-4a"
+    },
+    {
+     "id": "u4.integration_by_parts",
+     "name": {
+      "ar": "التكامل بالأجزاء",
+      "en": "integration by parts"
+     },
+     "section": "4-4b"
+    },
+    {
+     "id": "u4.repeated_parts",
+     "name": {
+      "ar": "تكرار التكامل بالأجزاء",
+      "en": "repeated parts"
+     },
+     "section": "4-4b"
+    },
+    {
+     "id": "u4.cyclic_parts",
+     "name": {
+      "ar": "التكامل الدوري بالأجزاء",
+      "en": "cyclic parts (integral recurs)"
+     },
+     "section": "4-4b"
+    },
+    {
+     "id": "u4.substitution_then_parts",
+     "name": {
+      "ar": "التعويض ثم الأجزاء",
+      "en": "substitution followed by parts"
+     },
+     "section": "4-4b"
+    },
+    {
+     "id": "u4.partial_fractions",
+     "name": {
+      "ar": "التكامل بالكسور الجزئية",
+      "en": "partial fraction decomposition"
+     },
+     "section": "4-4c"
+    },
+    {
+     "id": "u4.long_division_rational",
+     "name": {
+      "ar": "القسمة المطولة قبل التجزئة",
+      "en": "long division when deg num >= deg den"
+     },
+     "section": "4-4c"
+    },
+    {
+     "id": "u4.substitution_to_rational",
+     "name": {
+      "ar": "التعويض لتحويل التكامل إلى نسبي",
+      "en": "substitution producing a rational integrand"
+     },
+     "section": "4-4c"
+    },
+    {
+     "id": "u4.integral_sec_csc",
+     "name": {
+      "ar": "تكامل قاس وقتاس",
+      "en": "integrals of sec x and csc x"
+     },
+     "section": "4-4c"
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u4.rule.power_of_function",
+     "kind": "rule",
+     "concept": "u4.power_of_function_rule",
+     "page": 146,
+     "section": "4-4a",
+     "statement": {
+      "ar": "لأن د/دس (ق(س))ⁿ = ن(ق(س))ⁿ⁻¹قَ(س) فإن ∫(ق(س))ⁿ⁻¹ قَ(س) دس = (١/ن)(ق(س))ⁿ + جـ.",
+      "en": "Since d/dx [f(x)]^n = n[f(x)]^(n-1) f'(x), ∫[f(x)]^(n-1) f'(x) dx = (1/n)[f(x)]^n + c."
+     },
+     "latex": "\\int (f(x))^{n-1}f'(x)\\,\\dd{x}=\\frac{1}{n}(f(x))^{n}+c",
+     "conditions": "n != 0"
+    },
+    {
+     "id": "u4.rule.substitution",
+     "kind": "rule",
+     "label": "وبشكل عام",
+     "concept": "u4.substitution",
+     "page": 146,
+     "section": "4-4a",
+     "statement": {
+      "ar": "إذا كان هـ(س) = ع فإن ∫ق(هـ(س)) هـَ(س) دس = ∫ق(ع) دع ، علماً بأن ق، هـ متصلان.",
+      "en": "If u = g(x) then ∫f(g(x)) g'(x) dx = ∫f(u) du, with f and g continuous."
+     },
+     "latex": "u=g(x)\\ \\Rightarrow\\ \\int f(g(x))\\,g'(x)\\,\\dd{x}=\\int f(u)\\,\\dd{u}",
+     "conditions": "f, g continuous; write the final answer in terms of x"
+    },
+    {
+     "id": "u4.rule.linear_inner",
+     "kind": "note",
+     "label": "أتعلم",
+     "concept": "u4.linear_inner_rule",
+     "page": 147,
+     "section": "4-4a",
+     "statement": {
+      "ar": "إذا كان ق قابلاً للتكامل فإن ∫قَ(أس + ب) دس = (١/أ) ق(أس + ب) + جـ ، أ ≠ ٠.",
+      "en": "∫f'(ax + b) dx = (1/a) f(ax + b) + c, a != 0 (e.g. ∫sec^2(3x+2)dx = (1/3)tan(3x+2) + c)."
+     },
+     "latex": "\\int f'(ax+b)\\,\\dd{x}=\\frac{1}{a}f(ax+b)+c",
+     "conditions": "a != 0, inner function linear only"
+    },
+    {
+     "id": "u4.rule.log_derivative",
+     "kind": "rule",
+     "label": "قاعدة",
+     "concept": "u4.log_derivative_rule",
+     "page": 149,
+     "section": "4-4a",
+     "statement": {
+      "ar": "∫قَ(س)/ق(س) دس = لـو_هـ|ق(س)| + جـ ، ق(س) ≠ ٠.",
+      "en": "∫f'(x)/f(x) dx = ln|f(x)| + c, f(x) != 0 (numerator is the derivative of the denominator)."
+     },
+     "latex": "\\int \\frac{f'(x)}{f(x)}\\,\\dd{x}=\\ln\\lvert f(x)\\rvert+c",
+     "conditions": "f(x) != 0"
+    },
+    {
+     "id": "u4.rule.half_angle",
+     "kind": "identity_used",
+     "concept": "u4.trig_powers",
+     "page": 149,
+     "section": "4-4a",
+     "statement": {
+      "ar": "للتكامل عن جا²س، جتا²س نستخدم: ٢جتا²س = ١ + جتا٢س ، ٢جا²س = ١ − جتا٢س؛ ولقوى فردية نفصل عاملاً ونستخدم جا²س = ١ − جتا²س.",
+      "en": "Even powers: 2cos^2 x = 1 + cos 2x, 2sin^2 x = 1 - cos 2x. Odd powers: split one factor and use sin^2 x = 1 - cos^2 x, then substitute."
+     },
+     "latex": "2\\cos^{2}x=1+\\cos 2x,\\qquad 2\\sin^{2}x=1-\\cos 2x",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.parts",
+     "kind": "rule",
+     "label": "قاعدة",
+     "concept": "u4.integration_by_parts",
+     "page": 151,
+     "section": "4-4b",
+     "statement": {
+      "ar": "من مشتقة حاصل الضرب: ∫ق دع = ق×ع − ∫ع دق؛ تستخدم لتكامل حاصل ضرب اقترانين ليس أحدهما مشتقة للآخر.",
+      "en": "From the product rule: ∫f dv = f v - ∫v df; used for a product of two functions where neither is the derivative of the other."
+     },
+     "latex": "\\int f\\,\\dd{v}=f\\,v-\\int v\\,\\dd{f}",
+     "conditions": "f, v differentiable; adding a constant when finding v does not change the result (p152)"
+    },
+    {
+     "id": "u4.rule.partial_fractions",
+     "kind": "note",
+     "label": "ملاحظة",
+     "concept": "u4.partial_fractions",
+     "page": 156,
+     "section": "4-4c",
+     "statement": {
+      "ar": "إذا أمكن كتابة الاقتران النسبي على الصورة أ/(س−م) + ب/(س−ن) + جـ/(س−ل) فإن تكامله = أ لـو_هـ|س−م| + ب لـو_هـ|س−ن| + جـ لـو_هـ|س−ل| + ثابت؛ بشرط أن تكون درجة البسط أقل من درجة المقام، وإلا نستخدم القسمة المطولة أولاً.",
+      "en": "If the rational function equals A/(x-m) + B/(x-n) + C/(x-l), its integral is A ln|x-m| + B ln|x-n| + C ln|x-l| + constant. Requires deg(numerator) < deg(denominator); otherwise do long division first."
+     },
+     "latex": "\\int\\left(\\frac{A}{x-m}+\\frac{B}{x-n}+\\frac{C}{x-L}\\right)\\dd{x}=A\\ln\\lvert x-m\\rvert+B\\ln\\lvert x-n\\rvert+C\\ln\\lvert x-L\\rvert+c",
+     "conditions": "denominator = product of at most three distinct linear factors; deg num < deg den"
+    },
+    {
+     "id": "u4.rule.find_coefficients",
+     "kind": "method",
+     "concept": "u4.partial_fractions",
+     "page": 155,
+     "section": "4-4c",
+     "statement": {
+      "ar": "لإيجاد أ، ب، جـ: نوحد المقامات ونساوي البسطين ثم نعوض أصفار المقام (أو نقارن المعاملات).",
+      "en": "To find A, B, C: clear denominators, equate numerators, then substitute the roots of the denominator (or compare coefficients)."
+     },
+     "latex": "x-2=A(x-1)(x+1)+Bx(x+1)+Cx(x-1)",
+     "conditions": null
+    },
+    {
+     "id": "u4.rule.sec_integral",
+     "kind": "result",
+     "concept": "u4.integral_sec_csc",
+     "page": 158,
+     "section": "4-4c",
+     "statement": {
+      "ar": "(نشاط ٢) ∫قاس دس = لـو_هـ|قاس + ظاس| + جـ (بضرب البسط والمقام في قاس + ظاس، أو بالتعويض ص = جاس والكسور الجزئية).",
+      "en": "(Activity 2) ∫sec x dx = ln|sec x + tan x| + c (multiply by (sec x + tan x)/(sec x + tan x), or substitute y = sin x and use partial fractions)."
+     },
+     "latex": "\\int \\sec x\\,\\dd{x}=\\ln\\lvert \\sec x+\\tan x\\rvert+c",
+     "conditions": null
+    }
+   ],
+   "activities": [
+    {
+     "id": "4-4.act1a",
+     "page": 146,
+     "section": "4-4a",
+     "asks": "f = 2x(2 + x^2)^2: verify F = (1/3)(2 + x^2)^3; relation between 2x and 2 + x^2.",
+     "method": "Spot inner function and its derivative."
+    },
+    {
+     "id": "4-4.act2a",
+     "page": 147,
+     "section": "4-4a",
+     "asks": "∫sec^2(3x + 2)dx with u = 3x + 2.",
+     "method": "dx = du/3 -> (1/3)tan(3x+2) + c."
+    },
+    {
+     "id": "4-4.act3a",
+     "page": 149,
+     "section": "4-4a",
+     "asks": "∫sin^2 x cos^2 x dx.",
+     "method": "Half-angle identities -> (1/4)∫sin^2 2x dx -> finish."
+    },
+    {
+     "id": "4-4.act1b",
+     "page": 152,
+     "section": "4-4b",
+     "asks": "∫x^2 sin x dx.",
+     "method": "Parts with f = x^2, then parts again on ∫x cos x dx."
+    },
+    {
+     "id": "4-4.act2b",
+     "page": 152,
+     "section": "4-4b",
+     "asks": "∫e^{sqrt x} dx.",
+     "method": "Substitute y = sqrt x (dx = 2y dy) then parts on 2∫y e^y dy."
+    },
+    {
+     "id": "4-4.act3b",
+     "page": 154,
+     "section": "4-4b",
+     "asks": "∫cos(ln x) dx.",
+     "method": "Let y = ln x (x = e^y) and reuse the cyclic-parts example."
+    },
+    {
+     "id": "4-4.act1c",
+     "page": 155,
+     "section": "4-4c",
+     "asks": "Decompose (x - 2)/(x^3 - x) = A/x + B/(x-1) + C/(x+1).",
+     "method": "Clear denominators; substitute x = 1, -1, 0.",
+     "key_steps": [
+      "B = -1/2",
+      "C = -3/2",
+      "A = 2"
+     ]
+    },
+    {
+     "id": "4-4.act2c",
+     "page": 158,
+     "section": "4-4c",
+     "asks": "∫sec x dx two ways.",
+     "method": "sec x = cos x/(1 - sin^2 x), y = sin x, partial fractions; or multiply by (sec x + tan x)."
+    }
+   ],
+   "worked_examples": [
+    {
+     "id": "4-4.ex1a",
+     "page": 147,
+     "section": "4-4a",
+     "type": "substitution_inner_derivative_present",
+     "asks": "∫2x sqrt(x^2 + 4) dx.",
+     "method": "u = x^2 + 4, du = 2x dx.",
+     "key_steps": [
+      "∫sqrt u du = (2/3)u^{3/2}",
+      "(2/3)(x^2 + 4)^{3/2} + c"
+     ]
+    },
+    {
+     "id": "4-4.ex2a",
+     "page": 147,
+     "section": "4-4a",
+     "type": "substitution_linear_inner",
+     "asks": "∫(2x + 1)^5 dx.",
+     "method": "u = 2x + 1, dx = du/2.",
+     "key_steps": [
+      "(1/12)(2x + 1)^6 + c"
+     ]
+    },
+    {
+     "id": "4-4.ex3a",
+     "page": 148,
+     "section": "4-4a",
+     "type": "substitution_exponential",
+     "asks": "∫x e^{x^2 + 1} dx.",
+     "method": "u = x^2 + 1, dx = du/(2x), x cancels.",
+     "key_steps": [
+      "(1/2)e^{x^2+1} + c"
+     ]
+    },
+    {
+     "id": "4-4.ex4a",
+     "page": 148,
+     "section": "4-4a",
+     "type": "substitution_radical",
+     "asks": "∫(1 + sqrt(x+1))/sqrt(x+1) dx.",
+     "method": "u = sqrt(x+1), dx = 2u du.",
+     "key_steps": [
+      "∫(2 + 2u)du = 2u + u^2 + c",
+      "2 sqrt(x+1) + x + c (the 1 is absorbed in c)"
+     ]
+    },
+    {
+     "id": "4-4.ex5a",
+     "page": 148,
+     "section": "4-4a",
+     "type": "trig_odd_power",
+     "asks": "∫sin^3 x dx.",
+     "method": "sin^3 x = (1 - cos^2 x) sin x, then u = cos x.",
+     "key_steps": [
+      "-cos x + cos^3 x/3 + c"
+     ]
+    },
+    {
+     "id": "4-4.ex6a",
+     "page": 149,
+     "section": "4-4a",
+     "type": "substitution_leftover_variable",
+     "asks": "∫x^5 (x^3 + 1)^3 dx.",
+     "method": "u = x^3 + 1; leftover x^3 = u - 1.",
+     "key_steps": [
+      "(1/3)∫(u^4 - u^3)du",
+      "(1/3)(u^5/5 - u^4/4) + c, back to x"
+     ]
+    },
+    {
+     "id": "4-4.ex7a",
+     "page": 149,
+     "section": "4-4a",
+     "type": "log_derivative",
+     "asks": "∫sec^2 x/(1 + tan x) dx.",
+     "method": "Numerator is the derivative of the denominator.",
+     "key_steps": [
+      "ln|1 + tan x| + c"
+     ]
+    },
+    {
+     "id": "4-4.ex1b",
+     "page": 151,
+     "section": "4-4b",
+     "type": "parts_polynomial_trig",
+     "asks": "∫x cos x dx.",
+     "method": "f = x, dv = cos x dx (table: f, df | dv, v).",
+     "key_steps": [
+      "x sin x - ∫sin x dx",
+      "x sin x + cos x + c"
+     ]
+    },
+    {
+     "id": "4-4.ex2b",
+     "page": 152,
+     "section": "4-4b",
+     "type": "parts_polynomial_exponential",
+     "asks": "∫(x - 1)e^x dx.",
+     "method": "f = x - 1, dv = e^x dx.",
+     "key_steps": [
+      "(x - 1)e^x - e^x + c"
+     ]
+    },
+    {
+     "id": "4-4.ex3b",
+     "page": 153,
+     "section": "4-4b",
+     "type": "parts_polynomial_radical",
+     "asks": "∫x/sqrt(x + 2) dx.",
+     "method": "f = x, dv = (x + 2)^{-1/2}dx, v = 2 sqrt(x + 2).",
+     "key_steps": [
+      "2x sqrt(x+2) - (4/3) sqrt((x+2)^3) + c"
+     ]
+    },
+    {
+     "id": "4-4.ex4b",
+     "page": 153,
+     "section": "4-4b",
+     "type": "parts_cyclic",
+     "asks": "∫e^x sin x dx.",
+     "method": "Parts twice (f = sin x, then f = cos x); the original integral reappears; solve for it.",
+     "key_steps": [
+      "2∫e^x sin x dx = e^x sin x - e^x cos x",
+      "(1/2)(e^x sin x - e^x cos x) + c"
+     ]
+    },
+    {
+     "id": "4-4.ex1c",
+     "page": 156,
+     "section": "4-4c",
+     "type": "partial_fractions_two_factors",
+     "asks": "∫2/(x^2 - 1) dx.",
+     "method": "2/((x-1)(x+1)) = 1/(x-1) - 1/(x+1).",
+     "key_steps": [
+      "ln|x-1| - ln|x+1| + c = ln|(x-1)/(x+1)| + c"
+     ]
+    },
+    {
+     "id": "4-4.ex2c",
+     "page": 156,
+     "section": "4-4c",
+     "type": "partial_fractions_three_factors",
+     "asks": "∫(x - 2)/(x^3 - x) dx.",
+     "method": "Use the decomposition from Activity 1.",
+     "key_steps": [
+      "2 ln|x| - (1/2)ln|x-1| - (3/2)ln|x+1| + c"
+     ]
+    },
+    {
+     "id": "4-4.ex3c",
+     "page": 157,
+     "section": "4-4c",
+     "type": "long_division_then_partial_fractions",
+     "asks": "∫x^3/(4 - x^2) dx.",
+     "method": "Divide: -x + 4x/(4 - x^2); decompose (A = 2, B = -2) or use the f'/f rule.",
+     "key_steps": [
+      "-x^2/2 - 2 ln|2-x| - 2 ln|2+x| + c",
+      "= -x^2/2 - 2 ln|x^2 - 4| + c"
+     ]
+    },
+    {
+     "id": "4-4.ex4c",
+     "page": 157,
+     "section": "4-4c",
+     "type": "substitution_to_rational",
+     "asks": "∫sqrt x/(x - 9) dx.",
+     "method": "y = sqrt x, dx = 2y dy -> ∫2y^2/(y^2 - 9)dy; equal degrees -> divide: 2 + 18/(y^2 - 9); partial fractions.",
+     "key_steps": [
+      "2 sqrt x - 3 ln|sqrt x + 3| + 3 ln|sqrt x - 3| + c"
+     ]
+    },
+    {
+     "id": "4-4.ex5c",
+     "page": 158,
+     "section": "4-4c",
+     "type": "substitution_to_rational",
+     "asks": "∫e^x/(e^{2x} + e^x - 2) dx.",
+     "method": "y = e^x -> ∫dy/(y^2 + y - 2), A = 1/3, B = -1/3.",
+     "key_steps": [
+      "(1/3)ln|e^x - 1| - (1/3)ln(e^x + 2) + c"
+     ]
+    },
+    {
+     "id": "4-4.ex6c",
+     "page": 159,
+     "section": "4-4c",
+     "type": "trig_substitution_to_rational",
+     "asks": "∫sin^3 x/(2 + cos x) dx.",
+     "method": "sin^3 x = sin x(1 - cos^2 x), y = cos x -> ∫(y^2 - 1)/(y + 2)dy; long division.",
+     "key_steps": [
+      "y^2/2 - 2y + 3 ln|y + 2| + c, then y = cos x"
+     ]
+    }
+   ],
+   "think_discuss": [
+    {
+     "page": 146,
+     "asks": "Is ∫x sqrt x dx = ∫x dx · ∫sqrt x dx? (no)"
+    },
+    {
+     "page": 151,
+     "asks": "Can ∫x cos x dx be found with the earlier methods? (no -> parts)"
+    },
+    {
+     "page": 152,
+     "asks": "Adding a constant when finding v does not change the result."
+    },
+    {
+     "page": 153,
+     "asks": "Find ∫x/sqrt(x+2) dx by substitution instead."
+    },
+    {
+     "page": 155,
+     "asks": "Can ∫(x+1)/(x^2 - 4) dx be found with the earlier methods? (no -> partial fractions)"
+    }
+   ],
+   "exercises": [
+    {
+     "set": "تمارين ٤-٤ أ",
+     "page": 150,
+     "section": "4-4a",
+     "items": [
+      {
+       "n": 1,
+       "type": "substitution_mixed",
+       "asks": "a) 4/(x+2)^5; b) (1-x) sin(x^2 - 2x); c) ln x / x; d) (x^2+2) sqrt(x+1) (leftover); e) (x+2)^2 (x-1)^6 (leftover); f) cos^4 x (half-angle twice); g) 1/(1 + sin x) (multiply by conjugate); h) e^{2x}/(e^x + e^{2x})."
+      },
+      {
+       "n": 2,
+       "type": "substitution_mixed",
+       "asks": "a) sqrt((x+1)/x^5); b) (1/x^2) sin(1/x); c) (sin x + csc x)^2; d) (x+2)^5/x^7; e) x^2 (x^7 + x^3)^{1/3}; f) tan^3 x."
+      }
+     ]
+    },
+    {
+     "set": "تمارين ٤-٤ ب",
+     "page": 154,
+     "section": "4-4b",
+     "items": [
+      {
+       "n": 1,
+       "type": "parts_mixed",
+       "asks": "a) x ln x; b) x sec^2 x; c) ln(x+2)^3; d) x sin 2x; e) x^3 e^{x^2+1} (substitution + parts); f) sin sqrt(x+1); g) 2x e^x/(x+1)^2; h) e^x sin x cos x; i) e^x (csc x - csc x cot x); j) (1/x^3) cos(1/x)."
+      },
+      {
+       "n": 2,
+       "type": "parts_proof_general",
+       "asks": "Prove ∫x^n ln x dx = x^{n+1}/(n+1) (ln x - 1/(n+1)) + c, n != -1, x > 0."
+      }
+     ]
+    },
+    {
+     "set": "تمارين ٤-٤ ج",
+     "page": 159,
+     "section": "4-4c",
+     "items": [
+      {
+       "n": 1,
+       "type": "partial_fractions_mixed",
+       "asks": "a) (x+2)/(x^2 - 2x - 3); b) (x^2+2)/(x^2 + x - 6) (divide first); c) sqrt x/(x - sqrt x - 2) (substitute); d) (x+2)/((x^2 - x)(x+1)); e) csc x; f) 1/(x - x(ln x)^2) (substitute y = ln x)."
+      },
+      {
+       "n": 2,
+       "type": "partial_fractions_mixed",
+       "asks": "a) (-x+7)/(x^2 + x - 2); b) sin x/(16 - cos^2 x); c) csc^2 x/(2 - csc^2 x); d) x^2/(x^6 + x^3)."
+      }
+     ]
+    }
+   ],
+   "prerequisites": {
+    "lessons": [
+     "4-2",
+     "1-6",
+     "1-3",
+     "1-4"
+    ],
+    "concepts": [
+     "u4.basic_integral_rules",
+     "u4.linearity_integral",
+     "chain rule (1-6)",
+     "product rule (1-2)",
+     "derivatives of ln and e^x (1-4)"
+    ],
+    "grade11": [
+     "factoring quadratics and cubics",
+     "polynomial long division",
+     "trig identities (Pythagorean, double angle)",
+     "laws of logarithms"
+    ]
+   },
+   "exclusions": [
+    "Integration by parts: Scientific branch only (p151).",
+    "Partial fractions: Scientific branch only (p155); only denominators with up to three distinct linear factors."
+   ],
+   "pitfalls": [
+    {
+     "en": "After substituting, every x (including leftovers) must be expressed in u, and the answer returned in x.",
+     "ar": "بعد التعويض عبّر عن كل س بدلالة ع، ثم أرجع الناتج إلى س.",
+     "source": "Ex.6 p149"
+    },
+    {
+     "en": "Convert dx fully (dx = du/g'(x)); for a linear inner function divide by its coefficient.",
+     "ar": "حوّل دس بالكامل؛ وفي الداخلي الخطي اقسم على معامل س.",
+     "source": "Ex.2 p147, أتعلم p147"
+    },
+    {
+     "en": "Constants produced during simplification merge into c (2 sqrt(x+1) + x + 1 + c -> 2 sqrt(x+1) + x + c).",
+     "ar": "الثوابت الناتجة تدمج مع جـ.",
+     "source": "Ex.4 p148"
+    },
+    {
+     "en": "Choose f in parts so that df is simpler (polynomial or ln as f); in cyclic cases keep the same type of choice in the second step.",
+     "ar": "اختر ق بحيث تكون دق أبسط؛ وفي التكامل الدوري حافظ على نوع الاختيار نفسه.",
+     "source": "Ex.1-4 p151-153"
+    },
+    {
+     "en": "Partial fractions need deg numerator < deg denominator; divide first otherwise.",
+     "ar": "يجب أن تكون درجة البسط أقل من درجة المقام وإلا نقسم أولاً.",
+     "source": "ملاحظة p156, Ex.3-4 p157"
+    },
+    {
+     "en": "Check first whether the numerator is (a multiple of) the derivative of the denominator; then ln|f| is immediate.",
+     "ar": "تحقق أولاً إن كان البسط مشتقة المقام فيكون الناتج لـو_هـ|المقام|.",
+     "source": "p155, Ex.7 p149, Ex.3 another solution p157"
+    },
+    {
+     "en": "Keep absolute values in ln|...|.",
+     "ar": "حافظ على القيمة المطلقة في اللوغاريتم.",
+     "source": "p149, p156"
+    }
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "set": "تمارين عامة (الوحدة الرابعة)",
+  "printed_pages": [
+   160,
+   161
+  ],
+  "pdf_pages": [
+   164,
+   165
+  ],
+  "items": [
+   {
+    "n": 1,
+    "type": "mcq",
+    "count": 4,
+    "parts": [
+     {
+      "n": 1,
+      "lessons": [
+       "4-1"
+      ],
+      "asks": "F, H different antiderivatives of f: what is ∫(F - H)dx? (a linear function)"
+     },
+     {
+      "n": 2,
+      "lessons": [
+       "4-1",
+       "4-2"
+      ],
+      "asks": "f = ∫(3x^2 - 2)dx, f(2) = 9: f(-2)."
+     },
+     {
+      "n": 3,
+      "lessons": [
+       "4-4"
+      ],
+      "asks": "∫2x ln x dx = x^2 ln x - ∫v df: what is v df? (x dx)"
+     },
+     {
+      "n": 4,
+      "lessons": [
+       "4-4"
+      ],
+      "asks": "∫csc^4 x cot x dx (substitution u = csc x)."
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "type": "verify_antiderivative",
+    "lessons": [
+     "4-1"
+    ],
+    "asks": "Prove F = sqrt(1 - x^2) is an antiderivative of f = -x/sqrt(1 - x^2)."
+   },
+   {
+    "n": 3,
+    "type": "curve_from_second_derivative",
+    "lessons": [
+     "4-3"
+    ],
+    "asks": "f''(x) = x^2 + 3 sin x, f'(0) = 3, f(0) = 2: find f."
+   },
+   {
+    "n": 4,
+    "type": "distance_from_velocity",
+    "lessons": [
+     "4-3",
+     "4-4"
+    ],
+    "asks": "v = 4t + ln(t + 1) (t in minutes); displacement after 3 minutes given 8 m covered after 1 minute (needs ∫ln(t+1)dt by parts)."
+   },
+   {
+    "n": 5,
+    "type": "integration_mixed",
+    "lessons": [
+     "4-4"
+    ],
+    "asks": "11 integrals: (1) x sqrt(x^2 - 3); (2) 1/(x^10 + x); (3) sec^2(sqrt x) [printed قا² √س; likely sec^2(sqrt x)/sqrt x or plain, see uncertainties]; (4) sec(3x+1)tan(3x+1); (5) (x^2+1)cos x (parts twice); (6) ln(x^2 - 1) (parts + partial fractions); (7) (x^2+1)/(x^3+x) (f'/f up to factor); (8) sec^4 x/(1 - tan^2 x); (9) cos^4 x - sin^4 x (= cos 2x); (10) (csc x + cot x)^8 csc x; (11) printed (x^8 - 6x)^6 as read (ambiguous)."
+   },
+   {
+    "n": 6,
+    "type": "motion_parameter",
+    "lessons": [
+     "4-3",
+     "4-4"
+    ],
+    "asks": "v = a sqrt(s) numerically; s(2) = 9, s(4) = 16: find a (separate: ds/sqrt s = a dt)."
+   },
+   {
+    "n": 7,
+    "type": "reverse_product_rule",
+    "lessons": [
+     "4-1",
+     "4-2"
+    ],
+    "asks": "x f'(x) + f(x) = cos x, f(pi) = 0: find f (left side is (x f(x))')."
+   },
+   {
+    "n": 8,
+    "type": "self_assessment",
+    "lessons": [],
+    "asks": "Rate: integrating indefinite integrals; using rules in problems; using a method of integration."
+   }
+  ]
+ },
+ "dependency_edges": [
+  [
+   "4-1",
+   "4-2"
+  ],
+  [
+   "4-2",
+   "4-3"
+  ],
+  [
+   "4-2",
+   "4-4"
+  ],
+  [
+   "1-6",
+   "4-4"
+  ],
+  [
+   "1-5",
+   "4-3"
+  ],
+  [
+   "1-2",
+   "4-1"
+  ],
+  [
+   "1-3",
+   "4-2"
+  ],
+  [
+   "1-4",
+   "4-2"
+  ]
+ ]
+}

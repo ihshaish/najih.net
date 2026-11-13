@@ -1,0 +1,2494 @@
+{
+ "unit": 1,
+ "title": {
+  "ar": "حساب التفاضل",
+  "en": "Differentiation"
+ },
+ "printed_pages": [
+  2,
+  51
+ ],
+ "pdf_pages": [
+  6,
+  55
+ ],
+ "source": "الرياضيات، الصف الثاني عشر، الفرع العلمي (وزارة التربية والتعليم، فلسطين) — read from page images ma150/p-006..p-055",
+ "branch_marking": "No lesson in unit 1 carries the pink 'للعلمي فقط' (Scientific only) ribbon that appears on lessons 2-1, 2-3, 2-4, 2-5. The only restriction marks in unit 1 are: the asterisk on Definition (1) of the derivative (p10: students are not asked to find derivatives from the definition) and proofs labelled 'للمعرفة فقط' (for knowledge only: L'Hopital p22, derivative of e^x p26).",
+ "notation_notes": [
+  "The book writes Leibniz notation with the letter dal: دص/دس (read 'دال ص دال س'), d^2y/dx^2 as د²ص/دس², nth derivative ص^(ن) or ق^(ن)(س) or دⁿص/دسⁿ. armath.js renders \\dv{y}{x} with hamza (ءص/ءس) — this differs from the unit-1/2 pages (see uncertainties).",
+  "Prime notation: قَ(س) (first), قً(س) (second), ق^(٣)(س) third and higher.",
+  "Increment h is written هـ (same glyph as e and as the function name هـ(س)); Δس, Δص for changes ('دلتا س').",
+  "Instantaneous velocity ع(ن), acceleration ت(ن), distance/displacement ف(ن), time ن. armath maps t->ن, s->ف, v->ع; it has no Latin letter mapped to ت, so acceleration is authored here as a(t) (renders أ(ن)).",
+  "Intervals use French brackets: ]أ ، ب[ open, [أ ، ب] closed. Greatest-integer function written [س].",
+  "Negative numbers printed with raised minus (⁻١). Inequalities printed mirrored in RTL (visual '١ ≤ س' reads س ≥ ١).",
+  "Exponential e^x written هـ^س; natural log لـو_هـ س; lim written نهـا with the approach under it."
+ ],
+ "opener": {
+  "page": 2,
+  "hook": {
+   "ar": "تكثر في فلسطين الطرق الملتوية في المناطق الجبلية؛ هل تصميمها مشابه لتصميم الطرق في المناطق المستوية؟",
+   "en": "Winding mountain roads in Palestine: is their design the same as roads on flat land? (motivates rate of change / slope)."
+  }
+ },
+ "objectives": [
+  {
+   "ar": "إيجاد متوسط التغير وتفسيره هندسياً وفيزيائياً",
+   "en": "Find the average rate of change and interpret it geometrically and physically"
+  },
+  {
+   "ar": "حساب المشتقة الأولى عند نقطة باستخدام قواعد الاشتقاق",
+   "en": "Compute the first derivative at a point using the differentiation rules"
+  },
+  {
+   "ar": "التعرف إلى المشتقات العليا وإجراء تطبيقات عليها",
+   "en": "Know higher derivatives and apply them"
+  },
+  {
+   "ar": "إيجاد مشتقة الاقترانات المثلثية",
+   "en": "Differentiate trigonometric functions"
+  },
+  {
+   "ar": "التعرف إلى مشتقة الاقتران الأسي الطبيعي واللوغاريتمي الطبيعي",
+   "en": "Differentiate the natural exponential and natural logarithm"
+  },
+  {
+   "ar": "إيجاد بعض النهايات باستخدام قاعدة لوبيتال",
+   "en": "Evaluate some limits with L'Hopital's rule"
+  },
+  {
+   "ar": "التعرف إلى قاعدة السلسلة واستخدامها في اشتقاق تركيب اقترانين",
+   "en": "Use the chain rule to differentiate a composition"
+  },
+  {
+   "ar": "حساب المشتقة الأولى لعلاقة ضمنية",
+   "en": "Differentiate an implicit relation"
+  },
+  {
+   "ar": "التعرف إلى المعنى الهندسي والفيزيائي للمشتقة وحل مسائل عليهما",
+   "en": "Interpret the derivative geometrically and physically and solve problems"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "1-1",
+   "title": {
+    "ar": "متوسط التغير",
+    "en": "Rate of Change (average rate of change)"
+   },
+   "printed_pages": [
+    4,
+    8
+   ],
+   "pdf_pages": [
+    8,
+    12
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [],
+    "grade11": [
+     "function notation and evaluation (polynomial, rational, radical, trig, exponential, log)",
+     "slope of a line through two points; slope = tan of inclination angle",
+     "solving linear/quadratic/radical equations (squaring, rejecting extraneous roots)",
+     "piecewise functions",
+     "trig values of special angles (radians)"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.change_delta",
+     "name": {
+      "ar": "التغير في س والتغير في الاقتران (Δس، Δص)",
+      "en": "Change in x and in f (Δx, Δy)"
+     }
+    },
+    {
+     "id": "u1.avg_rate",
+     "name": {
+      "ar": "متوسط التغير",
+      "en": "Average rate of change"
+     }
+    },
+    {
+     "id": "u1.avg_rate_function",
+     "name": {
+      "ar": "اقتران متوسط التغير عند س₁",
+      "en": "Average-rate function at x1 (difference quotient in h)"
+     }
+    },
+    {
+     "id": "u1.secant_slope",
+     "name": {
+      "ar": "المعنى الهندسي: ميل القاطع وزاوية ميله",
+      "en": "Geometric meaning: slope of the secant and its inclination angle"
+     }
+    },
+    {
+     "id": "u1.avg_velocity",
+     "name": {
+      "ar": "المعنى الفيزيائي: السرعة المتوسطة",
+      "en": "Physical meaning: average velocity"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u1.def.avg_rate",
+     "concept": "u1.avg_rate",
+     "page": 4,
+     "name": {
+      "ar": "متوسط التغير",
+      "en": "Average rate of change"
+     },
+     "statement": {
+      "ar": "إذا تغيرت س من س₁ إلى س₂ (س₁ ≠ س₂) فإن Δس = س₂ − س₁، وΔص = ق(س₂) − ق(س₁)، ومتوسط التغير هو Δص/Δس. وبوضع هـ = Δس ≠ ٠ يكتب على صورة اقتران في هـ يسمى اقتران متوسط التغير عند س₁.",
+      "en": "For y = f(x) as x changes from x1 to x2 (x1 ≠ x2): Δx = x2 − x1, Δy = f(x2) − f(x1), and the average rate of change is Δy/Δx. Writing h = Δx ≠ 0 gives the average-rate function at x1."
+     },
+     "latex": "\\frac{\\Delta y}{\\Delta x}=\\frac{f(x_2)-f(x_1)}{x_2-x_1}=\\frac{f(x_1+h)-f(x_1)}{h},\\quad h=\\Delta x\\neq 0",
+     "conditions": "x1 ≠ x2 (h ≠ 0); both points in the domain of f"
+    },
+    {
+     "id": "u1.def.secant",
+     "concept": "u1.secant_slope",
+     "page": 5,
+     "name": {
+      "ar": "المعنى الهندسي لمتوسط التغير",
+      "en": "Geometric meaning of the average rate"
+     },
+     "statement": {
+      "ar": "متوسط تغير ق(س) عندما تتغير س من س₁ إلى س₂ يساوي ميل القاطع المار بالنقطتين (س₁، ق(س₁))، (س₂، ق(س₂))، والزاوية ي التي يصنعها القاطع مع الاتجاه الموجب لمحور السينات هي زاوية ميله، وظا ي = ميل القاطع.",
+      "en": "The average rate of f from x1 to x2 equals the slope of the secant through (x1, f(x1)) and (x2, f(x2)); its inclination angle θ with the positive x-axis satisfies tan θ = slope of the secant."
+     },
+     "latex": "m_{\\text{secant}}=\\tan\\theta=\\frac{f(x_2)-f(x_1)}{x_2-x_1}"
+    },
+    {
+     "id": "u1.def.avg_velocity",
+     "concept": "u1.avg_velocity",
+     "page": 7,
+     "name": {
+      "ar": "السرعة المتوسطة",
+      "en": "Average velocity"
+     },
+     "statement": {
+      "ar": "إذا كانت ف = ق(ن) المسافة التي يقطعها الجسم و ن الزمن، فإن متوسط تغير المسافة عندما تتغير ن من ن₁ إلى ن₂ يسمى السرعة المتوسطة في الفترة [ن₁، ن₂].",
+      "en": "If s = f(t) is the distance travelled at time t, the average rate of change of s from t1 to t2 is the average velocity on [t1, t2]."
+     },
+     "latex": "\\bar v=\\frac{\\Delta s}{\\Delta t}=\\frac{s(t_2)-s(t_1)}{t_2-t_1}"
+    }
+   ],
+   "rules": [],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 4,
+     "context": "Twins Mohammad and Khaled: Mohammad 32 kg -> 62 kg over ten years, Khaled 29 kg -> 52 kg; the mother is relaxed about one, worried about the other.",
+     "idea": "comparing change vs time — motivates average rate of change"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 6,
+     "context": "Graph of car-company sales (millions) vs months; Omar computes avg change from x=1 to 3 = 3/2.",
+     "asks": "complete: average change from 3 to 7 and from 3 to 6 by reading the graph",
+     "idea": "average rate read from a graph"
+    },
+    {
+     "label": "نشاط 3",
+     "page": 6,
+     "context": "Piecewise f = x^2 (x ≥ 1), 2x − 1 (x < 1).",
+     "asks": "show the average-rate function from 1 to 1+h is 2+h for h>0 and 2 for h<0; use it to get averages from 1 to 3 and from 1 to −2",
+     "idea": "average-rate function in h for a piecewise function; sign of h decides the branch",
+     "latex": "\\frac{\\Delta y}{\\Delta x}=\\begin{cases}2+h,&h>0\\\\2,&h<0\\end{cases}"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 4,
+     "type": "compute Δx, Δy, average rate for a polynomial",
+     "asked": "f(x)=x^3−5x+3, x from −1 to 2: Δx, change in f, average rate",
+     "method": "direct substitution in the definition",
+     "key_steps": [
+      "Δx = 2 − (−1) = 3",
+      "Δy = f(2) − f(−1) = 1 − 7 = −6",
+      "Δy/Δx = −6/3 = −2"
+     ],
+     "answer": "−2"
+    },
+    {
+     "label": "مثال 2",
+     "page": 5,
+     "type": "secant slope and inclination angle",
+     "asked": "secant L cuts f(x)=x+sin2x at (0,f(0)), (π/2, f(π/2)): slope and inclination angle",
+     "method": "slope of secant = average rate on [0, π/2]; angle from tan θ = slope",
+     "key_steps": [
+      "(f(π/2) − f(0))/(π/2 − 0) = (π/2)/(π/2) = 1",
+      "tan θ = 1 ⇒ θ = π/4 (asks why)"
+     ],
+     "answer": "slope 1, angle π/4"
+    },
+    {
+     "label": "مثال 3",
+     "page": 6,
+     "type": "find an unknown endpoint from a given average rate",
+     "asked": "f(x)=√(2x+1); average rate from 0 to b equals 1/2, b>0: find b",
+     "method": "set up difference quotient = 1/2, isolate the radical, square, reject extraneous",
+     "key_steps": [
+      "(√(2b+1) − 1)/b = 1/2",
+      "2√(2b+1) − 2 = b ⇒ 2√(2b+1) = b + 2",
+      "square: b = 0 or b = 4; reject b = 0 (b>0 and Δx ≠ 0)"
+     ],
+     "answer": "b = 4"
+    },
+    {
+     "label": "مثال 4",
+     "page": 7,
+     "type": "average velocity; unknown time from a given average velocity",
+     "asked": "s(t)=t^2+8t (m, s): average velocity on [0,3]; find a if the average velocity on [1,a] is 13 m/s",
+     "method": "Δs/Δt",
+     "key_steps": [
+      "(s(3) − s(0))/3 = 33/3 = 11 m/s",
+      "(a^2 + 8a − 9)/(a − 1) = 13 ⇒ a^2 − 5a + 4 = 0 ⇒ a = 4 (a = 1 rejected)"
+     ],
+     "answer": "11 m/s; a = 4"
+    }
+   ],
+   "notes": [],
+   "pitfalls": [
+    "Δx must be nonzero: reject solutions that make x2 = x1 (Ex3 rejects b = 0; Ex4 implicitly a = 1).",
+    "Squaring a radical equation can introduce extraneous roots — check them.",
+    "For piecewise functions the sign of h decides which rule gives f(1+h) (Activity 3).",
+    "Average rate = slope of secant, not of the tangent; inclination angle is measured from the positive x-axis (obtuse angle ⇒ negative slope, e.g. 135° ⇒ −1)."
+   ],
+   "exercises": {
+    "label": "تمارين 1-1",
+    "page": 8,
+    "items": [
+     {
+      "n": 1,
+      "type": "compute",
+      "task": "f(x)=3/x + x^2: (a) change in f from 3 to 5; (b) average rate from 4 to 1"
+     },
+     {
+      "n": 2,
+      "type": "compute",
+      "task": "f(x)=cos x − 3 sin x: average rate on [π/2, π]"
+     },
+     {
+      "n": 3,
+      "type": "find parameter",
+      "task": "piecewise f = 6 − x (x<2), x^2 + ax (x ≥ 2); average rate from 1 to a (a>2) equals 9: find a"
+     },
+     {
+      "n": 4,
+      "type": "linearity of average rate",
+      "task": "average rate of f on [1,3] is 4 and k(x) = x^2 + 3f(x): average rate of k on [1,3]"
+     },
+     {
+      "n": 5,
+      "type": "secant angle",
+      "task": "secant of f through (1,a), (3,b) makes 135° with +x axis; h(x)=3f(x)+x^2−1: average rate of h on [1,3]"
+     },
+     {
+      "n": 6,
+      "type": "average velocity → parameter",
+      "task": "s=t^2+bt, average velocity on [1,3] is 6 m/s: find b"
+     },
+     {
+      "n": 7,
+      "type": "proof",
+      "task": "f=ax^2+bx+c: prove the average rate from 2 to n equals a(n+2)+b"
+     },
+     {
+      "n": 8,
+      "type": "exp/log",
+      "task": "(a) f=x+e^{x+1}: average rate from 0 to 1; (b) f=x+ln x^n, x>0: average rate from 1 to e equals (3−e)/(1−e): find n"
+     }
+    ]
+   },
+   "exercise_types": [
+    "evaluate change/average rate (algebraic, trig, exp/log)",
+    "find unknown parameter or endpoint from a given average rate",
+    "average rate of a combination (k = x^2 + 3f) from a given average of f",
+    "secant inclination angle ↔ slope",
+    "average velocity",
+    "prove a general formula"
+   ]
+  },
+  {
+   "id": "1-2",
+   "title": {
+    "ar": "قواعد الاشتقاق",
+    "en": "Rules of Differentiation"
+   },
+   "printed_pages": [
+    9,
+    18
+   ],
+   "pdf_pages": [
+    13,
+    22
+   ],
+   "branch_note": "Definition (1) carries an asterisk: 'لا يطلب من الطلبة إيجاد المشتقة بالتعريف' — students are not asked to find derivatives by the definition (p10).",
+   "prerequisites": {
+    "lessons": [
+     "1-1"
+    ],
+    "concepts": [
+     "u1.avg_rate",
+     "u1.secant_slope"
+    ],
+    "grade11": [
+     "limits including one-sided limits and 0/0 forms",
+     "continuity at a point and on an interval (lim f = f(a))",
+     "greatest-integer function [x] and piecewise rewriting",
+     "laws of exponents (negative and fractional powers)"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.derivative_def",
+     "name": {
+      "ar": "المشتقة الأولى عند نقطة (معدل التغير، ميل المماس)",
+      "en": "First derivative at a point (instantaneous rate, tangent slope)"
+     }
+    },
+    {
+     "id": "u1.one_sided_derivative",
+     "name": {
+      "ar": "المشتقة من اليمين ومن اليسار",
+      "en": "Right and left derivatives"
+     }
+    },
+    {
+     "id": "u1.differentiability",
+     "name": {
+      "ar": "قابلية الاشتقاق عند نقطة وعلى فترة",
+      "en": "Differentiability at a point and on an interval"
+     }
+    },
+    {
+     "id": "u1.diff_continuity",
+     "name": {
+      "ar": "العلاقة بين الاتصال وقابلية الاشتقاق",
+      "en": "Differentiability vs continuity"
+     }
+    },
+    {
+     "id": "u1.basic_rules",
+     "name": {
+      "ar": "قواعد الاشتقاق الأساسية (الثابت، س، الضرب في ثابت، المجموع والفرق)",
+      "en": "Basic rules: constant, x, constant multiple, sum/difference"
+     }
+    },
+    {
+     "id": "u1.product_rule",
+     "name": {
+      "ar": "مشتقة حاصل الضرب",
+      "en": "Product rule"
+     }
+    },
+    {
+     "id": "u1.quotient_rule",
+     "name": {
+      "ar": "مشتقة القسمة",
+      "en": "Quotient rule"
+     }
+    },
+    {
+     "id": "u1.power_rule",
+     "name": {
+      "ar": "مشتقة سⁿ",
+      "en": "Power rule"
+     }
+    },
+    {
+     "id": "u1.piecewise_derivative",
+     "name": {
+      "ar": "اشتقاق الاقترانات المتشعبة واقتران أكبر عدد صحيح",
+      "en": "Differentiating piecewise and greatest-integer functions"
+     }
+    },
+    {
+     "id": "u1.higher_derivatives",
+     "name": {
+      "ar": "المشتقات العليا",
+      "en": "Higher derivatives"
+     }
+    },
+    {
+     "id": "u1.derivative_identity_proof",
+     "name": {
+      "ar": "إثبات علاقات تحوي مشتقات",
+      "en": "Proving identities involving derivatives"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u1.def.derivative",
+     "concept": "u1.derivative_def",
+     "page": 10,
+     "starred": true,
+     "name": {
+      "ar": "تعريف (1)*: المشتقة الأولى",
+      "en": "Definition (1)*: first derivative"
+     },
+     "statement": {
+      "ar": "إذا كان ق(س) معرفاً عند س₁ وكانت النهاية نهـا_(هـ←٠) (ق(س₁+هـ) − ق(س₁))/هـ موجودة فإن قيمتها المشتقة الأولى لـ ق عند س₁. الرموز: قَ(س₁) أو صَ|س=س₁ أو دص/دس|س=س₁. ويمكن كتابتها نهـا_(س←س₁) (ق(س) − ق(س₁))/(س − س₁).",
+      "en": "If f is defined at x1 and lim_{h→0} (f(x1+h) − f(x1))/h exists, its value is the first derivative of f at x1, written f'(x1), y'|_{x=x1} or dy/dx|_{x=x1}; equivalently lim_{x→x1} (f(x) − f(x1))/(x − x1). Interpretation: limit of secant slope = tangent slope = instantaneous rate."
+     },
+     "latex": "f'(x_1)=\\lim_{h\\to 0}\\frac{f(x_1+h)-f(x_1)}{h}=\\lim_{x\\to x_1}\\frac{f(x)-f(x_1)}{x-x_1}",
+     "conditions": "limit must exist; * students are not asked to compute derivatives from this definition, but limit expressions of this form are used (1-4 Ex4, exercises)"
+    },
+    {
+     "id": "u1.def.one_sided",
+     "concept": "u1.one_sided_derivative",
+     "page": 10,
+     "name": {
+      "ar": "تعريف (2): المشتقة من اليمين ومن اليسار",
+      "en": "Definition (2): right and left derivatives"
+     },
+     "statement": {
+      "ar": "قَ(س₁)⁺ = نهـا_(هـ←٠⁺) (ق(س₁+هـ) − ق(س₁))/هـ ، قَ(س₁)⁻ = نهـا_(هـ←٠⁻) (…)/هـ. إذا تساوتا وساوتا ل كان ق قابلاً للاشتقاق عند س₁ و قَ(س₁) = ل.",
+      "en": "Right derivative f'(x1)^+ uses h→0^+, left derivative f'(x1)^- uses h→0^-; f is differentiable at x1 iff both exist and are equal (= L), then f'(x1) = L."
+     },
+     "latex": "f'(x_1)^{+}=\\lim_{h\\to 0^{+}}\\frac{f(x_1+h)-f(x_1)}{h},\\qquad f'(x_1)^{-}=\\lim_{h\\to 0^{-}}\\frac{f(x_1+h)-f(x_1)}{h}"
+    },
+    {
+     "id": "u1.def.diff_interval",
+     "concept": "u1.differentiability",
+     "page": 10,
+     "name": {
+      "ar": "تعريف (3): الاشتقاق على فترة",
+      "en": "Definition (3): differentiability on an interval"
+     },
+     "statement": {
+      "ar": "إذا كان ق معرفاً على [أ، ب] فإنه غير قابل للاشتقاق عند طرفي الفترة. ويكون قابلاً للاشتقاق على ]أ، ب[ إذا كان قابلاً للاشتقاق عند كل نقطة فيها.",
+      "en": "If f is defined on [a,b] it is NOT differentiable at the endpoints a, b; f is differentiable on ]a,b[ if it is differentiable at every point of it."
+     },
+     "conditions": "book convention: endpoint derivatives are declared non-existent"
+    },
+    {
+     "id": "u1.def.higher",
+     "concept": "u1.higher_derivatives",
+     "page": 16,
+     "name": {
+      "ar": "المشتقات العليا",
+      "en": "Higher derivatives"
+     },
+     "statement": {
+      "ar": "إذا كانت المشتقة الأولى قابلة للاشتقاق فمشتقتها المشتقة الثانية صً = قً(س) = د²ص/دس²، وهكذا. المشتقة من الرتبة ن: ص^(ن) أو ق^(ن)(س) أو دⁿص/دسⁿ ، ن ∈ ص⁺ ، ن > ٢.",
+      "en": "If f' is differentiable, its derivative is the second derivative y'' = f''(x) = d²y/dx², and so on; the n-th derivative is written y^(n), f^(n)(x), dⁿy/dxⁿ (n positive integer, n > 2)."
+     },
+     "latex": "y''=f''(x)=\\frac{d}{dx}\\!\\left(\\frac{dy}{dx}\\right)=\\frac{d^2y}{dx^2},\\qquad f^{(n)}(x)=\\frac{d^ny}{dx^n}"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u1.rule.domain_fprime",
+     "kind": "think_discuss",
+     "page": 10,
+     "statement": {
+      "ar": "مجال قَ ⊆ مجال ق",
+      "en": "Domain of f' ⊆ domain of f"
+     },
+     "latex": "\\operatorname{Dom}(f')\\subseteq\\operatorname{Dom}(f)"
+    },
+    {
+     "id": "u1.rule.constant",
+     "kind": "rule",
+     "label": "قاعدة (1)",
+     "page": 10,
+     "concept": "u1.basic_rules",
+     "statement": {
+      "ar": "إذا كان ق(س) = جـ ، جـ ∈ ح فإن قَ(س) = ٠ لجميع س ∈ ح",
+      "en": "Derivative of a constant is 0 for all real x"
+     },
+     "latex": "f(x)=c\\ \\Rightarrow\\ f'(x)=0"
+    },
+    {
+     "id": "u1.rule.identity",
+     "kind": "rule",
+     "label": "قاعدة (2)",
+     "page": 11,
+     "concept": "u1.basic_rules",
+     "statement": {
+      "ar": "إذا كان ق(س) = س فإن قَ(س) = ١",
+      "en": "Derivative of x is 1"
+     },
+     "latex": "f(x)=x\\ \\Rightarrow\\ f'(x)=1"
+    },
+    {
+     "id": "u1.rule.const_multiple",
+     "kind": "rule",
+     "label": "قاعدة (3)",
+     "page": 11,
+     "concept": "u1.basic_rules",
+     "statement": {
+      "ar": "إذا كان ق قابلاً للاشتقاق و جـ ∈ ح فإن ك(س) = جـ ق(س) قابل للاشتقاق و كَ(س) = جـ قَ(س)",
+      "en": "(c f)' = c f'"
+     },
+     "latex": "(c\\,f)'(x)=c\\,f'(x)",
+     "conditions": "f differentiable"
+    },
+    {
+     "id": "u1.rule.sum",
+     "kind": "rule",
+     "label": "قاعدة (4)",
+     "page": 11,
+     "concept": "u1.basic_rules",
+     "statement": {
+      "ar": "مشتقة المجموع/الفرق = مجموع/فرق المشتقات، وتبقى صحيحة لأكثر من اقترانين",
+      "en": "(f ± g)' = f' ± g'; holds for more than two functions"
+     },
+     "latex": "(f\\pm g)'(x)=f'(x)\\pm g'(x)",
+     "conditions": "f, g differentiable"
+    },
+    {
+     "id": "u1.rule.check_continuity",
+     "kind": "learn_note",
+     "label": "أتعلم",
+     "page": 13,
+     "concept": "u1.piecewise_derivative",
+     "statement": {
+      "ar": "عند إيجاد المشتقة باستخدام قواعد الاشتقاق لا بد من بحث الاتصال أولاً",
+      "en": "Before using the rules (especially for piecewise functions), check continuity first"
+     }
+    },
+    {
+     "id": "u1.rule.product",
+     "kind": "rule",
+     "label": "قاعدة (5)",
+     "page": 13,
+     "concept": "u1.product_rule",
+     "statement": {
+      "ar": "(ق × هـ)َ = ق × هـَ + هـ × قَ",
+      "en": "Product rule"
+     },
+     "latex": "(f\\cdot g)'(x)=f(x)\\,g'(x)+g(x)\\,f'(x)",
+     "conditions": "f, g differentiable"
+    },
+    {
+     "id": "u1.rule.power_pos",
+     "kind": "theorem",
+     "label": "نظرية",
+     "page": 13,
+     "concept": "u1.power_rule",
+     "statement": {
+      "ar": "إذا كان ق(س) = سⁿ فإن قَ(س) = ن سⁿ⁻¹ ، ن ≠ ١ ، ن ∈ ص⁺",
+      "en": "Power rule for positive integer n"
+     },
+     "latex": "f(x)=x^{n}\\ \\Rightarrow\\ f'(x)=n\\,x^{n-1},\\ n\\in\\mathbb{Z}^{+}",
+     "conditions": "printed: n ≠ 1, n ∈ Z+ (n = 1 is Rule 2)"
+    },
+    {
+     "id": "u1.rule.polynomial_diff",
+     "kind": "learn_note",
+     "label": "أتعلم",
+     "page": 14,
+     "statement": {
+      "ar": "كثير الحدود قابل للاشتقاق",
+      "en": "Every polynomial is differentiable"
+     }
+    },
+    {
+     "id": "u1.thm.diff_iff",
+     "kind": "theorem",
+     "label": "نظرية",
+     "page": 14,
+     "concept": "u1.diff_continuity",
+     "statement": {
+      "ar": "يكون ق قابلاً للاشتقاق عند س₁ إذا وفقط إذا كان متصلاً عند س₁ و قَ(س₁)⁺ = قَ(س₁)⁻",
+      "en": "f is differentiable at x1 iff f is continuous at x1 and f'(x1)^+ = f'(x1)^-"
+     },
+     "latex": "f \\text{ differentiable at } x_1 \\iff f \\text{ continuous at } x_1 \\ \\wedge\\ f'(x_1)^{+}=f'(x_1)^{-}"
+    },
+    {
+     "id": "u1.rule.quotient",
+     "kind": "rule",
+     "label": "قاعدة (6)",
+     "page": 15,
+     "concept": "u1.quotient_rule",
+     "statement": {
+      "ar": "إذا كان ق(س) = ك(س)/م(س) ، م(س) ≠ ٠ فإن قَ(س) = (م كَ − ك مَ)/(م)²",
+      "en": "Quotient rule"
+     },
+     "latex": "\\left(\\frac{k}{m}\\right)'(x)=\\frac{m(x)\\,k'(x)-k(x)\\,m'(x)}{\\big(m(x)\\big)^{2}},\\quad m(x)\\neq 0"
+    },
+    {
+     "id": "u1.rule.power_int",
+     "kind": "corollary",
+     "label": "نتيجة",
+     "page": 15,
+     "concept": "u1.power_rule",
+     "statement": {
+      "ar": "إذا كان ق(س) = سⁿ فإن قَ(س) = ن سⁿ⁻¹ ، ن ∈ ص ، س ≠ ٠",
+      "en": "Power rule for any integer n (x ≠ 0)"
+     },
+     "latex": "\\frac{d}{dx}x^{n}=n\\,x^{n-1},\\ n\\in\\mathbb{Z},\\ x\\neq 0"
+    },
+    {
+     "id": "u1.rule.d2_vs_square",
+     "kind": "think_discuss",
+     "page": 16,
+     "statement": {
+      "ar": "هل يوجد اختلاف بين د²ص/دس² و (دص/دس)²؟",
+      "en": "d²y/dx² is not (dy/dx)²"
+     },
+     "latex": "\\frac{d^2y}{dx^2}\\neq\\left(\\frac{dy}{dx}\\right)^{2}"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 9,
+     "context": "Dairy factory with two lines: f(t)=t^2+t, h(t)=t^2+2t cans after t hours; rate of first line f'(t)=2t+1.",
+     "asks": "rate of second line; total production; rate of total production — what do you conclude?",
+     "idea": "derivative of a sum = sum of derivatives"
+    },
+    {
+     "label": "تمهيد",
+     "page": 9,
+     "context": "Secant slopes approaching the tangent slope as x → x1 (graph of secants and tangent).",
+     "idea": "limit of average rate = instantaneous rate = derivative"
+    },
+    {
+     "label": "نشاط 4",
+     "page": 16,
+     "context": "Polynomial f with f(x) + f''(x) = 2x^3 − 3x.",
+     "asks": "argue f is cubic (why), write ax^3+bx^2+cx+d, match coefficients, find f'(1)",
+     "idea": "higher derivatives + undetermined coefficients"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 11,
+     "type": "derivative of constants",
+     "asked": "f(x)=5; f(x)=cos π",
+     "method": "Rule 1 (cos π is a constant)",
+     "key_steps": [
+      "f' = 0 in both"
+     ],
+     "answer": "0, 0"
+    },
+    {
+     "label": "مثال 2",
+     "page": 11,
+     "type": "constant multiple",
+     "asked": "f(x)=5x",
+     "method": "Rule 3 with Rule 2",
+     "key_steps": [
+      "f' = 5 × 1 = 5"
+     ],
+     "answer": "5"
+    },
+    {
+     "label": "مثال 3",
+     "page": 12,
+     "type": "derivative of a combination from given values",
+     "asked": "f'(1)=5, k'(1)=−3, L(x)=2x+f(x)−3k(x): L'(1)",
+     "method": "sum and constant-multiple rules, then substitute",
+     "key_steps": [
+      "L'(x) = 2 + f'(x) − 3k'(x)",
+      "L'(1) = 2 + 5 + 9 = 16"
+     ],
+     "answer": "16"
+    },
+    {
+     "label": "مثال 4",
+     "page": 12,
+     "type": "derivative at the joint of a piecewise function",
+     "asked": "f = 2x (x ≥ 2), 4 (x < 2): f'(2)",
+     "method": "check continuity, differentiate each piece on open sets, compare one-sided derivatives",
+     "key_steps": [
+      "f continuous (check)",
+      "f' = 2 for x>2, 0 for x<2",
+      "f'(2)^+ = 2 ≠ f'(2)^- = 0 ⇒ f'(2) does not exist"
+     ],
+     "answer": "does not exist"
+    },
+    {
+     "label": "مثال 5",
+     "page": 12,
+     "type": "greatest-integer function",
+     "asked": "f(x)=[x], x ∈ [0,2]: f'(x)",
+     "method": "rewrite without the bracket; discontinuity and endpoints",
+     "key_steps": [
+      "f = 0 on [0,1[, 1 on [1,2[, 2 at x=2",
+      "f' = 0 on ]0,1[ ∪ ]1,2[",
+      "f'(0), f'(2) do not exist (endpoints); f'(1) does not exist (discontinuous)"
+     ],
+     "answer": "f'=0 on ]0,1[∪]1,2["
+    },
+    {
+     "label": "مثال 6",
+     "page": 13,
+     "type": "product rule",
+     "asked": "f=(5x−1)(2−x): f'(x), f'(−1)",
+     "method": "product rule then simplify",
+     "key_steps": [
+      "f' = (5x−1)(−1) + 5(2−x) = −10x + 11",
+      "f'(−1) = 21"
+     ],
+     "answer": "21"
+    },
+    {
+     "label": "مثال 7",
+     "page": 13,
+     "type": "product rule with an unknown function",
+     "asked": "f(x)=x k(x), f(2)=−6, k'(2)=4: f'(2)",
+     "method": "product rule; recover k(2) from f(2)",
+     "key_steps": [
+      "f'(x) = x k'(x) + k(x)",
+      "k(2) = f(2)/2 = −3",
+      "f'(2) = 8 − 3 = 5"
+     ],
+     "answer": "5"
+    },
+    {
+     "label": "مثال 8",
+     "page": 14,
+     "type": "power rule on a polynomial",
+     "asked": "f=x^3−2x+5: f'(x), f'(−2)",
+     "method": "power rule",
+     "key_steps": [
+      "f' = 3x^2 − 2",
+      "f'(−2) = 10"
+     ],
+     "answer": "10"
+    },
+    {
+     "label": "مثال 9",
+     "page": 14,
+     "type": "find parameters for differentiability of a piecewise function",
+     "asked": "f = ax^2 + b (x ≥ 1), x^3 + x (x < 1) differentiable on R: a, b",
+     "method": "continuity at the joint + equal one-sided derivatives",
+     "key_steps": [
+      "continuity: a + b = 2",
+      "f' = 2ax (x>1), 3x^2 + 1 (x<1)",
+      "2a = 4 ⇒ a = 2, b = 0"
+     ],
+     "answer": "a=2, b=0"
+    },
+    {
+     "label": "مثال 10",
+     "page": 15,
+     "type": "negative powers + quotient rule",
+     "asked": "f = 1/x^3 + x^2/(x−1): f'(−1)",
+     "method": "rewrite 1/x^3 = x^{−3}; quotient rule",
+     "key_steps": [
+      "f' = −3x^{−4} + ((x−1)·2x − x^2)/(x−1)^2",
+      "f'(−1) = −9/4"
+     ],
+     "answer": "−9/4"
+    },
+    {
+     "label": "مثال 11",
+     "page": 15,
+     "type": "solve f'(x) = given value",
+     "asked": "f=(x^2−2)/(x+3), x ≠ −3: x with f'(x) = −3/4",
+     "method": "quotient rule, equate, cross-multiply",
+     "key_steps": [
+      "f' = (x^2 + 6x + 2)/(x+3)^2",
+      "(x^2+6x+2)/(x+3)^2 = −3/4 ⇒ x = −1 or x = −5"
+     ],
+     "answer": "x = −1, −5"
+    },
+    {
+     "label": "مثال 12",
+     "page": 16,
+     "type": "higher derivatives",
+     "asked": "f=x^5+4x^3−1: f^(5)(x), f^(4)(2)",
+     "method": "repeated power rule",
+     "key_steps": [
+      "f' = 5x^4 + 12x^2, f'' = 20x^3 + 24x",
+      "f''' = 60x^2 + 24, f^(4) = 120x, f^(5) = 120",
+      "f^(4)(2) = 240"
+     ],
+     "answer": "120; 240"
+    },
+    {
+     "label": "مثال 13",
+     "page": 17,
+     "type": "prove a differential identity",
+     "asked": "y = 1/x, x ≠ 0: prove x^2 y'' + x y' = y",
+     "method": "compute y', y'' and substitute",
+     "key_steps": [
+      "y' = −1/x^2, y'' = 2/x^3",
+      "x^2(2/x^3) + x(−1/x^2) = 2/x − 1/x = 1/x = y"
+     ],
+     "answer": "proved"
+    }
+   ],
+   "notes": [
+    "Rule (4) remains valid for more than two functions (ملاحظة p11).",
+    "Before differentiating with the rules, check continuity first (أتعلم p13).",
+    "Every polynomial is differentiable (أتعلم p14)."
+   ],
+   "pitfalls": [
+    "Do not differentiate a piecewise function branch-by-branch at the joint without first checking continuity; a discontinuous function has no derivative there (Ex5, unit MCQ 6).",
+    "Equal-looking branch derivatives are not enough: differentiability needs continuity AND equal one-sided derivatives (Ex9 uses both conditions).",
+    "Endpoints of a closed domain: derivative does not exist there by the book's convention (Ex5).",
+    "Derivative of a constant expression like cos π is 0.",
+    "d²y/dx² ≠ (dy/dx)².",
+    "Product rule paradox (exercise 6): x^2·[2x] is differentiable at 0 even though [2x] is not — the product rule's hypotheses are sufficient, not necessary."
+   ],
+   "exercises": {
+    "label": "تمارين 1-2",
+    "page": 17,
+    "items": [
+     {
+      "n": 1,
+      "type": "compute derivative at a point",
+      "task": "(a) x^5 − x^2 + c at x = −1; (b) (x^3 − 1)(x + 12) at x = 3; (c) x^2/(5 − x^2) at x = −2"
+     },
+     {
+      "n": 2,
+      "type": "table of values",
+      "task": "f(1)=2, f'(1)=3, h(1)=−1, h'(1)=−3: (a) (f + h^2)'(1); (b) (x^2 f − 3/h)'(1)"
+     },
+     {
+      "n": 3,
+      "type": "graph + quotient rule",
+      "task": "f(x)=x/(x^2+1); graph of h with tangent at (1,1) at angle 30° marked: find (f/h)'(1)"
+     },
+     {
+      "n": 4,
+      "type": "prove identity",
+      "task": "(a) y = x/(x+1), x ≠ −1: prove 2y y' + x y'' = 0 [as printed]; (b) y = a x^5 + 5/x^4, x ≠ 0: prove y'' = 20y/x^2"
+     },
+     {
+      "n": 5,
+      "type": "product of many factors",
+      "task": "f=(1−x)(1+x)(1+x^2)(1+x^4)(1+x^8): f'(1)"
+     },
+     {
+      "n": 6,
+      "type": "differentiability & product rule",
+      "task": "f=x^2, h=[2x]: f'(0), h'(0), (f·h)(x), (f·h)'(0); does this contradict the product rule? explain"
+     },
+     {
+      "n": 7,
+      "type": "higher derivative → parameter",
+      "task": "f=x^4 + a x^3 − 3, f'''(2) = 18: find a"
+     },
+     {
+      "n": 8,
+      "type": "higher derivative of x^n",
+      "task": "f = x^n, n ∈ Z, f'''(x) = a x: find a"
+     }
+    ]
+   },
+   "exercise_types": [
+    "derivative at a point via sum/product/quotient/power rules",
+    "derivatives of combinations from a table of values",
+    "derivative from a graph (tangent angle)",
+    "prove identities with y', y''",
+    "differentiability of piecewise / greatest-integer functions",
+    "parameters from differentiability",
+    "higher derivatives and parameters"
+   ]
+  },
+  {
+   "id": "1-3",
+   "title": {
+    "ar": "مشتقات الاقترانات المثلثية",
+    "en": "The Derivative of Trigonometric Functions"
+   },
+   "printed_pages": [
+    19,
+    21
+   ],
+   "pdf_pages": [
+    23,
+    25
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [
+     "1-2"
+    ],
+    "concepts": [
+     "u1.product_rule",
+     "u1.quotient_rule",
+     "u1.higher_derivatives"
+    ],
+    "grade11": [
+     "six trig functions and reciprocal identities",
+     "sin^2+cos^2=1, 1+tan^2=sec^2, 1+cot^2=csc^2",
+     "double-angle formulas (sin2x, cos2x)",
+     "radian measure and special-angle values",
+     "solving trig equations on an interval"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.trig_derivatives",
+     "name": {
+      "ar": "مشتقات الاقترانات المثلثية الستة",
+      "en": "Derivatives of the six trig functions"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u1.rule.sin",
+     "kind": "rule",
+     "label": "قاعدة (1)",
+     "page": 19,
+     "concept": "u1.trig_derivatives",
+     "statement": {
+      "ar": "مشتقة جاس = جتاس (س بالتقدير الدائري)",
+      "en": "(sin x)' = cos x, x in radians"
+     },
+     "latex": "\\frac{d}{dx}\\sin x=\\cos x",
+     "conditions": "x in radians"
+    },
+    {
+     "id": "u1.rule.cos",
+     "kind": "rule",
+     "label": "قاعدة (2)",
+     "page": 19,
+     "concept": "u1.trig_derivatives",
+     "statement": {
+      "ar": "مشتقة جتاس = −جاس",
+      "en": "(cos x)' = −sin x"
+     },
+     "latex": "\\frac{d}{dx}\\cos x=-\\sin x",
+     "conditions": "x in radians"
+    },
+    {
+     "id": "u1.rule.tan_cot_sec_csc",
+     "kind": "rule",
+     "label": "قاعدة (3)",
+     "page": 20,
+     "concept": "u1.trig_derivatives",
+     "statement": {
+      "ar": "مشتقة ظاس = قا²س ، ظتاس ← −قتا²س ، قاس ← قاس ظاس ، قتاس ← −قتاس ظتاس",
+      "en": "(tan)' = sec², (cot)' = −csc², (sec)' = sec·tan, (csc)' = −csc·cot"
+     },
+     "latex": "(\\tan x)'=\\sec^2 x,\\ (\\cot x)'=-\\csc^2 x,\\ (\\sec x)'=\\sec x\\tan x,\\ (\\csc x)'=-\\csc x\\cot x",
+     "conditions": "on each function's domain; think-and-discuss: verify by writing in sin/cos and using the quotient rule"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 19,
+     "context": "Palestine 2014 health report: heart disease the leading cause of death (29.5%); ECG trace vs trig curves.",
+     "idea": "periodic curves motivate trig derivatives"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 19,
+     "type": "product with sin",
+     "asked": "f = x sin x: f'(π/2)",
+     "method": "product rule",
+     "key_steps": [
+      "f' = sin x + x cos x",
+      "f'(π/2) = 1"
+     ],
+     "answer": "1"
+    },
+    {
+     "label": "مثال 2",
+     "page": 20,
+     "type": "quotient with cos",
+     "asked": "f = x^2/cos x: f'(x)",
+     "method": "quotient rule",
+     "key_steps": [
+      "f' = (cos x·2x − x^2·(−sin x))/cos^2 x = (2x cos x + x^2 sin x)/cos^2 x"
+     ]
+    },
+    {
+     "label": "مثال 3",
+     "page": 20,
+     "type": "sec and tan",
+     "asked": "f = sec x + tan x: f'(x), f'(π/4)",
+     "method": "rule 3, factor",
+     "key_steps": [
+      "f' = sec x tan x + sec^2 x = sec x(tan x + sec x)",
+      "f'(π/4) = √2(1 + √2) = 2 + √2"
+     ],
+     "answer": "2+√2"
+    },
+    {
+     "label": "مثال 4",
+     "page": 20,
+     "type": "prove a trig derivative identity",
+     "asked": "y = csc x cot x: prove dy/dx = csc x − 2csc^3 x",
+     "method": "product rule then identity cot^2 = csc^2 − 1",
+     "key_steps": [
+      "y' = −csc x cot^2 x − csc^3 x",
+      "= −csc x(csc^2 x − 1) − csc^3 x = csc x − 2csc^3 x"
+     ],
+     "answer": "proved"
+    }
+   ],
+   "notes": [
+    "Think & discuss p20: verify rule 3 by rewriting in sin and cos and applying the quotient rule."
+   ],
+   "pitfalls": [
+    "Signs: derivatives of the 'co-' functions (cos, cot, csc) are negative.",
+    "Formulas valid only with x in radians.",
+    "Use Pythagorean identities to reach the requested form in 'prove' questions."
+   ],
+   "exercises": {
+    "label": "تمارين 1-3",
+    "page": 21,
+    "items": [
+     {
+      "n": 1,
+      "type": "compute dy/dx",
+      "task": "(a) 2cos x − 2tan x; (b) (1 − sec x)/(1 + sec x); (c) x/(csc x + cot x); (d) x^2 sec x"
+     },
+     {
+      "n": 2,
+      "type": "prove identity (2nd derivative)",
+      "task": "y = tan x, x acute: prove y'' = 2y(1 + y^2)"
+     },
+     {
+      "n": 3,
+      "type": "prove differential equation",
+      "task": "y = sin x / x, x ≠ 0: prove y'' + (2/x) y' + y = 0"
+     },
+     {
+      "n": 4,
+      "type": "solve f''=0 on interval",
+      "task": "f = x^2/2 − cos x, x ∈ [−2π, 2π]: values of x with f''(x) = 0"
+     }
+    ]
+   },
+   "exercise_types": [
+    "differentiate trig expressions with product/quotient",
+    "prove identities/differential equations",
+    "solve trig equation from f'' = 0 on an interval"
+   ]
+  },
+  {
+   "id": "1-4",
+   "title": {
+    "ar": "قاعدة لوبيتال، ومشتقة الاقتران الأسي واللوغاريتمي",
+    "en": "L'Hopital's Rule, and the Derivatives of the Exponential and Logarithmic Functions"
+   },
+   "printed_pages": [
+    22,
+    29
+   ],
+   "pdf_pages": [
+    26,
+    33
+   ],
+   "branch_note": "Proofs of L'Hopital (p22) and of (e^x)' = e^x (p26) are marked 'للمعرفة فقط' (for knowledge only). Only the 0/0 case of L'Hopital is studied ('سوف لا نتعرض لحالات لوبيتال الأخرى').",
+   "prerequisites": {
+    "lessons": [
+     "1-2",
+     "1-3"
+    ],
+    "concepts": [
+     "u1.derivative_def",
+     "u1.trig_derivatives"
+    ],
+    "grade11": [
+     "limits of the indeterminate form 0/0 by factoring/rationalising",
+     "exponential a^x (a>0, a≠1) and logarithm log_a x (x>0) and their graphs",
+     "laws of exponents and logarithms",
+     "e and ln as inverse functions"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.lhopital",
+     "name": {
+      "ar": "قاعدة لوبيتال (الصورة ٠/٠)",
+      "en": "L'Hopital's rule (0/0 form)"
+     }
+    },
+    {
+     "id": "u1.derivative_limit_disguise",
+     "name": {
+      "ar": "نهايات على صورة تعريف المشتقة",
+      "en": "Limits that are a derivative in disguise"
+     }
+    },
+    {
+     "id": "u1.e_number",
+     "name": {
+      "ar": "العدد النيبيري هـ",
+      "en": "Napier's number e"
+     }
+    },
+    {
+     "id": "u1.exp_log_laws",
+     "name": {
+      "ar": "خصائص الاقتران الأسي الطبيعي واللوغاريتمي الطبيعي",
+      "en": "Properties of e^x and ln x"
+     }
+    },
+    {
+     "id": "u1.exp_derivative",
+     "name": {
+      "ar": "مشتقة هـ^س",
+      "en": "Derivative of e^x"
+     }
+    },
+    {
+     "id": "u1.ln_derivative",
+     "name": {
+      "ar": "مشتقة لـو_هـ س",
+      "en": "Derivative of ln x"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u1.def.e",
+     "concept": "u1.e_number",
+     "page": 25,
+     "name": {
+      "ar": "العدد النيبيري",
+      "en": "Napier's number"
+     },
+     "statement": {
+      "ar": "العدد النيبيري هـ عدد حقيقي غير نسبي قيمته التقريبية ٢٫٧١٨٢٨١٨ ويحقق نهـا_(س←٠) (هـ^س − ١)/س = ١",
+      "en": "e is an irrational real number ≈ 2.7182818 satisfying lim_{x→0} (e^x − 1)/x = 1"
+     },
+     "latex": "\\E\\approx 2.7182818,\\qquad \\lim_{x\\to 0}\\frac{\\E^{x}-1}{x}=1"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u1.rule.lhopital",
+     "kind": "rule",
+     "label": "قاعدة لوبيتال",
+     "page": 22,
+     "concept": "u1.lhopital",
+     "statement": {
+      "ar": "إذا كان ق، هـ قابلين للاشتقاق عند س = أ ، ل ∈ ح، وكانت ق(أ)/هـ(أ) = ٠/٠ ، نهـا قَ(س)/هـَ(س) = ل ، فإن نهـا ق(س)/هـ(س) = ل",
+      "en": "If f, g are differentiable at x = a, f(a)/g(a) = 0/0 and lim_{x→a} f'(x)/g'(x) = L (L real), then lim_{x→a} f(x)/g(x) = L."
+     },
+     "latex": "\\frac{f(a)}{g(a)}=\\frac{0}{0},\\ \\lim_{x\\to a}\\frac{f'(x)}{g'(x)}=L\\ \\Rightarrow\\ \\lim_{x\\to a}\\frac{f(x)}{g(x)}=L",
+     "conditions": "only the 0/0 form; f, g differentiable at a; L ∈ R. Proof (for knowledge only) rewrites the quotient as ratio of difference quotients → f'(a)/g'(a)."
+    },
+    {
+     "id": "u1.rule.lhopital_repeat",
+     "kind": "note",
+     "label": "ملاحظة",
+     "page": 24,
+     "concept": "u1.lhopital",
+     "statement": {
+      "ar": "إذا كانت قَ(أ)/هـَ(أ) = ٠/٠ نستمر بتطبيق القاعدة حتى نحصل على عدد حقيقي",
+      "en": "If f'(a)/g'(a) is again 0/0, keep applying the rule until a real number results"
+     }
+    },
+    {
+     "id": "u1.prop.exp",
+     "kind": "property",
+     "label": "خصائص الاقتران الأسي الطبيعي (مجاله ح)",
+     "page": 26,
+     "concept": "u1.exp_log_laws",
+     "statement": {
+      "ar": "هـ^س × هـ^ص = هـ^(س+ص) ، هـ^س/هـ^ص = هـ^(س−ص) ، (هـ^س)^ص = هـ^(س ص) ، هـ^٠ = ١ ، هـ^(لـو_هـ س) = س ، س > ٠",
+      "en": "e^x e^y = e^{x+y}, e^x/e^y = e^{x−y}, (e^x)^y = e^{xy}, e^0 = 1, e^{ln x} = x for x > 0 (domain of e^x is R)"
+     },
+     "latex": "\\E^{x}\\E^{y}=\\E^{x+y},\\ \\frac{\\E^{x}}{\\E^{y}}=\\E^{x-y},\\ (\\E^{x})^{y}=\\E^{xy},\\ \\E^{0}=1,\\ \\E^{\\ln x}=x\\ (x>0)"
+    },
+    {
+     "id": "u1.prop.ln",
+     "kind": "property",
+     "label": "خصائص الاقتران اللوغاريتمي الطبيعي (مجاله ح⁺)",
+     "page": 26,
+     "concept": "u1.exp_log_laws",
+     "statement": {
+      "ar": "لـو(س ص) = لـو س + لـو ص ، لـو(س/ص) = لـو س − لـو ص ، لـو سⁿ = ن لـو س ، س > ٠ ، لـو هـ^س = س",
+      "en": "ln(xy) = ln x + ln y, ln(x/y) = ln x − ln y, ln xⁿ = n ln x (x > 0), ln e^x = x (domain of ln is R+)"
+     },
+     "latex": "\\ln(xy)=\\ln x+\\ln y,\\ \\ln\\frac{x}{y}=\\ln x-\\ln y,\\ \\ln x^{n}=n\\ln x\\ (x>0),\\ \\ln \\E^{x}=x"
+    },
+    {
+     "id": "u1.rule.exp_ln_inverse",
+     "kind": "rule",
+     "label": "قاعدة (1)",
+     "page": 26,
+     "concept": "u1.exp_log_laws",
+     "statement": {
+      "ar": "إذا كان ص = هـ^س فإن لـو_هـ ص = س ، ص > ٠",
+      "en": "y = e^x ⇔ ln y = x, y > 0"
+     },
+     "latex": "y=\\E^{x}\\iff \\ln y=x,\\ y>0"
+    },
+    {
+     "id": "u1.rule.exp_derivative",
+     "kind": "rule",
+     "label": "قاعدة (2)",
+     "page": 26,
+     "concept": "u1.exp_derivative",
+     "statement": {
+      "ar": "إذا كان ق(س) = هـ^س فإن قَ(س) = هـ^س",
+      "en": "(e^x)' = e^x"
+     },
+     "latex": "\\frac{d}{dx}\\E^{x}=\\E^{x}",
+     "conditions": "proof via the limit definition and lim (e^u − 1)/u = 1 is for knowledge only"
+    },
+    {
+     "id": "u1.rule.ln_derivative",
+     "kind": "rule",
+     "label": "قاعدة (3)",
+     "page": 27,
+     "concept": "u1.ln_derivative",
+     "statement": {
+      "ar": "إذا كان ق(س) = لـو_هـ س ، س > ٠ فإن قَ(س) = ١/س",
+      "en": "(ln x)' = 1/x, x > 0"
+     },
+     "latex": "\\frac{d}{dx}\\ln x=\\frac{1}{x},\\ x>0"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 22,
+     "context": "Ahmad's 'golden point' (a, 0): two polynomials through (a,0) give lim (f ± g) = 0 and lim f·g = 0 but direct substitution in f/g gives 0/0.",
+     "idea": "motivation for L'Hopital; recall Grade-11 algebraic methods"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 23,
+     "context": "Su'ad evaluates lim_{x→0} (1 − cos x)/x by recognising −(cos x − cos 0)/(x − 0) = −f'(0) for f = cos x, then again with L'Hopital.",
+     "idea": "a limit can be read as a derivative (definition) or done by L'Hopital — both give 0"
+    },
+    {
+     "label": "نشاط 3",
+     "page": 25,
+     "context": "Bacteria splitting every 20 minutes: count 2^{3t} after t hours; after how many minutes are there 1073741824 cells?",
+     "idea": "exponential growth motivates e^x; (2^30 ⇒ t = 10 h)"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 23,
+     "type": "L'Hopital basic trig",
+     "asked": "lim_{x→0} sin x / x",
+     "method": "check 0/0, differentiate top and bottom",
+     "key_steps": [
+      "direct: sin0/0 = 0/0",
+      "lim cos x / 1 = cos 0 = 1"
+     ],
+     "answer": "1"
+    },
+    {
+     "label": "مثال 2",
+     "page": 23,
+     "type": "L'Hopital polynomial",
+     "asked": "lim_{x→2} (x^2 − 4)/(x − 2)",
+     "method": "check 0/0 then L'Hopital",
+     "key_steps": [
+      "0/0",
+      "lim 2x/1 = 4"
+     ],
+     "answer": "4"
+    },
+    {
+     "label": "مثال 3",
+     "page": 24,
+     "type": "repeated L'Hopital",
+     "asked": "lim_{x→0} (1 − cos x)/x^2",
+     "method": "apply twice",
+     "key_steps": [
+      "0/0 ⇒ lim sin x/(2x) still 0/0",
+      "⇒ lim cos x / 2 = 1/2"
+     ],
+     "answer": "1/2"
+    },
+    {
+     "label": "مثال 4",
+     "page": 24,
+     "type": "derivative-definition limit with substitution",
+     "asked": "f'(2) = 5: lim_{h→0} (f(2 − 5h) − f(2))/h",
+     "method": "substitute u = 2 − 5h (h = (2 − u)/5), u → 2",
+     "key_steps": [
+      "= lim_{u→2} (f(u) − f(2))/((2 − u)/5)",
+      "= −5 lim (f(u) − f(2))/(u − 2) = −5 f'(2) = −25"
+     ],
+     "answer": "−25"
+    },
+    {
+     "label": "مثال 4 (ثانياً)",
+     "page": 27,
+     "type": "product + csc",
+     "asked": "f = x^3 e^x + csc x: f'(x)",
+     "method": "product rule and rules for e^x and csc",
+     "key_steps": [
+      "f' = x^3 e^x + 3x^2 e^x − csc x cot x"
+     ]
+    },
+    {
+     "label": "مثال 5",
+     "page": 27,
+     "type": "simplify with log laws before differentiating",
+     "asked": "y = ln x^{10}: dy/dx at x = 5",
+     "method": "ln x^{10} = 10 ln x",
+     "key_steps": [
+      "y' = 10/x",
+      "y'(5) = 2"
+     ],
+     "answer": "2"
+    },
+    {
+     "label": "مثال 6",
+     "page": 27,
+     "type": "L'Hopital with exp/log",
+     "asked": "show lim_{x→0}(e^x − 1)/x = 1 and lim_{x→1} ln x/(x^2 − 1) = 1/2",
+     "method": "0/0 then L'Hopital",
+     "key_steps": [
+      "lim e^x/1 = 1",
+      "lim (1/x)/(2x) = 1/2"
+     ],
+     "answer": "1, 1/2"
+    },
+    {
+     "label": "مثال 7",
+     "page": 28,
+     "type": "product rule with e^x and ln x",
+     "asked": "f = x e^x; k = e^x ln x (x > 0)",
+     "method": "product rule",
+     "key_steps": [
+      "f' = x e^x + e^x",
+      "k' = e^x(1/x + ln x)"
+     ]
+    }
+   ],
+   "notes": [
+    "Other L'Hopital cases (∞/∞ etc.) are not covered.",
+    "Book numbering repeats 'مثال 4' (p24 in part 1 and p27 in part 2)."
+   ],
+   "pitfalls": [
+    "Always check the form is 0/0 by direct substitution before applying L'Hopital (the book does this in every example).",
+    "L'Hopital differentiates numerator and denominator separately — not the quotient rule.",
+    "If the result is again 0/0, apply again; stop when a real number appears.",
+    "Simplify logarithms first (ln x^{10} = 10 ln x; ln √(x^3/x^8)) — domain x > 0.",
+    "Limits like lim_{h→0}(f(a + kh) − f(a))/h equal k f'(a): track the factor k (and sign)."
+   ],
+   "exercises": {
+    "label": "تمارين 1-4",
+    "page": 29,
+    "items": [
+     {
+      "n": 1,
+      "type": "L'Hopital",
+      "task": "(a) lim_{x→1} (e^{x−1} − x)/ln x; (b) lim_{x→0} 4x/tan x; (c) lim_{x→0} (x − sin x)/x^3"
+     },
+     {
+      "n": 2,
+      "type": "differentiate exp/log",
+      "task": "(a) e^x cos x; (b) ln √x, x>0; (c) ln √(x^3/x^8), x>0; (d) (e^x − 2)(e^x + 2)"
+     },
+     {
+      "n": 3,
+      "type": "derivative-definition limits / L'Hopital with unknown f",
+      "task": "f'(1) = −2, f(3) = −2, f'(3) = 4: (a) lim_{h→0}(f(3+5h) − f(3))/(10h); (b) lim_{x→1}(x^2 − 1)/(f(1) − f(x))"
+     },
+     {
+      "n": 4,
+      "type": "solve y' = y",
+      "task": "y = x^2 + e^x + 1: values of x with y' = y"
+     },
+     {
+      "n": 5,
+      "type": "prove general limit",
+      "task": "lim_{x→a} (xⁿ − aⁿ)/(x^m − a^m) = (n/m) a^{n−m}, a ≠ 0"
+     },
+     {
+      "n": 6,
+      "type": "L'Hopital with unknown f",
+      "task": "lim_{x→1} (x f(1) − f(x))/(x − 1), f'(1) = 3, f(1) = 6"
+     },
+     {
+      "n": 7,
+      "type": "limit giving f''",
+      "task": "f'(2) = 3, f''(2) = 5: lim_{x→1} (f'(2x) − f'(2))/(x − 1)"
+     }
+    ]
+   },
+   "exercise_types": [
+    "L'Hopital (single and repeated) with trig/exp/log",
+    "differentiate exponential and logarithmic expressions (log laws first)",
+    "limits that are derivatives in disguise (scaling factor)",
+    "L'Hopital with abstract f and given values",
+    "solve equations involving y and y'",
+    "prove a general limit formula"
+   ]
+  },
+  {
+   "id": "1-5",
+   "title": {
+    "ar": "تطبيقات هندسية وفيزيائية",
+    "en": "Geometric and Physical Applications"
+   },
+   "printed_pages": [
+    30,
+    36
+   ],
+   "pdf_pages": [
+    34,
+    40
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [
+     "1-1",
+     "1-2",
+     "1-3",
+     "1-4"
+    ],
+    "concepts": [
+     "u1.derivative_def",
+     "u1.avg_velocity",
+     "u1.secant_slope"
+    ],
+    "grade11": [
+     "equation of a line y − y1 = m(x − x1)",
+     "perpendicular slopes m1·m2 = −1, parallel slopes equal",
+     "slope = tan(inclination)",
+     "area of a triangle from intercepts",
+     "solving quadratics"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.tangent_slope",
+     "name": {
+      "ar": "ميل المنحنى عند نقطة = ميل المماس",
+      "en": "Slope of a curve at a point = tangent slope"
+     }
+    },
+    {
+     "id": "u1.tangent_normal",
+     "name": {
+      "ar": "معادلتا المماس والعمودي على المماس",
+      "en": "Equations of tangent and normal"
+     }
+    },
+    {
+     "id": "u1.tangent_conditions",
+     "name": {
+      "ar": "شروط التماس (نقطة مشتركة + ميل متساوٍ) وإيجاد الثوابت",
+      "en": "Tangency conditions and unknown constants"
+     }
+    },
+    {
+     "id": "u1.instant_velocity_accel",
+     "name": {
+      "ar": "السرعة اللحظية والتسارع اللحظي",
+      "en": "Instantaneous velocity and acceleration"
+     }
+    },
+    {
+     "id": "u1.direction_change",
+     "name": {
+      "ar": "تغير اتجاه الحركة",
+      "en": "Change of direction of motion"
+     }
+    },
+    {
+     "id": "u1.vertical_motion",
+     "name": {
+      "ar": "الحركة الرأسية: أقصى ارتفاع، المسافة والإزاحة",
+      "en": "Vertical motion: max height, distance vs displacement"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u1.def.curve_slope",
+     "concept": "u1.tangent_slope",
+     "page": 30,
+     "name": {
+      "ar": "ميل المنحنى والعمودي",
+      "en": "Slope of a curve and the normal"
+     },
+     "statement": {
+      "ar": "إذا كان ق قابلاً للاشتقاق عند أ(س₁، ق(س₁)) فإن ميل المنحنى عند أ هو ميل المماس المرسوم للمنحنى ويساوي قَ(س₁). والعمودي على منحنى الاقتران هو العمودي على المماس عند نقطة التماس.",
+      "en": "If f is differentiable at A(x1, f(x1)), the slope of the curve at A is the slope of the tangent, f'(x1). The normal is the line perpendicular to the tangent at the point of tangency."
+     },
+     "latex": "m_{\\text{tan}}=f'(x_1),\\quad y-y_1=f'(x_1)(x-x_1),\\quad m_{\\text{normal}}=\\frac{-1}{f'(x_1)}"
+    },
+    {
+     "id": "u1.def.velocity_accel",
+     "concept": "u1.instant_velocity_accel",
+     "page": 33,
+     "name": {
+      "ar": "السرعة اللحظية والتسارع اللحظي",
+      "en": "Instantaneous velocity and acceleration"
+     },
+     "statement": {
+      "ar": "السرعة اللحظية عند الزمن ن: ع(ن) = دف/دن = فَ ، والتسارع اللحظي: ت = دع/دن = د²ف/دن² = فً",
+      "en": "Velocity v(t) = ds/dt = s'(t); acceleration a(t) = dv/dt = d²s/dt² = s''(t) (book letter for acceleration is ت)."
+     },
+     "latex": "v(t)=\\frac{ds}{dt}=s'(t),\\qquad a(t)=\\frac{dv}{dt}=\\frac{d^2s}{dt^2}=s''(t)"
+    }
+   ],
+   "rules": [
+    {
+     "id": "u1.rule.direction_change",
+     "kind": "method",
+     "page": 34,
+     "concept": "u1.direction_change",
+     "statement": {
+      "ar": "يعكس الجسم اتجاه حركته في اللحظة التي تتغير فيها إشارة ع",
+      "en": "The body reverses direction when v changes sign (solve v(t) = 0 and check the sign change)"
+     }
+    },
+    {
+     "id": "u1.rule.max_height",
+     "kind": "method",
+     "page": 34,
+     "concept": "u1.vertical_motion",
+     "statement": {
+      "ar": "عند أقصى ارتفاع تكون ع(ن) = ٠",
+      "en": "At maximum height v(t) = 0"
+     }
+    },
+    {
+     "id": "u1.rule.distance_displacement",
+     "kind": "method",
+     "page": 34,
+     "concept": "u1.vertical_motion",
+     "statement": {
+      "ar": "المسافة المقطوعة بعد تغيّر الاتجاه = ٢ × أقصى ارتفاع − الإزاحة النهائية (للحركة الرأسية)",
+      "en": "Distance travelled after turning back = up-distance + down-distance (e.g. 2·max − final displacement); a negative velocity means descending"
+     }
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 30,
+     "context": "Curved road y = 4x^2 + 4x meets straight road M at N(1, 8) and they are tangent there; traffic signal L(2, w).",
+     "asks": "equation of road M; w so that the signal lies on M",
+     "idea": "tangent line equation in context"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 33,
+     "context": "Graph of a car's coloured route between two cities A and B and back.",
+     "asks": "is return time equal to outbound time?",
+     "idea": "position vs time, average velocity → instantaneous"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 31,
+     "type": "tangent and normal at a given x",
+     "asked": "f = x^3 + 5x at x = 1: slope, tangent, normal",
+     "method": "slope = f'(1); point (1, f(1)); point-slope form; normal slope −1/m",
+     "key_steps": [
+      "f' = 3x^2 + 5 ⇒ m = 8, point (1, 6)",
+      "tangent y = 8x − 2",
+      "normal slope −1/8: 8y + x − 49 = 0"
+     ],
+     "answer": "y=8x−2; 8y+x−49=0"
+    },
+    {
+     "label": "مثال 2",
+     "page": 31,
+     "type": "tangent with given inclination; prove normal passes origin",
+     "asked": "tangent to f = 4/x (x>0) makes 135° with +x axis; show normal at the tangency point passes (0,0)",
+     "method": "slope = tan 135° = −1 = f'(x1) ⇒ x1; normal equation",
+     "key_steps": [
+      "−4/x1^2 = −1 ⇒ x1 = 2 (x1 > 0)",
+      "point (2, 2), normal slope 1: y = x passes (0,0)"
+     ],
+     "answer": "proved"
+    },
+    {
+     "label": "مثال 3",
+     "page": 32,
+     "type": "tangent at given x with e^x",
+     "asked": "f = x^2/e^x at the point with x-coordinate 1",
+     "method": "quotient rule",
+     "key_steps": [
+      "f'(1) = 1/e (why)",
+      "y1 = 1/e ⇒ y − 1/e = (1/e)(x − 1) ⇒ e y = x"
+     ],
+     "answer": "e y = x"
+    },
+    {
+     "label": "مثال 4",
+     "page": 32,
+     "type": "find tangency point for a given tangent slope",
+     "asked": "line y = −3x + c tangent to f = −2x^2 + 5x + 1: tangency point(s)",
+     "method": "f'(x1) = slope of line",
+     "key_steps": [
+      "−4x1 + 5 = −3 ⇒ x1 = 2",
+      "point (2, f(2)) = (2, 3)"
+     ],
+     "answer": "(2, 3)"
+    },
+    {
+     "label": "مثال 5",
+     "page": 32,
+     "type": "unknown constants from tangency",
+     "asked": "y = cx + 5 tangent to f = ax^3 + bx^2 at (−1, −3): a, b, c",
+     "method": "point on line, point on curve, equal slopes",
+     "key_steps": [
+      "−3 = −c + 5 ⇒ c = 8",
+      "−a + b = −3 (1)",
+      "3a − 2b = 8 (2) ⇒ a = 2, b = −1"
+     ],
+     "answer": "a=2, b=−1, c=8"
+    },
+    {
+     "label": "مثال 6",
+     "page": 33,
+     "type": "average velocity and acceleration at reversal",
+     "asked": "s = t^3 − 9t^2 + 7: average velocity on [1,3]; acceleration when the body reverses direction",
+     "method": "Δs/Δt; v = 0 with sign change; a = v'",
+     "key_steps": [
+      "(s(3) − s(1))/2 = (−47 − (−1))/2 = −23 m/s",
+      "v = 3t^2 − 18t = 3t(t − 6) ⇒ reverses at t = 6",
+      "a = 6t − 18 ⇒ a(6) = 18 m/s²"
+     ],
+     "answer": "−23 m/s; 18 m/s²"
+    },
+    {
+     "label": "مثال 7",
+     "page": 34,
+     "type": "vertical throw from the ground",
+     "asked": "s = 20t − 5t^2: max height; velocity at height 15 m; distance in the first 4 s",
+     "method": "v = 0 at max; solve s = 15; s(4) and distance",
+     "key_steps": [
+      "v = 20 − 10t = 0 ⇒ t = 2, max = 20 m",
+      "5t^2 − 20t + 15 = 0 ⇒ t = 1 (v = 10, rising), t = 3 (v = −10, falling: meaning of negative velocity)",
+      "s(4) = 0 (back on ground), distance = 2·20 − 0 = 40 m"
+     ],
+     "answer": "20 m; ±10 m/s; 40 m"
+    },
+    {
+     "label": "مثال 8",
+     "page": 35,
+     "type": "vertical throw from a tower",
+     "asked": "height above tower top s = 30t − 5t^2; max height above ground 180 m: tower height, impact speed, total distance in first 7 s",
+     "method": "v = 0 at t = 3 gives 45 m above tower; tower = 180 − 45; impact when s = −135",
+     "key_steps": [
+      "tower = 135 m",
+      "30t − 5t^2 = −135 ⇒ t = 9, v = 30 − 90 = −60 m/s",
+      "s(7) = −35 ⇒ distance = 45 + 45 + 35 = 125 m (why?)"
+     ],
+     "answer": "135 m; −60 m/s; 125 m"
+    }
+   ],
+   "notes": [],
+   "pitfalls": [
+    "The tangency point must satisfy BOTH the curve and the line; slope alone is not enough (Ex5 uses three conditions).",
+    "Normal slope is −1/f'(x1); if the tangent is horizontal the normal is vertical.",
+    "Inclination angle 135° means slope −1 (tan of obtuse angle is negative).",
+    "Respect domain restrictions when solving for x1 (x1 > 0 in Ex2).",
+    "Distance ≠ displacement once the body turns back; negative velocity means moving down/backward.",
+    "In tower problems, impact with the ground is s = −(tower height) when s is measured from the tower top."
+   ],
+   "exercises": {
+    "label": "تمارين 1-5",
+    "page": 36,
+    "items": [
+     {
+      "n": 1,
+      "type": "tangent ⊥ given line",
+      "task": "points on f = x^2 − 2x + 1 where the tangent is perpendicular to x + 2y − 4 = 0"
+     },
+     {
+      "n": 2,
+      "type": "tangent equation (trig)",
+      "task": "f = 3 − tan^2 x at x = π/4"
+     },
+     {
+      "n": 3,
+      "type": "tangent + triangle area",
+      "task": "tangent to f = ln(x/2) at x = 2 meets the axes at B, C; area of triangle OBC (O origin)"
+     },
+     {
+      "n": 4,
+      "type": "tangency → parameter",
+      "task": "line x = a − 6y tangent to f = 3x/(x − 2), x ≠ 2: values of a"
+     },
+     {
+      "n": 5,
+      "type": "vertical motion: total distance",
+      "task": "s = 40t − 5t^2: velocity when total distance travelled is 100 m"
+     },
+     {
+      "n": 6,
+      "type": "vertical motion",
+      "task": "s = 30t − 5t^2 from ground: (a) max height; (b) velocity while descending at the level of a 40 m roof"
+     }
+    ]
+   },
+   "exercise_types": [
+    "tangent/normal equations at a point",
+    "tangent parallel/perpendicular to a given line",
+    "tangency conditions to find constants",
+    "tangent + geometry (intercepts, area)",
+    "velocity/acceleration, direction change",
+    "vertical motion: max height, speed at a level, distance vs displacement"
+   ]
+  },
+  {
+   "id": "1-6",
+   "title": {
+    "ar": "قاعدة السلسلة",
+    "en": "Chain Rule"
+   },
+   "printed_pages": [
+    37,
+    41
+   ],
+   "pdf_pages": [
+    41,
+    45
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [
+     "1-2",
+     "1-3",
+     "1-4",
+     "1-5"
+    ],
+    "concepts": [
+     "u1.product_rule",
+     "u1.quotient_rule",
+     "u1.trig_derivatives",
+     "u1.exp_derivative",
+     "u1.ln_derivative",
+     "u1.tangent_normal"
+    ],
+    "grade11": [
+     "composition of functions (f∘g)(x) = f(g(x)) and its domain",
+     "range ⊆ domain condition"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.chain_rule",
+     "name": {
+      "ar": "قاعدة السلسلة",
+      "en": "Chain rule"
+     }
+    },
+    {
+     "id": "u1.general_power_rule",
+     "name": {
+      "ar": "مشتقة (هـ(س))ⁿ",
+      "en": "General power rule"
+     }
+    },
+    {
+     "id": "u1.chain_multi",
+     "name": {
+      "ar": "تعميم قاعدة السلسلة لأكثر من اقترانين (متغيرات وسيطة)",
+      "en": "Chain rule with several links / parameters"
+     }
+    },
+    {
+     "id": "u1.exp_ln_composite",
+     "name": {
+      "ar": "مشتقة هـ^ك(س) و لـو_هـ ك(س)",
+      "en": "Derivatives of e^{k(x)} and ln k(x)"
+     }
+    }
+   ],
+   "definitions": [],
+   "rules": [
+    {
+     "id": "u1.recall.composition",
+     "kind": "recall",
+     "label": "أتذكر",
+     "page": 37,
+     "statement": {
+      "ar": "(ق ∘ هـ)(س) = ق(هـ(س)) هو الاقتران المركب من ق ، هـ",
+      "en": "(f∘g)(x) = f(g(x))"
+     },
+     "latex": "(f\\circ g)(x)=f(g(x))"
+    },
+    {
+     "id": "u1.rule.chain",
+     "kind": "rule",
+     "label": "قاعدة السلسلة",
+     "page": 37,
+     "concept": "u1.chain_rule",
+     "statement": {
+      "ar": "إذا كانت ص = ق(ع)، ع = هـ(س)، وكان هـ قابلاً للاشتقاق عند س و ق قابلاً للاشتقاق عند هـ(س)، ومدى هـ ⊆ مجال ق، فإن دص/دس = دص/دع × دع/دس ، أي (ق∘هـ)َ(س) = قَ(هـ(س)) × هـَ(س)",
+      "en": "If y = f(u), u = g(x), g differentiable at x, f differentiable at g(x), and range of g ⊆ domain of f, then dy/dx = dy/du · du/dx, i.e. (f∘g)'(x) = f'(g(x))·g'(x). Diagram: rate of f∘g at x = rate of f at g(x) × rate of g at x."
+     },
+     "latex": "\\dv{y}{x}=\\dv{y}{u}\\cdot\\dv{u}{x},\\qquad (f\\circ g)'(x)=f'\\big(g(x)\\big)\\,g'(x)",
+     "conditions": "g differentiable at x; f differentiable at g(x); range(g) ⊆ domain(f)"
+    },
+    {
+     "id": "u1.rule.general_power",
+     "kind": "corollary",
+     "label": "نتيجة",
+     "page": 39,
+     "concept": "u1.general_power_rule",
+     "statement": {
+      "ar": "إذا كان ص = (هـ(س))ⁿ ، هـ قابل للاشتقاق ، ن ∈ ص فإن دص/دس = ن(هـ(س))ⁿ⁻¹ × هـَ(س)",
+      "en": "y = (g(x))ⁿ, n integer ⇒ y' = n (g(x))^{n−1} g'(x)"
+     },
+     "latex": "\\frac{d}{dx}\\big(g(x)\\big)^{n}=n\\big(g(x)\\big)^{n-1}g'(x),\\ n\\in\\mathbb{Z}"
+    },
+    {
+     "id": "u1.rule.chain_extend",
+     "kind": "note",
+     "label": "ملاحظة",
+     "page": 39,
+     "concept": "u1.chain_multi",
+     "statement": {
+      "ar": "يمكن تعميم قاعدة السلسلة لتشمل أكثر من اقترانين",
+      "en": "The chain rule extends to more than two functions"
+     },
+     "latex": "\\dv{y}{m}=\\dv{y}{u}\\cdot\\dv{u}{x}\\cdot\\dv{x}{m}"
+    },
+    {
+     "id": "u1.rule.exp_ln_chain",
+     "kind": "rule",
+     "label": "قاعدة",
+     "page": 40,
+     "concept": "u1.exp_ln_composite",
+     "statement": {
+      "ar": "إذا كان ك قابلاً للاشتقاق: ق(س) = هـ^ك(س) ⇒ قَ = كَ(س) هـ^ك(س) ؛ م(س) = لـو_هـ ك(س) ، ك(س) > ٠ ⇒ مَ = كَ(س)/ك(س)",
+      "en": "(e^{k(x)})' = k'(x) e^{k(x)}; (ln k(x))' = k'(x)/k(x) for k(x) > 0"
+     },
+     "latex": "\\frac{d}{dx}\\E^{k(x)}=k'(x)\\,\\E^{k(x)},\\qquad \\frac{d}{dx}\\ln k(x)=\\frac{k'(x)}{k(x)},\\ k(x)>0"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 37,
+     "context": "Gears with 15 (red), 20 (blue), 30 (yellow) teeth: blue turns x times, red turns (4/3)x, yellow turns half of red = (2/3)x.",
+     "asks": "direction of rotation; can you find dy/dx?",
+     "idea": "rates multiply along a chain"
+    },
+    {
+     "label": "تمهيد",
+     "page": 37,
+     "context": "f(x) = (x^2+1)^3: expanding or using the product rule gets harder as the power grows; set u = x^2 + 1, y = u^3.",
+     "idea": "decomposition into outer/inner functions"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 39,
+     "context": "y = (sec x + tan x)^n.",
+     "asks": "complete dy/dx = n(sec x + tan x)^{n−1}(…) = n sec x (sec x + tan x)^n",
+     "idea": "general power rule with trig inside"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 38,
+     "type": "composition from formulas",
+     "asked": "f = x^3 + x, g = x^2: (f∘g)'(x) and (g∘g)'(2)",
+     "method": "f'(g(x))·g'(x)",
+     "key_steps": [
+      "(f∘g)' = (3x^4 + 1)(2x) = 6x^5 + 2x",
+      "(g∘g)'(2) = g'(g(2))·g'(2) = g'(4)·g'(2) = 8·4 = 32"
+     ],
+     "answer": "6x^5+2x; 32"
+    },
+    {
+     "label": "مثال 2",
+     "page": 38,
+     "type": "Leibniz form with intermediate variable",
+     "asked": "y = u^2 − 5u, u = 1/(x+1): dy/dx at x = 0",
+     "method": "dy/du · du/dx; find u at x = 0",
+     "key_steps": [
+      "dy/dx = (2u − 5)·(−1/(x+1)^2)",
+      "x = 0 ⇒ u = 1 ⇒ dy/dx = (−3)(−1) = 3"
+     ],
+     "answer": "3"
+    },
+    {
+     "label": "مثال 3",
+     "page": 38,
+     "type": "tangent line with abstract f inside",
+     "asked": "tangent to y = x f(x^2 + 1) at x = 2, f'(5) = 3, f(5) = −1",
+     "method": "product + chain rule; point from f(5)",
+     "key_steps": [
+      "y' = f(x^2+1) + x·2x f'(x^2+1)",
+      "slope = f(5) + 8 f'(5) = −1 + 24 = 23",
+      "point (2, −2) ⇒ y = 23x − 48"
+     ],
+     "answer": "y = 23x − 48"
+    },
+    {
+     "label": "مثال 4",
+     "page": 39,
+     "type": "general power with quotient inside",
+     "asked": "f = ((x+1)/(x−1))^5: f'(2)",
+     "method": "general power rule + quotient rule",
+     "key_steps": [
+      "f' = 5((x+1)/(x−1))^4 · (−2)/(x−1)^2",
+      "f'(2) = 5·3^4·(−2) = −810"
+     ],
+     "answer": "−810"
+    },
+    {
+     "label": "مثال 5",
+     "page": 39,
+     "type": "three-link chain with a parameter",
+     "asked": "y = u^2 + 64/u, u = x^3, x = am + 4: a such that dy/dm = 90 when x = 2",
+     "method": "dy/dm = dy/du · du/dx · dx/dm",
+     "key_steps": [
+      "dy/dm = (2u − 64/u^2)·3x^2·a",
+      "x = 2 ⇒ u = 8 ⇒ (16 − 1)·12·a = 90 ⇒ a = 1/2"
+     ],
+     "answer": "a = 1/2"
+    },
+    {
+     "label": "مثال 6",
+     "page": 40,
+     "type": "e^{k(x)} and ln of a power",
+     "asked": "(1) y = e^{cos x}: dy/dx at π/2; (2) y = ln x^2: show y''·e^y = −2",
+     "method": "exp/ln chain rule; simplify ln x^2 = 2 ln x",
+     "key_steps": [
+      "y' = −sin x e^{cos x} ⇒ −1·e^0 = −1",
+      "y = 2 ln x ⇒ y' = 2/x, y'' = −2/x^2 = −2/e^y (why?) ⇒ y'' e^y = −2"
+     ],
+     "answer": "−1; shown"
+    }
+   ],
+   "notes": [
+    "The chain rule generalises to more than two functions (ملاحظة p39)."
+   ],
+   "pitfalls": [
+    "Evaluate the outer derivative at the INNER value: (g∘g)'(2) = g'(4)·g'(2), not g'(2)^2 (Ex1).",
+    "When a variable is defined through others (u, x, m), find all intermediate values at the requested point before substituting (Ex2, Ex5).",
+    "With abstract f in tangent questions, use f(5) for the point and f'(5) for the slope (Ex3).",
+    "ln k(x) requires k(x) > 0; book simplifies ln x^2 = 2 ln x (implicitly x > 0)."
+   ],
+   "exercises": {
+    "label": "تمارين 1-6",
+    "page": 41,
+    "items": [
+     {
+      "n": 1,
+      "type": "dy/dx at x = 1",
+      "task": "(a) (x^2 + x + 1)^{−3}; (b) x^2 sec(π/x); (c) y = 5u^2 − 7, u = 1/(x^2 + 1); (d) tan(π/x) + cos^2(πx); (e) (ln x)^3, x > 0"
+     },
+     {
+      "n": 2,
+      "type": "chain rule with abstract m",
+      "task": "f = ln(m(x))/(2x), m(1) = e^2, m'(1) = 2e: f'(1)"
+     },
+     {
+      "n": 3,
+      "type": "exp/log chain",
+      "task": "(a) e^{x^2 + x}; (b) ln(x^3 − 3x^2), x > 3"
+     },
+     {
+      "n": 4,
+      "type": "second derivative with table",
+      "task": "f = x^2 m(x^2 + 1), m(2) = 5, m'(2) = −1, m''(2) = 1: f''(1)"
+     },
+     {
+      "n": 5,
+      "type": "chain rule with abstract f",
+      "task": "y = f^3(x) − f(x^3), f(2) = 1, f'(2) = −2, f'(8) = 2: dy/dx at x = 2"
+     },
+     {
+      "n": 6,
+      "type": "parametric chain",
+      "task": "y = t^2 + 5t, dt/dx|_{t=1} = 2: dy/dx at t = 1"
+     },
+     {
+      "n": 7,
+      "type": "prove composition derivative",
+      "task": "f = x + 1/x, g = cos x: prove (f∘g)'(x) = sin^3 x sec^2 x"
+     },
+     {
+      "n": 8,
+      "type": "limits as derivatives",
+      "task": "(a) lim_{h→0}(tan(2x + h) − tan 2x)/h; (b) lim_{h→0}(f(1 + 3h) − f(1 − 3h))/(10h), f'(1) = −2"
+     }
+    ]
+   },
+   "exercise_types": [
+    "chain rule (power/trig/exp/log inside)",
+    "chain rule with abstract functions and tables",
+    "Leibniz chains with intermediate variables/parameters",
+    "second derivative involving chain rule",
+    "prove a composition derivative",
+    "limits read as derivatives"
+   ]
+  },
+  {
+   "id": "1-7",
+   "title": {
+    "ar": "الاشتقاق الضمني",
+    "en": "Implicit Differentiation"
+   },
+   "printed_pages": [
+    42,
+    47
+   ],
+   "pdf_pages": [
+    46,
+    51
+   ],
+   "branch_note": null,
+   "prerequisites": {
+    "lessons": [
+     "1-5",
+     "1-6"
+    ],
+    "concepts": [
+     "u1.chain_rule",
+     "u1.tangent_normal",
+     "u1.lhopital",
+     "u1.exp_log_laws"
+    ],
+    "grade11": [
+     "rational exponents and radicals",
+     "circle equation",
+     "solving systems (curve ∩ line)"
+    ]
+   },
+   "concepts": [
+    {
+     "id": "u1.implicit_relation",
+     "name": {
+      "ar": "العلاقة الضمنية والعلاقة الصريحة",
+      "en": "Implicit vs explicit relations"
+     }
+    },
+    {
+     "id": "u1.implicit_diff",
+     "name": {
+      "ar": "الاشتقاق الضمني",
+      "en": "Implicit differentiation"
+     }
+    },
+    {
+     "id": "u1.implicit_tangent",
+     "name": {
+      "ar": "مماس منحنى علاقة ضمنية",
+      "en": "Tangent to an implicit curve"
+     }
+    },
+    {
+     "id": "u1.rational_power_rule",
+     "name": {
+      "ar": "مشتقة س^(م/ن) و (هـ(س))ⁿ ، ن ∈ ح",
+      "en": "Rational/real power rule"
+     }
+    },
+    {
+     "id": "u1.log_differentiation",
+     "name": {
+      "ar": "الاشتقاق اللوغاريتمي",
+      "en": "Logarithmic differentiation"
+     }
+    }
+   ],
+   "definitions": [
+    {
+     "id": "u1.def.implicit",
+     "concept": "u1.implicit_diff",
+     "page": 42,
+     "name": {
+      "ar": "الاشتقاق الضمني",
+      "en": "Implicit differentiation"
+     },
+     "statement": {
+      "ar": "إذا لم يكن من السهل كتابة ص بدلالة س (مثل س² + ٥ص² = س ص − ٣) فهي علاقة ضمنية، ونجد دص/دس باشتقاق طرفي العلاقة بالنسبة إلى س ضمن قواعد الاشتقاق.",
+      "en": "When y is not easily written in terms of x (e.g. x^2 + 5y^2 = xy − 3) the relation is implicit; find dy/dx by differentiating both sides with respect to x (treating y as a function of x: d(y^n)/dx = n y^{n−1} y'), collecting y' terms and factoring."
+     }
+    }
+   ],
+   "rules": [
+    {
+     "id": "u1.rule.rational_power",
+     "kind": "rule",
+     "label": "قاعدة",
+     "page": 44,
+     "concept": "u1.rational_power_rule",
+     "statement": {
+      "ar": "إذا كانت ص = س^(م/ن) ، م، ن ∈ ص ، م ≠ ن ، ن ≠ ٠ فإن دص/دس = (م/ن) س^(م/ن − ١)",
+      "en": "y = x^{m/n} (m, n integers, n ≠ 0, m ≠ n) ⇒ dy/dx = (m/n) x^{m/n − 1}"
+     },
+     "latex": "\\frac{d}{dx}x^{m/n}=\\frac{m}{n}\\,x^{\\frac{m}{n}-1}"
+    },
+    {
+     "id": "u1.rule.real_general_power",
+     "kind": "corollary",
+     "label": "نتيجة",
+     "page": 44,
+     "concept": "u1.rational_power_rule",
+     "statement": {
+      "ar": "إذا كان ق(س) = (هـ(س))ⁿ ، ن ∈ ح ، وهـ قابل للاشتقاق فإن قَ(س) = ن(هـ(س))ⁿ⁻¹ × هـَ(س)",
+      "en": "(g(x))ⁿ with n real ⇒ n (g(x))^{n−1} g'(x)"
+     },
+     "latex": "\\frac{d}{dx}\\big(g(x)\\big)^{n}=n\\big(g(x)\\big)^{n-1}g'(x),\\ n\\in\\mathbb{R}"
+    },
+    {
+     "id": "u1.method.log_diff",
+     "kind": "method",
+     "page": 46,
+     "concept": "u1.log_differentiation",
+     "statement": {
+      "ar": "لاشتقاق حاصل ضرب/قسمة قوى: نأخذ لوغاريتم الطرفين، نطبق قوانين اللوغاريتمات، ثم نشتق: صَ/ص = …",
+      "en": "Take ln of both sides, expand with log laws, differentiate: y'/y = …, then multiply by y"
+     },
+     "latex": "\\ln y=\\sum k_i\\ln g_i(x)\\ \\Rightarrow\\ \\frac{y'}{y}=\\sum k_i\\frac{g_i'(x)}{g_i(x)}"
+    }
+   ],
+   "activities": [
+    {
+     "label": "نشاط 1",
+     "page": 42,
+     "context": "A 20 m firefighter ladder slides: x^2 + y^2 = 400.",
+     "asks": "direction of the top; can you find dy/dx? write y = √(400 − x^2) and use the chain rule",
+     "idea": "motivation: explicit route vs implicit differentiation"
+    },
+    {
+     "label": "نشاط 2",
+     "page": 46,
+     "context": "2/x + 3/y = 5xy, x, y ≠ 0.",
+     "asks": "multiply by xy ⇒ 2y + 3x = 5x^2 y^2; differentiate implicitly; dy/dx at (1,1); can dy/dx be found at (2,3)? why",
+     "idea": "clearing denominators first; a point must lie on the curve"
+    },
+    {
+     "label": "نشاط 3",
+     "page": 46,
+     "context": "y = (x+1)^5 (x+2)^4 / (x^2+1)^3.",
+     "asks": "take ln, use log laws ln y = 5 ln(x+1) + 4 ln(x+2) − 3 ln(x^2+1), differentiate, dy/dx at x = 0",
+     "idea": "logarithmic differentiation"
+    }
+   ],
+   "worked_examples": [
+    {
+     "label": "مثال 1",
+     "page": 42,
+     "type": "implicit derivative and value at a point",
+     "asked": "x^2 + y^2 + 1 = 4x − y: dy/dx and its value at (1,1)",
+     "method": "differentiate, collect y' terms, factor",
+     "key_steps": [
+      "2x + 2y y' = 4 − y'",
+      "y'(2y + 1) = 4 − 2x",
+      "y' = (4 − 2x)/(2y + 1) ⇒ at (1,1): 2/3"
+     ],
+     "answer": "2/3"
+    },
+    {
+     "label": "مثال 2",
+     "page": 43,
+     "type": "implicit with trig of y",
+     "asked": "3y = sin x cos 2y: dy/dx",
+     "method": "product rule on the right, chain on cos 2y",
+     "key_steps": [
+      "3y' = cos x cos 2y − 2 sin x sin 2y · y'",
+      "y' = cos x cos 2y /(3 + 2 sin x sin 2y)"
+     ]
+    },
+    {
+     "label": "مثال 3",
+     "page": 43,
+     "type": "tangent to implicit curve at intersection with a line",
+     "asked": "(x + y)^3 − 3y^2 = 5, y > 0, at its intersection with x + y = 2",
+     "method": "substitute x + y = 2 to find the point; implicit diff; point-slope",
+     "key_steps": [
+      "8 − 3y^2 = 5 ⇒ y = 1 ⇒ point (1,1)",
+      "3(x+y)^2(1 + y') − 6y y' = 0 ⇒ at (1,1): 12(1 + y') − 6y' = 0 ⇒ y' = −2",
+      "y = −2x + 3"
+     ],
+     "answer": "y = −2x + 3"
+    },
+    {
+     "label": "مثال 4",
+     "page": 43,
+     "type": "implicit relation inside a chain",
+     "asked": "y = u^3 + 1, x^2 u = u^2 − 2: dy/dx when u = 2, x > 0",
+     "method": "dy/dx = dy/du · du/dx with du/dx from implicit differentiation",
+     "key_steps": [
+      "2xu + x^2 u' = 2u u' ⇒ u' = −2xu/(x^2 − 2u)",
+      "dy/dx = 3u^2 · u' = −6xu^3/(x^2 − 2u)",
+      "u = 2 ⇒ 2x^2 = 2 ⇒ x = 1 (x>0) ⇒ dy/dx = 16"
+     ],
+     "answer": "16"
+    },
+    {
+     "label": "مثال 5",
+     "page": 44,
+     "type": "real power of an inner function",
+     "asked": "f = (x^3 + 5x − 2)^{3/4}: f'(2)",
+     "method": "general power rule with n = 3/4",
+     "key_steps": [
+      "f' = (3/4)(x^3+5x−2)^{−1/4}(3x^2 + 5)",
+      "f'(2) = (3/4)·17/⁴√16 = (3/4)(17/2) = 51/8"
+     ],
+     "answer": "51/8"
+    },
+    {
+     "label": "مثال 6",
+     "page": 45,
+     "type": "L'Hopital with a cube root",
+     "asked": "lim_{x→1} (∛(x + 7) − 2)/(x − 1)",
+     "method": "0/0 then derivative of (x+7)^{1/3}",
+     "key_steps": [
+      "lim (1/3)(x+7)^{−2/3}/1 = (1/3)(8)^{−2/3} = 1/12 (why)"
+     ],
+     "answer": "1/12"
+    },
+    {
+     "label": "مثال 7",
+     "page": 45,
+     "type": "points where implicit tangent is parallel to a line",
+     "asked": "points on √x + √y = 3 where the tangent ∥ y + 2x = 5",
+     "method": "slope −2; implicit y' = −√y/√x; use the curve to eliminate √y",
+     "key_steps": [
+      "1/(2√x) + y'/(2√y) = 0 ⇒ y' = −√y/√x",
+      "√y = 3 − √x ⇒ (√x − 3)/√x = −2 ⇒ √x = 1",
+      "x = 1, y = 4 ⇒ (1, 4)"
+     ],
+     "answer": "(1, 4)"
+    }
+   ],
+   "notes": [],
+   "pitfalls": [
+    "Every term containing y produces a factor y' (chain rule) — forgetting y' on y^2, cos 2y, (x+y)^3 is the classic error.",
+    "Collect all y' terms on one side before factoring (book highlights this step).",
+    "Check that the given point lies on the curve before evaluating dy/dx (Activity 2 asks about (2,3)).",
+    "Use the curve's equation (and sign conditions like y > 0, x > 0) to find the missing coordinate.",
+    "Rational power rule requires n ≠ 0; watch domains of even roots."
+   ],
+   "exercises": {
+    "label": "تمارين 1-7",
+    "page": 47,
+    "items": [
+     {
+      "n": 1,
+      "type": "implicit/explicit dy/dx",
+      "task": "(a) x^3 + xy + 2y^2 = 5; (b) y = ⁵√(1 − x^2) + 3; (c) y = sin(x + y); (d) 1/y + 1/x = 2"
+     },
+     {
+      "n": 2,
+      "type": "normal to a circle at intersection points",
+      "task": "circle x^2 − 3x + y^2 = 25 and curve y = x^2 − 3x + 5: equations of the normal to the circle at both intersection points"
+     },
+     {
+      "n": 3,
+      "type": "implicit motion",
+      "task": "s^2 = a t^2 + 24 (s in m, t in s): positive a given velocity 1 m/s at t = 2"
+     },
+     {
+      "n": 4,
+      "type": "prove motion relation",
+      "task": "s = a sin(2t + m), a ≠ 0: prove acceleration = −4s numerically"
+     },
+     {
+      "n": 5,
+      "type": "tangent from an external point",
+      "task": "line through (−2, 0) tangent to 4x^2 + y^2 = 4: tangency point(s)"
+     },
+     {
+      "n": 6,
+      "type": "implicit with exponentials",
+      "task": "e^y + e^x = e^{−y} + e^{−x}: dy/dx at (−1, 1) [as printed]"
+     },
+     {
+      "n": 7,
+      "type": "implicit with ln",
+      "task": "x^2 = ln(xy), x, y > 0: dy/dx at (1, e)"
+     },
+     {
+      "n": 8,
+      "type": "logarithmic-differentiation proof",
+      "task": "y = (f(x))^m × (g(x))^m: prove y'/y = m(f'/f + g'/g), m ≠ 0, f, g ≠ 0"
+     }
+    ]
+   },
+   "exercise_types": [
+    "implicit dy/dx (polynomial, trig, exp, ln, reciprocal)",
+    "tangent/normal to implicit curves (incl. at intersections)",
+    "tangent from an external point",
+    "implicit relations in motion (s, t)",
+    "logarithmic differentiation proofs",
+    "rational-power derivatives"
+   ]
+  }
+ ],
+ "unit_exercises": {
+  "label": "تمارين عامة (الوحدة الأولى)",
+  "printed_pages": [
+   48,
+   51
+  ],
+  "items": [
+   {
+    "n": "1.1",
+    "type": "mcq",
+    "task": "average rate on [1,3] = 4 and on [3,7] = −5: average on [1,7]",
+    "answer_check": "−2 (weighted: (8 − 20)/6)"
+   },
+   {
+    "n": "1.2",
+    "type": "mcq",
+    "task": "tangent at (2, −1) makes 135°: lim_{x→2}(f(x) − f(2))/(2x − 4)",
+    "answer_check": "−1/2"
+   },
+   {
+    "n": "1.3",
+    "type": "mcq",
+    "task": "f = cos 2x: f'' + 6f",
+    "answer_check": "2cos 2x"
+   },
+   {
+    "n": "1.4",
+    "type": "mcq",
+    "task": "f(√(2x+1)) = x^3 + 2, f differentiable: f'(3)",
+    "answer_check": "144"
+   },
+   {
+    "n": "1.5",
+    "type": "mcq",
+    "task": "x^2 − xy + y^2 = 3: dy/dx at (1, −1)",
+    "answer_check": "1"
+   },
+   {
+    "n": "1.6",
+    "type": "mcq",
+    "task": "f = x^2 + 2 (x ≠ 5), 10x (x = 5): f'(5)",
+    "answer_check": "does not exist (discontinuous)"
+   },
+   {
+    "n": "1.7",
+    "type": "mcq",
+    "task": "s(t)·v(t) = t, v(2) = 3: acceleration at t = 2",
+    "answer_check": "−12 m/s²"
+   },
+   {
+    "n": "1.8",
+    "type": "mcq",
+    "task": "f'(x) = 1/(1 + x^2), g = tan x: (f∘g)'(x)",
+    "answer_check": "1"
+   },
+   {
+    "n": "1.9",
+    "type": "mcq",
+    "task": "f = (x^2 + 7)^{2/3}: f''(1)",
+    "answer_check": "11/18"
+   },
+   {
+    "n": "1.10",
+    "type": "mcq",
+    "task": "x = cos y, y ∈ ]0, π/2[: dy/dx",
+    "answer_check": "−1/√(1 − x^2)"
+   },
+   {
+    "n": "1.11",
+    "type": "mcq",
+    "task": "(f∘g)'(3) = 15, f = x^2 − 9, g'(3) = 5: g(3)",
+    "answer_check": "1.5"
+   },
+   {
+    "n": "1.12",
+    "type": "mcq",
+    "task": "which is differentiable on its domain: [x−2], |x−2| − |x|, √(x^2+2x+1), [x+2] − [x]",
+    "answer_check": "[x+2] − [x] (constant 2)"
+   },
+   {
+    "n": 2,
+    "type": "derivative-definition limit + L'Hopital",
+    "task": "f'(1) = −2, f(3) = −2, f'(3) = 4: lim_{h→0}(f(1 + 9h) − f(1))/(√(1+h) − 1)"
+   },
+   {
+    "n": 3,
+    "type": "average rate",
+    "task": "y = (x + 1) e^{x^2 − x}: average rate from 0 to 1"
+   },
+   {
+    "n": 4,
+    "type": "limit as chain-rule derivative",
+    "task": "f(2) = 3, f'(2) = −1: lim_{x→1}(f(x^2 + 2x − 1) − f(2))/(x^2 − 1)"
+   },
+   {
+    "n": 5,
+    "type": "L'Hopital",
+    "task": "(a) (e^{4x} − 1)/tan x; (b) (e^{x^2} − e^x)/(2x); (c) (sin 2x − sin x)/(2x); (d) (1 − cos x)/(x sin x), all x → 0"
+   },
+   {
+    "n": 6,
+    "type": "average rate piecewise with f",
+    "task": "h = x^2 + f(x − 1) (x ≥ 1), f(x) (x < 1); average of f on [0,2] = 3: average of h on [0,3]"
+   },
+   {
+    "n": 7,
+    "type": "limit with unknown f",
+    "task": "lim_{x→1}(f(x) − 2)/(x − 1) = 3, f continuous on R: lim_{x→1}(x^3 f(x) − f(1))/(x − 1)"
+   },
+   {
+    "n": 8,
+    "type": "motion word problem",
+    "task": "Ahmad drops a ball s1 = 5t^2, Nizar throws one down s2 = 15t + 5t^2 at the same instant; Ahmad's ball lands 1 s after Nizar's: Nizar's impact speed"
+   },
+   {
+    "n": 9,
+    "type": "composition → parameter",
+    "task": "f = a sin x, h = 3x/(x^2 + 1), (h∘f)'(π/6) = 0, a ≠ 0: a"
+   },
+   {
+    "n": 10,
+    "type": "differentiability on domain",
+    "task": "f = [2 − x] + x^2 (0 ≤ x < 2), 2/(x + 1) (x ≥ 2)"
+   },
+   {
+    "n": 11,
+    "type": "prove motion relation",
+    "task": "s = 2(e^{2t} − e^{−2t}): acceleration = 4s numerically"
+   },
+   {
+    "n": 12,
+    "type": "second derivative trig",
+    "task": "f = sin^3 x − cos^3 x: f''(π/4)"
+   },
+   {
+    "n": 13,
+    "type": "solve f' = 0",
+    "task": "(a) (x − 2)^3 (3 + 2x)^4 on [0,3] [as printed]; (b) sin x (1 + cos x) on [0, π/2]"
+   },
+   {
+    "n": 14,
+    "type": "differentiate",
+    "task": "(a) x e^{6x}/sin x; (b) x ln x / cos x, x > 0"
+   },
+   {
+    "n": 15,
+    "type": "trig motion",
+    "task": "s = a(cos 2t + sin 2t): acceleration when the body is 3 m from O"
+   },
+   {
+    "n": 16,
+    "type": "tangent ∥ secant",
+    "task": "points on f = x + 1/x where the tangent ∥ secant through (1, 2), (2, 5/2)"
+   },
+   {
+    "n": 17,
+    "type": "self-assessment",
+    "task": "table: average rate (algebraic/geometric); L'Hopital; derivatives & varied problems; non-polynomial derivatives; chain rule & implicit"
+   }
+  ]
+ },
+ "unit_exercise_types": [
+  "MCQ covering every lesson (12 items)",
+  "derivative-definition limits with abstract f",
+  "L'Hopital",
+  "motion problems",
+  "piecewise differentiability",
+  "tangent parallel to secant (MVT flavour, prepares 2-1)"
+ ]
+}
